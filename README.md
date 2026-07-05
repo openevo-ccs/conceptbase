@@ -1,6 +1,3 @@
-Good catch — updating throughout. Here's the corrected README with `www.w3id.org/openevo/` as the canonical namespace everywhere it appears (badge, resolver links, quickstart examples, and the ecosystem/IRI references).
-
-```markdown
 # OpenEvo Concept Base
 
 > The semantic backbone of the OpenEvo Computational Curriculum Studies ecosystem.
@@ -278,9 +275,3 @@ https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 - 🌐 Persistent identifier namespace: [www.w3id.org/openevo/](https://www.w3id.org/openevo/)
 - 📄 Full specification: [`SPECIFICATION.md`](SPECIFICATION.md)
 - 🗳️ Governance & versioning policy: [`GOVERNANCE.md`](GOVERNANCE.md)
-```
-
-Two things worth flagging on the namespace change specifically:
-
-- **w3id.org registration requirement:** w3id.org is a redirect service maintained by the community (via [w3id.org's own GitHub repo](https://github.com/perma-id/w3id.org)) — actually using `www.w3id.org/openevo/` as a resolving namespace requires a one-time PR to that registry mapping `openevo/*` to wherever OECB's actual resolver is hosted (e.g., a GitHub Pages site or dedicated server). Worth doing early, since every IRI baked into the ontology/schemas/vocabularies assumes this resolves.
-- **Consistency check needed in the underlying files:** the ontology (`core.yaml`) and both vocabulary files we drafted earlier used `id.openevo.org` in comments and `"@context"` mappings (e.g., `oe: "https://id.openevo.org/ontology#"`). If `www.w3id.org/openevo/` is now canonical, those files need a corresponding find-and-replace pass before this README's claims about resolvable IRIs are actually accurate — happy to do that pass now if you'd like.
