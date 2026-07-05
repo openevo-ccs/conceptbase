@@ -1,0 +1,58 @@
+# ============================================================================
+# Path: /lpms/oe-interdisciplinary-k12/lpm.yaml
+# ============================================================================
+# Design intent: A K-12 progression using ONLY OE-INTERDISCIPLINARY-v1.0.0,
+# which already contains Agency, Niche Construction, and a multiply-defined
+# Selection concept (biology/culture/education/ai framings). This produces
+# a progression structurally capable of integrated causal reasoning across
+# domains — a direct consequence of the richer vocabulary, not an added
+# instructional layer. Vertical coherence is built per strand across grade
+# bands; horizontal coherence operates BOTH within a strand (as in LPM A)
+# AND between the three strands, since each strand deliberately reinforces
+# concepts "owned" by the other two (e.g., Strand 2's Agency reinforces
+# Strand 1's Selection; Strand 3's Culture reinforces Strand 1's Transmission).
+# ============================================================================
+
+id: OE-LPM-000002
+type: "oe:LPM"
+status: proposed
+version: 0.1.0
+
+labels:
+  en: "OE-Interdisciplinary K-12 Evolutionary & Cultural Systems Learning Progression"
+
+description:
+  en: >
+    A K-12 learning progression spanning biological, cultural, developmental,
+    and technological domains, using the OE-INTERDISCIPLINARY controlled
+    vocabulary exclusively. Organized around three strands — inheritance/
+    variation/selection across systems, agency/development/niche construction,
+    and culture/technology/collective systems — designed so that a small set
+    of cross-domain concepts (Selection, Agency, Transmission, Niche
+    Construction) recur across biological, social-studies, and technology
+    contexts from K through 12, developing transferable causal reasoning
+    rather than single-discipline content mastery alone.
+
+authors:
+  - name: "OpenEvo Computational Curriculum Studies Working Group"
+
+license: "CC-BY-4.0"
+
+conceptbase:
+  ontology: "OE-ONTOLOGY-v1.0.0"
+  vocabularies:
+    - "OE-INTERDISCIPLINARY-v1.0.0"
+
+strands:
+  - id: "OE-STRAND-000201"
+    repository: "lpms/oe-interdisciplinary-k12/strands/strand-201-inheritance-variation-selection.yaml"
+    required: true
+    sequence: 1
+  - id: "OE-STRAND-000202"
+    repository: "lpms/oe-interdisciplinary-k12/strands/strand-202-agency-development-niche.yaml"
+    required: true
+    sequence: 2
+  - id: "OE-STRAND-000203"
+    repository: "lpms/oe-interdisciplinary-k12/strands/strand-203-culture-technology-collective.yaml"
+    required: true
+    sequence: 3

@@ -1,0 +1,299 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: BIO-CORE
+# ============================================================================
+# Path: /controlled-vocabularies/BIO-CORE-v1.0.0.yaml
+#
+# Discipline-specific vocabulary for biological evolution, structured
+# around the traditional gene/organism/population framing (see Spec v0.2,
+# "Traditional Biology Vocabulary"). Each entry under `concepts:` validates
+# against /schemas/concept.schema.yaml.
+#
+# This vocabulary is intentionally single-discipline in most entries —
+# contrast with OE-INTERDISCIPLINARY-v1.0.0, which reframes several of
+# these same ideas (e.g. Inheritance, Selection) as one instance among
+# several inheritance/selection systems. Cross-vocabulary alignment
+# between the two (e.g. BIO-CORE:Natural_Selection <-> 
+# OE-INTERDISCIPLINARY:Selection) is deliberately deferred to
+# /alignments/ (Phase 2), not asserted here.
+# ============================================================================
+
+meta:
+  id: BIO-CORE
+  version: 1.0.0
+  status: stable
+  scope: >
+    Core biological evolution vocabulary, discipline-specific framing
+    (organism / population / gene-centered).
+  discipline: biology
+  license: CC-BY-4.0
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-CONCEPT-v1.0.0
+  phase: 1
+
+concepts:
+
+  - id: OE-CONCEPT-000101
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Evolution
+    definitions:
+      en:
+        biology: >
+          Change in the heritable characteristics of biological
+          populations across successive generations.
+    relations:
+      skos:narrower: [OE-CONCEPT-000102, OE-CONCEPT-000110, OE-CONCEPT-000111, OE-CONCEPT-000116]
+      skos:related: [OE-CONCEPT-000112, OE-CONCEPT-000113]
+
+  - id: OE-CONCEPT-000102
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Natural Selection
+    definitions:
+      en:
+        biology: >
+          Differential reproductive success among heritable variants
+          within a population, resulting from their interaction with
+          the environment.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000104, OE-CONCEPT-000105, OE-CONCEPT-000115, OE-CONCEPT-000103]
+    examples:
+      - Peppered moth coloration shifting with industrial soot levels.
+      - Antibiotic resistance increasing in bacterial populations under drug exposure.
+    nonExamples:
+      - An individual organism changing behavior within its own lifetime (not heritable).
+      - A population's gene frequencies changing due to a random sampling event (see Drift).
+    citations:
+      - text: "Darwin, C. (1859). On the Origin of Species."
+
+  - id: OE-CONCEPT-000103
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Mutation
+    definitions:
+      en:
+        biology: >
+          A heritable change in a DNA sequence, serving as an ultimate
+          source of genetic variation within a population.
+    relations:
+      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000107, OE-CONCEPT-000102]
+
+  - id: OE-CONCEPT-000104
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Adaptation
+    definitions:
+      en:
+        biology: >
+          A heritable trait that increases an organism's fitness within
+          a given environment, shaped by natural selection over
+          generations.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105]
+
+  - id: OE-CONCEPT-000105
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Fitness
+    definitions:
+      en:
+        biology: >
+          The relative reproductive success of a genotype or phenotype,
+          typically measured as expected number of offspring
+          contributing to the next generation.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000104, OE-CONCEPT-000115]
+    examples:
+      - A beak shape enabling more efficient seed cracking during drought.
+    nonExamples:
+      - Physical strength or health in a general, non-reproductive sense.
+
+  - id: OE-CONCEPT-000106
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Gene
+    definitions:
+      en:
+        biology: >
+          A heritable unit of DNA that functions as a basic unit of
+          inheritance, typically encoding information for a specific
+          product or trait.
+    relations:
+      skos:narrower: [OE-CONCEPT-000107]
+      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000112]
+
+  - id: OE-CONCEPT-000107
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Allele
+    definitions:
+      en:
+        biology: >
+          One of two or more alternative forms of a gene occupying the
+          same locus on a chromosome.
+    relations:
+      skos:broader: [OE-CONCEPT-000106]
+
+  - id: OE-CONCEPT-000108
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Population
+    definitions:
+      en:
+        biology: >
+          A group of interbreeding organisms of the same species
+          occupying a defined geographic area at a given time.
+    relations:
+      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000111]
+
+  - id: OE-CONCEPT-000109
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Species
+    definitions:
+      en:
+        biology: >
+          A group of organisms capable of interbreeding and producing
+          fertile offspring, generally reproductively isolated from
+          other such groups.
+    relations:
+      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114]
+
+  - id: OE-CONCEPT-000110
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Speciation
+    definitions:
+      en:
+        biology: >
+          The evolutionary process by which populations diverge to
+          become distinct, reproductively isolated species.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000111]
+
+  - id: OE-CONCEPT-000111
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Drift
+    definitions:
+      en:
+        biology: >
+          Random fluctuation of allele frequencies within a population
+          from one generation to the next, independent of selective
+          advantage.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000107]
+
+  - id: OE-CONCEPT-000112
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Inheritance
+    definitions:
+      en:
+        biology: >
+          The transmission of genetic information from parent to
+          offspring.
+    relations:
+      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000101]
+
+  - id: OE-CONCEPT-000113
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Phylogeny
+    definitions:
+      en:
+        biology: >
+          The evolutionary history and relatedness of a group of
+          organisms, typically represented as a branching tree.
+    relations:
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000101]
+
+  - id: OE-CONCEPT-000114
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Common Ancestor
+    definitions:
+      en:
+        biology: >
+          An organism or population from which two or more descendant
+          lineages have diverged.
+    relations:
+      skos:related: [OE-CONCEPT-000113, OE-CONCEPT-000109]
+
+  - id: OE-CONCEPT-000115
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Selection Pressure
+    definitions:
+      en:
+        biology: >
+          An environmental or biological factor that reduces or
+          increases reproductive success of particular variants within
+          a population, driving the direction of selection.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105]
+
+  - id: OE-CONCEPT-000116
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Extinction
+    definitions:
+      en:
+        biology: >
+          The complete disappearance of a species or other taxonomic
+          group, ending its lineage.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000109]

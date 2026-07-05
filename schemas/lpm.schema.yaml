@@ -1,0 +1,118 @@
+# ============================================================================
+# OpenEvo ConceptBase — LPM (Learning Progression Model) Schema
+# ============================================================================
+# Path: /schemas/lpm.schema.yaml
+#
+# Validates instances of oe:LPM (see /ontologies/core.yaml). An LPM file
+# is also, by convention, the root manifest file of an LPM repository —
+# it carries both the model's own metadata AND its conceptbase dependency
+# manifest (see Federated Repository Model, Spec v0.2), so a single file
+# both defines the model and declares what it depends on.
+#
+# Strand structure is intentionally NOT embedded here: strands are
+# referenced by ID + external repository pointer only. Full Strand
+# validation is handled by strand.schema.yaml.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/lpm.schema.json"
+
+meta:
+  id: OE-SCHEMA-LPM
+  version: 1.0.0
+  status: stable
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  ontologyClass: oe:LPM
+  phase: 1
+
+type: object
+
+properties:
+
+  id:
+    "$ref": "common.defs.yaml#/$defs/lpmId"
+
+  type:
+    const: "oe:LPM"
+
+  status:
+    "$ref": "common.defs.yaml#/$defs/status"
+
+  version:
+    "$ref": "common.defs.yaml#/$defs/semver"
+
+  labels:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+    description: Title of the LPM per language.
+
+  description:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+
+  authors:
+    type: array
+    items:
+      "$ref": "common.defs.yaml#/$defs/author"
+    minItems: 1
+
+  license:
+    type: string
+    description: SPDX license identifier recommended (e.g. "CC-BY-4.0").
+
+  conceptbase:
+    "$ref": "common.defs.yaml#/$defs/conceptbaseManifest"
+    description: >
+      This LPM's own dependency declaration — which ontology version,
+      vocabularies, and (once Phase 3 exists) grade/subject schemas it
+      was built against. Validated for compatibility by the CI
+      compatibility-checker described in GOVERNANCE.md.
+
+  strands:
+    type: array
+    description: >
+      Top-level strands belonging to this LPM. Loosely coupled by design:
+      only an ID and an optional external pointer are required here.
+      The referenced repository owns the full oe:Strand/oe:SubStrand
+      structure, validated there against strand.schema.yaml.
+    items:
+      type: object
+      properties:
+        id:
+          "$ref": "common.defs.yaml#/$defs/strandId"
+        repository:
+          type: string
+          format: uri
+          description: >
+            URI of the external repository (or path within a monorepo)
+            where this Strand's full definition lives.
+        required:
+          type: boolean
+          default: true
+          description: >
+            Whether this strand is obligate within the LPM. Mirrors
+            oe:required at the top-strand level (SubStrand-level
+            required/optional logic is defined within the Strand's own
+            file, not here).
+        sequence:
+          type: integer
+          description: Optional ordering hint among sibling top-level strands.
+      required: [id]
+      additionalProperties: false
+    minItems: 1
+
+  extensions:
+    "$ref": "common.defs.yaml#/$defs/extensions"
+
+required:
+  - id
+  - type
+  - status
+  - version
+  - labels
+  - authors
+  - license
+  - conceptbase
+  - strands
+
+additionalProperties: false

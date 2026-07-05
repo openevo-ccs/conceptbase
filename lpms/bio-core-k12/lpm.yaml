@@ -1,0 +1,55 @@
+# ============================================================================
+# Path: /lpms/bio-core-k12/lpm.yaml
+# ============================================================================
+# Design intent: A K-12 progression using ONLY BIO-CORE-v1.0.0, which
+# contains no agency-related concepts. This is a deliberate constraint, not
+# an oversight: it produces a progression structurally consistent with a
+# decentralized-causation model of evolutionary explanation, optimized for
+# vertical coherence (scaffolded developmental complexity within biology)
+# and horizontal coherence (the same small set of core mechanistic concepts
+# — Gene/Allele/Population/Mutation/Selection/Fitness — recur constantly
+# across all three strands, rather than each strand introducing isolated
+# vocabulary).
+# ============================================================================
+
+id: OE-LPM-000001
+type: "oe:LPM"
+status: proposed
+version: 0.1.0
+
+labels:
+  en: "BIO-CORE K-12 Evolutionary Biology Learning Progression"
+
+description:
+  en: >
+    A K-12 learning progression centered on biology as the primary subject
+    domain, using the BIO-CORE controlled vocabulary exclusively. Organized
+    around three tightly interlocking strands — variation and inheritance,
+    natural selection and adaptation, and speciation and diversity — designed
+    so that core mechanistic concepts (variation, heritability, differential
+    reproduction, population-level change) recur across all three strands
+    at increasing levels of sophistication from K through 12.
+
+authors:
+  - name: "OpenEvo Computational Curriculum Studies Working Group"
+
+license: "CC-BY-4.0"
+
+conceptbase:
+  ontology: "OE-ONTOLOGY-v1.0.0"
+  vocabularies:
+    - "BIO-CORE-v1.0.0"
+
+strands:
+  - id: "OE-STRAND-000101"
+    repository: "lpms/bio-core-k12/strands/strand-101-variation-inheritance.yaml"
+    required: true
+    sequence: 1
+  - id: "OE-STRAND-000102"
+    repository: "lpms/bio-core-k12/strands/strand-102-natural-selection-adaptation.yaml"
+    required: true
+    sequence: 2
+  - id: "OE-STRAND-000103"
+    repository: "lpms/bio-core-k12/strands/strand-103-speciation-diversity.yaml"
+    required: true
+    sequence: 3

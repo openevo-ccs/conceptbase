@@ -1,0 +1,185 @@
+# ============================================================================
+# OpenEvo ConceptBase — Common Schema Definitions
+# ============================================================================
+# Path: /schemas/common.defs.yaml
+#
+# Purpose: Shared $defs used across all ConceptBase schemas (concept, lpm,
+# strand, and future: competency, assessment, evidence...). Defined once
+# here and referenced via $ref so identifier patterns, versioning rules,
+# and multilingual field structure stay identical across the whole schema
+# set as it grows. Not a standalone validatable schema — a defs library.
+#
+# Namespace note: this file's "$id" identifies the schema document itself
+# within the JSON Schema resolution system (a distinct concern from the
+# RDF/JSON-LD ontology namespace declared in /ontologies/core.yaml). Both
+# now share the same base path under www.w3id.org/openevo/ for a single
+# canonical namespace across the ConceptBase ecosystem.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/common.defs.json"
+
+meta:
+  id: OE-SCHEMA-COMMON
+  version: 1.0.0
+  status: stable
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  phase: 1
+
+"$defs":
+
+  # --- Identifiers -----------------------------------------------------
+
+  conceptId:
+    type: string
+    pattern: "^OE-CONCEPT-[0-9]{6}$"
+    description: >
+      Permanent identifier for an oe:Concept instance. Resolves under
+      https://www.w3id.org/openevo/concept/{id}.
+
+  lpmId:
+    type: string
+    pattern: "^OE-LPM-[0-9]{6}$"
+    description: >
+      Permanent identifier for an oe:LPM instance. Resolves under
+      https://www.w3id.org/openevo/lpm/{id}.
+
+  strandId:
+    type: string
+    pattern: "^OE-STRAND-[0-9]{6}$"
+    description: >
+      Permanent identifier for an oe:Strand/oe:SubStrand instance.
+      Resolves under https://www.w3id.org/openevo/strand/{id}.
+
+  vocabRef:
+    type: string
+    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+$"
+    description: >
+      Reference to a versioned controlled vocabulary, e.g.
+      "BIO-CORE-v1.0.0" or "OE-INTERDISCIPLINARY-v1.0.0". Resolves under
+      https://www.w3id.org/openevo/vocab/{name}.
+
+  semver:
+    type: string
+    pattern: "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    description: Semantic version, MAJOR.MINOR.PATCH.
+
+  status:
+    type: string
+    enum: [proposed, accepted, stable, deprecated, superseded]
+    description: Lifecycle status per GOVERNANCE.md.
+
+  languageTag:
+    type: string
+    pattern: "^[a-z]{2}(-[A-Z]{2})?$"
+    description: BCP-47-style language tag, e.g. "en", "es", "pt-BR".
+
+  # --- Multilingual field shapes -----------------------------------------
+
+  localizedString:
+    type: object
+    description: >
+      Map of language tag -> plain string. "en" is required as the
+      ecosystem-wide fallback language; additional languages are optional
+      and additive (do not require a schema version bump to add).
+    propertyNames:
+      "$ref": "#/$defs/languageTag"
+    additionalProperties:
+      type: string
+    required: [en]
+    minProperties: 1
+
+  localizedStringArray:
+    type: object
+    description: Map of language tag -> array of strings (e.g. aliases).
+    propertyNames:
+      "$ref": "#/$defs/languageTag"
+    additionalProperties:
+      type: array
+      items:
+        type: string
+
+  localizedDisciplinaryDefinitions:
+    type: object
+    description: >
+      Map of language tag -> (discipline -> definition text). Discipline
+      keys are free-form (e.g. "biology", "culture", "education", "ai",
+      "general") to support the ConceptBase disambiguation model without
+      enumerating disciplines in the schema itself.
+    propertyNames:
+      "$ref": "#/$defs/languageTag"
+    additionalProperties:
+      type: object
+      additionalProperties:
+        type: string
+      minProperties: 1
+    required: [en]
+    minProperties: 1
+
+  # --- Common structured fields -----------------------------------------
+
+  citation:
+    type: object
+    properties:
+      text:
+        type: string
+      url:
+        type: string
+        format: uri
+      doi:
+        type: string
+    required: [text]
+    additionalProperties: false
+
+  author:
+    type: object
+    properties:
+      name: { type: string }
+      orcid: { type: string }
+      affiliation: { type: string }
+    required: [name]
+    additionalProperties: false
+
+  extensions:
+    type: object
+    description: >
+      Open, namespaced escape hatch for forward-compatible fields
+      introduced in later phases (e.g. alignment stubs, evidence links)
+      without requiring a breaking schema change. Keys SHOULD be
+      namespaced, e.g. "oe:phase2.alignmentHint".
+    additionalProperties: true
+
+  conceptbaseManifest:
+    type: object
+    description: >
+      The dependency manifest every ConceptBase-consuming repository
+      declares (see Federated Repository Model, Spec v0.2). Reused here
+      via $ref rather than redefined per schema, so LPM files, Collection
+      files, and standalone repo manifest files all share one structure.
+    properties:
+      ontology:
+        type: string
+        pattern: "^OE-ONTOLOGY-v[0-9]+\\.[0-9]+\\.[0-9]+$"
+      vocabularies:
+        type: array
+        items:
+          "$ref": "#/$defs/vocabRef"
+        minItems: 1
+      gradeSchema:
+        type: string
+        description: "Reserved for Phase 3 — optional until grade-schemas/ exists."
+      subjectSchema:
+        type: string
+        description: "Reserved for Phase 3 — optional until subject-schemas/ exists."
+      acknowledgedDeprecations:
+        type: array
+        items:
+          type: string
+        description: >
+          Concept/vocabulary IDs this repo knowingly depends on despite
+          deprecated status, per the compatibility-checker rule in
+          GOVERNANCE.md.
+    required: [ontology, vocabularies]
+    additionalProperties: false

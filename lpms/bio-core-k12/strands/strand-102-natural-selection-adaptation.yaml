@@ -1,0 +1,116 @@
+# Path: /lpms/bio-core-k12/strands/strand-102-natural-selection-adaptation.yaml
+
+id: "OE-STRAND-000102"
+type: "oe:Strand"
+status: proposed
+version: 0.1.0
+labels:
+  en: "Natural Selection and Adaptation"
+description:
+  en: >
+    The central mechanistic strand. Builds the full four-component natural
+    selection model (variation, heritability, differential reproduction,
+    population-level change) using exclusively decentralized causal
+    vocabulary — BIO-CORE contains no organism-agency concepts, so this
+    strand is structurally incapable of invoking behavioral niche selection
+    or agential framing. This is a direct consequence of vocabulary scope,
+    not an instructional simplification layered on top of richer content.
+typicalGradeBand: "K-12 (spans all bands via subStrands)"
+associatedDomains: ["Biology"]
+relations:
+  prerequisiteOf: ["OE-STRAND-000103"]
+  parallel: ["OE-STRAND-000101"]
+
+subStrands:
+
+  - id: "OE-STRAND-000121"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Organisms and Their Habitats"
+    typicalGradeBand: "K-2"
+    required: true
+    concepts:
+      - id: "OE-CONCEPT-000104"   # Adaptation
+        emphasis: primary
+    performanceIndicators:
+      - "Describes features of a familiar organism that help it survive in its habitat (e.g., thick fur in a cold place)."
+      - "Recognizes that some individuals in a group survive a challenge (like a harsh winter) while others do not."
+
+  - id: "OE-STRAND-000122"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Trait Advantage and Simple Selection Scenarios"
+    typicalGradeBand: "3-5"
+    required: true
+    concepts:
+      - id: "OE-CONCEPT-000102"   # Natural Selection
+        emphasis: primary
+      - id: "OE-CONCEPT-000104"   # Adaptation
+        emphasis: primary
+      - id: "OE-CONCEPT-000112"   # Inheritance (cross-ref to Strand 1)
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Predicts which trait variant will become more common in a population over several generations, given a simple environmental scenario."
+      - "Explains a prediction using inherited variation and differential survival, without invoking organism need or effort."
+      - "Distinguishes 'this trait helped some individuals survive better' from 'organisms grew this trait because they needed it.'"
+
+  - id: "OE-STRAND-000123"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "The Four-Component Natural Selection Mechanism"
+    typicalGradeBand: "6-8"
+    required: true
+    concepts:
+      - id: "OE-CONCEPT-000102"   # Natural Selection
+        emphasis: primary
+      - id: "OE-CONCEPT-000105"   # Fitness
+        emphasis: primary
+      - id: "OE-CONCEPT-000115"   # Selection Pressure
+        emphasis: primary
+      - id: "OE-CONCEPT-000111"   # Drift
+        emphasis: primary
+      - id: "OE-CONCEPT-000106"   # Gene (cross-ref to Strand 1)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000107"   # Allele (cross-ref to Strand 1)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000103"   # Mutation (cross-ref to Strand 1)
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Articulates all four components of natural selection (variation, heritability, differential reproduction, population-level frequency change) for a given example."
+      - "Defines fitness as relative reproductive success, not individual strength or health."
+      - "Distinguishes change in trait frequency caused by selection pressure from change caused by random drift."
+      - "Applies the four-component model to at least two structurally different examples (trait gain and trait loss)."
+
+  - id: "OE-STRAND-000124"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Evaluating Adaptationist Claims"
+    typicalGradeBand: "9-12"
+    required: true
+    concepts:
+      - id: "OE-CONCEPT-000104"   # Adaptation
+        emphasis: primary
+      - id: "OE-CONCEPT-000105"   # Fitness
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000111"   # Drift
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000115"   # Selection Pressure
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000103"   # Mutation
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000108"   # Population (cross-ref to Strand 1)
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Evaluates a proposed adaptationist explanation for a trait against alternative hypotheses (drift, developmental constraint, correlated trait)."
+      - "Applies the natural selection framework to unfamiliar organisms and trait types without being misled by surface features of the case."
+      - "Explains why not every trait present in a population needs to be an adaptation."
+    relations:
+      prerequisiteOf: ["OE-STRAND-000134"]

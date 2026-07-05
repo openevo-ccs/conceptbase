@@ -1,0 +1,119 @@
+# ============================================================================
+# OpenEvo ConceptBase — Concept Schema
+# ============================================================================
+# Path: /schemas/concept.schema.yaml
+#
+# Validates instances of oe:Concept (see /ontologies/core.yaml). Concept
+# instances are authored inside controlled vocabulary files
+# (/controlled-vocabularies/*.yaml), one entry per term. This schema
+# validates each entry's structure; SKOS relation targets (skos:broader,
+# etc.) are validated for ID-pattern correctness here, and for referential
+# integrity (does the target ID actually exist) by the separate build/
+# validation pipeline, not by JSON Schema alone.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/concept.schema.json"
+
+meta:
+  id: OE-SCHEMA-CONCEPT
+  version: 1.0.0
+  status: stable
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  ontologyClass: oe:Concept
+  phase: 1
+
+type: object
+
+properties:
+
+  id:
+    "$ref": "common.defs.yaml#/$defs/conceptId"
+
+  type:
+    const: "oe:Concept"
+
+  status:
+    "$ref": "common.defs.yaml#/$defs/status"
+
+  version:
+    "$ref": "common.defs.yaml#/$defs/semver"
+
+  definedInVocabulary:
+    "$ref": "common.defs.yaml#/$defs/vocabRef"
+    description: >
+      The single controlled vocabulary this Concept is native to. A
+      Concept may still be *aligned* to concepts in other vocabularies
+      (see /alignments/, Phase 2), but has exactly one home vocabulary.
+
+  labels:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+    description: Preferred label per language.
+
+  aliases:
+    "$ref": "common.defs.yaml#/$defs/localizedStringArray"
+    description: Alternate labels/synonyms per language.
+
+  definitions:
+    "$ref": "common.defs.yaml#/$defs/localizedDisciplinaryDefinitions"
+    description: >
+      Per-language, per-discipline definitions. This is the field that
+      implements the disambiguation model (e.g. "Selection" defined
+      separately under biology / culture / education / ai) described in
+      Spec v0.2.
+
+  relations:
+    type: object
+    description: >
+      SKOS relations to other Concept instances. All target values are
+      Concept IDs; cross-vocabulary meaning is asserted here only for
+      same-vocabulary relations. Cross-vocabulary claims belong in
+      /alignments/ (Phase 2), where they carry provenance and a
+      matchType, rather than being asserted directly on the concept.
+    properties:
+      "skos:broader":
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+      "skos:narrower":
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+      "skos:related":
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+    additionalProperties: false
+
+  examples:
+    type: array
+    items:
+      type: string
+    description: >
+      Illustrative examples of the concept in use. Not localized in
+      Phase 1 — kept as a simple string array to avoid over-structuring
+      a secondary field; may become localized in a later minor version
+      if contributor demand warrants it.
+
+  nonExamples:
+    type: array
+    items:
+      type: string
+
+  citations:
+    type: array
+    items:
+      "$ref": "common.defs.yaml#/$defs/citation"
+
+  extensions:
+    "$ref": "common.defs.yaml#/$defs/extensions"
+
+required:
+  - id
+  - type
+  - status
+  - version
+  - definedInVocabulary
+  - labels
+  - definitions
+
+additionalProperties: false

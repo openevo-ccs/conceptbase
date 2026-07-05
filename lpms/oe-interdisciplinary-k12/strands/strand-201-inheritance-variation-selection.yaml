@@ -1,0 +1,110 @@
+# Path: /lpms/oe-interdisciplinary-k12/strands/strand-201-inheritance-variation-selection.yaml
+
+id: "OE-STRAND-000201"
+type: "oe:Strand"
+status: proposed
+version: 0.1.0
+labels:
+  en: "Inheritance, Variation, and Selection Across Systems"
+description:
+  en: >
+    Foundational cross-domain strand. Uses the OE-INTERDISCIPLINARY
+    Selection concept's four discipline-specific definitions (biology,
+    culture, education, AI) as the strand's organizing device: rather than
+    teaching biological selection first and analogizing outward, students
+    encounter biological and cultural cases side by side from an early
+    grade band, with full multi-disciplinary comparison reserved for 9-12.
+typicalGradeBand: "K-12 (spans all bands via subStrands)"
+associatedDomains: ["Biology", "Social Studies"]
+relations:
+  prerequisiteOf: ["OE-STRAND-000202", "OE-STRAND-000203"]
+
+subStrands:
+
+  - id: "OE-STRAND-000211"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Things That Get Passed On"
+    typicalGradeBand: "K-2"
+    required: true
+    associatedDomains: ["Biology", "Social Studies"]
+    concepts:
+      - id: "OE-CONCEPT-000201"   # Inheritance
+        emphasis: primary
+      - id: "OE-CONCEPT-000214"   # Variation
+        emphasis: primary
+    performanceIndicators:
+      - "Describes a trait passed from parent to child (eye color) and a story or recipe passed from grandparent to grandchild, side by side."
+      - "Notices that individuals within a family, and versions of a story told by different people, both show variation."
+
+  - id: "OE-STRAND-000212"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Comparing Biological and Cultural Transmission"
+    typicalGradeBand: "3-5"
+    required: true
+    associatedDomains: ["Biology", "Social Studies"]
+    concepts:
+      - id: "OE-CONCEPT-000201"   # Inheritance
+        emphasis: primary
+      - id: "OE-CONCEPT-000203"   # Transmission
+        emphasis: primary
+      - id: "OE-CONCEPT-000214"   # Variation
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Compares how a genetic trait moves from parent to offspring with how a game's rules move from one group of kids to another."
+      - "Identifies that both processes involve a 'holder' passing something to a new 'holder,' with some change possible along the way."
+
+  - id: "OE-STRAND-000213"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "The General Pattern: Variation, Selection, Transmission"
+    typicalGradeBand: "6-8"
+    required: true
+    associatedDomains: ["Biology", "Social Studies", "Computer Science"]
+    concepts:
+      - id: "OE-CONCEPT-000090"   # Evolutionary Process
+        emphasis: primary
+      - id: "OE-CONCEPT-000213"   # Selection
+        emphasis: primary
+      - id: "OE-CONCEPT-000214"   # Variation
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000203"   # Transmission
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Describes the general pattern (variation → selection → transmission) using the Evolutionary Process concept."
+      - "Applies this general pattern in parallel to one biological case (e.g., beak shape in a bird population) and one cultural case (e.g., which version of a phone app feature gets kept)."
+      - "Uses the Selection concept's biology and culture definitions side by side and identifies what is similar and different between them."
+
+  - id: "OE-STRAND-000214"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Selection Across Biology, Culture, Education, and AI"
+    typicalGradeBand: "9-12"
+    required: true
+    associatedDomains: ["Biology", "Social Studies", "Computer Science"]
+    concepts:
+      - id: "OE-CONCEPT-000213"   # Selection
+        emphasis: primary
+      - id: "OE-CONCEPT-000090"   # Evolutionary Process
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000201"   # Inheritance
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000214"   # Variation
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000203"   # Transmission
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Compares all four disciplinary definitions of Selection (biology, culture, education, AI) for a single unifying feature: differential persistence of variants."
+      - "Explains what is genuinely analogous and what is genuinely different between biological selection and algorithmic selection (e.g., a genetic algorithm's fitness function)."
+      - "Constructs an original example of Selection in a domain not covered by the vocabulary's existing examples and justifies its classification."
+    relations:
+      recommendedSequence: []

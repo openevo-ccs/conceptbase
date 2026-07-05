@@ -1,428 +1,286 @@
-# OpenEvo Concept Base — README
-
----
+Good catch — updating throughout. Here's the corrected README with `www.w3id.org/openevo/` as the canonical namespace everywhere it appears (badge, resolver links, quickstart examples, and the ecosystem/IRI references).
 
 ```markdown
 # OpenEvo Concept Base
 
 > The semantic backbone of the OpenEvo Computational Curriculum Studies ecosystem.
-```
 
-[![OpenEvo](https://img.shields.io/badge/OpenEvo-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Specification](https://img.shields.io/badge/Spec-v0.9.0-blue)](SPECIFICATION.md)
+[![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
+[![License: CC-BY 4.0](https://img.shields.io/badge/Content%20License-CC--BY%204.0-lightgrey.svg)](LICENSE)
+[![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
+[![Specification](https://img.shields.io/badge/Spec-v0.2.0-blue)](SPECIFICATION.md)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
-[![Namespace](https://img.shields.io/badge/Namespace-openevo.net-purple)](https://openevo.net/)
-[![Schema](https://img.shields.io/badge/Schema-YAML%20%7C%20JSON--LD%20%7C%20RDF-orange)](schemas/)
-[![Status](https://img.shields.io/badge/Status-Draft%20v0.9.0-yellow)]()
+[![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
+[![Formalism](https://img.shields.io/badge/Formalism-YAML%20→%20JSON--LD%20%2F%20RDF-orange)](schemas/)
+[![Status](https://img.shields.io/badge/Status-Phase%201%20—%20Active%20Development-yellow)]()
+[![Governance](https://img.shields.io/badge/Governance-RFC%20%2B%20Domain%20Review-blueviolet)](GOVERNANCE.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 ---
 
 ## What Is This?
 
-The **OpenEvo Concept Base (OECB)** is the foundational semantic infrastructure of the
-[OpenEvo CCS Lab](http://openevo.eva.mpg.de) — a computational research environment
-for studying how curriculum knowledge originates, spreads, competes, and evolves across
-educational systems and cultures.
+The **OpenEvo Concept Base (OECB)** is the foundational semantic infrastructure of the [OpenEvo Computational Curriculum Studies (CCS) Lab](http://openevo.eva.mpg.de) — a research initiative studying how curriculum knowledge originates, develops, competes, and evolves across educational systems, disciplines, and cultures.
 
-This repository does not store curriculum content directly.
-It defines **how curriculum knowledge can be represented** — the shared schemas,
-formal vocabularies, ontological commitments, and versioning rules that allow every
-other repository in the OpenEvo ecosystem to create, link, and reason over curriculum
-knowledge objects in a consistent, machine-readable, and FAIR-compliant way.
+This repository is **infrastructure, not content**. It defines *how* curriculum knowledge can be represented — the ontology, schemas, controlled vocabularies, identifiers, and validation rules — so that independently maintained repositories of Learning Progression Models (LPMs), Collections, Strands, assessments, and AI-assisted curriculum tools can interoperate without every project reinventing its own data model.
 
-> **Core principle:** The Concept Base defines how curriculum knowledge
-> can be represented. Individual repositories contribute evolving instances
-> of that knowledge.
+> **Core principle:** The Concept Base defines *how* curriculum knowledge can be represented. Individual repositories contribute evolving, independently governed *instances* of that knowledge.
+
+If you're familiar with how `npm`, `schema.org`, or [SKOS](https://www.w3.org/2004/02/skos/) function relative to the software and knowledge-organization ecosystems built on top of them, that's the role OECB plays here: a shared registry and grammar, not a monolithic curriculum database.
 
 ---
 
-## The Big Picture
+## Why Does This Exist?
 
-### Computational Curriculum Studies
+Curriculum design research and practice are fragmented across theoretical traditions, national systems, subject-area silos, and incompatible metadata formats. Two research teams studying the same concept — say, "selection" in evolutionary theory — may have no way to discover that their models are talking about related ideas, let alone compare, align, or jointly reason over them computationally.
 
-**Computational Curriculum Studies (CCS)** is an emerging field at the intersection of
-curriculum theory, data science, knowledge representation, and cultural evolutionary
-modelling. It asks:
+OECB exists to make curriculum knowledge:
 
-- How can curriculum theories be represented as formal, machine-readable objects?
-- How do curriculum ideas spread, compete, and transform across educational systems?
-- What can computational methods reveal about the structure and evolution of
-  curriculum knowledge that traditional methods cannot?
+- **Findable** — every concept, schema, and vocabulary has a persistent, resolvable identifier under the `www.w3id.org/openevo/` namespace.
+- **Accessible** — openly licensed, Git-native, human- and machine-readable.
+- **Interoperable** — built on existing knowledge-organization standards (SKOS, RDF/JSON-LD) rather than a bespoke, incompatible format.
+- **Reusable** — versioned, provenance-tracked, and explicit about what is stable vs. still theoretical.
 
-The OpenEvo CCS Lab pursues these questions through a distributed digital ecosystem —
-a network of linked repositories, each contributing knowledge objects that connect to a
-shared semantic layer. The Concept Base **is** that shared semantic layer.
-
-### Curriculum Knowledge as a Evolving System
-
-A central theoretical commitment of this project is that curriculum knowledge
-behaves like an **evolving cultural system**. Theories emerge, compete for adoption,
-extend or absorb one another, get revised under empirical pressure, drift under social
-and political pressure, and occasionally go extinct — only to be revived in new contexts.
-
-The GitHub organisation itself is designed to model these dynamics:
-
-| Git Concept | Evolutionary Analog |
-|---|---|
-| Repository | Population of knowledge objects |
-| Commit | Mutation to existing knowledge |
-| Branch | Exploratory variation |
-| Pull request | Selection event |
-| Merge | Inheritance and fixation |
-| Fork | Lineage divergence |
-| Deprecation | Extinction |
-| Cross-repo link | Horizontal knowledge transfer |
-| Release graph | Fossil record |
-
-This is not metaphor for its own sake. The Concept Base includes an
-**Evolutionary Metadata Layer** that makes these dynamics machine-readable and
-queryable — enabling research into how curriculum knowledge actually changes over time.
+Rather than prescribing a single curriculum or a single theoretical stance on any contested question in a domain, OECB is deliberately **pluralistic**: it supports multiple grade-band systems, multiple subject taxonomies, and multiple controlled vocabularies representing genuinely different theoretical commitments — while still letting them interoperate through a shared ontology and identifier scheme.
 
 ---
 
-## Repository Role in the Ecosystem
+## Namespace
+
+All persistent identifiers in this ecosystem resolve under:
 
 ```
-OpenEvoCCS-lab/
-
-├── OpenEvo-ConceptBase        ← YOU ARE HERE
-│                                schemas · vocabularies · ontology · this spec
-├── OpenEvo-Graph              ← compiled knowledge graph · SPARQL endpoint
-├── OpenEvo-CCS                ← curriculum studies objects (CTOs, CKOs, TSOs)
-├── OpenEvo-EvolutionEducation ← evolution education domain objects
-├── OpenEvo-OriginsScience     ← origins of science domain objects
-├── OpenEvo-AgentSystems       ← AI agent definitions and query interfaces
-└── OpenEvo-Data               ← raw data · empirical records · annotations
+https://www.w3id.org/openevo/
 ```
 
-Every other repository in the organisation **depends on this one**.
-They validate their objects against schemas defined here, use vocabulary
-terms defined here, and mint identifiers within namespaces governed here.
-
-```
-          ┌─────────────────────────┐
-          │   OpenEvo Concept Base  │
-          │  schemas · vocab · onto │
-          └────────────┬────────────┘
-                       │ shared dependency
-        ┌──────────────┼──────────────┐
-        ▼              ▼              ▼
-   CCS Repo      Evol. Repo    Origins Repo
-        └──────────────┼──────────────┘
-                       ▼
-              OpenEvo Graph
-            (compiled KG + SPARQL)
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-       SPARQL       GraphQL    AI Agents
-```
+using the [w3id.org](https://w3id.org) permanent identifier redirection service, which ensures that identifiers minted today remain resolvable indefinitely regardless of where the underlying infrastructure is hosted in the future. Concepts, ontology classes, schemas, and vocabularies are all addressed as sub-paths of this namespace — see [Quickstart](#quickstart) below for resolution examples.
 
 ---
 
-## What Lives Here
+## What's In Scope (and What Isn't)
+
+**This repository stores:**
+
+- ✅ Core ontology (classes and relations — the "types" of curriculum knowledge)
+- ✅ JSON Schema definitions for validating concept, LPM, and strand data
+- ✅ Controlled vocabularies (disambiguated, multi-discipline concept registries)
+- ✅ The persistent identifier registry and resolution scheme
+- ✅ Cross-vocabulary alignment records *(Phase 2)*
+- ✅ Grade-band and subject-area schema registries *(Phase 3)*
+- ✅ Competency, assessment, and evidence schemas, profiled against existing standards *(Phase 4)*
+
+**This repository deliberately does *not* store:**
+
+- ❌ Lesson plans, units, or full curricula
+- ❌ Complete Learning Progression Models
+- ❌ Assessment items or student data
+- ❌ Multimedia or learning resources
+
+Those live in independently governed companion repositories (see [The Ecosystem](#the-ecosystem) below) that *depend on* OECB the way an npm package depends on a registry — pinning specific versions of the ontology and vocabularies they were built against.
+
+---
+
+## Current Status
+
+OECB is in **Phase 1** of a deliberately staged rollout (see [`SPECIFICATION.md`](SPECIFICATION.md) for the full rationale). Rather than stabilizing the entire vision at once, Phase 1 exists to validate the hardest, highest-leverage ideas — disambiguation and identifier stability — against one real pilot before expanding scope.
+
+| Phase | Status | Contents |
+|---|---|---|
+| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`); Concept/LPM/Strand schemas; seed vocabularies (`BIO-CORE-v1.0.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process |
+| **Phase 2 — Alignment & Multilinguality** | ⚪ Planned | SKOS-based cross-vocabulary alignment records with provenance; language-tagged labels/definitions beyond `en` |
+| **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
+| **Phase 4 — Ecosystem Tooling** | ⚪ Planned | Competency and evidence schemas; hosted SPARQL query endpoint; CI compatibility-checker action for dependent repositories |
+
+Reserved ontology classes for later phases (`Collection`, `Competency`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core.yaml`](ontologies/core.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change.
+
+---
+
+## Repository Structure
 
 ```
-OpenEvo-ConceptBase/
-│
-├── SPECIFICATION.md          ← full formal infrastructure specification
+conceptbase/
+├── README.md
+├── SPECIFICATION.md          # Full design specification (this is the source of truth)
+├── GOVERNANCE.md             # RFC process, versioning policy, deprecation rules
 ├── CONTRIBUTING.md
-├── GOVERNANCE.md
+├── LICENSE                   # CC-BY-4.0 (content)
+├── LICENSE-CODE               # MIT (build tooling)
 │
-├── ontology/
-│   ├── core/                 ← OWL ontology · class hierarchy · RDF prefixes
-│   └── extensions/           ← domain-specific ontology extensions
+├── ontologies/
+│   └── core.yaml             # Phase 1 TBox: Concept, LPM, Strand, SubStrand, LearningObject
 │
 ├── schemas/
-│   ├── CTO/                  ← Curriculum Theory Object schema
-│   ├── CKO/                  ← Curriculum Knowledge Object schema
-│   ├── TSO/                  ← Theory Space Object schema
-│   ├── EVO/                  ← Evidence Object schema
-│   ├── CMO/                  ← Competency Object schema
-│   ├── CFO/                  ← Conflict Object schema
-│   ├── AGO/                  ← Agent Object schema
-│   └── evolutionary-metadata/← Evolutionary Metadata Layer schema
+│   ├── common.defs.yaml      # Shared $defs: IDs, semver, localized strings, citations
+│   ├── concept.schema.yaml
+│   ├── lpm.schema.yaml
+│   └── strand.schema.yaml
 │
-├── vocabularies/
-│   ├── epistemic-status/     ← well_supported · contested · speculative · falsified
-│   ├── selection-pressures/  ← empirical · political · social · pedagogical ...
-│   ├── evidence-type/        ← meta_analysis · empirical_study · practitioner_report ...
-│   ├── claim-type/           ← causal · constitutive · normative · descriptive ...
-│   ├── disciplines/
-│   └── competencies/
+├── controlled-vocabularies/
+│   ├── BIO-CORE-v1.0.0.yaml
+│   └── OE-INTERDISCIPLINARY-v1.0.0.yaml
 │
-├── registry/
-│   ├── affiliated-projects.yaml
-│   └── federated-projects.yaml
+├── alignments/                # Phase 2 — cross-vocabulary mappings w/ provenance
+├── grade-schemas/             # Phase 3 — multiple grade-banding systems
+├── subject-schemas/           # Phase 3 — multiple subject taxonomies
+├── competencies/              # Phase 4 — CASE-profiled competency schemas
+├── evidence/                  # Phase 4 — xAPI-profiled evidence schemas
+├── licenses/                  # Licensing recommendation templates for dependent repos
 │
-├── sandbox/                  ← experimental; excluded from production graph
-│
-└── .github/workflows/
-    ├── validate.yml           ← schema validation on every PR
-    ├── staging-graph.yml      ← staging graph build on merge to main
-    └── production-graph.yml   ← production graph build on merge to release
+├── registry/                  # Generated: identifier index, resolver config
+├── validation/                 # JSON Schema / SHACL validators
+├── build/                     # YAML → JSON-LD/RDF compilation pipeline
+├── proposals/                  # RFC submissions (see GOVERNANCE.md)
+├── examples/                  # Minimal worked examples for each schema
+└── docs/
 ```
 
 ---
 
-## Core Object Types
+## Design Principles
 
-The Concept Base defines seven types of knowledge object.
-Each has a formal schema, a persistent URI pattern, and a defined
-role in the knowledge graph.
-
-| Object | Code | Purpose | Example URI |
-|---|---|---|---|
-| Curriculum Theory Object | CTO | Abstract theoretical claims about curriculum | `openevo.net/ccs/cto/CTO-001` |
-| Curriculum Knowledge Object | CKO | Concrete educational artifacts and annotations | `openevo.net/ccs/cko/CKO-001` |
-| Theory Space Object | TSO | Structured conceptual landscapes | `openevo.net/ccs/tso/TSO-001` |
-| Evidence Object | EVO | Empirical/theoretical evidence for claims | `openevo.net/ccs/evo/EVO-001` |
-| Competency Object | CMO | Specified learning competencies | `openevo.net/ccs/cmo/CMO-001` |
-| Conflict Object | CFO | Formally registered theoretical conflicts | `openevo.net/ccs/cfo/CFO-001` |
-| Agent Object | AGO | Contributors, reviewers, AI agents | `openevo.net/ccs/ago/AGO-001` |
-
-### How They Connect
-
-```
-  TSO  ──contains──▶  CTO  ◀──instantiates──  CKO
-                       │                        │
-                    supports                 targets
-                       │                        │
-                      EVO                      CMO
-                       
-  CTO  ──competesWith──▶  CTO  ──▶  CFO (conflict registered)
-  CTO  ──extends──────▶  CTO
-  CTO  ──synthesizes──▶  CTO
-```
-
-### What Makes a CTO Different from a Summary
-
-A **Curriculum Theory Object** is not a paper summary or a description of a practice.
-It is a formal representation of a theoretical position with:
-
-- **Structured claims** — each claim typed (`causal`, `normative`, `constitutive`...),
-  scoped, and assigned an epistemic status (`well_supported`, `contested`, `speculative`,
-  `falsified`)
-- **Falsification conditions** — explicit statements of what evidence would refute each claim
-- **Evidence linkage** — direct links to EVO objects that support, contradict, or qualify claims
-- **Evolutionary metadata** — genealogy, selection history, adoption records, fitness indicators
-
-```yaml
-# Abbreviated CTO example
-id: "https://openevo.net/ccs/cto/CTO-CURRICULUM-COMPRESSION-001"
-type: CurriculumTheoryObject
-title: "Curriculum as Compression-Decompression"
-
-claims:
-  - id: "CTO-CURRICULUM-COMPRESSION-001-CLAIM-01"
-    text: >
-      Curriculum design involves selective compression of disciplinary
-      knowledge such that structural and explanatory relationships
-      of the discipline are preserved in compressed form.
-    claim_type: constitutive
-    epistemic_status: contested
-    falsification_conditions:
-      - "Evidence that no selection occurs in documented curriculum design."
-    supporting_evidence:
-      - id: "https://openevo.net/ccs/evo/EVO-COMPRESSION-001"
-        relationship_strength: moderate
-```
+- **FAIR-compliant** — every entity is findable, accessible, interoperable, and reusable by design, not by convention.
+- **Git-native** — authored and reviewed as YAML through pull requests; compiled to RDF/JSON-LD as a build artifact, never hand-edited.
+- **Curriculum-independent, theory-independent** — OECB does not prescribe *which* pedagogical theory or curriculum standard is correct. It provides the shared grammar that lets different, even competing, theoretical models (see [Why Pluralism Matters](#why-pluralism-matters)) coexist and interoperate.
+- **Standards-aligned, not standards-duplicating** — reuses existing knowledge-organization and ed-tech standards wherever they fit (see table below) rather than reinventing them.
+- **Governed, not ad hoc** — every addition goes through an RFC review process; nothing is ever silently deleted, only deprecated with a `supersededBy` pointer (see [`GOVERNANCE.md`](GOVERNANCE.md)).
+- **AI-ready** — structured for machine consumption (SPARQL, JSON index) from the start, not retrofitted for it later.
 
 ---
 
-## The Evolutionary Metadata Layer
+## Standards Alignment
 
-Every object in the ecosystem — regardless of type — carries an
-**Evolutionary Metadata Layer (EML)**. This is the component that
-distinguishes the Concept Base from a conventional knowledge repository.
+OECB is built as a set of profiles and extensions of existing standards, not a parallel, incompatible format:
 
-The EML records:
-
-```yaml
-evolutionary_metadata:
-
-  genealogy:
-    derived_from: []        # parent objects
-    branched_from: null     # fork origin
-    merged_into: null       # absorption target
-
-  selection_history:
-    - event_type: revision
-      pressure_type: empirical
-      pressure_source: "Meta-analysis contradicted Claim 01"
-      resulting_change: "Epistemic status revised to contested"
-
-  adoption_record:
-    - community: "German secondary biology educators"
-      adoption_level: partial
-      adoption_timeframe:
-        start: "2022"
-        end: null
-
-  fitness_indicators:
-    theoretical_coherence: high
-    empirical_support: moderate
-    practical_applicability: high
-    cross_context_robustness: low
-```
-
-Across the ecosystem, this layer enables questions like:
-
-- *What is the full genealogical tree of constructivist curriculum theory
-  across jurisdictions?*
-- *In which theory spaces has empirical evidence driven revision, and
-  where have political pressures dominated?*
-- *Which regions of the computational curriculum theory space are
-  currently unoccupied?*
-- *How long does it take for a theoretical innovation to travel from
-  academic publication to curriculum standards?*
-
----
-
-## Namespace and Trust Architecture
-
-All OpenEvo objects receive globally unique, persistent identifiers
-under the `https://openevo.net/` namespace — the trust anchor of the ecosystem.
-
-Three tiers of participation are defined:
-
-| Tier | Namespace Pattern | Who Mints | Review Process |
-|---|---|---|---|
-| **Core** | `openevo.net/ccs/` | OpenEvo core team | Full editorial review |
-| **Affiliated** | `openevo.net/projects/{id}/` | Registered partners | Schema validation + registration |
-| **Federated** | `{external-domain}/openevo-compatible/` | Independent projects | Self-declared compatibility |
-
-This structure keeps the core namespace stable as a trust anchor while
-enabling genuine distributed participation.
-
----
-
-## FAIR Compliance
-
-All OpenEvo objects are designed to satisfy the
-[FAIR principles](https://www.go-fair.org/fair-principles/):
-
-| Principle | How |
-|---|---|
-| **Findable** | Persistent URIs; schema.org metadata; registry publication |
-| **Accessible** | HTTP content negotiation; open SPARQL endpoint; CC BY 4.0 |
-| **Interoperable** | RDF/JSON-LD serialisation; SKOS vocabularies; Dublin Core; PROV-O alignment |
-| **Reusable** | Explicit licence on every object; full provenance chain; standards alignment |
-
-### External Standards Alignment
-
-The Concept Base aligns with and extends:
-
-- **Dublin Core (DCMI)** — bibliographic metadata
-- **SKOS** — controlled vocabulary representation
-- **PROV-O** — provenance and derivation tracking
-- **Schema.org** — discoverability and structured data
-- **Basic Formal Ontology (BFO)** — upper ontology grounding
-- **Achievement Standards Network (ASN)** — curriculum standards linked data
-- **IMS Global CASE** — competency exchange compatibility
-
----
-
-## Getting Started
-
-### Reading the Specification
-
-The full formal infrastructure specification is in [`SPECIFICATION.md`](SPECIFICATION.md).
-It covers ontology, all seven schemas, versioning semantics, evolutionary metadata,
-graph architecture, access layer, governance, and FAIR compliance in detail.
-
-### Using a Schema
-
-Schemas are available as both YAML Schema and JSON Schema:
-
-```bash
-schemas/CTO/CTO.schema.yaml
-schemas/CTO/CTO.schema.json
-schemas/CTO/CTO.example.yaml   # worked example
-```
-
-### Validating an Object
-
-Every pull request is validated automatically via GitHub Actions.
-To validate locally:
-
-```bash
-# Install dependencies
-pip install pykwalify jsonschema
-
-# Validate a YAML object against its schema
-pykwalify -d your-object.yaml -s schemas/CTO/CTO.schema.yaml
-```
-
-### Contributing an Object
-
-1. Choose the correct object type from the table above
-2. Copy the relevant schema example from `schemas/{TYPE}/{TYPE}.example.yaml`
-3. Fill all required fields (see the **Minimum Viable Object Checklist**
-   in [`SPECIFICATION.md`](SPECIFICATION.md))
-4. Place the file in the appropriate repository under the correct namespace tier
-5. Open a pull request — automated validation will run on submission
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for full guidance.
-
----
-
-## Versioning
-
-Objects follow semantic versioning with defined increment semantics:
-
-| Change | Version Bump | Example |
+| Need | Standard Reused | What OECB Adds |
 |---|---|---|
-| Corrected error; clarified language | `PATCH` | `1.0.0 → 1.0.1` |
-| New claim; new evidence link | `MINOR` | `1.0.0 → 1.1.0` |
-| Core claim revised or removed | `MAJOR` | `1.1.0 → 2.0.0` |
-| Schema field added or renamed | `BREAKING` | schema `1.0 → 2.0` |
+| Concept relations, cross-vocabulary mapping | **SKOS** (`skos:broader`, `skos:related`, `skos:closeMatch`, etc.) | Discipline-specific disambiguation; curriculum-specific concept types |
+| Competency / standards frameworks | **CASE** (1EdTech) | Alignment to OpenEvo's interdisciplinary vocabulary *(Phase 4)* |
+| Learning object / resource metadata | **IEEE LOM**, **schema.org/LearningResource** | Grade/subject schema binding, strand nesting *(Phase 4)* |
+| Evidence / activity records | **xAPI** | Evidence categories specific to progression modeling *(Phase 4)* |
+| Graph serialization | **RDF / JSON-LD** | OpenEvo domain ontology (`oe:LPM`, `oe:Strand`, `oe:Concept`, …) under `www.w3id.org/openevo/` |
 
-Object statuses: `active` · `deprecated` · `merged` · `falsified` · `archived` · `sandbox`
-
----
-
-## Governance
-
-The Concept Base evolves slowly and deliberately at its core,
-with faster experimentation permitted in `sandbox/` and extension branches.
-
-| Change Type | Minimum Review |
-|---|---|
-| PATCH to any object | 48 hours · single reviewer |
-| MINOR to core objects | 1 week · two reviewers |
-| MAJOR to any object | 2 weeks · editorial board |
-| Breaking schema change | 4 weeks · public comment period |
-
-See [`GOVERNANCE.md`](GOVERNANCE.md) for the full governance model,
-editorial board structure, and deprecation procedure.
+Any proposal for a novel schema structure must document why an existing standard doesn't already cover the need — this is enforced as part of the RFC review process, not left to convention.
 
 ---
 
-## Links
+## Quickstart
 
-| Resource | URL |
-|---|---|
-| OpenEvo Project | [openevo.eva.mpg.de](http://openevo.eva.mpg.de) |
-| Full Specification | [`SPECIFICATION.md`](SPECIFICATION.md) |
-| Namespace Root | [openevo.net](https://openevo.net/) |
-| SPARQL Endpoint | `https://openevo.net/sparql` *(coming)* |
-| REST API | `https://openevo.net/api/v1/` *(coming)* |
-| Contributing | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
-| Governance | [`GOVERNANCE.md`](GOVERNANCE.md) |
-| License | [`LICENSE`](LICENSE) — CC BY 4.0 |
+**Referencing a concept from a dependent repository:**
+
+```yaml
+# In your LPM or Strand repository's manifest
+conceptbase:
+  ontology: OE-ONTOLOGY-v1.0.0
+  vocabularies:
+    - BIO-CORE-v1.0.0
+```
+
+**Looking up a concept:**
+
+```
+https://www.w3id.org/openevo/concept/000102     →  resolves to JSON-LD, HTML docs, or flat JSON
+https://www.w3id.org/openevo/ontology#Concept   →  resolves to the ontology class definition
+https://www.w3id.org/openevo/vocab/BIO-CORE     →  resolves to the vocabulary registry entry
+```
+
+**Validating a concept entry against the schema:**
+
+```bash
+# via the validation/ tooling (CI-ready)
+oecb-validate --schema schemas/concept.schema.yaml \
+              --file controlled-vocabularies/BIO-CORE-v1.0.0.yaml
+```
+
+See [`examples/`](examples/) for minimal worked examples of a Concept, an LPM manifest, and a Strand file.
+
+---
+
+## The Ecosystem
+
+OECB is the hub of a federated ecosystem — every other repository depends on it, but none of them live inside it:
+
+```
+                          conceptbase (this repo)
+                     ontology · schemas · vocabularies
+                        www.w3id.org/openevo/
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+     Learning Progression    Collections         Strand
+       Models (LPMs)          Repositories      Repositories
+              │                                       │
+        e.g. bio-core-k12-lpm            e.g. origins-of-science-strand
+        e.g. oe-interdisciplinary-k12-lpm
+```
+
+Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test the ConceptBase's pluralism model in practice:
+
+- **`bio-core-k12-lpm`** — a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`.
+- **`oe-interdisciplinary-k12-lpm`** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`.
+
+### Why Pluralism Matters
+
+These two pilot LPMs are deliberately built from *different* vocabularies rather than a shared one — this is a feature, not a gap. Evolution education research contains genuine, unresolved theoretical disagreement about whether organism/agent behavior belongs in a scientifically adequate causal explanation of evolutionary change (compare, e.g., Kampourakis 2020 with Hanisch et al. 2026). Rather than adjudicating that debate inside the ConceptBase, OECB's role is to let *both* positions be represented as internally consistent, independently valid vocabularies — `BIO-CORE` (decentralized-causation framing) and `OE-INTERDISCIPLINARY` (agency-inclusive framing) — that can still be formally compared once [Phase 2 alignment records](#current-status) exist. This is the pluralism the ConceptBase is designed to support: **contested theoretical questions in a field should be representable as data, not resolved by fiat in the infrastructure layer.**
+
+---
+
+## Governance & Contributing
+
+Every addition — a new concept, relation, schema, or vocabulary — goes through a structured RFC process:
+
+1. **Propose** via a PR to `proposals/`, using the template (motivation, proposed IRI under `www.w3id.org/openevo/`, why no existing standard covers it).
+2. **Review** by the relevant domain editor(s) plus at least one maintainer.
+3. **Lifecycle status** tracked explicitly: `proposed → accepted → stable → deprecated → superseded`.
+4. **Never deleted** — deprecated entities remain resolvable indefinitely with a `supersededBy` pointer, so dependent repositories are never broken by an upstream change.
+
+Each vocabulary, schema, and ontology module is versioned independently using semver (`MAJOR.MINOR.PATCH`), with breaking changes requiring a major version bump and a documented migration path.
+
+See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to get started. Domain editors are especially needed for underrepresented subject areas and grade-band systems as we approach Phase 3.
+
+---
+
+## Roadmap
+
+- [x] Phase 1: Core ontology, schemas, and two seed vocabularies
+- [x] Phase 1: End-to-end pilot with two independent reference LPMs
+- [ ] Phase 2: SKOS alignment records between `BIO-CORE` and `OE-INTERDISCIPLINARY`
+- [ ] Phase 2: Multilingual label/definition expansion beyond `en`
+- [ ] Phase 3: Grade-band schema registry (US K–12, OECD, OpenEvo 4-band/6-band)
+- [ ] Phase 3: Subject-area schema registry
+- [ ] Phase 4: Competency, assessment, and evidence schemas (CASE/xAPI-profiled)
+- [ ] Phase 4: Hosted SPARQL endpoint and CI compatibility-checker action
+
+Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../milestones).
+
+---
+
+## Citation
+
+If you use OECB in research or curriculum tooling, please cite:
+
+```
+OpenEvo CCS Lab (2025). OpenEvo Concept Base (v0.2.0) [Data infrastructure].
+https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
+```
 
 ---
 
 ## License
 
-This specification and all schemas and vocabularies in this repository
-are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-Tooling and validation scripts are released under [MIT](LICENSE).
+- **Content** (ontology, schemas, vocabularies, documentation): [CC-BY 4.0](LICENSE)
+- **Code** (build pipeline, validation tooling): [MIT](LICENSE-CODE)
 
 ---
 
-*OpenEvo Concept Base · v0.9.0 · Draft for Review*
-*Part of the [OpenEvo CCS Lab](http://openevo.eva.mpg.de) digital ecosystem*
+## Links
+
+- 🧪 Research lab: [openevo.eva.mpg.de](http://openevo.eva.mpg.de)
+- 🌐 Persistent identifier namespace: [www.w3id.org/openevo/](https://www.w3id.org/openevo/)
+- 📄 Full specification: [`SPECIFICATION.md`](SPECIFICATION.md)
+- 🗳️ Governance & versioning policy: [`GOVERNANCE.md`](GOVERNANCE.md)
+```
+
+Two things worth flagging on the namespace change specifically:
+
+- **w3id.org registration requirement:** w3id.org is a redirect service maintained by the community (via [w3id.org's own GitHub repo](https://github.com/perma-id/w3id.org)) — actually using `www.w3id.org/openevo/` as a resolving namespace requires a one-time PR to that registry mapping `openevo/*` to wherever OECB's actual resolver is hosted (e.g., a GitHub Pages site or dedicated server). Worth doing early, since every IRI baked into the ontology/schemas/vocabularies assumes this resolves.
+- **Consistency check needed in the underlying files:** the ontology (`core.yaml`) and both vocabulary files we drafted earlier used `id.openevo.org` in comments and `"@context"` mappings (e.g., `oe: "https://id.openevo.org/ontology#"`). If `www.w3id.org/openevo/` is now canonical, those files need a corresponding find-and-replace pass before this README's claims about resolvable IRIs are actually accurate — happy to do that pass now if you'd like.

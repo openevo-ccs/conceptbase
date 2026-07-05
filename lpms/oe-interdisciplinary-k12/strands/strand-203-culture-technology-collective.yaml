@@ -1,0 +1,123 @@
+# Path: /lpms/oe-interdisciplinary-k12/strands/strand-203-culture-technology-collective.yaml
+
+id: "OE-STRAND-000203"
+type: "oe:Strand"
+status: proposed
+version: 0.1.0
+labels:
+  en: "Culture, Technology, and Collective Systems"
+description:
+  en: >
+    The broadest strand, drawing on OE-INTERDISCIPLINARY's social/cultural
+    concepts. Deliberately reinforces Strand 1 (Transmission, Selection,
+    Innovation-as-variation-generator) and Strand 2 (Agency, Niche
+    Construction) throughout, so that by 9-12 all three strands converge on
+    a shared explanatory vocabulary rather than remaining parallel tracks.
+typicalGradeBand: "K-12 (spans all bands via subStrands)"
+associatedDomains: ["Social Studies", "Computer Science"]
+relations:
+  prerequisiteOf: []
+
+subStrands:
+
+  - id: "OE-STRAND-000231"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Groups, Rules, and Tools"
+    typicalGradeBand: "K-2"
+    required: true
+    associatedDomains: ["Social Studies"]
+    concepts:
+      - id: "OE-CONCEPT-000219"   # Culture
+        emphasis: primary
+      - id: "OE-CONCEPT-000218"   # Technology
+        emphasis: primary
+      - id: "OE-CONCEPT-000217"   # Communication
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Describes a shared rule or custom that a family or classroom group follows."
+      - "Identifies a tool that people use and describes what it helps them do."
+      - "Describes a way people share ideas with each other (talking, drawing, signs)."
+
+  - id: "OE-STRAND-000232"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Comparing Communities and Changing Tools Over Time"
+    typicalGradeBand: "3-5"
+    required: true
+    associatedDomains: ["Social Studies"]
+    concepts:
+      - id: "OE-CONCEPT-000219"   # Culture
+        emphasis: primary
+      - id: "OE-CONCEPT-000207"   # Cooperation
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000208"   # Conflict
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000204"   # Innovation
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Compares practices of two different communities and identifies at least one similarity and one difference."
+      - "Describes an example of cooperation and an example of conflict within a group working toward a goal."
+      - "Traces a simple history of a tool (e.g., writing instruments) showing how new versions built on older ones."
+
+  - id: "OE-STRAND-000233"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Culture as Transmitted, Institutions as Stabilizing Structures"
+    typicalGradeBand: "6-8"
+    required: true
+    associatedDomains: ["Social Studies"]
+    concepts:
+      - id: "OE-CONCEPT-000219"   # Culture
+        emphasis: primary
+      - id: "OE-CONCEPT-000220"   # Institutions
+        emphasis: primary
+      - id: "OE-CONCEPT-000221"   # Norms
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000205"   # Information
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000206"   # Representation
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000203"   # Transmission (cross-ref to Strand 1)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000204"   # Innovation (cross-ref, ties to Strand 1 Variation)
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Explains culture as socially transmitted knowledge and practice that persists beyond any one individual, using the Transmission concept from Strand 1."
+      - "Distinguishes an institution (a stable, rule-based structure) from a norm (an informal shared expectation)."
+      - "Identifies an innovation (a novel cultural variant) and traces how it did or did not spread through a community."
+
+  - id: "OE-STRAND-000234"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Collective Intelligence, Distributed Cognition, and Coevolving Technology"
+    typicalGradeBand: "9-12"
+    associatedDomains: ["Social Studies", "Computer Science", "Biology"]
+    concepts:
+      - id: "OE-CONCEPT-000223"   # Collective Intelligence
+        emphasis: primary
+      - id: "OE-CONCEPT-000224"   # Distributed Cognition
+        emphasis: primary
+      - id: "OE-CONCEPT-000218"   # Technology
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000222"   # Knowledge
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000211"   # Agency (cross-ref to Strand 2)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000209"   # Niche Construction (cross-ref to Strand 2)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000213"   # Selection (cross-ref to Strand 1)
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Explains how a group-level outcome (collective intelligence) can emerge from many individual agents without any one agent designing the outcome, connecting to Strand 2's Agency concept."
+      - "Analyzes an example of distributed cognition (knowledge or processing spread across people and tools/artifacts, not held by one mind)."
+      - "Explains how human technological niche construction (Strand 2) and cultural selection (Strand 1) jointly shape a contemporary information environment (e.g., a social media platform)."
+    required: true

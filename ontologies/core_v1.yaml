@@ -1,0 +1,297 @@
+# ============================================================================
+# OpenEvo ConceptBase — Core Ontology
+# ============================================================================
+# Path:      /ontologies/core.yaml
+# Authoring format: YAML (compiles to JSON-LD/RDF via /build/ pipeline;
+#                    do not hand-edit generated /registry/*.jsonld outputs)
+#
+# Namespace: All oe: prefixed IRIs resolve under the permanent identifier
+# namespace https://www.w3id.org/openevo/ (via the w3id.org redirection
+# service — see repository README, "Namespace" section, for the registration
+# note). oe:ClassName expands to https://www.w3id.org/openevo/ontology#ClassName.
+#
+# Scope: Phase 1 only (see Spec v0.2, "Phased Scope"). Defines the minimal
+# TBox needed to pilot one real Strand repository end-to-end: Concept, LPM,
+# Strand, SubStrand, LearningObject. All other classes referenced elsewhere
+# in the spec (Collection, Competency, Assessment, Practice, Evidence,
+# Resource) are declared under `reserved` below — their IRIs are stable and
+# forward-referenceable, but their structure is intentionally undefined
+# until later phases, to keep this pilot minimal and testable.
+# ============================================================================
+
+id: OE-ONTOLOGY
+version: 1.0.0
+status: stable
+authors:
+  - name: OpenEvo ConceptBase Maintainers
+license: CC-BY-4.0
+phase: 1
+
+"@context":
+  oe:   "https://www.w3id.org/openevo/ontology#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  owl:  "http://www.w3.org/2002/07/owl#"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  xsd:  "http://www.w3.org/2001/XMLSchema#"
+  dct:  "http://purl.org/dc/terms/"
+
+# ----------------------------------------------------------------------------
+# CLASSES (Phase 1)
+# ----------------------------------------------------------------------------
+classes:
+
+  oe:Entity:
+    label: Entity
+    status: stable
+    abstract: true
+    definition: >
+      Abstract base class for every OpenEvo ConceptBase type. Not intended
+      to be instantiated directly. Provides the common structural
+      properties (identifier, status, version) that all concrete classes
+      inherit, so new classes added in later phases automatically gain
+      consistent identifier/versioning semantics without re-declaring them.
+
+  oe:Concept:
+    label: Concept
+    status: stable
+    subClassOf: [oe:Entity, skos:Concept]
+    definition: >
+      A unit of shared meaning — a term, idea, process, or category —
+      used to describe curriculum content. This class defines only the
+      *type*; specific terms (e.g. "Natural Selection") are instances of
+      oe:Concept populated by controlled vocabularies
+      (see /controlled-vocabularies/), not defined in this ontology.
+    notes: >
+      Because oe:Concept subclasses skos:Concept, all standard SKOS
+      relations (skos:broader, skos:narrower, skos:related,
+      skos:closeMatch, skos:exactMatch) are available on every Concept
+      instance without redefinition. Cross-vocabulary alignment records
+      (Phase 2) are reified separately in /alignments/, not modeled as a
+      direct ontology property, so each alignment can carry its own
+      provenance (assertedBy, date, status).
+
+  oe:LPM:
+    label: Learning Progression Model
+    status: stable
+    subClassOf: oe:Entity
+    definition: >
+      A top-level, independently governed model describing how
+      competencies, concepts, and strands develop across a span of
+      learner development (e.g. K–12). An LPM is a structural container:
+      it references, but does not itself contain, lesson content.
+    notes: >
+      An LPM references a gradeSchema and subjectSchema by ID (see
+      /grade-schemas/, /subject-schemas/ — Phase 3) rather than embedding
+      them, so it remains independent of any single grade/subject system.
+
+  oe:Strand:
+    label: Strand
+    status: stable
+    subClassOf: oe:Entity
+    definition: >
+      A coherent thematic thread within an LPM (e.g. "Origins of
+      Science"). Strands are recursively compositional via oe:SubStrand,
+      up to a recommended maximum of two nested levels — enforced at
+      validation time (see /validation/), not as an ontology restriction,
+      so the depth limit can be relaxed later without a class-level
+      breaking change.
+
+  oe:SubStrand:
+    label: Sub-strand
+    status: stable
+    subClassOf: oe:Strand
+    definition: >
+      A child Strand nested within a parent Strand. Modeled as a
+      *subclass* of oe:Strand rather than a separate sibling type, so
+      recursive nesting uses a single self-referential property
+      (oe:hasSubStrand) instead of one class per nesting level. This is
+      what keeps arbitrary-depth composition possible without ontology
+      changes, while validation still enforces the recommended 2-level
+      practical limit.
+
+  oe:LearningObject:
+    label: Learning Object
+    status: stable
+    subClassOf: oe:Entity
+    definition: >
+      The smallest independently addressable unit of curriculum content
+      referenced by a Strand or SubStrand (e.g. a lesson, activity, or
+      simulation). ConceptBase defines the type and its structural
+      properties only; actual content lives in external repositories
+      (Collections, Strand repos, etc.), never in ConceptBase itself.
+
+# ----------------------------------------------------------------------------
+# CLASSES (Reserved — IRI stable, structure not yet defined)
+# ----------------------------------------------------------------------------
+# Declaring these now means dependent repositories can forward-reference
+# the IRIs (under https://www.w3id.org/openevo/ontology#) without a future
+# breaking change once each is fully specified. Promoting a class out of
+# `reserved` into `classes` is a MINOR version bump (additive), not a
+# MAJOR one, since no existing reference changes.
+
+reserved:
+  - iri: oe:Collection
+    plannedPhase: 3
+    note: Container aggregating Strands/LPMs for a distributed collection repo.
+  - iri: oe:Competency
+    plannedPhase: 4
+    note: To be profiled as an extension of CASE CFItem, not modeled from scratch.
+  - iri: oe:Assessment
+    plannedPhase: 4
+  - iri: oe:Practice
+    plannedPhase: 4
+  - iri: oe:Evidence
+    plannedPhase: 4
+    note: To be profiled as an extension of xAPI statement structure.
+  - iri: oe:Resource
+    plannedPhase: 4
+    note: External/media asset attachable to a LearningObject (profiled from IEEE LOM / schema.org/LearningResource).
+
+# ----------------------------------------------------------------------------
+# DATATYPE PROPERTIES — inherited via oe:Entity
+# ----------------------------------------------------------------------------
+entityProperties:
+
+  oe:identifier:
+    label: identifier
+    domain: oe:Entity
+    range: xsd:string
+    status: stable
+    definition: >
+      The permanent OpenEvo identifier (e.g. OE-CONCEPT-000213). Never
+      changes once assigned, independent of label or definition changes.
+      Resolvable via the identifier registry at
+      https://www.w3id.org/openevo/concept/000213 (see /registry/).
+
+  oe:status:
+    label: status
+    domain: oe:Entity
+    range: xsd:string
+    status: stable
+    definition: >
+      Lifecycle state of this entity: proposed | accepted | stable |
+      deprecated | superseded. See GOVERNANCE.md for the full lifecycle
+      and deprecation policy (deprecated entities are never deleted).
+
+  oe:version:
+    label: version
+    domain: oe:Entity
+    range: xsd:string
+    status: stable
+    definition: Semantic version (MAJOR.MINOR.PATCH) of this entity.
+
+# ----------------------------------------------------------------------------
+# OBJECT PROPERTIES (Phase 1)
+# ----------------------------------------------------------------------------
+properties:
+
+  oe:hasStrand:
+    label: has strand
+    domain: oe:LPM
+    range: oe:Strand
+    status: stable
+    definition: Relates an LPM to a top-level Strand it contains.
+
+  oe:hasSubStrand:
+    label: has sub-strand
+    domain: oe:Strand
+    range: oe:SubStrand
+    status: stable
+    definition: >
+      Relates a Strand to a nested child Strand. Recursive composition
+      is achieved via SubStrand's subclassing of Strand plus this single
+      property, rather than one property per nesting depth.
+
+  oe:partOfStrand:
+    label: part of strand
+    domain: oe:SubStrand
+    range: oe:Strand
+    status: stable
+    inverseOf: oe:hasSubStrand
+    definition: Inverse of oe:hasSubStrand, for traversal from child to parent.
+
+  oe:hasLearningObject:
+    label: has learning object
+    domain: oe:Strand
+    range: oe:LearningObject
+    status: stable
+    definition: Relates a Strand or SubStrand to a Learning Object it references.
+
+  oe:hasConcept:
+    label: has concept
+    domain: [oe:Strand, oe:LearningObject]
+    range: oe:Concept
+    status: stable
+    definition: >
+      Declares that a Strand or Learning Object addresses a given
+      Concept. This is the primary link between curriculum structure
+      (owned by external repos) and the controlled vocabularies (owned
+      by ConceptBase).
+
+  oe:required:
+    label: required
+    domain: oe:SubStrand
+    range: xsd:boolean
+    status: stable
+    definition: >
+      Whether this SubStrand is obligate (true) or optional/elective
+      (false) within its parent Strand's progression — supports Core
+      Path / Elective Path / Regional Extension / Teacher Choice
+      modeling within a single LPM.
+
+  oe:recommendedSequence:
+    label: recommended sequence
+    domain: oe:Strand
+    range: oe:Strand
+    status: stable
+    definition: Suggested default ordering between sibling Strands/SubStrands.
+
+  oe:alternativeSequence:
+    label: alternative sequence
+    domain: oe:Strand
+    range: oe:Strand
+    status: stable
+    definition: A valid, non-default ordering between sibling Strands/SubStrands.
+
+  oe:parallel:
+    label: parallel with
+    domain: oe:Strand
+    range: oe:Strand
+    status: stable
+    symmetric: true
+    definition: Declares that two Strands/SubStrands may be taught concurrently.
+
+  oe:prerequisiteOf:
+    label: prerequisite of
+    domain: oe:Strand
+    range: oe:Strand
+    status: stable
+    definition: Declares that one Strand/SubStrand must precede another.
+
+  oe:definedInVocabulary:
+    label: defined in vocabulary
+    domain: oe:Concept
+    range: xsd:string
+    status: stable
+    definition: >
+      References the controlled vocabulary ID (e.g. BIO-CORE-v1.0.0) in
+      which this Concept instance is defined. A Concept may be defined
+      in exactly one home vocabulary but aligned to concepts in others
+      via /alignments/ (Phase 2).
+
+# ----------------------------------------------------------------------------
+# EXTENSIBILITY & VERSIONING NOTES
+# ----------------------------------------------------------------------------
+# - Adding a new Phase-1 property, or promoting a `reserved` class into
+#   `classes`: MINOR version bump (additive, non-breaking).
+# - Changing an existing class/property's domain, range, or semantics,
+#   or removing one: MAJOR version bump, requires an RFC (see
+#   /proposals/ and GOVERNANCE.md) reviewed by a maintainer.
+# - Wording-only fixes to `definition`/`note` fields: PATCH version bump.
+# - Deprecated classes/properties are never deleted; they receive
+#   status: deprecated plus a supersededBy pointer and remain resolvable.
+# - IRI base migration note: this ontology's canonical namespace is
+#   https://www.w3id.org/openevo/ (registered via the w3id.org permanent
+#   identifier redirection service). If the underlying resolver
+#   infrastructure changes, only the w3id.org redirect target needs
+#   updating — every IRI minted against this namespace remains stable.

@@ -1,2552 +1,533 @@
-# OpenEvo Concept Base — Formal Infrastructure Specification
+# OpenEvo ConceptBase — Formal Infrastructure Specification
 
-### Version 0.9.0 — Foundational Release Candidate
-
-**Status:** Draft for Review
-**Namespace:** `https://openevo.net/`
-**Repository:** `OpenEvoCCS-lab/OpenEvo-ConceptBase`
-**License:** CC BY 4.0 (specification); MIT (tooling)
-
----
-
-## Preamble
-
-This document is the authoritative specification for the **OpenEvo Concept Base (OECB)** — the semantic infrastructure layer of the OpenEvo Computational Curriculum Studies (CCS) ecosystem. It is written as a **formal infrastructure specification**, not a repository README, because the Concept Base functions as the foundational dependency for a distributed, multi-repository, evolutionarily-structured knowledge ecosystem.
-
-The specification defines what exists in the ecosystem, how it is represented, how it relates, how it changes, how it is accessed, and how it is governed. It is intended to be read by:
-
-- **Infrastructure architects** designing repositories within the OpenEvo organization
-- **Knowledge contributors** creating curriculum theory objects, curriculum knowledge objects, and evidence objects
-- **External collaborators** seeking to federate their projects with OpenEvo
-- **AI systems and agents** querying the OpenEvo knowledge graph
-- **Researchers** studying the ecosystem itself as a model of computational cultural evolution
-
-The specification is organized into seventeen sections covering purpose, architecture, ontology, schemas, versioning, evolutionary dynamics, access, governance, and long-term vision.
+**Document status:** Normative
+**Specification version:** 0.2.0
+**Namespace:** `https://www.w3id.org/openevo/`
+**Repository:** `github.com/openevo-ccs/conceptbase`
+**License:** CC-BY-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
+**Editors:** OpenEvo Computational Curriculum Studies (CCS) Lab
 
 ---
 
-## Table of Contents
+## 0. Front Matter
 
-1. Foundational Commitments
-2. Namespace Architecture
-3. Repository Organization
-4. Upper Ontology Alignment
-5. Core Relational Vocabulary
-6. Object Schema Architecture
-7. Curriculum Theory Object (CTO)
-8. Curriculum Knowledge Object (CKO)
-9. Theory Space Object (TSO)
-10. Evidence Object (EVO)
-11. Competency Object (CMO)
-12. Conflict Object (CFO)
-13. Agent Object (AGO)
-14. Versioning Model
-15. Evolutionary Metadata Layer
-16. Graph Architecture
-17. Access and Query Layer
-18. Namespace Governance and Trust Tiers
-19. Controlled Vocabularies
-20. FAIR Compliance
-21. External Standards Alignment
-22. Governance Model
-23. Long-Term Vision
+### 0.1 Conformance Language
 
----
+The keywords **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, **MAY**, and **REQUIRED** in this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt). This specification uses them to distinguish binding requirements on conformant repositories and tooling from recommendations and optional extensions.
 
-## Section 1: Foundational Commitments
+### 0.2 Purpose of This Document
 
-### 1.1 The Core Principle
+This specification is the authoritative, normative description of the OpenEvo ConceptBase (OECB): its data model, namespace and identifier architecture, schema layer, controlled vocabulary structure, governance process, versioning rules, and conformance requirements. Where this document and any other artifact in the repository (README, code comments, prior draft specifications) disagree, **this document is the source of truth**.
 
-> *The OpenEvo Concept Base defines how curriculum knowledge can be represented, while individual repositories contribute evolving instances of that knowledge.*
+This document supersedes all prior draft specifications (v0.1, v0.2-draft) circulated during the design phase of the ConceptBase.
 
-This distinction — between **representational infrastructure** and **knowledge instances** — is the single most important architectural decision in the ecosystem. It parallels:
+### 0.3 Relationship to Other Documents
 
-- The distinction between **ontology and assertion** in description logics
-- The distinction between **grammar and utterance** in linguistics
-- The distinction between **theory and data** in philosophy of science
-- The distinction between **schema and instance** in database architecture
-
-Every design decision in this specification follows from this principle.
-
-### 1.2 Core Purpose
-
-The OpenEvo Concept Base provides:
-
-- Shared formal concepts and entity types
-- A defined relational vocabulary connecting those entities
-- Machine-readable object schemas with epistemic structure
-- Controlled vocabularies for consistent terminology
-- An evolutionary metadata layer for tracking knowledge dynamics
-- Versioning semantics for intellectual history
-- A namespace architecture with defined trust tiers
-- A graph generation pipeline for computational querying
-- An access layer for AI agents and research interfaces
-
-### 1.3 The Evolutionary Design Principle
-
-The evolutionary metaphor central to this project is not decorative — it is a **design specification**. The GitHub organization functions as an evolutionary environment for curriculum knowledge:
-
-```
-repositories       =    populations of knowledge objects
-commits            =    mutations to existing objects
-forks              =    lineage divergence
-pull requests      =    selection events
-merges             =    inherited knowledge
-deprecations       =    extinction events
-conflicts          =    competitive exclusion dynamics
-cross-repo links   =    horizontal knowledge transfer
-```
-
-Every schema element in this specification is designed with evolutionary dynamics in mind. This means that genealogy, selection pressure, adoption, fitness, and population structure are **first-class representational concerns**, not afterthoughts.
-
-### 1.4 FAIR Commitment
-
-All OpenEvo objects are designed to satisfy the FAIR principles:
-
-| Principle | Operationalization |
+| Document | Role |
 |---|---|
-| **Findable** | Persistent URIs; schema.org metadata; registry publication |
-| **Accessible** | HTTP with content negotiation; SPARQL endpoint; open license |
-| **Interoperable** | Alignment with Dublin Core, SKOS, ASN, Schema.org; RDF serialization |
-| **Reusable** | Explicit CC BY 4.0 license on every object; rich provenance metadata |
-
-### 1.5 Epistemological Commitments
-
-Curriculum theories are often normative, interpretive, and contested by design. The Concept Base acknowledges this tension through a two-layer approach:
-
-- The **formal representational layer** is stable enough for machine processing and computational interoperability. It represents structure, relationships, and epistemic status.
-- The **interpretive annotation layer** accommodates contested, pluralistic, and normative content. It preserves theoretical richness without requiring formal consensus.
-
-The system does not adjudicate between competing theories. It represents them, their relationships, their evidence bases, their conflicts, and their evolutionary histories.
+| This specification | Normative — defines what OECB *is* |
+| `GOVERNANCE.md` | Normative — defines the RFC/review *process* by which this specification evolves |
+| `CONTRIBUTING.md` | Informative — practical guide for contributors |
+| `ontologies/core.yaml`, `schemas/*.yaml` | Normative — machine-readable instantiations of §6 and §7 of this specification |
+| `README.md` | Informative — orientation and quickstart, not authoritative on any technical detail |
 
 ---
 
-## Section 2: Namespace Architecture
+## 1. Introduction and Scope
 
-### 2.1 Root Namespace
+### 1.1 What OECB Is
 
-```
-https://openevo.net/
-```
+The OpenEvo ConceptBase is the semantic registry infrastructure for the OpenEvo Computational Curriculum Studies ecosystem. It defines the ontology, schemas, controlled vocabularies, persistent identifiers, and validation rules that allow independently developed and independently governed repositories — Learning Progression Models (LPMs), Collections, Strand repositories, assessment banks, and AI-assisted curriculum tools — to interoperate through a shared, machine-readable data model.
 
-This is the **persistent identity layer** for all OpenEvo resources. All objects minted within the core namespace receive globally unique, persistent identifiers resolvable via HTTP.
+OECB is analogous in architectural role to a package registry (e.g., npm) or a standards body (e.g., schema.org, SKOS): it defines a shared grammar and a shared set of stable identifiers, but it does not itself contain the artifacts built on top of it.
 
-### 2.2 Namespace Structure
+### 1.2 What OECB Is Not
 
-```
-https://openevo.net/
+OECB **MUST NOT** contain:
 
-├── ontology/
-│   ├── core/
-│   └── extensions/
-│
-├── vocabulary/
-│   ├── epistemic-status/
-│   ├── evidence-type/
-│   ├── disciplines/
-│   ├── competencies/
-│   └── selection-pressures/
-│
-├── schema/
-│   ├── CTO/
-│   ├── CKO/
-│   ├── TSO/
-│   ├── EVO/
-│   ├── CMO/
-│   ├── CFO/
-│   └── AGO/
-│
-├── ccs/
-│   ├── cto/
-│   ├── cko/
-│   ├── tso/
-│   ├── evo/
-│   ├── cmo/
-│   ├── cfo/
-│   └── ago/
-│
-├── evolution/
-│
-├── origins-of-science/
-│
-└── projects/
-    └── {affiliated-project-id}/
-```
+- Lesson plans, instructional units, or complete curricula.
+- Complete Learning Progression Models, Collections, or Strand content.
+- Assessment items, student data, or learner-facing materials.
+- Multimedia or learning resources.
 
-### 2.3 Identifier Patterns
+These artifacts live in independently governed repositories that *depend on* OECB (§10).
 
-All identifiers follow a consistent pattern:
+### 1.3 Scope of This Specification
 
-```
-https://openevo.net/ccs/{object-type}/{ID}
-```
+This document specifies:
 
-Examples:
-
-```
-https://openevo.net/ccs/cto/CTO-CURRICULUM-COMPRESSION-001
-https://openevo.net/ccs/cko/CKO-THURINGIA-BIOLOGY-001
-https://openevo.net/ccs/tso/TSO-COMPUTATIONAL-CURRICULUM-001
-https://openevo.net/ccs/evo/EVO-COMPRESSION-EVIDENCE-001
-https://openevo.net/ccs/cmo/CMO-EVOLUTIONARY-REASONING-001
-https://openevo.net/ccs/cfo/CFO-UNIT-OF-ANALYSIS-001
-https://openevo.net/ccs/ago/AGO-RESEARCHER-001
-```
-
-Schema version identifiers:
-
-```
-https://openevo.net/schema/CTO/1.0
-https://openevo.net/schema/CKO/1.0
-https://openevo.net/schema/TSO/1.0
-```
-
-Vocabulary term identifiers:
-
-```
-https://openevo.net/vocabulary/epistemic-status/contested
-https://openevo.net/vocabulary/evidence-type/meta-analysis
-https://openevo.net/vocabulary/selection-pressures/empirical
-```
+1. The namespace and persistent identifier architecture (§4).
+2. The layered technical architecture — authoring format, compiled representation, query surface (§5).
+3. The core ontology: classes, properties, and extension rules (§6).
+4. The JSON Schema validation layer (§7).
+5. The structure and disambiguation model of controlled vocabularies (§8).
+6. The (forward-declared, Phase 2) cross-vocabulary alignment model (§9).
+7. The federated repository dependency model (§10).
+8. Governance, versioning, and deprecation rules (§11).
+9. Standards alignment and profiling obligations (§12).
+10. Validation and compatibility-checking requirements (§13).
+11. The phased rollout plan and its normative implications (§14).
+12. Conformance levels for repositories and tooling claiming OECB compatibility (§16).
 
 ---
 
-## Section 3: Repository Organization
+## 2. Terminology
 
-### 3.1 GitHub Organization Structure
-
-```
-OpenEvoCCS-lab/
-
-├── OpenEvo-ConceptBase          ← this specification; all schemas; all vocabularies
-│
-├── OpenEvo-Graph                ← graph compilation pipeline; SPARQL endpoint
-│
-├── OpenEvo-CCS                  ← curriculum studies CTOs, CKOs, TSOs
-│
-├── OpenEvo-EvolutionEducation   ← evolution education domain objects
-│
-├── OpenEvo-OriginsScience       ← origins of science domain objects
-│
-├── OpenEvo-AgentSystems         ← AI agent definitions and interfaces
-│
-└── OpenEvo-Data                 ← raw data, annotations, empirical records
-```
-
-### 3.2 Dependency Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                  OpenEvo Concept Base                    │
-│          (ontology + schemas + vocabularies)             │
-└─────────────┬─────────────┬──────────────┬──────────────┘
-              │             │              │
-              ▼             ▼              ▼
-        ┌──────────┐ ┌──────────┐  ┌──────────────┐
-        │ CCS Repo │ │ Evol.    │  │ Origins      │
-        │          │ │ Repo     │  │ Science Repo │
-        └────┬─────┘ └────┬─────┘  └──────┬───────┘
-             │            │               │
-             └────────────┼───────────────┘
-                          ▼
-              ┌───────────────────────┐
-              │    OpenEvo Graph      │
-              │ (compiled knowledge   │
-              │      graph)           │
-              └──────────┬────────────┘
-                         │
-              ┌──────────┼──────────────┐
-              ▼          ▼              ▼
-        ┌──────────┐ ┌──────────┐ ┌──────────┐
-        │  SPARQL  │ │ GraphQL  │ │  Visual- │
-        │ Endpoint │ │   API    │ │ ization  │
-        └────┬─────┘ └────┬─────┘ └──────────┘
-             │            │
-             └─────┬──────┘
-                   ▼
-          ┌─────────────────┐
-          │    AI Agents    │
-          │    Research     │
-          │   Interfaces    │
-          └─────────────────┘
-```
-
-### 3.3 The Concept Base as Shared Dependency
-
-Every repository in the organization:
-
-1. Declares its dependency on a specific **schema version** of the Concept Base
-2. Validates all objects against the declared schema before merge
-3. References only vocabulary terms defined in the Concept Base vocabulary registry
-4. Mints object IDs only within its authorized namespace tier
-
----
-
-## Section 4: Upper Ontology Alignment
-
-### 4.1 Purpose of Upper Ontology Alignment
-
-Upper ontologies provide the philosophical scaffolding that ensures semantic interoperability across domains. Without upper ontology alignment, two systems can share vocabulary while meaning incompatible things — a critical failure mode for distributed ecosystems.
-
-### 4.2 Alignment Targets
-
-The OpenEvo Concept Base aligns with the following upper ontologies:
-
-| Upper Ontology | Alignment Purpose |
+| Term | Definition |
 |---|---|
-| **Basic Formal Ontology (BFO)** | Distinguishes continuants (persistent entities) from occurrents (processes and events). CTO and CKO are continuants; selection events and adoption events are occurrents. |
-| **Dublin Core Metadata Initiative (DCMI)** | Basic bibliographic metadata (creator, date, subject, description, rights) |
-| **SKOS (Simple Knowledge Organization System)** | Controlled vocabulary representation; concept schemes; broader/narrower/related relationships |
-| **Schema.org** | Discoverability; structured data markup; CreativeWork, Dataset, EducationalOccupationalCredential |
-| **PROV-O (Provenance Ontology)** | Provenance chains; entity-activity-agent triples; derivation and revision tracking |
-
-### 4.3 Core Class Hierarchy
-
-```
-owl:Thing
-│
-├── oecb:ContinuantEntity
-│   ├── oecb:KnowledgeObject
-│   │   ├── oecb:CurriculumTheoryObject         (CTO)
-│   │   ├── oecb:CurriculumKnowledgeObject      (CKO)
-│   │   ├── oecb:TheorySpaceObject              (TSO)
-│   │   ├── oecb:EvidenceObject                 (EVO)
-│   │   ├── oecb:CompetencyObject               (CMO)
-│   │   └── oecb:AgentObject                    (AGO)
-│   │
-│   └── oecb:ConceptualEntity
-│       ├── oecb:TheoreticalClaim
-│       ├── oecb:ConceptualDimension
-│       └── oecb:TheoryConflict                 (CFO)
-│
-└── oecb:OccurrentEntity
-    ├── oecb:SelectionEvent
-    ├── oecb:AdoptionEvent
-    ├── oecb:RevisionEvent
-    └── oecb:MergerEvent
-```
-
-### 4.4 Namespace Prefix Declarations
-
-```turtle
-@prefix oecb:   <https://openevo.net/ontology/core#> .
-@prefix oevo:   <https://openevo.net/vocabulary/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <https://schema.org/> .
-@prefix bfo:    <http://purl.obolibrary.org/obo/BFO_> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-```
+| **Entity** | Any instance of an OECB ontology class (`oe:Concept`, `oe:LPM`, `oe:Strand`, `oe:SubStrand`, `oe:LearningObject`, and reserved future classes). |
+| **Concept** | An instance of `oe:Concept` — a disambiguated unit of curricular meaning defined within exactly one controlled vocabulary. |
+| **Vocabulary** | A versioned, governed collection of Concept instances sharing a scope and discipline (e.g., `BIO-CORE-v1.0.0`). |
+| **LPM** | Learning Progression Model — a top-level structural container referencing Strands across a developmental span. |
+| **Strand / SubStrand** | A thematic thread of curriculum structure; SubStrand is a subclass of Strand enabling recursive nesting. |
+| **Alignment** | A Phase 2 artifact asserting a SKOS-typed relationship (e.g., `skos:closeMatch`) between Concepts in different vocabularies, carrying provenance. |
+| **Manifest** | The `conceptbase:` block a dependent repository declares, pinning ontology and vocabulary versions it was built against. |
+| **Dependent repository** | Any repository (LPM, Collection, Strand, tool) that references OECB entities via its manifest. |
+| **RFC** | A structured change proposal submitted per the governance process (§11). |
 
 ---
 
-## Section 5: Core Relational Vocabulary
+## 3. Design Principles
 
-### 5.1 Purpose
+OECB is governed by the following non-negotiable design commitments. Any proposed change that violates one of these principles **MUST** be rejected during RFC review unless the principle itself is formally amended (§11.6).
 
-The relational vocabulary defines the **typed edges** of the OpenEvo knowledge graph. Without defined relationships, the system cannot support inference, conflict detection, or AI agent querying. Every relationship in this vocabulary has a defined:
-
-- **Domain**: the class of subject entities
-- **Range**: the class of object entities
-- **Inverse** (where applicable)
-- **Semantic definition**
-- **Evolutionary interpretation**
-
-### 5.2 Primary Relationships
-
-#### 5.2.1 Theory-Instance Relationships
-
-```
-oecb:instantiates
-  domain:    CurriculumKnowledgeObject
-  range:     CurriculumTheoryObject
-  inverse:   oecb:isInstantiatedBy
-  definition: A concrete educational artifact embodies or exemplifies the claims
-              of a curriculum theory.
-  example:   CKO-THURINGIA-BIOLOGY-001 oecb:instantiates CTO-CURRICULUM-COMPRESSION-001
-  evolutionary: Instantiation density is a proxy for theoretical fitness in practice.
-```
-
-```
-oecb:partiallyInstantiates
-  domain:    CurriculumKnowledgeObject
-  range:     CurriculumTheoryObject
-  definition: The artifact embodies some but not all claims of the theory.
-  note:      Use when a CKO reflects a theory's influence without full alignment.
-```
-
-#### 5.2.2 Evidence Relationships
-
-```
-oecb:supports
-  domain:    EvidenceObject
-  range:     TheoreticalClaim
-  definition: Empirical or theoretical evidence increases the epistemic warrant
-              for a theoretical claim.
-  note:      strength is captured as a property of the support relationship,
-             not of the EvidenceObject itself.
-
-oecb:contradicts
-  domain:    EvidenceObject
-  range:     TheoreticalClaim
-  definition: Evidence decreases the epistemic warrant for a theoretical claim
-              or directly falsifies it.
-
-oecb:qualifies
-  domain:    EvidenceObject
-  range:     TheoreticalClaim
-  definition: Evidence neither supports nor contradicts but specifies boundary
-              conditions, scope limitations, or contextual dependencies.
-
-oecb:isNeutralToward
-  domain:    EvidenceObject
-  range:     TheoreticalClaim
-  definition: Evidence is relevant to the domain of the claim but bears no
-              discernible positive or negative epistemic relationship to it.
-```
-
-#### 5.2.3 Theory-Theory Relationships
-
-```
-oecb:extends
-  domain:    CurriculumTheoryObject
-  range:     CurriculumTheoryObject
-  inverse:   oecb:isExtendedBy
-  definition: One theory builds upon, refines, or adds to another while
-              preserving its core claims.
-  evolutionary: Extension is the primary mechanism of theoretical inheritance.
-
-oecb:subsumes
-  domain:    CurriculumTheoryObject
-  range:     CurriculumTheoryObject
-  inverse:   oecb:isSubsumedBy
-  definition: One theory encompasses another as a special case.
-
-oecb:competesWith
-  domain:    CurriculumTheoryObject
-  range:     CurriculumTheoryObject
-  symmetric: true
-  definition: Two theories make incompatible claims about the same domain
-              such that both cannot be simultaneously true.
-  evolutionary: Competition is the primary selection pressure between theories.
-
-oecb:synthesizes
-  domain:    CurriculumTheoryObject
-  range:     CurriculumTheoryObject
-  definition: A theory integrates claims from two or more previously separate theories.
-  note:      The synthesizing theory should list all synthesized theories.
-  evolutionary: Synthesis is the theoretical analog of horizontal gene transfer.
-
-oecb:divergedFrom
-  domain:    CurriculumTheoryObject
-  range:     CurriculumTheoryObject
-  definition: A theory branched from a common ancestor theory, developing
-              distinct claims while retaining shared foundations.
-  evolutionary: Direct analog of speciation.
-```
-
-#### 5.2.4 Genealogical Relationships
-
-```
-oecb:derivedFrom
-  domain:    KnowledgeObject
-  range:     KnowledgeObject
-  definition: A knowledge object was produced by modifying, extending, or
-              translating a prior knowledge object.
-  note:      Applies across all object types.
-
-oecb:branchedFrom
-  domain:    KnowledgeObject
-  range:     KnowledgeObject
-  definition: A knowledge object was created as an independent fork of another,
-              with the intention of developing separately.
-
-oecb:mergedInto
-  domain:    KnowledgeObject
-  range:     KnowledgeObject
-  definition: A knowledge object was absorbed into another, ceasing independent
-              existence. The subject is deprecated; the object inherits its lineage.
-```
-
-#### 5.2.5 Theory Space Relationships
-
-```
-oecb:subsumesTheory
-  domain:    TheorySpaceObject
-  range:     CurriculumTheoryObject
-  definition: A theory space contains a curriculum theory as one of its
-              member positions.
-
-oecb:associatesArtifact
-  domain:    TheorySpaceObject
-  range:     CurriculumKnowledgeObject
-  definition: A theory space has an associated empirical artifact relevant
-              to understanding its member theories.
-
-oecb:identifiesGap
-  domain:    TheorySpaceObject
-  range:     oecb:ConceptualGap
-  definition: A theory space formally identifies an unoccupied region — a
-              position no existing theory has yet articulated.
-
-oecb:containsTension
-  domain:    TheorySpaceObject
-  range:     ConflictObject
-  definition: A theory space contains a formally registered conflict between
-              two of its member theories.
-```
-
-#### 5.2.6 Competency Relationships
-
-```
-oecb:targetedBy
-  domain:    CompetencyObject
-  range:     CurriculumKnowledgeObject
-  definition: A curriculum artifact explicitly targets a competency.
-
-oecb:groundedIn
-  domain:    CompetencyObject
-  range:     CurriculumTheoryObject
-  definition: A competency specification is theoretically grounded in a CTO.
-
-oecb:prerequisiteFor
-  domain:    CompetencyObject
-  range:     CompetencyObject
-  definition: Acquisition of one competency is a prerequisite for another.
-```
-
-### 5.3 Relationship Properties
-
-Every instantiated relationship in the knowledge graph carries:
-
-```yaml
-relationship_instance:
-  subject: "{object-URI}"
-  predicate: "oecb:{relationship}"
-  object: "{object-URI}"
-  strength: strong | moderate | weak | contested | unknown
-  confidence: high | medium | low
-  asserted_by: "{AGO-URI}"
-  asserted_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  provenance_note: ""
-  schema_version: "https://openevo.net/schema/relationships/1.0"
-```
+1. **Infrastructure, not content.** OECB defines representational capacity; it does not adjudicate curricular, theoretical, or pedagogical questions (§1.2, §8.6).
+2. **FAIR by construction.** Every entity **MUST** be Findable (persistent identifier), Accessible (open license, resolvable URI), Interoperable (typed relations via existing standards), and Reusable (versioned, provenance-tracked) from the moment it is accepted, not retrofitted later.
+3. **Git-native authoring, compiled distribution.** All entities **MUST** be authored as human-reviewable YAML through pull requests. Compiled RDF/JSON-LD, SPARQL endpoints, and flat JSON indices are build artifacts and **MUST NOT** be hand-edited (§5).
+4. **Standards reuse over reinvention.** Any RFC proposing a novel schema structure **MUST** document why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already satisfies the need (§12).
+5. **Never delete, always deprecate.** No entity is ever removed once `status: accepted` or higher. Deprecated entities remain resolvable indefinitely with a `supersededBy` pointer (§11.4).
+6. **Independent versioning per artifact.** The ontology, each vocabulary, and each schema version independently using semver; there is no single monolithic "ConceptBase version" (§11.5).
+7. **Theoretical pluralism as a first-class capability.** Where a field contains genuine, unresolved theoretical disagreement, OECB **MUST** support multiple internally consistent vocabularies representing competing positions rather than adjudicating between them in the infrastructure layer (§8.6).
 
 ---
 
-## Section 6: Object Schema Architecture
+## 4. Namespace and Identifier Architecture
 
-### 6.1 Schema Layer Overview
+### 4.1 Canonical Namespace
 
-The Concept Base defines seven core object schemas:
+The canonical namespace for all OECB-minted IRIs is:
 
-| Schema | Abbrev | Purpose |
+```
+https://www.w3id.org/openevo/
+```
+
+This namespace **MUST** be registered with the [w3id.org permanent identifier redirection service](https://github.com/perma-id/w3id.org), which decouples the identifier from the physical hosting location of the resolver. Migration of underlying infrastructure **MUST NOT** require re-minting any identifier; only the w3id.org redirect target is updated.
+
+### 4.2 Sub-path Structure
+
+| Sub-path | Resolves to |
+|---|---|
+| `.../ontology#{ClassName}` | Ontology class or property definition (§6) |
+| `.../concept/{id}` | A Concept instance, content-negotiated (JSON-LD, HTML, flat JSON) |
+| `.../lpm/{id}` | An LPM instance |
+| `.../strand/{id}` | A Strand/SubStrand instance |
+| `.../vocab/{name}` | A vocabulary registry entry |
+| `.../schemas/{name}.schema.json` | A JSON Schema document identity (distinct concern from RDF resolution; see §7.1) |
+
+### 4.3 Identifier Patterns
+
+All entity identifiers **MUST** conform to the following patterns, enforced by `schemas/common.defs.yaml`:
+
+| Entity type | Pattern | Example |
 |---|---|---|
-| Curriculum Theory Object | CTO | Abstract theoretical claims about curriculum |
-| Curriculum Knowledge Object | CKO | Concrete educational artifacts and their annotations |
-| Theory Space Object | TSO | Structured conceptual landscapes organizing CTOs |
-| Evidence Object | EVO | Empirical and theoretical evidence bearing on claims |
-| Competency Object | CMO | Specified learning competencies |
-| Conflict Object | CFO | Formally registered theoretical conflicts |
-| Agent Object | AGO | Contributors, reviewers, and system agents |
+| Concept | `^OE-CONCEPT-[0-9]{6}$` | `OE-CONCEPT-000213` |
+| LPM | `^OE-LPM-[0-9]{6}$` | `OE-LPM-000001` |
+| Strand/SubStrand | `^OE-STRAND-[0-9]{6}$` | `OE-STRAND-000101` |
+| Vocabulary reference | `^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$` | `BIO-CORE-v1.0.0` |
 
-### 6.2 Universal Fields
+### 4.4 Identifier Permanence
 
-Every object schema in the Concept Base shares a universal metadata block:
-
-```yaml
-# Universal Metadata Block — required on all OpenEvo objects
-
-id: "https://openevo.net/ccs/{type}/{ID}"
-type: "{ObjectType}"
-schema_version: "https://openevo.net/schema/{Type}/1.0"
-status: active | deprecated | merged | falsified | archived | sandbox
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: "https://github.com/OpenEvoCCS-lab/{repo}"
-
-version:
-  current: "1.0"
-  history:
-    - version: "1.0"
-      date: "YYYY-MM-DD"
-      change_type: initial | patch | minor | major | breaking
-      change_summary: ""
-      changed_by: "{AGO-URI}"
-
-evolutionary_metadata:
-  # See Section 15 — present on all objects
-```
+An identifier, once assigned to an entity with `status` at or above `accepted`, **MUST NOT** be reassigned, reused, or removed for the lifetime of the namespace. Labels, definitions, and relations attached to an identifier **MAY** change across versions; the identifier itself **MUST NOT**.
 
 ---
 
-## Section 7: Curriculum Theory Object (CTO)
+## 5. Layered Technical Architecture
 
-### 7.1 Purpose
+OECB uses a three-layer architecture separating human authorship from machine consumption.
 
-The CTO represents **abstract theoretical claims** about curriculum — its structure, content, design, evolution, function, or epistemology. A CTO is the primary unit of theoretical knowledge in the ecosystem. It is not a summary of a paper or a description of a practice — it is a formal representation of a theoretical position with structured claims, specified scope, epistemic status, and evidence linkage.
+### 5.1 Authoring Layer (YAML)
 
-### 7.2 Schema
+All source content — ontology, schemas, vocabularies, alignments — **MUST** be authored in YAML and reviewed via GitHub pull request. This layer prioritizes human readability, diffability, and low barrier to contribution over machine efficiency.
 
-```yaml
-# ============================================================
-# CURRICULUM THEORY OBJECT (CTO)
-# Schema Version: 1.0
-# https://openevo.net/schema/CTO/1.0
-# ============================================================
+### 5.2 Compiled Layer (RDF / JSON-LD)
 
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/cto/{CTO-ID}"
-type: CurriculumTheoryObject
-schema_version: "https://openevo.net/schema/CTO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
+A CI build pipeline (`/build/`) **MUST** compile authoring-layer YAML into:
 
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: ""
+- **JSON-LD / RDF**, using the `@context` mappings declared in `ontologies/core.yaml`, conformant to the namespace in §4.
+- A **SHACL or JSON Schema validation pass**, rejecting non-conformant instances before compilation proceeds.
 
-version:
-  current: "1.0"
-  history: []
+Compiled outputs are build artifacts. They **MUST NOT** be hand-edited; any correction **MUST** originate in the authoring layer and be recompiled.
 
-# --- Identity Fields ---
-title: ""
-short_name: ""
-description: |
-  A full discursive description of the theory, its origins, its significance,
-  and its position within the broader theory space.
+### 5.3 Query Layer
 
-# --- Theoretical Foundations ---
-theoretical_foundations:
-  parent_disciplines:
-    - ""              # e.g. curriculum theory, cognitive science, evolutionary biology
-  foundational_works:
-    - citation: ""
-      URI: ""
-      relationship: foundational | critical | contextual
-  related_CTOs:
-    - id: "{CTO-URI}"
-      relationship: extends | subsumes | competesWith | synthesizes | divergedFrom
+Two query surfaces **MUST** be generated from each tagged release:
 
-# --- Structured Claims ---
-# Each claim is an epistemic object, not a string.
-claims:
-  - id: "{CTO-ID}-CLAIM-01"
-    text: ""
-    claim_type: causal | constitutive | normative | descriptive | existential | universal
-    scope:
-      educational_level: early_childhood | primary | secondary | tertiary | vocational | lifelong | all
-      jurisdiction_type: universal | national | regional | institutional
-      subject_domain: ""       # e.g. biology, mathematics, all
-      temporal_scope: ""       # e.g. post-2000, historical, timeless
-    epistemic_status: well_supported | contested | speculative | falsified | unknown
-    falsification_conditions:
-      - ""
-    supporting_evidence:
-      - id: "{EVO-URI}"
-        relationship_strength: strong | moderate | weak
-    contradicting_evidence:
-      - id: "{EVO-URI}"
-        relationship_strength: strong | moderate | weak
-    qualifying_evidence:
-      - id: "{EVO-URI}"
-        qualification_note: ""
-    status_rationale: |
-      Explanation of why this epistemic status has been assigned.
+1. **A flat JSON index** (`registry/index.json`) — ID-to-entity lookup, sufficient for the majority of dependent-repository tooling needs without standing up a graph store.
+2. **A SPARQL-queryable graph** (hosted endpoint or embeddable store, e.g., Oxigraph), supporting relational queries across SKOS relations, alignments, and ontology properties.
 
-# --- Mechanisms ---
-mechanisms:
-  - id: "{CTO-ID}-MECH-01"
-    name: ""
-    description: |
-      How this mechanism operates to produce the effects claimed by the theory.
-    level: micro | meso | macro
-    related_claims:
-      - "{CTO-ID}-CLAIM-01"
-
-# --- Scope and Applicability ---
-scope:
-  intended_domain: ""
-  boundary_conditions:
-    - ""
-  known_limitations:
-    - ""
-  context_dependencies:
-    - ""
-
-# --- Related Concepts ---
-related_concepts:
-  - term: ""
-    vocabulary_URI: "https://openevo.net/vocabulary/{term}"
-    relationship: central | peripheral | contrasting
-
-# --- Theory Space Membership ---
-theory_spaces:
-  - id: "{TSO-URI}"
-    role: core | peripheral | critical | historical
-
-# --- Competency Grounding ---
-grounded_competencies:
-  - "{CMO-URI}"
-
-# --- Evolutionary Metadata ---
-evolutionary_metadata:
-  # See Section 15
-
-# --- External Alignments ---
-external_alignments:
-  - standard: ""       # e.g. Dublin Core, SKOS, ASN
-    mapped_element: ""
-    mapping_URI: ""
-```
-
-### 7.3 Worked Example
-
-```yaml
-id: "https://openevo.net/ccs/cto/CTO-CURRICULUM-COMPRESSION-001"
-type: CurriculumTheoryObject
-schema_version: "https://openevo.net/schema/CTO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-  created_date: "2024-01-15"
-  reviewed_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-002"
-  review_date: "2024-02-01"
-  last_modified_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-  last_modified_date: "2024-03-10"
-  modification_note: "Added Claim 03 following review."
-  source_repository: "https://github.com/OpenEvoCCS-lab/OpenEvo-CCS"
-
-version:
-  current: "1.1"
-  history:
-    - version: "1.0"
-      date: "2024-01-15"
-      change_type: initial
-      change_summary: "Initial object creation."
-      changed_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-    - version: "1.1"
-      date: "2024-03-10"
-      change_type: minor
-      change_summary: "Added Claim 03; updated epistemic status of Claim 01."
-      changed_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-
-title: "Curriculum as Compression-Decompression"
-short_name: "curriculum-compression"
-description: |
-  This theory proposes that curriculum design is fundamentally a process
-  of selective compression — the reduction of expansive disciplinary
-  knowledge structures into sequenced, learnable forms. Learning, in this
-  framework, is the inverse process: guided decompression, in which learners
-  reconstruct explanatory models from compressed representations.
-  The theory draws on information theory, cognitive science, and curriculum
-  epistemology to formalize what curriculum designers do intuitively.
-
-theoretical_foundations:
-  parent_disciplines:
-    - curriculum theory
-    - information theory
-    - cognitive science
-    - philosophy of education
-  foundational_works:
-    - citation: "Schwab, J.J. (1969). The Practical: A Language for Curriculum."
-      URI: ""
-      relationship: foundational
-    - citation: "Bruner, J. (1960). The Process of Education."
-      URI: "https://doi.org/..."
-      relationship: foundational
-  related_CTOs:
-    - id: "https://openevo.net/ccs/cto/CTO-PEDAGOGICAL-CONTENT-KNOWLEDGE-001"
-      relationship: extends
-    - id: "https://openevo.net/ccs/cto/CTO-KNOWLEDGE-TRANSFORMATION-001"
-      relationship: competesWith
-
-claims:
-  - id: "CTO-CURRICULUM-COMPRESSION-001-CLAIM-01"
-    text: >
-      Curriculum design involves selective compression of disciplinary knowledge
-      such that the structural and explanatory relationships of the discipline
-      are preserved in compressed form.
-    claim_type: constitutive
-    scope:
-      educational_level: all
-      jurisdiction_type: universal
-      subject_domain: all
-      temporal_scope: timeless
-    epistemic_status: contested
-    falsification_conditions:
-      - >
-        Evidence that documented curriculum design processes involve no selection
-        among disciplinary knowledge elements.
-      - >
-        Evidence that compressed curriculum representations systematically fail
-        to preserve disciplinary structure.
-    supporting_evidence:
-      - id: "https://openevo.net/ccs/evo/EVO-COMPRESSION-001"
-        relationship_strength: moderate
-    contradicting_evidence: []
-    qualifying_evidence:
-      - id: "https://openevo.net/ccs/evo/EVO-COMPRESSION-002"
-        qualification_note: >
-          Evidence suggests compression fidelity varies significantly by
-          subject domain, with formal sciences preserving structure more
-          reliably than interpretive disciplines.
-    status_rationale: |
-      The claim has moderate empirical support from curriculum analysis studies
-      but faces theoretical contestation from constructivist frameworks that
-      reject the information-theoretic framing.
-
-  - id: "CTO-CURRICULUM-COMPRESSION-001-CLAIM-02"
-    text: >
-      Learning involves guided decompression: the reconstruction of explanatory
-      models from compressed curriculum representations under teacher or
-      environment scaffolding.
-    claim_type: causal
-    scope:
-      educational_level: primary | secondary | tertiary
-      jurisdiction_type: universal
-      subject_domain: all
-      temporal_scope: timeless
-    epistemic_status: speculative
-    falsification_conditions:
-      - >
-        Evidence that learners who successfully complete curriculum sequences
-        do not develop structurally richer models than those presented in
-        curriculum materials.
-    supporting_evidence: []
-    contradicting_evidence: []
-    qualifying_evidence: []
-    status_rationale: |
-      The decompression claim is theoretically coherent but has not been
-      directly tested empirically. Marked speculative pending designed study.
-
-  - id: "CTO-CURRICULUM-COMPRESSION-001-CLAIM-03"
-    text: >
-      The fidelity of compression — the degree to which compressed curriculum
-      forms preserve disciplinary structure — is a measurable property of
-      curriculum artifacts.
-    claim_type: existential
-    scope:
-      educational_level: all
-      jurisdiction_type: universal
-      subject_domain: all
-      temporal_scope: timeless
-    epistemic_status: speculative
-    falsification_conditions:
-      - >
-        Demonstration that no operationalizable measure of structural
-        preservation can be constructed or validated across subject domains.
-    supporting_evidence: []
-    contradicting_evidence: []
-    qualifying_evidence: []
-    status_rationale: |
-      This claim is the foundational measurement premise of the theory.
-      Without it, the theory is not scientifically tractable. Currently
-      marked speculative as no validated measurement instrument exists.
-
-mechanisms:
-  - id: "CTO-CURRICULUM-COMPRESSION-001-MECH-01"
-    name: "Selective Knowledge Reduction"
-    description: |
-      Curriculum designers apply selection criteria — often implicit —
-      to determine which elements of disciplinary knowledge are included,
-      simplified, sequenced, or excluded. These criteria reflect epistemic,
-      pedagogical, social, and political pressures.
-    level: meso
-    related_claims:
-      - "CTO-CURRICULUM-COMPRESSION-001-CLAIM-01"
-
-scope:
-  intended_domain: "Curriculum design and curriculum epistemology"
-  boundary_conditions:
-    - "Applies to formal curriculum design contexts with identifiable disciplinary sources"
-  known_limitations:
-    - "The information-theoretic framing may not transfer to arts and humanities curricula"
-  context_dependencies:
-    - "Assumes the existence of a reference discipline with recoverable structure"
-
-related_concepts:
-  - term: "curriculum"
-    vocabulary_URI: "https://openevo.net/vocabulary/curriculum"
-    relationship: central
-  - term: "compression"
-    vocabulary_URI: "https://openevo.net/vocabulary/compression"
-    relationship: central
-  - term: "disciplinary structure"
-    vocabulary_URI: "https://openevo.net/vocabulary/disciplinary-structure"
-    relationship: central
-  - term: "pedagogical content knowledge"
-    vocabulary_URI: "https://openevo.net/vocabulary/pedagogical-content-knowledge"
-    relationship: peripheral
-
-theory_spaces:
-  - id: "https://openevo.net/ccs/tso/TSO-COMPUTATIONAL-CURRICULUM-001"
-    role: core
-
-grounded_competencies:
-  - "https://openevo.net/ccs/cmo/CMO-CURRICULUM-DESIGN-ANALYSIS-001"
-```
+This dual surface exists because flat lookup and graph traversal have different performance and simplicity trade-offs; dependent repositories **SHOULD** use the flat index for simple validation and the SPARQL endpoint for relational discovery (e.g., "all concepts aligned to X").
 
 ---
 
-## Section 8: Curriculum Knowledge Object (CKO)
+## 6. Ontology Specification
 
-### 8.1 Purpose
+The formal ontology is defined in `ontologies/core.yaml` and summarized normatively here. It is expressed in RDF/RDFS/OWL primitives with a JSON-LD `@context` binding the `oe:` prefix to `https://www.w3id.org/openevo/ontology#`.
 
-The CKO represents **concrete educational artifacts** — documents, standards, curricula, lessons, assessments, textbooks, and policy texts — and their theoretical annotations. A CKO is always grounded in an identifiable, externally existing artifact. It is not a description of a hypothetical artifact or a general category of artifacts.
+### 6.1 Phase 1 Classes
 
-### 8.2 CKO Profiles
-
-CKOs exist at three levels of engagement with their source artifacts. The profile must be declared.
-
-```
-Profile 1: Bibliographic
-  — bibliographic metadata + persistent URI
-  — no content extraction
-  — no theoretical annotation
-  — use when: artifact exists but has not yet been analyzed
-
-Profile 2: Annotated
-  — bibliographic metadata + persistent URI
-  — theoretical annotations linking artifact to CTOs
-  — no structured content extraction
-  — use when: theoretical relevance is established but content not yet formalized
-
-Profile 3: Structured Representation
-  — bibliographic metadata + persistent URI
-  — theoretical annotations
-  — structured content extraction (competency maps, content excerpts, sequence structures)
-  — use when: artifact has been formally analyzed and content formalized
-```
-
-### 8.3 Schema
-
-```yaml
-# ============================================================
-# CURRICULUM KNOWLEDGE OBJECT (CKO)
-# Schema Version: 1.0
-# https://openevo.net/schema/CKO/1.0
-# ============================================================
-
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/cko/{CKO-ID}"
-type: CurriculumKnowledgeObject
-schema_version: "https://openevo.net/schema/CKO/1.0"
-profile: bibliographic | annotated | structured_representation
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: ""
-
-version:
-  current: "1.0"
-  history: []
-
-# --- Artifact Identity ---
-artifact:
-  title: ""
-  artifact_type: >
-    state_curriculum | national_curriculum | lesson_plan | assessment |
-    textbook | policy_document | teacher_guide | framework | standard | case_study
-  creators:
-    - name: ""
-      role: author | editor | institution | government_body
-  publication_date: "YYYY"
-  jurisdiction:
-    country: ""
-    region: ""
-    educational_level: early_childhood | primary | secondary | tertiary | vocational | all
-    subject_domain: ""
-  language: ""        # ISO 639-1 code
-
-# --- Access ---
-access:
-  primary_URI: ""
-  access_type: open | paywalled | institutional | unavailable
-  archived_URI: ""    # e.g. Wayback Machine or institutional archive
-  access_note: ""
-
-# --- Theoretical Annotations (Annotated + Structured profiles) ---
-theoretical_annotations:
-  instantiates:
-    - CTO_id: "{CTO-URI}"
-      instantiation_type: full | partial
-      instantiated_claims:
-        - "{CTO-ID}-CLAIM-01"
-      annotation_note: ""
-      annotated_by: "{AGO-URI}"
-      annotation_date: "YYYY-MM-DD"
-  contradicts_CTOs:
-    - CTO_id: "{CTO-URI}"
-      contradiction_note: ""
-  contextualizes_CTOs:
-    - CTO_id: "{CTO-URI}"
-      context_note: ""
-
-# --- Content Representation (Structured profile only) ---
-content_representation:
-  competency_map:
-    - CMO_id: "{CMO-URI}"
-      location_in_artifact: ""    # e.g. "Chapter 3, Grade 7 Standards"
-      excerpt: ""
-  sequence_structure:
-    - unit: ""
-      order: 1
-      duration: ""
-      competencies:
-        - "{CMO-URI}"
-  content_excerpts:
-    - excerpt_id: "{CKO-ID}-EXCERPT-01"
-      text: ""
-      location: ""
-      relevant_claims:
-        - "{CTO-ID}-CLAIM-01"
-      annotation: ""
-
-# --- Relationships to Other CKOs ---
-artifact_relationships:
-  derived_from:
-    - "{CKO-URI}"
-  influences:
-    - "{CKO-URI}"
-  superseded_by:
-    - "{CKO-URI}"
-  companion_artifacts:
-    - "{CKO-URI}"
-
-# --- Theory Space Membership ---
-theory_spaces:
-  - id: "{TSO-URI}"
-
-# --- Evolutionary Metadata ---
-evolutionary_metadata:
-  # See Section 15
-```
-
-### 8.4 Worked Example
-
-```yaml
-id: "https://openevo.net/ccs/cko/CKO-THURINGIA-BIOLOGY-001"
-type: CurriculumKnowledgeObject
-schema_version: "https://openevo.net/schema/CKO/1.0"
-profile: annotated
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-  created_date: "2024-02-20"
-  reviewed_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-003"
-  review_date: "2024-03-01"
-  last_modified_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-  last_modified_date: "2024-03-01"
-  modification_note: ""
-  source_repository: "https://github.com/OpenEvoCCS-lab/OpenEvo-CCS"
-
-version:
-  current: "1.0"
-  history:
-    - version: "1.0"
-      date: "2024-02-20"
-      change_type: initial
-      change_summary: "Initial object creation at annotated profile."
-      changed_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-
-artifact:
-  title: "Lehrplan für das Gymnasium — Biologie (Thüringen)"
-  artifact_type: state_curriculum
-  creators:
-    - name: "Thüringer Ministerium für Bildung, Jugend und Sport"
-      role: government_body
-  publication_date: "2019"
-  jurisdiction:
-    country: "DE"
-    region: "Thuringia"
-    educational_level: secondary
-    subject_domain: biology
-  language: "de"
-
-access:
-  primary_URI: "https://www.schulportal-thueringen.de/..."
-  access_type: open
-  archived_URI: ""
-  access_note: "German language document. Full PDF available at primary URI."
-
-theoretical_annotations:
-  instantiates:
-    - CTO_id: "https://openevo.net/ccs/cto/CTO-CURRICULUM-COMPRESSION-001"
-      instantiation_type: partial
-      instantiated_claims:
-        - "CTO-CURRICULUM-COMPRESSION-001-CLAIM-01"
-      annotation_note: >
-        The curriculum exhibits clear selective compression of evolutionary
-        biology: the concept of natural selection is presented as the
-        organizing principle, with population genetics and molecular mechanisms
-        compressed into supporting narrative rather than independent strands.
-      annotated_by: "https://openevo.net/ccs/ago/AGO-RESEARCHER-001"
-      annotation_date: "2024-02-20"
-
-theory_spaces:
-  - id: "https://openevo.net/ccs/tso/TSO-EVOLUTION-EDUCATION-001"
-```
-
----
-
-## Section 9: Theory Space Object (TSO)
-
-### 9.1 Purpose
-
-A TSO represents a **structured conceptual landscape** — a region of theory space defined by its central question, its dimensions of variation, its member theories, its identified gaps, and its internal tensions. A TSO is not a folder, a tag, or a curated list. It is a **computational object that guides research** by representing what has been theorized and what has not.
-
-### 9.2 Schema
-
-```yaml
-# ============================================================
-# THEORY SPACE OBJECT (TSO)
-# Schema Version: 1.0
-# https://openevo.net/schema/TSO/1.0
-# ============================================================
-
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/tso/{TSO-ID}"
-type: TheorySpaceObject
-schema_version: "https://openevo.net/schema/TSO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: ""
-
-version:
-  current: "1.0"
-  history: []
-
-# --- Identity ---
-title: ""
-short_name: ""
-central_question: |
-  The primary intellectual question that defines the boundaries of this
-  theory space. All member CTOs address some aspect of this question.
-
-description: |
-  A discursive account of the theory space, its historical development,
-  its significance, and its relationship to adjacent theory spaces.
-
-# --- Dimensional Structure ---
-# The conceptual axes along which theories in this space vary.
-dimensions:
-  - id: "{TSO-ID}-DIM-01"
-    name: ""
-    description: ""
-    pole_low:
-      label: ""
-      description: ""
-    pole_high:
-      label: ""
-      description: ""
-    relevant_CTOs:
-      - CTO_id: "{CTO-URI}"
-        position: low | mid_low | middle | mid_high | high
-        position_note: ""
-
-# --- Member Theories ---
-member_theories:
-  - id: "{CTO-URI}"
-    role: core | peripheral | critical | historical | emerging
-    role_note: ""
-    dimensional_positions:
-      - dimension_id: "{TSO-ID}-DIM-01"
-        position: low | mid_low | middle | mid_high | high
-
-# --- Associated Artifacts ---
-associated_artifacts:
-  - id: "{CKO-URI}"
-    relevance: ""
-
-# --- Attractors ---
-# Well-developed theoretical positions that many theories converge toward.
-attractors:
-  - id: "{TSO-ID}-ATTR-01"
-    name: ""
-    description: ""
-    converging_CTOs:
-      - "{CTO-URI}"
-    dimensional_position:
-      - dimension_id: "{TSO-ID}-DIM-01"
-        position: ""
-
-# --- Identified Gaps ---
-# Regions of the theory space where no theory yet exists but logically could.
-gaps:
-  - id: "{TSO-ID}-GAP-01"
-    description: ""
-    dimensions_affected:
-      - "{TSO-ID}-DIM-01"
-    research_priority: high | medium | low
-    suggested_research_questions:
-      - ""
-    adjacent_CTOs:
-      - "{CTO-URI}"
-
-# --- Internal Tensions ---
-tensions:
-  - id: "{CFO-URI}"
-    parties:
-      - "{CTO-URI}"
-      - "{CTO-URI}"
-    tension_summary: ""
-
-# --- Adjacent Theory Spaces ---
-adjacent_theory_spaces:
-  - id: "{TSO-URI}"
-    relationship: overlapping | nested | adjacent | competing
-    shared_dimensions:
-      - ""
-
-# --- Research Domains ---
-research_domains:
-  - ""
-
-# --- Open Questions ---
-open_questions:
-  - id: "{TSO-ID}-OQ-01"
-    question: ""
-    priority: high | medium | low
-    related_gaps:
-      - "{TSO-ID}-GAP-01"
-    related_CTOs:
-      - "{CTO-URI}"
-
-# --- Evolutionary Metadata ---
-evolutionary_metadata:
-  # See Section 15
-```
-
----
-
-## Section 10: Evidence Object (EVO)
-
-### 10.1 Purpose
-
-The EVO represents **empirical or theoretical evidence** bearing on the claims of curriculum theories. Evidence objects are the primary mechanism by which the epistemic status of theoretical claims is updated. They connect the theoretical layer (CTOs) to the empirical world (studies, observations, practitioner reports, meta-analyses).
-
-### 10.2 Schema
-
-```yaml
-# ============================================================
-# EVIDENCE OBJECT (EVO)
-# Schema Version: 1.0
-# https://openevo.net/schema/EVO/1.0
-# ============================================================
-
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/evo/{EVO-ID}"
-type: EvidenceObject
-schema_version: "https://openevo.net/schema/EVO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: ""
-
-version:
-  current: "1.0"
-  history: []
-
-# --- Evidence Source ---
-source:
-  citation: ""         # Full bibliographic citation
-  URI: ""              # DOI or stable URL
-  access_type: open | paywalled | grey_literature | unpublished
-  archived_URI: ""
-  source_type: >
-    empirical_study | meta_analysis | systematic_review | theoretical_argument |
-    practitioner_report | policy_document | historical_analysis | mixed_methods
-
-# --- Methodology (for empirical sources) ---
-methodology:
-  research_design: >
-    qualitative_case_study | quantitative_survey | randomized_controlled_trial |
-    quasi_experiment | ethnography | content_analysis | document_analysis |
-    computational_analysis | mixed_methods | theoretical | not_applicable
-  sample_size: null
-  sampling_strategy: ""
-  context:
-    country: ""
-    educational_level: ""
-    subject_domain: ""
-  temporal_scope:
-    start: "YYYY"
-    end: "YYYY"
-  limitations:
-    - ""
-
-# --- Claim Relationships ---
-claim_relationships:
-  - claim_id: "{CTO-ID}-CLAIM-XX"
-    CTO_id: "{CTO-URI}"
-    relationship: supports | contradicts | qualifies | is_neutral_toward
-    strength: strong | moderate | weak | inconclusive
-    directness: direct | indirect
-    reasoning: |
-      Explicit statement of why this evidence bears on this claim
-      in this way at this strength.
-
-# --- Summary ---
-summary: |
-  A concise, plain-language summary of what this evidence shows
-  and why it is relevant to the claims it is linked to.
-
-key_findings:
-  - ""
-
-# --- Quality Assessment ---
-quality_assessment:
-  assessed_by: "{AGO-URI}"
-  assessment_date: "YYYY-MM-DD"
-  methodological_rigor: high | medium | low | not_assessed
-  replication_status: replicated | not_replicated | contested | not_applicable
-  peer_reviewed: true | false
-  quality_notes: ""
-```
-
----
-
-## Section 11: Competency Object (CMO)
-
-### 11.1 Purpose
-
-The CMO represents a **specified learning competency** — a defined, observable capability that a learner develops through engagement with curriculum. Competencies connect theoretical claims about learning (CTOs) to concrete curriculum content (CKOs) and provide the unit of analysis for curriculum design and assessment.
-
-### 11.2 Schema
-
-```yaml
-# ============================================================
-# COMPETENCY OBJECT (CMO)
-# Schema Version: 1.0
-# https://openevo.net/schema/CMO/1.0
-# ============================================================
-
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/cmo/{CMO-ID}"
-type: CompetencyObject
-schema_version: "https://openevo.net/schema/CMO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: ""
-
-version:
-  current: "1.0"
-  history: []
-
-# --- Identity ---
-title: ""
-competency_type: >
-  cognitive | metacognitive | procedural | affective |
-  communicative | investigative | design | interdisciplinary
-
-description: |
-  A full description of what a learner demonstrating this competency
-  can do, understand, and apply.
-
-# --- Observable Indicators ---
-observable_indicators:
-  - id: "{CMO-ID}-IND-01"
-    text: ""
-    performance_level: foundational | developing | proficient | advanced
-
-# --- Educational Level and Domain ---
-educational_level: early_childhood | primary | secondary | tertiary | vocational | all
-subject_domain: ""
-cross_disciplinary: true | false
-
-# --- Theoretical Grounding ---
-theoretical_grounding:
-  - CTO_id: "{CTO-URI}"
-    grounding_note: ""
-
-# --- Prerequisite Structure ---
-prerequisites:
-  - CMO_id: "{CMO-URI}"
-    prerequisite_type: required | recommended
-
-enables:
-  - CMO_id: "{CMO-URI}"
-
-# --- Curriculum Linkage ---
-targeted_by:
-  - CKO_id: "{CKO-URI}"
-    location_in_artifact: ""
-
-# --- External Standard Alignment ---
-external_alignments:
-  - standard_name: ""      # e.g. NGSS, Common Core, European Reference Framework
-    standard_code: ""
-    alignment_URI: ""
-    alignment_strength: direct | partial | approximate
-```
-
----
-
-## Section 12: Conflict Object (CFO)
-
-### 12.1 Purpose
-
-The CFO formally registers **theoretical conflicts** — cases where two or more CTOs make incompatible claims about the same domain. Conflicts are not failures of the system; they are its most intellectually valuable content. They represent the frontier of theoretical knowledge, the sites of active contestation, and the engines of theoretical evolution. Without formal conflict representation, the system cannot model selection dynamics between competing theories.
-
-### 12.2 Schema
-
-```yaml
-# ============================================================
-# CONFLICT OBJECT (CFO)
-# Schema Version: 1.0
-# https://openevo.net/schema/CFO/1.0
-# ============================================================
-
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/cfo/{CFO-ID}"
-type: TheoreticalConflict
-schema_version: "https://openevo.net/schema/CFO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_by: "{AGO-URI}"
-  created_date: "YYYY-MM-DD"
-  reviewed_by: "{AGO-URI}"
-  review_date: "YYYY-MM-DD"
-  last_modified_by: "{AGO-URI}"
-  last_modified_date: "YYYY-MM-DD"
-  modification_note: ""
-  source_repository: ""
-
-version:
-  current: "1.0"
-  history: []
-
-# --- Identity ---
-title: ""
-conflict_type: >
-  incompatible_claims | unit_of_analysis | scope_dispute |
-  methodological | normative | ontological | definitional
-
-description: |
-  A discursive account of the nature, origins, and significance of
-  this theoretical conflict.
-
-# --- Parties ---
-parties:
-  - CTO_id: "{CTO-URI}"
-    position_summary: ""
-    incompatible_claims:
-      - "{CTO-ID}-CLAIM-XX"
-
-# --- Domain of Conflict ---
-conflict_domain: ""          # the subject matter over which the conflict occurs
-theory_space: "{TSO-URI}"
-
-# --- Incompatibility Analysis ---
-incompatibility_analysis: |
-  A precise statement of why the claims of the parties cannot both be true,
-  and what empirical or conceptual resolution would look like.
-
-# --- Resolution Status ---
-resolution:
-  status: unresolved | partially_resolved | resolved | dissolved | suspended
-  resolution_type: >
-    empirical_evidence | conceptual_clarification | scope_restriction |
-    synthesis | one_party_retracted | declared_incommensurable
-  resolution_summary: ""
-  resolution_date: "YYYY-MM-DD"
-  resolution_evidence:
-    - "{EVO-URI}"
-  resolution_CTO:
-    - "{CTO-URI}"       # synthesizing theory, if applicable
-
-# --- Research Implications ---
-research_implications:
-  - ""
-
-# --- Evolutionary Significance ---
-evolutionary_significance: |
-  How this conflict is expected to drive theoretical evolution in its
-  theory space, and what selection dynamics it instantiates.
-```
-
----
-
-## Section 13: Agent Object (AGO)
-
-### 13.1 Purpose
-
-The AGO represents **contributors, reviewers, and system agents** in the OpenEvo ecosystem. Attribution tracking, expertise mapping, network analysis of the contributor community, and governance role assignment all depend on a well-specified agent model.
-
-### 13.2 Schema
-
-```yaml
-# ============================================================
-# AGENT OBJECT (AGO)
-# Schema Version: 1.0
-# https://openevo.net/schema/AGO/1.0
-# ============================================================
-
-# --- Universal Metadata Block ---
-id: "https://openevo.net/ccs/ago/{AGO-ID}"
-type: AgentObject
-schema_version: "https://openevo.net/schema/AGO/1.0"
-status: active
-license: "https://creativecommons.org/licenses/by/4.0/"
-
-provenance:
-  created_date: "YYYY-MM-DD"
-  source_repository: ""
-
-version:
-  current: "1.0"
-  history: []
-
-# --- Agent Type ---
-agent_type: human_researcher | institution | ai_system | collective
-
-# --- Identity ---
-display_name: ""
-ORCID: ""               # for human researchers
-ROR_id: ""              # for institutions
-affiliation: ""
-
-# --- Expertise ---
-expertise_domains:
-  - domain: ""
-    vocabulary_URI: "https://openevo.net/vocabulary/{term}"
-    level: primary | secondary
-
-# --- Governance Role ---
-governance_roles:
-  - role: >
-      core_maintainer | domain_editor | reviewer |
-      contributor | external_affiliate | ai_agent
-    scope: ""            # e.g. specific domain or repository
-    since: "YYYY-MM-DD"
-    until: "YYYY-MM-DD"  # null if ongoing
-
-# --- Contribution Record ---
-contributions:
-  objects_created:
-    - "{object-URI}"
-  objects_reviewed:
-    - "{object-URI}"
-  objects_modified:
-    - "{object-URI}"
-
-# --- Contact and Discovery ---
-contact_URI: ""          # personal page, lab page, or institutional profile
-github_handle: ""
-```
-
----
-
-## Section 14: Versioning Model
-
-### 14.1 Version Increment Semantics
-
-Every object in the Concept Base follows a three-tier versioning scheme:
-
-```
-MAJOR.MINOR.PATCH
-```
-
-| Tier | Triggers | Examples |
+| Class | Superclass(es) | Definition |
 |---|---|---|
-| **PATCH** | Corrected errors; improved descriptions; clarified language; no claim changes | Fixed typo; clarified scope note |
-| **MINOR** | Added claims; added evidence linkages; added relationships; extended scope | New claim added; new EVO linked |
-| **MAJOR** | Changed or removed core claims; changed theoretical foundations; changed object type | Claim 01 revised; foundational work removed |
-| **BREAKING** | Schema changes that affect downstream consumers; object type redefined | Field renamed; required field added |
+| `oe:Entity` | — (abstract) | Base class providing `oe:identifier`, `oe:status`, `oe:version` to all subclasses. **MUST NOT** be instantiated directly. |
+| `oe:Concept` | `oe:Entity`, `skos:Concept` | A disambiguated unit of curricular meaning. Instances populated exclusively by controlled vocabulary files, never by the ontology itself. |
+| `oe:LPM` | `oe:Entity` | A top-level structural container referencing Strands; independent of any single grade or subject system. |
+| `oe:Strand` | `oe:Entity` | A thematic thread within an LPM, recursively composable. |
+| `oe:SubStrand` | `oe:Strand` | A nested child Strand, connected to its parent via `oe:hasSubStrand`. Modeled as a subclass — not a sibling type — so recursion requires only one property, not one per depth level. |
+| `oe:LearningObject` | `oe:Entity` | The smallest addressable curriculum unit referenced by a Strand; content itself lives outside OECB. |
 
-### 14.2 Object Status Vocabulary
+### 6.2 Reserved Classes (Forward-Declared)
 
-```yaml
-object_status_vocabulary:
+The following classes have stable IRIs declared but undefined internal structure, reserved for later phases:
 
-  active:
-    definition: "Current, maintained, and recommended for use."
-    successor: null
-
-  deprecated:
-    definition: >
-      Superseded by a newer version or a different object.
-      Preserved for historical reference. Not recommended for new use.
-    requires_field: deprecated_by    # URI of successor object
-
-  merged:
-    definition: >
-      Absorbed into another object. Ceases independent existence.
-      The successor object inherits this object's lineage.
-    requires_field: merged_into      # URI of absorbing object
-
-  falsified:
-    definition: >
-      Marked as empirically refuted. Core claims have been shown to be false.
-      Preserved for historical and pedagogical reference.
-    requires_field: falsified_by     # URI of EVO demonstrating falsification
-
-  archived:
-    definition: >
-      Historically preserved but no longer active or maintained.
-      May represent superseded curricula, obsolete standards, or closed theories.
-    requires_field: archive_date
-
-  sandbox:
-    definition: >
-      Experimental. Not validated against schema. Not included in production graph.
-      Used for early-stage development and speculative extensions.
-    requires_field: null
-```
-
-### 14.3 Relationship Versioning
-
-Relationships in the knowledge graph are versioned independently of the objects they connect. Each relationship instance carries:
-
-```yaml
-relationship_version:
-  asserted_in_schema_version: "1.0"
-  asserted_date: "YYYY-MM-DD"
-  retracted_date: null          # populated if relationship is later removed
-  retraction_reason: ""
-  graph_named_graph: "https://openevo.net/graph/release/1.0"
-```
-
-The graph maintains **named graphs per release** so that the graph at any prior release can be reconstructed.
-
-### 14.4 Schema Version Compatibility
-
-Every object declares its schema version:
-
-```yaml
-schema_version: "https://openevo.net/schema/CTO/1.0"
-```
-
-Schema changes of type BREAKING require a **migration guide** published alongside the new schema version. The graph compilation pipeline maintains backward compatibility for one major schema version.
-
----
-
-## Section 15: Evolutionary Metadata Layer
-
-### 15.1 Purpose
-
-The evolutionary metadata layer is the component most distinctively aligned with the project's core vision. It transforms the Concept Base from a static knowledge repository into a **dynamic evolutionary record** capable of representing the population-level dynamics of curriculum knowledge over time.
-
-This layer appears on **every object** in the ecosystem. It is not optional.
-
-### 15.2 Schema
-
-```yaml
-# ============================================================
-# EVOLUTIONARY METADATA LAYER
-# Embedded in all object schemas
-# Schema Version: 1.0
-# https://openevo.net/schema/evolutionary-metadata/1.0
-# ============================================================
-
-evolutionary_metadata:
-
-  # --- Genealogy ---
-  genealogy:
-    derived_from:
-      - id: "{object-URI}"
-        relationship_type: revision | translation | adaptation | response | extension
-        derivation_note: ""
-    branched_from:
-      id: null                    # populated if this object is a fork
-      branch_date: "YYYY-MM-DD"
-      branch_reason: ""
-    merged_into:
-      id: null                    # populated if this object was absorbed
-      merger_date: "YYYY-MM-DD"
-      merger_reason: ""
-    lineage_root: null            # URI of original ancestor object, if known
-
-  # --- Selection History ---
-  selection_history:
-    - event_id: "{object-ID}-SEL-01"
-      event_date: "YYYY-MM-DD"
-      event_type: >
-        revision | adoption | rejection | merger | split |
-        extension | falsification | rehabilitation | recontextualization
-      pressure_type: >
-        empirical | political | social | pedagogical |
-        theoretical | technological | institutional
-      pressure_source: ""         # description of what drove the change
-      pressure_agent: "{AGO-URI}" # who or what exerted the pressure
-      resulting_change: ""        # what changed in the object as a result
-      evidence_reference: "{EVO-URI}"
-
-  # --- Adoption Record ---
-  adoption_record:
-    - community: ""               # educational community, jurisdiction, institution
-      community_URI: ""
-      adoption_level: full | partial | cited_not_adopted | rejected | unknown
-      adoption_timeframe:
-        start: "YYYY"
-        end: null                 # null if ongoing
-      adoption_evidence_URI: ""
-      adoption_note: ""
-
-  # --- Fitness Indicators ---
-  # Assessments of theoretical or practical fitness in current context.
-  fitness_indicators:
-    theoretical_coherence:
-      value: high | medium | low | unknown
-      assessment_note: ""
-      assessed_by: "{AGO-URI}"
-      assessed_date: "YYYY-MM-DD"
-    empirical_support:
-      value: high | medium | low | unknown
-      assessment_note: ""
-      assessed_by: "{AGO-URI}"
-      assessed_date: "YYYY-MM-DD"
-    practical_applicability:
-      value: high | medium | low | unknown
-      assessment_note: ""
-      assessed_by: "{AGO-URI}"
-      assessed_date: "YYYY-MM-DD"
-    cross_context_robustness:
-      value: high | medium | low | unknown
-      assessment_note: ""
-      assessed_by: "{AGO-URI}"
-      assessed_date: "YYYY-MM-DD"
-    interdisciplinary_reach:
-      value: high | medium | low | unknown
-      assessment_note: ""
-      assessed_by: "{AGO-URI}"
-      assessed_date: "YYYY-MM-DD"
-
-  # --- Population Structure ---
-  # Which communities of practice hold, use, or contest this object.
-  population_structure:
-    holding_communities:
-      - community: ""
-        relationship: holds | contests | ignores | unaware
-    geographic_distribution: ""
-    linguistic_distribution: ""
-
-  # --- Drift and Selection Distinction ---
-  # Records whether changes appear driven by evidence or by social dynamics.
-  change_attribution:
-    - version_transition: "1.0 → 1.1"
-      primary_driver: evidence_driven | socially_driven | politically_driven | unknown
-      attribution_confidence: high | medium | low
-      attribution_note: ""
-```
-
-### 15.3 Evolutionary Dynamics Across the Ecosystem
-
-The evolutionary metadata layer enables ecosystem-level analyses:
-
-```
-Lineage reconstruction:
-  Query: All objects derived_from CTO-001 across all repositories.
-  Result: A phylogenetic tree of curriculum theories.
-
-Selection pressure analysis:
-  Query: All revision events with pressure_type = empirical in TSO-001.
-  Result: The evidence-driven selection history of a theory space.
-
-Fitness landscape mapping:
-  Query: All CTOs in TSO-001 with theoretical_coherence and empirical_support values.
-  Result: A two-dimensional fitness landscape of a theory space.
-
-Adoption geography:
-  Query: All adoption_records for CTO-CURRICULUM-COMPRESSION-001.
-  Result: The geographic and temporal diffusion of a curriculum theory.
-
-Drift detection:
-  Query: All revision events with primary_driver = socially_driven.
-  Result: Instances of theoretical drift — change without evidence.
-```
-
----
-
-## Section 16: Graph Architecture
-
-### 16.1 Graph Model
-
-The OpenEvo Graph uses **RDF as its primary graph model** with a property graph projection for Neo4j compatibility.
-
-```
-Primary model:    RDF 1.1 (subject-predicate-object triples)
-Named graphs:     One named graph per release version
-Serializations:   Turtle (.ttl), JSON-LD (.jsonld), N-Quads (.nq)
-Property graph:   Neo4j-compatible node/edge JSON export
-```
-
-### 16.2 Compilation Pipeline
-
-```
-┌─────────────────────────────────────────────┐
-│           Source Repositories                │
-│   (YAML objects validated against schemas)  │
-└────────────────────┬────────────────────────┘
-                     │  GitHub Actions trigger
-                     ▼
-┌─────────────────────────────────────────────┐
-│              Schema Validation              │
-│   (YAML → JSON Schema validation)           │
-│   (Relationship domain/range checking)      │
-│   (Vocabulary term validation)              │
-│   (ID uniqueness enforcement)               │
-└────────────────────┬────────────────────────┘
-                     │  on validation pass
-                     ▼
-┌─────────────────────────────────────────────┐
-│              Graph Builder                  │
-│   (YAML → RDF triple generation)            │
-│   (Relationship instantiation)              │
-│   (Evolutionary edge generation)            │
-│   (Named graph assignment)                  │
-└────────────────────┬────────────────────────┘
-                     │
-          ┌──────────┼───────────┐
-          ▼          ▼           ▼
-    ┌──────────┐ ┌────────┐ ┌────────────┐
-    │  Turtle  │ │JSON-LD │ │  Neo4j     │
-    │  (.ttl)  │ │        │ │  import    │
-    └────┬─────┘ └───┬────┘ └─────┬──────┘
-         │           │             │
-         └───────────┼─────────────┘
-                     ▼
-┌─────────────────────────────────────────────┐
-│           Published Graph Store             │
-│   (Apache Jena Fuseki SPARQL endpoint)      │
-│   (Neo4j property graph instance)           │
-│   (Static JSON exports for visualization)  │
-└─────────────────────────────────────────────┘
-```
-
-### 16.3 Provenance in the Graph
-
-Every triple in the graph is attributed to a specific object version via named graphs:
-
-```turtle
-# Named graph per release
-<https://openevo.net/graph/release/1.0> {
-    <https://openevo.net/ccs/cko/CKO-THURINGIA-BIOLOGY-001>
-        oecb:instantiates
-        <https://openevo.net/ccs/cto/CTO-CURRICULUM-COMPRESSION-001> .
-}
-```
-
-### 16.4 Conflict Handling
-
-When two CKOs make contradictory annotations about the same CTO, both edges are preserved in the graph with full provenance, and a CFO is automatically drafted and flagged for human review:
-
-```yaml
-conflict_auto_draft:
-  triggered_by: "Contradictory annotation detected"
-  parties:
-    - CKO-URI-A annotates CTO-X with instantiation_type: full
-    - CKO-URI-B annotates CTO-X with contradicts_CTOs
-  status: awaiting_human_review
-  auto_draft_date: "YYYY-MM-DD"
-```
-
-### 16.5 Update Triggers
-
-```
-Production graph update:  Triggered by merge to `release` branch
-Staging graph update:     Triggered by merge to `main` branch
-Validation only:          Triggered by pull request
-```
-
----
-
-## Section 17: Access and Query Layer
-
-### 17.1 SPARQL Endpoint
-
-```
-Endpoint URI:    https://openevo.net/sparql
-Protocol:        SPARQL 1.1 Query and Update
-Authentication:  Read: open; Write: token-authenticated
-Rate limit:      100 queries/minute (unauthenticated); 1000/minute (authenticated)
-```
-
-Example query — "What curriculum theories explain this standard?":
-
-```sparql
-PREFIX oecb: <https://openevo.net/ontology/core#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?theory ?title ?claim ?epistemic_status
-WHERE {
-  <https://openevo.net/ccs/cko/CKO-THURINGIA-BIOLOGY-001>
-      oecb:instantiates ?theory .
-  ?theory rdfs:label ?title .
-  ?theory oecb:hasClaim ?claim_node .
-  ?claim_node oecb:claimText ?claim .
-  ?claim_node oecb:epistemicStatus ?epistemic_status .
-}
-```
-
-Example query — "What theory spaces connect collective intelligence and curriculum?":
-
-```sparql
-PREFIX oecb: <https://openevo.net/ontology/core#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-
-SELECT DISTINCT ?tso ?tso_title ?cto ?cto_title
-WHERE {
-  ?tso a oecb:TheorySpaceObject ;
-       rdfs:label ?tso_title ;
-       oecb:subsumesTheory ?cto .
-  ?cto rdfs:label ?cto_title ;
-       oecb:relatedConcept ?concept1 ;
-       oecb:relatedConcept ?concept2 .
-  ?concept1 skos:prefLabel "collective intelligence" .
-  ?concept2 skos:prefLabel "curriculum" .
-}
-```
-
-### 17.2 REST API
-
-```
-Base URI:    https://openevo.net/api/v1/
-
-Endpoints:
-
-GET  /api/v1/{object-type}/{ID}
-     Returns the object as JSON-LD
-
-GET  /api/v1/{object-type}/{ID}/versions
-     Returns version history
-
-GET  /api/v1/{object-type}/{ID}/relationships
-     Returns all relationships involving this object
-
-GET  /api/v1/tso/{ID}/gap-map
-     Returns the gap map for a theory space
-
-GET  /api/v1/tso/{ID}/fitness-landscape
-     Returns fitness indicator data for all CTOs in the space
-
-GET  /api/v1/cto/{ID}/lineage
-     Returns the full genealogical tree of a theory object
-
-GET  /api/v1/graph/conflicts
-     Returns all active CFOs
-
-GET  /api/v1/graph/stats
-     Returns ecosystem-level statistics
-```
-
-### 17.3 Content Negotiation
-
-Every object URI supports content negotiation:
-
-```
-Accept: application/ld+json       → JSON-LD
-Accept: text/turtle               → Turtle RDF
-Accept: application/json          → Plain JSON (schema-valid YAML serialized)
-Accept: text/html                 → Human-readable rendered view
-```
-
-### 17.4 AI Agent Interface
-
-AI agents operating over the OpenEvo ecosystem use:
-
-```
-Primary interface:    SPARQL endpoint
-Secondary interface:  REST API
-Context provision:    JSON-LD frames for each object type (published at schema URIs)
-Vocabulary grounding: SKOS concept schemes at vocabulary URIs
-```
-
-The system is designed to be compatible with agents that use retrieval-augmented generation (RAG) over the graph, structured query agents using SPARQL, and LLM-based agents using JSON-LD context for grounding.
-
----
-
-## Section 18: Namespace Governance and Trust Tiers
-
-### 18.1 Three-Tier Architecture
-
-The `openevo.net` namespace functions as a **trust anchor**. Its integrity depends on defined governance of who may mint URIs within it.
-
-```
-┌────────────────────────────────────────────────────────┐
-│                    Tier 1: Core                        │
-│         https://openevo.net/ccs/                       │
-│                                                        │
-│  Minted by:       OpenEvo core team only              │
-│  Review process:  Full peer review; editorial board   │
-│  Change rate:     Slow; conservative                  │
-│  Stability:       Guaranteed; persistent              │
-│  Function:        Stable reference layer              │
-└────────────────────────────────────────────────────────┘
-
-┌────────────────────────────────────────────────────────┐
-│                 Tier 2: Affiliated                      │
-│    https://openevo.net/projects/{project-id}/          │
-│                                                        │
-│  Minted by:       Registered affiliated projects      │
-│  Review process:  Schema validation + registration    │
-│  Change rate:     Moderate                            │
-│  Stability:       Maintained by affiliate             │
-│  Function:        Institutional and project namespace │
-│  Requirements:    Valid schema; provenance; license   │
-└────────────────────────────────────────────────────────┘
-
-┌────────────────────────────────────────────────────────┐
-│                  Tier 3: Federated                      │
-│      https://{external-domain}/openevo-compatible/     │
-│                                                        │
-│  Minted by:       Independent external projects       │
-│  Review process:  Self-declared schema compatibility  │
-│  Change rate:     At external project discretion      │
-│  Stability:       External project responsibility     │
-│  Function:        Federated network extension         │
-│  Requirements:    Schema declaration; registration    │
-│  Note:            Do NOT use openevo.net domain       │
-└────────────────────────────────────────────────────────┘
-```
-
-### 18.2 Affiliate Registration
-
-An external project becomes a Tier 2 affiliate by:
-
-1. Submitting a registration request to the OpenEvo core team
-2. Declaring a project identifier (used in their namespace path)
-3. Demonstrating schema compliance with a sample object set
-4. Accepting the OpenEvo contributor agreement (CC BY 4.0 for objects)
-5. Maintaining a publicly accessible repository
-
-Tier 2 affiliates may have their objects indexed in the OpenEvo Graph and appear in SPARQL query results.
-
-### 18.3 Federated Project Registration
-
-A Tier 3 federated project:
-
-1. Hosts its own namespace on its own domain
-2. Declares OpenEvo schema compatibility in its objects
-3. Submits a registration request for graph indexing (optional)
-4. Is indexed by OpenEvo Graph with `oecb:federatedSource` provenance metadata
-
----
-
-## Section 19: Controlled Vocabularies
-
-### 19.1 Vocabulary Architecture
-
-All controlled vocabularies in the Concept Base are published as SKOS concept schemes at stable URIs under:
-
-```
-https://openevo.net/vocabulary/{scheme-name}/
-```
-
-Each term receives a persistent URI:
-
-```
-https://openevo.net/vocabulary/{scheme-name}/{term-slug}
-```
-
-### 19.2 Core Vocabulary Schemes
-
-#### Epistemic Status Vocabulary
-
-```yaml
-scheme_URI: "https://openevo.net/vocabulary/epistemic-status/"
-terms:
-  - id: well_supported
-    label: "Well Supported"
-    definition: >
-      The claim has substantial empirical support from multiple independent
-      sources and has withstood significant scrutiny.
-  - id: contested
-    label: "Contested"
-    definition: >
-      The claim has some support but also significant opposition, either
-      from contradicting evidence or from competing theoretical frameworks.
-  - id: speculative
-    label: "Speculative"
-    definition: >
-      The claim is theoretically coherent but has not yet been empirically
-      tested or has only very preliminary support.
-  - id: falsified
-    label: "Falsified"
-    definition: >
-      The claim has been shown to be false by sufficiently strong
-      contradicting evidence. The object is preserved for historical reference.
-  - id: unknown
-    label: "Unknown"
-    definition: >
-      Insufficient information to assess epistemic status at this time.
-```
-
-#### Selection Pressure Vocabulary
-
-```yaml
-scheme_URI: "https://openevo.net/vocabulary/selection-pressures/"
-terms:
-  - id: empirical
-    label: "Empirical Pressure"
-    definition: "Change driven by new or accumulated empirical evidence."
-  - id: political
-    label: "Political Pressure"
-    definition: "Change driven by policy, government, or ideological forces."
-  - id: social
-    label: "Social Pressure"
-    definition: "Change driven by social trends, public opinion, or community norms."
-  - id: pedagogical
-    label: "Pedagogical Pressure"
-    definition: "Change driven by practitioner experience and educational practice."
-  - id: theoretical
-    label: "Theoretical Pressure"
-    definition: "Change driven by development within adjacent theoretical frameworks."
-  - id: technological
-    label: "Technological Pressure"
-    definition: "Change driven by the emergence of new educational or computational technologies."
-  - id: institutional
-    label: "Institutional Pressure"
-    definition: "Change driven by institutional structures, accreditation, or standardization."
-```
-
-#### Evidence Type Vocabulary
-
-```yaml
-scheme_URI: "https://openevo.net/vocabulary/evidence-type/"
-terms:
-  - id: empirical_study
-  - id: meta_analysis
-  - id: systematic_review
-  - id: theoretical_argument
-  - id: practitioner_report
-  - id: policy_document
-  - id: historical_analysis
-  - id: computational_analysis
-  - id: mixed_methods
-```
-
-#### Claim Type Vocabulary
-
-```yaml
-scheme_URI: "https://openevo.net/vocabulary/claim-type/"
-terms:
-  - id: causal
-    definition: "Claims that X produces, causes, or generates Y."
-  - id: constitutive
-    definition: "Claims about what something fundamentally is or consists of."
-  - id: normative
-    definition: "Claims about what ought to be the case."
-  - id: descriptive
-    definition: "Claims about what is the case, without causal implication."
-  - id: existential
-    definition: "Claims that a thing, property, or relationship exists."
-  - id: universal
-    definition: "Claims that hold across all instances of a domain."
-```
-
----
-
-## Section 20: FAIR Compliance
-
-### 20.1 Findable
-
-| Requirement | Implementation |
-|---|---|
-| Globally unique identifiers | Persistent URIs under `https://openevo.net/` |
-| Rich metadata | Universal metadata block on all objects |
-| Metadata registered in searchable resource | schema.org structured data at all object URIs; registration with re3data.org |
-| Identifier in metadata | `id` field is mandatory and first in all schemas |
-
-### 20.2 Accessible
-
-| Requirement | Implementation |
-|---|---|
-| Retrievable by identifier using open protocol | HTTP with content negotiation; all Tier 1 objects open access |
-| Metadata accessible even when data unavailable | CKO bibliographic profile available even when source artifact is paywalled |
-| Authentication not required for read | SPARQL endpoint and REST API open for read |
-
-### 20.3 Interoperable
-
-| Requirement | Implementation |
-|---|---|
-| Formal, accessible, shared, broadly applicable language | RDF; JSON-LD; YAML with schema validation |
-| Vocabulary from FAIR vocabularies | SKOS concept schemes; Dublin Core; PROV-O |
-| Qualified references to other objects | All relationships use typed predicates with domain/range; no bare strings |
-
-### 20.4 Reusable
-
-| Requirement | Implementation |
-|---|---|
-| Plurality of accurate and relevant attributes | Rich schema fields; structured claims; evolutionary metadata |
-| Released with clear and accessible data usage license | CC BY 4.0 mandatory field on all objects |
-| Provenance | Full provenance block including creator, reviewer, modification history |
-| Meet domain-relevant community standards | Alignment with ASN, CASE, LOM, IMS standards (Section 21) |
-
----
-
-## Section 21: External Standards Alignment
-
-### 21.1 Alignment Map
-
-| OpenEvo Element | External Standard | Mapping |
+| Class | Planned phase | Note |
 |---|---|---|
-| CTO `title` | Dublin Core `dcterms:title` | direct |
-| CTO `description` | Dublin Core `dcterms:description` | direct |
-| CTO `provenance.created_by` | PROV-O `prov:wasAttributedTo` | direct |
-| CTO `provenance.created_date` | Dublin Core `dcterms:created` | direct |
-| CTO `version.current` | Dublin Core `dcterms:hasVersion` | direct |
-| CTO `claims` | (no standard equivalent; OpenEvo extension) | extension |
-| CKO `artifact.title` | Dublin Core `dcterms:title` | direct |
-| CKO `artifact.publication_date` | Dublin Core `dcterms:issued` | direct |
-| CKO `access.primary_URI` | Dublin Core `dcterms:source` | direct |
-| CKO `artifact.jurisdiction` | Achievement Standards Network `asn:jurisdiction` | approximate |
-| CMO | CASE `CFItem`; IEEE LOM `Educational` | approximate |
-| Vocabulary terms | SKOS `skos:Concept` | direct |
-| AGO | PROV-O `prov:Agent` | direct |
-| EVO | (no standard equivalent; OpenEvo extension) | extension |
-| CFO | (no standard equivalent; OpenEvo extension) | extension |
+| `oe:Collection` | 3 | Aggregates Strands/LPMs for a distributed collection repository. |
+| `oe:Competency` | 4 | To be profiled as an extension of CASE `CFItem`. |
+| `oe:Assessment` | 4 | — |
+| `oe:Practice` | 4 | — |
+| `oe:Evidence` | 4 | To be profiled as an extension of the xAPI statement structure. |
+| `oe:Resource` | 4 | Profiled from IEEE LOM / schema.org/LearningResource. |
 
-### 21.2 IMS Global / CASE Alignment
+Promoting a reserved class into `classes` is a **MINOR** version bump to the ontology (additive; no existing reference changes). Removing or redefining a class's domain, range, or semantics is a **MAJOR** version bump requiring RFC review (§11).
 
-The CMO schema is designed to be compatible with the **IMS Global Competencies and Academic Standards Exchange (CASE)** format. A CASE export pipeline will be provided in the `OpenEvo-Graph` repository, enabling OpenEvo competency objects to be consumed by CASE-compatible platforms.
+### 6.3 Object Properties (Phase 1)
 
-### 21.3 Achievement Standards Network (ASN) Alignment
+| Property | Domain → Range | Semantics |
+|---|---|---|
+| `oe:hasStrand` | `oe:LPM` → `oe:Strand` | LPM contains a top-level Strand. |
+| `oe:hasSubStrand` | `oe:Strand` → `oe:SubStrand` | Recursive composition (§6.1). |
+| `oe:partOfStrand` | `oe:SubStrand` → `oe:Strand` | Inverse of `oe:hasSubStrand`. |
+| `oe:hasLearningObject` | `oe:Strand` → `oe:LearningObject` | Strand references a Learning Object. |
+| `oe:hasConcept` | `{oe:Strand, oe:LearningObject}` → `oe:Concept` | Primary link between curriculum structure and vocabulary. |
+| `oe:required` | `oe:SubStrand` → `xsd:boolean` | Obligate vs. optional/elective/regional-extension status. |
+| `oe:recommendedSequence`, `oe:alternativeSequence`, `oe:parallel`, `oe:prerequisiteOf` | `oe:Strand` → `oe:Strand` | Pathway declarations supporting multiple valid curriculum sequences. |
+| `oe:definedInVocabulary` | `oe:Concept` → `xsd:string` | References the Concept's single home vocabulary (§8). |
 
-CKOs representing curriculum standards are designed to align with the **Achievement Standards Network (ASN)** linked data schema. Where an ASN record exists for a curriculum document, the CKO should declare:
+### 6.4 SKOS Relation Reuse
+
+Because `oe:Concept` is declared `subClassOf skos:Concept`, all standard SKOS relations (`skos:broader`, `skos:narrower`, `skos:related`, `skos:closeMatch`, `skos:exactMatch`) are available on every Concept instance without redefinition. OECB **MUST NOT** define parallel or competing relation vocabularies for same-vocabulary relations. Cross-vocabulary relations are reified separately as Alignment records (§9), not asserted as direct Concept properties, so that each such claim can carry independent provenance.
+
+### 6.5 Nesting Depth
+
+Recommended maximum SubStrand nesting depth is **two levels**. This limit **MUST** be enforced by validation tooling (§13), not encoded as an ontology-level restriction, so that relaxing the limit in the future does not require a class-level breaking change.
+
+---
+
+## 7. Schema Layer Specification
+
+### 7.1 Formalism
+
+The schema layer uses **JSON Schema (draft 2020-12)**, authored in YAML, with a shared `$defs` library to avoid duplicating primitives across schemas. Schema `$id` values are a distinct namespace concern from ontology IRI resolution (§4.2) but share the same base path for operational consistency.
+
+### 7.2 Shared Definitions (`common.defs.yaml`)
+
+The following primitives **MUST** be defined once in `schemas/common.defs.yaml` and referenced via `$ref` by every other schema, never redefined locally:
+
+- Identifier patterns (`conceptId`, `lpmId`, `strandId`, `vocabRef`)
+- `semver`, `status` (lifecycle enum), `languageTag`
+- Multilingual field shapes: `localizedString`, `localizedStringArray`, `localizedDisciplinaryDefinitions`
+- `citation`, `author` structured objects
+- `extensions` — an open, namespaced escape hatch for forward-compatible fields
+- `conceptbaseManifest` — the federated dependency manifest shape (§10)
+
+Any new schema introduced in a future phase **MUST** reuse these primitives rather than redefining equivalent structures.
+
+### 7.3 Core Schemas (Phase 1)
+
+| Schema | Validates | Key normative behaviors |
+|---|---|---|
+| `concept.schema.yaml` | `oe:Concept` instances | Requires `definedInVocabulary` (exactly one home vocabulary); `definitions` uses `localizedDisciplinaryDefinitions` to support per-discipline disambiguation (§8.4); SKOS relation targets validated for ID-pattern correctness only — referential integrity (target existence) is a build-pipeline concern, not a JSON Schema concern. |
+| `lpm.schema.yaml` | `oe:LPM` instances | Embeds the `conceptbase` manifest (§10); `strands[]` entries are loosely coupled (`id` + external `repository` URI only) — full Strand structure is intentionally out of scope for this schema. |
+| `strand.schema.yaml` | `oe:Strand` / `oe:SubStrand` instances | `concepts[].emphasis` (`primary` \| `reinforcing`) is **REQUIRED** on every concept reference, providing the machine-checkable basis for horizontal coherence auditing (§13.3); `subStrands[]` is self-referential (`$ref: "#"`) enabling recursive nesting per §6.1/§6.5. |
+
+### 7.4 Extension Mechanism
+
+Every core schema **MUST** include an `extensions` property (per §7.2) permitting namespaced, forward-compatible fields to be attached to instances without requiring a breaking schema change. Keys **SHOULD** be namespaced (e.g., `oe:phase2.alignmentHint`).
+
+---
+
+## 8. Controlled Vocabulary Specification
+
+### 8.1 Vocabulary as a Governed Unit
+
+A controlled vocabulary is a versioned, independently governed collection of `oe:Concept` instances sharing a `scope` and `discipline`. Each vocabulary file **MUST** declare its own `meta` block (`id`, `version`, `status`, `scope`, `discipline`, `license`, `authors`, `conformsTo`) independent of any other vocabulary's versioning.
+
+### 8.2 Concept Entry Structure
+
+Every Concept instance **MUST** validate against `concept.schema.yaml` (§7.3) and **MUST** populate, at minimum: `id`, `type`, `status`, `version`, `definedInVocabulary`, `labels`, `definitions`.
+
+### 8.3 One Home Vocabulary Per Concept
+
+A Concept **MUST** be defined in exactly one home vocabulary (`definedInVocabulary`). A Concept **MAY** be the target of Alignment records (§9) from Concepts in other vocabularies, but **MUST NOT** be redefined or duplicated across vocabularies.
+
+### 8.4 Disambiguation Model
+
+The `definitions` field uses `localizedDisciplinaryDefinitions`: a map of language tag to (discipline key → definition text), where discipline keys are free-form (e.g., `biology`, `culture`, `education`, `ai`, `general`). This structure is the mechanism by which a single Concept (e.g., "Selection") **MAY** carry multiple, explicitly distinct, discipline-specific definitions rather than forcing a single canonical meaning. Vocabularies **SHOULD** populate multiple discipline keys only where a term's meaning genuinely differs by discipline, and **MAY** use a single `general` key where one cross-domain framing suffices.
+
+### 8.5 Multilinguality
+
+All `labels` and `definitions` fields **MUST** include an `en` entry as the ecosystem-wide fallback language. Additional language tags **MAY** be added at any time as an additive, non-breaking (MINOR or PATCH) change.
+
+### 8.6 Pluralism Requirement
+
+Where a field of curricular knowledge contains genuine, active theoretical disagreement (e.g., whether organism agency is a legitimate causal component of evolutionary explanation), OECB **MUST NOT** resolve the disagreement by omission, editorializing, or privileging one vocabulary as canonical. Instead:
+
+- Competing theoretical positions **SHOULD** be represented as separate, internally consistent vocabularies (e.g., `BIO-CORE` vs. `OE-INTERDISCIPLINARY`).
+- The disagreement **MAY** subsequently be made formally comparable via Alignment records (§9) once both vocabularies are stable, without requiring either to be modified to accommodate the other.
+
+This is a load-bearing design principle (§3, item 7), not an incidental feature; it is what allows OECB to serve a research field with active theoretical disputes without the infrastructure layer taking a side.
+
+---
+
+## 9. Cross-Vocabulary Alignment (Phase 2 — Forward-Specified)
+
+Although alignment records are a Phase 2 deliverable, their structure **MUST** conform to the following normative shape when implemented, so that Phase 1 vocabularies are built in a manner compatible with future alignment without rework.
+
+### 9.1 Alignment Record Structure
 
 ```yaml
-external_alignments:
-  - standard: "Achievement Standards Network"
-    mapped_element: "asn:StandardDocument"
-    mapping_URI: "http://asn.desire2learn.com/resources/..."
+id: OE-ALIGN-{nnnnnn}
+subject: {vocabulary}:{ConceptLabel}
+object: {vocabulary}:{ConceptLabel}
+matchType: skos:closeMatch | skos:exactMatch | skos:broadMatch | skos:narrowMatch | skos:relatedMatch
+assertedBy: [{contributor identifiers}]
+date: {ISO 8601 date}
+status: proposed | accepted | contested
+rationale: >
+  {free text justification}
 ```
+
+### 9.2 Normative Requirements
+
+- Alignment records **MUST NOT** be asserted as direct properties on either Concept instance (§6.4); they **MUST** be reified as independent, separately versioned records under `/alignments/`.
+- Every alignment record **MUST** carry `assertedBy`, `date`, `matchType`, and `status` — an alignment without provenance **MUST NOT** be accepted.
+- A `status: contested` alignment **MUST** remain resolvable and visible in query results, not suppressed, so that ongoing theoretical disagreement about the alignment itself is representable as data (§3, item 7; §8.6).
 
 ---
 
-## Section 22: Governance Model
+## 10. Federated Repository Model
 
-### 22.1 Governance Principles
+### 10.1 The Manifest
 
-The Concept Base must evolve **slowly and deliberately** at its core while enabling **rapid experimentation** at its periphery. This principle maps directly onto the namespace tier structure and the branch model.
+Every dependent repository **MUST** declare a `conceptbase` manifest conforming to `common.defs.yaml#/$defs/conceptbaseManifest`:
 
-### 22.2 Branch Architecture
+```yaml
+conceptbase:
+  ontology: OE-ONTOLOGY-v{semver}
+  vocabularies:
+    - {VOCAB}-v{semver}
+    - ...
+  gradeSchema: {reserved, Phase 3}
+  subjectSchema: {reserved, Phase 3}
+  acknowledgedDeprecations:
+    - {entity id}
+```
+
+### 10.2 Version Pinning
+
+A dependent repository's manifest **MUST** pin exact versions of every ontology and vocabulary it depends on. Unpinned or range-based version references **MUST NOT** be used, in order to guarantee reproducible validation.
+
+### 10.3 Compatibility Checking
+
+A CI compatibility-checker (distributed by OECB as a reusable action, §14 Phase 4) **MUST**, on every push to a dependent repository:
+
+1. Verify that every referenced entity ID resolves at the pinned version.
+2. Verify that no referenced entity has `status: deprecated` unless explicitly listed in `acknowledgedDeprecations`.
+3. Flag (but not necessarily block) cases where a pinned dependency has a newer MAJOR version available, requiring explicit re-validation before the dependent repository tags its own next release.
+
+---
+
+## 11. Governance and Versioning
+
+### 11.1 Roles
+
+| Role | Responsibility |
+|---|---|
+| **Maintainers** | Merge rights on `main`; final arbitration; cut releases. |
+| **Domain editors** | Required reviewers for RFCs touching their vocabulary/subject domain. |
+| **Contributors** | Anyone; submit RFCs via pull request. |
+
+### 11.2 RFC Process
+
+Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the fixed RFC template (motivation, proposed IRI, relations, justification for why no existing standard covers the need per §3 item 4). Every RFC **MUST** receive at least one domain editor approval and one maintainer approval before merge.
+
+### 11.3 Lifecycle Status
+
+Every entity **MUST** carry a `status` field with one of the following values, and status transitions **MUST** only move forward along this lifecycle (a status **MUST NOT** revert from `deprecated` back to `stable`, for example, without a new RFC):
 
 ```
-main                  ← stable; graph staging environment
-release               ← production; triggers production graph update
-sandbox               ← experimental; not included in any graph build
-extensions/{name}     ← domain-specific extensions under development
+proposed → accepted → stable → deprecated → superseded
 ```
 
-### 22.3 Review Process by Change Type
+### 11.4 Deprecation Policy
 
-| Change Type | Process | Minimum Review Time |
+An entity **MUST NOT** be deleted once it reaches `status: accepted` or higher. A deprecated entity **MUST**:
+
+- Remain resolvable at its existing identifier indefinitely.
+- Carry a `supersededBy` pointer to its replacement, where one exists.
+- Continue to appear in query results (not silently filtered), so dependent repositories are never broken by an upstream change they have not yet acknowledged.
+
+### 11.5 Independent Versioning
+
+Each vocabulary, schema, and ontology module **MUST** version independently using semantic versioning:
+
+- **MAJOR** — a concept, class, or property is removed or redefined incompatibly.
+- **MINOR** — additive change (new concept, new optional property, promoted reserved class).
+- **PATCH** — non-semantic change (wording, typo correction).
+
+There is no single "ConceptBase version" that governs all artifacts simultaneously; the specification document itself (this document) is versioned separately from the artifacts it describes.
+
+### 11.6 Amending This Specification
+
+Changes to §3 (Design Principles) or §11 (this section) itself **MUST** be treated as MAJOR changes to this specification document and **MUST** require explicit maintainer consensus, documented as an RFC with a `type: specification-amendment` tag, distinct from ordinary content RFCs.
+
+---
+
+## 12. Standards Alignment and Profiling Obligations
+
+OECB **MUST** be built as a set of profiles and extensions of existing standards wherever a suitable standard exists, per §3 item 4. The following mappings are normative for the phases indicated:
+
+| Need | Standard reused | OECB profiling obligation | Phase |
+|---|---|---|---|
+| Concept relations, cross-vocabulary mapping | SKOS | `oe:Concept subClassOf skos:Concept`; Alignment records use SKOS match types exclusively (§9) | 1 (relations), 2 (alignment) |
+| Competency frameworks | CASE (1EdTech) | `oe:Competency` **MUST** be profiled as an extension of CASE `CFItem`, not a novel structure | 4 |
+| Learning object metadata | IEEE LOM, schema.org/LearningResource | `oe:Resource` **MUST** be profiled from these, not redefined | 4 |
+| Evidence/activity records | xAPI | `oe:Evidence` **MUST** be profiled as an extension of the xAPI statement structure | 4 |
+| Graph serialization | RDF / JSON-LD | The OECB-specific ontology (§6) is the only permitted novel structure at the serialization layer | 1 |
+
+Any RFC proposing a schema or ontology structure not covered by this table **MUST** include a documented justification for why existing standards are insufficient (§3 item 4), reviewed as part of ordinary RFC review (§11.2).
+
+---
+
+## 13. Validation and Compatibility Requirements
+
+### 13.1 Schema Validation
+
+Every entity file **MUST** validate against its corresponding JSON Schema (§7) as a required CI check before merge. This includes ID pattern conformance, required-field presence, and `additionalProperties: false` enforcement (no undeclared fields permitted at the top level of any core schema).
+
+### 13.2 Referential Integrity
+
+The build pipeline (§5.2) **MUST** verify, beyond JSON Schema's structural validation, that every SKOS relation target and every `oe:hasConcept` reference resolves to an entity that actually exists in the compiled graph. JSON Schema alone **MUST NOT** be relied upon for this check, since ID pattern conformance does not guarantee target existence.
+
+### 13.3 Horizontal Coherence Auditing
+
+Validation tooling **SHOULD** provide a coherence-auditing capability that, given an LPM and its dependent Strand files, computes:
+
+- **Vertical coherence**: whether concept complexity and performance indicator sophistication increase monotonically across a Strand's `subStrands[]` sequence.
+- **Horizontal coherence**: using the `concepts[].emphasis` field (§7.3) as evidence, whether a Strand's `primary` concepts are genuinely `reinforcing`-referenced by sibling and cross-strand Strands, rather than introduced once and never revisited.
+
+This auditing capability is **RECOMMENDED**, not required, for Phase 1 conformance, but is expected to become a required CI check for LPM repositories no later than Phase 3.
+
+### 13.4 Depth Limit Enforcement
+
+Validation tooling **MUST** flag (though **MAY** allow with a warning rather than a hard failure) any `subStrands[]` nesting exceeding two levels, per the recommended limit in §6.5.
+
+---
+
+## 14. Phased Rollout
+
+OECB's scope is deliberately staged rather than stabilized all at once (§3 rationale: validate the highest-leverage design decisions — disambiguation, identifier stability — against a real pilot before expanding surface area).
+
+| Phase | Status as of this specification | Normative deliverables |
 |---|---|---|
-| PATCH to any object | Single reviewer approval | 48 hours |
-| MINOR to CTO/CKO/EVO | Two reviewer approvals | 1 week |
-| MINOR to CMO/CFO | Single reviewer approval | 48 hours |
-| MAJOR to any object | Editorial board review | 2 weeks |
-| New object (Tier 1) | Full review + editorial board | 2 weeks |
-| Schema change (MINOR) | Core team review | 2 weeks |
-| Schema change (BREAKING) | Public comment period + core team | 4 weeks |
+| **1 — Core** | Active | Ontology core classes (§6.1); Concept/LPM/Strand schemas (§7.3); ≥1 seed vocabulary with full disambiguation (§8.4); governance process (§11); end-to-end pilot LPM repository |
+| **2 — Alignment & Multilinguality** | Planned | Alignment record type (§9) implemented and populated; language-tagged labels/definitions beyond `en` (§8.5) |
+| **3 — Pluralism** | Planned | `grade-schemas/`, `subject-schemas/` populated with multiple systems each; CASE/LOM/xAPI profile mappings begun; horizontal coherence auditing (§13.3) becomes required |
+| **4 — Ecosystem Tooling** | Planned | `oe:Competency`, `oe:Assessment`, `oe:Evidence`, `oe:Resource` promoted from reserved to defined (§6.2); hosted SPARQL endpoint (§5.3); CI compatibility-checker action published (§10.3) |
 
-### 22.4 Editorial Board
-
-The Editorial Board oversees Tier 1 namespace governance. It consists of:
-
-- Core maintainers (permanent roles)
-- Domain editors (appointed per theory space)
-- External advisory members (rotating, 2-year terms)
-
-### 22.5 Conflict Resolution Procedure
-
-When a submitted object conflicts with an existing Tier 1 object:
-
-1. A CFO is automatically drafted by the pipeline
-2. The CFO is assigned to the relevant Domain Editor
-3. Both object authors are notified
-4. A resolution pathway is agreed within 30 days
-5. If no resolution is reached, the conflict is formally registered as `unresolved` and both objects are published with `competesWith` relationship
-
-### 22.6 Deprecation Procedure
-
-An object may only be deprecated by:
-
-1. A formal deprecation proposal citing the replacement object
-2. Approval by the relevant Domain Editor
-3. A minimum 90-day notice period before status change
-4. Preservation of the deprecated object in the archive
-5. Automatic update of all `deprecated_by` references in consuming objects
+Promotion of a phase's deliverables to `stable` status **MUST** follow ordinary RFC review (§11.2); phase completion is not itself a specification-level event requiring amendment under §11.6, since phases describe scope sequencing, not the design principles in §3.
 
 ---
 
-## Section 23: Long-Term Vision
-
-### 23.1 What the Ecosystem Becomes
-
-The OpenEvo Concept Base, at full maturity, is:
-
-**A curriculum theory representation system** — the first formal, machine-readable, version-controlled, evidence-linked infrastructure for representing the theoretical knowledge of curriculum studies as computational objects.
-
-**A shared vocabulary for computational curriculum studies** — enabling researchers across institutions, languages, and theoretical traditions to work within a common semantic framework without requiring theoretical consensus.
-
-**An interoperability layer between educational projects** — allowing curriculum standards from Germany, research studies from Australia, lesson designs from Brazil, and theoretical frameworks from the United Kingdom to reference each other, contradict each other, and evolve in response to each other within a shared namespace.
-
-**A version-controlled cultural evolution system for curriculum knowledge** — providing, for the first time, the infrastructure to study the actual evolutionary dynamics of curriculum theory: how theories spread, compete, mutate, merge, go extinct, and get revived across educational communities.
-
-### 23.2 The Evolutionary Environment
-
-The GitHub organization is the **evolutionary environment** of this ecosystem. Every structural feature of the version control system maps onto an evolutionary dynamic:
+## 15. Repository Structure (Informative)
 
 ```
-repositories        →   populations of knowledge objects
-                        (different ecological niches; different selection pressures)
-
-commits             →   mutations
-                        (small changes to existing knowledge)
-
-branches            →   exploratory variation
-                        (unconstrained exploration before selection)
-
-pull requests       →   selection events
-                        (community evaluation of proposed changes)
-
-merges              →   inheritance and fixation
-                        (successful variants enter the stable population)
-
-forks               →   lineage divergence
-                        (new populations with shared ancestry but independent futures)
-
-deprecations        →   extinction
-                        (variants that fail selection are preserved but removed from active use)
-
-cross-repo links    →   horizontal transfer
-                        (ideas crossing between otherwise isolated populations)
-
-the release graph   →   the fossil record
-                        (a permanent, queryable record of what existed at each moment)
-```
-
-The evolutionary metadata layer captures these dynamics in machine-readable form. The OpenEvo Graph compiles them into a queryable evolutionary record. The AI agent interface makes this record accessible to researchers asking questions that could not be asked of any existing curriculum knowledge system.
-
-### 23.3 The Research Questions This Infrastructure Enables
-
-With the full Concept Base operational, the following research questions become computationally tractable:
-
-```
-Phylogenetic questions:
-  "What is the complete lineage of constructivist curriculum theory
-   across jurisdictions since 1970?"
-
-Selection dynamics questions:
-  "In which theory spaces has empirical evidence been the primary
-   driver of theoretical revision, and in which have political
-   pressures dominated?"
-
-Fitness landscape questions:
-  "Which regions of the computational curriculum studies theory space
-   remain unoccupied, and what research would fill the most
-   significant gaps?"
-
-Diffusion questions:
-  "How long does it take for a theoretical innovation originating
-   in German curriculum research to appear in Australian curriculum
-   standards?"
-
-Conflict dynamics questions:
-  "What is the resolution rate of formally registered theoretical
-   conflicts in curriculum studies, and what types of evidence
-   most reliably drive resolution?"
-
-Drift detection questions:
-  "Which curriculum theories show evidence of change attributable
-   to social or political drift rather than empirical selection?"
-```
-
-These are not rhetorical questions. They are the research agenda that this infrastructure is designed to make possible.
-
-### 23.4 The Namespace as Continuity
-
-The `https://openevo.net/` namespace provides the **continuity that allows evolution to be tracked**. Without persistent, stable identifiers, there is no way to say that the CTO that exists in 2034 is a descendant of the CTO that was created in 2024. With persistent identifiers, version histories, genealogical metadata, and selection pressure records, the system accumulates exactly what evolutionary biology took centuries to develop for the natural world: **a theory of how knowledge changes, tested against a record of how knowledge has changed**.
-
-The OpenEvo Concept Base is that record, and this specification is how it begins.
-
----
-
-## Appendix A: File Structure of the ConceptBase Repository
-
-```
-OpenEvo-ConceptBase/
-│
+conceptbase/
 ├── README.md
-├── SPECIFICATION.md               ← this document
-├── CONTRIBUTING.md
+├── SPECIFICATION.md          # This document
 ├── GOVERNANCE.md
-├── LICENSE                        ← CC BY 4.0
-│
-├── ontology/
-│   ├── core/
-│   │   ├── oecb-core.ttl          ← core ontology in Turtle
-│   │   ├── oecb-core.owl          ← OWL serialization
-│   │   └── oecb-core.md           ← human-readable documentation
-│   └── extensions/
-│       ├── evolution-education/
-│       └── computational-curriculum/
-│
+├── CONTRIBUTING.md
+├── LICENSE / LICENSE-CODE
+├── ontologies/core.yaml
 ├── schemas/
-│   ├── CTO/
-│   │   ├── CTO.schema.yaml        ← YAML Schema
-│   │   ├── CTO.schema.json        ← JSON Schema
-│   │   └── CTO.example.yaml       ← worked example
-│   ├── CKO/
-│   ├── TSO/
-│   ├── EVO/
-│   ├── CMO/
-│   ├── CFO/
-│   ├── AGO/
-│   └── evolutionary-metadata/
-│       ├── EML.schema.yaml
-│       └── EML.schema.json
-│
-├── vocabularies/
-│   ├── epistemic-status/
-│   │   ├── epistemic-status.skos.ttl
-│   │   └── epistemic-status.yaml
-│   ├── selection-pressures/
-│   ├── evidence-type/
-│   ├── claim-type/
-│   ├── disciplines/
-│   └── competencies/
-│
-├── registry/
-│   ├── affiliated-projects.yaml
-│   └── federated-projects.yaml
-│
-├── migration-guides/
-│   └── (schema version migration guides)
-│
-├── sandbox/
-│   └── (experimental extensions; not validated)
-│
-└── .github/
-    └── workflows/
-        ├── validate.yml           ← schema validation on PR
-        ├── staging-graph.yml      ← staging graph build on merge to main
-        └── production-graph.yml   ← production graph build on merge to release
+│   ├── common.defs.yaml
+│   ├── concept.schema.yaml
+│   ├── lpm.schema.yaml
+│   └── strand.schema.yaml
+├── controlled-vocabularies/
+│   ├── BIO-CORE-v1.0.0.yaml
+│   └── OE-INTERDISCIPLINARY-v1.0.0.yaml
+├── alignments/            # Phase 2
+├── grade-schemas/         # Phase 3
+├── subject-schemas/       # Phase 3
+├── competencies/          # Phase 4
+├── evidence/              # Phase 4
+├── registry/              # Generated
+├── validation/
+├── build/
+├── proposals/
+└── examples/
 ```
+
+This section is informative; the normative requirement is only that the artifacts described in §6–§9 exist somewhere in the repository with content conforming to their respective sections, not that they occupy these exact paths. Path conventions **SHOULD** be followed for ecosystem consistency but **MAY** be adapted by forks or derivative registries provided the manifest mechanism (§10) is preserved.
 
 ---
 
-## Appendix B: Minimum Viable Object Checklist
+## 16. Conformance
 
-Before any object is submitted for review, it must satisfy:
+### 16.1 Conformance Classes
 
-```
-Universal Requirements (all objects):
-  [ ] id field is a valid, unique openevo.net URI
-  [ ] schema_version field declares a valid schema version URI
-  [ ] type field matches the declared schema
-  [ ] status field is declared
-  [ ] license field declares CC BY 4.0
-  [ ] provenance.created_by is a valid AGO URI
-  [ ] provenance.created_date is a valid ISO date
-  [ ] version.current is declared
-  [ ] evolutionary_metadata block is present (may be minimal)
+This specification defines two conformance classes.
 
-CTO Additional Requirements:
-  [ ] At least one structured claim with id, text, claim_type, and epistemic_status
-  [ ] At least one falsification_condition per claim
-  [ ] status_rationale present on all claims
-  [ ] At least one theoretical_foundation declared
+**A conformant Vocabulary** is one whose Concept entries validate against `concept.schema.yaml` (§7.3), whose `meta` block is complete (§8.1), and which does not redefine a Concept already homed in another vocabulary (§8.3).
 
-CKO Additional Requirements:
-  [ ] profile declared
-  [ ] artifact.title present
-  [ ] artifact.artifact_type declared
-  [ ] access.primary_URI present (may be noted as unavailable)
-  [ ] At least one theoretical_annotation if profile is annotated or structured
+**A conformant Dependent Repository** is one whose manifest (§10.1) pins exact versions, whose referenced entities all resolve at those pinned versions (§10.3), and whose Strand/LPM files validate against the corresponding schemas (§7.3).
 
-EVO Additional Requirements:
-  [ ] source.citation present
-  [ ] source.source_type declared
-  [ ] At least one claim_relationship with reasoning present
-  [ ] quality_assessment block present
-```
+### 16.2 Non-Conformance Handling
+
+A repository that references OECB entities without a valid manifest, or that references deprecated entities without `acknowledgedDeprecations`, is **non-conformant** and **SHOULD** be flagged by the compatibility checker (§10.3), but this specification does not mandate that non-conformant repositories be technically prevented from doing so — enforcement mechanisms are a matter for individual dependent-repository CI configuration, not for OECB itself to police.
 
 ---
 
-## Appendix C: Versioning Quick Reference
+## Appendix A — Identifier Pattern Quick Reference
 
 ```
-Change Type       Version Increment    Triggers
-──────────────────────────────────────────────────────────────
-Typo fix          1.0.0 → 1.0.1       PATCH
-Clarification     1.0.0 → 1.0.1       PATCH
-New claim added   1.0.0 → 1.1.0       MINOR
-New EVO linked    1.0.0 → 1.1.0       MINOR
-Claim revised     1.1.0 → 2.0.0       MAJOR
-Foundation removed 1.1.0 → 2.0.0      MAJOR
-Schema field added 1.0 → 1.1          MINOR (schema)
-Schema field removed 1.1 → 2.0        BREAKING (schema)
-Field renamed      1.1 → 2.0          BREAKING (schema)
+Concept:    ^OE-CONCEPT-[0-9]{6}$
+LPM:        ^OE-LPM-[0-9]{6}$
+Strand:     ^OE-STRAND-[0-9]{6}$
+Vocabulary: ^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$
+Semver:     ^[0-9]+\.[0-9]+\.[0-9]+$
+Language:   ^[a-z]{2}(-[A-Z]{2})?$
 ```
+
+## Appendix B — Reserved Ontology Prefixes
+
+```
+oe:   https://www.w3id.org/openevo/ontology#
+skos: http://www.w3.org/2004/02/skos/core#
+owl:  http://www.w3.org/2002/07/owl#
+rdfs: http://www.w3.org/2000/01/rdf-schema#
+xsd:  http://www.w3.org/2001/XMLSchema#
+dct:  http://purl.org/dc/terms/
+```
+
+## Appendix C — Specification Change Log
+
+| Version | Date | Summary |
+|---|---|---|
+| 0.1.0 | Draft | Initial narrative specification; content/infrastructure separation established. |
+| 0.2.0 | Draft, superseded by this document | Added governance model, SKOS relation adoption, RDF/JSON-LD formalism commitment, phased scope. |
+| **0.2.0 (this document)** | Current | Reformatted as a normative formal specification with RFC 2119 conformance language; namespace finalized to `www.w3id.org/openevo/`; conformance classes (§16) added; all prior narrative content consolidated and made testable. |
 
 ---
 
-*OpenEvo Concept Base Specification v0.9.0*
-*OpenEvoCCS-lab/OpenEvo-ConceptBase*
-*License: CC BY 4.0*
-*Namespace: https://openevo.net/*
-*Status: Draft for Review — not yet a released standard*
+*This specification is licensed under CC-BY-4.0. Amendments follow the process defined in §11.6 and `GOVERNANCE.md`.*

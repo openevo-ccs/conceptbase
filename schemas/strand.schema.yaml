@@ -1,0 +1,136 @@
+# ============================================================================
+# OpenEvo ConceptBase — Strand Schema
+# ============================================================================
+# Path: /schemas/strand.schema.yaml
+#
+# Validates instances of oe:Strand and oe:SubStrand (see /ontologies/core.yaml).
+# A Strand file is the content that an LPM's `strands[].repository` pointer
+# resolves to. SubStrands are modeled as nested `subStrands[]` entries using
+# the same shape (self-referential via $ref), consistent with the ontology's
+# design: SubStrand is a subclass of Strand connected via oe:hasSubStrand,
+# not a separate class. The recommended 2-level nesting limit is enforced by
+# validation tooling (not by this schema), per the ontology's versioning notes.
+#
+# `concepts[].emphasis` (primary | reinforcing) is the mechanism that makes
+# horizontal coherence machine-checkable: a validator can count how many
+# strands/substrands reinforce a given concept across an LPM to verify that
+# core concepts are genuinely repeated, not merely mentioned once.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/strand.schema.json"
+
+meta:
+  id: OE-SCHEMA-STRAND
+  version: 1.0.0
+  status: stable
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  ontologyClass: [oe:Strand, oe:SubStrand]
+  phase: 1
+
+type: object
+
+properties:
+
+  id:
+    "$ref": "common.defs.yaml#/$defs/strandId"
+
+  type:
+    type: string
+    enum: ["oe:Strand", "oe:SubStrand"]
+
+  status:
+    "$ref": "common.defs.yaml#/$defs/status"
+
+  version:
+    "$ref": "common.defs.yaml#/$defs/semver"
+
+  labels:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+
+  description:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+
+  typicalGradeBand:
+    type: string
+    description: >
+      Informal grade-band label (e.g. "K-2", "6-8"). Plain string pending
+      formal gradeSchema resources (Phase 3). Not validated against a
+      controlled set in Phase 1.
+
+  required:
+    type: boolean
+    default: true
+    description: >
+      Whether this Strand/SubStrand is obligate (oe:required=true) or
+      optional/elective/regional-extension (false) within its parent.
+
+  concepts:
+    type: array
+    description: >
+      Concepts this Strand/SubStrand addresses (oe:hasConcept). `emphasis`
+      distinguishes concepts this strand is structurally organized around
+      (primary) from concepts pulled in from other strands to reinforce
+      cross-strand relations (reinforcing) — the operational basis for
+      horizontal coherence.
+    items:
+      type: object
+      properties:
+        id:
+          "$ref": "common.defs.yaml#/$defs/conceptId"
+        emphasis:
+          type: string
+          enum: [primary, reinforcing]
+      required: [id, emphasis]
+      additionalProperties: false
+
+  performanceIndicators:
+    type: array
+    items:
+      type: string
+    description: Observable learning outcomes for this level.
+
+  associatedDomains:
+    type: array
+    items:
+      type: string
+    description: >
+      Informal subject-domain tags (e.g. "Biology", "Computer Science").
+      Plain strings pending formal subjectSchema resources (Phase 3).
+
+  relations:
+    type: object
+    description: >
+      Strand-to-strand relations from the ontology (recommendedSequence,
+      alternativeSequence, parallel, prerequisiteOf). Targets are sibling
+      or cross-strand IDs, not child subStrands (use subStrands[] for that).
+    properties:
+      recommendedSequence:
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/strandId" }
+      alternativeSequence:
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/strandId" }
+      parallel:
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/strandId" }
+      prerequisiteOf:
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/strandId" }
+    additionalProperties: false
+
+  subStrands:
+    type: array
+    items:
+      "$ref": "#"
+    description: >
+      Nested child Strand/SubStrand entries (oe:hasSubStrand). Recommended
+      maximum depth: 2 levels total, enforced by validation tooling.
+
+  extensions:
+    "$ref": "common.defs.yaml#/$defs/extensions"
+
+required: [id, type, status, version, labels]
+additionalProperties: false
