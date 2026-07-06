@@ -1,0 +1,459 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: OE-INTERDISCIPLINARY
+# ============================================================================
+# Path: /controlled-vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml
+#
+# Interdisciplinary vocabulary spanning biological and cultural evolution,
+# development, cognition, and technology (see Spec v0.2, "OpenEvo
+# Vocabulary"). Each entry under `concepts:` validates against
+# /schemas/concept.schema.yaml.
+#
+# Design intent: concepts here are framed generically enough that a
+# biological mechanism (e.g. gene-based inheritance) is treated as ONE
+# instance of a more general process (e.g. Inheritance) rather than the
+# defining case. Where a term's meaning genuinely differs by discipline
+# (flagged in Spec v0.2's disambiguation example — "Selection"), multiple
+# discipline keys are populated under `definitions.en`. Where a single
+# cross-domain framing already suffices, one `general` key is used instead
+# of manufacturing artificial distinctions.
+#
+# IDs OE-CONCEPT-000090, -000213, and -000214 intentionally match the
+# identifiers already referenced as illustrative examples in
+# /schemas/concept.schema.yaml and the ConceptBase spec itself
+# ("Evolutionary Process", "Selection", "Variation"), so those earlier
+# examples resolve to real entries rather than being orphaned.
+#
+# Cross-vocabulary alignment to BIO-CORE (e.g. this file's `Selection`
+# <-> BIO-CORE's `Natural Selection`) is deliberately NOT asserted here;
+# it belongs in /alignments/ with its own provenance record (Phase 2).
+# ============================================================================
+
+meta:
+  id: OE-INTERDISCIPLINARY
+  version: 1.0.0
+  status: stable
+  scope: >
+    Interdisciplinary vocabulary unifying biological evolution, cultural
+    evolution, human development, cognition, and technology under shared
+    general-process concepts.
+  discipline: interdisciplinary
+  license: CC-BY-4.0
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-CONCEPT-v1.0.0
+  phase: 1
+
+concepts:
+
+  - id: OE-CONCEPT-000090
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Evolutionary Process
+    definitions:
+      en:
+        general: >
+          Any process by which variants are generated, selected, and
+          transmitted across iterations within a system — applicable to
+          genetic, cultural, technological, or cognitive systems alike.
+    relations:
+      skos:narrower:
+        - OE-CONCEPT-000201  # Inheritance
+        - OE-CONCEPT-000213  # Selection
+        - OE-CONCEPT-000214  # Variation
+        - OE-CONCEPT-000203  # Transmission
+        - OE-CONCEPT-000204  # Innovation
+        - OE-CONCEPT-000210  # Development
+
+  - id: OE-CONCEPT-000201
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Inheritance
+    definitions:
+      en:
+        biology: Transmission of genetic information from parent to offspring.
+        culture: >
+          Transmission of beliefs, practices, or knowledge from one
+          generation, or one individual, to another via social learning.
+        technology: >
+          Persistence of design features or code structure across
+          successive versions of an artifact or system.
+    relations:
+      skos:broader: [OE-CONCEPT-000090]
+      skos:related: [OE-CONCEPT-000203, OE-CONCEPT-000214]
+    examples:
+      - A gene passed from parent to offspring.
+      - A recipe passed down through a family across generations.
+      - A software library's API conventions persisting across major versions.
+
+  - id: OE-CONCEPT-000203
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Transmission
+    definitions:
+      en:
+        general: >
+          The process by which information, traits, or practices move
+          from one holder (organism, person, group, or system) to
+          another.
+    relations:
+      skos:broader: [OE-CONCEPT-000090]
+      skos:related: [OE-CONCEPT-000201, OE-CONCEPT-000216, OE-CONCEPT-000217]
+
+  - id: OE-CONCEPT-000204
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Innovation
+    definitions:
+      en:
+        general: >
+          The generation of a novel variant — an idea, practice,
+          technology, or trait — that did not previously exist within a
+          system.
+    relations:
+      skos:broader: [OE-CONCEPT-000090]
+      skos:related: [OE-CONCEPT-000206, OE-CONCEPT-000218, OE-CONCEPT-000221]
+
+  - id: OE-CONCEPT-000205
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Information
+    definitions:
+      en:
+        general: >
+          A pattern or signal that reduces uncertainty for a receiver,
+          whether encoded genetically, linguistically, symbolically, or
+          computationally.
+    relations:
+      skos:related: [OE-CONCEPT-000206, OE-CONCEPT-000217, OE-CONCEPT-000221]
+
+  - id: OE-CONCEPT-000206
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Representation
+    definitions:
+      en:
+        general: >
+          A structure — mental, symbolic, or computational — that
+          stands for and conveys meaning about something else.
+    relations:
+      skos:related: [OE-CONCEPT-000205, OE-CONCEPT-000221]
+
+  - id: OE-CONCEPT-000207
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Cooperation
+    definitions:
+      en:
+        general: >
+          Coordinated behavior among individuals or groups that produces
+          a mutual benefit not achievable, or less efficiently achieved,
+          alone.
+    relations:
+      skos:related: [OE-CONCEPT-000208, OE-CONCEPT-000219, OE-CONCEPT-000220]
+
+  - id: OE-CONCEPT-000208
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Conflict
+    definitions:
+      en:
+        general: >
+          Competing interests, goals, or behaviors among individuals or
+          groups within a shared system or environment.
+    relations:
+      skos:related: [OE-CONCEPT-000207]
+
+  - id: OE-CONCEPT-000209
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Niche Construction
+    definitions:
+      en:
+        general: >
+          The process by which organisms or groups modify their
+          environment in ways that alter the selective pressures acting
+          on themselves or others.
+    relations:
+      skos:related: [OE-CONCEPT-000090, OE-CONCEPT-000210, OE-CONCEPT-000218]
+
+  - id: OE-CONCEPT-000210
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Development
+    definitions:
+      en:
+        biology: >
+          The process by which an organism grows and matures from an
+          initial state toward greater complexity or capability.
+        education: >
+          The progressive growth of a learner's knowledge, skills, or
+          competencies over time, often scaffolded by instruction.
+    relations:
+      skos:broader: [OE-CONCEPT-000090]
+      skos:related: [OE-CONCEPT-000211, OE-CONCEPT-000212, OE-CONCEPT-000215]
+
+  - id: OE-CONCEPT-000211
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Agency
+    definitions:
+      en:
+        general: >
+          The capacity of an individual or system to act intentionally
+          and make choices that influence outcomes, rather than
+          responding passively to external forces.
+    relations:
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212]
+
+  - id: OE-CONCEPT-000212
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Scaffolding
+    definitions:
+      en:
+        education: >
+          Temporary structured support provided to a learner, gradually
+          withdrawn as competence increases.
+    relations:
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000215, OE-CONCEPT-000216]
+
+  - id: OE-CONCEPT-000213
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Selection
+    aliases:
+      en: [Selective Process]
+    definitions:
+      en:
+        biology: Differential reproductive success among heritable variants.
+        culture: >
+          Differential persistence or spread of cultural variants —
+          ideas, practices, or artifacts — based on their fit to a
+          social or environmental context.
+        education: Choosing among available instructional pathways or resources.
+        ai: >
+          A search or optimization process that favors candidates
+          scoring higher against an objective function.
+    relations:
+      skos:broader: [OE-CONCEPT-000090]
+      skos:related: [OE-CONCEPT-000214, OE-CONCEPT-000209]
+    examples:
+      - A cultural practice being adopted more widely because it improves group cohesion.
+      - A genetic algorithm retaining higher-fitness candidate solutions across generations.
+    nonExamples:
+      - The random generation of a new variant (see Variation, Innovation).
+    citations:
+      - text: >
+          Mesoudi, A. (2011). Cultural Evolution: How Darwinian Theory
+          Can Explain Human Culture and Synthesize the Social Sciences.
+
+  - id: OE-CONCEPT-000214
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Variation
+    definitions:
+      en:
+        general: >
+          The existence of differences among individuals, variants, or
+          instances within a population or system, providing the raw
+          material on which selection can act.
+    relations:
+      skos:broader: [OE-CONCEPT-000090]
+      skos:related: [OE-CONCEPT-000213, OE-CONCEPT-000201]
+
+  - id: OE-CONCEPT-000215
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Learning
+    definitions:
+      en:
+        general: >
+          A relatively durable change in knowledge, behavior, or
+          capability resulting from experience, instruction, or
+          practice.
+    relations:
+      skos:related: [OE-CONCEPT-000212, OE-CONCEPT-000216, OE-CONCEPT-000210]
+
+  - id: OE-CONCEPT-000216
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Teaching
+    definitions:
+      en:
+        general: >
+          Intentional action by one individual or system to facilitate
+          another's learning or transmission of a skill, practice, or
+          piece of knowledge.
+    relations:
+      skos:related: [OE-CONCEPT-000215, OE-CONCEPT-000203, OE-CONCEPT-000212]
+
+  - id: OE-CONCEPT-000217
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Communication
+    definitions:
+      en:
+        general: >
+          The exchange of information between agents via signals,
+          language, or other shared codes.
+    relations:
+      skos:related: [OE-CONCEPT-000205, OE-CONCEPT-000203]
+
+  - id: OE-CONCEPT-000218
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Technology
+    definitions:
+      en:
+        general: >
+          Tools, techniques, or systems created to extend or augment
+          biological or cognitive capability.
+    relations:
+      skos:related: [OE-CONCEPT-000204, OE-CONCEPT-000209, OE-CONCEPT-000223]
+
+  - id: OE-CONCEPT-000219
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Culture
+    definitions:
+      en:
+        general: >
+          Socially transmitted knowledge, beliefs, practices, and
+          artifacts shared within a group, persisting beyond any single
+          individual.
+    relations:
+      skos:related: [OE-CONCEPT-000207, OE-CONCEPT-000220, OE-CONCEPT-000221]
+
+  - id: OE-CONCEPT-000220
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Institutions
+    definitions:
+      en:
+        general: >
+          Stable, socially recognized structures or rules that organize
+          and constrain collective behavior over time.
+    relations:
+      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000221]
+
+  - id: OE-CONCEPT-000221
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Norms
+    definitions:
+      en:
+        general: >
+          Shared expectations or rules of behavior within a group,
+          enforced through social sanction rather than formal law.
+    relations:
+      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000220]
+
+  - id: OE-CONCEPT-000222
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Knowledge
+    definitions:
+      en:
+        general: >
+          Justified, retained information that an individual, group, or
+          system can draw upon to act or reason.
+    relations:
+      skos:related: [OE-CONCEPT-000205, OE-CONCEPT-000223, OE-CONCEPT-000224]
+
+  - id: OE-CONCEPT-000223
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Collective Intelligence
+    definitions:
+      en:
+        general: >
+          Problem-solving or knowledge-generating capability that
+          emerges from the coordinated activity of many individuals or
+          agents, exceeding what any one could achieve alone.
+    relations:
+      skos:related: [OE-CONCEPT-000222, OE-CONCEPT-000224, OE-CONCEPT-000218]
+
+  - id: OE-CONCEPT-000224
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Distributed Cognition
+    definitions:
+      en:
+        general: >
+          Cognitive processing that is spread across individuals,
+          artifacts, and environment, rather than occurring solely
+          within a single mind.
+    relations:
+      skos:related: [OE-CONCEPT-000222, OE-CONCEPT-000223]
