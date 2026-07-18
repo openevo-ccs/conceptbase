@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenEvo ConceptBase Explorer</title>
+<meta name="description" content="Load, explore, compare, and annotate ConceptBase-aligned Learning Progression Model repositories.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%88%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- CDN dependencies: plain (non-module) scripts run before any type=module
+     script executes, so window.jsyaml / window.Chart / window.WordCloud are
+     guaranteed to exist by the time main.js's render functions call them. -->
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.js"></script>
+</head>
+<body>
+<div id="app-shell">
+  <header id="app-header" class="app-header"></header>
+
+  <main class="app-main">
+    <section id="load-panel" class="load-panel-section" aria-label="Load LPM repositories"></section>
+
+    <nav id="tab-nav" class="tab-nav" aria-label="Views"></nav>
+
+    <section id="tab-body" class="tab-body" aria-live="polite"></section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Static client-side app — reads directly from the GitHub API and raw.githubusercontent.com, no backend.
+      Annotations are stored only in your browser; use <strong>My Annotations → Export</strong> to keep or share your work.
+      Built against the <a href="https://github.com/openevo-ccs/conceptbase" target="_blank" rel="noopener">OpenEvo ConceptBase</a> specification.
+    </p>
+  </footer>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
