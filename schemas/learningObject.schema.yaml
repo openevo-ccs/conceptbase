@@ -1,0 +1,71 @@
+# ============================================================================
+# OpenEvo ConceptBase — Learning Object Schema
+# ============================================================================
+# Path: /schemas/learningObject.schema.yaml
+#
+# Validates instances of oe:LearningObject (see /ontologies/core_v1.yaml).
+# A Learning Object file is the content that a Strand/SubStrand's
+# `learningObjects[].repository` pointer resolves to, mirroring how a
+# Strand file is what an LPM's `strands[].repository` pointer resolves to
+# (lpm.schema.yaml). ConceptBase defines the type and its structural
+# properties only — actual lesson/activity/simulation content lives in
+# the external repository this file is authored in, never in ConceptBase
+# itself.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/learningObject.schema.json"
+
+meta:
+  id: OE-SCHEMA-LEARNINGOBJECT
+  version: 1.0.0
+  status: stable
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  ontologyClass: oe:LearningObject
+  phase: 1
+
+type: object
+
+properties:
+
+  id:
+    "$ref": "common.defs.yaml#/$defs/learningObjectId"
+
+  type:
+    const: "oe:LearningObject"
+
+  status:
+    "$ref": "common.defs.yaml#/$defs/status"
+
+  version:
+    "$ref": "common.defs.yaml#/$defs/semver"
+
+  labels:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+
+  description:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+
+  kind:
+    type: string
+    description: >
+      Informal content-type tag (e.g. "lesson", "activity", "simulation",
+      "assessment"). Plain string, not a controlled enum, since Phase 1
+      does not yet standardize a Learning Object taxonomy.
+
+  concepts:
+    type: array
+    description: >
+      Concepts this Learning Object addresses (oe:hasConcept). Uses the
+      same {id, emphasis} shape as a Strand's `concepts[]`, since both
+      are oe:hasConcept assertions from different domain classes.
+    items:
+      "$ref": "common.defs.yaml#/$defs/conceptEmphasisRef"
+
+  extensions:
+    "$ref": "common.defs.yaml#/$defs/extensions"
+
+required: [id, type, status, version, labels]
+additionalProperties: false

@@ -5,7 +5,7 @@
 [![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
 [![License: CC-BY 4.0](https://img.shields.io/badge/Content%20License-CC--BY%204.0-lightgrey.svg)](LICENSE)
 [![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
-[![Specification](https://img.shields.io/badge/Spec-v0.2.0-blue)](SPECIFICATION.md)
+[![Specification](https://img.shields.io/badge/Spec-v0.2.0-blue)](docs/oecb_specifications.md)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
 [![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
 [![Formalism](https://img.shields.io/badge/Formalism-YAML%20→%20JSON--LD%20%2F%20RDF-orange)](schemas/)
@@ -79,7 +79,7 @@ Those live in independently governed companion repositories (see [The Ecosystem]
 
 ## Current Status
 
-OECB is in **Phase 1** of a deliberately staged rollout (see [`SPECIFICATION.md`](SPECIFICATION.md) for the full rationale). Rather than stabilizing the entire vision at once, Phase 1 exists to validate the hardest, highest-leverage ideas — disambiguation and identifier stability — against one real pilot before expanding scope.
+OECB is in **Phase 1** of a deliberately staged rollout (see [`docs/oecb_specifications.md`](docs/oecb_specifications.md) for the full rationale). Rather than stabilizing the entire vision at once, Phase 1 exists to validate the hardest, highest-leverage ideas — disambiguation and identifier stability — against one real pilot before expanding scope.
 
 | Phase | Status | Contents |
 |---|---|---|
@@ -88,7 +88,7 @@ OECB is in **Phase 1** of a deliberately staged rollout (see [`SPECIFICATION.md`
 | **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
 | **Phase 4 — Ecosystem Tooling** | ⚪ Planned | Competency and evidence schemas; hosted SPARQL query endpoint; CI compatibility-checker action for dependent repositories |
 
-Reserved ontology classes for later phases (`Collection`, `Competency`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core.yaml`](ontologies/core.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change.
+Reserved ontology classes for later phases (`Collection`, `Competency`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core_v1.yaml`](ontologies/core_v1.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change.
 
 ---
 
@@ -97,22 +97,25 @@ Reserved ontology classes for later phases (`Collection`, `Competency`, `Assessm
 ```
 conceptbase/
 ├── README.md
-├── SPECIFICATION.md          # Full design specification (this is the source of truth)
 ├── GOVERNANCE.md             # RFC process, versioning policy, deprecation rules
 ├── CONTRIBUTING.md
 ├── LICENSE                   # CC-BY-4.0 (content)
 ├── LICENSE-CODE               # MIT (build tooling)
 │
+├── docs/
+│   └── oecb_specifications.md # Full design specification (this is the source of truth)
+│
 ├── ontologies/
-│   └── core.yaml             # Phase 1 TBox: Concept, LPM, Strand, SubStrand, LearningObject
+│   └── core_v1.yaml          # Phase 1 TBox: Concept, LPM, Strand, SubStrand, LearningObject
 │
 ├── schemas/
 │   ├── common.defs.yaml      # Shared $defs: IDs, semver, localized strings, citations
 │   ├── concept.schema.yaml
 │   ├── lpm.schema.yaml
-│   └── strand.schema.yaml
+│   ├── strand.schema.yaml
+│   └── learningObject.schema.yaml
 │
-├── controlled-vocabularies/
+├── vocabularies/
 │   ├── BIO-CORE-v1.0.0.yaml
 │   └── OE-INTERDISCIPLINARY-v1.0.0.yaml
 │
@@ -185,7 +188,7 @@ https://www.w3id.org/openevo/vocab/BIO-CORE     →  resolves to the vocabulary 
 ```bash
 # via the validation/ tooling (CI-ready)
 oecb-validate --schema schemas/concept.schema.yaml \
-              --file controlled-vocabularies/BIO-CORE-v1.0.0.yaml
+              --file vocabularies/BIO-CORE-v1.0.0.yaml
 ```
 
 See [`examples/`](examples/) for minimal worked examples of a Concept, an LPM manifest, and a Strand file.
@@ -273,5 +276,5 @@ https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 
 - 🧪 Research lab: [openevo.eva.mpg.de](http://openevo.eva.mpg.de)
 - 🌐 Persistent identifier namespace: [www.w3id.org/openevo/](https://www.w3id.org/openevo/)
-- 📄 Full specification: [`SPECIFICATION.md`](SPECIFICATION.md)
+- 📄 Full specification: [`docs/oecb_specifications.md`](docs/oecb_specifications.md)
 - 🗳️ Governance & versioning policy: [`GOVERNANCE.md`](GOVERNANCE.md)

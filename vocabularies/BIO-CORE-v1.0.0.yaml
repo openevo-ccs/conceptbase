@@ -1,7 +1,7 @@
 # ============================================================================
 # OpenEvo ConceptBase — Controlled Vocabulary: BIO-CORE
 # ============================================================================
-# Path: /controlled-vocabularies/BIO-CORE-v1.0.0.yaml
+# Path: /vocabularies/BIO-CORE-v1.0.0.yaml
 #
 # Discipline-specific vocabulary for biological evolution, structured
 # around the traditional gene/organism/population framing (see Spec v0.2,
@@ -156,6 +156,7 @@ concepts:
           same locus on a chromosome.
     relations:
       skos:broader: [OE-CONCEPT-000106]
+      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000111]
 
   - id: OE-CONCEPT-000108
     type: oe:Concept
@@ -186,7 +187,7 @@ concepts:
           fertile offspring, generally reproductively isolated from
           other such groups.
     relations:
-      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114]
+      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114, OE-CONCEPT-000108, OE-CONCEPT-000116]
 
   - id: OE-CONCEPT-000110
     type: oe:Concept
@@ -219,7 +220,7 @@ concepts:
           advantage.
     relations:
       skos:broader: [OE-CONCEPT-000101]
-      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000107]
+      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000107, OE-CONCEPT-000110]
 
   - id: OE-CONCEPT-000112
     type: oe:Concept

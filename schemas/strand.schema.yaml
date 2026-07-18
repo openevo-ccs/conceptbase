@@ -22,7 +22,7 @@
 
 meta:
   id: OE-SCHEMA-STRAND
-  version: 1.0.0
+  version: 1.1.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -76,15 +76,7 @@ properties:
       cross-strand relations (reinforcing) — the operational basis for
       horizontal coherence.
     items:
-      type: object
-      properties:
-        id:
-          "$ref": "common.defs.yaml#/$defs/conceptId"
-        emphasis:
-          type: string
-          enum: [primary, reinforcing]
-      required: [id, emphasis]
-      additionalProperties: false
+      "$ref": "common.defs.yaml#/$defs/conceptEmphasisRef"
 
   performanceIndicators:
     type: array
@@ -104,8 +96,13 @@ properties:
     type: object
     description: >
       Strand-to-strand relations from the ontology (recommendedSequence,
-      alternativeSequence, parallel, prerequisiteOf). Targets are sibling
-      or cross-strand IDs, not child subStrands (use subStrands[] for that).
+      alternativeSequence, parallel, prerequisiteOf, foundationalTo).
+      Targets are sibling or cross-strand IDs, not child subStrands (use
+      subStrands[] for that). A strand pair MUST NOT be linked by both
+      prerequisiteOf and parallel/foundationalTo in conflicting
+      directions — prerequisiteOf is a hard gate, parallel is symmetric
+      concurrent teaching, and foundationalTo is the weaker "introduce
+      first, but keep reinforcing alongside" spiral-curriculum relation.
     properties:
       recommendedSequence:
         type: array
@@ -119,6 +116,9 @@ properties:
       prerequisiteOf:
         type: array
         items: { "$ref": "common.defs.yaml#/$defs/strandId" }
+      foundationalTo:
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/strandId" }
     additionalProperties: false
 
   subStrands:
@@ -128,6 +128,31 @@ properties:
     description: >
       Nested child Strand/SubStrand entries (oe:hasSubStrand). Recommended
       maximum depth: 2 levels total, enforced by validation tooling.
+
+  learningObjects:
+    type: array
+    description: >
+      Learning Objects this Strand/SubStrand references (oe:hasLearningObject).
+      Loosely coupled by design, mirroring lpm.schema.yaml's `strands[]`
+      pattern: only an ID and an external repository pointer are required
+      here. The referenced file owns the full oe:LearningObject structure,
+      validated there against learningObject.schema.yaml.
+    items:
+      type: object
+      properties:
+        id:
+          "$ref": "common.defs.yaml#/$defs/learningObjectId"
+        repository:
+          type: string
+          format: uri-reference
+          description: >
+            URI, or path within a monorepo, of the external repository
+            where this Learning Object's full definition lives.
+        required:
+          type: boolean
+          default: true
+      required: [id]
+      additionalProperties: false
 
   extensions:
     "$ref": "common.defs.yaml#/$defs/extensions"

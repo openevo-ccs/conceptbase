@@ -1,7 +1,7 @@
 # ============================================================================
 # OpenEvo ConceptBase — Controlled Vocabulary: OE-INTERDISCIPLINARY
 # ============================================================================
-# Path: /controlled-vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml
+# Path: /vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml
 #
 # Interdisciplinary vocabulary spanning biological and cultural evolution,
 # development, cognition, and technology (see Spec v0.2, "OpenEvo
@@ -66,6 +66,7 @@ concepts:
         - OE-CONCEPT-000203  # Transmission
         - OE-CONCEPT-000204  # Innovation
         - OE-CONCEPT-000210  # Development
+      skos:related: [OE-CONCEPT-000209]
 
   - id: OE-CONCEPT-000201
     type: oe:Concept
@@ -139,7 +140,7 @@ concepts:
           whether encoded genetically, linguistically, symbolically, or
           computationally.
     relations:
-      skos:related: [OE-CONCEPT-000206, OE-CONCEPT-000217, OE-CONCEPT-000221]
+      skos:related: [OE-CONCEPT-000206, OE-CONCEPT-000217, OE-CONCEPT-000221, OE-CONCEPT-000222]
 
   - id: OE-CONCEPT-000206
     type: oe:Concept
@@ -154,7 +155,7 @@ concepts:
           A structure — mental, symbolic, or computational — that
           stands for and conveys meaning about something else.
     relations:
-      skos:related: [OE-CONCEPT-000205, OE-CONCEPT-000221]
+      skos:related: [OE-CONCEPT-000205, OE-CONCEPT-000221, OE-CONCEPT-000204]
 
   - id: OE-CONCEPT-000207
     type: oe:Concept
@@ -201,7 +202,7 @@ concepts:
           environment in ways that alter the selective pressures acting
           on themselves or others.
     relations:
-      skos:related: [OE-CONCEPT-000090, OE-CONCEPT-000210, OE-CONCEPT-000218]
+      skos:related: [OE-CONCEPT-000090, OE-CONCEPT-000210, OE-CONCEPT-000218, OE-CONCEPT-000213]
 
   - id: OE-CONCEPT-000210
     type: oe:Concept
@@ -220,7 +221,7 @@ concepts:
           competencies over time, often scaffolded by instruction.
     relations:
       skos:broader: [OE-CONCEPT-000090]
-      skos:related: [OE-CONCEPT-000211, OE-CONCEPT-000212, OE-CONCEPT-000215]
+      skos:related: [OE-CONCEPT-000211, OE-CONCEPT-000212, OE-CONCEPT-000215, OE-CONCEPT-000209]
 
   - id: OE-CONCEPT-000211
     type: oe:Concept
@@ -236,7 +237,7 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212]
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213]
 
   - id: OE-CONCEPT-000212
     type: oe:Concept
@@ -251,7 +252,7 @@ concepts:
           Temporary structured support provided to a learner, gradually
           withdrawn as competence increases.
     relations:
-      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000215, OE-CONCEPT-000216]
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000215, OE-CONCEPT-000216, OE-CONCEPT-000211]
 
   - id: OE-CONCEPT-000213
     type: oe:Concept
@@ -275,7 +276,7 @@ concepts:
           scoring higher against an objective function.
     relations:
       skos:broader: [OE-CONCEPT-000090]
-      skos:related: [OE-CONCEPT-000214, OE-CONCEPT-000209]
+      skos:related: [OE-CONCEPT-000214, OE-CONCEPT-000209, OE-CONCEPT-000211]
     examples:
       - A cultural practice being adopted more widely because it improves group cohesion.
       - A genetic algorithm retaining higher-fitness candidate solutions across generations.
@@ -394,7 +395,7 @@ concepts:
           Stable, socially recognized structures or rules that organize
           and constrain collective behavior over time.
     relations:
-      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000221]
+      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000221, OE-CONCEPT-000207]
 
   - id: OE-CONCEPT-000221
     type: oe:Concept
@@ -409,7 +410,7 @@ concepts:
           Shared expectations or rules of behavior within a group,
           enforced through social sanction rather than formal law.
     relations:
-      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000220]
+      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000220, OE-CONCEPT-000205, OE-CONCEPT-000206, OE-CONCEPT-000204]
 
   - id: OE-CONCEPT-000222
     type: oe:Concept

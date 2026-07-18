@@ -28,7 +28,7 @@ This document supersedes all prior draft specifications (v0.1, v0.2-draft) circu
 | This specification | Normative — defines what OECB *is* |
 | `GOVERNANCE.md` | Normative — defines the RFC/review *process* by which this specification evolves |
 | `CONTRIBUTING.md` | Informative — practical guide for contributors |
-| `ontologies/core.yaml`, `schemas/*.yaml` | Normative — machine-readable instantiations of §6 and §7 of this specification |
+| `ontologies/core_v1.yaml`, `schemas/*.yaml` | Normative — machine-readable instantiations of §6 and §7 of this specification |
 | `README.md` | Informative — orientation and quickstart, not authoritative on any technical detail |
 
 ---
@@ -153,7 +153,7 @@ All source content — ontology, schemas, vocabularies, alignments — **MUST** 
 
 A CI build pipeline (`/build/`) **MUST** compile authoring-layer YAML into:
 
-- **JSON-LD / RDF**, using the `@context` mappings declared in `ontologies/core.yaml`, conformant to the namespace in §4.
+- **JSON-LD / RDF**, using the `@context` mappings declared in `ontologies/core_v1.yaml`, conformant to the namespace in §4.
 - A **SHACL or JSON Schema validation pass**, rejecting non-conformant instances before compilation proceeds.
 
 Compiled outputs are build artifacts. They **MUST NOT** be hand-edited; any correction **MUST** originate in the authoring layer and be recompiled.
@@ -171,7 +171,7 @@ This dual surface exists because flat lookup and graph traversal have different 
 
 ## 6. Ontology Specification
 
-The formal ontology is defined in `ontologies/core.yaml` and summarized normatively here. It is expressed in RDF/RDFS/OWL primitives with a JSON-LD `@context` binding the `oe:` prefix to `https://www.w3id.org/openevo/ontology#`.
+The formal ontology is defined in `ontologies/core_v1.yaml` and summarized normatively here. It is expressed in RDF/RDFS/OWL primitives with a JSON-LD `@context` binding the `oe:` prefix to `https://www.w3id.org/openevo/ontology#`.
 
 ### 6.1 Phase 1 Classes
 
@@ -210,6 +210,7 @@ Promoting a reserved class into `classes` is a **MINOR** version bump to the ont
 | `oe:hasConcept` | `{oe:Strand, oe:LearningObject}` → `oe:Concept` | Primary link between curriculum structure and vocabulary. |
 | `oe:required` | `oe:SubStrand` → `xsd:boolean` | Obligate vs. optional/elective/regional-extension status. |
 | `oe:recommendedSequence`, `oe:alternativeSequence`, `oe:parallel`, `oe:prerequisiteOf` | `oe:Strand` → `oe:Strand` | Pathway declarations supporting multiple valid curriculum sequences. |
+| `oe:foundationalTo` | `oe:Strand` → `oe:Strand` | Spiral-curriculum relation: source is introduced before target but is expected to be revisited/reinforced alongside it, not gated behind it — weaker than `oe:prerequisiteOf`, and unlike `oe:parallel`, not symmetric. A strand pair **MUST NOT** assert `oe:prerequisiteOf` and `oe:parallel`/`oe:foundationalTo` in conflicting directions. |
 | `oe:definedInVocabulary` | `oe:Concept` → `xsd:string` | References the Concept's single home vocabulary (§8). |
 
 ### 6.4 SKOS Relation Reuse
@@ -247,7 +248,8 @@ Any new schema introduced in a future phase **MUST** reuse these primitives rath
 |---|---|---|
 | `concept.schema.yaml` | `oe:Concept` instances | Requires `definedInVocabulary` (exactly one home vocabulary); `definitions` uses `localizedDisciplinaryDefinitions` to support per-discipline disambiguation (§8.4); SKOS relation targets validated for ID-pattern correctness only — referential integrity (target existence) is a build-pipeline concern, not a JSON Schema concern. |
 | `lpm.schema.yaml` | `oe:LPM` instances | Embeds the `conceptbase` manifest (§10); `strands[]` entries are loosely coupled (`id` + external `repository` URI only) — full Strand structure is intentionally out of scope for this schema. |
-| `strand.schema.yaml` | `oe:Strand` / `oe:SubStrand` instances | `concepts[].emphasis` (`primary` \| `reinforcing`) is **REQUIRED** on every concept reference, providing the machine-checkable basis for horizontal coherence auditing (§13.3); `subStrands[]` is self-referential (`$ref: "#"`) enabling recursive nesting per §6.1/§6.5. |
+| `strand.schema.yaml` | `oe:Strand` / `oe:SubStrand` instances | `concepts[].emphasis` (`primary` \| `reinforcing`) is **REQUIRED** on every concept reference, providing the machine-checkable basis for horizontal coherence auditing (§13.3); `subStrands[]` is self-referential (`$ref: "#"`) enabling recursive nesting per §6.1/§6.5; `learningObjects[]` entries are loosely coupled (`id` + external `repository`), mirroring `lpm.schema.yaml`'s `strands[]` pattern. |
+| `learningObject.schema.yaml` | `oe:LearningObject` instances | `concepts[]` reuses the same `{id, emphasis}` shape as `strand.schema.yaml` (`common.defs.yaml#/$defs/conceptEmphasisRef`); content itself is out of scope (§1.2) — this schema validates structure only. |
 
 ### 7.4 Extension Mechanism
 
@@ -296,8 +298,8 @@ Although alignment records are a Phase 2 deliverable, their structure **MUST** c
 
 ```yaml
 id: OE-ALIGN-{nnnnnn}
-subject: {vocabulary}:{ConceptLabel}
-object: {vocabulary}:{ConceptLabel}
+subject: {vocabulary}:{conceptId}
+object: {vocabulary}:{conceptId}
 matchType: skos:closeMatch | skos:exactMatch | skos:broadMatch | skos:narrowMatch | skos:relatedMatch
 assertedBy: [{contributor identifiers}]
 date: {ISO 8601 date}
@@ -305,6 +307,8 @@ status: proposed | accepted | contested
 rationale: >
   {free text justification}
 ```
+
+`subject` and `object` **MUST** reference the permanent `conceptId` (e.g. `BIO-CORE-v1.0.0:OE-CONCEPT-000102`), never a label. This matches every other reference mechanism in OECB — `skos:broader`/`skos:narrower`/`skos:related` and `oe:hasConcept` all target `OE-CONCEPT-{id}` — because labels **MAY** change across versions while identifiers **MUST NOT** (§4.4). An alignment keyed on a label would silently desynchronize from its target on a legitimate label edit, with no schema-level way to detect the break.
 
 ### 9.2 Normative Requirements
 
@@ -453,17 +457,20 @@ Promotion of a phase's deliverables to `stable` status **MUST** follow ordinary 
 ```
 conceptbase/
 ├── README.md
-├── SPECIFICATION.md          # This document
 ├── GOVERNANCE.md
 ├── CONTRIBUTING.md
 ├── LICENSE / LICENSE-CODE
-├── ontologies/core.yaml
+├── docs/
+│   └── oecb_specifications.md   # This document
+├── ontologies/core_v1.yaml
 ├── schemas/
 │   ├── common.defs.yaml
 │   ├── concept.schema.yaml
 │   ├── lpm.schema.yaml
-│   └── strand.schema.yaml
-├── controlled-vocabularies/
+│   ├── strand.schema.yaml
+│   ├── learningObject.schema.yaml
+│   └── alignment.schema.yaml    # Phase 2
+├── vocabularies/
 │   ├── BIO-CORE-v1.0.0.yaml
 │   └── OE-INTERDISCIPLINARY-v1.0.0.yaml
 ├── alignments/            # Phase 2

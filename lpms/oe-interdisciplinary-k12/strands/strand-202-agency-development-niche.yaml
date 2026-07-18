@@ -16,7 +16,6 @@ description:
 typicalGradeBand: "K-12 (spans all bands via subStrands)"
 associatedDomains: ["Biology", "Social Studies"]
 relations:
-  parallel: ["OE-STRAND-000201"]
   prerequisiteOf: ["OE-STRAND-000203"]
 
 subStrands:

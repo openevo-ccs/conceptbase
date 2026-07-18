@@ -1,0 +1,79 @@
+# ============================================================================
+# OpenEvo ConceptBase — Alignment Schema (Phase 2)
+# ============================================================================
+# Path: /schemas/alignment.schema.yaml
+#
+# Validates instances of a Phase 2 cross-vocabulary Alignment record (see
+# Spec §9). Alignment records are reified independently under /alignments/
+# — one file per record, each separately versioned and carrying its own
+# provenance — rather than asserted as direct properties on either Concept
+# instance (Spec §6.4, §9.2).
+#
+# subject/object MUST reference the permanent conceptId, never a label
+# (Spec §9.1, §4.4): `{vocabulary}:{conceptId}`, e.g.
+# "BIO-CORE-v1.0.0:OE-CONCEPT-000102".
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/alignment.schema.json"
+
+meta:
+  id: OE-SCHEMA-ALIGNMENT
+  version: 1.0.0
+  status: proposed
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  ontologyClass: oe:Alignment
+  phase: 2
+
+type: object
+
+properties:
+
+  id:
+    "$ref": "common.defs.yaml#/$defs/alignmentId"
+
+  subject:
+    "$ref": "common.defs.yaml#/$defs/alignmentConceptRef"
+
+  object:
+    "$ref": "common.defs.yaml#/$defs/alignmentConceptRef"
+
+  matchType:
+    type: string
+    enum:
+      - skos:closeMatch
+      - skos:exactMatch
+      - skos:broadMatch
+      - skos:narrowMatch
+      - skos:relatedMatch
+
+  assertedBy:
+    type: array
+    items:
+      type: string
+    minItems: 1
+    description: Contributor identifiers asserting this alignment.
+
+  date:
+    type: string
+    format: date
+    description: ISO 8601 date the alignment was asserted.
+
+  status:
+    type: string
+    enum: [proposed, accepted, contested]
+    description: >
+      Alignment-specific lifecycle (distinct from common.defs.yaml's
+      entity `status`, since a `contested` alignment MUST remain
+      resolvable and visible in query results, per Spec §9.2, rather
+      than following the standard proposed->accepted->stable->deprecated
+      progression).
+
+  rationale:
+    type: string
+    description: Free-text justification for the asserted match.
+
+required: [id, subject, object, matchType, assertedBy, date, status, rationale]
+additionalProperties: false

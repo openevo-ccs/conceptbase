@@ -1,7 +1,7 @@
 # ============================================================================
 # OpenEvo ConceptBase — Core Ontology
 # ============================================================================
-# Path:      /ontologies/core.yaml
+# Path:      /ontologies/core_v1.yaml
 # Authoring format: YAML (compiles to JSON-LD/RDF via /build/ pipeline;
 #                    do not hand-edit generated /registry/*.jsonld outputs)
 #
@@ -20,7 +20,7 @@
 # ============================================================================
 
 id: OE-ONTOLOGY
-version: 1.0.0
+version: 1.1.0
 status: stable
 authors:
   - name: OpenEvo ConceptBase Maintainers
@@ -267,6 +267,22 @@ properties:
     range: oe:Strand
     status: stable
     definition: Declares that one Strand/SubStrand must precede another.
+
+  oe:foundationalTo:
+    label: foundational to
+    domain: oe:Strand
+    range: oe:Strand
+    status: stable
+    definition: >
+      Declares that the source Strand/SubStrand should be introduced
+      before the target, but — unlike oe:prerequisiteOf — is itself
+      expected to be revisited and reinforced alongside the target
+      rather than completed and gated behind before the target begins.
+      Models a spiral-curriculum relationship (e.g. a strand whose
+      concepts recur as `emphasis: reinforcing` throughout a later
+      strand), distinct from both a hard prerequisite gate
+      (oe:prerequisiteOf) and fully concurrent, order-independent
+      teaching (oe:parallel, which is symmetric; this relation is not).
 
   oe:definedInVocabulary:
     label: defined in vocabulary

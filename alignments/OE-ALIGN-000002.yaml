@@ -1,0 +1,39 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000002.yaml
+# ============================================================================
+# Phase 2 (forward-implemented ahead of schedule — see OE-ALIGN-000001 for
+# rationale on why these two records were drafted now rather than deferred).
+# Companion record to OE-ALIGN-000001: the second load-bearing pair for
+# comparing BIO-CORE and OE-INTERDISCIPLINARY on the DCR-vs-ICR pluralism
+# question, this time for the transmission mechanism rather than the
+# selection mechanism.
+# ============================================================================
+
+id: OE-ALIGN-000002
+subject: BIO-CORE-v1.0.0:OE-CONCEPT-000112
+object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000201
+matchType: skos:closeMatch
+assertedBy:
+  - OpenEvo Computational Curriculum Studies Working Group
+date: "2026-07-18"
+status: contested
+rationale: >
+  BIO-CORE's Inheritance (OE-CONCEPT-000112) is scoped narrowly and
+  exclusively to "transmission of genetic information from parent to
+  offspring" — a single-system, biology-only definition consistent with
+  BIO-CORE's decentralized, gene-centered framing throughout. OE-
+  INTERDISCIPLINARY's Inheritance (OE-CONCEPT-000201) treats the same
+  biological case as one of three co-equal disciplinary instances
+  (biology, culture, technology) of a single general process, and is
+  declared skos:broader of nothing else in its own vocabulary while
+  itself being skos:narrower of Evolutionary Process (OE-CONCEPT-000090).
+  The biology-discipline sense of OE-INTERDISCIPLINARY's Inheritance is
+  arguably extensionally identical to BIO-CORE's Inheritance, which would
+  favor skos:exactMatch — but this record is deliberately conservative
+  (skos:closeMatch, status: contested) because BIO-CORE's Inheritance
+  carries no explicit disciplinary scoping (it has no sibling "culture" or
+  "technology" definition to be co-equal with), so whether the two
+  concepts are truly interchangeable or merely overlapping is left open
+  pending Phase 2 domain-editor review, consistent with the pluralism
+  requirement (Spec §8.6) that this disagreement be representable as data
+  rather than resolved by fiat here.

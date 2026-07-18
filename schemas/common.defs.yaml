@@ -21,7 +21,7 @@
 
 meta:
   id: OE-SCHEMA-COMMON
-  version: 1.0.0
+  version: 1.1.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -52,6 +52,31 @@ meta:
     description: >
       Permanent identifier for an oe:Strand/oe:SubStrand instance.
       Resolves under https://www.w3id.org/openevo/strand/{id}.
+
+  learningObjectId:
+    type: string
+    pattern: "^OE-LO-[0-9]{6}$"
+    description: >
+      Permanent identifier for an oe:LearningObject instance. Resolves
+      under https://www.w3id.org/openevo/lo/{id}.
+
+  alignmentId:
+    type: string
+    pattern: "^OE-ALIGN-[0-9]{6}$"
+    description: >
+      Permanent identifier for a Phase 2 cross-vocabulary Alignment
+      record. Resolves under https://www.w3id.org/openevo/align/{id}.
+
+  alignmentConceptRef:
+    type: string
+    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-CONCEPT-[0-9]{6}$"
+    description: >
+      A `{vocabulary}:{conceptId}` reference used by Alignment records
+      (subject/object), e.g. "BIO-CORE-v1.0.0:OE-CONCEPT-000102".
+      Deliberately keyed on the permanent conceptId, never the mutable
+      label, so an alignment record cannot silently desynchronize from
+      its target on a legitimate label edit (see conceptId, §4.4 of the
+      specification).
 
   vocabRef:
     type: string
@@ -119,6 +144,24 @@ meta:
     minProperties: 1
 
   # --- Common structured fields -----------------------------------------
+
+  conceptEmphasisRef:
+    type: object
+    description: >
+      A reference from a Strand or LearningObject to a Concept it
+      addresses (oe:hasConcept), tagged with `emphasis` so horizontal
+      coherence auditing (§13.3) can distinguish concepts a Strand is
+      structurally organized around (primary) from concepts pulled in
+      to reinforce cross-strand relations (reinforcing). Shared by
+      strand.schema.yaml and learningObject.schema.yaml.
+    properties:
+      id:
+        "$ref": "#/$defs/conceptId"
+      emphasis:
+        type: string
+        enum: [primary, reinforcing]
+    required: [id, emphasis]
+    additionalProperties: false
 
   citation:
     type: object

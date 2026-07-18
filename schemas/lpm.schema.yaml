@@ -19,7 +19,7 @@
 
 meta:
   id: OE-SCHEMA-LPM
-  version: 1.0.0
+  version: 1.0.1
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -82,9 +82,9 @@ properties:
           "$ref": "common.defs.yaml#/$defs/strandId"
         repository:
           type: string
-          format: uri
+          format: uri-reference
           description: >
-            URI of the external repository (or path within a monorepo)
+            URI, or path within a monorepo, of the external repository
             where this Strand's full definition lives.
         required:
           type: boolean
