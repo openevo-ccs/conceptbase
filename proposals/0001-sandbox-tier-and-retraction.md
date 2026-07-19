@@ -1,9 +1,10 @@
 # RFC-0001: Sandbox tier, two-speed review, and a `retracted` status
 
 **Type:** `specification-amendment`
-**Status:** `proposed`
+**Status:** `accepted`
 **Author(s):** OpenEvo ConceptBase maintainers
 **Date:** 2026-07-19
+**Accepted:** 2026-07-19, by explicit maintainer-team consensus (spec §11.6). Implemented the same day across `schemas/common.defs.yaml` (v1.2.0), `ontologies/core_v1.yaml` (v1.2.0), `docs/oecb_specifications.md` (v0.3.0, §3/§4.5/§10.3/§11.2-11.4), and `GOVERNANCE.md`.
 
 ## Motivation
 
@@ -66,6 +67,6 @@ Not applicable — this RFC does not introduce a new vocabulary or LPM.
 
 ## Review
 
-- [ ] Domain editor approval — not required for this RFC's initial merge under its own proposed two-speed rule, but since that rule doesn't exist yet at time of filing, this RFC follows the *current* §11.2 process (domain editor + maintainer) until adopted.
-- [ ] Maintainer approval
-- [ ] Explicit maintainer consensus recorded here per spec §11.6, since this is a `specification-amendment` touching §3 and §11
+- [x] Domain editor approval — not required for this RFC's initial merge under its own proposed two-speed rule, but since that rule doesn't exist yet at time of filing, this RFC followed the *current* §11.2 process (domain editor + maintainer) until adopted.
+- [x] Maintainer approval
+- [x] Explicit maintainer consensus recorded here per spec §11.6, since this is a `specification-amendment` touching §3 and §11 — approved by the maintainer team, 2026-07-19.

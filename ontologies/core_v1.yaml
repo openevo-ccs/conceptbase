@@ -20,7 +20,7 @@
 # ============================================================================
 
 id: OE-ONTOLOGY
-version: 1.1.0
+version: 1.2.0
 status: stable
 authors:
   - name: OpenEvo ConceptBase Maintainers
@@ -170,8 +170,15 @@ entityProperties:
     status: stable
     definition: >
       Lifecycle state of this entity: proposed | accepted | stable |
-      deprecated | superseded. See GOVERNANCE.md for the full lifecycle
-      and deprecation policy (deprecated entities are never deleted).
+      deprecated | superseded | retracted. `retracted` (RFC-0001) is a
+      parallel terminal state to `deprecated`/`superseded`, not sequential
+      after it — it means the entity was accepted in error or is no
+      longer endorsed, with no implied replacement. See GOVERNANCE.md for
+      the full lifecycle and deprecation policy (deprecated and retracted
+      entities are never deleted). Sandbox-tier entries (RFC-0001,
+      `OE-SANDBOX-*` identifiers, spec §4.5) use a separate, smaller
+      status vocabulary and are exempt from this lifecycle by
+      construction.
 
   oe:version:
     label: version

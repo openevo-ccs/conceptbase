@@ -21,7 +21,7 @@
 
 meta:
   id: OE-SCHEMA-COMMON
-  version: 1.1.0
+  version: 1.2.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -67,6 +67,49 @@ meta:
       Permanent identifier for a Phase 2 cross-vocabulary Alignment
       record. Resolves under https://www.w3id.org/openevo/align/{id}.
 
+  sandboxConceptId:
+    type: string
+    pattern: "^OE-SANDBOX-CONCEPT-[0-9]{6}$"
+    description: >
+      Provisional identifier for a sandbox-tier concept entry (RFC-0001,
+      spec §4.5). Structurally distinct from conceptId so the two can
+      never be mistaken for each other. Not subject to the never-delete
+      guarantee in GOVERNANCE.md's Deprecation Policy — exempt by
+      construction, not by exception, since sandbox entries carry
+      sandboxStatus, never the permanent-tier status enum below.
+      Resolves under https://www.w3id.org/openevo/sandbox/concept/{id}.
+
+  sandboxStatus:
+    type: string
+    enum: [active, archived, promoted]
+    description: >
+      Lifecycle for sandbox-tier entries only (RFC-0001) — a wholly
+      separate, smaller vocabulary from the permanent-tier `status` enum
+      below, and never intersects with it. `archived` is set
+      automatically once `sandboxMeta.expiresOn` passes without
+      promotion; `promoted` means a permanent-tier entity now exists via
+      the ordinary RFC process, at which point this sandbox entry itself
+      becomes historical.
+
+  sandboxMeta:
+    type: object
+    description: >
+      Provenance/TTL metadata required on every sandbox-tier entry
+      (RFC-0001). `expiresOn` is set 12 months from `created` at
+      authoring time (IETF Internet-Draft convention); entries not
+      promoted before then are auto-archived.
+    properties:
+      created:
+        type: string
+        format: date
+      expiresOn:
+        type: string
+        format: date
+      status:
+        "$ref": "#/$defs/sandboxStatus"
+    required: [created, expiresOn, status]
+    additionalProperties: false
+
   alignmentConceptRef:
     type: string
     pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-CONCEPT-[0-9]{6}$"
@@ -93,8 +136,21 @@ meta:
 
   status:
     type: string
-    enum: [proposed, accepted, stable, deprecated, superseded]
-    description: Lifecycle status per GOVERNANCE.md.
+    enum: [proposed, accepted, stable, deprecated, superseded, retracted]
+    description: >
+      Lifecycle status per GOVERNANCE.md. `retracted` (RFC-0001) is a
+      parallel terminal state to `deprecated`/`superseded`, reachable
+      directly from `accepted`/`stable` — it is not sequential after
+      `deprecated`. It means "accepted in error, or no longer endorsed by
+      the maintainers," with no implied replacement, unlike `deprecated`'s
+      implicit supersession.
+
+  retractionNote:
+    type: string
+    description: >
+      Optional free-text explanation attached to an entity carrying
+      `status: retracted` (RFC-0001). Additive field — existing entries
+      are not required to be migrated.
 
   languageTag:
     type: string

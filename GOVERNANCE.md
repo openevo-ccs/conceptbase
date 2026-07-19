@@ -16,19 +16,24 @@ This document defines the RFC/review process by which the ConceptBase evolves, t
 
 ## RFC Process
 
-Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the RFC template (motivation, proposed IRI under `www.w3id.org/openevo/`, relations, justification for why no existing standard covers the need — see spec §3 item 4 and §12). Every RFC **MUST** receive at least one domain editor approval and one maintainer approval before merge.
+Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the RFC template (motivation, proposed IRI under `www.w3id.org/openevo/`, relations, justification for why no existing standard covers the need — see spec §3 item 4 and §12). Review ceremony is split by status transition (RFC-0001, spec §11.2):
+
+- Merging a new `OE-SANDBOX-CONCEPT-######` entry, or a `proposed`-status permanent-tier entry, needs only one maintainer approval (or a 5-business-day async no-objection window) — no domain editor sign-off required.
+- The `proposed → accepted` transition, and sandbox → permanent promotion, still require at least one domain editor approval and one maintainer approval before merge — that's the point where the permanence guarantee actually begins to apply.
 
 Changes to specification §3 (Design Principles) or §11 (Governance and Versioning) are **MAJOR** changes to the specification itself and require explicit maintainer consensus via an RFC tagged `type: specification-amendment` (spec §11.6).
 
 ## Lifecycle Status
 
-Every entity carries a `status` field. Status transitions only move forward:
+Every entity carries a `status` field. Status transitions along the primary chain only move forward:
 
 ```
 proposed → accepted → stable → deprecated → superseded
+                                    ↘
+                                     retracted
 ```
 
-A status **MUST NOT** revert (e.g. `deprecated` back to `stable`) without a new RFC.
+A status **MUST NOT** revert (e.g. `deprecated` back to `stable`) without a new RFC. `retracted` (RFC-0001) is a parallel terminal state reachable directly from `accepted` or `stable` — not sequential after `deprecated` — and does not imply supersession.
 
 ## Deprecation Policy
 
@@ -37,6 +42,12 @@ No entity is ever removed once `status: accepted` or higher. A deprecated entity
 - Remain resolvable at its existing identifier indefinitely.
 - Carry a `supersededBy` pointer to its replacement, where one exists.
 - Continue to appear in query results, so dependent repositories are never silently broken.
+
+A `retracted` entity (RFC-0001) follows the same rules but **MUST NOT** carry a `supersededBy` pointer — it means "accepted in error, or no longer endorsed," not "superseded." It **MAY** carry a `retractionNote`.
+
+## Sandbox/Provisional Tier
+
+Per spec §4.5 (RFC-0001), controlled-vocabulary concept entries may also be authored in a parallel, structurally distinct `OE-SANDBOX-CONCEPT-######` space, exempt from the Deprecation Policy above by construction — sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`), never the `status` enum above. Every sandbox entry is stamped with a 12-month `expiresOn` at creation and auto-archived if not promoted through the ordinary RFC process before then. Spec §4.5 is authoritative; this section exists only to surface the rule here for day-to-day operability.
 
 ## Independent Versioning
 
@@ -90,7 +101,7 @@ Not yet allocated by block, since Phase 1 has zero Learning Object instances and
 
 ## Compatibility Checking
 
-Per specification §10.3, a CI compatibility-checker (Phase 4 deliverable) **MUST**, on every push to a dependent repository, verify pinned-entity resolution, flag deprecated-without-acknowledgement references, and flag newer-MAJOR-available pins. Until that tooling exists, dependent repositories are responsible for this verification manually.
+Per specification §10.3, a CI compatibility-checker (Phase 4 deliverable) **MUST**, on every push to a dependent repository, verify pinned-entity resolution, flag deprecated-without-acknowledgement references, flag newer-MAJOR-available pins, and (RFC-0001) loudly flag any reference to an `OE-SANDBOX-*` identifier. Until that tooling exists, dependent repositories are responsible for this verification manually.
 
 ## Tooling
 

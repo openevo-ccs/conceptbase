@@ -1,7 +1,7 @@
 # OpenEvo ConceptBase — Formal Infrastructure Specification
 
 **Document status:** Normative
-**Specification version:** 0.2.0
+**Specification version:** 0.3.0
 **Namespace:** `https://www.w3id.org/openevo/`
 **Repository:** `github.com/openevo-ccs/conceptbase`
 **License:** CC-BY-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
@@ -95,7 +95,7 @@ OECB is governed by the following non-negotiable design commitments. Any propose
 2. **FAIR by construction.** Every entity **MUST** be Findable (persistent identifier), Accessible (open license, resolvable URI), Interoperable (typed relations via existing standards), and Reusable (versioned, provenance-tracked) from the moment it is accepted, not retrofitted later.
 3. **Git-native authoring, compiled distribution.** All entities **MUST** be authored as human-reviewable YAML through pull requests. Compiled RDF/JSON-LD, SPARQL endpoints, and flat JSON indices are build artifacts and **MUST NOT** be hand-edited (§5).
 4. **Standards reuse over reinvention.** Any RFC proposing a novel schema structure **MUST** document why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already satisfies the need (§12).
-5. **Never delete, always deprecate.** No entity is ever removed once `status: accepted` or higher. Deprecated entities remain resolvable indefinitely with a `supersededBy` pointer (§11.4).
+5. **Never delete, always deprecate.** No entity is ever removed once `status: accepted` or higher. Deprecated entities remain resolvable indefinitely with a `supersededBy` pointer (§11.4). This guarantee applies to the permanent identifier space (`OE-*`); the parallel sandbox/provisional tier (`OE-SANDBOX-*`) is explicitly exempt by construction, not by exception carved into this rule — see §4.5.
 6. **Independent versioning per artifact.** The ontology, each vocabulary, and each schema version independently using semver; there is no single monolithic "ConceptBase version" (§11.5).
 7. **Theoretical pluralism as a first-class capability.** Where a field contains genuine, unresolved theoretical disagreement, OECB **MUST** support multiple internally consistent vocabularies representing competing positions rather than adjudicating between them in the infrastructure layer (§8.6).
 
@@ -138,6 +138,16 @@ All entity identifiers **MUST** conform to the following patterns, enforced by `
 ### 4.4 Identifier Permanence
 
 An identifier, once assigned to an entity with `status` at or above `accepted`, **MUST NOT** be reassigned, reused, or removed for the lifetime of the namespace. Labels, definitions, and relations attached to an identifier **MAY** change across versions; the identifier itself **MUST NOT**.
+
+### 4.5 Sandbox/Provisional Tier
+
+To allow lightweight experimentation without every draft immediately taking on the permanence guarantee of §4.4, OECB defines a parallel, structurally distinct identifier tier (introduced by RFC-0001):
+
+- **Pattern**: `^OE-SANDBOX-CONCEPT-[0-9]{6}$` (`schemas/common.defs.yaml#/$defs/sandboxConceptId`), never mistakable for the permanent `OE-CONCEPT-######` pattern. Scoped to controlled-vocabulary concept entries only; sandbox identifiers for other entity types are out of scope until a future RFC establishes a concrete need.
+- **Status**: sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`) — a wholly separate, smaller vocabulary from the permanent-tier `status` enum (§11.3). They **MUST NOT** carry that enum, which is what exempts them from §3 item 5 / §11.4's never-delete guarantee by construction rather than by exception.
+- **TTL**: every sandbox entry **MUST** carry `sandboxMeta.created` and `sandboxMeta.expiresOn`, the latter set 12 months out at authoring time (IETF Internet-Draft convention). An entry not promoted before `expiresOn` **MUST** be auto-archived (`sandboxMeta.status: archived`).
+- **Promotion**: moving a sandbox entry into the permanent tier (minting a new `OE-CONCEPT-######`) **MUST** go through the ordinary RFC process in full (§11.2) — nothing skips review on the way to becoming a citable, permanent entity.
+- **Compatibility checking**: per §10.3, the future compatibility checker **MUST** flag any dependent-repo manifest referencing a `SANDBOX` identifier, since that repo is knowingly depending on something with no permanence guarantee.
 
 ---
 
@@ -347,6 +357,7 @@ A CI compatibility-checker (distributed by OECB as a reusable action, §14 Phase
 1. Verify that every referenced entity ID resolves at the pinned version.
 2. Verify that no referenced entity has `status: deprecated` unless explicitly listed in `acknowledgedDeprecations`.
 3. Flag (but not necessarily block) cases where a pinned dependency has a newer MAJOR version available, requiring explicit re-validation before the dependent repository tags its own next release.
+4. Loudly flag any reference to an `OE-SANDBOX-*` identifier (§4.5, RFC-0001), since the dependent repository is knowingly depending on something with no permanence guarantee.
 
 ---
 
@@ -362,15 +373,22 @@ A CI compatibility-checker (distributed by OECB as a reusable action, §14 Phase
 
 ### 11.2 RFC Process
 
-Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the fixed RFC template (motivation, proposed IRI, relations, justification for why no existing standard covers the need per §3 item 4). Every RFC **MUST** receive at least one domain editor approval and one maintainer approval before merge.
+Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the fixed RFC template (motivation, proposed IRI, relations, justification for why no existing standard covers the need per §3 item 4). Review ceremony is split by status transition (RFC-0001):
+
+- Merging a new `OE-SANDBOX-CONCEPT-######` entry, or a `proposed`-status permanent-tier entry, **MUST** receive at least one maintainer approval (or an async no-objection window of 5 business days) before merge — no domain editor sign-off is required at this stage.
+- The `proposed → accepted` transition in the permanent tier, and sandbox → permanent promotion (§4.5), **MUST** receive at least one domain editor approval and one maintainer approval before merge — this is the point where the permanence guarantee (§3 item 5) actually begins to apply.
 
 ### 11.3 Lifecycle Status
 
-Every entity **MUST** carry a `status` field with one of the following values, and status transitions **MUST** only move forward along this lifecycle (a status **MUST NOT** revert from `deprecated` back to `stable`, for example, without a new RFC):
+Every entity **MUST** carry a `status` field with one of the following values. Status transitions along the primary chain **MUST** only move forward (a status **MUST NOT** revert from `deprecated` back to `stable`, for example, without a new RFC):
 
 ```
 proposed → accepted → stable → deprecated → superseded
+                                    ↘
+                                     retracted
 ```
+
+`retracted` (RFC-0001) is a parallel terminal state reachable directly from `accepted` or `stable` — it is not sequential after `deprecated`, and does not imply the entity was superseded by anything.
 
 ### 11.4 Deprecation Policy
 
@@ -379,6 +397,10 @@ An entity **MUST NOT** be deleted once it reaches `status: accepted` or higher. 
 - Remain resolvable at its existing identifier indefinitely.
 - Carry a `supersededBy` pointer to its replacement, where one exists.
 - Continue to appear in query results (not silently filtered), so dependent repositories are never broken by an upstream change they have not yet acknowledged.
+
+A `retracted` entity (RFC-0001) follows the same never-delete, always-resolvable rules above, but **MUST NOT** carry a `supersededBy` pointer — `retracted` means the entity was accepted in error or is no longer endorsed by the maintainers, with no implied replacement, unlike `deprecated`. It **MAY** carry a `retractionNote` explaining why.
+
+Entities in the sandbox/provisional tier (§4.5, `OE-SANDBOX-*` identifiers) are explicitly exempt from this entire section — they carry no `status` field from §11.3 and may be deleted or archived freely.
 
 ### 11.5 Independent Versioning
 
