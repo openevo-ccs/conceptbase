@@ -1,0 +1,12 @@
+{
+  "assertedBy": [
+    "OpenEvo Computational Curriculum Studies Working Group"
+  ],
+  "date": "2026-07-18",
+  "id": "OE-ALIGN-000001",
+  "matchType": "skos:closeMatch",
+  "object": "OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000213",
+  "rationale": "Both concepts describe differential reproductive/persistence success among heritable variants and share Darwin (1859) as an intellectual ancestor. They are not asserted as skos:exactMatch because their scope differs in a way that is itself the substance of the field's open disagreement: BIO-CORE's Natural Selection (OE-CONCEPT-000102) is defined exclusively in decentralized causal terms — differential reproduction \"resulting from [variants'] interaction with the environment\" — and BIO-CORE contains no organism-agency concept capable of qualifying that interaction. OE-INTERDISCIPLINARY's Selection (OE-CONCEPT-000213) is deliberately multiply defined (biology, culture, education, ai) and, within its own vocabulary, is reinforced against Agency (OE-CONCEPT-000211) and Niche Construction (OE-CONCEPT-000209) — concepts through which organism behavior can shape what gets selected. Whether the biology-discipline sense of OE-INTERDISCIPLINARY's Selection is fully equivalent to BIO-CORE's Natural Selection, or is subtly broader because it is definitionally embedded in an agency-capable vocabulary, is exactly the kind of genuine, unresolved theoretical question (Kampourakis 2020 vs. Hanisch et al. 2026) that OECB's pluralism model (Spec §8.6) is designed to represent as data rather than adjudicate. This record is provisional and expected to be revised once a full Phase 2 alignment-authoring process, with broader domain-editor review, is in place.\n",
+  "status": "contested",
+  "subject": "BIO-CORE-v1.0.0:OE-CONCEPT-000102"
+}

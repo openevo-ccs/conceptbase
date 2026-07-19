@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The exchange of information between agents via signals, language, or other shared codes.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000217",
+  "labels": {
+    "en": "Communication"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000205",
+      "OE-CONCEPT-000203"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

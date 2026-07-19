@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "A heritable trait that increases an organism's fitness within a given environment, shaped by natural selection over generations.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000104",
+  "labels": {
+    "en": "Adaptation"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000102",
+      "OE-CONCEPT-000105"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

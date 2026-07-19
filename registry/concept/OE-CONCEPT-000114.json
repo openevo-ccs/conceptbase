@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "An organism or population from which two or more descendant lineages have diverged.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000114",
+  "labels": {
+    "en": "Common Ancestor"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000113",
+      "OE-CONCEPT-000109"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

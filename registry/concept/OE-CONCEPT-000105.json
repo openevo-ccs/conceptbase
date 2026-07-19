@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The relative reproductive success of a genotype or phenotype, typically measured as expected number of offspring contributing to the next generation.\n"
+    }
+  },
+  "examples": [
+    "A beak shape enabling more efficient seed cracking during drought."
+  ],
+  "id": "OE-CONCEPT-000105",
+  "labels": {
+    "en": "Fitness"
+  },
+  "nonExamples": [
+    "Physical strength or health in a general, non-reproductive sense."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000102",
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,7 +1,7 @@
 # OpenEvo ConceptBase — Formal Infrastructure Specification
 
 **Document status:** Normative
-**Specification version:** 0.3.0
+**Specification version:** 0.3.1
 **Namespace:** `https://www.w3id.org/openevo/`
 **Repository:** `github.com/openevo-ccs/conceptbase`
 **License:** CC-BY-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
@@ -115,7 +115,7 @@ This namespace **MUST** be registered with the [w3id.org permanent identifier re
 
 ### 4.2 Sub-path Structure
 
-| Sub-path | Resolves to |
+| Sub-path | Resolves to (target design) |
 |---|---|
 | `.../ontology#{ClassName}` | Ontology class or property definition (§6) |
 | `.../concept/{id}` | A Concept instance, content-negotiated (JSON-LD, HTML, flat JSON) |
@@ -123,6 +123,8 @@ This namespace **MUST** be registered with the [w3id.org permanent identifier re
 | `.../strand/{id}` | A Strand/SubStrand instance |
 | `.../vocab/{name}` | A vocabulary registry entry |
 | `.../schemas/{name}.schema.json` | A JSON Schema document identity (distinct concern from RDF resolution; see §7.1) |
+
+**MVP resolution note:** full content-negotiated JSON-LD/HTML/flat-JSON resolution above depends on the `registry/` + `build/` pipeline, which is Phase 4 scope (§5.2, §5.3) and not yet built. Until then, each sub-path above resolves to a **flat-JSON-or-raw-YAML-only** interim target: `.../concept/{id}` and `.../alignment/{id}` redirect to a statically generated flat JSON file (`scripts/build_registry.py`, run manually until Phase 4 wires it into CI); `.../ontology`, `.../vocab/{name}`, and `.../schemas/{name}.schema.json` redirect straight to the raw authoring-layer YAML; `.../lpm/{id}` and `.../strand/{id}` redirect, via a small static lookup page, to the independently governed repository that owns the identifier (conceptbase does not host LPM/Strand content — §3 item 5). No identifier or URL pattern changes when Phase 4 tooling replaces this interim scheme; only the redirect targets do, per §4.1. The live `.htaccess` implementing this is tracked at `w3id-submission/openevo/.htaccess` pending upstream review.
 
 ### 4.3 Identifier Patterns
 
@@ -554,8 +556,10 @@ dct:  http://purl.org/dc/terms/
 | Version | Date | Summary |
 |---|---|---|
 | 0.1.0 | Draft | Initial narrative specification; content/infrastructure separation established. |
-| 0.2.0 | Draft, superseded by this document | Added governance model, SKOS relation adoption, RDF/JSON-LD formalism commitment, phased scope. |
-| **0.2.0 (this document)** | Current | Reformatted as a normative formal specification with RFC 2119 conformance language; namespace finalized to `www.w3id.org/openevo/`; conformance classes (§16) added; all prior narrative content consolidated and made testable. |
+| 0.2.0 | Draft, superseded | Added governance model, SKOS relation adoption, RDF/JSON-LD formalism commitment, phased scope. |
+| 0.2.0 (reformat) | Superseded | Reformatted as a normative formal specification with RFC 2119 conformance language; namespace finalized to `www.w3id.org/openevo/`; conformance classes (§16) added; all prior narrative content consolidated and made testable. |
+| 0.3.0 | Superseded | RFC-0001 (sandbox tier, two-speed review, `retracted` status) and RFC-0002 (`oe:Competency` profiled against CASE `CFItem`, promoted out of `reserved`). |
+| **0.3.1 (this document)** | Current | §4.2 — documented the interim, flat-JSON/raw-YAML-only MVP resolution scheme for the `www.w3id.org/openevo/` namespace (registration was still outstanding as of this revision), pending the full content-negotiated Phase 4 registry. |
 
 ---
 

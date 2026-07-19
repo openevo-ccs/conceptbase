@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The existence of differences among individuals, variants, or instances within a population or system, providing the raw material on which selection can act.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000214",
+  "labels": {
+    "en": "Variation"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000090"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000213",
+      "OE-CONCEPT-000201"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

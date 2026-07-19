@@ -1,0 +1,25 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Random fluctuation of allele frequencies within a population from one generation to the next, independent of selective advantage.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000111",
+  "labels": {
+    "en": "Drift"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000101"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000108",
+      "OE-CONCEPT-000107",
+      "OE-CONCEPT-000110"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

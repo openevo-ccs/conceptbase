@@ -5,7 +5,8 @@
 [![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
 [![License: CC-BY 4.0](https://img.shields.io/badge/Content%20License-CC--BY%204.0-lightgrey.svg)](LICENSE)
 [![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
-[![Specification](https://img.shields.io/badge/Spec-v0.3.0-blue)](docs/oecb_specifications.md)
+[![Specification](https://img.shields.io/badge/Spec-v0.3.1-blue)](docs/oecb_specifications.md)
+[![Namespace status](https://img.shields.io/badge/w3id%20registration-not%20yet%20submitted-red)](w3id-submission/openevo/)
 [![Ontology](https://img.shields.io/badge/Ontology-v1.3.0-blue)](ontologies/core_v1.yaml)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
 [![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
@@ -100,7 +101,7 @@ The Phase 1 pilot review surfaced two changes worth making immediately rather th
 - **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-######`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
 - **[RFC-0002](proposals/0002-competency-case-profile.md)** — profiled `oe:Competency` as an extension of CASE (1EdTech) `CFItem` and promoted it out of `reserved` into a stable Phase 1 class, ahead of its original Phase 4 slot, after verifying the mapping against a reference CASE implementation.
 
-Ontology `v1.3.0`, spec `v0.3.0` reflect both RFCs.
+Ontology `v1.3.0` reflects both RFCs; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note (see below).
 
 ---
 
@@ -139,23 +140,33 @@ conceptbase/
 │   ├── OE-ALIGN-000001.yaml
 │   └── OE-ALIGN-000002.yaml
 │
+├── registry/                   # Generated (scripts/build_registry.py) — MVP flat-JSON
+│   ├── concept/{id}.json        # resolution targets for the w3id namespace; NOT hand-edited,
+│   ├── alignment/{id}.json      # re-run the script after editing vocabularies/ or alignments/
+│   ├── lpm-index.json
+│   └── strand-index.json
+│
+├── w3id-submission/openevo/    # Drafted .htaccess + readme.md awaiting PR to perma-id/w3id.org
+│
 ├── app/                       # ConceptBase Explorer — static client-side app, see below
 │   ├── index.html
 │   ├── css/
-│   └── js/
+│   ├── js/
+│   └── registry/resolve.html  # Static LPM/Strand ID -> owning-repo lookup (see registry/ above)
 │
 ├── scripts/
-│   └── check_related_symmetry.py  # Standalone SKOS symmetry checker (not yet wired into CI)
+│   ├── check_related_symmetry.py  # Standalone SKOS symmetry checker (not yet wired into CI)
+│   └── build_registry.py          # Generates registry/ from vocabularies/ + alignments/
 │
 ├── proposals/                 # RFC submissions (see GOVERNANCE.md)
 │   ├── TEMPLATE.md
 │   ├── 0001-sandbox-tier-and-retraction.md
 │   └── 0002-competency-case-profile.md
 │
-└── .github/workflows/          # CI: deploys app/ to GitHub Pages
+└── .github/workflows/          # CI: deploys app/ + registry/ to GitHub Pages
 ```
 
-Not yet created, but referenced elsewhere in this README as future scope: `grade-schemas/`, `subject-schemas/` (Phase 3), `evidence/` (Phase 4), `registry/`, `validation/`, `build/`, `examples/` — a build/validation pipeline doesn't exist yet (`scripts/check_related_symmetry.py` is a standalone script in the meantime, not CI-wired).
+Not yet created, but referenced elsewhere in this README as future scope: `grade-schemas/`, `subject-schemas/` (Phase 3), `evidence/` (Phase 4), `validation/`, `build/`, `examples/` — the full build/validation pipeline doesn't exist yet (`scripts/` holds standalone scripts in the meantime, not CI-wired, other than the Pages deploy).
 
 ---
 
@@ -200,11 +211,15 @@ conceptbase:
 
 **Looking up a concept:**
 
+The `www.w3id.org/openevo/` namespace itself is **not registered yet** — `https://www.w3id.org/openevo/` currently 404s. Registration is in progress; see [`w3id-submission/openevo/`](w3id-submission/openevo/) for the drafted `.htaccess`/`readme.md` awaiting submission to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org), and `docs/oecb_specifications.md` §4.2 for the interim resolution scheme once it's live:
+
 ```
-https://www.w3id.org/openevo/concept/000102     →  resolves to JSON-LD, HTML docs, or flat JSON
-https://www.w3id.org/openevo/ontology#Concept   →  resolves to the ontology class definition
-https://www.w3id.org/openevo/vocab/BIO-CORE     →  resolves to the vocabulary registry entry
+https://www.w3id.org/openevo/concept/OE-CONCEPT-000102   →  flat JSON (generated, scripts/build_registry.py)
+https://www.w3id.org/openevo/ontology#Concept             →  raw ontology YAML (the #fragment is client-side only)
+https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0        →  raw vocabulary YAML
 ```
+
+Full content negotiation (JSON-LD, HTML, flat JSON per §4.2's target design) is Phase 4 scope; the flat-JSON/raw-YAML behavior above is an intentional MVP, not the end state.
 
 **Validating a concept entry against the schema:**
 
@@ -280,6 +295,7 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [ ] Phase 3: Subject-area schema registry
 - [ ] Phase 4: Assessment and evidence schemas (xAPI-profiled)
 - [ ] Phase 4: Hosted SPARQL endpoint and CI compatibility-checker action
+- [ ] **Blocking:** register the `www.w3id.org/openevo/` namespace (currently 404 — MVP flat-JSON resolution scheme and `.htaccess`/`readme.md` drafted at [`w3id-submission/openevo/`](w3id-submission/openevo/), PR to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org) not yet submitted; also requires fixing this repo's GitHub Pages deploy, currently misconfigured)
 
 Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../milestones).
 
@@ -290,7 +306,7 @@ Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../mil
 If you use OECB in research or curriculum tooling, please cite:
 
 ```
-OpenEvo CCS Lab (2025). OpenEvo Concept Base (v0.3.0) [Data infrastructure].
+OpenEvo CCS Lab (2025). OpenEvo Concept Base (v0.3.1) [Data infrastructure].
 https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 ```
 

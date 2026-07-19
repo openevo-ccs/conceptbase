@@ -1,0 +1,25 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The generation of a novel variant — an idea, practice, technology, or trait — that did not previously exist within a system.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000204",
+  "labels": {
+    "en": "Innovation"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000090"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000206",
+      "OE-CONCEPT-000218",
+      "OE-CONCEPT-000221"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

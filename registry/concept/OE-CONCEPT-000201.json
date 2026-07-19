@@ -1,0 +1,31 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Transmission of genetic information from parent to offspring.",
+      "culture": "Transmission of beliefs, practices, or knowledge from one generation, or one individual, to another via social learning.\n",
+      "technology": "Persistence of design features or code structure across successive versions of an artifact or system.\n"
+    }
+  },
+  "examples": [
+    "A gene passed from parent to offspring.",
+    "A recipe passed down through a family across generations.",
+    "A software library's API conventions persisting across major versions."
+  ],
+  "id": "OE-CONCEPT-000201",
+  "labels": {
+    "en": "Inheritance"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000090"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000203",
+      "OE-CONCEPT-000214"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

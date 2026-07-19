@@ -1,0 +1,23 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A pattern or signal that reduces uncertainty for a receiver, whether encoded genetically, linguistically, symbolically, or computationally.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000205",
+  "labels": {
+    "en": "Information"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000206",
+      "OE-CONCEPT-000217",
+      "OE-CONCEPT-000221",
+      "OE-CONCEPT-000222"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Cognitive processing that is spread across individuals, artifacts, and environment, rather than occurring solely within a single mind.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000224",
+  "labels": {
+    "en": "Distributed Cognition"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000222",
+      "OE-CONCEPT-000223"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

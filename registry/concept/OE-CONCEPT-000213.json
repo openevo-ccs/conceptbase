@@ -1,0 +1,45 @@
+{
+  "aliases": {
+    "en": [
+      "Selective Process"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Mesoudi, A. (2011). Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "ai": "A search or optimization process that favors candidates scoring higher against an objective function.\n",
+      "biology": "Differential reproductive success among heritable variants.",
+      "culture": "Differential persistence or spread of cultural variants — ideas, practices, or artifacts — based on their fit to a social or environmental context.\n",
+      "education": "Choosing among available instructional pathways or resources."
+    }
+  },
+  "examples": [
+    "A cultural practice being adopted more widely because it improves group cohesion.",
+    "A genetic algorithm retaining higher-fitness candidate solutions across generations."
+  ],
+  "id": "OE-CONCEPT-000213",
+  "labels": {
+    "en": "Selection"
+  },
+  "nonExamples": [
+    "The random generation of a new variant (see Variation, Innovation)."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000090"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000214",
+      "OE-CONCEPT-000209",
+      "OE-CONCEPT-000211"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

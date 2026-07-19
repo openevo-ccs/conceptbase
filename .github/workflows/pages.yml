@@ -3,7 +3,7 @@ name: Deploy ConceptBase Explorer to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ["app/**", ".github/workflows/pages.yml"]
+    paths: ["app/**", "registry/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -24,8 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Assemble site (app/ + generated registry/)
+        run: |
+          mkdir -p _site/registry
+          cp -r app/. _site/
+          cp -r registry/. _site/registry/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: app
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

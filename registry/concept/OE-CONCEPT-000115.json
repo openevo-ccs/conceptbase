@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "An environmental or biological factor that reduces or increases reproductive success of particular variants within a population, driving the direction of selection.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000115",
+  "labels": {
+    "en": "Selection Pressure"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000102",
+      "OE-CONCEPT-000105"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,39 @@
+{
+  "citations": [
+    {
+      "text": "Darwin, C. (1859). On the Origin of Species."
+    }
+  ],
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Differential reproductive success among heritable variants within a population, resulting from their interaction with the environment.\n"
+    }
+  },
+  "examples": [
+    "Peppered moth coloration shifting with industrial soot levels.",
+    "Antibiotic resistance increasing in bacterial populations under drug exposure."
+  ],
+  "id": "OE-CONCEPT-000102",
+  "labels": {
+    "en": "Natural Selection"
+  },
+  "nonExamples": [
+    "An individual organism changing behavior within its own lifetime (not heritable).",
+    "A population's gene frequencies changing due to a random sampling event (see Drift)."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000101"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000105",
+      "OE-CONCEPT-000115",
+      "OE-CONCEPT-000103"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

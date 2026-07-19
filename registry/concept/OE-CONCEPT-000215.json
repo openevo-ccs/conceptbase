@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A relatively durable change in knowledge, behavior, or capability resulting from experience, instruction, or practice.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000215",
+  "labels": {
+    "en": "Learning"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000212",
+      "OE-CONCEPT-000216",
+      "OE-CONCEPT-000210"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

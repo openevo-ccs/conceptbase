@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The evolutionary history and relatedness of a group of organisms, typically represented as a branching tree.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000113",
+  "labels": {
+    "en": "Phylogeny"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000114",
+      "OE-CONCEPT-000101"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

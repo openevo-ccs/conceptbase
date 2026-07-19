@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenEvo ConceptBase — Resolving…</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    max-width: 38rem;
+    margin: 3rem auto;
+    padding: 0 1.25rem;
+    color-scheme: light dark;
+  }
+  code { padding: .1em .3em; border: 1px solid currentColor; border-radius: 4px; opacity: .85; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main id="msg">
+  <p>Resolving…</p>
+</main>
+
+<script type="module">
+/*
+ * MVP resolver for /openevo/lpm/{id} and /openevo/strand/{id} (spec Sec4.2).
+ * w3id's .htaccess redirects both to this page with the requested ID kept
+ * in the URL fragment (fragments never reach the server, so one static
+ * .htaccess rule covers every current and future LPM/Strand ID - the
+ * lookup happens here, client-side, against the generated index files).
+ *
+ * ConceptBase does not host LPM/Strand content (see README, "What's In
+ * Scope") - this can only point at the *repository* that owns the ID, not
+ * a specific file within it. For Strand IDs in particular, the owning LPM
+ * may reference the actual Strand content from a separate Strand
+ * repository (see README, "The Ecosystem") that isn't tracked anywhere
+ * yet - so a Strand ID resolves to its parent LPM's repo, not guaranteed
+ * to be the exact Strand repo, until a real registry (Phase 4) exists.
+ */
+
+const msg = document.getElementById("msg");
+
+function fail(text) {
+  msg.innerHTML = `<p>${text}</p>`;
+}
+
+function githubRepoUrl(entry) {
+  return `https://github.com/${entry.owner}/${entry.repo}`;
+}
+
+async function resolve() {
+  const hash = location.hash.replace(/^#/, "");
+  const [kind, id] = hash.split("/");
+
+  if (!kind || !id) {
+    fail("No identifier given. Expected a URL like <code>#lpm/OE-LPM-000001</code> or <code>#strand/OE-STRAND-000101</code>.");
+    return;
+  }
+
+  try {
+    if (kind === "lpm") {
+      const index = await fetch("lpm-index.json").then((r) => r.json());
+      const entry = index[id];
+      if (!entry) return fail(`Unknown LPM identifier <code>${id}</code>.`);
+      location.replace(githubRepoUrl(entry));
+    } else if (kind === "strand") {
+      const index = await fetch("strand-index.json").then((r) => r.json());
+      const num = parseInt(id.replace(/^OE-STRAND-/, ""), 10);
+      const range = index.ranges.find((r) => num >= r.min && num <= r.max);
+      const entry = range && index.lpm[range.lpm];
+      if (!entry) return fail(`No known owning LPM for strand identifier <code>${id}</code>.`);
+      fail(`Redirecting to the owning LPM's repository (ConceptBase does not track which Strand repository, if any, hosts <code>${id}</code> directly) — <a href="${githubRepoUrl(entry)}">${entry.owner}/${entry.repo}</a>…`);
+      location.replace(githubRepoUrl(entry));
+    } else {
+      fail(`Unknown resolution kind <code>${kind}</code>. Expected <code>lpm</code> or <code>strand</code>.`);
+    }
+  } catch (e) {
+    fail(`Lookup failed: ${e.message}`);
+  }
+}
+
+resolve();
+</script>
+</body>
+</html>

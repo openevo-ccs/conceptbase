@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Justified, retained information that an individual, group, or system can draw upon to act or reason.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000222",
+  "labels": {
+    "en": "Knowledge"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000205",
+      "OE-CONCEPT-000223",
+      "OE-CONCEPT-000224"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

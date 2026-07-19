@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Shared expectations or rules of behavior within a group, enforced through social sanction rather than formal law.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000221",
+  "labels": {
+    "en": "Norms"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000219",
+      "OE-CONCEPT-000220",
+      "OE-CONCEPT-000205",
+      "OE-CONCEPT-000206",
+      "OE-CONCEPT-000204"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

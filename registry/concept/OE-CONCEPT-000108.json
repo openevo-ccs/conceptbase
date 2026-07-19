@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "A group of interbreeding organisms of the same species occupying a defined geographic area at a given time.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000108",
+  "labels": {
+    "en": "Population"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000109",
+      "OE-CONCEPT-000111"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

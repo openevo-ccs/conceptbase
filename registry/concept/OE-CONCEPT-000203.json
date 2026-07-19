@@ -1,0 +1,25 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The process by which information, traits, or practices move from one holder (organism, person, group, or system) to another.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000203",
+  "labels": {
+    "en": "Transmission"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000090"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000201",
+      "OE-CONCEPT-000216",
+      "OE-CONCEPT-000217"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

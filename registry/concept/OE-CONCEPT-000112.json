@@ -1,0 +1,21 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The transmission of genetic information from parent to offspring.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000112",
+  "labels": {
+    "en": "Inheritance"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000106",
+      "OE-CONCEPT-000101"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

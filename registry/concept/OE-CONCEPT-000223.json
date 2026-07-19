@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Problem-solving or knowledge-generating capability that emerges from the coordinated activity of many individuals or agents, exceeding what any one could achieve alone.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000223",
+  "labels": {
+    "en": "Collective Intelligence"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000222",
+      "OE-CONCEPT-000224",
+      "OE-CONCEPT-000218"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Any process by which variants are generated, selected, and transmitted across iterations within a system — applicable to genetic, cultural, technological, or cognitive systems alike.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000090",
+  "labels": {
+    "en": "Evolutionary Process"
+  },
+  "relations": {
+    "skos:narrower": [
+      "OE-CONCEPT-000201",
+      "OE-CONCEPT-000213",
+      "OE-CONCEPT-000214",
+      "OE-CONCEPT-000203",
+      "OE-CONCEPT-000204",
+      "OE-CONCEPT-000210"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000209"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{
+  "OE-LPM-000001": {
+    "owner": "openevo-ccs",
+    "ref": "main",
+    "repo": "bio-core-k12",
+    "vocabulary": "BIO-CORE-v1.0.0"
+  },
+  "OE-LPM-000002": {
+    "owner": "openevo-ccs",
+    "ref": "main",
+    "repo": "oe-interdisciplinary-k12",
+    "vocabulary": "OE-INTERDISCIPLINARY-v1.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Change in the heritable characteristics of biological populations across successive generations.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000101",
+  "labels": {
+    "en": "Evolution"
+  },
+  "relations": {
+    "skos:narrower": [
+      "OE-CONCEPT-000102",
+      "OE-CONCEPT-000110",
+      "OE-CONCEPT-000111",
+      "OE-CONCEPT-000116"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000112",
+      "OE-CONCEPT-000113"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

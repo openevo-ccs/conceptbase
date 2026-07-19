@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Intentional action by one individual or system to facilitate another's learning or transmission of a skill, practice, or piece of knowledge.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000216",
+  "labels": {
+    "en": "Teaching"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000215",
+      "OE-CONCEPT-000203",
+      "OE-CONCEPT-000212"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,23 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The process by which organisms or groups modify their environment in ways that alter the selective pressures acting on themselves or others.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000209",
+  "labels": {
+    "en": "Niche Construction"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000090",
+      "OE-CONCEPT-000210",
+      "OE-CONCEPT-000218",
+      "OE-CONCEPT-000213"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

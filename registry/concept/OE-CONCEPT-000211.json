@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The capacity of an individual or system to act intentionally and make choices that influence outcomes, rather than responding passively to external forces.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000211",
+  "labels": {
+    "en": "Agency"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000210",
+      "OE-CONCEPT-000212",
+      "OE-CONCEPT-000213"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

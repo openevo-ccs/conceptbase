@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The process by which an organism grows and matures from an initial state toward greater complexity or capability.\n",
+      "education": "The progressive growth of a learner's knowledge, skills, or competencies over time, often scaffolded by instruction.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000210",
+  "labels": {
+    "en": "Development"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000090"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000211",
+      "OE-CONCEPT-000212",
+      "OE-CONCEPT-000215",
+      "OE-CONCEPT-000209"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

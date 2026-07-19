@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Tools, techniques, or systems created to extend or augment biological or cognitive capability.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000218",
+  "labels": {
+    "en": "Technology"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000204",
+      "OE-CONCEPT-000209",
+      "OE-CONCEPT-000223"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

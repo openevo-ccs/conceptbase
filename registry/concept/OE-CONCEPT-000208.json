@@ -1,0 +1,20 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Competing interests, goals, or behaviors among individuals or groups within a shared system or environment.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000208",
+  "labels": {
+    "en": "Conflict"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000207"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Socially transmitted knowledge, beliefs, practices, and artifacts shared within a group, persisting beyond any single individual.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000219",
+  "labels": {
+    "en": "Culture"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000207",
+      "OE-CONCEPT-000220",
+      "OE-CONCEPT-000221"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

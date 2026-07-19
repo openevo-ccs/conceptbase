@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A structure — mental, symbolic, or computational — that stands for and conveys meaning about something else.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000206",
+  "labels": {
+    "en": "Representation"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000205",
+      "OE-CONCEPT-000221",
+      "OE-CONCEPT-000204"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

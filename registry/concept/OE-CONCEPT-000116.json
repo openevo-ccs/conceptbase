@@ -1,0 +1,23 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The complete disappearance of a species or other taxonomic group, ending its lineage.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000116",
+  "labels": {
+    "en": "Extinction"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000101"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000109"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

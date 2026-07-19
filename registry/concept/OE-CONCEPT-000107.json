@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "One of two or more alternative forms of a gene occupying the same locus on a chromosome.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000107",
+  "labels": {
+    "en": "Allele"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000106"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000103",
+      "OE-CONCEPT-000111"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}
