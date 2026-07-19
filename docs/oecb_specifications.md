@@ -425,7 +425,7 @@ OECB **MUST** be built as a set of profiles and extensions of existing standards
 | Need | Standard reused | OECB profiling obligation | Phase |
 |---|---|---|---|
 | Concept relations, cross-vocabulary mapping | SKOS | `oe:Concept subClassOf skos:Concept`; Alignment records use SKOS match types exclusively (§9) | 1 (relations), 2 (alignment) |
-| Competency frameworks | CASE (1EdTech) | `oe:Competency` **MUST** be profiled as an extension of CASE `CFItem`, not a novel structure | 4 |
+| Competency frameworks | CASE (1EdTech) | **Fulfilled.** `oe:Competency` is profiled as an extension of CASE `CFItem` per RFC-0002 (`proposals/0002-competency-case-profile.md`, `schemas/competency.schema.yaml`), promoted ahead of schedule 2026-07-19 | 4 (promoted early) |
 | Learning object metadata | IEEE LOM, schema.org/LearningResource | `oe:Resource` **MUST** be profiled from these, not redefined | 4 |
 | Evidence/activity records | xAPI | `oe:Evidence` **MUST** be profiled as an extension of the xAPI statement structure | 4 |
 | Graph serialization | RDF / JSON-LD | The OECB-specific ontology (§6) is the only permitted novel structure at the serialization layer | 1 |

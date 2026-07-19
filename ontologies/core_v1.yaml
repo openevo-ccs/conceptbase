@@ -20,7 +20,7 @@
 # ============================================================================
 
 id: OE-ONTOLOGY
-version: 1.2.0
+version: 1.3.0
 status: stable
 authors:
   - name: OpenEvo ConceptBase Maintainers
@@ -120,6 +120,24 @@ classes:
       properties only; actual content lives in external repositories
       (Collections, Strand repos, etc.), never in ConceptBase itself.
 
+  oe:Competency:
+    label: Competency
+    status: stable
+    subClassOf: oe:Entity
+    definition: >
+      A statement of what a learner should know or be able to do,
+      profiled as an extension of the CASE (1EdTech) CFItem structure per
+      spec §12 — not a novel structure. Promoted out of `reserved` ahead
+      of the original Phase 4 schedule by RFC-0002 (accepted 2026-07-19),
+      following direct verification against the reference CASE
+      implementation at github.com/openevo-ccs/OpenCASE.
+    notes: >
+      See RFC-0002 (/proposals/0002-competency-case-profile.md) and
+      schemas/competency.schema.yaml for the full CFItem field mapping,
+      identifier-bridging rule (OECB mints its own OE-COMPETENCY-######;
+      CASE sourcedId/uri are retained only as provenance), and the
+      associationType-to-OECB-relation mapping table.
+
 # ----------------------------------------------------------------------------
 # CLASSES (Reserved — IRI stable, structure not yet defined)
 # ----------------------------------------------------------------------------
@@ -133,9 +151,6 @@ reserved:
   - iri: oe:Collection
     plannedPhase: 3
     note: Container aggregating Strands/LPMs for a distributed collection repo.
-  - iri: oe:Competency
-    plannedPhase: 4
-    note: To be profiled as an extension of CASE CFItem, not modeled from scratch.
   - iri: oe:Assessment
     plannedPhase: 4
   - iri: oe:Practice

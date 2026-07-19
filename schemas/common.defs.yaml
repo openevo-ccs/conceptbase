@@ -21,7 +21,7 @@
 
 meta:
   id: OE-SCHEMA-COMMON
-  version: 1.2.0
+  version: 1.3.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -59,6 +59,16 @@ meta:
     description: >
       Permanent identifier for an oe:LearningObject instance. Resolves
       under https://www.w3id.org/openevo/lo/{id}.
+
+  competencyId:
+    type: string
+    pattern: "^OE-COMPETENCY-[0-9]{6}$"
+    description: >
+      Permanent identifier for an oe:Competency instance (RFC-0002).
+      Resolves under https://www.w3id.org/openevo/competency/{id}. Never
+      aliased from the CASE CFItem sourcedId/uri a competency may have
+      been profiled from — those are retained separately as provenance
+      (see schemas/competency.schema.yaml#/properties/provenance).
 
   alignmentId:
     type: string

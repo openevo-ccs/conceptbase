@@ -1,0 +1,137 @@
+# ============================================================================
+# OpenEvo ConceptBase — Competency Schema
+# ============================================================================
+# Path: /schemas/competency.schema.yaml
+#
+# Validates instances of oe:Competency (see /ontologies/core_v1.yaml).
+# Profiled as an extension of the CASE (1EdTech) CFItem structure per
+# spec §12 — see /proposals/0002-competency-case-profile.md for the full
+# field-by-field mapping, verified directly against the reference
+# implementation at github.com/openevo-ccs/OpenCASE.
+#
+# Promoted from RFC-0002's draft appendix to a live, stable schema ahead
+# of the original Phase 4 schedule, per maintainer-team decision on
+# 2026-07-19. `provenance` is optional: a competency authored natively in
+# OECB (not imported from a CASE source) simply omits it.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/competency.schema.json"
+
+meta:
+  id: OE-SCHEMA-COMPETENCY
+  version: 1.0.0
+  status: stable
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-4.0
+  ontologyClass: oe:Competency
+  phase: 4
+
+type: object
+
+properties:
+
+  id:
+    "$ref": "common.defs.yaml#/$defs/competencyId"
+
+  type:
+    const: "oe:Competency"
+
+  status:
+    "$ref": "common.defs.yaml#/$defs/status"
+
+  version:
+    "$ref": "common.defs.yaml#/$defs/semver"
+
+  statement:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+    description: >
+      The full competency statement. Maps from CASE CFItem.fullStatement,
+      localized on the OECB side (CASE's own field is a single plain
+      string).
+
+  abbreviatedStatement:
+    "$ref": "common.defs.yaml#/$defs/localizedString"
+    description: Maps from CFItem.abbreviatedStatement.
+
+  humanCodingScheme:
+    type: string
+    description: >
+      Not localized — a code, not prose. Maps from
+      CFItem.humanCodingScheme.
+
+  competencyType:
+    type: string
+    description: >
+      Free-form, mirroring CASE's own untyped CFItemTypes definitions.
+      Maps from CFItem.CFItemType.
+
+  educationLevel:
+    type: array
+    items: { type: string }
+
+  conceptKeywords:
+    type: array
+    items: { type: string }
+
+  relations:
+    type: object
+    description: >
+      Derived from CFAssociation edges touching this item, mapped per
+      the association-type table in RFC-0002. Rows without a verified
+      OECB semantic (e.g. CASE's exemplar, hasSkillLevel,
+      isTranslationOf) are intentionally not represented here.
+    properties:
+      "skos:broader":
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/competencyId" }
+        description: From CASE isChildOf / isPartOf.
+      "skos:related":
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/competencyId" }
+        description: From CASE isRelatedTo.
+      precedes:
+        type: array
+        items: { "$ref": "common.defs.yaml#/$defs/competencyId" }
+        description: From CASE precedes.
+    additionalProperties: false
+
+  provenance:
+    type: object
+    description: >
+      Present only when this competency originates from a CASE source.
+      The OECB `id` above is always independently minted and never
+      aliased from these fields.
+    properties:
+      sourceCFItemId:
+        type: string
+        pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        description: CFItem.sourcedId (UUID).
+      sourceCFItemURI:
+        type: string
+        format: uri
+        description: CFItem.uri, network-resolvable.
+      sourceCFDocumentURI:
+        type: string
+        format: uri
+        description: CFItem.CFDocumentURI.uri, optional.
+    required: [sourceCFItemId, sourceCFItemURI]
+    additionalProperties: false
+
+  citations:
+    type: array
+    items:
+      "$ref": "common.defs.yaml#/$defs/citation"
+
+  extensions:
+    "$ref": "common.defs.yaml#/$defs/extensions"
+
+required:
+  - id
+  - type
+  - status
+  - version
+  - statement
+
+additionalProperties: false

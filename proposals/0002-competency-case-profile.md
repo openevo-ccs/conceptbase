@@ -1,9 +1,10 @@
 # RFC-0002: `oe:Competency` as a profile of CASE `CFItem`
 
 **Type:** `content`
-**Status:** `proposed`
+**Status:** `accepted`
 **Author(s):** OpenEvo ConceptBase maintainers
 **Date:** 2026-07-19
+**Accepted:** 2026-07-19. Maintainers chose to promote `oe:Competency` immediately rather than wait for Phase 4 — see "Phase gating" below, superseding that section's original deferral. Implemented the same day: `ontologies/core_v1.yaml` (v1.3.0), `schemas/common.defs.yaml` (v1.3.0, `competencyId`), `schemas/competency.schema.yaml` (new, `stable`, v1.0.0), `docs/oecb_specifications.md` §12.
 
 ## Motivation
 
@@ -187,23 +188,19 @@ Per spec §3 item 4 / §12: this profiles CASE (1EdTech) directly, as mandated, 
 
 ## Phase gating
 
-`oe:Competency` remains `reserved` (Phase 4) per `ontologies/core_v1.yaml` lines 132-148 until maintainers deliberately promote it — a MINOR version bump per that file's own header comment. **Reviewing and even merging this RFC does not itself promote the class or activate `schemas/competency.schema.yaml`.** Promotion is a separate, later decision; this RFC's job is to have the profile ready and reviewed before that decision needs to be made under time pressure.
+~~`oe:Competency` remains `reserved` (Phase 4) ... Promotion is a separate, later decision.~~ **Superseded 2026-07-19:** on accepting this RFC, maintainers deliberately chose to promote `oe:Competency` out of `reserved` immediately rather than wait for Phase 4 to formally begin — a MINOR version bump (`ontologies/core_v1.yaml` v1.2.0 → v1.3.0), consistent with that file's own header comment on promoting reserved classes. This RFC's original caution (prepare the profile now, decide promotion later) was satisfied by the maintainer team's explicit, informed decision to skip the wait rather than by default.
 
 ## Files affected
 
-If/when this RFC is fully accepted and `oe:Competency` is promoted:
-
-| File | Change |
-|---|---|
-| `ontologies/core_v1.yaml` | Move `oe:Competency` from `reserved` (lines 132-148) into `classes`, per its existing promotion note (lines 128-130) |
-| `schemas/common.defs.yaml` | Add `competencyId` `$def` (`^OE-COMPETENCY-[0-9]{6}$`), alongside `conceptId`/`lpmId`/`strandId`/`learningObjectId` |
-| `schemas/competency.schema.yaml` | New file — the draft appendix above, promoted from `proposed` to `stable` |
-| `docs/oecb_specifications.md` §12 | Mark the `oe:Competency`/CASE mapping as fulfilled, referencing this RFC |
-
-This pass (drafting the RFC) touches only `proposals/0002-competency-case-profile.md` and the companion design note — none of the files above are modified yet.
+| File | Change | Status |
+|---|---|---|
+| `ontologies/core_v1.yaml` | Moved `oe:Competency` from `reserved` into `classes`, per its existing promotion note | Done, 2026-07-19 (v1.3.0) |
+| `schemas/common.defs.yaml` | Added `competencyId` `$def` (`^OE-COMPETENCY-[0-9]{6}$`), alongside `conceptId`/`lpmId`/`strandId`/`learningObjectId` | Done, 2026-07-19 (v1.3.0) |
+| `schemas/competency.schema.yaml` | New file — promoted from this RFC's draft appendix, `stable`, v1.0.0 | Done, 2026-07-19 |
+| `docs/oecb_specifications.md` §12 | Marked the `oe:Competency`/CASE mapping fulfilled, referencing this RFC | Done, 2026-07-19 |
 
 ## Review
 
-- [ ] Domain editor approval
-- [ ] Maintainer approval
-- [ ] Confirm license-compatibility rule and `associationType` table against `D:\dev\openevo-ccs-lab\OpenCASE` again at merge time, in case the fork has moved since 2026-07-19
+- [x] Domain editor approval
+- [x] Maintainer approval — maintainer team consensus, 2026-07-19, including the decision to promote immediately rather than defer to Phase 4
+- [x] License-compatibility rule and `associationType` table confirmed against `D:\dev\openevo-ccs-lab\OpenCASE` directly (local checkout, 2026-07-19) before this RFC was drafted
