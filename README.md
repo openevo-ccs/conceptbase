@@ -5,7 +5,8 @@
 [![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
 [![License: CC-BY 4.0](https://img.shields.io/badge/Content%20License-CC--BY%204.0-lightgrey.svg)](LICENSE)
 [![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
-[![Specification](https://img.shields.io/badge/Spec-v0.2.0-blue)](docs/oecb_specifications.md)
+[![Specification](https://img.shields.io/badge/Spec-v0.3.0-blue)](docs/oecb_specifications.md)
+[![Ontology](https://img.shields.io/badge/Ontology-v1.3.0-blue)](ontologies/core_v1.yaml)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
 [![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
 [![Formalism](https://img.shields.io/badge/Formalism-YAML%20→%20JSON--LD%20%2F%20RDF-orange)](schemas/)
@@ -81,14 +82,25 @@ Those live in independently governed companion repositories (see [The Ecosystem]
 
 OECB is in **Phase 1** of a deliberately staged rollout (see [`docs/oecb_specifications.md`](docs/oecb_specifications.md) for the full rationale). Rather than stabilizing the entire vision at once, Phase 1 exists to validate the hardest, highest-leverage ideas — disambiguation and identifier stability — against one real pilot before expanding scope.
 
+Two accepted RFCs have since pulled work forward from later phases ahead of schedule — see "Forward-implemented ahead of schedule" below the table.
+
 | Phase | Status | Contents |
 |---|---|---|
-| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`); Concept/LPM/Strand schemas; seed vocabularies (`BIO-CORE-v1.0.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process |
-| **Phase 2 — Alignment & Multilinguality** | ⚪ Planned | SKOS-based cross-vocabulary alignment records with provenance; language-tagged labels/definitions beyond `en` |
+| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`, plus `Competency` — promoted early, see below); Concept/LPM/Strand/Competency schemas; seed vocabularies (`BIO-CORE-v1.0.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process; sandbox tier and `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)) |
+| **Phase 2 — Alignment & Multilinguality** | 🟡 Started ahead of schedule | Two SKOS-based cross-vocabulary alignment records with provenance already drafted (see [`alignments/`](alignments/)); language-tagged labels/definitions beyond `en` still planned |
 | **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
-| **Phase 4 — Ecosystem Tooling** | ⚪ Planned | Competency and evidence schemas; hosted SPARQL query endpoint; CI compatibility-checker action for dependent repositories |
+| **Phase 4 — Ecosystem Tooling** | 🟡 Started ahead of schedule | `oe:Competency` profiled against CASE `CFItem` and promoted out of `reserved` ([RFC-0002](proposals/0002-competency-case-profile.md), see [`docs/design-notes/case-competency-profile.md`](docs/design-notes/case-competency-profile.md)); evidence schema, hosted SPARQL endpoint, and CI compatibility-checker action still planned |
 
-Reserved ontology classes for later phases (`Collection`, `Competency`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core_v1.yaml`](ontologies/core_v1.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change.
+Reserved ontology classes for later phases (`Collection`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core_v1.yaml`](ontologies/core_v1.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change. `Competency` was reserved the same way and has since been promoted (see below).
+
+### Forward-implemented ahead of schedule
+
+The Phase 1 pilot review surfaced two changes worth making immediately rather than deferring to their originally-scheduled phase. Both went through the full RFC process (see [Governance & Contributing](#governance--contributing)):
+
+- **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-######`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
+- **[RFC-0002](proposals/0002-competency-case-profile.md)** — profiled `oe:Competency` as an extension of CASE (1EdTech) `CFItem` and promoted it out of `reserved` into a stable Phase 1 class, ahead of its original Phase 4 slot, after verifying the mapping against a reference CASE implementation.
+
+Ontology `v1.3.0`, spec `v0.3.0` reflect both RFCs.
 
 ---
 
@@ -100,39 +112,50 @@ conceptbase/
 ├── GOVERNANCE.md             # RFC process, versioning policy, deprecation rules
 ├── CONTRIBUTING.md
 ├── LICENSE                   # CC-BY-4.0 (content)
-├── LICENSE-CODE               # MIT (build tooling)
+├── LICENSE-CODE              # MIT (build/validation tooling, app/)
 │
 ├── docs/
-│   └── oecb_specifications.md # Full design specification (this is the source of truth)
+│   ├── oecb_specifications.md    # Full design specification (this is the source of truth)
+│   └── design-notes/             # Investigation notes backing specific RFCs
+│       └── case-competency-profile.md
 │
 ├── ontologies/
-│   └── core_v1.yaml          # Phase 1 TBox: Concept, LPM, Strand, SubStrand, LearningObject
+│   └── core_v1.yaml          # TBox: Concept, LPM, Strand, SubStrand, LearningObject, Competency
 │
 ├── schemas/
 │   ├── common.defs.yaml      # Shared $defs: IDs, semver, localized strings, citations
 │   ├── concept.schema.yaml
 │   ├── lpm.schema.yaml
 │   ├── strand.schema.yaml
-│   └── learningObject.schema.yaml
+│   ├── learningObject.schema.yaml
+│   ├── competency.schema.yaml    # CASE CFItem profile (RFC-0002)
+│   └── alignment.schema.yaml     # Phase 2 cross-vocabulary alignment records
 │
 ├── vocabularies/
 │   ├── BIO-CORE-v1.0.0.yaml
 │   └── OE-INTERDISCIPLINARY-v1.0.0.yaml
 │
-├── alignments/                # Phase 2 — cross-vocabulary mappings w/ provenance
-├── grade-schemas/             # Phase 3 — multiple grade-banding systems
-├── subject-schemas/           # Phase 3 — multiple subject taxonomies
-├── competencies/              # Phase 4 — CASE-profiled competency schemas
-├── evidence/                  # Phase 4 — xAPI-profiled evidence schemas
-├── licenses/                  # Licensing recommendation templates for dependent repos
+├── alignments/                # Phase 2, forward-implemented — 2 records so far
+│   ├── OE-ALIGN-000001.yaml
+│   └── OE-ALIGN-000002.yaml
 │
-├── registry/                  # Generated: identifier index, resolver config
-├── validation/                 # JSON Schema / SHACL validators
-├── build/                     # YAML → JSON-LD/RDF compilation pipeline
-├── proposals/                  # RFC submissions (see GOVERNANCE.md)
-├── examples/                  # Minimal worked examples for each schema
-└── docs/
+├── app/                       # ConceptBase Explorer — static client-side app, see below
+│   ├── index.html
+│   ├── css/
+│   └── js/
+│
+├── scripts/
+│   └── check_related_symmetry.py  # Standalone SKOS symmetry checker (not yet wired into CI)
+│
+├── proposals/                 # RFC submissions (see GOVERNANCE.md)
+│   ├── TEMPLATE.md
+│   ├── 0001-sandbox-tier-and-retraction.md
+│   └── 0002-competency-case-profile.md
+│
+└── .github/workflows/          # CI: deploys app/ to GitHub Pages
 ```
+
+Not yet created, but referenced elsewhere in this README as future scope: `grade-schemas/`, `subject-schemas/` (Phase 3), `evidence/` (Phase 4), `registry/`, `validation/`, `build/`, `examples/` — a build/validation pipeline doesn't exist yet (`scripts/check_related_symmetry.py` is a standalone script in the meantime, not CI-wired).
 
 ---
 
@@ -154,7 +177,7 @@ OECB is built as a set of profiles and extensions of existing standards, not a p
 | Need | Standard Reused | What OECB Adds |
 |---|---|---|
 | Concept relations, cross-vocabulary mapping | **SKOS** (`skos:broader`, `skos:related`, `skos:closeMatch`, etc.) | Discipline-specific disambiguation; curriculum-specific concept types |
-| Competency / standards frameworks | **CASE** (1EdTech) | Alignment to OpenEvo's interdisciplinary vocabulary *(Phase 4)* |
+| Competency / standards frameworks | **CASE** (1EdTech) | `oe:Competency` profiled directly against CASE `CFItem` (see [`schemas/competency.schema.yaml`](schemas/competency.schema.yaml), [RFC-0002](proposals/0002-competency-case-profile.md)) |
 | Learning object / resource metadata | **IEEE LOM**, **schema.org/LearningResource** | Grade/subject schema binding, strand nesting *(Phase 4)* |
 | Evidence / activity records | **xAPI** | Evidence categories specific to progression modeling *(Phase 4)* |
 | Graph serialization | **RDF / JSON-LD** | OpenEvo domain ontology (`oe:LPM`, `oe:Strand`, `oe:Concept`, …) under `www.w3id.org/openevo/` |
@@ -185,13 +208,14 @@ https://www.w3id.org/openevo/vocab/BIO-CORE     →  resolves to the vocabulary 
 
 **Validating a concept entry against the schema:**
 
+The `validation/` tooling and `oecb-validate` CLI referenced by earlier drafts of this doc are planned (Phase 4 CI compatibility-checker), not yet built. In the meantime, validate a vocabulary entry against a schema with any standard JSON Schema validator, e.g.:
+
 ```bash
-# via the validation/ tooling (CI-ready)
-oecb-validate --schema schemas/concept.schema.yaml \
-              --file vocabularies/BIO-CORE-v1.0.0.yaml
+# using check-jsonschema (or any 2020-12-draft-compatible validator)
+check-jsonschema --schemafile schemas/concept.schema.yaml vocabularies/BIO-CORE-v1.0.0.yaml
 ```
 
-See [`examples/`](examples/) for minimal worked examples of a Concept, an LPM manifest, and a Strand file.
+A dedicated `examples/` directory of minimal worked examples is also planned but not yet present — for now, the vocabulary files in [`vocabularies/`](vocabularies/) and the alignment records in [`alignments/`](alignments/) double as worked examples.
 
 ---
 
@@ -218,6 +242,10 @@ Two reference LPMs currently demonstrate this pattern end-to-end, each built str
 - **`bio-core-k12-lpm`** — a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`.
 - **`oe-interdisciplinary-k12-lpm`** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`.
 
+### ConceptBase Explorer
+
+A static, client-side app (in [`app/`](app/), deployed to GitHub Pages via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)) for loading, exploring, comparing, and annotating ConceptBase-aligned LPM repositories directly from the GitHub API — no backend, no server-side state. It's the practical, hands-on way to browse the vocabularies and reference LPMs described above, and its annotation-export pattern (draft YAML in the browser → human-reviewed PR) is the template future import tooling (e.g. a CASE competency importer) is expected to follow, per RFC-0002.
+
 ### Why Pluralism Matters
 
 These two pilot LPMs are deliberately built from *different* vocabularies rather than a shared one — this is a feature, not a gap. Evolution education research contains genuine, unresolved theoretical disagreement about whether organism/agent behavior belongs in a scientifically adequate causal explanation of evolutionary change (compare, e.g., Kampourakis 2020 with Hanisch et al. 2026). Rather than adjudicating that debate inside the ConceptBase, OECB's role is to let *both* positions be represented as internally consistent, independently valid vocabularies — `BIO-CORE` (decentralized-causation framing) and `OE-INTERDISCIPLINARY` (agency-inclusive framing) — that can still be formally compared once [Phase 2 alignment records](#current-status) exist. This is the pluralism the ConceptBase is designed to support: **contested theoretical questions in a field should be representable as data, not resolved by fiat in the infrastructure layer.**
@@ -229,9 +257,9 @@ These two pilot LPMs are deliberately built from *different* vocabularies rather
 Every addition — a new concept, relation, schema, or vocabulary — goes through a structured RFC process:
 
 1. **Propose** via a PR to `proposals/`, using the template (motivation, proposed IRI under `www.w3id.org/openevo/`, why no existing standard covers it).
-2. **Review** by the relevant domain editor(s) plus at least one maintainer.
-3. **Lifecycle status** tracked explicitly: `proposed → accepted → stable → deprecated → superseded`.
-4. **Never deleted** — deprecated entities remain resolvable indefinitely with a `supersededBy` pointer, so dependent repositories are never broken by an upstream change.
+2. **Review**, split by how much permanence is at stake ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)): a single maintainer (or a 5-business-day no-objection window) is enough for a new sandbox-tier entry or a `proposed`-status draft; the full domain-editor + maintainer bar applies specifically to `proposed → accepted` promotion and sandbox → permanent promotion — the moment the never-delete guarantee actually starts to apply.
+3. **Lifecycle status** tracked explicitly: `proposed → accepted → stable → deprecated/superseded`, plus a parallel terminal `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)) for entities accepted in error or no longer endorsed, with no implied replacement.
+4. **Never deleted** (permanent tier only) — deprecated, superseded, and retracted entities all remain resolvable indefinitely, so dependent repositories are never broken by an upstream change. Controlled-vocabulary concepts can also be tried first in a **sandbox tier** (`OE-SANDBOX-CONCEPT-######`, 12-month expiry unless promoted) before taking on that permanence commitment.
 
 Each vocabulary, schema, and ontology module is versioned independently using semver (`MAJOR.MINOR.PATCH`), with breaking changes requiring a major version bump and a documented migration path.
 
@@ -243,11 +271,14 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 
 - [x] Phase 1: Core ontology, schemas, and two seed vocabularies
 - [x] Phase 1: End-to-end pilot with two independent reference LPMs
-- [ ] Phase 2: SKOS alignment records between `BIO-CORE` and `OE-INTERDISCIPLINARY`
+- [x] Phase 1: ConceptBase Explorer app for browsing/annotating pilot LPMs
+- [x] Phase 1 (RFC-0001): Sandbox tier, two-speed review, `retracted` status
+- [x] Phase 4 (RFC-0002, ahead of schedule): `oe:Competency` profiled against CASE `CFItem`
+- [x] Phase 2 (ahead of schedule): First two SKOS alignment records between `BIO-CORE` and `OE-INTERDISCIPLINARY`
 - [ ] Phase 2: Multilingual label/definition expansion beyond `en`
 - [ ] Phase 3: Grade-band schema registry (US K–12, OECD, OpenEvo 4-band/6-band)
 - [ ] Phase 3: Subject-area schema registry
-- [ ] Phase 4: Competency, assessment, and evidence schemas (CASE/xAPI-profiled)
+- [ ] Phase 4: Assessment and evidence schemas (xAPI-profiled)
 - [ ] Phase 4: Hosted SPARQL endpoint and CI compatibility-checker action
 
 Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../milestones).
@@ -259,7 +290,7 @@ Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../mil
 If you use OECB in research or curriculum tooling, please cite:
 
 ```
-OpenEvo CCS Lab (2025). OpenEvo Concept Base (v0.2.0) [Data infrastructure].
+OpenEvo CCS Lab (2025). OpenEvo Concept Base (v0.3.0) [Data infrastructure].
 https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 ```
 
@@ -268,7 +299,7 @@ https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 ## License
 
 - **Content** (ontology, schemas, vocabularies, documentation): [CC-BY 4.0](LICENSE)
-- **Code** (build pipeline, validation tooling): [MIT](LICENSE-CODE)
+- **Code** (build pipeline, validation tooling, [ConceptBase Explorer](app/)): [MIT](LICENSE-CODE)
 
 ---
 
