@@ -1,44 +1,76 @@
 # Design note: profiling `oe:Competency` off CASE `CFItem`
 
-**Status:** Informative — a pre-RFC design input, not itself a proposal. Does not touch spec §3/§11, so it does not need the `specification-amendment` process in [`../../proposals/TEMPLATE.md`](../../proposals/TEMPLATE.md). When this is mature enough to act on, it becomes an ordinary `content`-type RFC against `/proposals/`, per spec §11.2 and §12.
+**Status:** Informative — a pre-RFC design input, not itself a proposal. Does not touch spec §3/§11, so it does not need the `specification-amendment` process. See [`../../proposals/0002-competency-case-profile.md`](../../proposals/0002-competency-case-profile.md) for the formal `content`-type RFC drafted from this note.
 
-**Grounding:** spec `docs/oecb_specifications.md` §12 requires `oe:Competency` to be "profiled as an extension of CASE `CFItem`, not a novel structure." `ontologies/core_v1.yaml` line 138 carries the same note on the reserved `oe:Competency` class. The reference implementation is a separate repository, **[github.com/openevo-ccs/OpenCASE](https://github.com/openevo-ccs/OpenCASE)** (a fork of 1EdTech's official OpenCASE, Apache-2.0, TypeScript) — it is not vendored into or part of `conceptbase`. Everything below was checked directly against that repository as of 2026-07-19; it supersedes an earlier analysis that mistakenly assumed this code lived at `apps/opencase/` inside `conceptbase` itself.
+**Grounding:** spec `docs/oecb_specifications.md` §12 requires `oe:Competency` to be "profiled as an extension of CASE `CFItem`, not a novel structure." `ontologies/core_v1.yaml` line 138 carries the same note on the reserved `oe:Competency` class. The reference implementation, **[github.com/openevo-ccs/OpenCASE](https://github.com/openevo-ccs/OpenCASE)** (a fork of 1EdTech's official OpenCASE, Apache-2.0, TypeScript, same `openevo-ccs` GitHub org as this repo), is now cloned locally at `D:\dev\openevo-ccs-lab\OpenCASE`. Everything below was verified directly against that checkout on 2026-07-19, and corrects two material errors in an earlier GitHub-only-sourced draft of this note (the `associationType` vocabulary and the license catalog, both flagged inline below).
 
-## What actually exists in OpenCASE
+## The CASE data model, as actually implemented
 
-- `apps/opencase/schemas/` contains the real, vendored CASE JSON Schemas for both versions: `case-v1p1-cfpackage.json`, `-cfdocument.json`, `-cfitem.json`, `-cfassociation.json`, and the same four for `v1p0`, plus an `official/` subdirectory.
-- `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` documents a real integration pattern: a browser-based visual editor (React + react-flow) that persists frameworks to OpenCASE over REST, authenticated via Keycloak/JWT with a client-per-tenant model. It maps `CFDocument` → framework, `CFItem` → nodes, `CFAssociation` → edges, and recommends `POST .../CFPackages` for full-bundle publishes or targeted `PUT`s for individual entities.
-- The `CFAssociation` schema's key fields, confirmed directly: `sourcedId` (UUID), `uri`, `originNodeURI` / `destinationNodeURI` (each a `LinkGenURI` object), optional `CFDocumentURI`, required `lastChangeDateTime`, optional `sequenceNumber`, optional `extensions`. (Correction to an earlier draft of this analysis: the field is `destinationNodeURI`, not `destNodeURI`, and the association's own identifier field is `sourcedId`, not `identifier`.)
-- `associationType` is documented as an **extensible enumerated vocabulary**, not a closed enum. The values actually present in the schema: `isChildOf`, `isParentOf`, `isPartOf`, `hasPart`, `isPeerOf`, `precedes`, `isRelatedTo`, `exactMatchOf`, `replacedBy`, `replaces`, `exemplar`, `isExemplarOf`. (Correction: an earlier draft additionally listed `hasSkillLevel` and `isTranslationOf` — these were not found in the actual schema and should not be assumed present without a direct re-check before anything depends on them.)
-- A license catalog resembling `defaultLicenses.ts` could **not** be confirmed — GitHub code search on this repo required authentication this session couldn't provide. Treat "what license options OpenCASE actually offers" as unverified until someone with direct repo access confirms it; don't build a license-compatibility gate against an assumed list.
+`apps/opencase/schemas/` holds two tiers of schema per CASE version (`v1p0`, `v1p1`):
+- **Lightweight app schemas** (`case-v1p1-cfitem.json`, `-cfassociation.json`, `-cfdocument.json`, `-cfpackage.json`) — what OpenCASE actually loads to validate its own REST endpoints. Looser than the spec: `associationType` is typed as an unconstrained string, not enforced against any enum.
+- **`official/case-v1p1-cfpackage.json`** — the unmodified IMS-authored schema (908 lines), the real interoperability target. It enforces `associationType` as a closed `oneOf`: one of a 10-value enum, or an `ext:`-prefixed custom string.
+
+**CFItem** (required: `sourcedId` [UUID], `uri`, `fullStatement`, `lastChangeDateTime`, `CFDocumentURI` [a `LinkGenURI`: `title`+`identifier`+`uri`, optional `targetType` defaulting to `"CASE"`]). Optional: `humanCodingScheme`, `abbreviatedStatement`, `alternativeLabel`, `CFItemType`/`CFItemTypeURI`, `conceptKeywords`/`conceptKeywordsURI`, `notes`, `language`, `educationLevel` (string array), `licenseURI`, `statusStartDate`/`statusEndDate`, and — new in v1.1 only — `subject`/`subjectURI` and `extensions`.
+
+**CFAssociation** (required: `sourcedId`, `uri`, `associationType`, `originNodeURI`, `destinationNodeURI`, `lastChangeDateTime`; optional: `CFDocumentURI`, `sequenceNumber`, `extensions`).
+
+**`associationType` — corrected.** The real, enforced CASE v1.1 vocabulary (per `official/case-v1p1-cfpackage.json` and the schemas' own `README.md`, which agree with each other) is:
+
+```
+isChildOf, isPeerOf, isPartOf, exactMatchOf, precedes,
+isRelatedTo, replacedBy, exemplar, hasSkillLevel, isTranslationOf
+```
+
+plus a `ext:[A-Za-z0-9._-]+` pattern for custom types. An earlier draft of this note listed a different 12-value set (`isChildOf, isParentOf, isPartOf, hasPart, isPeerOf, precedes, isRelatedTo, exactMatchOf, replacedBy, replaces, exemplar, isExemplarOf`) — that list is real, but it's stale CASE-1.0-era *description text* left inside the lightweight `case-v1p1-cfassociation.json` file, not an enforced constraint and not the current spec vocabulary. Use the 10-value list above for interoperability; don't assume OpenCASE's own API will reject the older values, since its live validator doesn't check the enum at all.
+
+## Real API and auth model
+
+Documented in `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md`:
+- Auth: Keycloak-issued JWT (RS256), Authorization Code + PKCE for browser clients, **client-per-tenant** (`tenant-<tenantId>` Keycloak client), roles carried in `resource_access[clientId].roles`.
+- **Provider API** (`/ims/case/v1p1/*`, also `v1p0`) — read-only, spec-aligned. **Management API** (`/management/*`) — non-standard writes/admin (`POST`/`PUT`/`DELETE`), always creates a new immutable version file on disk (`data/tenants/<tenantId>/v1p1/frameworks/<docId>/<docId>_v0001.json`, etc.).
+- Publishing: `POST /management/tenants/{tenantId}/ims/case/v1p1/CFPackages` (full bundle, new revision) or targeted `PUT .../{CFDocuments|CFItems|CFAssociations}/{id}` (existing entities only — there's no `POST` for individual new items/associations outside a bundle).
+- Unauthenticated `GET /public/tenant-lookup?email=...` always returns `202`, body optionally carrying `{ tenantId }` — deliberately silent on no-match to prevent enumeration.
+
+**Recommendation: any OECB integration point should be the read-only Provider API only.** OECB never needs write access to OpenCASE — it consumes published frameworks, it doesn't author them there.
+
+## License catalog — corrected, now confirmed
+
+`apps/opencase/src/domain/case/seed/defaultLicenses.ts` seeds exactly 5 `CFLicense` records per tenant, attached to a framework via `CFDocument.licenseURI` (a link object referencing the `CFLicense` resource — never inline text):
+
+| # | Title | URI | CC-BY-4.0 compatible? |
+|---|---|---|---|
+| 1 | Public Domain (CC0 1.0) | `creativecommons.org/publicdomain/zero/1.0/` | Yes — more permissive |
+| 2 | Open — Credit Required (CC BY 4.0) | `creativecommons.org/licenses/by/4.0/` | Yes — exact match |
+| 3 | Educational Use (CC BY-NC-SA 4.0) | `creativecommons.org/licenses/by-nc-sa/4.0/` | **No** — NC + ShareAlike conflict |
+| 4 | View and Share Only (CC BY-NC-ND 4.0) | `creativecommons.org/licenses/by-nc-nd/4.0/` | **No** — NC + NoDerivatives |
+| 5 | Private — All Rights Reserved | (none) | **No** |
+
+A companion `PUBLIC_LICENSE_IDS` set marks #1–#3 as granting unauthenticated read access; that's an OpenCASE access-control concern, orthogonal to OECB's redistribution question — #3 is publicly readable but still not redistributable as CC-BY. Any future import tooling's license-compatibility gate should mechanically reject #3/#4/#5, not treat "publicly readable" as a proxy for "reusable."
 
 ## Proposed profile sketch
 
-**Identifier bridging.** An `oe:Competency` minted from a CFItem should treat the OpenCASE-assigned CFItem `uri` (not `sourcedId` alone, since `uri` is the network-resolvable form) as authoritative provenance, retained on the OECB side as a required field (e.g. `oe:sourceCFItemURI`) rather than discarded. The OECB side still mints its own permanent `OE-COMPETENCY-######` identifier at `accepted`+, per the existing identifier scheme in `schemas/common.defs.yaml` — this is a new entity in OECB's own permanent space, provenance-linked to, not aliased from, the CASE source.
+**Identifier bridging.** An `oe:Competency` minted from a CFItem retains its CASE origin as provenance — `CFItem.uri` (network-resolvable) and `CFItem.sourcedId` (UUID) — without reusing either as the OECB primary key. OECB mints its own permanent `OE-COMPETENCY-######` at `accepted`+, per the identifier scheme in `schemas/common.defs.yaml`.
 
-**Association-type mapping.** Using the verified enum above, not the earlier unverified one:
+**Association-type mapping**, using the corrected 10-value vocabulary:
 
 | CASE `associationType` | Candidate OECB use |
 |---|---|
-| `isChildOf` / `isPartOf` / `hasPart` / `isParentOf` | Strand/SubStrand nesting (`oe:hasSubStrand`) |
+| `isChildOf` / `isPartOf` | Strand/SubStrand nesting (`oe:hasSubStrand`) |
 | `precedes` | Progression ordering within an LPM |
 | `exactMatchOf` | Phase 2 alignment `matchType` ≈ `skos:exactMatch` |
 | `isRelatedTo` | Phase 2 alignment `matchType` ≈ `skos:related` |
-| `replacedBy` / `replaces` | Existing `supersededBy` deprecation pointer (and its inverse) |
-| `exemplar` / `isExemplarOf` | No current OECB analogue — flag as open, don't force a mapping |
+| `replacedBy` | Existing `supersededBy` deprecation pointer |
+| `isPeerOf` | No clean OECB analogue yet — closest is `skos:related`, but peer-ness is symmetric-by-name only; needs its own check |
+| `exemplar` / `hasSkillLevel` / `isTranslationOf` | No current OECB analogue — flag as open, don't force a mapping |
 
-This table is a first draft for the eventual RFC to review, not a ratified mapping — per spec §9, OECB's SKOS-based alignment model carries formal semantics (transitivity, symmetry) that CASE's flat association vocabulary doesn't promise. Each row needs to be checked against actual behavior, not just label similarity, before being written into a schema.
+Per spec §9, OECB's SKOS-based alignment model carries formal semantics (transitivity, symmetry) that CASE's association vocabulary doesn't promise — each row above needs behavioral verification, not just label similarity, before being encoded into a schema.
 
-**License-compatibility gate.** `conceptbase` is CC-BY-4.0 (Design Principle 2, FAIR by construction). Before any CASE-authored framework content is pulled toward a future `competencies/` directory, its `licenseURI` must be checked against CC0/CC-BY(-SA) compatibility. This check should be mechanical (part of import tooling), not a manual judgment call — but it can't be specified precisely until OpenCASE's actual license catalog is confirmed (see above).
+**Reusable reference implementation.** `apps/editor/src/application/framework/mappers/case/snapshotToCaseDtos.ts` (and sibling files in that directory) already implement a clean, layered domain→CASE mapping (`domain/framework/model` → `application/framework` commands/mappers → `infrastructure/caseApi`). A future OECB importer going the other direction (CASE→OECB) should mirror that layering rather than inventing its own — it's a proven structural template, even though building the importer itself is out of scope for now.
 
-**Operational weight — explicitly deferred.** OpenCASE requires Docker, Keycloak/OIDC, per-tenant JWT auth, and stateful file storage — materially heavier than `conceptbase`'s Git+YAML+build-step model. Whether Phase 4 assumes a shared reference deployment, requires each dependent repo to self-host, or treats OpenCASE as schema-source-only with no runtime dependency, is a real decision that belongs in a Phase 4 RFC, not something to inherit by default from convenience.
+**Operational weight — confirmed, still deferred.** OpenCASE runs 5 Docker services (Traefik, Keycloak, dev-only Mailpit, the `opencase` API, the `editor` frontend) with **no database** — all framework data persists as versioned files under `apps/opencase/data/`. Keycloak is a hard dependency in every documented mode; there's no lightweight/no-auth fallback. The lightest real footprint is `apps/opencase/docker-compose.yml`'s standalone variant (just `case-provider` + Keycloak, no Traefik/editor/Mailpit) — still requires Keycloak, but drops the other three services. HTTPS deployment needs a real domain (Let's Encrypt); the HTTP dev path runs on bare `localhost`. Whether Phase 4 assumes a shared reference deployment, per-repo self-hosting, or schema-source-only (no runtime dependency at all) remains a decision for an actual Phase 4 RFC.
 
-**Data protection note.** The Keycloak/OIDC layer implies real user accounts and personal claims tied to authored frameworks. If a future RFC ever proposes a *shared* OpenCASE deployment rather than "each dependent repo self-hosts," that crosses from static-registry into data-processing-service territory and deserves a deliberate decision, not an inherited default.
+**Data protection note.** The Keycloak/OIDC layer implies real user accounts and personal claims tied to authored frameworks. A future RFC proposing a *shared* OpenCASE deployment (rather than "each dependent repo self-hosts") crosses from static-registry into data-processing-service territory and deserves a deliberate decision, not an inherited default.
 
 ## Not in scope here
 
 Spec §12 pairs CASE with `Competency` only. `Evidence` profiles off xAPI and `Assessment`/`Practice` have no standard assignment yet (per the reserved-class notes in `ontologies/core_v1.yaml`). Reaching for CFItem structures to model those, just because OpenCASE's tooling is already being examined, would need its own Design-Principle-4 justification independent of this note.
-
-## Next step
-
-When ready to formalize: open a `content`-type RFC against `/proposals/` using [`TEMPLATE.md`](../../proposals/TEMPLATE.md), scoped to the CFItem-extension profile and identifier-bridging rule above. Confirm the license catalog directly against the OpenCASE repo before that RFC asserts anything about it.
