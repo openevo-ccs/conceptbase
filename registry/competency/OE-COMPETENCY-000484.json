@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "6-8"
+  ],
+  "humanCodingScheme": "4-B-i.6-8.EU",
+  "id": "OE-COMPETENCY-000484",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000478"
+    ]
+  },
+  "statement": {
+    "en": "Computers can reason about physical phenomena using naive physics inference rules, which formalize our intuitive understanding of concepts such as mass, volume, forces, and motion. At present, computers are not very good at this."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

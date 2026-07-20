@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes"
+    }
+  ],
+  "educationLevel": [
+    "MS"
+  ],
+  "humanCodingScheme": "MS-LS1-4",
+  "id": "OE-COMPETENCY-000104",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000100"
+    ]
+  },
+  "statement": {
+    "en": "Use argument based on empirical evidence and scientific reasoning to support an explanation for how characteristic animal behaviors and specialized plant structures affect the probability of successful reproduction."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,19 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/ms-ls3-heredity-inheritance-and-variation-traits"
+    }
+  ],
+  "educationLevel": [
+    "MS"
+  ],
+  "humanCodingScheme": "MS-LS3",
+  "id": "OE-COMPETENCY-000115",
+  "statement": {
+    "en": "Heredity: Inheritance and Variation of Traits"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,33 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000003.yaml
+# ============================================================================
+# First concept-to-competency alignment (RFC-0008 unblocks the identifier
+# shape; this record is the first to use it). Directly tests Strand 1's
+# own claim (oe-interdisciplinary-k12, OE-STRAND-000213/000214) that
+# Selection is a genuine cross-domain mechanism by checking it against a
+# real NGSS performance expectation, not just the vocabulary's own say-so.
+# ============================================================================
+
+id: OE-ALIGN-000003
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000213
+object: NGSS-LIFE-SCIENCE-v1.0.0:OE-COMPETENCY-000150
+matchType: skos:closeMatch
+assertedBy:
+  - OpenEvo Computational Curriculum Studies Working Group
+date: "2026-07-20"
+status: proposed
+rationale: >
+  OE-INTERDISCIPLINARY's Selection (OE-CONCEPT-000213), biology-discipline
+  sense, and NGSS's HS-LS4-4 ("Construct an explanation based on evidence
+  for how natural selection leads to adaptation of populations",
+  OE-COMPETENCY-000150) describe the same mechanism: differential
+  persistence/reproduction of heritable variants driving population-level
+  change. Not asserted as skos:exactMatch because HS-LS4-4 is a
+  performance expectation (an assessable student action: "construct an
+  explanation") rather than a concept definition — its scope is somewhat
+  narrower (adaptation outcomes specifically) than OE-CONCEPT-000213's
+  full four-discipline definition, of which this is only the biology
+  sense. This is the strongest of the three alignments drafted alongside
+  it (OE-ALIGN-000004, OE-ALIGN-000005) — official science standards and
+  OECB's own biology-sense definition agree closely, unlike the more
+  speculative AI-analogy alignments.

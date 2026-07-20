@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS1-7",
+  "id": "OE-COMPETENCY-000132",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000125"
+    ]
+  },
+  "statement": {
+    "en": "Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of food molecules and oxygen molecules are broken and the bonds in new compounds are formed, resulting in a net transfer of energy."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics"
+    }
+  ],
+  "educationLevel": [
+    "MS"
+  ],
+  "humanCodingScheme": "MS-LS2-1",
+  "id": "OE-COMPETENCY-000110",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000109"
+    ]
+  },
+  "statement": {
+    "en": "Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations of organisms in an ecosystem."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

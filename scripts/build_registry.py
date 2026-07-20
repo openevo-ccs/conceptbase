@@ -10,7 +10,8 @@ www.w3id.org/openevo/concept/{id} etc. have something real to redirect to,
 the same way RFC-0001/0002 pulled other Phase 2/4 work forward early.
 
 Reads:
-    vocabularies/*.yaml   -> registry/concept/{id}.json      (one per concept)
+    vocabularies/*.yaml   -> registry/concept/{id}.json      (one per oe:Concept)
+    vocabularies/*.yaml   -> registry/competency/{id}.json   (one per oe:Competency, RFC-0008)
     alignments/*.yaml     -> registry/alignment/{id}.json    (one per record)
     (hand-maintained, mirrors GOVERNANCE.md "Identifier Block Allocation")
                           -> registry/lpm-index.json
@@ -81,6 +82,24 @@ def build_concepts():
     return count
 
 
+def build_competencies():
+    # RFC-0008: vocabularies authored as oe:Competency (NGSS-LIFE-SCIENCE,
+    # AI4K12) use a top-level `competencies:` key instead of `concepts:` -
+    # this was never wired in when RFC-0002 introduced oe:Competency,
+    # despite common.defs.yaml's competencyId doc-comment already promising
+    # https://www.w3id.org/openevo/competency/{id} resolves.
+    count = 0
+    for vocab_path in sorted(glob.glob(os.path.join(REPO_ROOT, "vocabularies", "*.yaml"))):
+        with open(vocab_path, encoding="utf-8") as f:
+            vocab = yaml.safe_load(f)
+        for competency in vocab.get("competencies", []):
+            competency_id = competency["id"]
+            out_path = os.path.join(REGISTRY_DIR, "competency", f"{competency_id}.json")
+            write_json(out_path, competency)
+            count += 1
+    return count
+
+
 def build_alignments():
     count = 0
     for align_path in sorted(glob.glob(os.path.join(REPO_ROOT, "alignments", "*.yaml"))):
@@ -104,11 +123,13 @@ def build_strand_index():
 
 def main():
     n_concepts = build_concepts()
+    n_competencies = build_competencies()
     n_alignments = build_alignments()
     build_lpm_index()
     build_strand_index()
-    print(f"Wrote {n_concepts} concept file(s), {n_alignments} alignment file(s), "
-          f"and lpm-index.json/strand-index.json under {os.path.relpath(REGISTRY_DIR, REPO_ROOT)}/")
+    print(f"Wrote {n_concepts} concept file(s), {n_competencies} competency file(s), "
+          f"{n_alignments} alignment file(s), and lpm-index.json/strand-index.json "
+          f"under {os.path.relpath(REGISTRY_DIR, REPO_ROOT)}/")
     return 0
 
 

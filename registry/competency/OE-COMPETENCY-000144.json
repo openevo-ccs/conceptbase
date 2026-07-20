@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls3-heredity-inheritance-and-variation-traits"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS3-2",
+  "id": "OE-COMPETENCY-000144",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000142"
+    ]
+  },
+  "statement": {
+    "en": "Make and defend a claim based on evidence that inheritable genetic variations may result from (1) new genetic combinations through meiosis, (2) viable errors occurring during replication, and/or (3) mutations caused by environmental factors."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

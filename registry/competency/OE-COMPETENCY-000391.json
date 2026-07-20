@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "6-8"
+  ],
+  "humanCodingScheme": "3-A-v.6-8.LO",
+  "id": "OE-COMPETENCY-000391",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000388"
+    ]
+  },
+  "statement": {
+    "en": "Compare how a decision tree learning algorithm works vs. how a neural network learning algorithm works."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

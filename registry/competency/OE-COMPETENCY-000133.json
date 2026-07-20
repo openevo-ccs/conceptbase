@@ -1,0 +1,19 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS2",
+  "id": "OE-COMPETENCY-000133",
+  "statement": {
+    "en": "Ecosystems: Interactions, Energy, and Dynamics"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

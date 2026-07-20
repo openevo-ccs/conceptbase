@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "6-8"
+  ],
+  "humanCodingScheme": "1-B-ii.6-8.EU",
+  "id": "OE-COMPETENCY-000241",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000235"
+    ]
+  },
+  "statement": {
+    "en": "Locations and orientations of edges in an image are features that can be detected by looking for specific arrangements of light and dark pixels in a small (local) area."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

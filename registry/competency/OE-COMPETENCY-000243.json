@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "9-12"
+  ],
+  "humanCodingScheme": "1-B-ii.9-12.EU",
+  "id": "OE-COMPETENCY-000243",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000235"
+    ]
+  },
+  "statement": {
+    "en": "A speech spectrogram shows the energy present in a waveform in various frequency bands. Formants are auditory features defined as regions of concentrated energy in the spectrogram. Feature extraction from images begins with detecting edges in the image, or intensity gradients at multiple scales."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

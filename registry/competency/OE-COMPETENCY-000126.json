@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS1-1",
+  "id": "OE-COMPETENCY-000126",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000125"
+    ]
+  },
+  "statement": {
+    "en": "Construct an explanation based on evidence for how the structure of DNA determines the structure of proteins, which carry out the essential functions of life through systems of specialized cells."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

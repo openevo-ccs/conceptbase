@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics"
+    }
+  ],
+  "educationLevel": [
+    "MS"
+  ],
+  "humanCodingScheme": "MS-LS2-4",
+  "id": "OE-COMPETENCY-000113",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000109"
+    ]
+  },
+  "statement": {
+    "en": "Construct an argument supported by empirical evidence that changes to physical or biological components of an ecosystem affect populations."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS2-4",
+  "id": "OE-COMPETENCY-000137",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000133"
+    ]
+  },
+  "statement": {
+    "en": "Use mathematical representations to support claims for the cycling of matter and flow of energy among organisms in an ecosystem."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

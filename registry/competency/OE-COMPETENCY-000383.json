@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "3-5"
+  ],
+  "humanCodingScheme": "3-A-iv.3-5.EU",
+  "id": "OE-COMPETENCY-000383",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000381"
+    ]
+  },
+  "statement": {
+    "en": "In preparation for training a model, training data can be labeled by first defining the classes (the labels) and then adding examples for each class separately."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

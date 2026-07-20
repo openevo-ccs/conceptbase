@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "3-5"
+  ],
+  "humanCodingScheme": "4-D-i.3-5.EU",
+  "id": "OE-COMPETENCY-000500",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000496"
+    ]
+  },
+  "statement": {
+    "en": "\"Narrow AI\" has given us a collection of algorithms that are good at specific things. \"Broad AI\" or \"General AI\" promises to give us general reasoning ability comparable to a human."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

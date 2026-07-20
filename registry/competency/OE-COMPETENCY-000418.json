@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "K-2"
+  ],
+  "humanCodingScheme": "3-C-i.K-2.EU",
+  "id": "OE-COMPETENCY-000418",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000416"
+    ]
+  },
+  "statement": {
+    "en": "We can get a computer to classify things by describing them in terms of feature values the computer can reason about. People choose the features."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

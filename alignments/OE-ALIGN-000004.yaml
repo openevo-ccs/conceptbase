@@ -1,0 +1,48 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000004.yaml
+# ============================================================================
+# Tests oe-interdisciplinary-k12's Strand 1, SubStrand OE-STRAND-000214
+# (9-12) performance indicator: "Explains what is genuinely analogous and
+# what is genuinely different between biological selection and
+# algorithmic selection (e.g., a genetic algorithm's fitness function)."
+# AI4K12's five progression charts never actually name genetic algorithms
+# or fitness functions -- the closest real content is reinforcement
+# learning's trial-and-error framing (Big Idea 3, "Learning from
+# experience"). Recorded as skos:relatedMatch, not skos:closeMatch,
+# because that gap is itself the finding: the LPM's parenthetical example
+# is a looser analogy than its own prose implies once checked against a
+# real AI-literacy standard.
+# ============================================================================
+
+id: OE-ALIGN-000004
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000090
+object: AI4K12-v1.0.0:OE-COMPETENCY-000395
+matchType: skos:relatedMatch
+assertedBy:
+  - OpenEvo Computational Curriculum Studies Working Group
+date: "2026-07-20"
+status: proposed
+rationale: >
+  OE-INTERDISCIPLINARY's Evolutionary Process (OE-CONCEPT-000090, "any
+  process by which variants are generated, selected, and transmitted
+  across iterations within a system") shares a structural pattern with
+  AI4K12's "Nature of Learning (Learning from experience)" row
+  (OE-COMPETENCY-000395, 3-A-vi): both describe an iterative process that
+  narrows down a space of possibilities toward better-performing variants
+  over repeated trials -- reinforcement learning's "hundreds of thousands
+  of games" of trial and error is structurally reminiscent of generations
+  of selection acting on heritable variation. This is deliberately
+  recorded as skos:relatedMatch rather than skos:closeMatch: reinforcement
+  learning's trial-and-error search and biological/cultural selection are
+  not the same mechanism (reinforcement learning has no analogue of
+  heritable variation between "generations" of a single learning run, and
+  its "reinforcement signal" is an externally-defined objective, not an
+  emergent consequence of differential persistence). The LPM's own
+  performance indicator (OE-STRAND-000214, 9-12) asks students to
+  articulate exactly this genuine-analogy-vs-genuine-difference
+  distinction; this alignment record is the evidentiary check for that
+  claim, and its matchType level (relatedMatch, not closeMatch) is itself
+  part of the answer -- the analogy is real but looser than a casual
+  reading of "algorithmic selection" might suggest, and AI4K12 does not
+  cover genetic algorithms specifically at all, only reinforcement
+  learning's related but distinct trial-and-error structure.

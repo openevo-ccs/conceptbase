@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "K-2"
+  ],
+  "humanCodingScheme": "1-C-ii.K-2.EU",
+  "id": "OE-COMPETENCY-000273",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000271"
+    ]
+  },
+  "statement": {
+    "en": "Speech recognition systems need to accommodate different languages because many different types of people will use them."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -36,6 +36,7 @@ RewriteRule ^vocab/([A-Za-z0-9.\-]+)$ https://raw.githubusercontent.com/openevo-
 # conceptbase's generated flat-JSON registry (scripts/build_registry.py),
 # published via GitHub Pages alongside the ConceptBase Explorer app.
 RewriteRule ^concept/([A-Za-z0-9\-]+)$ https://openevo-ccs.github.io/conceptbase/registry/concept/$1.json [R=302,L]
+RewriteRule ^competency/([A-Za-z0-9\-]+)$ https://openevo-ccs.github.io/conceptbase/registry/competency/$1.json [R=302,L]
 RewriteRule ^alignment/([A-Za-z0-9\-]+)$ https://openevo-ccs.github.io/conceptbase/registry/alignment/$1.json [R=302,L]
 
 # LPMs and Strands live in independently governed dependent repositories,

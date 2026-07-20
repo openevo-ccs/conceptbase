@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "6-8"
+  ],
+  "humanCodingScheme": "2-A-iii.6-8.EU",
+  "id": "OE-COMPETENCY-000305",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000299"
+    ]
+  },
+  "statement": {
+    "en": "A graph is a collection of labeled nodes connected by labeled links. Every link has a source node and a target node; every node has a set of incoming links and a set of outgoing links. Trees are a special case of graphs."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

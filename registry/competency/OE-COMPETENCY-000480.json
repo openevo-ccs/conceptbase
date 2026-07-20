@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "K-2"
+  ],
+  "humanCodingScheme": "4-B-i.K-2.EU",
+  "id": "OE-COMPETENCY-000480",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000478"
+    ]
+  },
+  "statement": {
+    "en": "Choosing the most likely ending for a story is an example of commonsense reasoning, which requires knowledge about people and things, and how they behave, that computers may not have."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

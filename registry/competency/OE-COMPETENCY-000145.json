@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls3-heredity-inheritance-and-variation-traits"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS3-3",
+  "id": "OE-COMPETENCY-000145",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000142"
+    ]
+  },
+  "statement": {
+    "en": "Apply concepts of statistics and probability to explain the variation and distribution of expressed traits in a population."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

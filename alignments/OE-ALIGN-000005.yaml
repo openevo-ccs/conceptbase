@@ -1,0 +1,47 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000005.yaml
+# ============================================================================
+# Tests oe-interdisciplinary-k12's Strand 2, SubStrand OE-STRAND-000224
+# (9-12, elective) performance indicator: "Analyzes a case where a
+# designed system (e.g., a recommendation algorithm) exhibits both
+# intentional design (agency) and emergent, non-designed behavior."
+# AI4K12's Big Idea 4 "Philosophy of Mind" row is the closest real content
+# addressing whether/how an AI system can be said to possess agency-like
+# properties, though it frames the question at the level of general
+# machine consciousness/intentionality rather than OE-INTERDISCIPLINARY's
+# specific "capacity to regulate behavior toward a goal-state" definition.
+# ============================================================================
+
+id: OE-ALIGN-000005
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000211
+object: AI4K12-v1.0.0:OE-COMPETENCY-000496
+matchType: skos:relatedMatch
+assertedBy:
+  - OpenEvo Computational Curriculum Studies Working Group
+date: "2026-07-20"
+status: proposed
+rationale: >
+  OE-INTERDISCIPLINARY's Agency (OE-CONCEPT-000211) is defined in its own
+  vocabulary (via OE-STRAND-000223's performance indicator) as "a capacity
+  to regulate behavior toward a goal-state, without requiring conscious
+  intention" -- deliberately scoped to include non-conscious biological
+  agency (e.g., an earthworm's niche-constructing behavior). AI4K12's
+  "Philosophy of Mind" row (OE-COMPETENCY-000496, 4-D-i) addresses a
+  related but distinct question: whether an AI system possesses
+  consciousness, self-awareness, or "broad"/general intelligence, working
+  up to a 9-12 debate over whether computers can achieve human-like
+  intelligence. Recorded as skos:relatedMatch rather than skos:closeMatch
+  because Strand 2's own performance indicator (OE-STRAND-000224) asks
+  about a narrower, more concrete case (does a recommendation algorithm's
+  behavior count as "agency" in OE-INTERDISCIPLINARY's non-conscious
+  sense?) than AI4K12's broader philosophical framing (is the AI system
+  as a whole conscious or generally intelligent?). A recommendation
+  algorithm optimizing engagement is a much better fit for
+  OE-INTERDISCIPLINARY's deflationary, non-conscious Agency definition
+  than for AI4K12's consciousness-centered framing -- suggesting the two
+  vocabularies are reaching for adjacent but not identical questions, and
+  that Strand 2's elective substrand may need its own bridging language
+  (or a citation to AI4K12's Big Idea 5 "Ethical AI" rows, e.g. 5-A-i on
+  stakeholder impact, which addresses "emergent, non-designed behavior"
+  more directly than Philosophy of Mind does) rather than treating this
+  alignment as settled.

@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "6-8"
+  ],
+  "humanCodingScheme": "4-A-iv.6-8.EU",
+  "id": "OE-COMPETENCY-000475",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000469"
+    ]
+  },
+  "statement": {
+    "en": "NLP tasks include text summarization, text generation, sentiment analysis, question answering, machine translation, and conversational interaction."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

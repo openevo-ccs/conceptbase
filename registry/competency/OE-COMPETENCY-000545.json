@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "9-12"
+  ],
+  "humanCodingScheme": "5-B-ii.9-12.LO",
+  "id": "OE-COMPETENCY-000545",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000540"
+    ]
+  },
+  "statement": {
+    "en": "Identify areas where it is appropriate to regulate use of AI technologies and evaluate regulations that have been proposed."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

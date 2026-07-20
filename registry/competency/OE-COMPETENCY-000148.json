@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity"
+    }
+  ],
+  "educationLevel": [
+    "HS"
+  ],
+  "humanCodingScheme": "HS-LS4-2",
+  "id": "OE-COMPETENCY-000148",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000146"
+    ]
+  },
+  "statement": {
+    "en": "Construct explanations showing that evolution results from four factors: species' reproductive potential, heritable genetic variation through mutation and sexual reproduction, competition for limited resources, and differential survival and reproduction of better-adapted organisms."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

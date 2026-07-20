@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "3-5"
+  ],
+  "humanCodingScheme": "5-B-i.3-5.EU",
+  "id": "OE-COMPETENCY-000535",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000531"
+    ]
+  },
+  "statement": {
+    "en": "AI-powered services are used to look up information, to provide voice interfaces to many kinds of apps, to make recommendations based on a person's interests, and to make cars safer."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

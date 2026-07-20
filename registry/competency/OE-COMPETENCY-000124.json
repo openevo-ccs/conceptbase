@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity"
+    }
+  ],
+  "educationLevel": [
+    "MS"
+  ],
+  "humanCodingScheme": "MS-LS4-6",
+  "id": "OE-COMPETENCY-000124",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000118"
+    ]
+  },
+  "statement": {
+    "en": "Use mathematical representations to support explanations of how natural selection may lead to increases and decreases of specific traits in populations over time."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "9-12"
+  ],
+  "humanCodingScheme": "1-A-iii.9-12.EU",
+  "id": "OE-COMPETENCY-000225",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000219"
+    ]
+  },
+  "statement": {
+    "en": "Radar and lidar do depth imaging: each pixel is a depth value. GPS triangulates position using satellite signals and gives a location as longitude and latitude. Accelerometers measure acceleration in 3 orthogonal dimensions."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

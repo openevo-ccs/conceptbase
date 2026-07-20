@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "NGSS Lead States (2013). Next Generation Science Standards: For States, By States. Washington, DC: The National Academies Press.",
+      "url": "https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes"
+    }
+  ],
+  "educationLevel": [
+    "MS"
+  ],
+  "humanCodingScheme": "MS-LS1-1",
+  "id": "OE-COMPETENCY-000101",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000100"
+    ]
+  },
+  "statement": {
+    "en": "Conduct an investigation to provide evidence that living things are made of cells; either one cell or many different numbers and types of cells."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "6-8"
+  ],
+  "humanCodingScheme": "4-C-i.6-8.EU",
+  "id": "OE-COMPETENCY-000493",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000487"
+    ]
+  },
+  "statement": {
+    "en": "Computers can recognize human emotional states by looking at facial expressions, gaze, gestures, body language, tone of voice, and choice of words."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

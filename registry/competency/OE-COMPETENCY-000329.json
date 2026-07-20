@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "3-5"
+  ],
+  "humanCodingScheme": "2-B-ii.3-5.LO",
+  "id": "OE-COMPETENCY-000329",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000326"
+    ]
+  },
+  "statement": {
+    "en": "Given a state of a game such as tic-tac-toe or nim, draw a search tree showing all possible next moves and their resulting states, and pick the best next move."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

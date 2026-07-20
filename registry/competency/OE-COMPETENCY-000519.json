@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "3-5"
+  ],
+  "humanCodingScheme": "5-A-ii.3-5.EU",
+  "id": "OE-COMPETENCY-000519",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000515"
+    ]
+  },
+  "statement": {
+    "en": "An AI system is transparent if we know what data and decision making criteria it uses. Part of transparency is having the system provide explanations for its decisions."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

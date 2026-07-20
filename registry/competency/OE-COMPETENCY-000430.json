@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "9-12"
+  ],
+  "humanCodingScheme": "3-C-ii.9-12.LO",
+  "id": "OE-COMPETENCY-000430",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000425"
+    ]
+  },
+  "statement": {
+    "en": "Evaluate a dataset used to train a real AI system by considering the size of the dataset, the way that the data were acquired and labeled, the storage required, and the estimated time to produce the dataset."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

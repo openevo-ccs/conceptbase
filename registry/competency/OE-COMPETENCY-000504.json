@@ -1,0 +1,24 @@
+{
+  "citations": [
+    {
+      "text": "AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence, Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF award DRL-1846073.",
+      "url": "https://ai4k12.org/gradeband-progression-charts/"
+    }
+  ],
+  "educationLevel": [
+    "9-12"
+  ],
+  "humanCodingScheme": "4-D-i.9-12.EU",
+  "id": "OE-COMPETENCY-000504",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000496"
+    ]
+  },
+  "statement": {
+    "en": "Some AI experts and philosophers have argued that computers can never achieve fully human-like intelligence, while others believe that AI will eventually exceed human intelligence."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}
