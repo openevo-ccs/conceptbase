@@ -1,0 +1,5629 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: AI4K12
+# ============================================================================
+# Path: /vocabularies/AI4K12-v1.0.0.yaml
+#
+# AI4K12 Initiative's "Five Big Ideas in Artificial Intelligence" grade-band
+# progression charts (Perception, Representation & Reasoning, Learning,
+# Natural Interaction, Societal Impact), transcribed from ai4k12.org.
+#
+# License: CC BY-NC-SA 4.0 (AI4K12's own stated license) -- an exact match
+# to OECB's own content license as of RFC-0004, so full statement text is
+# included with attribution; no citationOnly restriction applies (contrast
+# the Virginia CASE Satchel finding).
+#
+# Structure (RFC-0007): 3-level hierarchy via skos:broader --
+#   Big Idea (5) -> Concept-row (44) -> per-grade-band LO/EU pair (334).
+# LO (Learning Objective) and EU (Enduring Understanding) are modeled as
+# separate entries per RFC-0007, since they are pedagogically distinct
+# (what students DO vs. what they KNOW). "Unpacked" enrichment prose and
+# "Activity"/"Resource" text from the source charts are intentionally not
+# reproduced -- each entry's `statement` is a single concise statement,
+# matching CASE's own fullStatement convention, not the source's full
+# explanatory prose. A cell absent from the source's grade-band table
+# ("N/A") has no corresponding entries.
+# ============================================================================
+
+meta:
+  id: AI4K12
+  version: 1.0.0
+  status: proposed
+  scope: >
+    AI4K12's Five Big Ideas in Artificial Intelligence: Perception,
+    Representation & Reasoning, Learning, Natural Interaction, Societal
+    Impact -- K-2, 3-5, 6-8, and 9-12 grade bands.
+  discipline: computer-science
+  license: CC-BY-NC-SA-4.0
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-COMPETENCY-v1.1.0
+  phase: 1
+
+competencies:
+- id: OE-COMPETENCY-000200
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: BI1
+  statement:
+    en: Perception
+  citations:
+  - &id001
+    text: AI4K12 Initiative (2020-2022). Five Big Ideas in Artificial Intelligence,
+      Grade Band Progression Charts. A joint project of AAAI and CSTA, funded by NSF
+      award DRL-1846073.
+    url: https://ai4k12.org/gradeband-progression-charts/
+- id: OE-COMPETENCY-000201
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i
+  statement:
+    en: Sensing (Living Things)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000202
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.K-2.LO
+  statement:
+    en: Identify human senses and sensory organs.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000203
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.K-2.EU
+  statement:
+    en: People experience the world through sight, hearing, touch, taste, and smell.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000204
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.3-5.LO
+  statement:
+    en: Compare human and animal perception.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000205
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.3-5.EU
+  statement:
+    en: Some animals experience the world differently than people do.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000206
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.6-8.LO
+  statement:
+    en: Give examples of how humans combine information from multiple modalities.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000207
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.6-8.EU
+  statement:
+    en: People can exploit correlations between senses, such as sight and sound, to
+      make sense of ambiguous signals.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000208
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.9-12.LO
+  statement:
+    en: N/A for AI purposes at this band.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000209
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-i.9-12.EU
+  statement:
+    en: This topic has already been adequately addressed in the lower grade bands.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000201
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000210
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii
+  statement:
+    en: Sensing (Computer Sensors)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000211
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.K-2.LO
+  statement:
+    en: Locate and identify sensors (camera, microphone) on computers, phones, robots,
+      and other devices.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000212
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.K-2.EU
+  statement:
+    en: Computers "see" through video cameras and "hear" through microphones.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000213
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.3-5.LO
+  statement:
+    en: Illustrate how computer sensing differs from human sensing.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000214
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.3-5.EU
+  statement:
+    en: Most computers have no sense of taste, smell, or touch, but they can sense
+      some things that humans can't, such as infrared emissions, extremely low or
+      high frequency sounds, or magnetism.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000215
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.6-8.LO
+  statement:
+    en: Give examples of how intelligent agents combine information from multiple
+      sensors.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000216
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.6-8.EU
+  statement:
+    en: Self driving cars combine computer vision with radar or lidar imaging, GPS
+      measurement, and accelerometer data to form a detailed representation of the
+      environment and their motion through it.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000217
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.9-12.LO
+  statement:
+    en: Describe the limitations and advantages of various types of computer sensors.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000218
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-ii.9-12.EU
+  statement:
+    en: Sensors are devices that measure physical phenomena such as light, sound,
+      temperature, or pressure.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000210
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000219
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii
+  statement:
+    en: Sensing (Digital Encoding)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000220
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii.3-5.LO
+  statement:
+    en: Explain how images are represented digitally in a computer.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000219
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000221
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii.3-5.EU
+  statement:
+    en: Images are encoded as 2D arrays of pixels, where each pixel is a number indicating
+      the brightness of that piece of the image, or an RGB value indicating the brightness
+      of the red, green, and blue components of that piece.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000219
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000222
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii.6-8.LO
+  statement:
+    en: Explain how sounds are represented digitally in a computer.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000219
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000223
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii.6-8.EU
+  statement:
+    en: Sounds are digitally encoded by sampling the waveform at discrete points (typically
+      several thousand samples per second), yielding a series of numbers.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000219
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000224
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii.9-12.LO
+  statement:
+    en: Explain how radar, lidar, GPS, and accelerometer data are represented.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000219
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000225
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-A-iii.9-12.EU
+  statement:
+    en: 'Radar and lidar do depth imaging: each pixel is a depth value. GPS triangulates
+      position using satellite signals and gives a location as longitude and latitude.
+      Accelerometers measure acceleration in 3 orthogonal dimensions.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000219
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000226
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i
+  statement:
+    en: Processing (Sensing vs. Perception)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000227
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.K-2.LO
+  statement:
+    en: Give examples of intelligent vs. nonintelligent machines and discuss what
+      makes a machine intelligent.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000228
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.K-2.EU
+  statement:
+    en: Many machines use sensors, but not all use them intelligently. Non-intelligent
+      machines are limited to simple sensing. Intelligent machines demonstrate perception.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000229
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.3-5.LO
+  statement:
+    en: Use a software tool such as a speech transcription or visual object recognition
+      demo to demonstrate machine perception, and explain why this is perception rather
+      than mere sensing.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000230
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.3-5.EU
+  statement:
+    en: Perception is the extraction of meaning from sensory signals.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000231
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.6-8.LO
+  statement:
+    en: Give examples of different types of computer perception that can extract meaning
+      from sensory signals.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000232
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.6-8.EU
+  statement:
+    en: There are many specialized algorithms for perceptual tasks, such as face detection,
+      facial expression recognition, object recognition, obstacle detection, speech
+      recognition, vocal stress measurement, music recognition, etc.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000233
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.9-12.LO
+  statement:
+    en: Explain perception algorithms and how they are used in real-world applications.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000234
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-i.9-12.EU
+  statement:
+    en: Many devices and services rely on specialized perception algorithms, e.g.,
+      license plate readers, zip code readers, face-based phone unlocking, tagging
+      people in Facebook posts, object identification (e.g., Google Lens), or voice-based
+      customer service.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000226
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000235
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii
+  statement:
+    en: Processing (Feature Extraction)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000236
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.K-2.LO
+  statement:
+    en: Give examples of features one would look for if one wanted to recognize a
+      certain class of objects (e.g., cats) in an image.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000237
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.K-2.EU
+  statement:
+    en: The visual features of an object include its subparts, textures, and colors.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000238
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.3-5.LO
+  statement:
+    en: Illustrate how face detection works by extracting facial features.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000239
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.3-5.EU
+  statement:
+    en: Face detectors use special algorithms to look for eyes, noses, mouths, and
+      jaw lines.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000240
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.6-8.LO
+  statement:
+    en: Illustrate the concept of feature extraction from images by simulating an
+      edge detector.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000241
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.6-8.EU
+  statement:
+    en: Locations and orientations of edges in an image are features that can be detected
+      by looking for specific arrangements of light and dark pixels in a small (local)
+      area.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000242
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.9-12.LO
+  statement:
+    en: Explain how features are extracted from waveforms and images.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000243
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-ii.9-12.EU
+  statement:
+    en: A speech spectrogram shows the energy present in a waveform in various frequency
+      bands. Formants are auditory features defined as regions of concentrated energy
+      in the spectrogram. Feature extraction from images begins with detecting edges
+      in the image, or intensity gradients at multiple scales.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000235
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000244
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii
+  statement:
+    en: 'Processing (Abstraction Pipeline: Language)'
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000245
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.K-2.LO
+  statement:
+    en: Describe the different sounds that make up one's spoken language, and for
+      every vowel sound, give a word containing that sound.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000246
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.K-2.EU
+  statement:
+    en: In order for a computer to understand speech, it has to be able to recognize
+      the sounds from which words are constructed.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000247
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.3-5.LO
+  statement:
+    en: Illustrate how sequences of sounds can be recognized as candidate words, even
+      if some sounds are unclear.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000248
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.3-5.EU
+  statement:
+    en: Going from sounds to words is one step in the abstraction pipeline for speech
+      understanding.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000249
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.6-8.LO
+  statement:
+    en: Illustrate how sequences of words can be recognized as phrases, even if some
+      of the words are unclear, by looking at how the words fit together.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000250
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.6-8.EU
+  statement:
+    en: Information at higher levels of representation can be used to resolve ambiguities
+      in lower levels of the language abstraction pipeline.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000251
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.9-12.LO
+  statement:
+    en: Illustrate the abstraction hierarchy for speech understanding, from waveforms
+      to sentences, showing how knowledge at each level is used to resolve ambiguities
+      in the levels below.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000252
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iii.9-12.EU
+  statement:
+    en: 'The spoken language hierarchy is: waveforms -> articulatory gestures -> sounds
+      -> morphemes -> words -> phrases -> sentences.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000244
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000253
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv
+  statement:
+    en: 'Processing (Abstraction Pipeline: Vision)'
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000254
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.K-2.LO
+  statement:
+    en: Demonstrate figure/ground segmentation by identifying the foreground figures
+      and the background in an image.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000255
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.K-2.EU
+  statement:
+    en: Visual scenes have a structure that includes a background and a foreground,
+      with foreground objects partially occluding (blocking) the background.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000256
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.3-5.LO
+  statement:
+    en: Illustrate how the outlines of partially occluded (blocked) objects in an
+      image differ from the real shapes of the objects.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000257
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.3-5.EU
+  statement:
+    en: Understanding complex scenes requires taking into account the effects of occlusion
+      when attempting to recognize objects.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000258
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.6-8.LO
+  statement:
+    en: Describe how edge detectors can be composed to form more complex feature detectors,
+      e.g., for letters or shapes.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000259
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.6-8.EU
+  statement:
+    en: The progression from signal to meaning takes place in stages, with increasingly
+      complex features extracted at each stage.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000260
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.9-12.LO
+  statement:
+    en: Demonstrate how perceptual reasoning at a higher level of abstraction draws
+      upon earlier, lower levels of abstraction.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000261
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-B-iv.9-12.EU
+  statement:
+    en: Scenes are composed of objects, which are composed of surfaces and boundaries.
+      Boundaries are marked by contours, which are composed of edges, which are made
+      up of pixels.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000253
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000262
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i
+  statement:
+    en: Domain Knowledge (Types of Domain Knowledge)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000263
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.K-2.LO
+  statement:
+    en: Describe some things an intelligent agent must "know" in order to make sense
+      of a question.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000264
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.K-2.EU
+  statement:
+    en: To understand spoken requests, computers must know our vocabulary and pronunciation
+      conventions, and they must be able to distinguish a question from a command.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000265
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.3-5.LO
+  statement:
+    en: Demonstrate how a text to speech system can resolve ambiguity based on context,
+      and how its error rate goes up when given ungrammatical or meaningless inputs.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000266
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.3-5.EU
+  statement:
+    en: Speech recognition systems are trained on millions of utterances, allowing
+      them to distinguish common from uncommon sequences of words, which helps them
+      select the most likely interpretation of the signal.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000267
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.6-8.LO
+  statement:
+    en: Classify a given image (e.g., "traffic scene", "nature scene", "social gathering",
+      etc.) and then describe the kinds of knowledge a computer would need in order
+      to understand scenes of this type.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000268
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.6-8.EU
+  statement:
+    en: Domain knowledge for vision includes knowing what kinds of objects are likely
+      to appear in a scene, where they are likely to appear in relation to other objects,
+      and how occlusions and shadows can alter object appearances.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000269
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.9-12.LO
+  statement:
+    en: Analyze one or more online image datasets and describe the information the
+      datasets provide and how this can be used to extract domain knowledge for a
+      computer vision system.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000270
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-i.9-12.EU
+  statement:
+    en: Domain knowledge in AI systems is often derived from statistics collected
+      from millions of sentences or images.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000262
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000271
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii
+  statement:
+    en: Domain Knowledge (Inclusivity)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000200
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000272
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.K-2.LO
+  statement:
+    en: Discuss why intelligent agents need to be able to understand languages other
+      than English.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000273
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.K-2.EU
+  statement:
+    en: Speech recognition systems need to accommodate different languages because
+      many different types of people will use them.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000274
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.3-5.LO
+  statement:
+    en: Discuss how domain knowledge needs to be broad enough to encompass all the
+      groups an application is intended to serve.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000275
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.3-5.EU
+  statement:
+    en: Speech recognition systems need to accommodate different types of accents
+      and alternative pronunciations. Music recognition systems must know about different
+      musical genres.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000276
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.6-8.LO
+  statement:
+    en: Describe how a vision system might exhibit cultural bias if it lacked knowledge
+      of objects not found in the culture of the people who created it.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000277
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.6-8.EU
+  statement:
+    en: Domain knowledge must take multiple cultures into account if an AI application
+      is to serve diverse groups.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000278
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.9-12.LO
+  statement:
+    en: Describe some of the technical difficulties in making computer perception
+      systems function well for diverse groups.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000279
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 1-C-ii.9-12.EU
+  statement:
+    en: Dark or low contrast facial features are harder to recognize than bright,
+      high contrast features. Children's speech is in a higher register and less clearly
+      articulated than adult speech.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000271
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000280
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: BI2
+  statement:
+    en: Representation & Reasoning
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000281
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i
+  statement:
+    en: Representation (Abstraction)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000282
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.K-2.LO
+  statement:
+    en: Construct a map of a home, school, or neighborhood.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000283
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.K-2.EU
+  statement:
+    en: The map is not the territory. A map is a representation of a territory.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000284
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.3-5.LO
+  statement:
+    en: Demonstrate how different styles of map capture different aspects of the world.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000285
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.3-5.EU
+  statement:
+    en: Maps can be geometrically accurate or just show which places are reachable
+      from which other places (topology). They can contain many types of information,
+      such as the names and sizes of cities and towns, or the types of roads connecting
+      them.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000286
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.6-8.LO
+  statement:
+    en: Show how a game board (e.g., tic-tac-toe, Chutes and Ladders, Monopoly, chess)
+      can be represented by a description in plain language.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000287
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.6-8.EU
+  statement:
+    en: The essential information in a game board is the set of squares that make
+      up the board, the relationships among those squares, and the positions of the
+      pieces.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000288
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.9-12.LO
+  statement:
+    en: Describe how to represent a concept as a schema.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000289
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-i.9-12.EU
+  statement:
+    en: A schema describes a concept by listing its superconcepts and defining its
+      properties, some of which may be inherited from superconcepts.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000281
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000290
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii
+  statement:
+    en: Representation (Symbolic representations)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000291
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.K-2.LO
+  statement:
+    en: Give examples of symbols you encounter in daily life.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000292
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.K-2.EU
+  statement:
+    en: Concepts can be represented using symbols in place of words.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000293
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.3-5.LO
+  statement:
+    en: Give examples of tree structures commonly used by people and explain the relationships
+      among the components.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000294
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.3-5.EU
+  statement:
+    en: Many types of information have a hierarchical structure, which can be visualized
+      as a tree.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000295
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.6-8.LO
+  statement:
+    en: Illustrate translation of a structure such as a game board, road map, or mind
+      map into a labeled graph and explain the contributions of the components.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000296
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.6-8.EU
+  statement:
+    en: The nodes of a graph represent things, and the links represent relationships
+      between those things. Labels supply additional information about what the nodes
+      and links represent.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000297
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.9-12.LO
+  statement:
+    en: Translate the premises of a syllogism expressed in English into logical notation
+      and complete the syllogism correctly.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000298
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-ii.9-12.EU
+  statement:
+    en: Syllogisms represent statements about categories and instances in a way that
+      allows computers to derive new knowledge from existing knowledge by following
+      simple inference rules.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000290
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000299
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii
+  statement:
+    en: Representation (Data structures)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000300
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.K-2.LO
+  statement:
+    en: Draw a tree by repeatedly splitting each branch into sub-branches multiple
+      times, and putting a piece of data at each branch.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000301
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.K-2.EU
+  statement:
+    en: A tree is a way of organizing information.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000302
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.3-5.LO
+  statement:
+    en: Describe the parts of a tree and how those parts are related.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000303
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.3-5.EU
+  statement:
+    en: A tree is a collection of labeled nodes, each of which (save the root) has
+      a link to a parent node above it in the hierarchy. Childless nodes are called
+      leaves or terminal nodes; those with children are non-terminal nodes.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000304
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.6-8.LO
+  statement:
+    en: Describe the parts of a graph and how those parts are related.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000305
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.6-8.EU
+  statement:
+    en: A graph is a collection of labeled nodes connected by labeled links. Every
+      link has a source node and a target node; every node has a set of incoming links
+      and a set of outgoing links. Trees are a special case of graphs.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000306
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.9-12.LO
+  statement:
+    en: Describe how schemas are used to structure information about people, places,
+      or things in knowledge graphs.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000307
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iii.9-12.EU
+  statement:
+    en: A schema specifies the attributes of the concept being described, and its
+      relationships to other concepts, e.g., the Restaurant schema inherits properties
+      from the FoodEstablishment schema.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000299
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000308
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv
+  statement:
+    en: Representation (Feature vectors)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000309
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.K-2.LO
+  statement:
+    en: Identify the features that make each object in a collection unique, and create
+      a table of features to organize the objects.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000310
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.K-2.EU
+  statement:
+    en: Objects can be described in terms of the features they possess.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000311
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.3-5.LO
+  statement:
+    en: Construct a feature vector representation for a set of objects and show how
+      similar objects are close together in feature space.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000312
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.3-5.EU
+  statement:
+    en: Recommender systems represent things like movies, books, consumer products,
+      or social media posts using feature vectors.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000313
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.6-8.LO
+  statement:
+    en: Explain how word embeddings (which are feature vectors) represent words as
+      sequences of numbers.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000314
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.6-8.EU
+  statement:
+    en: Word embeddings are a key part of neural natural language processing, including
+      machine translation (e.g., Google Translate) and text generation systems (BERT,
+      GPT3, etc.)
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000315
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.9-12.LO
+  statement:
+    en: Describe how a transformer network operates.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000316
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-A-iv.9-12.EU
+  statement:
+    en: Transformer networks map sequences of input words to sequences of output words,
+      where words are represented as feature vectors.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000308
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000317
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i
+  statement:
+    en: Search (State spaces and operators)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000318
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.K-2.LO
+  statement:
+    en: Illustrate a next possible state in the game of tic-tac-toe given a starting
+      state.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000319
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.K-2.EU
+  statement:
+    en: A game such as tic-tac-toe can be described as a sequence of states, where
+      each move transitions from a state to a successor state.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000320
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.3-5.LO
+  statement:
+    en: Illustrate how a computer can represent the playing of a game such as tic-tac-toe
+      or nim by drawing the linear sequence of board positions produced by the players'
+      moves.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000321
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.3-5.EU
+  statement:
+    en: Computers play games and solve puzzles by creating a sequence of states (board
+      positions) connected by legal moves, using an algorithm to choose their next
+      move at each step.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000322
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.6-8.LO
+  statement:
+    en: Illustrate how a computer can solve a maze, find a route on a map, or reason
+      about concepts in a knowledge graph by drawing a search tree.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000323
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.6-8.EU
+  statement:
+    en: Computers solve mazes, find driving routes, and reason about concepts in knowledge
+      graphs using graph search algorithms, which construct search trees.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000324
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.9-12.LO
+  statement:
+    en: Identify types of real-world problems that are search problems and describe
+      their states and operators.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000325
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-i.9-12.EU
+  statement:
+    en: Computers can solve many types of problems using search techniques if the
+      problem can be described in terms of finding a path from a start state to a
+      goal state.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000317
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000326
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii
+  statement:
+    en: Search (Combinatorial search)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000327
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.K-2.LO
+  statement:
+    en: Draw a simple search tree to illustrate two possible choices of moves by drawing
+      two different successor states to a given tic-tac-toe game board state, forming
+      a tree.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000328
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.K-2.EU
+  statement:
+    en: A computer must make choices when playing games, in the same way that humans
+      do.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000329
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.3-5.LO
+  statement:
+    en: Given a state of a game such as tic-tac-toe or nim, draw a search tree showing
+      all possible next moves and their resulting states, and pick the best next move.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000330
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.3-5.EU
+  statement:
+    en: Computer game playing programs may construct search trees to decide on their
+      next move.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000331
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.6-8.LO
+  statement:
+    en: Model the process of solving a graph search problem using breadth-first search
+      to draw a search tree.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000332
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.6-8.EU
+  statement:
+    en: Breadth-first search can be used to solve problems that involve reasoning
+      about graphs.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000333
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.9-12.LO
+  statement:
+    en: Illustrate breadth-first, depth-first, and best-first search algorithms to
+      grow a search tree for a graph search problem.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000334
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-B-ii.9-12.EU
+  statement:
+    en: There are multiple algorithms for generating a search tree, each with its
+      own advantages.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000326
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000335
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i
+  statement:
+    en: Reasoning (Types of reasoning problems)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000336
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.K-2.LO
+  statement:
+    en: Identify problems as either classification problems or search problems.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000337
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.K-2.EU
+  statement:
+    en: In classification problems we decide what kind of thing we have based on its
+      features. In search problems we find a path from a start to a goal, such as
+      finding a route on a map or exploring possible moves in a game.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000338
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.3-5.LO
+  statement:
+    en: Categorize problems as either classification problems or search problems.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000339
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.3-5.EU
+  statement:
+    en: Classification problems assign each input to one of a predetermined set of
+      classes. Search problems construct answers by applying operators to states to
+      generate new states.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000340
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.6-8.LO
+  statement:
+    en: Categorize problems as classification, prediction, combinatorial search, or
+      sequential decision problems.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000341
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.6-8.EU
+  statement:
+    en: Prediction problems are similar to classification problems except they estimate
+      a continuous value, such as height or daily temperature. Sequential decision
+      problems choose the next move for any given state in order to maximize overall
+      reward.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000342
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.9-12.LO
+  statement:
+    en: Categorize real-world problems as classification, prediction, sequential decision
+      problems, combinatorial search, heuristic search, adversarial search, logical
+      deduction, or statistical inference.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000343
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-i.9-12.EU
+  statement:
+    en: Reasoning problems can be categorized based on the types of inputs supplied,
+      the types of outputs to be produced, and the characteristics of the search space,
+      if applicable.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000335
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000344
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii
+  statement:
+    en: Reasoning (Reasoning algorithms)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000280
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000345
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.K-2.LO
+  statement:
+    en: Model the use of a classification or search algorithm to solve a problem.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000346
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.K-2.EU
+  statement:
+    en: Reasoning algorithms are ways to solve reasoning problems.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000347
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.3-5.LO
+  statement:
+    en: 'Describe the differences between two algorithms for classifying things: decision
+      trees, or neural networks like Teachable Machine.'
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000348
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.3-5.EU
+  statement:
+    en: Multiple algorithms can be used to solve a reasoning problem.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000349
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.6-8.LO
+  statement:
+    en: Compare several algorithms that could be used to solve a specific type of
+      reasoning problem.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000350
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.6-8.EU
+  statement:
+    en: The choice of reasoning algorithm depends on the characteristics of the input
+      data and the types of decisions to be made.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000351
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.9-12.LO
+  statement:
+    en: For each of these types of reasoning problems (classification, prediction,
+      sequential decision making, combinatorial search, heuristic search, adversarial
+      search, logical deduction, and statistical inference), list an algorithm that
+      could be used to solve that problem.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000352
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 2-C-ii.9-12.EU
+  statement:
+    en: AI includes a wide variety of reasoning algorithms for solving different types
+      of reasoning problems. Some use symbolic representations (e.g., search trees)
+      while others are numerical in nature (e.g., neural nets operating on feature
+      vectors).
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000344
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000353
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: BI3
+  statement:
+    en: Learning
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000354
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i
+  statement:
+    en: Nature of Learning (Humans vs. machines)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000355
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.K-2.LO
+  statement:
+    en: Describe and provide examples of how people learn and how computers learn.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000356
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.K-2.EU
+  statement:
+    en: Computers learn differently than people.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000357
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.3-5.LO
+  statement:
+    en: Differentiate between how people learn and how computers learn.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000358
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.3-5.EU
+  statement:
+    en: Both people and computers can learn by finding patterns in data, or by trial
+      and error. But people are flexible learners who can adapt to unfamiliar situations
+      and learn in other ways, such as by observing others, by asking questions, or
+      by making connections to prior learning.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000359
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.6-8.LO
+  statement:
+    en: Contrast the unique characteristics of human learning with the ways machine
+      learning systems operate.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000360
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.6-8.EU
+  statement:
+    en: People learn by observation, by being told, by asking questions, by experimentation,
+      by practice, and by making connections to past experience. Computers learn by
+      applying specialized algorithms to large amounts of training data, or by thousands
+      or even millions of trial and error experiences, to solve narrowly defined problems.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000361
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.9-12.LO
+  statement:
+    en: Define supervised, unsupervised, and reinforcement learning algorithms, and
+      give examples of human learning that are similar to each algorithm.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000362
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-i.9-12.EU
+  statement:
+    en: Both supervised and unsupervised learning algorithms find patterns in data.
+      Supervised learning uses features to predict the class label supplied by a teacher;
+      unsupervised learning groups similar instances together, creating its own classes.
+      Reinforcement learning uses trial and error to find a policy for choosing actions
+      that maximizes the reinforcement signal.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000354
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000363
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii
+  statement:
+    en: Nature of Learning (Finding patterns in data)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000364
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.K-2.LO
+  statement:
+    en: Identify patterns in labeled data and determine the features that predict
+      labels.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000365
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.K-2.EU
+  statement:
+    en: Classes can be defined in terms of feature values. The relevant features can
+      be inferred by examining labeled examples.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000366
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.3-5.LO
+  statement:
+    en: Model how supervised learning identifies patterns in labeled data.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000367
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.3-5.EU
+  statement:
+    en: When learning to classify labeled data, the patterns (or rules) that are discovered
+      can be expressed as weights in a neural network or nodes in a decision tree.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000368
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.6-8.LO
+  statement:
+    en: Model how unsupervised learning finds patterns in unlabeled data.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000369
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.6-8.EU
+  statement:
+    en: Unsupervised learning is useful when we don't know in advance what classes
+      exist. It discovers patterns (or classes) in data by grouping nearby points
+      into clusters.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000370
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.9-12.LO
+  statement:
+    en: Model how machine learning constructs a reasoner for classification or prediction
+      by adjusting the reasoner's parameters (its internal representations).
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000371
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-ii.9-12.EU
+  statement:
+    en: Supervised learning adjusts the parameters of a mathematical model (selected
+      in advance by a human) to generate correct classifications or predictions.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000363
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000372
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii
+  statement:
+    en: Nature of Learning (Training a model)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000373
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.K-2.LO
+  statement:
+    en: Demonstrate how to train a computer to recognize something.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000374
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.K-2.EU
+  statement:
+    en: Computers can learn from examples.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000375
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.3-5.LO
+  statement:
+    en: Train a classification model using machine learning, and then examine the
+      accuracy of the model on new inputs.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000376
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.3-5.EU
+  statement:
+    en: Computers can learn to classify instances or predict values by being shown
+      labeled examples. If the results on new inputs are unsatisfactory, additional
+      training may be required to improve the accuracy.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000377
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.6-8.LO
+  statement:
+    en: Train and evaluate a classification or prediction model using machine learning
+      on a tabular dataset.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000378
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.6-8.EU
+  statement:
+    en: Computers can learn to classify instances or predict values by examining feature
+      values. If the results on new inputs are unsatisfactory, additional training
+      may be required to improve the accuracy.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000379
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.9-12.LO
+  statement:
+    en: Use either a supervised or unsupervised learning algorithm to train a model
+      on real world data, then evaluate the results.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000380
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iii.9-12.EU
+  statement:
+    en: In supervised learning the model is trained on a training set to produce the
+      correct labels for labeled data. In unsupervised learning, the model is trained
+      to assign each input to a cluster of similar inputs.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000372
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000381
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv
+  statement:
+    en: Nature of Learning (Constructing vs. using a reasoner)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000382
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv.3-5.LO
+  statement:
+    en: Demonstrate how training data are labeled when using a machine learning tool.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000381
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000383
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv.3-5.EU
+  statement:
+    en: In preparation for training a model, training data can be labeled by first
+      defining the classes (the labels) and then adding examples for each class separately.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000381
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000384
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv.6-8.LO
+  statement:
+    en: Explain the difference between training and using a reasoning model.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000381
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000385
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv.6-8.EU
+  statement:
+    en: Machine learning algorithms use labeled training data to construct reasoning
+      models that do classification or prediction. Once training is complete, the
+      reasoning model can be applied to new data to solve problems or make decisions.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000381
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000386
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv.9-12.LO
+  statement:
+    en: Illustrate what happens during each of the steps required when using machine
+      learning to construct a classifier or predictor.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000381
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000387
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-iv.9-12.EU
+  statement:
+    en: 'The steps are: deciding what problem you want to solve, figuring out where
+      you will obtain the training data, choosing a feature set, figuring out how
+      to label the data, running the learning algorithm, use of a cross-validation
+      set to decide when training should stop, and using a test set to measure performance.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000381
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000388
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v
+  statement:
+    en: Nature of Learning (Adjusting internal representations)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000389
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v.3-5.LO
+  statement:
+    en: Analyze a game where one constructs a decision tree, describing the organization
+      of the tree and the learning algorithm used to add nodes.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000388
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000390
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v.3-5.EU
+  statement:
+    en: In a decision tree learning game, the tree's branch nodes are questions and
+      the leaf nodes are classes.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000388
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000391
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v.6-8.LO
+  statement:
+    en: Compare how a decision tree learning algorithm works vs. how a neural network
+      learning algorithm works.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000388
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000392
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v.6-8.EU
+  statement:
+    en: In decision tree learning, each step adds a new node, which tests a single
+      feature value. In neural network learning, each step makes a small change to
+      every weight in the network.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000388
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000393
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v.9-12.LO
+  statement:
+    en: Describe how various types of machine learning algorithms learn by adjusting
+      their internal representations.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000388
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000394
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-v.9-12.EU
+  statement:
+    en: Decision tree learners build decision trees by adding nodes one at a time.
+      Neural net learning algorithms adjust weights. Regression algorithms adjust
+      equation parameters. Reinforcement learners update value predictions or policies.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000388
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000395
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi
+  statement:
+    en: Nature of Learning (Learning from experience)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000396
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi.3-5.LO
+  statement:
+    en: Explain how reinforcement learning allows a computer to learn from experience
+      (i.e., trial and error).
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000395
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000397
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi.3-5.EU
+  statement:
+    en: Computers can learn from experience if there is a "reinforcement" signal indicating
+      whether the computer's actions are leading to good or bad outcomes.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000395
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000398
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi.6-8.LO
+  statement:
+    en: Explain the differences between supervised learning and reinforcement learning.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000395
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000399
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi.6-8.EU
+  statement:
+    en: Supervised learning tells the agent what output it should produce for each
+      input; reinforcement learning only tells the agent how well it's doing as it
+      chooses actions to take.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000395
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000400
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi.9-12.LO
+  statement:
+    en: Select the appropriate type of machine learning algorithm (supervised, unsupervised,
+      or reinforcement learning) to solve a reasoning problem.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000395
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000401
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-A-vi.9-12.EU
+  statement:
+    en: 'Major types of learning algorithms and the kinds of reasoning problems they
+      are used to solve are: supervised learning, used for classification and prediction;
+      unsupervised learning, used for clustering; and reinforcement learning, used
+      for sequential decision making.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000395
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000402
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i
+  statement:
+    en: Neural Networks (Structure of a neural network)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000403
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i.3-5.LO
+  statement:
+    en: Illustrate how a neural network of 1 to 3 neurons is a function that computes
+      an output.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000402
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000404
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i.3-5.EU
+  statement:
+    en: A neural network uses one or more neurons working together to form a function.
+      Each neuron takes a set of numbers as input and produces a single number as
+      its output.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000402
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000405
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i.6-8.LO
+  statement:
+    en: Illustrate the structure of a neural network and describe how its parts form
+      a set of functions that compute an output.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000402
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000406
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i.6-8.EU
+  statement:
+    en: Neural networks are organized as layers of units (input, hidden, and output
+      layers), with weighted connections between units in successive layers.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000402
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000407
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i.9-12.LO
+  statement:
+    en: 'Describe the following neural network architectures and their uses: feed-forward
+      network, 2D convolutional network, recurrent network, generative adversarial
+      network.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000402
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000408
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-i.9-12.EU
+  statement:
+    en: Feed-forward networks can learn arbitrary functions and are used for both
+      classification and regression. 2D convolutional networks are used for image
+      analysis. Recurrent networks are used for language processing. Generative adversarial
+      networks are used to create deepfakes.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000402
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000409
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii
+  statement:
+    en: Neural Networks (Weight adjustment)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000410
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii.3-5.LO
+  statement:
+    en: Demonstrate how weights are assigned in a neural network to produce a desired
+      input/output behavior.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000409
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000411
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii.3-5.EU
+  statement:
+    en: The behavior of a neural network can be altered by adjusting its weights.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000409
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000412
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii.6-8.LO
+  statement:
+    en: Demonstrate how a learning rule can be used to adjust the weights in a one-layer
+      neural network.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000409
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000413
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii.6-8.EU
+  statement:
+    en: During training, weights are adjusted in response to errors in the network's
+      output, so that an error will be less likely when the input is seen again.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000409
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000414
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii.9-12.LO
+  statement:
+    en: Train a multilayer neural network using the backpropagation learning algorithm
+      and describe how the weights of the neurons and the outputs of the hidden units
+      change as a result of learning.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000409
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000415
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-B-ii.9-12.EU
+  statement:
+    en: A neuron's weights start out as small random values and evolve to a more precise
+      pattern through learning. The changes in the neuron's weights are computed by
+      a learning rule driven by a back-propagated error signal.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000409
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000416
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i
+  statement:
+    en: Datasets (Feature sets)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000417
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.K-2.LO
+  statement:
+    en: Create a labeled dataset with explicit features to illustrate how computers
+      can learn to classify things like foods, movies, or toys.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000418
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.K-2.EU
+  statement:
+    en: We can get a computer to classify things by describing them in terms of feature
+      values the computer can reason about. People choose the features.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000419
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.3-5.LO
+  statement:
+    en: Create a labeled dataset with explicit features of several types and use a
+      machine learning tool to train a classifier on this data.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000420
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.3-5.EU
+  statement:
+    en: Feature types include discrete values (e.g., "New York", "Pennsylvania", "Iowa"),
+      binary values (yes/no), and continuous values (age, height).
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000421
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.6-8.LO
+  statement:
+    en: Create a dataset for training a decision tree classifier or predictor and
+      explore the impact that different feature encodings have on the decision tree.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000422
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.6-8.EU
+  statement:
+    en: The choice of features to include, and the best encoding to use for these
+      features, depends on the particular reasoning problem we are trying to solve.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000423
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.9-12.LO
+  statement:
+    en: Compare two real world datasets in terms of the features they comprise and
+      how those features are encoded.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000424
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-i.9-12.EU
+  statement:
+    en: Humans decide which features to include in a dataset and how to encode them.
+      This can have consequences for machine learning algorithms trained on these
+      datasets.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000416
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000425
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii
+  statement:
+    en: Datasets (Large datasets)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000426
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii.3-5.LO
+  statement:
+    en: Illustrate how training a classifier for a broad concept such as "dog" requires
+      a large amount of data to capture the diversity of the domain.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000425
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000427
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii.3-5.EU
+  statement:
+    en: Machine learning requires large amounts of data to be effective. To recognize
+      dogs in images one must have not only many types of dogs, but also many different
+      viewing angles and contexts.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000425
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000428
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii.6-8.LO
+  statement:
+    en: Illustrate how objects in an image can be segmented and labeled to construct
+      a training set for object recognition.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000425
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000429
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii.6-8.EU
+  statement:
+    en: Machine learning requires large amounts of data to be effective. Human expertise
+      is usually required to label the data, which could be labor intensive.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000425
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000430
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii.9-12.LO
+  statement:
+    en: Evaluate a dataset used to train a real AI system by considering the size
+      of the dataset, the way that the data were acquired and labeled, the storage
+      required, and the estimated time to produce the dataset.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000425
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000431
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-ii.9-12.EU
+  statement:
+    en: A large dataset is typically required to capture the diversity of a complex
+      domain and narrow down the range of possible reasoner behaviors. Labeling training
+      data is labor-intensive and may require specialized expertise. Bias can be introduced
+      during each step of dataset creation.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000425
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000432
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii
+  statement:
+    en: Datasets (Bias)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000353
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000433
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.K-2.LO
+  statement:
+    en: Examine a labeled dataset and identify problems in the data that could lead
+      a computer to make incorrect predictions.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000434
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.K-2.EU
+  statement:
+    en: How well a computer learns to classify depends on the data used to train it.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000435
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.3-5.LO
+  statement:
+    en: Examine features and labels of training data to detect potential sources of
+      bias.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000436
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.3-5.EU
+  statement:
+    en: Machine learning algorithms require a representative collection of data in
+      order to build an accurate model. Training datasets drawn from historical data
+      may reflect pre-existing human and societal biases.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000437
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.6-8.LO
+  statement:
+    en: Explain how the choice of training data shapes the behavior of the classifier,
+      and how bias can be introduced if the training set is not properly balanced.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000438
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.6-8.EU
+  statement:
+    en: Bias can result if the model is asked to classify inputs that don't resemble
+      the training data, or if the training data contains irrelevant correlations
+      we don't want the classifier to rely on.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000439
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.9-12.LO
+  statement:
+    en: Investigate imbalances in training data in terms of gender, age, ethnicity,
+      or other demographic variables that could result in a biased model, by using
+      a data visualization tool.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000440
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 3-C-iii.9-12.EU
+  statement:
+    en: Machine learning algorithms will take advantage of any imbalances or correlations
+      in the training set that help lower the error rate. If the dataset is not representative,
+      those correlations can be misleading.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000432
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000441
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: BI4
+  statement:
+    en: Natural Interaction
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000442
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i
+  statement:
+    en: Natural Language (Structure of language)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000443
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.K-2.LO
+  statement:
+    en: Demonstrate knowledge of the structure of language through tasks such as generating
+      plausible and implausible novel words, or reordering the words in a scrambled
+      sentence so that it makes sense.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000444
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.K-2.EU
+  statement:
+    en: Human languages have rules for how words and sentences are constructed, and
+      computers can use these rules to help them figure out what people are saying.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000445
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.3-5.LO
+  statement:
+    en: Demonstrate that human language is infinite by showing how any sentence can
+      be repeatedly extended to form a more complex sentence.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000446
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.3-5.EU
+  statement:
+    en: Human language can express an infinite number of ideas and form an infinite
+      number of sentences. This property makes it impossible to pre-program a computer
+      with a response to every sentence.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000447
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.6-8.LO
+  statement:
+    en: Demonstrate a computer's grasp of grammar by using a parser program to display
+      the syntactic structure of a sentence, and explain what the nodes represent.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000448
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.6-8.EU
+  statement:
+    en: Parse trees are a way of representing the syntactic structure of a sentence,
+      showing the relationships between words. Computers can use syntax trees to both
+      analyze and generate sentences.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000449
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.9-12.LO
+  statement:
+    en: Identify portions of a text that would be difficult for a computer to understand,
+      and explain why.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000450
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-i.9-12.EU
+  statement:
+    en: Computers have difficulty understanding text that makes use of metaphor, imagery,
+      hyperbole, sarcasm, or humor, or word play.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000442
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000451
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii
+  statement:
+    en: Natural Language (Ambiguity of language)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000452
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.K-2.LO
+  statement:
+    en: Illustrate the ambiguity of language by giving examples of homophones and
+      homonyms and showing how the correct word can be determined using context.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000453
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.K-2.EU
+  statement:
+    en: Different words may sound the same, but people and computers can use the surrounding
+      words to determine the correct one.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000454
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.3-5.LO
+  statement:
+    en: Illustrate how understanding a sentence could be challenging for a computer
+      by giving sentences where a pronoun could refer to either of two nouns.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000455
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.3-5.EU
+  statement:
+    en: Sentences can have multiple meanings depending on which noun a pronoun is
+      thought to be referencing. People and (to a lesser extent) computers can use
+      context and world knowledge to select the most likely meaning.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000456
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.6-8.LO
+  statement:
+    en: Illustrate how understanding a sentence could be challenging for a computer
+      by giving sentences where a prepositional phrase could attach in either of two
+      places, and show how this ambiguity can sometimes be resolved based on meaning.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000457
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.6-8.EU
+  statement:
+    en: Language is often ambiguous, but some possible meanings can be ruled out if
+      they don't make sense. Computers are not yet as good as people at using context
+      and world knowledge to make these judgments.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000458
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.9-12.LO
+  statement:
+    en: Illustrate how understanding a sentence could be challenging for a computer
+      by describing multiple senses of a given word.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000459
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-ii.9-12.EU
+  statement:
+    en: A single word can have multiple senses. People use context and world knowledge
+      to determine the correct sense, but computers don't typically represent meaning
+      with this degree of subtlety.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000451
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000460
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii
+  statement:
+    en: Natural Language (Reasoning about text)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000461
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.K-2.LO
+  statement:
+    en: Demonstrate how a computer can produce different forms of a verb, such as
+      present or past tense.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000462
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.K-2.EU
+  statement:
+    en: In order for a computer to speak naturally with humans it must be able to
+      understand how words are constructed and put words in the proper form.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000463
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.3-5.LO
+  statement:
+    en: Experiment with a speech to text system to see if it resolves alternative
+      word choices correctly based on context.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000464
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.3-5.EU
+  statement:
+    en: Speech recognition systems can use grammar and context to resolve ambiguous
+      words but they don't always get it right.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000465
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.6-8.LO
+  statement:
+    en: Illustrate how word embeddings can be used to reason about the meaning of
+      words.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000466
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.6-8.EU
+  statement:
+    en: Word embeddings represent words with similar meanings as nearby points in
+      a semantic feature space, and allow us to reason about words by doing arithmetic.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000467
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.9-12.LO
+  statement:
+    en: Demonstrate how a small context-free grammar can be used to parse or generate
+      simple sentences.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000468
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iii.9-12.EU
+  statement:
+    en: Context-free grammars describe how words are combined into phrases and clauses,
+      and can represent much of the syntactic structure of natural language, but don't
+      handle things like subject-verb agreement well.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000460
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000469
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv
+  statement:
+    en: Natural Language (Applications)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000470
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.K-2.LO
+  statement:
+    en: Demonstrate the kinds of tasks an intelligent assistant can and cannot perform.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000471
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.K-2.EU
+  statement:
+    en: Intelligent assistants (e.g., Siri, Alexa) are computers designed to respond
+      to a limited set of requests. They cannot engage in a conversation like a human.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000472
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.3-5.LO
+  statement:
+    en: Demonstrate some types of questions that a search engine or intelligent assistant
+      can answer, and some types that it cannot answer.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000473
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.3-5.EU
+  statement:
+    en: Search engines (e.g., Google) and intelligent assistants (e.g., Siri, Alexa)
+      have a collection of specialized and general purpose modules they draw upon
+      to answer different types of questions.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000474
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.6-8.LO
+  statement:
+    en: Describe some NLP (Natural Language Processing) tasks computers can perform,
+      and explain how they work.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000475
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.6-8.EU
+  statement:
+    en: NLP tasks include text summarization, text generation, sentiment analysis,
+      question answering, machine translation, and conversational interaction.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000476
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.9-12.LO
+  statement:
+    en: Describe several approaches to Natural Language Processing, ranging from simple
+      to more sophisticated.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000477
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-A-iv.9-12.EU
+  statement:
+    en: Simple NLP approaches include keyword matching, dictionary lookup, and template
+      matching, while newer, more sophisticated but less transparent approaches use
+      deep neural networks and machine learning.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000469
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000478
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i
+  statement:
+    en: Commonsense Reasoning
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000479
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.K-2.LO
+  statement:
+    en: Give commonsense explanations of human behavior or events that might be useful
+      for a robot to know.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000480
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.K-2.EU
+  statement:
+    en: Choosing the most likely ending for a story is an example of commonsense reasoning,
+      which requires knowledge about people and things, and how they behave, that
+      computers may not have.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000481
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.3-5.LO
+  statement:
+    en: Explain what knowledge would be required for a computer to understand a story.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000482
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.3-5.EU
+  statement:
+    en: AI has trouble understanding stories because it doesn't have the knowledge
+      that humans have about everyday life.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000483
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.6-8.LO
+  statement:
+    en: Explain the knowledge a computer would need to solve a naive physics reasoning
+      problem.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000484
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.6-8.EU
+  statement:
+    en: Computers can reason about physical phenomena using naive physics inference
+      rules, which formalize our intuitive understanding of concepts such as mass,
+      volume, forces, and motion. At present, computers are not very good at this.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000485
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.9-12.LO
+  statement:
+    en: Explain the cultural and naive physics knowledge required for a computer to
+      correctly interpret a fable or fairytale.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000486
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-B-i.9-12.EU
+  statement:
+    en: For humans or computers to infer the meaning of a story requires understanding
+      of cultural knowledge, naive physics, and folk psychology. This is still difficult
+      for computers.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000478
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000487
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i
+  statement:
+    en: Understanding Emotion
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000488
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.K-2.LO
+  statement:
+    en: Demonstrate how computers recognize emotions in faces.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000489
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.K-2.EU
+  statement:
+    en: Computers recognize emotions in faces by looking at the shapes of the mouth,
+      eyes, and eyebrows.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000490
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.3-5.LO
+  statement:
+    en: Illustrate how computers can judge the emotional tone of text.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000491
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.3-5.EU
+  statement:
+    en: Computers can recognize positive and negative statements about a topic using
+      natural language processing techniques known as "sentiment analysis".
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000492
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.6-8.LO
+  statement:
+    en: Describe how computers use different types of cues to recognize human emotional
+      states.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000493
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.6-8.EU
+  statement:
+    en: Computers can recognize human emotional states by looking at facial expressions,
+      gaze, gestures, body language, tone of voice, and choice of words.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000494
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.9-12.LO
+  statement:
+    en: Identify ways AI applications can modify their behavior to respond to people's
+      emotional states.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000495
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-C-i.9-12.EU
+  statement:
+    en: Computers can respond appropriately to human emotions by acknowledging what
+      the human is feeling and responding in a way that the human finds supportive
+      and socially appropriate.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000487
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000496
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i
+  statement:
+    en: Philosophy of Mind
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000441
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000497
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.K-2.LO
+  statement:
+    en: Demonstrate some ways that intelligent agents don't understand things the
+      way people do.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000498
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.K-2.EU
+  statement:
+    en: Artificial Intelligence devices are not people, they are computer programs
+      designed by people.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000499
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.3-5.LO
+  statement:
+    en: Demonstrate what a broad AI system could do that current narrow AI systems
+      cannot do.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000500
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.3-5.EU
+  statement:
+    en: '"Narrow AI" has given us a collection of algorithms that are good at specific
+      things. "Broad AI" or "General AI" promises to give us general reasoning ability
+      comparable to a human.'
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000501
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.6-8.LO
+  statement:
+    en: Define criteria for consciousness and evaluate AI systems or fictional AI
+      characters according to those criteria.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000502
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.6-8.EU
+  statement:
+    en: The nature of consciousness is an unsolved problem, but two important criteria
+      seem to be self-awareness and personal history.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000503
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.9-12.LO
+  statement:
+    en: Debate alternative perspectives on human vs. artificial intelligence.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000504
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 4-D-i.9-12.EU
+  statement:
+    en: Some AI experts and philosophers have argued that computers can never achieve
+      fully human-like intelligence, while others believe that AI will eventually
+      exceed human intelligence.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000496
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000505
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: BI5
+  statement:
+    en: Societal Impact
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000506
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i
+  statement:
+    en: Ethical AI (Diversity of Interests and Disparate Impacts)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000507
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.K-2.LO
+  statement:
+    en: Evaluate the ways a decision impacts people differently.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000508
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.K-2.EU
+  statement:
+    en: Computers can sometimes make a decision that works for most people but harms
+      or disadvantages other people.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000509
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.3-5.LO
+  statement:
+    en: Evaluate how an AI technology can have different effects on different groups
+      of people.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000510
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.3-5.EU
+  statement:
+    en: The decisions made when developing an AI system can impact different people
+      and communities in different ways.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000511
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.6-8.LO
+  statement:
+    en: Evaluate the ways various stakeholders' goals and values influence the design
+      of AI systems.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000512
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.6-8.EU
+  statement:
+    en: The behavior of AI systems is determined by the choices of the designers,
+      which may involve tradeoffs between conflicting goals and values.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000513
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.9-12.LO
+  statement:
+    en: Explain how use of AI systems has led to disparate impacts on different groups.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000514
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-i.9-12.EU
+  statement:
+    en: Different groups of people may be affected differently by AI systems.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000506
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000515
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii
+  statement:
+    en: Ethical AI (Ethical Design Criteria)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000516
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.K-2.LO
+  statement:
+    en: Discuss the characteristics of systems that are fair and unfair and the impact
+      on people when a system is not fair.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000517
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.K-2.EU
+  statement:
+    en: AI systems should be designed to benefit people. Creators of these systems
+      should make sure that their systems treat everyone fairly.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000518
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.3-5.LO
+  statement:
+    en: Evaluate how an AI system meets the design criteria of transparency and explainability.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000519
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.3-5.EU
+  statement:
+    en: An AI system is transparent if we know what data and decision making criteria
+      it uses. Part of transparency is having the system provide explanations for
+      its decisions.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000520
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.6-8.LO
+  statement:
+    en: Evaluate how an AI system meets the design criteria of accountability and
+      respect for privacy.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000521
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.6-8.EU
+  statement:
+    en: Accountability in AI systems means designers and decision makers take responsibility
+      for the system's actions. Respect for privacy means the system does not act
+      in ways that violate people's privacy rights.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000522
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.9-12.LO
+  statement:
+    en: Analyze an AI system to determine whether it satisfies ethical design criteria.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000523
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-ii.9-12.EU
+  statement:
+    en: 'To ensure that AI systems are helpful and not harmful, ethical design criteria
+      include: fairness, transparency, explainability, accountability, respect for
+      privacy, and adherence to societal values.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000515
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000524
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii
+  statement:
+    en: Ethical AI (Practicing Ethical Design)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000525
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii.3-5.LO
+  statement:
+    en: Create a model card for a classification or prediction model.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000524
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000526
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii.3-5.EU
+  statement:
+    en: Model cards support transparency by explaining the intended use, training
+      dataset, accuracy, and limitations of the model.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000524
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000527
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii.6-8.LO
+  statement:
+    en: Evaluate ways that AI system designers can learn about and incorporate the
+      values of their stakeholders into the design process.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000524
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000528
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii.6-8.EU
+  statement:
+    en: AI systems need to align with the norms and values of the groups they aim
+      to serve. Developers of AI systems need to understand that values vary across
+      cultures.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000524
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000529
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii.9-12.LO
+  statement:
+    en: Design an AI System using an ethical design process.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000524
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000530
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-A-iii.9-12.EU
+  statement:
+    en: Ethical design, at all stages of the design process, considers the values
+      of all stakeholders and upholds the principles of fairness, transparency, explainability,
+      accountability, respect for privacy, and adherence to societal values.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000524
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000531
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i
+  statement:
+    en: AI & Culture (AI in Daily Life)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000532
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.K-2.LO
+  statement:
+    en: Identify devices in daily life that use AI technologies.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000533
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.K-2.EU
+  statement:
+    en: AI technologies are part of any device that includes speech recognition or
+      computer vision, such as smart phones, intelligent home assistants, and modern
+      automobiles.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000534
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.3-5.LO
+  statement:
+    en: Describe how AI-powered services are used in daily life.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000535
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.3-5.EU
+  statement:
+    en: AI-powered services are used to look up information, to provide voice interfaces
+      to many kinds of apps, to make recommendations based on a person's interests,
+      and to make cars safer.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000536
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.6-8.LO
+  statement:
+    en: Examine an aspect of daily life that is predicted to change due to the introduction
+      of AI technologies.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000537
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.6-8.EU
+  statement:
+    en: AI technologies are changing daily life as intelligent machines find new roles
+      in society.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000538
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.9-12.LO
+  statement:
+    en: Explain the kinds of debates that might arise as AI technology continues to
+      evolve and is further woven into our culture.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000539
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-i.9-12.EU
+  statement:
+    en: Some new AI technologies will pose challenges for cultural norms and expectations
+      that society must identify and wrestle with.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000531
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000540
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii
+  statement:
+    en: AI & Culture (Trust and Responsibility)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000541
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii.3-5.LO
+  statement:
+    en: Analyze deepfake images or videos and identify the flaws that reveal them
+      as deepfakes.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000540
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000542
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii.3-5.EU
+  statement:
+    en: Current deepfakes have detectable flaws, but as the technology improves it
+      will undermine our trust in digital media.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000540
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000543
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii.6-8.LO
+  statement:
+    en: Critique uses of AI technology that can be used to surveil people or violate
+      their privacy.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000540
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000544
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii.6-8.EU
+  statement:
+    en: AI technologies endanger privacy by reducing the cost of implementing widespread
+      surveillance and enabling new types of surveillance.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000540
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000545
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii.9-12.LO
+  statement:
+    en: Identify areas where it is appropriate to regulate use of AI technologies
+      and evaluate regulations that have been proposed.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000540
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000546
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-B-ii.9-12.EU
+  statement:
+    en: Legal regulation of AI technologies is appropriate in areas where there are
+      societal values that require protection.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000540
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000547
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i
+  statement:
+    en: AI & the Economy (Impacts of AI on Sectors of Society)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000548
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.K-2.LO
+  statement:
+    en: Identify current uses of AI and how they have impacted society.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000549
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.K-2.EU
+  statement:
+    en: Society has undergone changes because of AI and this will continue in the
+      future.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000550
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.3-5.LO
+  statement:
+    en: Identify changes in how sectors of society operate due to the introduction
+      of AI.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000551
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.3-5.EU
+  statement:
+    en: Every sector of society is changing (or will change) as a result of the introduction
+      of AI.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000552
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.6-8.LO
+  statement:
+    en: Compare the changes AI is bringing to society with those of previous industrial
+      revolutions.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000553
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.6-8.EU
+  statement:
+    en: AI is causing societal advances and disruptions comparable to earlier industrial
+      revolutions.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000554
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.9-12.LO
+  statement:
+    en: Predict how a sector of society is likely to change in the short and intermediate
+      term as a result of AI technology.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000555
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-i.9-12.EU
+  statement:
+    en: Anticipating and planning for the changes new technology brings is important
+      for the healthy advancement of society.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000547
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000556
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii
+  statement:
+    en: AI & The Economy (Effects on Employment)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000557
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.K-2.LO
+  statement:
+    en: Describe some jobs that no longer exist due to advances in technology.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000558
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.K-2.EU
+  statement:
+    en: New technology changes the types of jobs that are available for people.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000559
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.3-5.LO
+  statement:
+    en: Describe how a job will change due to the introduction of AI or robotic technologies.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000560
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.3-5.EU
+  statement:
+    en: As AI and robotic technologies are adopted in the workplace, the ways people
+      perform their jobs will change.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000561
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.6-8.LO
+  statement:
+    en: Predict a new type of job that might arise, or how an existing type of job
+      might change or go away, as a result of the adoption of AI technologies.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000562
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.6-8.EU
+  statement:
+    en: Cultures change as new technologies are adopted, and as a result some types
+      of jobs are reduced and new types of jobs appear.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000563
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.9-12.LO
+  statement:
+    en: Investigate the skills needed for AI-enabled careers.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000564
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-C-ii.9-12.EU
+  statement:
+    en: AI-aligned skills will be relevant throughout the workforce, not just for
+      programmers. Most types of work will involve some interaction with AI technologies.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000556
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000565
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i
+  statement:
+    en: AI for Social Good (Democratization of AI Technology)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000566
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i.3-5.LO
+  statement:
+    en: Describe and use some of the AI extensions or plugins available in a programming
+      framework familiar to you.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000565
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000567
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i.3-5.EU
+  statement:
+    en: AI is becoming part of everyone's toolbox through extensions or plugins that
+      support development of AI applications serving the needs of many different communities.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000565
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000568
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i.6-8.LO
+  statement:
+    en: Create a novel application using some of the AI extensions or plugins available
+      in the programming framework of your choice.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000565
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000569
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i.6-8.EU
+  statement:
+    en: AI is becoming part of everyone's toolbox through extensions or plugins that
+      support development of AI applications serving the needs of many different communities.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000565
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000570
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i.9-12.LO
+  statement:
+    en: Create a novel application using some of the AI tools available in the programming
+      framework of your choice.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000565
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000571
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-i.9-12.EU
+  statement:
+    en: AI tools are becoming commonplace and freely available, and can be used by
+      people without advanced degrees or expensive equipment.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000565
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000572
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii
+  statement:
+    en: AI for Social Good (Using AI to Solve Societal Problems)
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000505
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000573
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.K-2.LO
+  statement:
+    en: Describe how AI can be used to solve a societal problem.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000574
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.K-2.EU
+  statement:
+    en: AI can be used to create a classifier that solves a problem important to society.
+  educationLevel:
+  - K-2
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000575
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.3-5.LO
+  statement:
+    en: Design a solution to a societal problem that makes use of AI technology.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000576
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.3-5.EU
+  statement:
+    en: AI is being used to solve societal problems such as environmental protection,
+      energy conservation, and improved public health.
+  educationLevel:
+  - 3-5
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000577
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.6-8.LO
+  statement:
+    en: Research a societal problem and describe how AI technologies can be used to
+      address that problem.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000578
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.6-8.EU
+  statement:
+    en: AI technologies for perception, reasoning, and machine learning can be applied
+      to many types of societal problems.
+  educationLevel:
+  - 6-8
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000579
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.9-12.LO
+  statement:
+    en: Evaluate an AI for Social Good project in terms of the problem it is addressing
+      and the project's actual or potential impact.
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001
+- id: OE-COMPETENCY-000580
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: 5-D-ii.9-12.EU
+  statement:
+    en: '"AI for social good" is the use of AI technologies to solve societal problems.'
+  educationLevel:
+  - 9-12
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000572
+  citations:
+  - *id001

@@ -28,7 +28,7 @@ This also requires amending spec §3 Design Principle 2 ("FAIR by construction")
 - Amends spec §3 Design Principle 2 (quoted above) and the spec's front-matter/footer license statements.
 - Does not add, remove, or redefine any ontology class, schema property, or vocabulary concept — this is a licensing/governance change only, not a content change.
 - Sets precedent for how future NC-SA-licensed source frameworks (AI4K12 being the first candidate) are represented: their *structure* may inform OECB-authored, non-verbatim entries under `citations`, now without a license conflict. Their prose may still not be copied verbatim without checking that specific source's own attribution/ShareAlike terms are satisfied.
-- Explicitly does **not** resolve the Virginia CASE Satchel non-redistribution finding (see Motivation, item 2) — that remains gated by a code/citation-only representation pattern and a license-compliance gate in the forthcoming CASE importer, tracked separately.
+- Explicitly does **not** resolve the Virginia CASE Satchel non-redistribution finding (see Motivation, item 2) — that remains gated by a code/citation-only representation pattern and a license-compliance gate in the forthcoming CASE importer, tracked separately. See [`docs/design-notes/state-standards-licensing.md`](../docs/design-notes/state-standards-licensing.md) for the full reasoning (state-government copyright status, fair-use factor analysis, why OECB defaults conservative).
 
 ## Standards justification
 

@@ -95,6 +95,15 @@ Each LPM reserves one `000N00`–`000N99` block. Within it: `0NN0` is reserved f
 
 Sequentially assigned, one ID per LPM, at RFC approval time — no sub-blocking needed since LPMs don't nest.
 
+### Competency ID blocks (`OE-COMPETENCY-0NNxxx`)
+
+Not populated until RFC-0006 (`NGSS-LIFE-SCIENCE`), the first vocabulary authored as `oe:Competency` entries rather than `oe:Concept` — RFC-0002 promoted the class but this table was not updated at the time, since no vocabulary had yet minted a competency block. Same allocation model as Concept ID blocks: each governed unit reserves a `000N00`–`000N99` block via its founding RFC before authoring entries.
+
+| Vocabulary | Block | Currently used |
+|---|---|---|
+| `NGSS-LIFE-SCIENCE` | `000100`–`000199` | 100–152 (8 topic parents + 45 performance expectations) |
+| `AI4K12` | `000200`–`000699` | 200–580 (5 Big Idea parents + 44 concept-row parents + 332 per-band LO/EU pairs). Wider block than usual (500 vs. the customary 100) given via RFC-0007, reserved up front since the full 3-level hierarchy was known in advance. |
+
 ### Learning Object and Alignment ID blocks
 
 Not yet allocated by block, since Phase 1 has zero Learning Object instances and only two Alignment records (`OE-ALIGN-000001`, `OE-ALIGN-000002`). Both `OE-LO-######` and `OE-ALIGN-######` are assigned sequentially for now; block allocation will be added to this table if/when a second independently governed repository starts minting either.

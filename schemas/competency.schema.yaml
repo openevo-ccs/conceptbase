@@ -13,6 +13,13 @@
 # of the original Phase 4 schedule, per maintainer-team decision on
 # 2026-07-19. `provenance` is optional: a competency authored natively in
 # OECB (not imported from a CASE source) simply omits it.
+#
+# `citationOnly` (RFC-0005, 2026-07-20): for source frameworks whose
+# license does not permit republishing `fullStatement` text verbatim
+# (see scripts/case_license_gate.py), `statement` is not required and
+# MUST NOT contain a reproduction of the restricted source text;
+# `humanCodingScheme` + `provenance` anchor the entry to its source
+# instead.
 # ============================================================================
 
 "$schema": "https://json-schema.org/draft/2020-12/schema"
@@ -20,7 +27,7 @@
 
 meta:
   id: OE-SCHEMA-COMPETENCY
-  version: 1.0.1
+  version: 1.1.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -44,12 +51,23 @@ properties:
   version:
     "$ref": "common.defs.yaml#/$defs/semver"
 
+  citationOnly:
+    type: boolean
+    description: >
+      RFC-0005. True when this entry's source license does not permit
+      republishing CFItem.fullStatement verbatim (see
+      scripts/case_license_gate.py). When true, `statement` is not
+      required and MUST NOT reproduce the restricted source text;
+      `humanCodingScheme` and `provenance` are required instead.
+
   statement:
     "$ref": "common.defs.yaml#/$defs/localizedString"
     description: >
       The full competency statement. Maps from CASE CFItem.fullStatement,
       localized on the OECB side (CASE's own field is a single plain
-      string).
+      string). Not required when `citationOnly` is true (RFC-0005) —
+      MUST NOT contain a reproduction of a license-restricted source's
+      text in that case.
 
   abbreviatedStatement:
     "$ref": "common.defs.yaml#/$defs/localizedString"
@@ -132,6 +150,17 @@ required:
   - type
   - status
   - version
-  - statement
+
+if:
+  properties:
+    citationOnly:
+      const: true
+  required: [citationOnly]
+then:
+  # RFC-0005: license-restricted source — anchor via code + provenance,
+  # never via a reproduction of the restricted statement text.
+  required: [humanCodingScheme, provenance]
+else:
+  required: [statement]
 
 additionalProperties: false

@@ -1,0 +1,932 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: NGSS-LIFE-SCIENCE
+# ============================================================================
+# Path: /vocabularies/NGSS-LIFE-SCIENCE-v1.0.0.yaml
+#
+# Next Generation Science Standards, Life Science domain (topics LS1-LS4,
+# Middle School + High School), transcribed from the official performance
+# expectations published at nextgenscience.org (NGSS Lead States, 2013).
+#
+# License: per NGSS's own trademarks-and-copyright policy, "states,
+# districts, schools, teachers and non-profit education entities may copy,
+# reproduce, alter, adapt, edit, delete and rearrange any and all parts of
+# the NGSS... without permission." OECB (OpenEvo CCS Lab, a non-profit
+# research initiative) relies on this explicit grant for full statement
+# text -- no citationOnly restriction applies (contrast with the Virginia
+# CASE Satchel finding, see docs/design-notes/state-standards-licensing.md).
+#
+# First vocabulary authored as oe:Competency entries rather than
+# oe:Concept -- see RFC-0006 for why (these are CASE-CFItem-shaped
+# performance expectations, not SKOS concepts; provenance is omitted since
+# these were transcribed from NGSS's public HTML pages, not a CASE API).
+#
+# Structure: each MS-LSn/HS-LSn topic is a parent competency; each
+# individual performance expectation (e.g. MS-LS1-1) is a child via
+# skos:broader, per RFC-0002's isChildOf/isPartOf -> skos:broader mapping.
+# ============================================================================
+
+meta:
+  id: NGSS-LIFE-SCIENCE
+  version: 1.0.0
+  status: proposed
+  scope: >
+    Next Generation Science Standards, Life Science domain: topics LS1
+    (Structure and Function), LS2 (Ecosystems), LS3 (Heredity), LS4
+    (Biological Evolution), Middle School and High School bands.
+  discipline: biology
+  license: CC-BY-NC-SA-4.0
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-COMPETENCY-v1.1.0
+  phase: 1
+
+competencies:
+- id: OE-COMPETENCY-000100
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1
+  statement:
+    en: Molecules, Organisms, Structures and Processes
+  educationLevel:
+  - MS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000101
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-1
+  statement:
+    en: Conduct an investigation to provide evidence that living things are made of
+      cells; either one cell or many different numbers and types of cells.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000102
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-2
+  statement:
+    en: Develop and use a model to describe the function of a cell as a whole and
+      ways the parts of cells contribute to the function.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000103
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-3
+  statement:
+    en: Use argument supported by evidence for how the body is a system of interacting
+      subsystems composed of groups of cells.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000104
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-4
+  statement:
+    en: Use argument based on empirical evidence and scientific reasoning to support
+      an explanation for how characteristic animal behaviors and specialized plant
+      structures affect the probability of successful reproduction.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000105
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-5
+  statement:
+    en: Construct a scientific explanation based on evidence for how environmental
+      and genetic factors influence the growth of organisms.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000106
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-6
+  statement:
+    en: Construct a scientific explanation based on evidence for the role of photosynthesis
+      in the cycling of matter and flow of energy into and out of organisms.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000107
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-7
+  statement:
+    en: Develop a model to describe how food is rearranged through chemical reactions
+      forming new molecules that support growth and/or release energy as this matter
+      moves through an organism.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000108
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS1-8
+  statement:
+    en: Gather and synthesize information that sensory receptors respond to stimuli
+      by sending messages to the brain for immediate behavior or storage as memories.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000100
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000109
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS2
+  statement:
+    en: 'Ecosystems: Interactions, Energy, and Dynamics'
+  educationLevel:
+  - MS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000110
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS2-1
+  statement:
+    en: Analyze and interpret data to provide evidence for the effects of resource
+      availability on organisms and populations of organisms in an ecosystem.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000109
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000111
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS2-2
+  statement:
+    en: Construct an explanation that predicts patterns of interactions among organisms
+      across multiple ecosystems.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000109
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000112
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS2-3
+  statement:
+    en: Develop a model to describe the cycling of matter and flow of energy among
+      living and nonliving parts of an ecosystem.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000109
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000113
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS2-4
+  statement:
+    en: Construct an argument supported by empirical evidence that changes to physical
+      or biological components of an ecosystem affect populations.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000109
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000114
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS2-5
+  statement:
+    en: Evaluate competing design solutions for maintaining biodiversity and ecosystem
+      services.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000109
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000115
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS3
+  statement:
+    en: 'Heredity: Inheritance and Variation of Traits'
+  educationLevel:
+  - MS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000116
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS3-1
+  statement:
+    en: Develop and use a model to describe why structural changes to genes (mutations)
+      located on chromosomes may affect proteins and may result in harmful, beneficial,
+      or neutral effects to the structure and function of the organism.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000115
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000117
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS3-2
+  statement:
+    en: Develop and use a model to describe why asexual reproduction results in offspring
+      with identical genetic information and sexual reproduction results in offspring
+      with genetic variation.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000115
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000118
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4
+  statement:
+    en: 'Biological Evolution: Unity and Diversity'
+  educationLevel:
+  - MS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000119
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4-1
+  statement:
+    en: Analyze and interpret data for patterns in the fossil record that document
+      the existence, diversity, extinction, and change of life forms throughout the
+      history of life on Earth under the assumption that natural laws operate today
+      as in the past.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000118
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000120
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4-2
+  statement:
+    en: Apply scientific ideas to construct an explanation for the anatomical similarities
+      and differences among modern organisms and between modern and fossil organisms
+      to infer evolutionary relationships.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000118
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000121
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4-3
+  statement:
+    en: Analyze displays of pictorial data to compare patterns of similarities in
+      the embryological development across multiple species to identify relationships
+      not evident in the fully formed anatomy.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000118
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000122
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4-4
+  statement:
+    en: Construct an explanation based on evidence that describes how genetic variations
+      of traits in a population increase some individuals' probability of surviving
+      and reproducing in a specific environment.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000118
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000123
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4-5
+  statement:
+    en: Gather and synthesize information about technologies that have changed the
+      way humans influence the inheritance of desired traits in organisms.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000118
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000124
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: MS-LS4-6
+  statement:
+    en: Use mathematical representations to support explanations of how natural selection
+      may lead to increases and decreases of specific traits in populations over time.
+  educationLevel:
+  - MS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000118
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/ms-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000125
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1
+  statement:
+    en: Molecules, Organisms, Structures and Processes
+  educationLevel:
+  - HS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000126
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-1
+  statement:
+    en: Construct an explanation based on evidence for how the structure of DNA determines
+      the structure of proteins, which carry out the essential functions of life through
+      systems of specialized cells.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000127
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-2
+  statement:
+    en: Develop and use a model to illustrate the hierarchical organization of interacting
+      systems that provide specific functions within multicellular organisms.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000128
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-3
+  statement:
+    en: Plan and conduct an investigation to provide evidence that feedback mechanisms
+      maintain homeostasis.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000129
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-4
+  statement:
+    en: Use a model to illustrate the role of cellular division (mitosis) and differentiation
+      in producing and maintaining complex organisms.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000130
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-5
+  statement:
+    en: Use a model to illustrate how photosynthesis transforms light energy into
+      stored chemical energy.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000131
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-6
+  statement:
+    en: Construct and revise an explanation based on evidence for how carbon, hydrogen,
+      and oxygen from sugar molecules may combine with other elements to form amino
+      acids and/or other large carbon-based molecules.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000132
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS1-7
+  statement:
+    en: Use a model to illustrate that cellular respiration is a chemical process
+      whereby the bonds of food molecules and oxygen molecules are broken and the
+      bonds in new compounds are formed, resulting in a net transfer of energy.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000125
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls1-molecules-organisms-structures-and-processes
+- id: OE-COMPETENCY-000133
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2
+  statement:
+    en: 'Ecosystems: Interactions, Energy, and Dynamics'
+  educationLevel:
+  - HS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000134
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-1
+  statement:
+    en: Use mathematical and/or computational representations to support explanations
+      of factors that affect carrying capacity of ecosystems at different scales.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000135
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-2
+  statement:
+    en: Use mathematical representations to support and revise explanations based
+      on evidence about factors affecting biodiversity and populations in ecosystems
+      of different scales.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000136
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-3
+  statement:
+    en: Construct and revise an explanation based on evidence for the cycling of matter
+      and flow of energy in aerobic and anaerobic conditions.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000137
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-4
+  statement:
+    en: Use mathematical representations to support claims for the cycling of matter
+      and flow of energy among organisms in an ecosystem.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000138
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-5
+  statement:
+    en: Develop a model to illustrate the role of photosynthesis and cellular respiration
+      in the cycling of carbon among the biosphere, atmosphere, hydrosphere, and geosphere.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000139
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-6
+  statement:
+    en: Evaluate claims, evidence, and reasoning that the complex interactions in
+      ecosystems maintain relatively consistent numbers and types of organisms in
+      stable conditions, but changing conditions may result in a new ecosystem.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000140
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-7
+  statement:
+    en: Design, evaluate, and refine a solution for reducing the impacts of human
+      activities on the environment and biodiversity.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000141
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS2-8
+  statement:
+    en: Evaluate evidence for the role of group behavior on individual and species'
+      chances to survive and reproduce.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000133
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls2-ecosystems-interactions-energy-and-dynamics
+- id: OE-COMPETENCY-000142
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS3
+  statement:
+    en: 'Heredity: Inheritance and Variation of Traits'
+  educationLevel:
+  - HS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000143
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS3-1
+  statement:
+    en: Ask questions to clarify relationships about the role of DNA and chromosomes
+      in coding the instructions for characteristic traits passed from parents to
+      offspring.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000142
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000144
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS3-2
+  statement:
+    en: Make and defend a claim based on evidence that inheritable genetic variations
+      may result from (1) new genetic combinations through meiosis, (2) viable errors
+      occurring during replication, and/or (3) mutations caused by environmental factors.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000142
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000145
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS3-3
+  statement:
+    en: Apply concepts of statistics and probability to explain the variation and
+      distribution of expressed traits in a population.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000142
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls3-heredity-inheritance-and-variation-traits
+- id: OE-COMPETENCY-000146
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4
+  statement:
+    en: 'Biological Evolution: Unity and Diversity'
+  educationLevel:
+  - HS
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000147
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4-1
+  statement:
+    en: Communicate scientific information that common ancestry and biological evolution
+      are supported by multiple lines of empirical evidence.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000146
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000148
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4-2
+  statement:
+    en: 'Construct explanations showing that evolution results from four factors:
+      species'' reproductive potential, heritable genetic variation through mutation
+      and sexual reproduction, competition for limited resources, and differential
+      survival and reproduction of better-adapted organisms.'
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000146
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000149
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4-3
+  statement:
+    en: Apply concepts of statistics and probability to support explanations that
+      organisms with an advantageous heritable trait tend to increase in proportion
+      to organisms lacking this trait.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000146
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000150
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4-4
+  statement:
+    en: Construct an explanation based on evidence for how natural selection leads
+      to adaptation of populations.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000146
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000151
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4-5
+  statement:
+    en: Evaluate evidence demonstrating that environmental changes can increase some
+      species' populations, generate new species through divergence, and cause species
+      extinction.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000146
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
+- id: OE-COMPETENCY-000152
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: HS-LS4-6
+  statement:
+    en: Create or revise a simulation to test a solution to mitigate adverse impacts
+      of human activity on biodiversity.
+  educationLevel:
+  - HS
+  relations:
+    skos:broader:
+    - OE-COMPETENCY-000146
+  citations:
+  - text: 'NGSS Lead States (2013). Next Generation Science Standards: For States,
+      By States. Washington, DC: The National Academies Press.'
+    url: https://www.nextgenscience.org/dci-arrangement/hs-ls4-biological-evolution-unity-and-diversity
