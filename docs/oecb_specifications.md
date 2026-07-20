@@ -1,10 +1,10 @@
 # OpenEvo ConceptBase — Formal Infrastructure Specification
 
 **Document status:** Normative
-**Specification version:** 0.3.1
+**Specification version:** 0.4.0
 **Namespace:** `https://www.w3id.org/openevo/`
 **Repository:** `github.com/openevo-ccs/conceptbase`
-**License:** CC-BY-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
+**License:** CC-BY-NC-SA-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
 **Editors:** OpenEvo Computational Curriculum Studies (CCS) Lab
 
 ---
@@ -92,7 +92,7 @@ This document specifies:
 OECB is governed by the following non-negotiable design commitments. Any proposed change that violates one of these principles **MUST** be rejected during RFC review unless the principle itself is formally amended (§11.6).
 
 1. **Infrastructure, not content.** OECB defines representational capacity; it does not adjudicate curricular, theoretical, or pedagogical questions (§1.2, §8.6).
-2. **FAIR by construction.** Every entity **MUST** be Findable (persistent identifier), Accessible (open license, resolvable URI), Interoperable (typed relations via existing standards), and Reusable (versioned, provenance-tracked) from the moment it is accepted, not retrofitted later.
+2. **FAIR by construction.** Every entity **MUST** be Findable (persistent identifier), Accessible (openly documented license terms under CC-BY-NC-SA-4.0, resolvable URI), Interoperable (typed relations via existing standards), and Reusable (versioned, provenance-tracked) from the moment it is accepted, not retrofitted later. Note: CC-BY-NC-SA-4.0's NonCommercial clause means OECB content does not meet the stricter Open Definition/OSI sense of "open" — see [RFC-0004](../proposals/0004-relicense-content-cc-by-nc-sa.md) for the rationale.
 3. **Git-native authoring, compiled distribution.** All entities **MUST** be authored as human-reviewable YAML through pull requests. Compiled RDF/JSON-LD, SPARQL endpoints, and flat JSON indices are build artifacts and **MUST NOT** be hand-edited (§5).
 4. **Standards reuse over reinvention.** Any RFC proposing a novel schema structure **MUST** document why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already satisfies the need (§12).
 5. **Never delete, always deprecate.** No entity is ever removed once `status: accepted` or higher. Deprecated entities remain resolvable indefinitely with a `supersededBy` pointer (§11.4). This guarantee applies to the permanent identifier space (`OE-*`); the parallel sandbox/provisional tier (`OE-SANDBOX-*`) is explicitly exempt by construction, not by exception carved into this rule — see §4.5.
@@ -559,8 +559,9 @@ dct:  http://purl.org/dc/terms/
 | 0.2.0 | Draft, superseded | Added governance model, SKOS relation adoption, RDF/JSON-LD formalism commitment, phased scope. |
 | 0.2.0 (reformat) | Superseded | Reformatted as a normative formal specification with RFC 2119 conformance language; namespace finalized to `www.w3id.org/openevo/`; conformance classes (§16) added; all prior narrative content consolidated and made testable. |
 | 0.3.0 | Superseded | RFC-0001 (sandbox tier, two-speed review, `retracted` status) and RFC-0002 (`oe:Competency` profiled against CASE `CFItem`, promoted out of `reserved`). |
-| **0.3.1 (this document)** | Current | §4.2 — documented the interim, flat-JSON/raw-YAML-only MVP resolution scheme for the `www.w3id.org/openevo/` namespace (registration was still outstanding as of this revision), pending the full content-negotiated Phase 4 registry. |
+| 0.3.1 | Superseded | §4.2 — documented the interim, flat-JSON/raw-YAML-only MVP resolution scheme for the `www.w3id.org/openevo/` namespace (registration was still outstanding as of this revision), pending the full content-negotiated Phase 4 registry. |
+| **0.4.0 (this document)** | Current | RFC-0004 (`specification-amendment`) — relicensed all OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0; amended §3 principle 2 ("FAIR by construction") wording accordingly. |
 
 ---
 
-*This specification is licensed under CC-BY-4.0. Amendments follow the process defined in §11.6 and `GOVERNANCE.md`.*
+*This specification is licensed under CC-BY-NC-SA-4.0. Amendments follow the process defined in §11.6 and `GOVERNANCE.md`.*

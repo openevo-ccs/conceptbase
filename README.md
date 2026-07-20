@@ -3,11 +3,11 @@
 > The semantic backbone of the OpenEvo Computational Curriculum Studies ecosystem.
 
 [![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
-[![License: CC-BY 4.0](https://img.shields.io/badge/Content%20License-CC--BY%204.0-lightgrey.svg)](LICENSE)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content%20License-CC--BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 [![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
-[![Specification](https://img.shields.io/badge/Spec-v0.3.1-blue)](docs/oecb_specifications.md)
+[![Specification](https://img.shields.io/badge/Spec-v0.4.0-blue)](docs/oecb_specifications.md)
 [![Namespace status](https://img.shields.io/badge/w3id%20registration-PR%20open-yellow)](https://github.com/perma-id/w3id.org/pull/6389)
-[![Ontology](https://img.shields.io/badge/Ontology-v1.3.0-blue)](ontologies/core_v1.yaml)
+[![Ontology](https://img.shields.io/badge/Ontology-v1.3.1-blue)](ontologies/core_v1.yaml)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
 [![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
 [![Formalism](https://img.shields.io/badge/Formalism-YAML%20→%20JSON--LD%20%2F%20RDF-orange)](schemas/)
@@ -101,7 +101,7 @@ The Phase 1 pilot review surfaced two changes worth making immediately rather th
 - **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-######`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
 - **[RFC-0002](proposals/0002-competency-case-profile.md)** — profiled `oe:Competency` as an extension of CASE (1EdTech) `CFItem` and promoted it out of `reserved` into a stable Phase 1 class, ahead of its original Phase 4 slot, after verifying the mapping against a reference CASE implementation.
 
-Ontology `v1.3.0` reflects both RFCs; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note (see below).
+Ontology `v1.3.0` reflects both RFCs; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note (see below). Ontology `v1.3.1` and spec `v0.4.0` reflect [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md), which relicensed all OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0.
 
 ---
 
@@ -112,7 +112,7 @@ conceptbase/
 ├── README.md
 ├── GOVERNANCE.md             # RFC process, versioning policy, deprecation rules
 ├── CONTRIBUTING.md
-├── LICENSE                   # CC-BY-4.0 (content)
+├── LICENSE                   # CC-BY-NC-SA-4.0 (content)
 ├── LICENSE-CODE              # MIT (build/validation tooling, app/)
 │
 ├── docs/
@@ -315,7 +315,7 @@ https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 
 ## License
 
-- **Content** (ontology, schemas, vocabularies, documentation): [CC-BY 4.0](LICENSE)
+- **Content** (ontology, schemas, vocabularies, documentation): [CC BY-NC-SA 4.0](LICENSE) — see [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md) for the relicense from CC-BY-4.0
 - **Code** (build pipeline, validation tooling, [ConceptBase Explorer](app/)): [MIT](LICENSE-CODE)
 
 ---

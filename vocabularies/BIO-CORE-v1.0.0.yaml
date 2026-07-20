@@ -25,7 +25,7 @@ meta:
     Core biological evolution vocabulary, discipline-specific framing
     (organism / population / gene-centered).
   discipline: biology
-  license: CC-BY-4.0
+  license: CC-BY-NC-SA-4.0
   authors:
     - name: OpenEvo ConceptBase Maintainers
   conformsTo: OE-SCHEMA-CONCEPT-v1.0.0

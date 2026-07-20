@@ -22,11 +22,11 @@
 
 meta:
   id: OE-SCHEMA-STRAND
-  version: 1.1.0
+  version: 1.1.1
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
-  license: CC-BY-4.0
+  license: CC-BY-NC-SA-4.0
   ontologyClass: [oe:Strand, oe:SubStrand]
   phase: 1
 

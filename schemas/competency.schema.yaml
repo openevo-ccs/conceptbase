@@ -20,11 +20,11 @@
 
 meta:
   id: OE-SCHEMA-COMPETENCY
-  version: 1.0.0
+  version: 1.0.1
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
-  license: CC-BY-4.0
+  license: CC-BY-NC-SA-4.0
   ontologyClass: oe:Competency
   phase: 4
 

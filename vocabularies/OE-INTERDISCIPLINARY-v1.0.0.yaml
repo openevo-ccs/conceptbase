@@ -37,7 +37,7 @@ meta:
     evolution, human development, cognition, and technology under shared
     general-process concepts.
   discipline: interdisciplinary
-  license: CC-BY-4.0
+  license: CC-BY-NC-SA-4.0
   authors:
     - name: OpenEvo ConceptBase Maintainers
   conformsTo: OE-SCHEMA-CONCEPT-v1.0.0

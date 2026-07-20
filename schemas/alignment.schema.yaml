@@ -19,11 +19,11 @@
 
 meta:
   id: OE-SCHEMA-ALIGNMENT
-  version: 1.0.0
+  version: 1.0.1
   status: proposed
   authors:
     - name: OpenEvo ConceptBase Maintainers
-  license: CC-BY-4.0
+  license: CC-BY-NC-SA-4.0
   ontologyClass: oe:Alignment
   phase: 2
 
