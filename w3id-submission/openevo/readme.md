@@ -22,6 +22,9 @@ This is an intentional MVP: everything above resolves to something real today, b
 
 ## Contact
 
-OpenEvo Computational Curriculum Studies (CCS) Lab
-https://openevo.eva.mpg.de
-Repository maintainers: see https://github.com/openevo-ccs/conceptbase/blob/main/GOVERNANCE.md
+This space is administered by:
+
+**Dustin Eirdosh**
+GitHub: [dustineirdosh](https://github.com/dustineirdosh)
+
+OpenEvo Computational Curriculum Studies (CCS) Lab — https://openevo.eva.mpg.de
