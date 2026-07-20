@@ -50,8 +50,8 @@ Not applicable — no new vocabulary or LPM.
 | `w3id-submission/openevo/.htaccess`, `readme.md` | New, staged for external PR | Done, 2026-07-19 — **not yet submitted upstream** |
 | `docs/oecb_specifications.md` §4.2, front matter, Appendix C | MVP resolution note; version 0.3.0 → 0.3.1 | Done, 2026-07-19 |
 | `README.md` | Namespace-status badge, corrected Quickstart resolution examples, repository structure tree, roadmap | Done, 2026-07-19 |
-| GitHub repo Settings → Pages | Source: "Deploy from a branch" → "GitHub Actions" | **Not done — manual step, outside this RFC's file scope** |
-| PR to `perma-id/w3id.org` | Register `/openevo/` | **Not done — external submission, outside this RFC's file scope** |
+| GitHub repo Settings → Pages | Source: "Deploy from a branch" → "GitHub Actions" | Done, 2026-07-20 |
+| PR to `perma-id/w3id.org` | Register `/openevo/` | Submitted, 2026-07-20 — [perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389), awaiting upstream review |
 
 ## Review
 

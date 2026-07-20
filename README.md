@@ -6,7 +6,7 @@
 [![License: CC-BY 4.0](https://img.shields.io/badge/Content%20License-CC--BY%204.0-lightgrey.svg)](LICENSE)
 [![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
 [![Specification](https://img.shields.io/badge/Spec-v0.3.1-blue)](docs/oecb_specifications.md)
-[![Namespace status](https://img.shields.io/badge/w3id%20registration-not%20yet%20submitted-red)](w3id-submission/openevo/)
+[![Namespace status](https://img.shields.io/badge/w3id%20registration-PR%20open-yellow)](https://github.com/perma-id/w3id.org/pull/6389)
 [![Ontology](https://img.shields.io/badge/Ontology-v1.3.0-blue)](ontologies/core_v1.yaml)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
 [![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
@@ -211,7 +211,7 @@ conceptbase:
 
 **Looking up a concept:**
 
-The `www.w3id.org/openevo/` namespace itself is **not registered yet** — `https://www.w3id.org/openevo/` currently 404s. Registration is in progress; see [`w3id-submission/openevo/`](w3id-submission/openevo/) for the drafted `.htaccess`/`readme.md` awaiting submission to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org), and `docs/oecb_specifications.md` §4.2 for the interim resolution scheme once it's live:
+The `www.w3id.org/openevo/` namespace itself is **not registered yet** — `https://www.w3id.org/openevo/` currently 404s. Registration PR [perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389) is open and awaiting upstream review; see [`w3id-submission/openevo/`](w3id-submission/openevo/) for the submitted `.htaccess`/`readme.md`, and `docs/oecb_specifications.md` §4.2 for the interim resolution scheme once it's live:
 
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-000102   →  flat JSON (generated, scripts/build_registry.py)
@@ -295,7 +295,8 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [ ] Phase 3: Subject-area schema registry
 - [ ] Phase 4: Assessment and evidence schemas (xAPI-profiled)
 - [ ] Phase 4: Hosted SPARQL endpoint and CI compatibility-checker action
-- [ ] **Blocking:** register the `www.w3id.org/openevo/` namespace (currently 404 — MVP flat-JSON resolution scheme and `.htaccess`/`readme.md` drafted at [`w3id-submission/openevo/`](w3id-submission/openevo/), PR to [`perma-id/w3id.org`](https://github.com/perma-id/w3id.org) not yet submitted; also requires fixing this repo's GitHub Pages deploy, currently misconfigured)
+- [x] Fixed this repo's GitHub Pages deploy (Settings → Pages → Source → "GitHub Actions"); `pages.yml` now deploys cleanly
+- [ ] **Blocking:** register the `www.w3id.org/openevo/` namespace (currently 404 — registration PR [perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389) open and awaiting upstream review)
 
 Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../milestones).
 
