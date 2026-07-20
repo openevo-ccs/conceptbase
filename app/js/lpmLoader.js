@@ -218,7 +218,10 @@ export async function loadLpmBundle(source, registrySource = CONCEPTBASE_REGISTR
     const vocabData = await resolveVocabularyFile(vocabRef, registryCtx, issues);
     if (!vocabData) continue;
     const conceptMap = new Map();
-    for (const c of vocabData.concepts || []) {
+    // A vocabulary is either oe:Concept-shaped (`concepts:`) or
+    // oe:Competency-shaped (`competencies:`, RFC-0006/0007) -- an LPM may in
+    // principle depend on either, so both are indexed the same way here.
+    for (const c of [...(vocabData.concepts || []), ...(vocabData.competencies || [])]) {
       conceptMap.set(c.id, c);
       conceptIndex.set(c.id, { concept: c, vocabRef });
     }

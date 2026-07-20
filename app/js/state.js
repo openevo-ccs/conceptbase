@@ -11,6 +11,10 @@ export const state = {
   alignmentRecords: [],
   activeTab: "load",
   inspector: { open: false, entity: null },
+  // Whole-ecosystem registry (every vocabularies/*.yaml file, not scoped to
+  // any loaded LPM's own conceptbase.vocabularies list) -- powers the
+  // Concept Lens tab. Loaded lazily on first visit, see registryLoader.js.
+  registry: { loading: false, loaded: false, error: null, vocabularies: [], index: new Map() },
 };
 
 export function on(event, fn) {

@@ -201,6 +201,12 @@ textarea { resize: vertical; }
 .concept-list-item.concept-unused { opacity: 0.55; }
 .id-code-sm { font-size: 0.7rem; color: var(--text-muted); }
 
+.lens-layout { display: grid; grid-template-columns: 320px 1fr; gap: 16px; align-items: start; }
+@media (max-width: 800px) { .lens-layout { grid-template-columns: 1fr; } }
+.lens-list { max-height: 640px; overflow-y: auto; }
+.lens-detail { background: var(--surface-1); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; min-height: 200px; }
+.concept-list-item.lens-selected { background: color-mix(in srgb, var(--series-a) 14%, transparent); font-weight: 600; }
+
 /* --- Alignment / conflict cards -------------------------------------------- */
 .align-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; margin: 10px 0 20px; }
 .align-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; }

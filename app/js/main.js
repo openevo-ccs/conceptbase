@@ -8,11 +8,13 @@ import { renderVocab } from "./views/vocabView.js";
 import { renderAlign } from "./views/alignView.js";
 import { renderExplorer } from "./views/explorerView.js";
 import { renderAnnotations } from "./views/annotationsView.js";
+import { renderConceptLens } from "./views/conceptLensView.js";
 
 const TABS = [
   { id: "dashboard", label: "Dashboard", render: renderDashboard },
   { id: "vocabulary", label: "Vocabulary", render: renderVocab },
   { id: "alignments", label: "Alignments & Conflicts", render: renderAlign },
+  { id: "conceptlens", label: "Concept Lens", render: renderConceptLens },
   { id: "explorer", label: "Explorer", render: renderExplorer },
   { id: "annotations", label: "My Annotations", render: renderAnnotations },
 ];
