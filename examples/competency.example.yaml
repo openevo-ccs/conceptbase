@@ -1,0 +1,33 @@
+# ============================================================================
+# Example: a single oe:Competency entry (full statement text)
+# ============================================================================
+# Illustrative only -- OE-COMPETENCY-000900 is not a registered ID (see
+# examples/README.md). This is the common case: a source whose license
+# permits reproducing the full statement text (e.g. NGSS, AI4K12 -- see
+# RFC-0006/RFC-0007). For a source that does NOT permit that, see
+# competency-citationonly.example.yaml instead.
+#
+# `provenance` is omitted here, matching the schema's existing allowance
+# for natively-authored competencies (RFC-0006's NGSS vocabulary omits it
+# for the same reason: transcribed from public pages, not a CASE API).
+# ============================================================================
+
+id: OE-COMPETENCY-000900
+type: oe:Competency
+status: proposed
+version: 0.1.0
+
+statement:
+  en: "Construct an explanation for how a specific example demonstrates this competency."
+
+humanCodingScheme: "EX-1"
+competencyType: "Performance Expectation"
+educationLevel: ["6-8"]
+
+relations:
+  skos:broader: []
+  skos:related: []
+
+citations:
+  - text: "Source Standards Body (2026). Where this competency is defined."
+    url: "https://example.org/standard"

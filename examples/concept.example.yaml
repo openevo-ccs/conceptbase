@@ -1,0 +1,42 @@
+# ============================================================================
+# Example: a single oe:Concept entry
+# ============================================================================
+# Illustrative only -- OE-CONCEPT-000900 is not a registered ID (see
+# examples/README.md) and does not resolve at w3id.org/openevo/. In a real
+# vocabulary, this entry would be one item in vocabularies/*.yaml's
+# top-level `concepts:` list, not a standalone file.
+#
+# This mirrors BIO-CORE-v1.0.0's OE-CONCEPT-000102 (Natural Selection) in
+# shape, trimmed to the minimum a validator actually requires plus the one
+# optional field (relations) worth showing.
+# ============================================================================
+
+id: OE-CONCEPT-000900
+type: oe:Concept
+status: proposed
+version: 0.1.0
+definedInVocabulary: EXAMPLE-CONCEPT-VOCAB-v1.0.0
+
+labels:
+  en: Example Concept
+
+definitions:
+  en:
+    general: >
+      A one-sentence definition of the concept, in the discipline(s) it
+      applies to. Use a discipline key per definitions.en entry (e.g.
+      "biology", "culture", "ai") when the same term means different
+      things in different fields -- that's the disambiguation model this
+      schema exists to support, see concept.schema.yaml's own comments.
+
+relations:
+  skos:broader: []
+  skos:narrower: []
+  skos:related: []
+
+examples:
+  - "A concrete instance of this concept in practice."
+
+citations:
+  - text: "Author, A. (2026). Where this definition comes from."
+    url: "https://example.org/source"

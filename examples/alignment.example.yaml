@@ -1,0 +1,29 @@
+# ============================================================================
+# Example: a single oe:Alignment record (Phase 2)
+# ============================================================================
+# Illustrative only -- OE-ALIGN-000900 is not a registered ID, and
+# EXAMPLE-CONCEPT-VOCAB-v1.0.0 / EXAMPLE-COMPETENCY-VOCAB-v1.0.0 are not
+# real vocabularies (see examples/README.md). Compare the real records in
+# alignments/ -- OE-ALIGN-000003 (concept<->competency, the shape this
+# example follows) is the closest real analogue, connecting
+# OE-INTERDISCIPLINARY's Selection concept to an NGSS performance
+# expectation.
+#
+# subject/object always use the permanent conceptId/competencyId, never a
+# label -- see alignment.schema.yaml's header comment for why.
+# ============================================================================
+
+id: OE-ALIGN-000900
+subject: EXAMPLE-CONCEPT-VOCAB-v1.0.0:OE-CONCEPT-000900
+object: EXAMPLE-COMPETENCY-VOCAB-v1.0.0:OE-COMPETENCY-000900
+matchType: skos:closeMatch
+assertedBy:
+  - "Your Name or Working Group"
+date: "2026-07-21"
+status: proposed
+rationale: >
+  Free-text justification for why these two entries, from independently
+  authored vocabularies, are being asserted as the same (or a related)
+  idea. Be specific about what's the same and what differs in scope --
+  see the real alignment records in alignments/ for the level of
+  precision expected here.

@@ -37,6 +37,7 @@ export const LS_KEYS = {
   annotations: "oecb-explorer:annotations",
   authorName: "oecb-explorer:author-name",
   lastSlots: "oecb-explorer:last-slots",
+  welcomeDismissed: "oecb-explorer:welcome-dismissed",
 };
 
 export const CACHE_TTL_MS = 10 * 60 * 1000; // 10 minutes, in-memory + sessionStorage

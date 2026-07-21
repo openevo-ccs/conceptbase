@@ -2,6 +2,7 @@ import { el, clear } from "./utils.js";
 import { state, on, emit } from "./state.js";
 import { initTheme, toggleTheme, currentMode } from "./theme.js";
 import { mountLoadPanel, triggerAutoLoad } from "./loadPanel.js";
+import { mountWelcomeBanner } from "./welcomeBanner.js";
 import { mountInspector, close as closeInspector, render as rerenderInspector, isOpen as inspectorOpen } from "./inspector.js";
 import { renderDashboard } from "./views/dashboardView.js";
 import { renderVocab } from "./views/vocabView.js";
@@ -80,6 +81,11 @@ function wireGlobalEvents() {
   on("annotations-changed", () => {
     if (state.activeTab === "annotations") renderActiveTab();
   });
+  on("navigate-tab", (tabId) => {
+    state.activeTab = tabId;
+    buildTabs();
+    renderActiveTab();
+  });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && inspectorOpen()) closeInspector();
@@ -94,13 +100,24 @@ function wireGlobalEvents() {
 function boot() {
   initTheme();
   buildHeader();
+  mountWelcomeBanner(document.getElementById("welcome-banner"));
   mountLoadPanel(document.getElementById("load-panel"));
   mountInspector(document.getElementById("app-shell"));
+
+  const params = new URLSearchParams(location.search);
+  // Shareable deep link, e.g. ?lens=Selection -- lands straight on Concept
+  // Lens pre-filtered to that query. Used by docs/design-notes/*.md and the
+  // welcome banner (which sets the same state directly, without a reload).
+  const lensQuery = params.get("lens");
+  if (lensQuery) {
+    state.conceptLensQuery = lensQuery;
+    state.activeTab = "conceptlens";
+  }
+
   buildTabs();
   wireGlobalEvents();
   renderActiveTab();
 
-  const params = new URLSearchParams(location.search);
   if (params.get("autoload") !== "0") {
     // Auto-load the two default example repos on first visit so the app is
     // never blank; explicit user edits + reload always override this.

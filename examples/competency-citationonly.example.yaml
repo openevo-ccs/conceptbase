@@ -1,0 +1,32 @@
+# ============================================================================
+# Example: a single oe:Competency entry, citationOnly (RFC-0005)
+# ============================================================================
+# Illustrative only -- OE-COMPETENCY-000901 is not a registered ID (see
+# examples/README.md). Use this shape when a source's license permits
+# citing that a standard exists and how it relates to others, but forbids
+# reproducing its statement text verbatim (see
+# docs/design-notes/state-standards-licensing.md and
+# scripts/case_license_gate.py for how to determine which case you're in).
+#
+# When citationOnly is true: `statement`/`abbreviatedStatement` MUST NOT
+# contain the restricted source text (an OECB-authored, non-verbatim gloss
+# is fine); `humanCodingScheme` and `provenance` become required instead,
+# so the entry still anchors to a real, resolvable source.
+# ============================================================================
+
+id: OE-COMPETENCY-000901
+type: oe:Competency
+status: proposed
+version: 0.1.0
+citationOnly: true
+
+humanCodingScheme: "EX.CS.1"
+
+provenance:
+  sourceCFItemId: "00000000-0000-0000-0000-000000000000"
+  sourceCFItemURI: "https://example.org/case/CFItems/00000000-0000-0000-0000-000000000000"
+  sourceCFDocumentURI: "https://example.org/case/CFDocuments/00000000-0000-0000-0000-000000000000"
+
+citations:
+  - text: "Source Standards Body (2026). Citation only -- see licenseURI for redistribution terms."
+    url: "https://example.org/standard"

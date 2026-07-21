@@ -233,8 +233,18 @@ function renderLoaded(container) {
   layout.appendChild(detailHost);
   container.appendChild(layout);
 
-  searchInput.addEventListener("input", () => renderList(searchInput.value));
-  renderList("");
+  // Deep-link prefill (see welcomeBanner.js / main.js's ?lens= param). Cleared
+  // only on genuine user typing, not here -- this render can be replayed by
+  // an unrelated bundle-changed event (e.g. the LPM autoload finishing
+  // shortly after a ?lens= page load) before the user has touched anything,
+  // and clearing eagerly would lose the prefill to that race.
+  searchInput.addEventListener("input", () => {
+    state.conceptLensQuery = null;
+    renderList(searchInput.value);
+  });
+
+  searchInput.value = state.conceptLensQuery || "";
+  renderList(state.conceptLensQuery || "");
 }
 
 export function renderConceptLens(container) {

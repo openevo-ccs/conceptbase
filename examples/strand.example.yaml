@@ -1,0 +1,39 @@
+# ============================================================================
+# Example: a minimal oe:Strand with one nested oe:SubStrand
+# ============================================================================
+# Illustrative only -- OE-STRAND-000900/000901 are not registered IDs (see
+# examples/README.md). Compare the real strand files in bio-core-k12/strands/
+# and oe-interdisciplinary-k12/strands/, which this is trimmed down from.
+#
+# `concepts[].emphasis` is the field that makes horizontal coherence
+# machine-checkable: "primary" means this (sub)strand is structurally
+# organized around the concept; "reinforcing" means it's pulled in from
+# another strand to reinforce a cross-strand relation. See
+# strand.schema.yaml's own header comment.
+# ============================================================================
+
+id: "OE-STRAND-000900"
+type: "oe:Strand"
+status: proposed
+version: 0.1.0
+labels:
+  en: "Example Strand"
+description:
+  en: "A minimal strand demonstrating the shape a real strand file follows."
+typicalGradeBand: "K-12 (spans all bands via subStrands)"
+associatedDomains: ["Example Domain"]
+
+subStrands:
+  - id: "OE-STRAND-000901"
+    type: "oe:SubStrand"
+    status: proposed
+    version: 0.1.0
+    labels:
+      en: "Example SubStrand"
+    typicalGradeBand: "6-8"
+    required: true
+    concepts:
+      - id: OE-CONCEPT-000900   # Example Concept, see concept.example.yaml
+        emphasis: primary
+    performanceIndicators:
+      - "An observable, assessable outcome a student at this grade band should demonstrate."

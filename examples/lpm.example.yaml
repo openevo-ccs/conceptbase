@@ -1,0 +1,45 @@
+# ============================================================================
+# Example: a minimal oe:LPM manifest
+# ============================================================================
+# Illustrative only -- OE-LPM-000900 is not a registered ID, not indexed in
+# registry/lpm-index.json, and does not resolve at w3id.org/openevo/ (see
+# examples/README.md). By convention this file is the root manifest of an
+# LPM repository -- compare bio-core-k12/lpm.yaml and
+# oe-interdisciplinary-k12/lpm.yaml, the two real reference LPMs this file
+# is trimmed down from.
+#
+# The `conceptbase:` block is the part every dependent repository author
+# actually needs to get right: it pins which ontology and vocabulary
+# versions this LPM was built against, so the (planned, Phase 4) CI
+# compatibility-checker can verify those pins still resolve and flag
+# deprecated/superseded ones.
+# ============================================================================
+
+id: OE-LPM-000900
+type: "oe:LPM"
+status: proposed
+version: 0.1.0
+
+labels:
+  en: "Example Learning Progression"
+
+description:
+  en: >
+    A minimal, single-strand example LPM demonstrating the manifest shape
+    a dependent repository's root file follows.
+
+authors:
+  - name: "Your Name or Working Group"
+
+license: "CC-BY-NC-SA-4.0"
+
+conceptbase:
+  ontology: "OE-ONTOLOGY-v1.0.0"
+  vocabularies:
+    - "EXAMPLE-CONCEPT-VOCAB-v1.0.0"
+
+strands:
+  - id: "OE-STRAND-000900"
+    repository: "strand.example.yaml"
+    required: true
+    sequence: 1

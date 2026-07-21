@@ -2,6 +2,8 @@
 
 **Status:** Informative — a research artifact synthesizing existing alignment records ([`OE-ALIGN-000001`](../../alignments/OE-ALIGN-000001.yaml), [`OE-ALIGN-000003`](../../alignments/OE-ALIGN-000003.yaml), [`OE-ALIGN-000004`](../../alignments/OE-ALIGN-000004.yaml)), not itself a proposal. Written to test a specific claim already made in production content — `oe-interdisciplinary-k12`'s Strand 1 — against real standards, not just the vocabulary's own say-so.
 
+**See it live:** [ConceptBase Explorer → Concept Lens, pre-filtered to "Selection"](https://openevo-ccs.github.io/conceptbase/?lens=Selection) — every record cited below, browsable directly instead of just described.
+
 ## The claim being tested
 
 `oe-interdisciplinary-k12`'s Strand 1 (`OE-STRAND-000201`, "Inheritance, Variation, and Selection Across Systems") is built around the premise that Selection is a genuine transferable mechanism across biology, culture, and AI — not a loose metaphor. Its 9-12 substrand (`OE-STRAND-000214`) asks students to:
