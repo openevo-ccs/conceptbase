@@ -1,0 +1,15 @@
+{
+  "forkedFrom": "OE-LPM-000002",
+  "id": "OE-SANDBOX-LPM-000003",
+  "labels": {
+    "en": "OE-Interdisciplinary: MPI-EVA Cross-Disciplinary Capstone"
+  },
+  "owner": "openevo-ccs",
+  "ref": "sandbox/mpi-eva-capstone",
+  "repo": "oe-interdisciplinary-k12",
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  }
+}

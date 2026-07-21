@@ -1,0 +1,31 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Social learning processes that span human and artificial agents jointly — humans learning from AI-generated content or behavior, AI systems trained on human-generated content or behavior, and the resulting feedback loop between the two — rather than social learning occurring within a single-species population.\n"
+    }
+  },
+  "examples": [
+    "Students learning a problem-solving strategy partly from a human teacher and partly from an AI tutoring system, whose own responses were themselves shaped by prior learners' interactions."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000006",
+  "labels": {
+    "en": "Hybrid Social Learning"
+  },
+  "nonExamples": [
+    "A student learning solely from a textbook (no AI system's own behavior is being learned from or is adapting in response)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000215",
+      "OE-SANDBOX-CONCEPT-000005"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

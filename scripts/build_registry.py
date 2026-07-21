@@ -16,6 +16,11 @@ Reads:
     (hand-maintained, mirrors GOVERNANCE.md "Identifier Block Allocation")
                           -> registry/lpm-index.json
                           -> registry/strand-index.json
+    (hand-maintained, mirrors RFC-0010 Sec7's lightweight-pointer-record
+     shape: sandbox-tier LPMs are not copied into the registry, only
+     pointed at via repository/ref, same loose-coupling as strands[]/
+     learningObjects[] elsewhere)
+                          -> registry/sandbox-lpm/{id}.json
 
 Output is committed to the repo and published as-is via the existing
 GitHub Pages deploy (app/js .htaccess rules point at
@@ -60,6 +65,47 @@ STRAND_RANGES = [
     {"min": 100, "max": 199, "lpm": "OE-LPM-000001"},
     {"min": 200, "max": 299, "lpm": "OE-LPM-000002"},
 ]
+
+# Sandbox-tier LPMs (RFC-0010). Hand-maintained, same as LPM_INDEX above,
+# until enough sandbox LPMs exist to warrant scanning a directory instead.
+# Each entry is a lightweight pointer record per RFC-0010 Sec7 - id,
+# sandboxMeta, forkedFrom, labels, and a repository/ref pointer to where
+# the fork's actual content lives (a git branch by convention, not a
+# separate registry copy).
+SANDBOX_LPM_INDEX = {
+    "OE-SANDBOX-LPM-000001": {
+        "labels": {"en": "BIO-CORE: Human Lineage Capstone (Genetics & Paleoanthropology)"},
+        "forkedFrom": "OE-LPM-000001",
+        "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
+        "owner": "openevo-ccs",
+        "repo": "bio-core-k12",
+        "ref": "sandbox/human-evolution-capstone",
+    },
+    "OE-SANDBOX-LPM-000002": {
+        "labels": {"en": "BIO-CORE: Human Lineage Across K-12 (Genetics & Paleoanthropology)"},
+        "forkedFrom": "OE-LPM-000001",
+        "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
+        "owner": "openevo-ccs",
+        "repo": "bio-core-k12",
+        "ref": "sandbox/human-evolution-k12-strand",
+    },
+    "OE-SANDBOX-LPM-000003": {
+        "labels": {"en": "OE-Interdisciplinary: MPI-EVA Cross-Disciplinary Capstone"},
+        "forkedFrom": "OE-LPM-000002",
+        "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
+        "owner": "openevo-ccs",
+        "repo": "oe-interdisciplinary-k12",
+        "ref": "sandbox/mpi-eva-capstone",
+    },
+    "OE-SANDBOX-LPM-000004": {
+        "labels": {"en": "OE-Interdisciplinary: Machine Culture and Human-AI Coevolution Capstone"},
+        "forkedFrom": "OE-LPM-000002",
+        "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
+        "owner": "openevo-ccs",
+        "repo": "oe-interdisciplinary-k12",
+        "ref": "sandbox/machine-culture-coevolution",
+    },
+}
 
 
 def write_json(path, data):
@@ -121,14 +167,25 @@ def build_strand_index():
     write_json(os.path.join(REGISTRY_DIR, "strand-index.json"), strand_index)
 
 
+def build_sandbox_lpms():
+    count = 0
+    for sandbox_id, record in SANDBOX_LPM_INDEX.items():
+        out_path = os.path.join(REGISTRY_DIR, "sandbox-lpm", f"{sandbox_id}.json")
+        write_json(out_path, {"id": sandbox_id, **record})
+        count += 1
+    return count
+
+
 def main():
     n_concepts = build_concepts()
     n_competencies = build_competencies()
     n_alignments = build_alignments()
     build_lpm_index()
     build_strand_index()
+    n_sandbox_lpms = build_sandbox_lpms()
     print(f"Wrote {n_concepts} concept file(s), {n_competencies} competency file(s), "
-          f"{n_alignments} alignment file(s), and lpm-index.json/strand-index.json "
+          f"{n_alignments} alignment file(s), {n_sandbox_lpms} sandbox-lpm file(s), "
+          f"and lpm-index.json/strand-index.json "
           f"under {os.path.relpath(REGISTRY_DIR, REPO_ROOT)}/")
     return 0
 

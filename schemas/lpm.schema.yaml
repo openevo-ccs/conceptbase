@@ -19,7 +19,7 @@
 
 meta:
   id: OE-SCHEMA-LPM
-  version: 1.0.2
+  version: 1.2.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -32,13 +32,45 @@ type: object
 properties:
 
   id:
-    "$ref": "common.defs.yaml#/$defs/lpmId"
+    type: string
+    description: >
+      Either a permanent oe:LPM identifier or, since RFC-0010, a
+      sandbox-tier oe:LPM identifier — the tier-specific pattern is
+      enforced by the oneOf branches below, not here.
 
   type:
     const: "oe:LPM"
 
   status:
     "$ref": "common.defs.yaml#/$defs/status"
+    description: >
+      Permanent-tier lifecycle status. Mutually exclusive with
+      sandboxMeta (RFC-0010) — see the oneOf branches below.
+
+  sandboxMeta:
+    "$ref": "common.defs.yaml#/$defs/sandboxMeta"
+    description: >
+      Sandbox-tier lifecycle metadata (RFC-0010). Mutually exclusive
+      with status — see the oneOf branches below.
+
+  forkedFrom:
+    "$ref": "common.defs.yaml#/$defs/anyLpmRef"
+    description: >
+      oe:forkedFrom (RFC-0010). The LPM this one began as a fork of, if
+      any. Absent for LPMs authored from scratch — the sandbox tier also
+      supports free-standing experimental LPMs, not only forks. Retained
+      across promotion, so lineage remains queryable after the
+      identifier changes tier.
+
+  mergedInto:
+    "$ref": "common.defs.yaml#/$defs/anyLpmRef"
+    description: >
+      oe:mergedInto (RFC-0010). Set when this LPM's content has been
+      substantively absorbed into another LPM and this one is being
+      archived (sandboxMeta.status: archived) rather than independently
+      promoted. Only meaningful on a sandbox-tier LPM — a promoted,
+      permanent LPM MUST NOT set this (permanent-tier merges use the
+      existing status: deprecated + supersededBy pattern instead).
 
   version:
     "$ref": "common.defs.yaml#/$defs/semver"
@@ -79,7 +111,7 @@ properties:
       type: object
       properties:
         id:
-          "$ref": "common.defs.yaml#/$defs/strandId"
+          "$ref": "common.defs.yaml#/$defs/anyStrandRef"
         repository:
           type: string
           format: uri-reference
@@ -107,7 +139,6 @@ properties:
 required:
   - id
   - type
-  - status
   - version
   - labels
   - authors
@@ -116,3 +147,17 @@ required:
   - strands
 
 additionalProperties: false
+
+oneOf:
+  - description: Permanent-tier LPM (unchanged behavior from before RFC-0010).
+    properties:
+      id: { "$ref": "common.defs.yaml#/$defs/lpmId" }
+    required: [status]
+    not:
+      required: [sandboxMeta]
+  - description: Sandbox-tier LPM (RFC-0010).
+    properties:
+      id: { "$ref": "common.defs.yaml#/$defs/sandboxLpmId" }
+    required: [sandboxMeta]
+    not:
+      required: [status]

@@ -17,7 +17,7 @@
 
 meta:
   id: OE-SCHEMA-CONCEPT
-  version: 1.0.1
+  version: 1.2.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -30,13 +30,31 @@ type: object
 properties:
 
   id:
-    "$ref": "common.defs.yaml#/$defs/conceptId"
+    type: string
+    description: >
+      Either a permanent oe:Concept identifier or a sandbox-tier
+      identifier (RFC-0001, spec §4.5) — the tier-specific pattern is
+      enforced by the oneOf branches below, not here. Completes RFC-0001's
+      sandbox-concept wiring, which defined sandboxConceptId/sandboxMeta
+      in common.defs.yaml but never actually connected them here — flagged
+      as a known gap by RFC-0010 and closed here rather than left
+      outstanding, using the identical oneOf pattern RFC-0010 applied to
+      lpm.schema.yaml.
 
   type:
     const: "oe:Concept"
 
   status:
     "$ref": "common.defs.yaml#/$defs/status"
+    description: >
+      Permanent-tier lifecycle status. Mutually exclusive with
+      sandboxMeta — see the oneOf branches below.
+
+  sandboxMeta:
+    "$ref": "common.defs.yaml#/$defs/sandboxMeta"
+    description: >
+      Sandbox-tier lifecycle metadata (RFC-0001). Mutually exclusive
+      with status — see the oneOf branches below.
 
   version:
     "$ref": "common.defs.yaml#/$defs/semver"
@@ -75,13 +93,13 @@ properties:
     properties:
       "skos:broader":
         type: array
-        items: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+        items: { "$ref": "common.defs.yaml#/$defs/anyConceptRef" }
       "skos:narrower":
         type: array
-        items: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+        items: { "$ref": "common.defs.yaml#/$defs/anyConceptRef" }
       "skos:related":
         type: array
-        items: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+        items: { "$ref": "common.defs.yaml#/$defs/anyConceptRef" }
     additionalProperties: false
 
   examples:
@@ -110,10 +128,25 @@ properties:
 required:
   - id
   - type
-  - status
   - version
   - definedInVocabulary
   - labels
   - definitions
 
 additionalProperties: false
+
+oneOf:
+  - description: Permanent-tier concept (unchanged behavior from before this fix).
+    properties:
+      id: { "$ref": "common.defs.yaml#/$defs/conceptId" }
+      status: { "$ref": "common.defs.yaml#/$defs/status" }
+    required: [id, status]
+    not:
+      required: [sandboxMeta]
+  - description: Sandbox-tier concept (RFC-0001).
+    properties:
+      id: { "$ref": "common.defs.yaml#/$defs/sandboxConceptId" }
+      sandboxMeta: { "$ref": "common.defs.yaml#/$defs/sandboxMeta" }
+    required: [id, sandboxMeta]
+    not:
+      required: [status]

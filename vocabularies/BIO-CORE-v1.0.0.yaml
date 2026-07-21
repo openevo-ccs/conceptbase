@@ -87,7 +87,7 @@ concepts:
           A heritable change in a DNA sequence, serving as an ultimate
           source of genetic variation within a population.
     relations:
-      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000107, OE-CONCEPT-000102]
+      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000107, OE-CONCEPT-000102, OE-SANDBOX-CONCEPT-000002]
 
   - id: OE-CONCEPT-000104
     type: oe:Concept
@@ -187,7 +187,7 @@ concepts:
           fertile offspring, generally reproductively isolated from
           other such groups.
     relations:
-      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114, OE-CONCEPT-000108, OE-CONCEPT-000116]
+      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114, OE-CONCEPT-000108, OE-CONCEPT-000116, OE-SANDBOX-CONCEPT-000001]
 
   - id: OE-CONCEPT-000110
     type: oe:Concept
@@ -250,7 +250,7 @@ concepts:
           The evolutionary history and relatedness of a group of
           organisms, typically represented as a branching tree.
     relations:
-      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000101, OE-SANDBOX-CONCEPT-000001]
 
   - id: OE-CONCEPT-000114
     type: oe:Concept
@@ -265,7 +265,7 @@ concepts:
           An organism or population from which two or more descendant
           lineages have diverged.
     relations:
-      skos:related: [OE-CONCEPT-000113, OE-CONCEPT-000109]
+      skos:related: [OE-CONCEPT-000113, OE-CONCEPT-000109, OE-SANDBOX-CONCEPT-000001]
 
   - id: OE-CONCEPT-000115
     type: oe:Concept
@@ -298,3 +298,67 @@ concepts:
     relations:
       skos:broader: [OE-CONCEPT-000101]
       skos:related: [OE-CONCEPT-000109]
+
+  # ==========================================================================
+  # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
+  # never-delete guarantee, TTL'd, not yet promoted through full RFC review.
+  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-000001/000002 (bio-core-k12
+  # sandbox forks on human evolutionary genetics and paleoanthropology,
+  # strictly decentralized-causal framing, no agency vocabulary — see
+  # docs/design-notes/human-dimensions-k12-case-study.md and RFC-0010).
+  # ==========================================================================
+
+  - id: OE-SANDBOX-CONCEPT-000001
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Hominin
+    definitions:
+      en:
+        biology: >
+          A member of the taxonomic group (tribe Hominini) comprising
+          modern humans, extinct human species, and their immediate
+          fossil ancestors since the divergence from the lineage leading
+          to chimpanzees — a strictly taxonomic/phylogenetic category,
+          not an agency- or intentionality-bearing one.
+    relations:
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000113, OE-CONCEPT-000109, OE-SANDBOX-CONCEPT-000002]
+    examples:
+      - Homo sapiens, Homo neanderthalensis, and Australopithecus afarensis
+        are all hominins.
+    nonExamples:
+      - Chimpanzees and other non-human great apes are close relatives but
+        not hominins under the tribe-level definition used here.
+
+  - id: OE-SANDBOX-CONCEPT-000002
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: BIO-CORE-v1.0.0
+    labels:
+      en: Ancient DNA
+    definitions:
+      en:
+        biology: >
+          Genetic material recovered and sequenced from historical or
+          fossil remains, enabling direct observation of genetic
+          variation and population history at past points in time rather
+          than inferring it solely from present-day populations.
+    relations:
+      skos:related: [OE-CONCEPT-000103, OE-SANDBOX-CONCEPT-000001]
+    examples:
+      - Sequencing DNA extracted from a Neanderthal fossil to compare it
+        directly against present-day human genomes.
+    nonExamples:
+      - Inferring past population size changes purely from patterns of
+        variation in living populations, with no ancient sample sequenced
+        (a legitimate but different method — population genetics, not
+        ancient DNA analysis specifically).

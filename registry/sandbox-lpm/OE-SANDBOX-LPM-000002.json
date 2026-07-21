@@ -1,0 +1,15 @@
+{
+  "forkedFrom": "OE-LPM-000001",
+  "id": "OE-SANDBOX-LPM-000002",
+  "labels": {
+    "en": "BIO-CORE: Human Lineage Across K-12 (Genetics & Paleoanthropology)"
+  },
+  "owner": "openevo-ccs",
+  "ref": "sandbox/human-evolution-k12-strand",
+  "repo": "bio-core-k12",
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  }
+}

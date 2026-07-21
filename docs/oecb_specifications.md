@@ -1,7 +1,7 @@
 # OpenEvo ConceptBase — Formal Infrastructure Specification
 
 **Document status:** Normative
-**Specification version:** 0.4.0
+**Specification version:** 0.5.0
 **Namespace:** `https://www.w3id.org/openevo/`
 **Repository:** `github.com/openevo-ccs/conceptbase`
 **License:** CC-BY-NC-SA-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
@@ -145,7 +145,7 @@ An identifier, once assigned to an entity with `status` at or above `accepted`, 
 
 To allow lightweight experimentation without every draft immediately taking on the permanence guarantee of §4.4, OECB defines a parallel, structurally distinct identifier tier (introduced by RFC-0001):
 
-- **Pattern**: `^OE-SANDBOX-CONCEPT-[0-9]{6}$` (`schemas/common.defs.yaml#/$defs/sandboxConceptId`), never mistakable for the permanent `OE-CONCEPT-######` pattern. Scoped to controlled-vocabulary concept entries only; sandbox identifiers for other entity types are out of scope until a future RFC establishes a concrete need.
+- **Pattern**: `^OE-SANDBOX-CONCEPT-[0-9]{6}$` (`schemas/common.defs.yaml#/$defs/sandboxConceptId`), never mistakable for the permanent `OE-CONCEPT-######` pattern. Originally scoped to controlled-vocabulary concept entries only; **extended to `oe:LPM` by RFC-0010** (`^OE-SANDBOX-LPM-[0-9]{6}$`, `schemas/common.defs.yaml#/$defs/sandboxLpmId`) and, the same day, to **`oe:Strand`/`oe:SubStrand`** (`^OE-SANDBOX-STRAND-[0-9]{6}$`, `schemas/common.defs.yaml#/$defs/sandboxStrandId` — needed because a sandbox-tier LPM authoring new Strand content has no permanent per-LPM block to mint from), realizing the "out of scope until a future RFC establishes a concrete need" extension point this paragraph originally left open. Sandbox identifiers for any other entity type remain out of scope until a further RFC establishes a concrete need for that type specifically.
 - **Status**: sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`) — a wholly separate, smaller vocabulary from the permanent-tier `status` enum (§11.3). They **MUST NOT** carry that enum, which is what exempts them from §3 item 5 / §11.4's never-delete guarantee by construction rather than by exception.
 - **TTL**: every sandbox entry **MUST** carry `sandboxMeta.created` and `sandboxMeta.expiresOn`, the latter set 12 months out at authoring time (IETF Internet-Draft convention). An entry not promoted before `expiresOn` **MUST** be auto-archived (`sandboxMeta.status: archived`).
 - **Promotion**: moving a sandbox entry into the permanent tier (minting a new `OE-CONCEPT-######`) **MUST** go through the ordinary RFC process in full (§11.2) — nothing skips review on the way to becoming a citable, permanent entity.
@@ -224,6 +224,10 @@ Promoting a reserved class into `classes` is a **MINOR** version bump to the ont
 | `oe:recommendedSequence`, `oe:alternativeSequence`, `oe:parallel`, `oe:prerequisiteOf` | `oe:Strand` → `oe:Strand` | Pathway declarations supporting multiple valid curriculum sequences. |
 | `oe:foundationalTo` | `oe:Strand` → `oe:Strand` | Spiral-curriculum relation: source is introduced before target but is expected to be revisited/reinforced alongside it, not gated behind it — weaker than `oe:prerequisiteOf`, and unlike `oe:parallel`, not symmetric. A strand pair **MUST NOT** assert `oe:prerequisiteOf` and `oe:parallel`/`oe:foundationalTo` in conflicting directions. |
 | `oe:definedInVocabulary` | `oe:Concept` → `xsd:string` | References the Concept's single home vocabulary (§8). |
+| `oe:contextAssumption` (RFC-0009) | `oe:SubStrand` → `xsd:string` | Names an explicit instructional-context assumption (`rich-scaffolding` \| `minimal-prior-exposure`) a SubStrand body is designed for. Value space constrained at the schema layer, not here — same pattern as `oe:status`. |
+| `oe:hasTrajectoryVariant` (RFC-0009) | `oe:SubStrand` → `oe:SubStrand` | Relates a SubStrand to an alternate body for the same conceptual slot, tagged with a different `oe:contextAssumption`. Alternation, not composition — deliberately not a subproperty of `oe:hasSubStrand`, and excluded from the §6.5 nesting-depth limit. |
+| `oe:forkedFrom` (RFC-0010) | `oe:LPM` → `oe:LPM` | Provenance pointer to the LPM this one began as a fork of. Does not imply subordination — the same non-hierarchical relationship `BIO-CORE`/`OE-INTERDISCIPLINARY` already have (design principle 7). |
+| `oe:mergedInto` (RFC-0010) | `oe:LPM` → `oe:LPM` | Relates an archived sandbox-tier LPM to the LPM its content was absorbed into. Not used on permanent-tier LPMs, which use `status: deprecated` + `supersededBy` instead. |
 
 ### 6.4 SKOS Relation Reuse
 
@@ -259,8 +263,8 @@ Any new schema introduced in a future phase **MUST** reuse these primitives rath
 | Schema | Validates | Key normative behaviors |
 |---|---|---|
 | `concept.schema.yaml` | `oe:Concept` instances | Requires `definedInVocabulary` (exactly one home vocabulary); `definitions` uses `localizedDisciplinaryDefinitions` to support per-discipline disambiguation (§8.4); SKOS relation targets validated for ID-pattern correctness only — referential integrity (target existence) is a build-pipeline concern, not a JSON Schema concern. |
-| `lpm.schema.yaml` | `oe:LPM` instances | Embeds the `conceptbase` manifest (§10); `strands[]` entries are loosely coupled (`id` + external `repository` URI only) — full Strand structure is intentionally out of scope for this schema. |
-| `strand.schema.yaml` | `oe:Strand` / `oe:SubStrand` instances | `concepts[].emphasis` (`primary` \| `reinforcing`) is **REQUIRED** on every concept reference, providing the machine-checkable basis for horizontal coherence auditing (§13.3); `subStrands[]` is self-referential (`$ref: "#"`) enabling recursive nesting per §6.1/§6.5; `learningObjects[]` entries are loosely coupled (`id` + external `repository`), mirroring `lpm.schema.yaml`'s `strands[]` pattern. |
+| `lpm.schema.yaml` | `oe:LPM` instances | Embeds the `conceptbase` manifest (§10); `strands[]` entries are loosely coupled (`id` + external `repository` URI only) — full Strand structure is intentionally out of scope for this schema. Since RFC-0010, `id`/lifecycle field are tier-conditional via `oneOf`: permanent (`OE-LPM-######` + `status`) or sandbox (`OE-SANDBOX-LPM-######` + `sandboxMeta`), plus optional `forkedFrom`/`mergedInto` lineage pointers valid at either tier. |
+| `strand.schema.yaml` | `oe:Strand` / `oe:SubStrand` instances | `concepts[].emphasis` (`primary` \| `reinforcing`) is **REQUIRED** on every concept reference, providing the machine-checkable basis for horizontal coherence auditing (§13.3); `subStrands[]` is self-referential (`$ref: "#"`) enabling recursive nesting per §6.1/§6.5; `learningObjects[]` entries are loosely coupled (`id` + external `repository`), mirroring `lpm.schema.yaml`'s `strands[]` pattern. Since RFC-0009, an optional `contextAssumption[]` may tag a SubStrand's designed-for instructional context, and an optional `trajectoryVariants[]` may hold alternate SubStrand bodies for the same slot, each required to carry its own `contextAssumption`; variants are excluded from the §6.5 nesting-depth count and may not themselves nest further. `id`/lifecycle field are tier-conditional via `oneOf` (permanent `OE-STRAND-######` + `status`, or sandbox `OE-SANDBOX-STRAND-######` + `sandboxMeta`), same companion fix as `lpm.schema.yaml`. |
 | `learningObject.schema.yaml` | `oe:LearningObject` instances | `concepts[]` reuses the same `{id, emphasis}` shape as `strand.schema.yaml` (`common.defs.yaml#/$defs/conceptEmphasisRef`); content itself is out of scope (§1.2) — this schema validates structure only. |
 
 ### 7.4 Extension Mechanism
@@ -532,12 +536,15 @@ A repository that references OECB entities without a valid manifest, or that ref
 ## Appendix A — Identifier Pattern Quick Reference
 
 ```
-Concept:    ^OE-CONCEPT-[0-9]{6}$
-LPM:        ^OE-LPM-[0-9]{6}$
-Strand:     ^OE-STRAND-[0-9]{6}$
-Vocabulary: ^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$
-Semver:     ^[0-9]+\.[0-9]+\.[0-9]+$
-Language:   ^[a-z]{2}(-[A-Z]{2})?$
+Concept:       ^OE-CONCEPT-[0-9]{6}$
+LPM:           ^OE-LPM-[0-9]{6}$
+Strand:        ^OE-STRAND-[0-9]{6}$
+Vocabulary:    ^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$
+Semver:        ^[0-9]+\.[0-9]+\.[0-9]+$
+Language:      ^[a-z]{2}(-[A-Z]{2})?$
+Sandbox Concept: ^OE-SANDBOX-CONCEPT-[0-9]{6}$   (RFC-0001)
+Sandbox LPM:     ^OE-SANDBOX-LPM-[0-9]{6}$        (RFC-0010)
+Sandbox Strand:  ^OE-SANDBOX-STRAND-[0-9]{6}$     (RFC-0010 companion fix, 2026-07-21)
 ```
 
 ## Appendix B — Reserved Ontology Prefixes
@@ -560,7 +567,8 @@ dct:  http://purl.org/dc/terms/
 | 0.2.0 (reformat) | Superseded | Reformatted as a normative formal specification with RFC 2119 conformance language; namespace finalized to `www.w3id.org/openevo/`; conformance classes (§16) added; all prior narrative content consolidated and made testable. |
 | 0.3.0 | Superseded | RFC-0001 (sandbox tier, two-speed review, `retracted` status) and RFC-0002 (`oe:Competency` profiled against CASE `CFItem`, promoted out of `reserved`). |
 | 0.3.1 | Superseded | §4.2 — documented the interim, flat-JSON/raw-YAML-only MVP resolution scheme for the `www.w3id.org/openevo/` namespace (registration was still outstanding as of this revision), pending the full content-negotiated Phase 4 registry. |
-| **0.4.0 (this document)** | Current | RFC-0004 (`specification-amendment`) — relicensed all OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0; amended §3 principle 2 ("FAIR by construction") wording accordingly. |
+| 0.4.0 | Superseded | RFC-0004 (`specification-amendment`) — relicensed all OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0; amended §3 principle 2 ("FAIR by construction") wording accordingly. |
+| **0.5.0 (this document)** | Current | RFC-0009 — `oe:contextAssumption` + `oe:hasTrajectoryVariant` (§6.3, §7.3), for representing multiple defensible instructional-context-tagged content paths through one SubStrand. RFC-0010 — realized §4.5's forward-declared sandbox-tier extension point for `oe:LPM` (`OE-SANDBOX-LPM-######`, `oe:forkedFrom`, `oe:mergedInto`; §4.5, §6.3, §7.3, Appendix A). Neither touches §3 or §11, so neither required `specification-amendment` type. |
 
 ---
 

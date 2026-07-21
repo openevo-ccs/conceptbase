@@ -107,7 +107,7 @@ concepts:
           another.
     relations:
       skos:broader: [OE-CONCEPT-000090]
-      skos:related: [OE-CONCEPT-000201, OE-CONCEPT-000216, OE-CONCEPT-000217]
+      skos:related: [OE-CONCEPT-000201, OE-CONCEPT-000216, OE-CONCEPT-000217, OE-SANDBOX-CONCEPT-000003]
 
   - id: OE-CONCEPT-000204
     type: oe:Concept
@@ -124,7 +124,7 @@ concepts:
           system.
     relations:
       skos:broader: [OE-CONCEPT-000090]
-      skos:related: [OE-CONCEPT-000206, OE-CONCEPT-000218, OE-CONCEPT-000221]
+      skos:related: [OE-CONCEPT-000206, OE-CONCEPT-000218, OE-CONCEPT-000221, OE-SANDBOX-CONCEPT-000003]
 
   - id: OE-CONCEPT-000205
     type: oe:Concept
@@ -237,7 +237,7 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213]
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213, OE-SANDBOX-CONCEPT-000004]
 
   - id: OE-CONCEPT-000212
     type: oe:Concept
@@ -276,7 +276,7 @@ concepts:
           scoring higher against an objective function.
     relations:
       skos:broader: [OE-CONCEPT-000090]
-      skos:related: [OE-CONCEPT-000214, OE-CONCEPT-000209, OE-CONCEPT-000211]
+      skos:related: [OE-CONCEPT-000214, OE-CONCEPT-000209, OE-CONCEPT-000211, OE-SANDBOX-CONCEPT-000005]
     examples:
       - A cultural practice being adopted more widely because it improves group cohesion.
       - A genetic algorithm retaining higher-fitness candidate solutions across generations.
@@ -318,7 +318,7 @@ concepts:
           capability resulting from experience, instruction, or
           practice.
     relations:
-      skos:related: [OE-CONCEPT-000212, OE-CONCEPT-000216, OE-CONCEPT-000210]
+      skos:related: [OE-CONCEPT-000212, OE-CONCEPT-000216, OE-CONCEPT-000210, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000006]
 
   - id: OE-CONCEPT-000216
     type: oe:Concept
@@ -364,7 +364,7 @@ concepts:
           Tools, techniques, or systems created to extend or augment
           biological or cognitive capability.
     relations:
-      skos:related: [OE-CONCEPT-000204, OE-CONCEPT-000209, OE-CONCEPT-000223]
+      skos:related: [OE-CONCEPT-000204, OE-CONCEPT-000209, OE-CONCEPT-000223, OE-SANDBOX-CONCEPT-000005]
 
   - id: OE-CONCEPT-000219
     type: oe:Concept
@@ -380,7 +380,7 @@ concepts:
           artifacts shared within a group, persisting beyond any single
           individual.
     relations:
-      skos:related: [OE-CONCEPT-000207, OE-CONCEPT-000220, OE-CONCEPT-000221]
+      skos:related: [OE-CONCEPT-000207, OE-CONCEPT-000220, OE-CONCEPT-000221, OE-SANDBOX-CONCEPT-000003, OE-SANDBOX-CONCEPT-000005]
 
   - id: OE-CONCEPT-000220
     type: oe:Concept
@@ -458,3 +458,129 @@ concepts:
           within a single mind.
     relations:
       skos:related: [OE-CONCEPT-000222, OE-CONCEPT-000223]
+
+  # ==========================================================================
+  # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
+  # never-delete guarantee, TTL'd, not yet promoted through full RFC review.
+  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-000003 (MPI-EVA
+  # cross-disciplinary capstone) and OE-SANDBOX-LPM-000004 (machine-culture
+  # coevolution capstone) — see docs/design-notes/human-dimensions-k12-case-study.md
+  # and RFC-0010.
+  # ==========================================================================
+
+  - id: OE-SANDBOX-CONCEPT-000003
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Language Evolution
+    definitions:
+      en:
+        general: >
+          The process by which languages change, diversify, and
+          descend from common ancestral languages over time, through
+          the same general transmission-with-variation dynamics that
+          shape other cultural traits.
+    relations:
+      skos:related: [OE-CONCEPT-000203, OE-CONCEPT-000219, OE-CONCEPT-000204]
+    examples:
+      - Reconstructing a language family tree from shared and divergent
+        features across related languages.
+    citations:
+      - text: >
+          Reused from the same variation-selection-retention framework
+          already cited on OE-CONCEPT-000213 (Mesoudi, A. (2011). Cultural
+          Evolution: How Darwinian Theory Can Explain Human Culture and
+          Synthesize the Social Sciences), applied here to language
+          specifically rather than culture in general.
+
+  - id: OE-SANDBOX-CONCEPT-000004
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Comparative Cognition
+    definitions:
+      en:
+        general: >
+          The study of cognitive capacities (perception, memory,
+          problem-solving, social learning) across species, used to
+          identify which capacities are shared through common ancestry,
+          which evolved independently, and which are distinctively
+          elaborated in a given lineage.
+    relations:
+      skos:related: [OE-CONCEPT-000215, OE-CONCEPT-000211]
+    examples:
+      - Testing tool-use problem-solving in corvids, great apes, and
+        young children to compare the cognitive strategies each group
+        uses.
+
+  - id: OE-SANDBOX-CONCEPT-000005
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Machine Culture
+    definitions:
+      en:
+        general: >
+          Culture that is mediated or generated by machines — cases
+          where AI systems shape, participate in, or themselves undergo
+          the variation, transmission, and selection dynamics that
+          define cultural evolution, rather than machines being only
+          passive tools culture is transmitted through.
+    relations:
+      skos:related: [OE-CONCEPT-000219, OE-CONCEPT-000213, OE-CONCEPT-000218, OE-SANDBOX-CONCEPT-000006]
+    examples:
+      - A recommendation algorithm's outputs shifting collective media
+        consumption patterns, which in turn shifts what content gets
+        produced and fed back into the algorithm's training data.
+    citations:
+      - text: >
+          Brinkmann, L., Baumann, F., Bonnefon, J. F., Derex, M.,
+          Müller, T. F., Nussberger, A. M., Czaplicka, A., Acerbi, A.,
+          Griffiths, T. L., Henrich, J., Leibo, J. Z., McElreath, R.,
+          Oudeyer, P. Y., Stray, J., & Rahwan, I. (2023). Machine
+          culture. Nature Human Behaviour, 7(11), 1855-1868.
+        doi: "10.1038/s41562-023-01742-2"
+
+  - id: OE-SANDBOX-CONCEPT-000006
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Hybrid Social Learning
+    definitions:
+      en:
+        general: >
+          Social learning processes that span human and artificial
+          agents jointly — humans learning from AI-generated content
+          or behavior, AI systems trained on human-generated content or
+          behavior, and the resulting feedback loop between the two —
+          rather than social learning occurring within a single-species
+          population.
+    relations:
+      skos:related: [OE-CONCEPT-000215, OE-SANDBOX-CONCEPT-000005]
+    examples:
+      - Students learning a problem-solving strategy partly from a
+        human teacher and partly from an AI tutoring system, whose own
+        responses were themselves shaped by prior learners' interactions.
+    nonExamples:
+      - A student learning solely from a textbook (no AI system's own
+        behavior is being learned from or is adapting in response).

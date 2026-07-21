@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The study of cognitive capacities (perception, memory, problem-solving, social learning) across species, used to identify which capacities are shared through common ancestry, which evolved independently, and which are distinctively elaborated in a given lineage.\n"
+    }
+  },
+  "examples": [
+    "Testing tool-use problem-solving in corvids, great apes, and young children to compare the cognitive strategies each group uses."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000004",
+  "labels": {
+    "en": "Comparative Cognition"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000215",
+      "OE-CONCEPT-000211"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

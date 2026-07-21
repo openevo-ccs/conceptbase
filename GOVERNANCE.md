@@ -18,7 +18,7 @@ This document defines the RFC/review process by which the ConceptBase evolves, t
 
 Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the RFC template (motivation, proposed IRI under `www.w3id.org/openevo/`, relations, justification for why no existing standard covers the need — see spec §3 item 4 and §12). Review ceremony is split by status transition (RFC-0001, spec §11.2):
 
-- Merging a new `OE-SANDBOX-CONCEPT-######` entry, or a `proposed`-status permanent-tier entry, needs only one maintainer approval (or a 5-business-day async no-objection window) — no domain editor sign-off required.
+- Merging a new `OE-SANDBOX-CONCEPT-######` entry, a new `OE-SANDBOX-LPM-######` entry (RFC-0010), or a `proposed`-status permanent-tier entry, needs only one maintainer approval (or a 5-business-day async no-objection window) — no domain editor sign-off required.
 - The `proposed → accepted` transition, and sandbox → permanent promotion, still require at least one domain editor approval and one maintainer approval before merge — that's the point where the permanence guarantee actually begins to apply.
 
 Changes to specification §3 (Design Principles) or §11 (Governance and Versioning) are **MAJOR** changes to the specification itself and require explicit maintainer consensus via an RFC tagged `type: specification-amendment` (spec §11.6).
@@ -48,6 +48,10 @@ A `retracted` entity (RFC-0001) follows the same rules but **MUST NOT** carry a 
 ## Sandbox/Provisional Tier
 
 Per spec §4.5 (RFC-0001), controlled-vocabulary concept entries may also be authored in a parallel, structurally distinct `OE-SANDBOX-CONCEPT-######` space, exempt from the Deprecation Policy above by construction — sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`), never the `status` enum above. Every sandbox entry is stamped with a 12-month `expiresOn` at creation and auto-archived if not promoted through the ordinary RFC process before then. Spec §4.5 is authoritative; this section exists only to surface the rule here for day-to-day operability.
+
+**Extended to `oe:LPM` by RFC-0010** (realizing spec §4.5's own forward-declared extension point): a whole LPM may likewise be authored provisionally as `OE-SANDBOX-LPM-######`, carrying `sandboxMeta` instead of `status`, exempt from the never-delete guarantee by the same construction. This is a *different* axis of variation from an LPM's own SubStrand-level `trajectoryVariants` (RFC-0009) — a sandbox LPM is a fork of an entire model's theoretical or thematic framing (`oe:forkedFrom` records lineage; `oe:mergedInto` records absorption into another LPM on archival), not an alternate path through one SubStrand's content. Merging a new `OE-SANDBOX-LPM-######` entry follows the same lightweight review below as sandbox concepts; promoting one to a permanent `OE-LPM-######` requires the full RFC process. Practically, a sandbox LPM's content is expected to live at a `repository`/`ref` pointer (e.g. a `sandbox/<short-name>` git branch of its trunk LPM's repository) rather than being copied into the registry — see RFC-0010 §7.
+
+**Extended to `oe:Strand`/`oe:SubStrand`** (a same-day companion fix alongside the first sandbox LPM forks, 2026-07-21): a sandbox-tier LPM authoring genuinely new Strand/SubStrand content has no permanent per-LPM strand block to mint from (those belong to founding, permanent-tier LPMs only per Identifier Block Allocation below), so `OE-SANDBOX-STRAND-######` was added as a third application of the same pattern, carrying `sandboxMeta` in place of `status`. Every Strand/SubStrand authored within a sandbox-tier LPM fork is expected to use this identifier tier, not the permanent one.
 
 ## Independent Versioning
 
@@ -86,6 +90,8 @@ A new vocabulary reserves its own `000N00`–`000N99` block via its founding RFC
 
 Each LPM reserves one `000N00`–`000N99` block. Within it: `0NN0` is reserved for future use, top-level strands use `0NN1`–`0NN9` (currently `101`/`102`/`103` and `201`/`202`/`203`), and each top-level strand's SubStrands use the following ten-block (`0NN1` → substrands `111`–`114`; `0NN2` → substrands `121`–`124`; etc.), consistent with the existing K-2 / 3-5 / 6-8 / 9-12 four-substrand pattern.
 
+**Trajectory-variant SubStrand IDs (RFC-0009):** a `trajectoryVariants[]` entry (an alternate SubStrand body for the same grade-band slot, tagged with a `contextAssumption`) takes the ID `0NN(k+4)` where `0NNk` is the base SubStrand it varies — e.g. a first variant of `OE-STRAND-000223` (position 3 in its ten-block) is `OE-STRAND-000227`. This uses capacity already unused inside each LPM's existing block (no LPM today uses more than four SubStrand slots per ten-block), so it is a documentation clarification, not a new block reservation. `0NN9` is left open per strand for a second variant or future use.
+
 | LPM | Block | Currently used |
 |---|---|---|
 | `bio-core-k12` (`OE-LPM-000001`) | `000100`–`000199` | 101–103 (strands), 111–114/121–124/131–134 (substrands) |
@@ -94,6 +100,10 @@ Each LPM reserves one `000N00`–`000N99` block. Within it: `0NN0` is reserved f
 ### LPM ID blocks (`OE-LPM-######`)
 
 Sequentially assigned, one ID per LPM, at RFC approval time — no sub-blocking needed since LPMs don't nest.
+
+**Sandbox LPM IDs (`OE-SANDBOX-LPM-######`, RFC-0010):** assigned sequentially within their own namespace, independent of and not consuming the permanent `OE-LPM-######` sequence above — mirrors how sandbox concept IDs don't consume permanent-tier concept-block numbering. No per-founding-RFC block reservation needed (unlike vocabularies/LPMs); see the Sandbox/Provisional Tier section above for the lightweight review this tier gets.
+
+**Sandbox Strand IDs (`OE-SANDBOX-STRAND-######`):** likewise assigned sequentially within their own namespace, independent of any permanent-tier LPM's reserved strand block (see Strand ID blocks above). Each sandbox LPM's top-level Strand is a pure container (mirroring every trunk Strand file's shape); the actual content lives one level down in its SubStrand(s), and a SubStrand's trajectory variant (RFC-0009) gets its own ID rather than reusing the base SubStrand's. Currently in use: `000001`–`000003` (`OE-SANDBOX-LPM-000001`, one capstone SubStrand + one trajectory variant); `000004`–`000009` (`OE-SANDBOX-LPM-000002`, four grade-band SubStrands, one with a trajectory variant); `000010`–`000012` (`OE-SANDBOX-LPM-000003`, one capstone SubStrand + variant); `000013`–`000015` (`OE-SANDBOX-LPM-000004`, one capstone SubStrand + variant).
 
 ### Competency ID blocks (`OE-COMPETENCY-0NNxxx`)
 

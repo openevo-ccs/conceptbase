@@ -1,0 +1,33 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "A member of the taxonomic group (tribe Hominini) comprising modern humans, extinct human species, and their immediate fossil ancestors since the divergence from the lineage leading to chimpanzees — a strictly taxonomic/phylogenetic category, not an agency- or intentionality-bearing one.\n"
+    }
+  },
+  "examples": [
+    "Homo sapiens, Homo neanderthalensis, and Australopithecus afarensis are all hominins."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000001",
+  "labels": {
+    "en": "Hominin"
+  },
+  "nonExamples": [
+    "Chimpanzees and other non-human great apes are close relatives but not hominins under the tribe-level definition used here."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000114",
+      "OE-CONCEPT-000113",
+      "OE-CONCEPT-000109",
+      "OE-SANDBOX-CONCEPT-000002"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

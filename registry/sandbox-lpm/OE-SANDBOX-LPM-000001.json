@@ -1,0 +1,15 @@
+{
+  "forkedFrom": "OE-LPM-000001",
+  "id": "OE-SANDBOX-LPM-000001",
+  "labels": {
+    "en": "BIO-CORE: Human Lineage Capstone (Genetics & Paleoanthropology)"
+  },
+  "owner": "openevo-ccs",
+  "ref": "sandbox/human-evolution-capstone",
+  "repo": "bio-core-k12",
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "citations": [
+    {
+      "text": "Reused from the same variation-selection-retention framework already cited on OE-CONCEPT-000213 (Mesoudi, A. (2011). Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences), applied here to language specifically rather than culture in general.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The process by which languages change, diversify, and descend from common ancestral languages over time, through the same general transmission-with-variation dynamics that shape other cultural traits.\n"
+    }
+  },
+  "examples": [
+    "Reconstructing a language family tree from shared and divergent features across related languages."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000003",
+  "labels": {
+    "en": "Language Evolution"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000203",
+      "OE-CONCEPT-000219",
+      "OE-CONCEPT-000204"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,31 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Genetic material recovered and sequenced from historical or fossil remains, enabling direct observation of genetic variation and population history at past points in time rather than inferring it solely from present-day populations.\n"
+    }
+  },
+  "examples": [
+    "Sequencing DNA extracted from a Neanderthal fossil to compare it directly against present-day human genomes."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000002",
+  "labels": {
+    "en": "Ancient DNA"
+  },
+  "nonExamples": [
+    "Inferring past population size changes purely from patterns of variation in living populations, with no ancient sample sequenced (a legitimate but different method — population genetics, not ancient DNA analysis specifically)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000103",
+      "OE-SANDBOX-CONCEPT-000001"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

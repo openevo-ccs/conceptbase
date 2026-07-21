@@ -20,7 +20,7 @@
 # ============================================================================
 
 id: OE-ONTOLOGY
-version: 1.3.1
+version: 1.5.0
 status: stable
 authors:
   - name: OpenEvo ConceptBase Maintainers
@@ -316,6 +316,58 @@ properties:
       which this Concept instance is defined. A Concept may be defined
       in exactly one home vocabulary but aligned to concepts in others
       via /alignments/ (Phase 2).
+
+  oe:contextAssumption:
+    label: context assumption
+    domain: oe:SubStrand
+    range: xsd:string
+    status: accepted
+    definition: >
+      Names an explicit assumption about instructional context this
+      SubStrand body is designed for (RFC-0009). Value space
+      (rich-scaffolding | minimal-prior-exposure) is constrained at the
+      schema layer (common.defs.yaml#/$defs/contextAssumption), not
+      enumerated here — the same pattern already used for oe:status.
+
+  oe:hasTrajectoryVariant:
+    label: has trajectory variant
+    domain: oe:SubStrand
+    range: oe:SubStrand
+    status: accepted
+    definition: >
+      Relates a SubStrand to an alternate SubStrand body occupying the
+      same conceptual slot, tagged with a different oe:contextAssumption
+      (RFC-0009). Deliberately NOT a subproperty of oe:hasSubStrand: this
+      is alternation between coequal realizations of one slot, not
+      parent-child composition, and MUST NOT be traversed by tooling
+      that enforces the oe:hasSubStrand nesting-depth limit (spec §6.5).
+
+  oe:forkedFrom:
+    label: forked from
+    domain: oe:LPM
+    range: oe:LPM
+    status: accepted
+    definition: >
+      Relates an LPM to the LPM it began as a fork of (RFC-0010).
+      Provenance only — does not imply the fork is a subset, a strict
+      revision, or in any way subordinate; a fork is exactly as
+      internally valid as its parent, the same non-hierarchical
+      relationship BIO-CORE and OE-INTERDISCIPLINARY already have to
+      each other (design principle 7), just made discoverable via an
+      explicit lineage pointer instead of left implicit.
+
+  oe:mergedInto:
+    label: merged into
+    domain: oe:LPM
+    range: oe:LPM
+    status: accepted
+    definition: >
+      Relates a sandbox-tier LPM being archived to the LPM its content
+      was substantively absorbed into (RFC-0010). Not used on
+      permanent-tier LPMs — see GOVERNANCE.md's existing status:
+      deprecated / supersededBy pattern for that case. Scoped to the
+      sandbox tier, where archival rather than formal deprecation is the
+      operative lifecycle event (spec §4.5).
 
 # ----------------------------------------------------------------------------
 # EXTENSIBILITY & VERSIONING NOTES

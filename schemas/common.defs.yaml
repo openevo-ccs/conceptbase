@@ -21,7 +21,7 @@
 
 meta:
   id: OE-SCHEMA-COMMON
-  version: 1.4.0
+  version: 1.10.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -88,6 +88,67 @@ meta:
       construction, not by exception, since sandbox entries carry
       sandboxStatus, never the permanent-tier status enum below.
       Resolves under https://www.w3id.org/openevo/sandbox/concept/{id}.
+
+  sandboxLpmId:
+    type: string
+    pattern: "^OE-SANDBOX-LPM-[0-9]{6}$"
+    description: >
+      Provisional identifier for a sandbox-tier LPM entry (RFC-0010,
+      realizing the extension point spec §4.5 forward-declares beyond
+      concept entries). Structurally distinct from lpmId so the two can
+      never be mistaken for each other. Not subject to the never-delete
+      guarantee — exempt by construction, since sandbox LPMs carry
+      sandboxMeta, never the permanent-tier status enum. Resolves under
+      https://www.w3id.org/openevo/sandbox/lpm/{id}. Assigned
+      sequentially within its own namespace, independent of the
+      permanent OE-LPM-###### sequence.
+
+  anyConceptRef:
+    type: string
+    description: >
+      A reference to a Concept at either tier — used by skos:broader/
+      narrower/related targets, since a permanent-tier concept and a
+      sandbox-tier concept may legitimately relate to each other (e.g. a
+      sandbox concept extending an existing permanent vocabulary).
+    oneOf:
+      - "$ref": "#/$defs/conceptId"
+      - "$ref": "#/$defs/sandboxConceptId"
+
+  sandboxStrandId:
+    type: string
+    pattern: "^OE-SANDBOX-STRAND-[0-9]{6}$"
+    description: >
+      Provisional identifier for a sandbox-tier Strand/SubStrand entry,
+      extending the sandbox pattern (RFC-0001, RFC-0010) to oe:Strand —
+      needed because a sandbox-tier LPM (RFC-0010) authoring genuinely
+      new Strand/SubStrand content has no permanent per-LPM block to
+      mint from (those blocks belong to founding, permanent-tier LPMs
+      only). Structurally distinct from strandId. Not subject to the
+      never-delete guarantee. Resolves under
+      https://www.w3id.org/openevo/sandbox/strand/{id}. Assigned
+      sequentially within its own namespace, independent of any
+      permanent-tier LPM's reserved strand block.
+
+  anyStrandRef:
+    type: string
+    description: >
+      A reference to a Strand/SubStrand at either tier — used wherever a
+      Strand ID is referenced from outside the strand file itself (e.g.
+      lpm.schema.yaml's strands[].id), since a sandbox-tier LPM's
+      strands[] list may contain sandbox-tier Strand IDs.
+    oneOf:
+      - "$ref": "#/$defs/strandId"
+      - "$ref": "#/$defs/sandboxStrandId"
+
+  anyLpmRef:
+    type: string
+    description: >
+      A reference to an LPM at either tier (RFC-0010) — used by
+      oe:forkedFrom and oe:mergedInto, since a fork's parent or a merge
+      target may itself be a permanent or a sandbox-tier LPM.
+    oneOf:
+      - "$ref": "#/$defs/lpmId"
+      - "$ref": "#/$defs/sandboxLpmId"
 
   sandboxStatus:
     type: string
@@ -158,6 +219,20 @@ meta:
       the maintainers," with no implied replacement, unlike `deprecated`'s
       implicit supersession.
 
+  contextAssumption:
+    type: string
+    enum: [rich-scaffolding, minimal-prior-exposure]
+    description: >
+      A named, explicit assumption about the instructional context a
+      SubStrand (or SubStrand trajectory variant) is designed for
+      (RFC-0009), per docs/design-notes/human-dimensions-k12-case-study.md.
+      "rich-scaffolding" assumes ample instructional time and prior
+      exposure to the strand's foundational concepts; "minimal-prior-exposure"
+      assumes thin or inconsistent prior coverage and favors more heavily
+      scaffolded, later-introduced content. Adding a new enum value later
+      is a MINOR, additive schema change via ordinary RFC review, not a
+      specification-amendment.
+
   retractionNote:
     type: string
     description: >
@@ -225,7 +300,7 @@ meta:
       strand.schema.yaml and learningObject.schema.yaml.
     properties:
       id:
-        "$ref": "#/$defs/conceptId"
+        "$ref": "#/$defs/anyConceptRef"
       emphasis:
         type: string
         enum: [primary, reinforcing]

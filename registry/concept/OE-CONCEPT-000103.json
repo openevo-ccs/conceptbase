@@ -13,7 +13,8 @@
     "skos:related": [
       "OE-CONCEPT-000106",
       "OE-CONCEPT-000107",
-      "OE-CONCEPT-000102"
+      "OE-CONCEPT-000102",
+      "OE-SANDBOX-CONCEPT-000002"
     ]
   },
   "status": "stable",

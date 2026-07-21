@@ -12,7 +12,8 @@
   "relations": {
     "skos:related": [
       "OE-CONCEPT-000114",
-      "OE-CONCEPT-000101"
+      "OE-CONCEPT-000101",
+      "OE-SANDBOX-CONCEPT-000001"
     ]
   },
   "status": "stable",
