@@ -110,12 +110,13 @@ Not yet allocated by block, since Phase 1 has zero Learning Object instances and
 
 ## Compatibility Checking
 
-Per specification §10.3, a CI compatibility-checker (Phase 4 deliverable) **MUST**, on every push to a dependent repository, verify pinned-entity resolution, flag deprecated-without-acknowledgement references, flag newer-MAJOR-available pins, and (RFC-0001) loudly flag any reference to an `OE-SANDBOX-*` identifier. Until that tooling exists, dependent repositories are responsible for this verification manually.
+Per specification §10.3, a CI compatibility-checker (Phase 4 deliverable) **MUST**, on every push to a dependent repository, verify pinned-entity resolution, flag deprecated-without-acknowledgement references, flag newer-MAJOR-available pins, and (RFC-0001) loudly flag any reference to an `OE-SANDBOX-*` identifier. That full checker doesn't exist yet — what does exist (see Tooling below) is schema validation only, a real but partial step toward it. Pin-resolution, deprecation, and sandbox-reference flagging are still manual until the full checker is built.
 
 ## Tooling
 
-This repository does not yet have a CI build/validation pipeline (spec §5.2, §13 — planned, not yet implemented). The only validation tooling that currently exists is:
+This repository does not yet have the full CI build/validation pipeline (spec §5.2, §13 — planned, not yet implemented). What exists today:
 
-- [`scripts/check_related_symmetry.py`](scripts/check_related_symmetry.py) — verifies that every `skos:related` assertion across `vocabularies/*.yaml` is reciprocated (SKOS's own symmetric-relation semantics, inherited by `oe:Concept`). Run manually: `python scripts/check_related_symmetry.py`.
+- [`scripts/validate.py`](scripts/validate.py) — offline JSON Schema validation against `schemas/*.schema.yaml` (works around a `common.defs.yaml` `$ref` resolution gap that breaks plain `check-jsonschema` — see the script's docstring). Wired into CI via [`.github/workflows/validate.yml`](.github/workflows/validate.yml), which runs it on every PR against every vocabulary, alignment, and example file in this repo. `bio-core-k12` and `oe-interdisciplinary-k12` each have their own `validate.yml` that checks out this repo alongside themselves and run it against their own `lpm.yaml`/`strands/*.yaml`. See [`docs/getting-started.md`](docs/getting-started.md) for the full walkthrough.
+- [`scripts/check_related_symmetry.py`](scripts/check_related_symmetry.py) — verifies that every `skos:related` assertion across `vocabularies/*.yaml` is reciprocated (SKOS's own symmetric-relation semantics, inherited by `oe:Concept`). Not yet wired into CI — run manually: `python scripts/check_related_symmetry.py`.
 
-Contributors adding new concepts with `skos:related` relations should run this script before opening a PR.
+Contributors adding new concepts with `skos:related` relations should run `check_related_symmetry.py` before opening a PR; `validate.py` runs automatically, but can also be run locally first (same commands CI uses, see `docs/getting-started.md`).

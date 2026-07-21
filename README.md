@@ -5,6 +5,7 @@
 [![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content%20License-CC--BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 [![Tooling License: MIT](https://img.shields.io/badge/Code%20License-MIT-yellow.svg)](LICENSE-CODE)
+[![Validate](https://github.com/openevo-ccs/conceptbase/actions/workflows/validate.yml/badge.svg)](https://github.com/openevo-ccs/conceptbase/actions/workflows/validate.yml)
 [![Specification](https://img.shields.io/badge/Spec-v0.4.0-blue)](docs/oecb_specifications.md)
 [![Namespace status](https://img.shields.io/badge/w3id%20registration-live-brightgreen)](https://www.w3id.org/openevo/)
 [![Ontology](https://img.shields.io/badge/Ontology-v1.3.1-blue)](ontologies/core_v1.yaml)
@@ -92,7 +93,7 @@ Since that pilot review, six accepted RFCs have pulled work forward from later p
 | **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`, plus `Competency` — promoted early, see below); Concept/LPM/Strand/Competency schemas; seed vocabularies (`BIO-CORE-v1.0.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process; sandbox tier and `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)); **namespace registered and live** ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)) |
 | **Phase 2 — Alignment & Multilinguality** | 🟡 Started ahead of schedule | Five SKOS-based cross-vocabulary alignment records with provenance (see [`alignments/`](alignments/)), including the first concept↔competency alignments ([RFC-0008](proposals/0008-alignment-competency-support.md)); language-tagged labels/definitions beyond `en` still planned |
 | **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
-| **Phase 4 — Ecosystem Tooling** | 🟡 Started ahead of schedule | `oe:Competency` profiled against CASE `CFItem` and promoted out of `reserved` ([RFC-0002](proposals/0002-competency-case-profile.md), see [`docs/design-notes/case-competency-profile.md`](docs/design-notes/case-competency-profile.md)); flat-JSON registry and live namespace resolution ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)); citation-only competency entries for license-restricted sources ([RFC-0005](proposals/0005-citation-only-competency-entries.md)); two full-text competency vocabularies ingested, `NGSS-LIFE-SCIENCE-v1.0.0` ([RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)) and `AI4K12-v1.0.0` ([RFC-0007](proposals/0007-ai4k12-vocabulary.md)); evidence schema, hosted SPARQL endpoint, and CI compatibility-checker action still planned |
+| **Phase 4 — Ecosystem Tooling** | 🟡 Started ahead of schedule | `oe:Competency` profiled against CASE `CFItem` and promoted out of `reserved` ([RFC-0002](proposals/0002-competency-case-profile.md), see [`docs/design-notes/case-competency-profile.md`](docs/design-notes/case-competency-profile.md)); flat-JSON registry and live namespace resolution ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)); citation-only competency entries for license-restricted sources ([RFC-0005](proposals/0005-citation-only-competency-entries.md)); two full-text competency vocabularies ingested, `NGSS-LIFE-SCIENCE-v1.0.0` ([RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)) and `AI4K12-v1.0.0` ([RFC-0007](proposals/0007-ai4k12-vocabulary.md)); basic schema-validation CI (`.github/workflows/validate.yml`, this repo and both reference LPMs) — a real slice of the spec §10.3 CI compatibility-checker, not the full thing (see Roadmap); evidence schema, hosted SPARQL endpoint, and the full pin-resolution/deprecation-aware compatibility-checker still planned |
 
 Reserved ontology classes for later phases (`Collection`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core_v1.yaml`](ontologies/core_v1.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change. `Competency` was reserved the same way and has since been promoted (see below).
 
@@ -200,7 +201,9 @@ conceptbase/
 │   ├── 0007-ai4k12-vocabulary.md
 │   └── 0008-alignment-competency-support.md
 │
-└── .github/workflows/          # CI: deploys app/ + registry/ to GitHub Pages
+└── .github/workflows/
+    ├── pages.yml                # CI: deploys app/ + registry/ to GitHub Pages
+    └── validate.yml             # CI: runs scripts/validate.py on every PR (schemas/vocabularies/alignments/examples)
 ```
 
 Not yet created, but referenced elsewhere in this README as future scope: `grade-schemas/`, `subject-schemas/` (Phase 3), `evidence/` (Phase 4), `validation/`, `build/` — the full CI-wired build/validation pipeline doesn't exist yet (`scripts/` holds standalone scripts in the meantime, `scripts/validate.py` included, not CI-wired other than the Pages deploy).
@@ -264,11 +267,13 @@ Full content negotiation (JSON-LD, HTML, flat JSON per §4.2's target design) is
 
 **Validating an entry against a schema:**
 
-The `validation/` directory and `oecb-validate` CLI referenced by earlier drafts of this doc are planned (Phase 4 CI compatibility-checker), not yet built. In the meantime, use [`scripts/validate.py`](scripts/validate.py):
+The full `validation/` directory and `oecb-validate` CLI referenced by earlier drafts of this doc — the spec §10.3 CI compatibility-checker that also verifies pinned-version resolution, flags deprecated/superseded references, and warns on sandbox-identifier usage — is still Phase 4 scope, not yet built. What exists today is schema validation: [`scripts/validate.py`](scripts/validate.py), run automatically on every PR by [`.github/workflows/validate.yml`](.github/workflows/validate.yml) against every real vocabulary, alignment, and example file — not just a manual, easy-to-forget step anymore. Run the same check locally:
 
 ```bash
 python scripts/validate.py schemas/concept.schema.yaml examples/concept.example.yaml
 ```
+
+A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs ([`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12), [`oe-interdisciplinary-k12`](https://github.com/openevo-ccs/oe-interdisciplinary-k12)) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
 
 Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails against these schemas with a network-resolution error — every schema's `$ref` to `common.defs.yaml` resolves against a w3id URL that isn't served yet (a known gap; see the script's docstring). `scripts/validate.py` resolves that `$ref` from the local `schemas/` directory instead.
 
@@ -344,11 +349,14 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [x] Phase 2 (RFC-0006/0007, ahead of schedule): First two full-text competency vocabularies, `NGSS-LIFE-SCIENCE-v1.0.0` and `AI4K12-v1.0.0`
 - [x] Phase 2 (RFC-0008, ahead of schedule): Concept↔competency alignment support; 3 new alignment records
 - [x] Concept Lens view added to the ConceptBase Explorer; Selection cross-domain case study published
+- [x] Developer onboarding: `docs/getting-started.md`, `examples/`, offline `scripts/validate.py`, Explorer welcome banner + `?lens=` deep link
+- [x] Basic schema-validation CI: `.github/workflows/validate.yml` on this repo (every vocabulary/alignment/example) and on both reference LPMs (`lpm.yaml`/`strands/*.yaml`, checking out this repo alongside)
 - [ ] Phase 2: Multilingual label/definition expansion beyond `en`
 - [ ] Phase 3: Grade-band schema registry (US K–12, OECD, OpenEvo 4-band/6-band)
 - [ ] Phase 3: Subject-area schema registry
 - [ ] Phase 4: Assessment and evidence schemas (xAPI-profiled)
-- [ ] Phase 4: Hosted SPARQL endpoint and CI compatibility-checker action
+- [ ] Phase 4: Hosted SPARQL endpoint
+- [ ] Phase 4: Full CI compatibility-checker action (pin-resolution verification, deprecated/superseded + sandbox-identifier flagging per spec §10.3) — schema validation above is a real but partial step toward this, not the whole thing
 
 Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../milestones).
 

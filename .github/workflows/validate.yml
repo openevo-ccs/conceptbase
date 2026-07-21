@@ -1,0 +1,52 @@
+name: Validate schemas
+
+# Runs scripts/validate.py against every real vocabulary, alignment, and
+# example file in this repo -- the same offline validator documented in
+# docs/getting-started.md and examples/README.md, run automatically on
+# every PR instead of only when someone remembers to run it by hand. See
+# scripts/validate.py's own docstring for why plain check-jsonschema
+# doesn't work here (a still-open common.defs.yaml $ref resolution gap).
+
+on:
+  pull_request:
+    paths:
+      - "schemas/**"
+      - "vocabularies/**"
+      - "alignments/**"
+      - "examples/**"
+      - "scripts/validate.py"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "schemas/**"
+      - "vocabularies/**"
+      - "alignments/**"
+      - "examples/**"
+      - "scripts/validate.py"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml jsonschema referencing
+
+      - name: Validate every vocabulary, alignment, and example file
+        run: |
+          set +e
+          overall=0
+          run() { echo "::group::$*"; python scripts/validate.py "$@" || overall=1; echo "::endgroup::"; }
+
+          run schemas/concept.schema.yaml vocabularies/BIO-CORE-v1.0.0.yaml vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml examples/concept.example.yaml
+          run schemas/competency.schema.yaml vocabularies/NGSS-LIFE-SCIENCE-v1.0.0.yaml vocabularies/AI4K12-v1.0.0.yaml examples/competency.example.yaml examples/competency-citationonly.example.yaml
+          run schemas/alignment.schema.yaml alignments/*.yaml examples/alignment.example.yaml
+          run schemas/lpm.schema.yaml examples/lpm.example.yaml
+          run schemas/strand.schema.yaml examples/strand.example.yaml
+
+          exit $overall

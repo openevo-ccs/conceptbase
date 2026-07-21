@@ -75,7 +75,9 @@ python scripts/validate.py schemas/lpm.schema.yaml ../bio-core-k12/lpm.yaml
 python scripts/validate.py schemas/strand.schema.yaml ../bio-core-k12/strands/*.yaml
 ```
 
-Both should print `OK` for every file — this is the same command the (still-manual, Phase 4 CI compatibility-checker isn't built yet) review process runs against a real submission.
+Both should print `OK` for every file.
+
+This isn't just a manual courtesy check: `bio-core-k12` and `oe-interdisciplinary-k12` each have their own [`.github/workflows/validate.yml`](https://github.com/openevo-ccs/bio-core-k12/blob/main/.github/workflows/validate.yml) that checks out `conceptbase` alongside itself and runs these exact commands on every PR — so if you're contributing to either, this is also what CI will run against your change, not a separate check you have to guess at. `conceptbase` itself has an analogous [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) covering every real vocabulary, alignment, and example file in this repo. This is schema validation only — the full spec §10.3 CI compatibility-checker (pin-resolution verification, deprecated-reference flagging) is still Phase 4 scope, not yet built.
 
 ## 5. Copy a minimal example instead of reverse-engineering a big one
 

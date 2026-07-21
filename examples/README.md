@@ -26,3 +26,5 @@ python scripts/validate.py schemas/alignment.schema.yaml examples/alignment.exam
 ```
 
 `scripts/validate.py` resolves each schema's `common.defs.yaml` reference from disk — see that script's docstring for why a plain `check-jsonschema` invocation currently fails with a network-resolution error instead.
+
+These exact commands also run automatically on every PR that touches `examples/` via [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) — these files are kept honest by CI, not just by convention.
