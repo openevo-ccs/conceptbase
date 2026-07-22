@@ -1,0 +1,12 @@
+{
+  "assertedBy": [
+    "OpenEvo CCS Lab / KoMet project"
+  ],
+  "date": "2026-07-22",
+  "id": "OE-ALIGN-000011",
+  "matchType": "skos:relatedMatch",
+  "object": "DIGCOMPEDU-v1.0.0:OE-COMPETENCY-000707",
+  "rationale": "CCC Domain D (\"Curricular Meta-Modeling\") and DigCompEdu 2.2 (\"Creating and modifying digital content\") both concern authoring, not merely consuming, digital material. DigCompEdu 2.2 is framed around general digital teaching content (documents, media, learning resources); CCC Domain D is specifically about contributing to and modifying machine-readable curriculum knowledge structures themselves (concept entries, learning progression models, alignment records) -- a much more structurally constrained authoring task than DigCompEdu 2.2 anticipates. relatedMatch reflects that CCC Domain D is meaningfully harder and more specialized than a narrowing of DigCompEdu 2.2 would suggest; it is not simply \"content creation, but for curricula.\"\n",
+  "status": "proposed",
+  "subject": "CCC-v1.0.0:OE-COMPETENCY-001015"
+}

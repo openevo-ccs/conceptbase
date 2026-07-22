@@ -1,0 +1,12 @@
+{
+  "assertedBy": [
+    "OpenEvo CCS Lab / KoMet project"
+  ],
+  "date": "2026-07-22",
+  "id": "OE-ALIGN-000013",
+  "matchType": "skos:relatedMatch",
+  "object": "DIGCOMPEDU-v1.0.0:OE-COMPETENCY-000724",
+  "rationale": "CCC Domain E (\"Participatory Curriculum Innovation\") also relates to DigCompEdu 6.2 (\"Digital communication and collaboration\", within Area 6: Facilitating Learners' Digital Competence). DigCompEdu 6.2 is framed around teachers facilitating students' collaborative digital competence; CCC Domain E is about teachers themselves participating as contributors in open curriculum-infrastructure communities (cf. OE-ALIGN-000012's KMK-2.3 alignment, which addresses the more general collaborative-tool-use precursor). Recorded as a second, independent relatedMatch since the two source competencies address related but distinct audiences (facilitating student collaboration vs. teachers' own professional collaboration) that both bear on CCC Domain E without either one subsuming it.\n",
+  "status": "proposed",
+  "subject": "CCC-v1.0.0:OE-COMPETENCY-001020"
+}

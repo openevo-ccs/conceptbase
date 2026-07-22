@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "E1",
+  "id": "OE-COMPETENCY-001021",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001020"
+    ]
+  },
+  "statement": {
+    "en": "Collaborate with colleagues across subject areas on shared curriculum-design tasks enabled by computational representations."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

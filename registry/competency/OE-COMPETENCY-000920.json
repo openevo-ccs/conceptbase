@@ -1,0 +1,22 @@
+{
+  "citations": [
+    {
+      "text": "Kultusministerkonferenz (2016/2017). Bildung in der digitalen Welt: Strategie der Kultusministerkonferenz. Beschluss vom 08.12.2016 i.d.F. vom 07.12.2017.",
+      "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2016/2016_12_08-Bildung-in-der-digitalen-Welt.pdf"
+    }
+  ],
+  "humanCodingScheme": "2.3.1",
+  "id": "OE-COMPETENCY-000920",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000919"
+    ]
+  },
+  "statement": {
+    "de": "Digitale Werkzeuge für die Zusammenarbeit bei der Zusammenführung von Informationen, Daten und Ressourcen nutzen",
+    "en": "Use digital tools for collaboration in bringing together information, data and resources"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

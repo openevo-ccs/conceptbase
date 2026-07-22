@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "D1",
+  "id": "OE-COMPETENCY-001016",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001015"
+    ]
+  },
+  "statement": {
+    "en": "Contribute new or revised entries to a machine-readable learning progression model."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

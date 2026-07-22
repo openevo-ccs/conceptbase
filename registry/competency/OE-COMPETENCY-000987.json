@@ -1,0 +1,22 @@
+{
+  "citations": [
+    {
+      "text": "Kultusministerkonferenz (2016/2017). Bildung in der digitalen Welt: Strategie der Kultusministerkonferenz. Beschluss vom 08.12.2016 i.d.F. vom 07.12.2017.",
+      "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2016/2016_12_08-Bildung-in-der-digitalen-Welt.pdf"
+    }
+  ],
+  "humanCodingScheme": "6.2.5",
+  "id": "OE-COMPETENCY-000987",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000982"
+    ]
+  },
+  "statement": {
+    "de": "Die Bedeutung von digitalen Medien für die politische Meinungsbildung und Entscheidungsfindung kennen und nutzen",
+    "en": "Know and use the significance of digital media for political opinion-forming and decision-making"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

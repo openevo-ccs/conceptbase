@@ -1,0 +1,22 @@
+{
+  "citations": [
+    {
+      "text": "Kultusministerkonferenz (2016/2017). Bildung in der digitalen Welt: Strategie der Kultusministerkonferenz. Beschluss vom 08.12.2016 i.d.F. vom 07.12.2017.",
+      "url": "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2016/2016_12_08-Bildung-in-der-digitalen-Welt.pdf"
+    }
+  ],
+  "humanCodingScheme": "2.4.1",
+  "id": "OE-COMPETENCY-000923",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000922"
+    ]
+  },
+  "statement": {
+    "de": "Verhaltensregeln bei digitaler Interaktion und Kooperation kennen und anwenden",
+    "en": "Know and apply rules of conduct in digital interaction and cooperation"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

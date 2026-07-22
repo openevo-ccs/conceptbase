@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "E3",
+  "id": "OE-COMPETENCY-001023",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001020"
+    ]
+  },
+  "statement": {
+    "en": "Engage in evidence-informed curriculum design, using data from implementation and research to inform revisions."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

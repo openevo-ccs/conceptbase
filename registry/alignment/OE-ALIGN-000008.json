@@ -1,0 +1,12 @@
+{
+  "assertedBy": [
+    "OpenEvo CCS Lab / KoMet project"
+  ],
+  "date": "2026-07-22",
+  "id": "OE-ALIGN-000008",
+  "matchType": "skos:relatedMatch",
+  "object": "DIGCOMPEDU-v1.0.0:OE-COMPETENCY-000702",
+  "rationale": "CCC Domain B (\"Curriculum Coherence\") and DigCompEdu 1.2 (\"Professional Collaboration\") both depend on cross-teacher, often cross-subject, coordination. DigCompEdu 1.2 names the general collaborative competency (exchanging knowledge and experience, engaging in collaborative practice); CCC Domain B is the specific curriculum-design outcome that kind of collaboration must produce to achieve vertical/horizontal coherence. relatedMatch because DigCompEdu 1.2 is a necessary enabling competency for CCC Domain B but does not itself specify what \"coherence\" means or how to evaluate it -- the two are complementary, not equivalent.\n",
+  "status": "proposed",
+  "subject": "CCC-v1.0.0:OE-COMPETENCY-001005"
+}

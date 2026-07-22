@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "B1",
+  "id": "OE-COMPETENCY-001006",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001005"
+    ]
+  },
+  "statement": {
+    "en": "Identify vertical coherence: whether a concept is introduced, reinforced, and deepened consistently across grade levels within one subject."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

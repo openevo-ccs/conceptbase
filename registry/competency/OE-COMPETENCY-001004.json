@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "A4",
+  "id": "OE-COMPETENCY-001004",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001000"
+    ]
+  },
+  "statement": {
+    "en": "Compare two or more curriculum models to identify where they converge, diverge, or address the same underlying idea differently."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

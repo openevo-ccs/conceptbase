@@ -1,0 +1,15 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+    }
+  ],
+  "humanCodingScheme": "E",
+  "id": "OE-COMPETENCY-001020",
+  "statement": {
+    "en": "Participatory Curriculum Innovation: educators can engage as contributors, not just recipients, in the open infrastructure and communities that sustain computational curriculum work."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

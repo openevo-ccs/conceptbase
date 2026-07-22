@@ -1,0 +1,286 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: UNESCO AI Competency
+# Framework for Teachers (AI CFT)
+# ============================================================================
+# Path: /vocabularies/UNESCO-AI-CFT-v1.0.0.yaml
+#
+# UNESCO's "AI competency framework for teachers" (2024, ISBN 978-92-3-100707-1,
+# https://doi.org/10.54675/ZJTE2084): 15 competencies across 5 dimensions
+# (Human-centred mindset, Ethics of AI, AI foundations and applications,
+# AI pedagogy, AI for professional development), each spanning 3 progression
+# levels (Acquire, Deepen, Create) -- Table 1 of the source document.
+# Transcribed 2026-07-22 from the primary PDF.
+#
+# License: the source document states "This publication is available in
+# Open Access under the Attribution-ShareAlike 3.0 IGO (CC-BY-SA 3.0 IGO)
+# license" -- an explicit, unambiguous open grant, but a different version
+# (3.0 IGO) than the four patterns scripts/case_license_gate.py currently
+# recognizes as ALLOW_FULL (which are all 4.0). More substantively: OECB's
+# own content license is CC-BY-NC-SA-4.0 (RFC-0004); incorporating
+# CC-BY-SA-3.0-IGO content into a differently-licensed (NC-restricted)
+# corpus raises a share-alike compatibility question that is a genuine
+# open item for maintainer/legal review, not resolved by this RFC -- see
+# RFC-0011. Pending that review, only the framework's own short competency
+# BLOCK TITLES are reproduced here (e.g. "Human agency", "Ethical
+# principles") -- 2-4 word functional labels, not the source's descriptive
+# paragraphs -- kept at `status: proposed` accordingly.
+#
+# Structure: 2-level hierarchy via skos:broader -- 5 Dimension entries (top
+# level) -> 15 progression-level Competency Block entries, each
+# skos:broader -> its Dimension. humanCodingScheme follows the source
+# document's own "{dimension}.{level}" numbering (e.g. "1.1" = Human-centred
+# mindset x Acquire), where level 1/2/3 = Acquire/Deepen/Create.
+# ============================================================================
+
+meta:
+  id: UNESCO-AI-CFT
+  version: 1.0.0
+  status: proposed
+  scope: >
+    UNESCO's AI competency framework for teachers (2024): 15 competencies
+    across 5 dimensions (Human-centred mindset, Ethics of AI, AI foundations
+    and applications, AI pedagogy, AI for professional development), each
+    spanning 3 progression levels (Acquire, Deepen, Create).
+  discipline: teacher-education
+  license: CC-BY-SA-3.0-IGO (source) -- share-alike compatibility with OECB's own CC-BY-NC-SA-4.0 flagged for maintainer review, see header note and RFC-0011
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-COMPETENCY-v1.1.0
+  phase: 1
+
+competencies:
+
+# --- Dimension 1: Human-centred mindset -------------------------------------
+- id: OE-COMPETENCY-000800
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1"
+  statement:
+    en: "Human-centred mindset"
+  citations:
+  - &unesco_aicft_citation
+    text: "UNESCO (2024). AI competency framework for teachers. Paris: UNESCO. ISBN 978-92-3-100707-1."
+    url: "https://doi.org/10.54675/ZJTE2084"
+
+- id: OE-COMPETENCY-000805
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.1"
+  statement:
+    en: "Human agency"
+  conceptKeywords: ["Acquire"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000800]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000806
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.2"
+  statement:
+    en: "Human accountability"
+  conceptKeywords: ["Deepen"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000800]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000807
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.3"
+  statement:
+    en: "Social responsibility"
+  conceptKeywords: ["Create"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000800]
+  citations: [*unesco_aicft_citation]
+
+# --- Dimension 2: Ethics of AI -----------------------------------------------
+- id: OE-COMPETENCY-000801
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2"
+  statement:
+    en: "Ethics of AI"
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000808
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.1"
+  statement:
+    en: "Ethical principles"
+  conceptKeywords: ["Acquire"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000801]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000809
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.2"
+  statement:
+    en: "Safe and responsible use"
+  conceptKeywords: ["Deepen"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000801]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000810
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.3"
+  statement:
+    en: "Co-creating ethical rules"
+  conceptKeywords: ["Create"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000801]
+  citations: [*unesco_aicft_citation]
+
+# --- Dimension 3: AI foundations and applications ----------------------------
+- id: OE-COMPETENCY-000802
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3"
+  statement:
+    en: "AI foundations and applications"
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000811
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.1"
+  statement:
+    en: "Basic AI techniques and applications"
+  conceptKeywords: ["Acquire"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000802]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000812
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.2"
+  statement:
+    en: "Application skills"
+  conceptKeywords: ["Deepen"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000802]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000813
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.3"
+  statement:
+    en: "Creating with AI"
+  conceptKeywords: ["Create"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000802]
+  citations: [*unesco_aicft_citation]
+
+# --- Dimension 4: AI pedagogy -------------------------------------------------
+- id: OE-COMPETENCY-000803
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4"
+  statement:
+    en: "AI pedagogy"
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000814
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.1"
+  statement:
+    en: "AI-assisted teaching"
+  conceptKeywords: ["Acquire"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000803]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000815
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.2"
+  statement:
+    en: "AI-pedagogy integration"
+  conceptKeywords: ["Deepen"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000803]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000816
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.3"
+  statement:
+    en: "AI-enhanced pedagogical transformation"
+  abbreviatedStatement:
+    en: "AI-enhanced pedagogical innovation"
+  conceptKeywords: ["Create"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000803]
+  citations: [*unesco_aicft_citation]
+
+# --- Dimension 5: AI for professional development -----------------------------
+- id: OE-COMPETENCY-000804
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5"
+  statement:
+    en: "AI for professional development"
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000817
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.1"
+  statement:
+    en: "AI enabling lifelong professional learning"
+  conceptKeywords: ["Acquire"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000804]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000818
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.2"
+  statement:
+    en: "AI to enhance organizational learning"
+  conceptKeywords: ["Deepen"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000804]
+  citations: [*unesco_aicft_citation]
+
+- id: OE-COMPETENCY-000819
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.3"
+  statement:
+    en: "AI to support professional transformation"
+  conceptKeywords: ["Create"]
+  relations:
+    skos:broader: [OE-COMPETENCY-000804]
+  citations: [*unesco_aicft_citation]

@@ -1,0 +1,15 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+    }
+  ],
+  "humanCodingScheme": "C",
+  "id": "OE-COMPETENCY-001010",
+  "statement": {
+    "en": "Human-AI Curriculum Collaboration: educators can work productively and critically with AI systems that assist curriculum interpretation, without ceding professional judgment to them."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

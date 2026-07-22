@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "C2",
+  "id": "OE-COMPETENCY-001012",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001010"
+    ]
+  },
+  "statement": {
+    "en": "Guide AI systems toward useful curriculum-interpretation tasks through well-formed prompts, constraints, and iterative feedback."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

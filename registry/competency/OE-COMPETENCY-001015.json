@@ -1,0 +1,15 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+    }
+  ],
+  "humanCodingScheme": "D",
+  "id": "OE-COMPETENCY-001015",
+  "statement": {
+    "en": "Curricular Meta-Modeling: educators can contribute directly to the machine-readable knowledge structures that represent curricula, not just consume them."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

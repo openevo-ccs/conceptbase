@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "B2",
+  "id": "OE-COMPETENCY-001007",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001005"
+    ]
+  },
+  "statement": {
+    "en": "Identify horizontal coherence: whether related concepts across different subjects at the same grade level are aligned or in tension."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

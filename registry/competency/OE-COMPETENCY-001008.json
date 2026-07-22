@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "B3",
+  "id": "OE-COMPETENCY-001008",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001005"
+    ]
+  },
+  "statement": {
+    "en": "Design interdisciplinary pathways that connect a concept's treatment across two or more subject areas."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "A3",
+  "id": "OE-COMPETENCY-001003",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001000"
+    ]
+  },
+  "statement": {
+    "en": "Identify how a concept or competency is structured to progress across grade levels within a learning progression model."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "A2",
+  "id": "OE-COMPETENCY-001002",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001000"
+    ]
+  },
+  "statement": {
+    "en": "Inspect the conceptual relationships (e.g. broader/narrower, prerequisite, cross-disciplinary) encoded in a curriculum representation."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

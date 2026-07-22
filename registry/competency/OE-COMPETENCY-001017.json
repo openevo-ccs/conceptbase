@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "D2",
+  "id": "OE-COMPETENCY-001017",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001015"
+    ]
+  },
+  "statement": {
+    "en": "Annotate existing curricular knowledge structures with additional relationships, evidence, or context."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,12 @@
+{
+  "assertedBy": [
+    "OpenEvo CCS Lab / KoMet project"
+  ],
+  "date": "2026-07-22",
+  "id": "OE-ALIGN-000007",
+  "matchType": "skos:relatedMatch",
+  "object": "DIGCOMPEDU-v1.0.0:OE-COMPETENCY-000706",
+  "rationale": "CCC Domain A (\"Curriculum Interpretation\") and DigCompEdu 2.1 (\"Selecting digital resources\") both concern evaluating and selecting structured digital material for professional use. DigCompEdu 2.1 is framed generally (any digital teaching resource); CCC Domain A is specifically about interpreting machine-readable curriculum representations -- named as a gap DigCompEdu does not itself cover (see Framework connection notes.md's \"What they largely do not specify... how teachers can work with machine-readable curricula\"). Recorded as relatedMatch, not narrowMatch, because CCC Domain A is not simply DigCompEdu 2.1 applied to a narrower resource type -- it requires distinct conceptual-graph literacy (skos:broader/narrower relations, progression structures) that DigCompEdu 2.1 does not name.\n",
+  "status": "proposed",
+  "subject": "CCC-v1.0.0:OE-COMPETENCY-001000"
+}

@@ -1,0 +1,20 @@
+id: OE-ALIGN-000009
+subject: CCC-v1.0.0:OE-COMPETENCY-001010
+object: UNESCO-AI-CFT-v1.0.0:OE-COMPETENCY-000811
+matchType: skos:relatedMatch
+assertedBy:
+  - "OpenEvo CCS Lab / KoMet project"
+date: "2026-07-22"
+status: proposed
+rationale: >
+  CCC Domain C ("Human-AI Curriculum Collaboration") and UNESCO AI CFT 3.1
+  ("Basic AI techniques and applications", the Acquire-level competency
+  block for Dimension 3) both concern understanding and appropriately using
+  AI tools. UNESCO 3.1 is general-purpose (any AI tool in any teaching
+  context); CCC Domain C narrows this to the specific task of collaborating
+  with AI on curriculum-interpretation work (evaluating AI-suggested
+  alignments, guiding AI toward curriculum tasks, identifying AI biases in
+  curriculum data). relatedMatch, not narrowMatch, because CCC Domain C also
+  draws on UNESCO's Dimension 1 (Human-centred mindset -- see
+  OE-ALIGN-000010) and is not reducible to a narrower reading of Dimension 3
+  alone.

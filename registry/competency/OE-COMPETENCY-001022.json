@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "E2",
+  "id": "OE-COMPETENCY-001022",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001020"
+    ]
+  },
+  "statement": {
+    "en": "Contribute curriculum artifacts, corrections, or extensions to open, version-controlled repositories."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

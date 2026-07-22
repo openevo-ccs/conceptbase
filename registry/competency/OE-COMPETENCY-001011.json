@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "C1",
+  "id": "OE-COMPETENCY-001011",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001010"
+    ]
+  },
+  "statement": {
+    "en": "Critically evaluate AI-generated curriculum suggestions (e.g. proposed alignments, connections, or unit sequences) for accuracy and appropriateness."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

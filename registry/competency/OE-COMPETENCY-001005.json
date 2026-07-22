@@ -1,0 +1,15 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+    }
+  ],
+  "humanCodingScheme": "B",
+  "id": "OE-COMPETENCY-001005",
+  "statement": {
+    "en": "Curriculum Coherence: educators can assess and design for conceptual continuity within a subject across grades, and conceptual connection across subjects."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

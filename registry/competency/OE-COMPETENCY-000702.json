@@ -1,0 +1,21 @@
+{
+  "citations": [
+    {
+      "text": "Redecker, C. (2017). European Framework for the Digital Competence of Educators: DigCompEdu. JRC Science for Policy Report, EUR 28775 EN. Publications Office of the European Union.",
+      "url": "https://joint-research-centre.ec.europa.eu/digcompedu/digcompedu-framework_en"
+    }
+  ],
+  "humanCodingScheme": "1.2",
+  "id": "OE-COMPETENCY-000702",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000700"
+    ]
+  },
+  "statement": {
+    "en": "Professional Collaboration"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

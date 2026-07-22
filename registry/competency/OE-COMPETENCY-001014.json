@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "C4",
+  "id": "OE-COMPETENCY-001014",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001010"
+    ]
+  },
+  "statement": {
+    "en": "Identify the limitations and biases of a specific AI tool or model as applied to curriculum data, including gaps in its training data or theoretical framing."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

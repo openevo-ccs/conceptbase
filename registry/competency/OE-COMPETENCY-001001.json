@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "A1",
+  "id": "OE-COMPETENCY-001001",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001000"
+    ]
+  },
+  "statement": {
+    "en": "Navigate machine-readable curricula and locate specific concepts, competencies, and progressions within them."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

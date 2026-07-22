@@ -1,0 +1,303 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: Computational Curriculum
+# Competencies (CCC)
+# ============================================================================
+# Path: /vocabularies/CCC-v1.0.0.yaml
+#
+# Natively authored by OpenEvo (not imported from an external framework),
+# per RFC-0011. Operationalizes the "Computational Curriculum Competencies"
+# extension-layer argument first sketched narratively in the KoMet project's
+# planning notes: existing digital/AI competency frameworks for teachers
+# (DigCompEdu, UNESCO's AI CFT, KMK's "Kompetenzen in der digitalen Welt" --
+# see DIGCOMPEDU-v1.0.0.yaml, UNESCO-AI-CFT-v1.0.0.yaml,
+# KMK-DIGITALE-WELT-v1.0.0.yaml) define competencies for using digital/AI
+# tools generally, but not for working with machine-readable curriculum
+# representations specifically. CCC names that gap as five domains, each
+# with four constituent capabilities, and is cross-walked to the three
+# frameworks above via alignments/ (see OE-ALIGN-000006 through 000013) to
+# make the "KoMet builds the infrastructure that operationalizes these
+# frameworks" argument checkable as data, not just prose.
+#
+# License: CC-BY-NC-SA-4.0 (native OECB content, no external-source
+# restriction applies).
+#
+# Structure: 2-level hierarchy via skos:broader -- 5 Domain entries (top
+# level) -> 20 Capability entries, each skos:broader -> its Domain.
+# humanCodingScheme uses "{Domain letter}{capability number}", e.g. "A1".
+# ============================================================================
+
+meta:
+  id: CCC
+  version: 1.0.0
+  status: proposed
+  scope: >
+    Computational Curriculum Competencies: 5 domains (Curriculum
+    Interpretation, Curriculum Coherence, Human-AI Curriculum Collaboration,
+    Curricular Meta-Modeling, Participatory Curriculum Innovation), 20
+    capabilities, naming what educators need to work directly with
+    machine-readable curriculum representations -- a gap not covered by
+    general digital/AI competency frameworks.
+  discipline: computational-curriculum-studies
+  license: CC-BY-NC-SA-4.0
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+    - name: KoMet project (Friedrich-Schiller-Universität Jena)
+  conformsTo: OE-SCHEMA-COMPETENCY-v1.1.0
+  phase: 1
+
+competencies:
+
+# --- Domain A: Curriculum Interpretation ------------------------------------
+- id: OE-COMPETENCY-001000
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A"
+  statement:
+    en: "Curriculum Interpretation: educators can read and reason directly about machine-readable curriculum representations, not only about their traditional human-readable renderings."
+  citations:
+  - text: "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies, extending the DigCompEdu / UNESCO AI CFT / KMK argument named in KoMet's Framework connection notes."
+
+- id: OE-COMPETENCY-001001
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A1"
+  statement:
+    en: "Navigate machine-readable curricula and locate specific concepts, competencies, and progressions within them."
+  relations:
+    skos:broader: [OE-COMPETENCY-001000]
+
+- id: OE-COMPETENCY-001002
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A2"
+  statement:
+    en: "Inspect the conceptual relationships (e.g. broader/narrower, prerequisite, cross-disciplinary) encoded in a curriculum representation."
+  relations:
+    skos:broader: [OE-COMPETENCY-001000]
+
+- id: OE-COMPETENCY-001003
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A3"
+  statement:
+    en: "Identify how a concept or competency is structured to progress across grade levels within a learning progression model."
+  relations:
+    skos:broader: [OE-COMPETENCY-001000]
+
+- id: OE-COMPETENCY-001004
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A4"
+  statement:
+    en: "Compare two or more curriculum models to identify where they converge, diverge, or address the same underlying idea differently."
+  relations:
+    skos:broader: [OE-COMPETENCY-001000]
+
+# --- Domain B: Curriculum Coherence ------------------------------------------
+- id: OE-COMPETENCY-001005
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B"
+  statement:
+    en: "Curriculum Coherence: educators can assess and design for conceptual continuity within a subject across grades, and conceptual connection across subjects."
+  citations:
+  - text: "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+
+- id: OE-COMPETENCY-001006
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B1"
+  statement:
+    en: "Identify vertical coherence: whether a concept is introduced, reinforced, and deepened consistently across grade levels within one subject."
+  relations:
+    skos:broader: [OE-COMPETENCY-001005]
+
+- id: OE-COMPETENCY-001007
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B2"
+  statement:
+    en: "Identify horizontal coherence: whether related concepts across different subjects at the same grade level are aligned or in tension."
+  relations:
+    skos:broader: [OE-COMPETENCY-001005]
+
+- id: OE-COMPETENCY-001008
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B3"
+  statement:
+    en: "Design interdisciplinary pathways that connect a concept's treatment across two or more subject areas."
+  relations:
+    skos:broader: [OE-COMPETENCY-001005]
+
+- id: OE-COMPETENCY-001009
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B4"
+  statement:
+    en: "Evaluate whether a proposed curriculum change preserves or disrupts existing conceptual continuity."
+  relations:
+    skos:broader: [OE-COMPETENCY-001005]
+
+# --- Domain C: Human-AI Curriculum Collaboration -----------------------------
+- id: OE-COMPETENCY-001010
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C"
+  statement:
+    en: "Human-AI Curriculum Collaboration: educators can work productively and critically with AI systems that assist curriculum interpretation, without ceding professional judgment to them."
+  citations:
+  - text: "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+
+- id: OE-COMPETENCY-001011
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C1"
+  statement:
+    en: "Critically evaluate AI-generated curriculum suggestions (e.g. proposed alignments, connections, or unit sequences) for accuracy and appropriateness."
+  relations:
+    skos:broader: [OE-COMPETENCY-001010]
+
+- id: OE-COMPETENCY-001012
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C2"
+  statement:
+    en: "Guide AI systems toward useful curriculum-interpretation tasks through well-formed prompts, constraints, and iterative feedback."
+  relations:
+    skos:broader: [OE-COMPETENCY-001010]
+
+- id: OE-COMPETENCY-001013
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C3"
+  statement:
+    en: "Compare multiple AI-generated or human-generated curriculum proposals against explicit pedagogical criteria."
+  relations:
+    skos:broader: [OE-COMPETENCY-001010]
+
+- id: OE-COMPETENCY-001014
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C4"
+  statement:
+    en: "Identify the limitations and biases of a specific AI tool or model as applied to curriculum data, including gaps in its training data or theoretical framing."
+  relations:
+    skos:broader: [OE-COMPETENCY-001010]
+
+# --- Domain D: Curricular Meta-Modeling --------------------------------------
+- id: OE-COMPETENCY-001015
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D"
+  statement:
+    en: "Curricular Meta-Modeling: educators can contribute directly to the machine-readable knowledge structures that represent curricula, not just consume them."
+  citations:
+  - text: "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+
+- id: OE-COMPETENCY-001016
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D1"
+  statement:
+    en: "Contribute new or revised entries to a machine-readable learning progression model."
+  relations:
+    skos:broader: [OE-COMPETENCY-001015]
+
+- id: OE-COMPETENCY-001017
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D2"
+  statement:
+    en: "Annotate existing curricular knowledge structures with additional relationships, evidence, or context."
+  relations:
+    skos:broader: [OE-COMPETENCY-001015]
+
+- id: OE-COMPETENCY-001018
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D3"
+  statement:
+    en: "Create conceptual maps that represent how ideas relate within or across a curriculum model."
+  relations:
+    skos:broader: [OE-COMPETENCY-001015]
+
+- id: OE-COMPETENCY-001019
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D4"
+  statement:
+    en: "Participate in the redesign of curriculum structures using computational tools and shared meta-models."
+  relations:
+    skos:broader: [OE-COMPETENCY-001015]
+
+# --- Domain E: Participatory Curriculum Innovation ---------------------------
+- id: OE-COMPETENCY-001020
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E"
+  statement:
+    en: "Participatory Curriculum Innovation: educators can engage as contributors, not just recipients, in the open infrastructure and communities that sustain computational curriculum work."
+  citations:
+  - text: "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies."
+
+- id: OE-COMPETENCY-001021
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E1"
+  statement:
+    en: "Collaborate with colleagues across subject areas on shared curriculum-design tasks enabled by computational representations."
+  relations:
+    skos:broader: [OE-COMPETENCY-001020]
+
+- id: OE-COMPETENCY-001022
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E2"
+  statement:
+    en: "Contribute curriculum artifacts, corrections, or extensions to open, version-controlled repositories."
+  relations:
+    skos:broader: [OE-COMPETENCY-001020]
+
+- id: OE-COMPETENCY-001023
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E3"
+  statement:
+    en: "Engage in evidence-informed curriculum design, using data from implementation and research to inform revisions."
+  relations:
+    skos:broader: [OE-COMPETENCY-001020]
+
+- id: OE-COMPETENCY-001024
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E4"
+  statement:
+    en: "Participate in professional learning communities organized around computational curriculum studies and shared infrastructure."
+  relations:
+    skos:broader: [OE-COMPETENCY-001020]

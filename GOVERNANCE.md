@@ -113,6 +113,10 @@ Not populated until RFC-0006 (`NGSS-LIFE-SCIENCE`), the first vocabulary authore
 |---|---|---|
 | `NGSS-LIFE-SCIENCE` | `000100`–`000199` | 100–152 (8 topic parents + 45 performance expectations) |
 | `AI4K12` | `000200`–`000699` | 200–580 (5 Big Idea parents + 44 concept-row parents + 332 per-band LO/EU pairs). Wider block than usual (500 vs. the customary 100) given via RFC-0007, reserved up front since the full 3-level hierarchy was known in advance. |
+| `DIGCOMPEDU` | `000700`–`000799` | 700–727 (6 area parents + 22 competencies), per RFC-0011 |
+| `UNESCO-AI-CFT` | `000800`–`000899` | 800–819 (5 dimension parents + 15 progression-level competency blocks), per RFC-0011 |
+| `KMK-DIGITALE-WELT` | `000900`–`000999` | 900–988 (6 Kompetenzbereich parents + 22 sub-area parents + 61 individual competencies), per RFC-0011 |
+| `CCC` (Computational Curriculum Competencies) | `001000`–`001099` | 1000–1024 (5 domain parents + 20 capabilities). Natively authored by OpenEvo, not imported from an external framework, per RFC-0011. |
 
 ### Learning Object and Alignment ID blocks
 

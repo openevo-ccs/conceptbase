@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "D3",
+  "id": "OE-COMPETENCY-001018",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001015"
+    ]
+  },
+  "statement": {
+    "en": "Create conceptual maps that represent how ideas relate within or across a curriculum model."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "B4",
+  "id": "OE-COMPETENCY-001009",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001005"
+    ]
+  },
+  "statement": {
+    "en": "Evaluate whether a proposed curriculum change preserves or disrupts existing conceptual continuity."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo CCS Lab / KoMet project (2026). Computational Curriculum Competencies, extending the DigCompEdu / UNESCO AI CFT / KMK argument named in KoMet's Framework connection notes."
+    }
+  ],
+  "humanCodingScheme": "A",
+  "id": "OE-COMPETENCY-001000",
+  "statement": {
+    "en": "Curriculum Interpretation: educators can read and reason directly about machine-readable curriculum representations, not only about their traditional human-readable renderings."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

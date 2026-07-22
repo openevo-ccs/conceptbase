@@ -1,0 +1,1133 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: KMK "Kompetenzen in der
+# digitalen Welt"
+# ============================================================================
+# Path: /vocabularies/KMK-DIGITALE-WELT-v1.0.0.yaml
+#
+# The Kultusministerkonferenz (KMK) strategy "Bildung in der digitalen Welt"
+# (Beschluss vom 08.12.2016, i.d.F. vom 07.12.2017) defines a six-area
+# "Kompetenzrahmen: Kompetenzen in der digitalen Welt" for German school
+# students. Transcribed 2026-07-22 from the primary PDF (pp. 16-19),
+# https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2016/2016_12_08-Bildung-in-der-digitalen-Welt.pdf
+#
+# License note (RFC-0011): the source document carries a bare "© 2016 KMK
+# Berlin" copyright notice with no explicit reuse/open-license grant found
+# (checked front matter and back matter). Per
+# scripts/case_license_gate.py's classification logic this is a
+# CITATION_ONLY case (no redistribution grant, no explicit prohibition
+# either) -- default-safe. What is reproduced here is limited to the
+# framework's own short competency-area/sub-area/item TITLES (each a
+# functional phrase of a few words, e.g. "1.1.1 Arbeits- und Suchinteressen
+# klären und festlegen"), not any of the surrounding explanatory prose --
+# the same low-risk category as DIGCOMPEDU and UNESCO-AI-CFT in this
+# release. Explicit confirmation of KMK's reuse terms is flagged as an open
+# item before any proposed -> accepted promotion -- see RFC-0011.
+#
+# Numbering note: the source PDF's own printed numbering repeats "1.2.2"
+# and "1.2.3" for what are structurally the two items under section "1.3
+# Speichern und Abrufen" (a transcription/typesetting inconsistency in the
+# original, not introduced here) -- normalized to 1.3.1/1.3.2 in this
+# vocabulary's humanCodingScheme for internal consistency, per the same
+# "construct traceable codes when the source's own aren't clean" allowance
+# used by RFC-0007 for AI4K12's LO/EU cells.
+#
+# Structure: 3-level hierarchy via skos:broader -- 6 Kompetenzbereich
+# entries (top level) -> 22 sub-area entries -> 61 individual competency
+# entries. English glosses in `statement.en` are OECB-authored translations
+# for ecosystem-wide accessibility; `statement.de` carries the source
+# document's own wording as the framework's authoritative language.
+# ============================================================================
+
+meta:
+  id: KMK-DIGITALE-WELT
+  version: 1.0.0
+  status: proposed
+  scope: >
+    KMK Kompetenzrahmen "Kompetenzen in der digitalen Welt" (2016/2017):
+    6 Kompetenzbereiche, 22 sub-areas, 61 individual competencies for
+    students' digital competence across German school curricula.
+  discipline: cross-subject
+  license: unconfirmed (bare copyright notice, no reuse grant found) -- see license note above and RFC-0011
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-COMPETENCY-v1.1.0
+  phase: 1
+
+competencies:
+
+# ============================================================================
+# 1. Suchen, Verarbeiten und Aufbewahren
+# ============================================================================
+- id: OE-COMPETENCY-000900
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1"
+  statement:
+    en: "Searching, Processing and Storing"
+    de: "Suchen, Verarbeiten und Aufbewahren"
+  citations:
+  - &kmk_citation
+    text: "Kultusministerkonferenz (2016/2017). Bildung in der digitalen Welt: Strategie der Kultusministerkonferenz. Beschluss vom 08.12.2016 i.d.F. vom 07.12.2017."
+    url: "https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2016/2016_12_08-Bildung-in-der-digitalen-Welt.pdf"
+
+- id: OE-COMPETENCY-000901
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.1"
+  statement:
+    en: "Searching and Filtering"
+    de: "Suchen und Filtern"
+  relations:
+    skos:broader: [OE-COMPETENCY-000900]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000902
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.1.1"
+  statement:
+    en: "Clarify and define work and search interests"
+    de: "Arbeits- und Suchinteressen klären und festlegen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000901]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000903
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.1.2"
+  statement:
+    en: "Use and further develop search strategies"
+    de: "Suchstrategien nutzen und weiterentwickeln"
+  relations:
+    skos:broader: [OE-COMPETENCY-000901]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000904
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.1.3"
+  statement:
+    en: "Search in various digital environments"
+    de: "In verschiedenen digitalen Umgebungen suchen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000901]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000905
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.1.4"
+  statement:
+    en: "Identify and consolidate relevant sources"
+    de: "Relevante Quellen identifizieren und zusammenführen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000901]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000906
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.2"
+  statement:
+    en: "Evaluating and Assessing"
+    de: "Auswerten und Bewerten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000900]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000907
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.2.1"
+  statement:
+    en: "Analyse, interpret and critically evaluate information and data"
+    de: "Informationen und Daten analysieren, interpretieren und kritisch bewerten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000906]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000908
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.2.2"
+  statement:
+    en: "Analyse and critically evaluate information sources"
+    de: "Informationsquellen analysieren und kritisch bewerten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000906]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000909
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.3"
+  statement:
+    en: "Storing and Retrieving"
+    de: "Speichern und Abrufen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000900]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000910
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.3.1"
+  statement:
+    en: "Securely store, retrieve and access information and data from different locations"
+    de: "Informationen und Daten sicher speichern, wiederfinden und von verschiedenen Orten abrufen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000909]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000911
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "1.3.2"
+  statement:
+    en: "Summarize, organize and structure the storage of information and data"
+    de: "Informationen und Daten zusammenfassen, organisieren und strukturiert aufbewahren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000909]
+  citations: [*kmk_citation]
+
+# ============================================================================
+# 2. Kommunizieren und Kooperieren
+# ============================================================================
+- id: OE-COMPETENCY-000912
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2"
+  statement:
+    en: "Communicating and Collaborating"
+    de: "Kommunizieren und Kooperieren"
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000913
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.1"
+  statement:
+    en: "Interacting"
+    de: "Interagieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000912]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000914
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.1.1"
+  statement:
+    en: "Communicate using various digital communication tools"
+    de: "Mit Hilfe verschiedener digitaler Kommunikationsmöglichkeiten kommunizieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000913]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000915
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.1.2"
+  statement:
+    en: "Select digital communication tools purposefully and appropriately for the situation"
+    de: "Digitale Kommunikationsmöglichkeiten zielgerichtet- und situationsgerecht auswählen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000913]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000916
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.2"
+  statement:
+    en: "Sharing"
+    de: "Teilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000912]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000917
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.2.1"
+  statement:
+    en: "Share files, information and links"
+    de: "Dateien, Informationen und Links teilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000916]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000918
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.2.2"
+  statement:
+    en: "Master referencing practice (citing sources)"
+    de: "Referenzierungspraxis beherrschen (Quellenangaben)"
+  relations:
+    skos:broader: [OE-COMPETENCY-000916]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000919
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.3"
+  statement:
+    en: "Collaborating"
+    de: "Zusammenarbeiten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000912]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000920
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.3.1"
+  statement:
+    en: "Use digital tools for collaboration in bringing together information, data and resources"
+    de: "Digitale Werkzeuge für die Zusammenarbeit bei der Zusammenführung von Informationen, Daten und Ressourcen nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000919]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000921
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.3.2"
+  statement:
+    en: "Use digital tools for joint document creation"
+    de: "Digitale Werkzeuge bei der gemeinsamen Erarbeitung von Dokumenten nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000919]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000922
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.4"
+  statement:
+    en: "Knowing and Observing Rules of Conduct (Netiquette)"
+    de: "Umgangsregeln kennen und einhalten (Netiquette)"
+  relations:
+    skos:broader: [OE-COMPETENCY-000912]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000923
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.4.1"
+  statement:
+    en: "Know and apply rules of conduct in digital interaction and cooperation"
+    de: "Verhaltensregeln bei digitaler Interaktion und Kooperation kennen und anwenden"
+  relations:
+    skos:broader: [OE-COMPETENCY-000922]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000924
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.4.2"
+  statement:
+    en: "Adapt communication to the respective environment"
+    de: "Kommunikation der jeweiligen Umgebung anpassen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000922]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000925
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.4.3"
+  statement:
+    en: "Know and consider ethical principles in communication"
+    de: "Ethische Prinzipien bei der Kommunikation kennen und berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000922]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000926
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.4.4"
+  statement:
+    en: "Take cultural diversity into account in digital environments"
+    de: "Kulturelle Vielfalt in digitalen Umgebungen berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000922]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000927
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.5"
+  statement:
+    en: "Actively Participating in Society"
+    de: "An der Gesellschaft aktiv teilhaben"
+  relations:
+    skos:broader: [OE-COMPETENCY-000912]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000928
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.5.1"
+  statement:
+    en: "Use public and private services"
+    de: "Öffentliche und private Dienste nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000927]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000929
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.5.2"
+  statement:
+    en: "Share media experiences and contribute them to communicative processes"
+    de: "Medienerfahrungen weitergeben und in kommunikative Prozesse einbringen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000927]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000930
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "2.5.3"
+  statement:
+    en: "Participate actively in society as a self-determined citizen"
+    de: "Als selbstbestimmter Bürger aktiv an der Gesellschaft teilhaben"
+  relations:
+    skos:broader: [OE-COMPETENCY-000927]
+  citations: [*kmk_citation]
+
+# ============================================================================
+# 3. Produzieren und Präsentieren
+# ============================================================================
+- id: OE-COMPETENCY-000931
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3"
+  statement:
+    en: "Producing and Presenting"
+    de: "Produzieren und Präsentieren"
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000932
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.1"
+  statement:
+    en: "Developing and Producing"
+    de: "Entwickeln und Produzieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000931]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000933
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.1.1"
+  statement:
+    en: "Know and apply multiple technical editing tools"
+    de: "Mehrere technische Bearbeitungswerkzeuge kennen und anwenden"
+  relations:
+    skos:broader: [OE-COMPETENCY-000932]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000934
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.1.2"
+  statement:
+    en: "Plan a production and design, present, publish or share it in various formats"
+    de: "Eine Produktion planen und in verschiedenen Formaten gestalten, präsentieren, veröffentlichen oder teilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000932]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000935
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.2"
+  statement:
+    en: "Further Processing and Integrating"
+    de: "Weiterverarbeiten und Integrieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000931]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000936
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.2.1"
+  statement:
+    en: "Edit, combine, present and publish or share content in various formats"
+    de: "Inhalte in verschiedenen Formaten bearbeiten, zusammenführen, präsentieren und veröffentlichen oder teilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000935]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000937
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.2.2"
+  statement:
+    en: "Further process information, content and existing digital products and integrate them into existing knowledge"
+    de: "Informationen, Inhalte und vorhandene digitale Produkte weiterverarbeiten und in bestehendes Wissen integrieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000935]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000938
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.3"
+  statement:
+    en: "Observing Legal Requirements"
+    de: "Rechtliche Vorgaben beachten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000931]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000939
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.3.1"
+  statement:
+    en: "Know the significance of copyright and intellectual property"
+    de: "Bedeutung von Urheberrecht und geistigem Eigentum kennen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000938]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000940
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.3.2"
+  statement:
+    en: "Consider copyright and usage rights (licenses) for one's own and others' works"
+    de: "Urheber- und Nutzungsrechte (Lizenzen) bei eigenen und fremden Werken berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000938]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000941
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "3.3.3"
+  statement:
+    en: "Observe personal rights"
+    de: "Persönlichkeitsrechte beachten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000938]
+  citations: [*kmk_citation]
+
+# ============================================================================
+# 4. Schützen und sicher Agieren
+# ============================================================================
+- id: OE-COMPETENCY-000942
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4"
+  statement:
+    en: "Protecting and Acting Safely"
+    de: "Schützen und sicher Agieren"
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000943
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.1"
+  statement:
+    en: "Acting Safely in Digital Environments"
+    de: "Sicher in digitalen Umgebungen agieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000942]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000944
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.1.1"
+  statement:
+    en: "Know, reflect on and consider risks and dangers in digital environments"
+    de: "Risiken und Gefahren in digitalen Umgebungen kennen, reflektieren und berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000943]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000945
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.1.2"
+  statement:
+    en: "Develop and apply protection strategies"
+    de: "Strategien zum Schutz entwickeln und anwenden"
+  relations:
+    skos:broader: [OE-COMPETENCY-000943]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000946
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.2"
+  statement:
+    en: "Protecting Personal Data and Privacy"
+    de: "Persönliche Daten und Privatsphäre schützen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000942]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000947
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.2.1"
+  statement:
+    en: "Consider measures for data security and against data misuse"
+    de: "Maßnahmen für Datensicherheit und gegen Datenmissbrauch berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000946]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000948
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.2.2"
+  statement:
+    en: "Protect privacy in digital environments through appropriate measures"
+    de: "Privatsphäre in digitalen Umgebungen durch geeignete Maßnahmen schützen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000946]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000949
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.2.3"
+  statement:
+    en: "Continuously update security settings"
+    de: "Sicherheitseinstellungen ständig aktualisieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000946]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000950
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.2.4"
+  statement:
+    en: "Consider youth and consumer protection measures"
+    de: "Jugendschutz- und Verbraucherschutzmaßnahmen berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000946]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000951
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.3"
+  statement:
+    en: "Protecting Health"
+    de: "Gesundheit schützen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000942]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000952
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.3.1"
+  statement:
+    en: "Avoid risks of addiction, protect oneself and others from possible dangers"
+    de: "Suchtgefahren vermeiden, sich Selbst und andere vor möglichen Gefahren schützen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000951]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000953
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.3.2"
+  statement:
+    en: "Use digital technologies in a health-conscious way"
+    de: "Digitale Technologien gesundheitsbewusst nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000951]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000954
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.3.3"
+  statement:
+    en: "Use digital technologies for social well-being and inclusion"
+    de: "Digitale Technologien für soziales Wohlergehen und Eingliederung nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000951]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000955
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.4"
+  statement:
+    en: "Protecting Nature and the Environment"
+    de: "Natur und Umwelt schützen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000942]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000956
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "4.4.1"
+  statement:
+    en: "Consider the environmental impact of digital technologies"
+    de: "Umweltauswirkungen digitaler Technologien berücksichtigen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000955]
+  citations: [*kmk_citation]
+
+# ============================================================================
+# 5. Problemlösen und Handeln
+# ============================================================================
+- id: OE-COMPETENCY-000957
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5"
+  statement:
+    en: "Problem-Solving and Acting"
+    de: "Problemlösen und Handeln"
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000958
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.1"
+  statement:
+    en: "Solving Technical Problems"
+    de: "Technische Probleme lösen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000957]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000959
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.1.1"
+  statement:
+    en: "Formulate requirements for digital environments"
+    de: "Anforderungen an digitale Umgebungen formulieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000958]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000960
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.1.2"
+  statement:
+    en: "Identify technical problems"
+    de: "Technische Probleme identifizieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000958]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000961
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.1.3"
+  statement:
+    en: "Determine needs for solutions and find solutions or develop solution strategies"
+    de: "Bedarfe für Lösungen ermitteln und Lösungen finden bzw. Lösungsstrategien entwickeln"
+  relations:
+    skos:broader: [OE-COMPETENCY-000958]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000962
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.2"
+  statement:
+    en: "Using Tools as Needed"
+    de: "Werkzeuge bedarfsgerecht einsetzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000957]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000963
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.2.1"
+  statement:
+    en: "Know and creatively apply a variety of digital tools"
+    de: "Eine Vielzahl von digitalen Werkzeugen kennen und kreativ anwenden"
+  relations:
+    skos:broader: [OE-COMPETENCY-000962]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000964
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.2.2"
+  statement:
+    en: "Formulate requirements for digital tools"
+    de: "Anforderungen an digitale Werkzeuge formulieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000962]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000965
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.2.3"
+  statement:
+    en: "Identify suitable tools for a solution"
+    de: "Passende Werkzeuge zur Lösung identifizieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000962]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000966
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.2.4"
+  statement:
+    en: "Adapt digital environments and tools for personal use"
+    de: "Digitale Umgebungen und Werkzeuge zum persönlichen Gebrauch anpassen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000962]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000967
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.3"
+  statement:
+    en: "Identifying One's Own Deficits and Seeking Solutions"
+    de: "Eigene Defizite ermitteln und nach Lösungen suchen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000957]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000968
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.3.1"
+  statement:
+    en: "Recognize one's own deficits in the use of digital tools and develop strategies to address them"
+    de: "Eigene Defizite bei der Nutzung digitaler Werkzeuge erkennen und Strategien zur Beseitigung entwickeln"
+  relations:
+    skos:broader: [OE-COMPETENCY-000967]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000969
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.3.2"
+  statement:
+    en: "Share one's own problem-solving strategies with others"
+    de: "Eigene Strategien zur Problemlösung mit anderen teilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000967]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000970
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.4"
+  statement:
+    en: "Using Digital Tools and Media for Learning, Working and Problem-Solving"
+    de: "Digitale Werkzeuge und Medien zum Lernen, Arbeiten und Problemlösen nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000957]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000971
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.4.1"
+  statement:
+    en: "Find, evaluate and use effective digital learning opportunities"
+    de: "Effektive digitale Lernmöglichkeiten finden, bewerten und nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000970]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000972
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.4.2"
+  statement:
+    en: "Be able to organize a personal system of networked digital learning resources"
+    de: "Persönliches System von vernetzten digitalen Lernressourcen selbst organisieren können"
+  relations:
+    skos:broader: [OE-COMPETENCY-000970]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000973
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.5"
+  statement:
+    en: "Recognizing and Formulating Algorithms"
+    de: "Algorithmen erkennen und formulieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000957]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000974
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.5.1"
+  statement:
+    en: "Know and understand functional principles of the digital world"
+    de: "Funktionsweisen und grundlegende Prinzipien der digitalen Welt kennen und verstehen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000973]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000975
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.5.2"
+  statement:
+    en: "Recognize and formulate algorithmic structures in digital tools used"
+    de: "Algorithmische Strukturen in genutzten digitalen Tools erkennen und formulieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000973]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000976
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "5.5.3"
+  statement:
+    en: "Plan and use a structured, algorithmic sequence to solve a problem"
+    de: "Eine strukturierte, algorithmische Sequenz zur Lösung eines Problems planen und verwenden"
+  relations:
+    skos:broader: [OE-COMPETENCY-000973]
+  citations: [*kmk_citation]
+
+# ============================================================================
+# 6. Analysieren und Reflektieren
+# ============================================================================
+- id: OE-COMPETENCY-000977
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6"
+  statement:
+    en: "Analysing and Reflecting"
+    de: "Analysieren und Reflektieren"
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000978
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.1"
+  statement:
+    en: "Analysing and Evaluating Media"
+    de: "Medien analysieren und bewerten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000977]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000979
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.1.1"
+  statement:
+    en: "Know and evaluate the design features of digital media offerings"
+    de: "Gestaltungsmittel von digitalen Medienangeboten kennen und bewerten"
+  relations:
+    skos:broader: [OE-COMPETENCY-000978]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000980
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.1.2"
+  statement:
+    en: "Recognize and assess interest-driven agenda-setting, dissemination and dominance of topics in digital environments"
+    de: "Interessengeleitete Setzung, Verbreitung und Dominanz von Themen in digitalen Umgebungen erkennen und beurteilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000978]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000981
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.1.3"
+  statement:
+    en: "Analyse and constructively engage with the effects of media in the digital world (e.g. media constructs, stars, idols, video games, depictions of violence in media)"
+    de: "Wirkungen von Medien in der digitalen Welt (z. B. mediale Konstrukte, Stars, Idole, Computerspiele, mediale Gewaltdarstellungen) analysieren und konstruktiv damit umgehen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000978]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000982
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2"
+  statement:
+    en: "Understanding and Reflecting on Media in the Digital World"
+    de: "Medien in der digitalen Welt verstehen und reflektieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000977]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000983
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2.1"
+  statement:
+    en: "Know the diversity of the digital media landscape"
+    de: "Vielfalt der digitalen Medienlandschaft kennen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000982]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000984
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2.2"
+  statement:
+    en: "Recognize opportunities and risks of media use in different areas of life, reflect on and where necessary modify one's own media use"
+    de: "Chancen und Risiken des Mediengebrauchs in unterschiedlichen Lebensbereichen erkennen, eigenen Mediengebrauch reflektieren und ggf. modifizieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000982]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000985
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2.3"
+  statement:
+    en: "Analyse and assess the advantages and risks of business activities and services on the internet"
+    de: "Vorteile und Risiken von Geschäftsaktivitäten und Services im Internet analysieren und beurteilen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000982]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000986
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2.4"
+  statement:
+    en: "Know the economic significance of digital media and technologies and use them for one's own business ideas"
+    de: "Wirtschaftliche Bedeutung der digitalen Medien und digitaler Technologien kennen und sie für eigene Geschäftsideen nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000982]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000987
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2.5"
+  statement:
+    en: "Know and use the significance of digital media for political opinion-forming and decision-making"
+    de: "Die Bedeutung von digitalen Medien für die politische Meinungsbildung und Entscheidungsfindung kennen und nutzen"
+  relations:
+    skos:broader: [OE-COMPETENCY-000982]
+  citations: [*kmk_citation]
+
+- id: OE-COMPETENCY-000988
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "6.2.6"
+  statement:
+    en: "Recognize, analyse and reflect on the potential of digitalization for social integration and participation"
+    de: "Potenziale der Digitalisierung im Sinne sozialer Integration und sozialer Teilhabe erkennen, analysieren und reflektieren"
+  relations:
+    skos:broader: [OE-COMPETENCY-000982]
+  citations: [*kmk_citation]

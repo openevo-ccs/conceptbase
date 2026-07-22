@@ -1,0 +1,12 @@
+{
+  "assertedBy": [
+    "OpenEvo CCS Lab / KoMet project"
+  ],
+  "date": "2026-07-22",
+  "id": "OE-ALIGN-000006",
+  "matchType": "skos:relatedMatch",
+  "object": "KMK-DIGITALE-WELT-v1.0.0:OE-COMPETENCY-000901",
+  "rationale": "CCC-A1 (\"Navigate machine-readable curricula and locate specific concepts, competencies, and progressions within them\") and KMK-1.1 (\"Suchen und Filtern\" / \"Searching and Filtering\") both concern locating and filtering information within a structured digital environment. They are related, not identical: KMK-1.1 is a general information-literacy competency applicable to any digital environment, while CCC-A1 is specifically about navigating machine-readable curriculum data structures (concept graphs, competency registries, learning progressions) -- a domain-specific instantiation, not a synonym. relatedMatch rather than broadMatch/ narrowMatch because CCC-A1's object (curriculum data) is not a strict subset of KMK-1.1's scope (any information source); the two competencies merely draw on the same underlying search/filter skill.\n",
+  "status": "proposed",
+  "subject": "CCC-v1.0.0:OE-COMPETENCY-001001"
+}

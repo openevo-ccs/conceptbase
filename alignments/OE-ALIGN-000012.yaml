@@ -1,0 +1,20 @@
+id: OE-ALIGN-000012
+subject: CCC-v1.0.0:OE-COMPETENCY-001020
+object: KMK-DIGITALE-WELT-v1.0.0:OE-COMPETENCY-000919
+matchType: skos:relatedMatch
+assertedBy:
+  - "OpenEvo CCS Lab / KoMet project"
+date: "2026-07-22"
+status: proposed
+rationale: >
+  CCC Domain E ("Participatory Curriculum Innovation") and KMK-2.3
+  ("Zusammenarbeiten" / "Collaborating", using digital tools to jointly
+  produce shared documents/resources) both concern using digital
+  infrastructure for joint work. KMK-2.3 is a general student-facing
+  collaboration competency; CCC Domain E is the teacher/researcher-facing
+  analogue specific to open, version-controlled curriculum infrastructure
+  (contributing to shared repositories, participating in professional
+  learning communities organized around computational curriculum studies).
+  relatedMatch: KMK-2.3's general collaborative-tool competency is a
+  plausible precursor to CCC Domain E but does not name the
+  open-repository/community-of-practice dimension CCC Domain E requires.

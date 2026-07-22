@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "E4",
+  "id": "OE-COMPETENCY-001024",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001020"
+    ]
+  },
+  "statement": {
+    "en": "Participate in professional learning communities organized around computational curriculum studies and shared infrastructure."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

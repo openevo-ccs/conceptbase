@@ -1,0 +1,16 @@
+{
+  "citations": [
+    {
+      "text": "UNESCO (2024). AI competency framework for teachers. Paris: UNESCO. ISBN 978-92-3-100707-1.",
+      "url": "https://doi.org/10.54675/ZJTE2084"
+    }
+  ],
+  "humanCodingScheme": "4",
+  "id": "OE-COMPETENCY-000803",
+  "statement": {
+    "en": "AI pedagogy"
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

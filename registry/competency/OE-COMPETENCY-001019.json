@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "D4",
+  "id": "OE-COMPETENCY-001019",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-001015"
+    ]
+  },
+  "statement": {
+    "en": "Participate in the redesign of curriculum structures using computational tools and shared meta-models."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

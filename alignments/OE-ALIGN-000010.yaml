@@ -1,0 +1,20 @@
+id: OE-ALIGN-000010
+subject: CCC-v1.0.0:OE-COMPETENCY-001010
+object: UNESCO-AI-CFT-v1.0.0:OE-COMPETENCY-000805
+matchType: skos:relatedMatch
+assertedBy:
+  - "OpenEvo CCS Lab / KoMet project"
+date: "2026-07-22"
+status: proposed
+rationale: >
+  CCC Domain C ("Human-AI Curriculum Collaboration") also draws on UNESCO AI
+  CFT 1.1 ("Human agency", the Acquire-level competency block for Dimension
+  1: Human-centred mindset) -- specifically CCC-C1's requirement to
+  "critically evaluate AI-generated curriculum suggestions... without ceding
+  professional judgment", which is a direct instantiation of UNESCO's human
+  agency principle in the curriculum-design context. Recorded as a second,
+  independent relatedMatch alongside OE-ALIGN-000009 (to UNESCO 3.1) rather
+  than folded into one record, since CCC Domain C genuinely spans both the
+  technical (Dimension 3) and dispositional (Dimension 1) axes of the
+  UNESCO framework -- collapsing them would understate what CCC Domain C
+  actually requires.
