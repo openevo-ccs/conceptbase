@@ -47,7 +47,93 @@ concepts:
           populations across successive generations.
     relations:
       skos:narrower: [OE-CONCEPT-000102, OE-CONCEPT-000110, OE-CONCEPT-000111, OE-CONCEPT-000116]
-      skos:related: [OE-CONCEPT-000112, OE-CONCEPT-000113]
+      # OE-CONCEPT-000308/309/310/313/314/315 (Scale, Feedback, Deep Time and
+      # Scale, Human Place in Nature, Origins of Science, Machine-Culture
+      # Coevolution -- EVA4K12-CONCEPTS) added per RFC-0012's migration
+      # script, reciprocating that vocabulary's skos:related assertions
+      # (scripts/check_related_symmetry.py requires symmetry).
+      skos:related: [OE-CONCEPT-000112, OE-CONCEPT-000113, OE-CONCEPT-000308, OE-CONCEPT-000309, OE-CONCEPT-000310, OE-CONCEPT-000313, OE-CONCEPT-000314, OE-CONCEPT-000315]
+    extensions:
+      "oe:eva4k12DevelopmentalArc":
+        source: EVA4K12-CONCEPTS-v1.0.0 (RFC-0012), migrated from the eva4k12 repository (archived)
+        sourceURI: "https://eva4k12.openevo.net/concepts/eva/evolution"
+        note: >
+          Additive K-12 developmental-arc content from eva4k12, not a
+          redefinition of this entry's `definitions.biology` above.
+        arc:
+          K-2:
+            cognitiveModeLabel: Things change over time
+            studentFacingDescription: >
+              Living things change over very, very long times — the animals
+              alive today are different from the animals that lived long ago.
+            classroomInstantiation: >
+              Comparing dinosaurs to birds and noticing similarities
+              suggesting relationship; placing extinct and living animals on
+              a simple timeline showing change over time; noticing that
+              great-grandparents' tools, stories, and homes were different
+              from our own — things changed.
+            educatorBridgingNote: >
+              At K–2, evolution is introduced as the simple observable fact
+              that living things change over time. Do not introduce
+              mechanism at this level; do not use the word 'evolution'
+              unless students are ready for it. The goal is temporal
+              openness — students should not assume today's plants and
+              animals have always been this way. Respect the
+              evolution-and-worldview sensitive-topic protocol: present as
+              'what scientists observe,' not as a worldview claim.
+          3-5:
+            cognitiveModeLabel: Organisms changed through selection
+            studentFacingDescription: >
+              Living things change over many generations because some
+              individuals survive and reproduce better than others — and
+              their children inherit what made them successful.
+            classroomInstantiation: >
+              Running the natural selection bead simulation and observing
+              allele frequency change; reading the pocket mouse case study
+              as an example of evolution in action; connecting the hominin
+              timeline to the idea that each species adapted to its
+              environment over many generations.
+            educatorBridgingNote: >
+              At 3–5, the mechanism of natural selection is introduced
+              explicitly: variation exists, it is heritable, and some
+              variants survive/reproduce better. At this level, evolution =
+              biological change through natural selection. Cultural
+              evolution can be introduced as an analogy, keeping the
+              biological and cultural cases clearly distinct.
+          6-8:
+            cognitiveModeLabel: "Mechanisms: selection, drift, mutation, migration"
+            studentFacingDescription: >
+              Evolution happens through multiple mechanisms, not just
+              natural selection. Drift, mutation, and migration also change
+              allele frequencies — and not all evolutionary change is
+              adaptive.
+            classroomInstantiation: >
+              Comparing the effects of selection vs. drift in small vs.
+              large populations; understanding the founder effect as an
+              example of drift producing non-adaptive evolution; connecting
+              language evolution to biological evolution.
+            educatorBridgingNote: >
+              At 6–8, evolution becomes mechanistically plural. A key
+              conceptual move: distinguishing adaptive from non-adaptive
+              evolution — only selection consistently produces adaptation.
+          9-12:
+            cognitiveModeLabel: Multi-level, multi-system evolutionary theory
+            studentFacingDescription: >
+              Evolution operates at multiple levels simultaneously — genes,
+              organisms, groups, species, and cultural traditions can all be
+              subject to selection. Gene-culture coevolution couples
+              biological and cultural evolutionary dynamics.
+            classroomInstantiation: >
+              Evaluating multi-level selection theory as an explanation for
+              human ultrasociality; modeling gene-culture coevolution at the
+              LCT locus; analyzing machine-culture coevolution as a new
+              evolutionary dynamic.
+            educatorBridgingNote: >
+              At 9–12, evolution is a theoretical object — a research
+              program with ongoing debates about levels of selection, the
+              extended evolutionary synthesis, and the scope of cultural
+              evolutionary theory. The CCT.MACH-CULT connection (see
+              OE-CONCEPT-000315) is genuinely contested, not settled.
 
   - id: OE-CONCEPT-000102
     type: oe:Concept
@@ -103,7 +189,76 @@ concepts:
           a given environment, shaped by natural selection over
           generations.
     relations:
-      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105]
+      # OE-CONCEPT-000301/311/313 (Structure, Variation and Universals, Human
+      # Place in Nature -- EVA4K12-CONCEPTS) reciprocate that vocabulary's
+      # skos:related assertions, per RFC-0012.
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105, OE-CONCEPT-000301, OE-CONCEPT-000311, OE-CONCEPT-000313]
+    extensions:
+      "oe:eva4k12DevelopmentalArc":
+        source: EVA4K12-CONCEPTS-v1.0.0 (RFC-0012), migrated from the eva4k12 repository (archived)
+        sourceURI: "https://eva4k12.openevo.net/concepts/eva/adaptation"
+        note: >
+          Additive K-12 developmental-arc content from eva4k12, not a
+          redefinition of this entry's `definitions.biology` above.
+        arc:
+          K-2:
+            cognitiveModeLabel: Survival features
+            studentFacingDescription: >
+              Animals and plants have features that help them survive in
+              their home — different places need different features.
+            classroomInstantiation: >
+              Polar bears have thick fur for cold places; desert animals can
+              go a long time without water; humans in cold climates
+              historically wore many layers of clothing.
+            educatorBridgingNote: >
+              At K–2, adaptation is 'features that help' — functional and
+              concrete. Do not introduce natural selection yet. Critically,
+              do NOT frame adaptation as intentional; use passive
+              constructions ('polar bears that had thicker fur were better
+              able to survive').
+          3-5:
+            cognitiveModeLabel: Trait advantage — first explicit name
+            studentFacingDescription: >
+              Some traits help organisms survive and reproduce better than
+              others. Over many generations, those helpful traits become
+              more common — that process is called natural selection.
+            classroomInstantiation: >
+              Natural selection simulation with beads; comparing beak shapes
+              in Darwin's finches to available food types; explaining why
+              dark coloring is common in pocket mice on dark lava rock.
+            educatorBridgingNote: >
+              At 3–5, 'adaptation' is named explicitly for the first time.
+              Flag the intentionality misconception immediately. Cultural
+              adaptations (tools, farming practices) can be introduced here
+              as spreading by learning rather than by genes.
+          6-8:
+            cognitiveModeLabel: Population-level selection
+            studentFacingDescription: >
+              Adaptation happens at the population level — the change in how
+              common a trait is across a population over generations.
+            classroomInstantiation: >
+              Tracking allele frequency change across simulated generations;
+              comparing cultural adaptation rates (fast) to genetic
+              adaptation rates (slow).
+            educatorBridgingNote: >
+              Distinguish adaptation (the process) from an adaptation (a
+              trait that resulted from selection). Cultural adaptations
+              spread faster than genetic ones because they spread by
+              learning.
+          9-12:
+            cognitiveModeLabel: Formal evolutionary mechanisms
+            studentFacingDescription: >
+              Adaptation is one of several evolutionary mechanisms —
+              selection, drift, mutation, and migration all shape trait
+              frequencies. Only selection produces adaptation.
+            classroomInstantiation: >
+              Separating adaptive evolution (selection) from non-adaptive
+              evolution (drift, mutation); evaluating competing adaptive
+              hypotheses for human life history evolution.
+            educatorBridgingNote: >
+              Students should ask: 'What is the evidence this trait was
+              shaped by selection rather than drift?' — the empirical
+              questions of adaptationism.
 
   - id: OE-CONCEPT-000105
     type: oe:Concept

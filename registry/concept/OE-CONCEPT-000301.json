@@ -1,0 +1,85 @@
+{
+  "aliases": {
+    "en": [
+      "organization",
+      "form",
+      "anatomy",
+      "architecture",
+      "schema"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Lieberman, D. E. (2011). The Evolution of the Human Head. Harvard University Press.",
+      "url": "https://openalex.org/W2103899313"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The arrangement of parts that gives a system its properties and determines its function. In evolutionary anthropology: skeletal morphology encoding evolutionary history, kinship structures regulating cooperation, grammatical structures enabling communication, population genetic structure reflecting migration history, social hierarchy organizing primate groups."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "A human spine is built to hold the body upright — that structure makes walking on two legs possible.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "DNA is built like a twisted ladder — the rungs of the ladder are the letters of the code that tells cells what to build.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "A kinship system is a set of rules about who counts as family — that structure determines who helps whom and who can marry whom.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "The regulatory structure of the FOXP2 gene — which enhancers control its expression, in which tissues, at which developmental stages — is what makes the human version of the gene produce different effects than the chimpanzee version.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Learning about skeletal structure and its evolutionary implications; understanding that DNA has a structure (four-letter code) that determines what proteins get made; mapping the branching structure of a language family tree.",
+        "cognitiveModeLabel": "Internal organization",
+        "educatorBridgingNote": "At 3–5, structure moves from the surface to the interior. Students discover that hidden organization — in bones, in DNA, in family trees — determines outcomes. The grammar of a language is a structure you use without seeing; a genome is a structure inside every cell. Help students appreciate that invisible structure is real and consequential.",
+        "studentFacingDescription": "Things are organized on the inside in ways you can't always see — and that organization determines what they can do."
+      },
+      "6-8": {
+        "classroomInstantiation": "Analyzing kinship structures as rules that organize who can marry whom and how resources flow; understanding population genetic structure as statistical patterns of allele frequency difference between groups; identifying grammatical structure in an unfamiliar language.",
+        "cognitiveModeLabel": "Abstract schema",
+        "educatorBridgingNote": "At 6–8, structure becomes genuinely abstract — students must accept that 'kinship structure' or 'population genetic structure' are real phenomena even though they cannot be directly observed. Use multiple representations to make abstract structure concrete: kinship diagrams, population structure bar charts, phylogenetic trees. Each is a representation of a structure that exists in social or biological reality.",
+        "studentFacingDescription": "Some structures can't be seen at all — they are patterns of relationships that organize a system."
+      },
+      "9-12": {
+        "classroomInstantiation": "Analyzing regulatory genomic architecture and how enhancer-promoter structure determines when and where genes are expressed; modeling how different kinship structures create different cooperation incentives; comparing the tree topology (branching structure) of genetic, linguistic, and cultural phylogenies.",
+        "cognitiveModeLabel": "Formal system structure",
+        "educatorBridgingNote": "At 9–12, structure becomes a formal object of analysis — something that can be represented mathematically, compared across systems, and used to generate predictions. The key sophistication is understanding that structure constrains possibility: a genome with a particular regulatory architecture can only produce certain phenotypes; a kinship system with particular rules can only generate certain cooperation patterns.",
+        "studentFacingDescription": "The structure of a system can be formally specified and modeled — and different structures generate different behaviors and evolutionary dynamics."
+      },
+      "K-2": {
+        "classroomInstantiation": "Comparing human and chimpanzee hands, feet, and spines; observing that a bird's beak shape matches what it eats; feeling the difference between flat teeth (grinding) and pointed teeth (tearing).",
+        "cognitiveModeLabel": "Physical form",
+        "educatorBridgingNote": "At K–2, structure is entirely physical and functional: this shape does this job. The key vocabulary is 'built for' — 'human hands are built for...' 'chimpanzee feet are built for...' This is the implicit foundation for adaptation, which debuts formally at 3–5. Do not yet name adaptation; let the idea live in the physical comparison.",
+        "studentFacingDescription": "Things are built in a specific way — and that shape helps them do specific things."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/structure",
+    "oe:scopeNote": "Structure bridges the visible and invisible: at K–2 it is physical form that can be touched and seen; by 9–12 it is abstract organizational schema that can only be inferred. The key insight across all grade bands is that structure is not arbitrary — it encodes history and determines function. A skull's shape encodes millions of years of selection; a kinship system encodes solutions to cooperation problems; a genome's regulatory architecture encodes developmental history."
+  },
+  "id": "OE-CONCEPT-000301",
+  "labels": {
+    "en": "Structure"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000303",
+      "OE-CONCEPT-000300",
+      "OE-CONCEPT-000104"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

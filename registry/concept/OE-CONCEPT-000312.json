@@ -1,0 +1,58 @@
+{
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Every claim about human evolution, behavior, and cognition rests on evidence gathered by specific methods with specific strengths and limits. Students develop progressively sophisticated understanding of scientific knowledge-making."
+    }
+  },
+  "extensions": {
+    "oe:conceptRole": "cross-cutting-theme",
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/framework/core/cct/evid-method",
+    "oe:fullStatement": "CROSS-CUTTING THEME 3 -- Evidence, Method, and Uncertainty: Every claim about human evolution, behavior, and cognition rests on evidence gathered by specific methods with specific strengths and limits. Students develop progressively sophisticated understanding of how scientists know what they know -- and what remains genuinely unknown.",
+    "oe:humanCodableIdentifier": "CCT.EVID-METHOD",
+    "oe:strandActivation": [
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "HBEC"
+      },
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "HumOr"
+      },
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "DLCE"
+      },
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "DAG"
+      },
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "CCP"
+      },
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "EvoGen"
+      },
+      {
+        "activationNote": "All strands -- universal activation",
+        "strandCode": "PrimEvo"
+      }
+    ]
+  },
+  "id": "OE-CONCEPT-000312",
+  "labels": {
+    "en": "Evidence, Method, and Uncertainty"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000306",
+      "OE-CONCEPT-000304",
+      "OE-CONCEPT-000305"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

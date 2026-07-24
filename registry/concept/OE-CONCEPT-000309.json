@@ -1,0 +1,87 @@
+{
+  "aliases": {
+    "en": [
+      "feedback loop",
+      "regulation",
+      "coevolution",
+      "reciprocal causation",
+      "ratchet",
+      "amplification"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Laland, K. N., Odling-Smee, J., & Feldman, M. W. (2000). Niche construction, biological evolution, and cultural change. Behavioral and Brain Sciences, 23(1), 131–146.",
+      "url": "https://openalex.org/W2067890123"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A process in which system outputs are routed back as inputs, regulating or amplifying behavior over time. In evolutionary anthropology: gene-culture coevolution (cultural practices change selective environments which change genes which change cultural capacity), niche construction feedback, social norm enforcement loops, cumulative culture ratchet, hormonal feedback in primate stress response."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "When a grandmother teaches a tradition, her grandchild learns it and can teach it to their own children — the tradition keeps going because teaching creates more teaching.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "A community that cooperates well can accomplish more together — and accomplishing more together makes cooperation more valuable — so cooperation feeds back to make itself more likely.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "Social norms work through feedback: when someone breaks a rule, others punish them, which makes rule-breaking less common, which maintains the norm — a stabilizing feedback loop that keeps the community's behavior in a certain range.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "Dairy farming created a positive feedback loop: communities that kept cattle had access to milk (a rich food), so individuals who could digest milk (lactase persistent) had higher fitness, so the lactase persistence allele spread, so more people could use dairy, so dairy farming became more valuable, so more cattle were kept — culture and genes coevolving in a self-amplifying loop.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Understanding that a community with a strong teaching tradition produces more skilled teachers, who produce a stronger teaching tradition — a reinforcing loop; showing how natural selection changes allele frequencies, and changed allele frequencies change what traits are available for selection to act on; noticing that more cooperation enables larger groups, and larger groups enable more cooperation.",
+        "cognitiveModeLabel": "Reciprocal causation",
+        "educatorBridgingNote": "At 3–5, introduce the idea of reciprocal causation: A affects B, and B affects A. Use everyday examples first: 'Being good at something makes you practice more, and practicing more makes you better at it.' Then apply to evolutionary examples. The vocabulary of 'loop' can be introduced here: 'This is a loop — each thing feeds back into the other.' Distinguish reinforcing loops (both things go up or both go down) from balancing loops (one going up brings the other down).",
+        "studentFacingDescription": "Sometimes two things affect each other — not just A causes B, but B also affects A. They influence each other back and forth."
+      },
+      "6-8": {
+        "classroomInstantiation": "Analyzing social norm enforcement as a negative feedback loop: violations trigger punishment, punishment reduces violations, which maintains the norm; analyzing the cumulative culture ratchet as a positive feedback loop: better tools enable more learning, more learning produces better tools; analyzing primate stress hormones as a negative feedback loop: stress hormones trigger behavioral and physiological responses that reduce the stressor.",
+        "cognitiveModeLabel": "Named regulatory mechanisms",
+        "educatorBridgingNote": "At 6–8, introduce the formal distinction between negative feedback (regulatory, stabilizing — output opposes the change that produced it) and positive feedback (amplifying, potentially runaway — output reinforces the change that produced it). Norm enforcement is an ideal negative feedback example because students can immediately understand its social function: it is a mechanism that prevents deviation from spreading. Cumulative culture is an ideal positive feedback example: each innovation enables more innovations.",
+        "studentFacingDescription": "Feedback loops are how systems regulate themselves — negative feedback keeps things stable, positive feedback amplifies change. I can identify which type is operating in a given system."
+      },
+      "9-12": {
+        "classroomInstantiation": "Modeling gene-culture coevolution at the LCT locus: dairy farming (cultural) → lactase persistence selection (genetic) → expanded dairy nutrition (phenotypic) → further dairy farming adoption (cultural); modeling how social institutions coevolve with cultural norms in cooperative systems; using agent-based models to show how individual-level learning rules produce population-level cultural feedback dynamics.",
+        "cognitiveModeLabel": "Coevolutionary dynamics formally modeled",
+        "educatorBridgingNote": "At 9–12, feedback becomes the primary conceptual tool for understanding gene-culture coevolution — the signature process of human evolutionary history. Students should be able to specify the feedback loop in any coevolutionary system: what are the two (or more) evolving systems? What is the output of each that feeds back as input to the other? What timescale does each operate on? The timescale mismatch between cultural evolution (fast) and genetic evolution (slow) is particularly important: cultural practices can create selection pressures that persist long enough to produce genetic responses.",
+        "studentFacingDescription": "Coevolution is a feedback process operating across two or more evolving systems — cultural evolution and genetic evolution can create feedback dynamics that neither system would produce alone."
+      },
+      "K-2": {
+        "classroomInstantiation": "Tracing a chain: grandmother teaches mother → mother teaches child → child teaches their own child — knowledge travels forward through teaching; noticing that when a community maintains a tradition, the tradition stays alive, which makes it more likely the next generation will learn it.",
+        "cognitiveModeLabel": "Cause-effect chains as precursor",
+        "educatorBridgingNote": "At K–2, feedback is not named as such — instead, students encounter cause-effect chains that will later be recognized as simple feedback loops. The key pre-feedback concept is sequential causation: A causes B, B causes C. Use visual arrow chains to make this concrete. Do not introduce the concept of loops at this level — that requires understanding that an output can become an input, which is conceptually demanding and belongs at 3-5.",
+        "studentFacingDescription": "When one thing happens, it can cause another thing to happen — and that second thing might cause something else."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/feedback",
+    "oe:scopeNote": "Feedback is the concept that most directly enables coevolutionary thinking — understanding that cause and effect are not always one-directional but can loop back on themselves. Gene-culture coevolution is the master example in evolutionary anthropology: cultural practices change the selective environment, which changes which genes spread, which changes cognitive and physical capacities, which changes cultural practices. By 9-12, students should be able to identify feedback loops in any system they study and ask whether the feedback is stabilizing (negative feedback) or amplifying (positive feedback)."
+  },
+  "id": "OE-CONCEPT-000309",
+  "labels": {
+    "en": "Feedback"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000303",
+      "OE-CONCEPT-000101",
+      "OE-CONCEPT-000302",
+      "OE-CONCEPT-000315"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,93 @@
+{
+  "aliases": {
+    "en": [
+      "model",
+      "symbol",
+      "diagram",
+      "encoding",
+      "formal notation",
+      "analogy",
+      "visualization"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Goodman, N. (1976). Languages of Art: An Approach to a Theory of Symbols. Hackett Publishing.",
+      "url": "https://openalex.org/W2012398765"
+    },
+    {
+      "text": "Ainsworth, S. (2006). DeFT: A conceptual framework for considering learning with multiple representations. Learning and Instruction, 16(3), 183–198.",
+      "url": "https://openalex.org/W2051876543"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The use of one form to stand for and communicate another form or phenomenon. In evolutionary anthropology: phylogenetic trees standing for evolutionary relationships, geological timelines standing for deep time, genome browsers standing for molecular architecture, ADMIXTURE bar charts standing for population ancestry proportions, kinship diagrams standing for social structure."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "This arrow in my teaching chain diagram represents the path knowledge traveled from my grandmother to my mother to me.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "This branching tree diagram represents which languages are related to which other languages — languages on the same branch are more closely related.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "This scatter plot represents the relationship between brain size and group size across primate species — each dot represents one species, and its position encodes two variables at once.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "An ADMIXTURE bar chart represents ancestry proportion estimates — but the number of assumed ancestral populations (K) is a researcher choice that affects what the chart shows, not a fact about the populations themselves.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Building a proportionally scaled timeline of hominin species; creating a data table comparing primate life history variables; drawing a language family tree; making a bar chart of fairness norm survey results.",
+        "cognitiveModeLabel": "Diagrams and data tables",
+        "educatorBridgingNote": "At 3–5, students make the transition from single representations to multiple representation types — and begin to understand that different representations reveal different features. A data table shows all values precisely but makes trends harder to see; a line graph shows trends but hides individual values. Introduce the question: 'Which representation is best for this question?' — helping students see representation as a tool choice, not a neutral recording.",
+        "studentFacingDescription": "I can represent information using organized tables, charts, and diagrams — and different kinds of representations help me see different things."
+      },
+      "6-8": {
+        "classroomInstantiation": "Interpreting scatter plots of cranial variables across hominin species; reading haplogroup maps as compressed representations of population history; using genome browser tracks as formal representations of molecular architecture; reading Hamilton's Rule (rb > c) as a formal representation of the logic of kin selection.",
+        "cognitiveModeLabel": "Variables and formal notation",
+        "educatorBridgingNote": "At 6–8, students encounter formal scientific notation for the first time in this framework — variables, algebraic expressions, statistical plots. The key meta-insight is that these notations are not just shorthand; they embody theoretical commitments. A scatter plot assumes that two variables are the most important ones; a phylogenetic tree assumes branching history is the dominant signal. Asking 'what does this representation assume?' is a form of methods critique.",
+        "studentFacingDescription": "Scientific representations use formal notation — variables, coordinates, symbols — that compresses complex information into precise, communicable form. But the notation embeds choices about what matters."
+      },
+      "9-12": {
+        "classroomInstantiation": "Evaluating ADMIXTURE bar charts: what does the K value mean? What does ancestry proportion actually represent? What can this representation never show? Interpreting Bayesian phylogenetic trees: what do branch lengths represent? What does posterior probability mean? Why does a reticulate network sometimes better represent the data than a bifurcating tree?",
+        "cognitiveModeLabel": "Representations as epistemological choices",
+        "educatorBridgingNote": "At 9–12, representation becomes an epistemological object — students must be able to critique representations, not just read them. Key questions for any scientific representation: What data generated this? What model assumptions does it embed? What features of the underlying reality does it make invisible? What alternative representation would highlight different features? This level of representation literacy is essential for reading primary literature critically.",
+        "studentFacingDescription": "Every scientific representation embeds theoretical commitments and makes choices about what to include and exclude. Critiquing a representation is part of evaluating the evidence it contains."
+      },
+      "K-2": {
+        "classroomInstantiation": "Drawing a teaching chain diagram to show who taught whom; making a labeled picture of a fossil; placing pictures of animals on a family tree diagram; using arrows to show the direction information travels.",
+        "cognitiveModeLabel": "Pictures and words",
+        "educatorBridgingNote": "At K–2, representation is entirely iconic — pictures that resemble what they represent, arrows that point in the direction of flow, diagrams that look like their referents. The key vocabulary is 'this stands for' and 'this shows.' Teacher language: 'This arrow shows that the skill traveled from grandma to mom to you — the arrow is a way of representing something that really happened.' Do not yet introduce the idea that representations involve choices — that appears at 6-8.",
+        "studentFacingDescription": "A picture or a word can stand for a real thing — it is a way of showing or telling what something is like."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/representation",
+    "oe:scopeNote": "Representation is tied with Information for the highest compression score in the framework (0.97). It is the concept through which all scientific knowledge is communicated — there is no science without representation. The key developmental insight is that representations are not neutral windows onto reality; they are human constructions that make certain features visible and others invisible, that embody theoretical commitments, and that can mislead as well as illuminate. By 9–12, students must be able to ask not just 'what does this representation show?' but 'what does this representation hide, and why was it built this way?'"
+  },
+  "id": "OE-CONCEPT-000305",
+  "labels": {
+    "en": "Representation"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000304",
+      "OE-CONCEPT-000306",
+      "OE-CONCEPT-000300",
+      "OE-CONCEPT-000312",
+      "OE-CONCEPT-000314"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

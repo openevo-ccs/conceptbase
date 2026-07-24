@@ -1,0 +1,45 @@
+{
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Science is a human cultural practice with a history, shaped by the same cognitive capacities and cultural transmission processes studied in this curriculum."
+    }
+  },
+  "extensions": {
+    "oe:conceptRole": "cross-cutting-theme",
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/framework/core/cct/origins-of-science",
+    "oe:fullStatement": "CROSS-CUTTING THEME 5 -- Origins of Science: Science is a human cultural practice with a history, geography, and social structure -- shaped by the same cognitive capacities for learning, reasoning, and cumulative knowledge-building that are studied throughout this curriculum.",
+    "oe:humanCodableIdentifier": "CCT.ORIGIN-SCI",
+    "oe:sensitiveTopicFlags": [
+      "scientific-racism-history",
+      "indigenous-knowledge",
+      "positionality-and-power"
+    ],
+    "oe:sensitiveTopicNote": "The history of anthropology includes serious ethical violations, including scientific racism, eugenics, and the study of Indigenous communities without consent. These histories must be engaged honestly and directly at 9-12.",
+    "oe:strandActivation": [
+      {
+        "activationNote": "Science as cumulative culture -- the ratchet effect applied to knowledge production; scientific institutions as cooperative structures",
+        "strandCode": "HBEC"
+      },
+      {
+        "activationNote": "Primary activation -- cognitive foundations of science: theory of mind, causal reasoning, shared intentionality; WEIRD bias in research practice",
+        "strandCode": "CCP"
+      }
+    ]
+  },
+  "id": "OE-CONCEPT-000314",
+  "labels": {
+    "en": "Origins of Science"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000101",
+      "OE-CONCEPT-000304",
+      "OE-CONCEPT-000307",
+      "OE-CONCEPT-000305"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

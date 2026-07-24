@@ -5,6 +5,39 @@
       "biology": "A heritable trait that increases an organism's fitness within a given environment, shaped by natural selection over generations.\n"
     }
   },
+  "extensions": {
+    "oe:eva4k12DevelopmentalArc": {
+      "arc": {
+        "3-5": {
+          "classroomInstantiation": "Natural selection simulation with beads; comparing beak shapes in Darwin's finches to available food types; explaining why dark coloring is common in pocket mice on dark lava rock.\n",
+          "cognitiveModeLabel": "Trait advantage — first explicit name",
+          "educatorBridgingNote": "At 3–5, 'adaptation' is named explicitly for the first time. Flag the intentionality misconception immediately. Cultural adaptations (tools, farming practices) can be introduced here as spreading by learning rather than by genes.\n",
+          "studentFacingDescription": "Some traits help organisms survive and reproduce better than others. Over many generations, those helpful traits become more common — that process is called natural selection.\n"
+        },
+        "6-8": {
+          "classroomInstantiation": "Tracking allele frequency change across simulated generations; comparing cultural adaptation rates (fast) to genetic adaptation rates (slow).\n",
+          "cognitiveModeLabel": "Population-level selection",
+          "educatorBridgingNote": "Distinguish adaptation (the process) from an adaptation (a trait that resulted from selection). Cultural adaptations spread faster than genetic ones because they spread by learning.\n",
+          "studentFacingDescription": "Adaptation happens at the population level — the change in how common a trait is across a population over generations.\n"
+        },
+        "9-12": {
+          "classroomInstantiation": "Separating adaptive evolution (selection) from non-adaptive evolution (drift, mutation); evaluating competing adaptive hypotheses for human life history evolution.\n",
+          "cognitiveModeLabel": "Formal evolutionary mechanisms",
+          "educatorBridgingNote": "Students should ask: 'What is the evidence this trait was shaped by selection rather than drift?' — the empirical questions of adaptationism.\n",
+          "studentFacingDescription": "Adaptation is one of several evolutionary mechanisms — selection, drift, mutation, and migration all shape trait frequencies. Only selection produces adaptation.\n"
+        },
+        "K-2": {
+          "classroomInstantiation": "Polar bears have thick fur for cold places; desert animals can go a long time without water; humans in cold climates historically wore many layers of clothing.\n",
+          "cognitiveModeLabel": "Survival features",
+          "educatorBridgingNote": "At K–2, adaptation is 'features that help' — functional and concrete. Do not introduce natural selection yet. Critically, do NOT frame adaptation as intentional; use passive constructions ('polar bears that had thicker fur were better able to survive').\n",
+          "studentFacingDescription": "Animals and plants have features that help them survive in their home — different places need different features.\n"
+        }
+      },
+      "note": "Additive K-12 developmental-arc content from eva4k12, not a redefinition of this entry's `definitions.biology` above.\n",
+      "source": "EVA4K12-CONCEPTS-v1.0.0 (RFC-0012), migrated from the eva4k12 repository (archived)",
+      "sourceURI": "https://eva4k12.openevo.net/concepts/eva/adaptation"
+    }
+  },
   "id": "OE-CONCEPT-000104",
   "labels": {
     "en": "Adaptation"
@@ -12,7 +45,10 @@
   "relations": {
     "skos:related": [
       "OE-CONCEPT-000102",
-      "OE-CONCEPT-000105"
+      "OE-CONCEPT-000105",
+      "OE-CONCEPT-000301",
+      "OE-CONCEPT-000311",
+      "OE-CONCEPT-000313"
     ]
   },
   "status": "stable",

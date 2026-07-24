@@ -1,0 +1,86 @@
+{
+  "aliases": {
+    "en": [
+      "connection",
+      "correlation",
+      "causation",
+      "co-variation",
+      "dependency",
+      "association"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Silk, J. B. et al. (2010). Strong and consistent social bonds enhance the longevity of female baboons. Current Biology, 20(15), 1359–1361.",
+      "url": "https://openalex.org/W2388901234"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A meaningful connection between two or more entities such that change in one co-varies with or causes change in another. In evolutionary anthropology: trait-environment fit, kinship and cooperation, gene-culture coevolution, social bonds and fitness outcomes, language relatedness and population history."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "Babies look like their parents — that relationship tells us something is being passed from parent to child.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "Cultures that live in grasslands tend to be herders — is there a relationship between environment and food strategy?",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "Baboons with more social bonds live longer — but is that because being social is healthy, or because healthy baboons make more friends?",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "Dairy farming created a new relationship between cultural practice and genetic fitness — populations that herded cattle benefited from lactase persistence, creating a gene-culture coevolutionary dynamic.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Comparing subsistence strategies across environments and asking whether the environment affects which strategy is used; comparing allele frequencies before and after selection and asking what caused the change; comparing story versions and asking what might have caused the changes.",
+        "cognitiveModeLabel": "Comparison",
+        "educatorBridgingNote": "At 3–5, relationship becomes comparative: students can systematically compare two things and begin to ask causal questions. The key epistemic move is from 'these go together' to 'might one cause the other?' Introduce the idea that scientists need more than one example to establish a relationship — a single case could be coincidence.",
+        "studentFacingDescription": "I can see how two things are similar and different — and I can ask whether one thing might affect the other."
+      },
+      "6-8": {
+        "classroomInstantiation": "Plotting social connectedness vs. longevity in baboons and measuring the strength of the relationship; applying Hamilton's Rule as a proportional relationship (degree of relatedness predicts degree of helping); analyzing scatter plots of genetic diversity vs. distance from Africa.",
+        "cognitiveModeLabel": "Proportionality and causation",
+        "educatorBridgingNote": "At 6–8, introduce the correlation-causation distinction explicitly. Use the baboon social bonds data: social connectedness correlates with longevity — but does being social cause longer life, or do healthier animals form more social bonds? This is a genuine scientific puzzle. The key skill is identifying at least one alternative explanation for any observed correlation before claiming causation.",
+        "studentFacingDescription": "I can measure how strongly two things are related — and I can ask whether the relationship is causal or just correlational."
+      },
+      "9-12": {
+        "classroomInstantiation": "Gene-culture coevolution: dairy farming → selection on LCT → lactase persistence — a causal chain with a specifiable mechanism; coevolutionary relationships between cultural norms and genetic predispositions; network relationships in primate social systems where the mechanism linking centrality to fitness is specified.",
+        "cognitiveModeLabel": "Functional and systemic",
+        "educatorBridgingNote": "At 9–12, students are expected to specify mechanisms, not just observe correlations. The key question shifts from 'do these things correlate?' to 'by what mechanism does one affect the other, and what evidence would allow us to rule out alternative mechanisms?' This is the hallmark of mature scientific reasoning and connects directly to the Capstone rubric criterion on competing hypotheses.",
+        "studentFacingDescription": "I can specify the causal mechanism linking two variables — and I can test whether that mechanism produces the observed relationship."
+      },
+      "K-2": {
+        "classroomInstantiation": "Matching babies to parents based on resemblance; connecting a subsistence strategy to its environment on a picture-matching card; pairing an animal's body feature to its function.",
+        "cognitiveModeLabel": "Pairing",
+        "educatorBridgingNote": "At K–2, relationship is entirely associative — students notice that certain things go together. This is the perceptual foundation for understanding co-variation and later causation. The key vocabulary is 'goes with' and 'belongs with.' Teacher language: 'I notice that wherever we see this environment, we tend to see this food strategy — they seem to go together.'",
+        "studentFacingDescription": "These two things belong together — when I see one, I often see the other."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/relationship",
+    "oe:scopeNote": "Relationship is the bridge concept between observation and causation. At K–2 it is simply 'these two things go together'; by 9–12 it is a formal causal or coevolutionary relationship that can be quantified and modeled. A persistent challenge in teaching relationship is the correlation-causation distinction: students must learn that two things co-varying does not establish that one causes the other. This distinction is introduced at 6–8 and becomes a criterion for epistemic humility at 9–12."
+  },
+  "id": "OE-CONCEPT-000302",
+  "labels": {
+    "en": "Relationship"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000303",
+      "OE-CONCEPT-000309",
+      "OE-CONCEPT-000300"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

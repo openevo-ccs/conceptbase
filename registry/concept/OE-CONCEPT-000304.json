@@ -1,0 +1,94 @@
+{
+  "aliases": {
+    "en": [
+      "data",
+      "signal",
+      "evidence",
+      "encoding",
+      "biological information",
+      "knowledge"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Shannon, C. E. (1948). A Mathematical Theory of Communication. Bell System Technical Journal, 27(3), 379–423.",
+      "url": "https://openalex.org/W2963403868"
+    },
+    {
+      "text": "Maynard Smith, J. (2000). The concept of information in biology. Philosophy of Science, 67(2), 177–194.",
+      "url": "https://openalex.org/W2051987654"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A pattern that reduces uncertainty and can be encoded, transmitted, stored, and interpreted. In evolutionary anthropology: DNA as biological information encoding ancestry and function, fossil evidence as environmental and anatomical information, linguistic cognates as historical information about population movements, genomic data as compressed population history."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "This fossil has very long leg bones — that information tells scientists this animal was probably a fast runner.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "The cognate table is information — it tells us which languages are related to each other because they share similar words for basic concepts.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "Haplogroup maps are information — but they are biased information because most of the reference samples come from North America and Europe, not from the populations with the most ancient genetic lineages.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "Ancient DNA, linguistic phylogenetics, and archaeological culture all provide information about the Bronze Age Steppe expansion — because they are independent evidence sources, their convergence is much more convincing than any one source alone.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Using DNA mutation simulation results as evidence for the molecular clock claim; using cognate tables as evidence for language family relationships; sorting 'strong evidence,' 'weak evidence,' and 'not evidence' cards in a classification activity.",
+        "cognitiveModeLabel": "Evidence and claims",
+        "educatorBridgingNote": "At 3–5, information becomes relational — it is always information for or against something. Introduce the vocabulary of evidence explicitly and connect it to the CER framework. A key insight: more information is not always better — irrelevant information does not strengthen a claim. Students should begin to ask 'Is this information relevant to this claim?' not just 'Do I have information?'",
+        "studentFacingDescription": "Information is evidence — it supports or challenges specific claims. Better information leads to better-supported claims."
+      },
+      "6-8": {
+        "classroomInstantiation": "Critiquing haplogroup sampling bias in genetic databases; identifying WEIRD bias in psychological survey samples; evaluating the taphonomic filter on fossil evidence; comparing the resolution of different dating methods.",
+        "cognitiveModeLabel": "Data quality and source critique",
+        "educatorBridgingNote": "At 6–8, the key move is from 'what does this information say?' to 'how good is this information?' Students should learn to ask systematically: Who collected it? How? From what sample? With what assumptions? What could go wrong? This is the methodological dimension of information — CCT.EVID-METHOD made concrete. The WEIRD critique is a perfect example: survey information collected only from WEIRD populations is biased information, regardless of how carefully the surveys were conducted.",
+        "studentFacingDescription": "Not all information is equally reliable — I need to ask where it came from, how it was collected, from what sample, and what assumptions the collection method makes."
+      },
+      "9-12": {
+        "classroomInstantiation": "Analyzing how ancient DNA, fossil morphology, and linguistic phylogenetics each reduce different kinds of uncertainty about the Bronze Age Steppe expansion; applying Bayesian reasoning to update confidence in hypotheses as evidence accumulates; distinguishing between types of information: observation, inference, model output, simulation result.",
+        "cognitiveModeLabel": "Epistemology and information theory",
+        "educatorBridgingNote": "At 9–12, information becomes epistemological: students should understand that convergent evidence from independent methods is epistemologically powerful because independent methods have independent failure modes — if three methods that fail for different reasons all point to the same conclusion, the conclusion is strongly supported. This is the logic behind multi-strand synthesis and the Capstone requirement for evidence from at least four strands.",
+        "studentFacingDescription": "Information reduces uncertainty — and different types of information reduce different kinds of uncertainty. Convergent evidence from independent methods provides stronger grounds for a claim than any single source."
+      },
+      "K-2": {
+        "classroomInstantiation": "Observing fossil casts and naming what they tell us about the animal; looking at family photos to find information about inherited traits; watching primate videos and recording what behaviors we observe.",
+        "cognitiveModeLabel": "Observation and naming",
+        "educatorBridgingNote": "At K–2, information is entirely concrete: it is what you find out by looking carefully. The key vocabulary is 'this tells us that...' and 'I found out that...' Teacher language: 'This fossil tells us that this animal had sharp teeth — that's information scientists can use.' The distinction between observation and inference can begin here very gently: 'We can see the teeth — we are inferring that it ate meat.'",
+        "studentFacingDescription": "I can find out things about the world by looking carefully — what I observe tells me something."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/information",
+    "oe:scopeNote": "Information is perhaps the deepest cross-disciplinary compression concept in the framework — it links biology (DNA as information), cognition (knowledge as information), culture (traditions as transmitted information), and epistemology (evidence as information that reduces uncertainty). The key progression is from information as something observed (K-2) to information as something evaluated (6-8) to information as an epistemological object with philosophical properties (9-12). A critical teaching move at 6-8 is establishing that all information has a source, a collection method, and limits — it is never neutral."
+  },
+  "id": "OE-CONCEPT-000304",
+  "labels": {
+    "en": "Information"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000305",
+      "OE-CONCEPT-000306",
+      "OE-CONCEPT-000300",
+      "OE-CONCEPT-000307",
+      "OE-CONCEPT-000312",
+      "OE-CONCEPT-000314",
+      "OE-CONCEPT-000315"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

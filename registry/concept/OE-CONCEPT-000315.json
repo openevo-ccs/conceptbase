@@ -1,0 +1,45 @@
+{
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Digital technologies and AI systems are now part of the cultural environment in which human cognition, learning, and social organization develop. Understanding this coevolution is increasingly essential for human self-understanding."
+    }
+  },
+  "extensions": {
+    "oe:conceptRole": "cross-cutting-theme",
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/framework/core/cct/machine-culture-coevolution",
+    "oe:fullStatement": "CROSS-CUTTING THEME 6 -- Machine-Culture Coevolution: Digital technologies, algorithmic systems, and artificial intelligence are now deeply embedded in the cultural environments in which human cognition, learning, social organization, and knowledge production develop.",
+    "oe:humanCodableIdentifier": "CCT.MACH-CULT",
+    "oe:sensitiveTopicFlags": [
+      "AI-anxiety-and-student-wellbeing",
+      "digital-equity"
+    ],
+    "oe:sensitiveTopicNote": "Some students may have significant anxiety about AI and automation. Frame engagement with these topics as developing understanding and agency, not amplifying fear. Be aware of significant digital equity differences.",
+    "oe:strandActivation": [
+      {
+        "activationNote": "Primary strand -- machine-culture coevolution as an extension of cultural evolution theory; computational models of cultural transmission; social media as a new medium for conformity bias and prestige bias",
+        "strandCode": "HBEC"
+      },
+      {
+        "activationNote": "Primary strand -- how digital environments shape cognitive development; social media and learning biases; AI systems and theory of mind; human-AI social cognition",
+        "strandCode": "CCP"
+      }
+    ]
+  },
+  "id": "OE-CONCEPT-000315",
+  "labels": {
+    "en": "Machine-Culture Coevolution"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000101",
+      "OE-CONCEPT-000309",
+      "OE-CONCEPT-000304",
+      "OE-CONCEPT-000307",
+      "OE-CONCEPT-000211"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

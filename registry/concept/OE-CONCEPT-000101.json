@@ -5,6 +5,39 @@
       "biology": "Change in the heritable characteristics of biological populations across successive generations.\n"
     }
   },
+  "extensions": {
+    "oe:eva4k12DevelopmentalArc": {
+      "arc": {
+        "3-5": {
+          "classroomInstantiation": "Running the natural selection bead simulation and observing allele frequency change; reading the pocket mouse case study as an example of evolution in action; connecting the hominin timeline to the idea that each species adapted to its environment over many generations.\n",
+          "cognitiveModeLabel": "Organisms changed through selection",
+          "educatorBridgingNote": "At 3–5, the mechanism of natural selection is introduced explicitly: variation exists, it is heritable, and some variants survive/reproduce better. At this level, evolution = biological change through natural selection. Cultural evolution can be introduced as an analogy, keeping the biological and cultural cases clearly distinct.\n",
+          "studentFacingDescription": "Living things change over many generations because some individuals survive and reproduce better than others — and their children inherit what made them successful.\n"
+        },
+        "6-8": {
+          "classroomInstantiation": "Comparing the effects of selection vs. drift in small vs. large populations; understanding the founder effect as an example of drift producing non-adaptive evolution; connecting language evolution to biological evolution.\n",
+          "cognitiveModeLabel": "Mechanisms: selection, drift, mutation, migration",
+          "educatorBridgingNote": "At 6–8, evolution becomes mechanistically plural. A key conceptual move: distinguishing adaptive from non-adaptive evolution — only selection consistently produces adaptation.\n",
+          "studentFacingDescription": "Evolution happens through multiple mechanisms, not just natural selection. Drift, mutation, and migration also change allele frequencies — and not all evolutionary change is adaptive.\n"
+        },
+        "9-12": {
+          "classroomInstantiation": "Evaluating multi-level selection theory as an explanation for human ultrasociality; modeling gene-culture coevolution at the LCT locus; analyzing machine-culture coevolution as a new evolutionary dynamic.\n",
+          "cognitiveModeLabel": "Multi-level, multi-system evolutionary theory",
+          "educatorBridgingNote": "At 9–12, evolution is a theoretical object — a research program with ongoing debates about levels of selection, the extended evolutionary synthesis, and the scope of cultural evolutionary theory. The CCT.MACH-CULT connection (see OE-CONCEPT-000315) is genuinely contested, not settled.\n",
+          "studentFacingDescription": "Evolution operates at multiple levels simultaneously — genes, organisms, groups, species, and cultural traditions can all be subject to selection. Gene-culture coevolution couples biological and cultural evolutionary dynamics.\n"
+        },
+        "K-2": {
+          "classroomInstantiation": "Comparing dinosaurs to birds and noticing similarities suggesting relationship; placing extinct and living animals on a simple timeline showing change over time; noticing that great-grandparents' tools, stories, and homes were different from our own — things changed.\n",
+          "cognitiveModeLabel": "Things change over time",
+          "educatorBridgingNote": "At K–2, evolution is introduced as the simple observable fact that living things change over time. Do not introduce mechanism at this level; do not use the word 'evolution' unless students are ready for it. The goal is temporal openness — students should not assume today's plants and animals have always been this way. Respect the evolution-and-worldview sensitive-topic protocol: present as 'what scientists observe,' not as a worldview claim.\n",
+          "studentFacingDescription": "Living things change over very, very long times — the animals alive today are different from the animals that lived long ago.\n"
+        }
+      },
+      "note": "Additive K-12 developmental-arc content from eva4k12, not a redefinition of this entry's `definitions.biology` above.\n",
+      "source": "EVA4K12-CONCEPTS-v1.0.0 (RFC-0012), migrated from the eva4k12 repository (archived)",
+      "sourceURI": "https://eva4k12.openevo.net/concepts/eva/evolution"
+    }
+  },
   "id": "OE-CONCEPT-000101",
   "labels": {
     "en": "Evolution"
@@ -18,7 +51,13 @@
     ],
     "skos:related": [
       "OE-CONCEPT-000112",
-      "OE-CONCEPT-000113"
+      "OE-CONCEPT-000113",
+      "OE-CONCEPT-000308",
+      "OE-CONCEPT-000309",
+      "OE-CONCEPT-000310",
+      "OE-CONCEPT-000313",
+      "OE-CONCEPT-000314",
+      "OE-CONCEPT-000315"
     ]
   },
   "status": "stable",

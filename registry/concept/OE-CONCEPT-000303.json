@@ -1,0 +1,87 @@
+{
+  "aliases": {
+    "en": [
+      "complex system",
+      "interacting parts",
+      "emergent whole",
+      "network",
+      "ecology"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Holland, J. H. (1995). Hidden Order: How Adaptation Builds Complexity. Addison-Wesley.",
+      "url": "https://openalex.org/W2067123456"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A set of interacting components whose collective behavior produces properties not reducible to any single component. In evolutionary anthropology: ecological systems humans inhabit and modify, cultural transmission systems, gene regulatory networks, primate social systems, language families as systems of related varieties."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "A family is a system — each person plays a role, and together they can do things no one person could do alone.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "A subsistence strategy is part of a system: the environment affects what food is available, which affects which strategy works, which affects how the community is organized.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "A kinship system is a social system that regulates who helps whom through rules about marriage, descent, and inheritance — changing one rule ripples through the whole system.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "Gene-culture coevolution is a coupled dynamical system: cultural practices (like dairy farming) create selection pressure on genes (LCT), and genetic changes (lactase persistence) enable cultural practices to spread further — each influences the other.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Modeling how a subsistence strategy interacts with the local environment — if the environment changes, the strategy must change too; showing how a change in one allele frequency affects the whole population's biology; demonstrating how a language borrowing a word changes its relationship to related languages.",
+        "cognitiveModeLabel": "Interacting components",
+        "educatorBridgingNote": "At 3–5, students begin to understand that systems are dynamic — changing one part ripples through the whole. The key new move is tracing the chain of effects: 'If this changes, then what changes next?' This is the foundation for understanding feedback at 6-8. Use simple two-component systems first before introducing multi-component complexity.",
+        "studentFacingDescription": "The parts of a system interact with each other — changing one part can change how the whole system works."
+      },
+      "6-8": {
+        "classroomInstantiation": "Kinship systems as self-regulating social systems: marriage rules and resource inheritance rules create feedback loops that maintain group cooperation; social norm enforcement as a feedback system: violations are punished, which reduces violations, which maintains the norm; population growth as a feedback system with ecological limits.",
+        "cognitiveModeLabel": "Feedback and regulation",
+        "educatorBridgingNote": "At 6–8, introduce feedback as the mechanism by which systems regulate themselves. Use concrete examples before abstract definitions. The kinship system is ideal: it has input (new members), processing (marriage and inheritance rules), and output (resource distribution) — and the output affects who becomes a new member. Connect explicitly to the Feedback concept.",
+        "studentFacingDescription": "Systems often regulate themselves — the output of a process feeds back to affect the process itself, creating loops that can stabilize or amplify change."
+      },
+      "9-12": {
+        "classroomInstantiation": "Agent-based models of cultural transmission showing how conformity bias at the individual level produces population-level cultural homogeneity; gene-culture coevolution as a coupled dynamical system; ecological systems with multiple stable states; social network dynamics where individual relationship decisions produce global network properties.",
+        "cognitiveModeLabel": "Emergent and formally modeled",
+        "educatorBridgingNote": "At 9–12, emergence is the key system concept: properties that appear at the system level but cannot be found in any single component. Cooperation is an emergent property of a social system — you cannot find cooperation in a single individual, only in their interactions. Agent-based models are particularly powerful here because they make emergence visible: simple rules generate complex collective behavior.",
+        "studentFacingDescription": "Complex systems produce emergent properties that cannot be predicted from the parts alone — and formal models (agent-based, mathematical, computational) can help us understand how they arise."
+      },
+      "K-2": {
+        "classroomInstantiation": "A family is a system — each person plays a different role, and the family together can do things no single person could alone; a forest is a system — trees, animals, soil, and water all interact; a community teaching chain involves many people whose interactions pass knowledge forward.",
+        "cognitiveModeLabel": "Parts and wholes",
+        "educatorBridgingNote": "At K–2, system is introduced through familiar wholes: family, community, classroom, forest. The key idea is that the parts interact — they affect each other — and the whole can do things no single part could. Language to model: 'The forest works together like a team — if one part changes, it affects the others.' Do not yet name feedback or emergence; those appear at 6-8.",
+        "studentFacingDescription": "Things are made of parts that work together — and the whole is different from just the parts alone."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/system",
+    "oe:scopeNote": "System thinking is the capacity to see wholes rather than isolated parts — to ask not just 'what is this component?' but 'how do the components interact, and what emerges from those interactions?' This is essential in evolutionary anthropology because most phenomena of interest (cooperation, cultural evolution, gene-culture coevolution, primate social life) are emergent properties of interacting systems, not products of single causes. The challenge in teaching systems is preventing reductionism: students must learn that understanding the parts is necessary but not sufficient."
+  },
+  "id": "OE-CONCEPT-000303",
+  "labels": {
+    "en": "System"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000309",
+      "OE-CONCEPT-000301",
+      "OE-CONCEPT-000302",
+      "OE-CONCEPT-000308",
+      "OE-CONCEPT-000313"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,89 @@
+{
+  "aliases": {
+    "en": [
+      "evidence-based claim",
+      "scientific reasoning",
+      "structured argument",
+      "hypothesis evaluation",
+      "CER"
+    ]
+  },
+  "citations": [
+    {
+      "text": "McNeill, K. L., & Krajcik, J. (2011). Supporting Grade 5–8 Students in Constructing Explanations in Science. Pearson."
+    },
+    {
+      "text": "Toulmin, S. (1958). The Uses of Argument. Cambridge University Press.",
+      "url": "https://openalex.org/W2051234890"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A structured claim supported by reasoning and evidence, designed to persuade or explain. In evolutionary anthropology: marshaling fossil, genomic, linguistic, and behavioral evidence to support or challenge evolutionary hypotheses; evaluating competing models of cooperation, human origins, or language evolution; acknowledging the strongest counterevidence while defending a position."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "I think this baby looks most like the mother because they both have the same nose shape.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "Claim: These three languages are related. Evidence: They share 12 cognates in basic vocabulary. Reasoning: Languages that share this many basic cognates likely descended from a common ancestor language, because basic vocabulary is rarely borrowed.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "Kin selection can explain cooperation among relatives, but it struggles to explain why humans cooperate with strangers in large anonymous groups. A scientist who supports kin selection might argue that extended kinship networks solve this — but the empirical evidence from cross-cultural experiments suggests this explanation is insufficient.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "The African multiregionalism model is better supported than simple recent African origin because it is consistent with the fossil evidence from Jebel Irhoud AND the ancient DNA evidence for structured African populations — convergent evidence from independent methods. However, I acknowledge that the admixture patterns within Africa remain poorly resolved due to limited ancient African DNA samples, which is a genuine limitation of current evidence.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Writing CER paragraphs about natural selection simulation results; building cognate table arguments for language family relationships; arguing for one subsistence strategy as better adapted to a specific environment using data table evidence.",
+        "cognitiveModeLabel": "Claim plus evidence — CER formally introduced",
+        "educatorBridgingNote": "At 3–5, introduce the Claim-Evidence-Reasoning framework explicitly and use it consistently across all strands and subjects. Use the same language everywhere: 'What is your claim? What is your evidence? How does the evidence support the claim?' The key new move is distinguishing evidence (what you observed) from reasoning (how the observation supports the claim) — many students initially conflate these. Give practice identifying reasoning vs. evidence in worked examples.",
+        "studentFacingDescription": "A good scientific argument has three parts: a specific claim, evidence that supports it, and reasoning that connects the evidence to the claim."
+      },
+      "6-8": {
+        "classroomInstantiation": "Writing position papers on kin selection sufficiency that address the strongest cooperation evidence that kin selection cannot explain; arguing for a taxonomic classification of a hominin species while acknowledging morphological evidence for alternative classifications; debating whether chimpanzee behavioral variation qualifies as culture, engaging both sides.",
+        "cognitiveModeLabel": "Counterclaim and rebuttal",
+        "educatorBridgingNote": "At 6–8, the critical move is engaging the best opposing evidence — not strawmanning a weak version of the other side. Use structured academic controversy protocols: students must be able to argue both sides before they write their own position. The framing: 'A scientist who disagrees with me would point to... and I would respond by...' This is the 6-8 rubric criterion (counterevidence engagement) made explicit.",
+        "studentFacingDescription": "A strong scientific argument doesn't just present evidence for a claim — it also addresses the best evidence against the claim and explains why the claim is still supported."
+      },
+      "9-12": {
+        "classroomInstantiation": "Position papers on competing cooperation models that explicitly engage Bayesian reasoning about which model has higher posterior probability given available evidence; Capstone synthesis that integrates evidence from four or more strands with explicit uncertainty acknowledgment; evaluating modern human origins models with named confidence levels for each claim.",
+        "cognitiveModeLabel": "Theoretical justification with uncertainty",
+        "educatorBridgingNote": "At 9–12, the key sophistication is epistemic calibration: students should be able to distinguish between claims they are highly confident in (well-supported by convergent independent evidence), claims they are moderately confident in (supported by some evidence but contested), and claims that are genuinely open (insufficient evidence to choose between alternatives). Epistemic humility is not intellectual cowardice — it is accurate accounting of what is and isn't known. This is a rubric criterion at this band.",
+        "studentFacingDescription": "A mature scientific argument specifies the theoretical framework it operates within, quantifies its confidence level, names what would change its conclusions, and honestly acknowledges what remains genuinely unknown."
+      },
+      "K-2": {
+        "classroomInstantiation": "Students say which primate behavior is most similar to human behavior and give one reason; students explain which family member a baby picture looks most like and why; students predict what a community needed most long ago and give a reason.",
+        "cognitiveModeLabel": "Opinion with reason",
+        "educatorBridgingNote": "At K–2, argument is introduced as the simple move of backing a claim with a reason — 'I think... because...' This is not yet CER; it is the pre-formal foundation. The key is establishing the habit of giving reasons, not just assertions. Model it constantly: 'I think this fossil is a carnivore because look at those pointed teeth — the teeth are my reason.' The word 'because' is the K-2 argument connector.",
+        "studentFacingDescription": "I think this because... — I can say what I think and give one reason."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/argument",
+    "oe:scopeNote": "Argument is the primary vehicle of scientific communication — it is how knowledge claims are made, evaluated, and revised. The Eva4K12 framework treats argument as a learnable skill that develops from simple opinion-giving (K-2) through structured claim-evidence-reasoning (3-5) and counterclaim engagement (6-8) to full theoretical justification with quantified uncertainty (9-12). A key insight for educators: scientific argument is not debate in the adversarial sense — it is collaborative knowledge-building in which the goal is to get closer to the truth, not to win."
+  },
+  "id": "OE-CONCEPT-000306",
+  "labels": {
+    "en": "Argument"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000304",
+      "OE-CONCEPT-000307",
+      "OE-CONCEPT-000305",
+      "OE-CONCEPT-000312"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

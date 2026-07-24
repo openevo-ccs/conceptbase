@@ -1,0 +1,46 @@
+{
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Humans exist within geological, evolutionary, and cultural timescales that dwarf individual lifespans. Students build intuitions for deep time across all strands."
+    }
+  },
+  "extensions": {
+    "oe:conceptRole": "cross-cutting-theme",
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/framework/core/cct/deep-time",
+    "oe:fullStatement": "CROSS-CUTTING THEME 1 -- Deep Time and Scale: Humans exist within geological, evolutionary, and cultural timescales that dwarf individual lifespans. Students build intuitions for deep time across all strands, from personal family history (K-2) to molecular clocks and coalescent theory (9-12).",
+    "oe:humanCodableIdentifier": "CCT.DEEP-TIME",
+    "oe:strandActivation": [
+      {
+        "activationNote": "Primary strand -- geological and evolutionary timelines of hominin evolution",
+        "strandCode": "HumOr"
+      },
+      {
+        "activationNote": "Molecular clock inference; coalescent theory; population divergence dates",
+        "strandCode": "DAG"
+      },
+      {
+        "activationNote": "Rates of molecular evolution; mutation accumulation across generations",
+        "strandCode": "EvoGen"
+      },
+      {
+        "activationNote": "Language family divergence times; deep history of oral traditions",
+        "strandCode": "DLCE"
+      }
+    ]
+  },
+  "id": "OE-CONCEPT-000310",
+  "labels": {
+    "en": "Deep Time and Scale"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000308",
+      "OE-CONCEPT-000101",
+      "OE-CONCEPT-000300"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

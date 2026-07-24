@@ -1,0 +1,52 @@
+{
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Humans are simultaneously deeply similar and richly diverse. Students learn to hold both poles without collapsing diversity into a single norm or treating cultures as wholly incommensurable."
+    }
+  },
+  "extensions": {
+    "oe:conceptRole": "cross-cutting-theme",
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/framework/core/cct/variation-universals",
+    "oe:fullStatement": "CROSS-CUTTING THEME 2 -- Variation and Universals: Humans are simultaneously deeply similar (shared biology, universal cognitive capacities, common needs) and richly diverse (cultural practices, languages, social structures, ecological adaptations). Students learn to hold both poles.",
+    "oe:humanCodableIdentifier": "CCT.VAR-UNIV",
+    "oe:sensitiveTopicFlags": [
+      "cultural-hierarchy-risk",
+      "indigenous-representation",
+      "WEIRD-bias"
+    ],
+    "oe:sensitiveTopicNote": "Always present cultural diversity as multiple adaptive solutions to shared human challenges, not as stages of development or degrees of advancement.",
+    "oe:strandActivation": [
+      {
+        "activationNote": "Primary strand -- cross-cultural behavioral ecology and cooperative diversity",
+        "strandCode": "HBEC"
+      },
+      {
+        "activationNote": "Primary strand -- WEIRD bias critique; cross-cultural cognitive development",
+        "strandCode": "CCP"
+      },
+      {
+        "activationNote": "Language and folklore diversity alongside linguistic universals",
+        "strandCode": "DLCE"
+      },
+      {
+        "activationNote": "Genetic population structure and diversity as biological backdrop to cultural diversity",
+        "strandCode": "DAG"
+      }
+    ]
+  },
+  "id": "OE-CONCEPT-000311",
+  "labels": {
+    "en": "Variation and Universals"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000300",
+      "OE-CONCEPT-000307",
+      "OE-CONCEPT-000104"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

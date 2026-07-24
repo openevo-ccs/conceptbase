@@ -1,0 +1,87 @@
+{
+  "aliases": {
+    "en": [
+      "deep time",
+      "levels of organization",
+      "spatial scale",
+      "temporal scale",
+      "resolution",
+      "magnitude"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Catley, K. M., & Novick, L. R. (2009). Digging deep: Exploring college students' knowledge of macroevolutionary time. Evolution: Education and Outreach, 2(2), 307–329.",
+      "url": "https://openalex.org/W2038452721"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The level of organization or resolution at which a system is observed or analyzed. In evolutionary anthropology: geological and evolutionary deep time vs. human lifespan; individual organism vs. population vs. species level; molecular vs. anatomical vs. behavioral levels of evolutionary analysis; local community vs. global cross-cultural comparison."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "Your great-great-great-great-grandparents lived a very long time ago — but early humans lived even much, much longer ago than that.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "If we made a timeline where 1 centimeter equals 100,000 years, early Homo sapiens (300,000 years ago) would be only 3 centimeters away — but the first hominins (7 million years ago) would be 70 meters away.",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "Genetic mutations accumulate at a roughly predictable rate — so scientists can estimate how long ago two populations diverged by counting the mutations that separate them. But this clock has error ranges that grow with distance in time.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "A single regulatory mutation (molecular scale) in the HACNS1 enhancer region changed the expression of genes in developing human limbs (cellular/developmental scale), which altered limb proportions (organismal scale), which may have contributed to the evolution of bipedalism (population/evolutionary scale over hundreds of thousands of years).",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Constructing a proportionally scaled hominin timeline (1 cm = 100,000 years); calculating how far back 3.5 million years (Australopithecus) is on a toilet-paper timeline; placing human civilization (last 10,000 years) on an Earth history timeline and seeing how tiny it is.",
+        "cognitiveModeLabel": "Measurement units and timelines",
+        "educatorBridgingNote": "At 3–5, scale becomes mathematical — students must actually compute and draw proportional representations of time. This is the critical intervention for deep time intuition: experiencing in your hands how far back 300,000 years is compared to 3 million years. Connect to CCSS Mathematics proportional reasoning. The cognitive goal is visceral appreciation of scale, not just number manipulation.",
+        "studentFacingDescription": "I can measure scale using units — and I can represent very large or very small scales by choosing appropriate units and drawing proportionally."
+      },
+      "6-8": {
+        "classroomInstantiation": "Comparing rates of genetic change (very slow — millions of years) to rates of cultural change (very fast — years to centuries); understanding that molecular clock rates are calibrated at a different temporal resolution than fossil dates; analyzing how local adaptation (small spatial scale) contributes to global human diversity (large spatial scale).",
+        "cognitiveModeLabel": "Rates of change and cross-scale phenomena",
+        "educatorBridgingNote": "At 6–8, scale becomes analytical: students ask what scale a process operates at and what that implies for the methods used to study it. A key insight: the appropriate method depends on the scale of the question. Fossil dates are appropriate for millions-of-years questions; radiocarbon is appropriate for thousands-of-years questions; written records are appropriate for hundreds-of-years questions. Mismatching method and scale produces misleading answers.",
+        "studentFacingDescription": "Different processes operate at different scales — and what looks like a pattern at one scale may look different at another. I can ask: at what scale is this process operating?"
+      },
+      "9-12": {
+        "classroomInstantiation": "Tracing how a single nucleotide change (molecular scale) affects protein function (cellular scale), which affects phenotype (organismal scale), which affects fitness (population scale), which produces allele frequency change detectable in ancient DNA studies (temporal scale of thousands of years); modeling how individual learning biases (cognitive scale) aggregate to produce cultural patterns (population scale) across generations (evolutionary time scale).",
+        "cognitiveModeLabel": "Cross-scale causation and deep-time inference",
+        "educatorBridgingNote": "At 9–12, cross-scale causation is the key sophistication: causes at one level of organization produce effects at other levels, and understanding the mechanism requires moving between scales fluently. This is also where deep-time inference meets its limits — coalescent theory can estimate divergence dates, but the error ranges grow as we go further back. Epistemic humility about deep-time claims is a function of understanding scale resolution.",
+        "studentFacingDescription": "Causes operating at one scale produce effects visible at another — understanding evolutionary anthropology requires moving fluently between molecular, organismal, population, and cultural scales, and understanding how processes at each scale constrain and enable processes at others."
+      },
+      "K-2": {
+        "classroomInstantiation": "Ordering pictures from smallest to largest, oldest to newest; placing 'me,' 'grandparent,' and 'dinosaurs' on a simplified timeline with very different distances; comparing the size of a cell to the size of an organism using nested diagrams.",
+        "cognitiveModeLabel": "Big/small/long-ago/now",
+        "educatorBridgingNote": "At K–2, scale is entirely perceptual and comparative — students can order things by size or time but cannot yet measure scale numerically. The key vocabulary is 'longer ago,' 'much bigger,' 'tiny compared to.' The goal is building an emotional sense that time and space stretch enormously beyond everyday experience. Use physical walk-throughs and paper strip timelines to make scale embodied, not abstract.",
+        "studentFacingDescription": "Some things are very big, some are very small — some things happened a very long time ago, some happened just now."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/scale",
+    "oe:scopeNote": "Scale is the concept that most directly enables deep time thinking — a signature challenge of evolutionary anthropology. Humans have strong intuitions about the scales of everyday life (seconds to decades, meters to kilometers) and almost no intuitions about geological and evolutionary scales (millions of years, planetary distances). Building scale intuition requires repeated, concrete, embodied experience — not just being told numbers. The toilet paper timeline and classroom walk-throughs are pedagogically essential, not optional enrichment."
+  },
+  "id": "OE-CONCEPT-000308",
+  "labels": {
+    "en": "Scale"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000303",
+      "OE-CONCEPT-000300",
+      "OE-CONCEPT-000101",
+      "OE-CONCEPT-000310"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

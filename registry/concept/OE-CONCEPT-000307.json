@@ -1,0 +1,93 @@
+{
+  "aliases": {
+    "en": [
+      "point of view",
+      "positionality",
+      "standpoint",
+      "epistemic position",
+      "bias",
+      "frame"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Henrich, J., Heine, S. J., & Norenzayan, A. (2010). The weirdest people in the world?. Behavioral and Brain Sciences, 33(2–3), 61–83.",
+      "url": "https://openalex.org/W2162649359"
+    },
+    {
+      "text": "Longino, H. E. (1990). Science as Social Knowledge. Princeton University Press.",
+      "url": "https://openalex.org/W2059012345"
+    }
+  ],
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The position, context, or standpoint from which a phenomenon is observed, interpreted, or experienced, which shapes what is visible and what is invisible. In evolutionary anthropology: WEIRD bias in psychology research; observer effects in ethnography; Indigenous knowledge frameworks as alternative valid epistemologies; whose populations define 'normal' human behavior; positionality of researchers in colonial contexts."
+    }
+  },
+  "extensions": {
+    "oe:accessibleInstantiations": [
+      {
+        "example": "From the wolf's point of view in Little Red Riding Hood, the story might seem very different than it does from Red Riding Hood's perspective.",
+        "gradeBand": "K-2"
+      },
+      {
+        "example": "This psychology study says children naturally share fairly — but it only studied children from one country. Whose perspective is missing from this conclusion?",
+        "gradeBand": "3-5"
+      },
+      {
+        "example": "Most psychology research has been done on WEIRD populations — Western, Educated, Industrialized, Rich, Democratic. That perspective is built into the research design, which means claims about 'human nature' from that research might really be claims about WEIRD nature.",
+        "gradeBand": "6-8"
+      },
+      {
+        "example": "Early 20th-century physical anthropologists asked 'how do racial groups differ?' — a question that embedded assumptions about discrete biological races. Contemporary evolutionary anthropologists ask 'how is genetic variation distributed across populations?' — a different question that reflects a different perspective on what is worth measuring and why.",
+        "gradeBand": "9-12"
+      }
+    ],
+    "oe:developmentalArc": {
+      "3-5": {
+        "classroomInstantiation": "Asking whose perspective is represented in a textbook account of human origins; identifying which cultures are included (and which are absent) in a cross-cultural study; noticing whose stories appear in a folklore collection and whose do not.",
+        "cognitiveModeLabel": "Author purpose",
+        "educatorBridgingNote": "At 3–5, perspective expands from characters to authors and researchers — people who made the texts and data students encounter. The key new move is asking 'who is not represented here?' — the absent perspectives are often as informative as the present ones. In evolutionary anthropology, this often means asking: whose populations have been studied? Whose knowledge traditions have been included? This sets up the WEIRD critique at 6-8.",
+        "studentFacingDescription": "Writers and researchers have purposes and viewpoints that shape what they include and what they leave out — I can ask 'who made this and why?'"
+      },
+      "6-8": {
+        "classroomInstantiation": "Applying the WEIRD critique to a specific psychology study; identifying how the framing of 'behavioral modernity' in paleoanthropology reflects particular cultural assumptions; analyzing whose communities are sampled in genetic databases and what this means for claims about human diversity.",
+        "cognitiveModeLabel": "Bias and framing in research",
+        "educatorBridgingNote": "At 6–8, perspective becomes methodological — it is embedded in research design choices, not just individual attitudes. The WEIRD critique is the most accessible entry point: most psychology research was done on WEIRD populations, which means conclusions about 'human' behavior were actually conclusions about WEIRD behavior. Extend to genetics: most genomic databases over-represent European populations. The key skill is identifying the structural, not just individual, sources of perspective in scientific knowledge.",
+        "studentFacingDescription": "Research design embeds perspectives — who is studied, what questions are asked, what counts as evidence, and whose framework is used to interpret results all reflect the researchers' position."
+      },
+      "9-12": {
+        "classroomInstantiation": "Analyzing how the history of scientific racism in anthropology shaped what questions were asked about human diversity; evaluating how Indigenous knowledge frameworks offer alternative valid perspectives on ecological and social phenomena studied in evolutionary anthropology; examining how funding sources and publication incentives shape research in behavioral ecology.",
+        "cognitiveModeLabel": "Epistemic positionality and science studies",
+        "educatorBridgingNote": "At 9–12, perspective becomes science-studies level — students engage with the sociology and philosophy of knowledge production itself. This is not relativism ('all perspectives are equally valid') but nuanced epistemology ('all knowledge is produced from somewhere, and understanding where it was produced helps evaluate its validity'). Connect directly to CCT.ORIGIN-SCI. The anti-racist framing of genetics content is itself a perspective choice — one the framework makes explicitly and defends.",
+        "studentFacingDescription": "Knowledge is always produced from somewhere — the positionality of researchers (their culture, era, funding sources, institutional context) shapes what questions are asked and what counts as a valid answer. Understanding this is part of evaluating any scientific claim."
+      },
+      "K-2": {
+        "classroomInstantiation": "Discussing how different characters in a folktale feel about the same event; asking how a chimpanzee might 'see' the pointing gesture differently than a human does; considering how an elder who taught a tradition might feel about it changing.",
+        "cognitiveModeLabel": "Character feelings",
+        "educatorBridgingNote": "At K–2, perspective is introduced through the most accessible form of perspective-taking: characters in stories and the experiences of other people and animals. This is developmentally appropriate — theory of mind (the capacity to represent other minds) emerges between ages 3-5 and develops throughout childhood. The key vocabulary is 'from their point of view' and 'they might think/feel...' This is the foundation for the much more abstract epistemic perspective-taking at 6-8.",
+        "studentFacingDescription": "Different people feel and see things differently — I can try to understand how something looks from someone else's point of view."
+      }
+    },
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/concepts/eva/perspective",
+    "oe:scopeNote": "Perspective is both a social-emotional concept (understanding others' feelings and views) and an epistemological one (understanding how one's position shapes what one can know). The Eva4K12 framework develops both dimensions but emphasizes the epistemological dimension increasingly from 6-8 onward. The WEIRD critique is the clearest example: the perspective embedded in research design (studying mainly WEIRD populations) shaped what psychology presented as universal human nature. By 9-12, students should understand perspective not just as individual bias but as structural feature of knowledge production."
+  },
+  "id": "OE-CONCEPT-000307",
+  "labels": {
+    "en": "Perspective"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000306",
+      "OE-CONCEPT-000211",
+      "OE-CONCEPT-000304",
+      "OE-CONCEPT-000311",
+      "OE-CONCEPT-000314",
+      "OE-CONCEPT-000315"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

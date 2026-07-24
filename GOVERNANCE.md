@@ -83,6 +83,7 @@ Every `OE-CONCEPT-######`, `OE-STRAND-######`, and `OE-LPM-######` identifier is
 |---|---|---|
 | `BIO-CORE` | `000100`–`000199` | 101–116 |
 | `OE-INTERDISCIPLINARY` | `000200`–`000299`, plus `000090`–`000099` for cross-cutting concepts shared with `BIO-CORE`'s numbering space | 090, 201–224 |
+| `EVA4K12-CONCEPTS` | `000300`–`000399` | 300–309 (10 concepts), 310–315 (6 cross-cutting-theme-tagged concepts), per RFC-0012. Migrated from the (now-archived) `eva4k12` repository; 3 of its 13 source concepts (Evolution, Adaptation, Agency) were folded into existing `OE-CONCEPT-000101`/`000104`/`000211` rather than new entries — see RFC-0012. |
 
 A new vocabulary reserves its own `000N00`–`000N99` block via its founding RFC (`/proposals/`), approved by a maintainer, before authoring any concept entries. Reserved blocks are recorded by adding a row to this table as part of that RFC — this table is the block registry.
 
@@ -95,7 +96,7 @@ Each LPM reserves one `000N00`–`000N99` block. Within it: `0NN0` is reserved f
 | LPM | Block | Currently used |
 |---|---|---|
 | `bio-core-k12` (`OE-LPM-000001`) | `000100`–`000199` | 101–103 (strands), 111–114/121–124/131–134 (substrands) |
-| `oe-interdisciplinary-k12` (`OE-LPM-000002`) | `000200`–`000299` | 201–203 (strands), 211–214/221–224/231–234 (substrands) |
+| `oe-interdisciplinary-k12` (`OE-LPM-000002`) | `000200`–`000299` | 201–204 (strands), 211–214/221–224/231–234/241–244 (substrands). `204` added per RFC-0013 (eva4k12 strand-content consolidation); `205`–`209` remain unused. |
 
 ### LPM ID blocks (`OE-LPM-######`)
 

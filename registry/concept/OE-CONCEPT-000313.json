@@ -1,0 +1,50 @@
+{
+  "definedInVocabulary": "EVA4K12-CONCEPTS-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Humans are primates, mammals, and part of Earth's biosphere -- shaped by the same evolutionary forces as all life. Human uniqueness is real but relative, context-dependent, and a matter of degree."
+    }
+  },
+  "extensions": {
+    "oe:conceptRole": "cross-cutting-theme",
+    "oe:eva4k12SourceURI": "https://eva4k12.openevo.net/framework/core/cct/place-in-nature",
+    "oe:fullStatement": "CROSS-CUTTING THEME 4 -- Human Place in Nature: Humans are primates, mammals, and part of Earth's biosphere -- shaped by the same evolutionary forces as all life. Human uniqueness is real but relative, context-dependent, and a matter of degree rather than categorical separation from the rest of nature.",
+    "oe:humanCodableIdentifier": "CCT.PLACE-NATURE",
+    "oe:sensitiveTopicFlags": [
+      "evolution-and-worldview"
+    ],
+    "oe:sensitiveTopicNote": "This theme directly engages the 'humans as animals' framing that may conflict with some students' religious or cultural frameworks. Follow NSTA position statement on evolution.",
+    "oe:strandActivation": [
+      {
+        "activationNote": "Primary strand -- primate comparison grounds human place in the primate order",
+        "strandCode": "PrimEvo"
+      },
+      {
+        "activationNote": "Hominin evolution shows continuous biological lineage from shared ancestor",
+        "strandCode": "HumOr"
+      },
+      {
+        "activationNote": "Genomic similarity between humans and other primates quantifies evolutionary relatedness",
+        "strandCode": "EvoGen"
+      },
+      {
+        "activationNote": "Human cooperation and culture analyzed using the same ecological frameworks applied to other species",
+        "strandCode": "HBEC"
+      }
+    ]
+  },
+  "id": "OE-CONCEPT-000313",
+  "labels": {
+    "en": "Human Place in Nature"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000101",
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000303"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

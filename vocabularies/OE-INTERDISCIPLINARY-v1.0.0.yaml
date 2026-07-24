@@ -237,7 +237,84 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213, OE-SANDBOX-CONCEPT-000004]
+      # OE-CONCEPT-000307/315 (Perspective, Machine-Culture Coevolution --
+      # EVA4K12-CONCEPTS) reciprocate that vocabulary's skos:related
+      # assertions, per RFC-0012.
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213, OE-SANDBOX-CONCEPT-000004, OE-CONCEPT-000307, OE-CONCEPT-000315]
+    extensions:
+      "oe:eva4k12DevelopmentalArc":
+        source: EVA4K12-CONCEPTS-v1.0.0 (RFC-0012), migrated from the eva4k12 repository (archived)
+        sourceURI: "https://eva4k12.openevo.net/concepts/eva/agency"
+        note: >
+          Additive K-12 developmental-arc content from eva4k12, not a
+          redefinition of this entry's `definitions.general` above — note
+          eva4k12's own scopeNote flags the same "act intentionally"
+          framing this entry uses as needing an explicit is-ought caveat at
+          9-12, consistent with the deflationary-vs-mentalistic discussion
+          in docs/design-notes/human-dimensions-k12-case-study.md.
+        arc:
+          K-2:
+            cognitiveModeLabel: Characters want things
+            studentFacingDescription: >
+              People and animals want things and do things on purpose —
+              their choices matter.
+            classroomInstantiation: >
+              Discussing why characters in folktales make the choices they
+              make; noticing that primates choose their social partners;
+              recognizing that the grandmother chose to teach her
+              grandchild the weaving technique.
+            educatorBridgingNote: >
+              At K–2, agency is the simplest form of intentionality:
+              characters have goals and make choices — the developmental
+              foundation of theory of mind.
+          3-5:
+            cognitiveModeLabel: Characters choose and cause consequences
+            studentFacingDescription: >
+              People make choices that have consequences — for themselves
+              and for their communities. Those consequences can spread
+              across time through cultural transmission.
+            classroomInstantiation: >
+              Tracing how an inventor's choice to use a particular tool
+              technique spread through their community; understanding how a
+              farming community's choice to keep cattle changed the genetic
+              landscape of their descendants.
+            educatorBridgingNote: >
+              Agency becomes causal — individual choices about what to
+              teach, learn, and innovate accumulate into cultural
+              evolution.
+          6-8:
+            cognitiveModeLabel: Social and institutional power
+            studentFacingDescription: >
+              Agency is not equally distributed — social structures,
+              institutions, and power relations shape whose choices matter
+              more, and constrain what choices are available to different
+              people.
+            classroomInstantiation: >
+              Analyzing how kinship systems structure who has agency over
+              resource allocation; understanding how prestige hierarchies
+              in primate groups give some individuals more influence over
+              group behavior.
+            educatorBridgingNote: >
+              Avoid both naive individualism ('anyone can do anything they
+              choose') and determinism ('structures determine everything').
+          9-12:
+            cognitiveModeLabel: Political, ethical, and evolutionary theory
+            studentFacingDescription: >
+              The evolutionary origins of human agency are themselves an
+              object of scientific inquiry — and understanding those
+              origins has implications for moral responsibility, political
+              freedom, and the capacity for intentional cultural change.
+            classroomInstantiation: >
+              Evaluating claims that shared intentionality is the cognitive
+              foundation that makes human culture possible; analyzing the
+              is-ought distinction; considering how the evolution of human
+              agency relates to contemporary questions about AI agency and
+              responsibility.
+            educatorBridgingNote: >
+              The is-ought distinction must be explicitly taught: nothing
+              about evolutionary origins settles normative questions about
+              what we should do. The CCT.MACH-CULT connection
+              (OE-CONCEPT-000315) is genuinely contested, not settled.
 
   - id: OE-CONCEPT-000212
     type: oe:Concept
