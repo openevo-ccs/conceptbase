@@ -8,7 +8,7 @@
 [![Validate](https://github.com/openevo-ccs/conceptbase/actions/workflows/validate.yml/badge.svg)](https://github.com/openevo-ccs/conceptbase/actions/workflows/validate.yml)
 [![Specification](https://img.shields.io/badge/Spec-v0.4.0-blue)](docs/oecb_specifications.md)
 [![Namespace status](https://img.shields.io/badge/w3id%20registration-live-brightgreen)](https://www.w3id.org/openevo/)
-[![Ontology](https://img.shields.io/badge/Ontology-v1.3.1-blue)](ontologies/core_v1.yaml)
+[![Ontology](https://img.shields.io/badge/Ontology-v1.5.0%20(openevo--core)-blue)](https://github.com/openevo-ccs/openevo-core/blob/main/ontologies/core_v1.yaml)
 [![FAIR](https://img.shields.io/badge/FAIR-Findable%20Accessible%20Interoperable%20Reusable-green)](https://www.go-fair.org/fair-principles/)
 [![Namespace](https://img.shields.io/badge/Namespace-www.w3id.org%2Fopenevo-purple)](https://www.w3id.org/openevo/)
 [![Formalism](https://img.shields.io/badge/Formalism-YAML%20→%20JSON--LD%20%2F%20RDF-orange)](schemas/)
@@ -22,7 +22,9 @@
 
 The **OpenEvo Concept Base (OECB)** is the foundational semantic infrastructure of the [OpenEvo Computational Curriculum Studies (CCS) Lab](http://openevo.eva.mpg.de) — a research initiative studying how curriculum knowledge originates, develops, competes, and evolves across educational systems, disciplines, and cultures.
 
-This repository is **infrastructure, not content**. It defines *how* curriculum knowledge can be represented — the ontology, schemas, controlled vocabularies, identifiers, and validation rules — so that independently maintained repositories of Learning Progression Models (LPMs), Collections, Strands, assessments, and AI-assisted curriculum tools can interoperate without every project reinventing its own data model.
+This repository is **infrastructure, not content**. It owns the `oe:Concept`/`oe:LPM`/`oe:Strand`/`oe:LearningObject`/`oe:Competency` registry — schemas, controlled vocabularies, identifiers, and validation rules for those specific entity types — so that independently maintained repositories of Learning Progression Models (LPMs), Collections, Strands, assessments, and AI-assisted curriculum tools can interoperate without every project reinventing its own data model.
+
+> **Scope note (2026-07-26):** the *shared upper ontology* (`oe:Entity` and friends), the cross-repo identifier scheme, and the RFC process for proposing a genuinely new ontology class now live in [`openevo-core`](https://github.com/openevo-ccs/openevo-core), not here — see [RFC-0013](proposals/0013-openevo-core-kernel-migration.md). This repo is one of nine co-equal **Foundational Repos** consuming that shared kernel, owning only its own entity types, exactly like CompetencyBase owns `oe:Competency`-to-be or TeachingBase owns `oe:Resource`.
 
 > **Core principle:** The Concept Base defines *how* curriculum knowledge can be represented. Individual repositories contribute evolving, independently governed *instances* of that knowledge.
 
@@ -61,7 +63,7 @@ using the [w3id.org](https://w3id.org) permanent identifier redirection service,
 
 **This repository stores:**
 
-- ✅ Core ontology (classes and relations — the "types" of curriculum knowledge)
+- ✅ `oe:Concept`/`oe:LPM`/`oe:Strand`/`oe:LearningObject`/`oe:Competency` instances and their vocabularies (the shared upper ontology those classes are defined in now lives in [`openevo-core`](https://github.com/openevo-ccs/openevo-core))
 - ✅ JSON Schema definitions for validating concept, LPM, and strand data
 - ✅ Controlled vocabularies (disambiguated, multi-discipline concept registries)
 - ✅ The persistent identifier registry and resolution scheme
@@ -95,7 +97,9 @@ Since that pilot review, six accepted RFCs have pulled work forward from later p
 | **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
 | **Phase 4 — Ecosystem Tooling** | 🟡 Started ahead of schedule | `oe:Competency` profiled against CASE `CFItem` and promoted out of `reserved` ([RFC-0002](proposals/0002-competency-case-profile.md), see [`docs/design-notes/case-competency-profile.md`](docs/design-notes/case-competency-profile.md)); flat-JSON registry and live namespace resolution ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)); citation-only competency entries for license-restricted sources ([RFC-0005](proposals/0005-citation-only-competency-entries.md)); two full-text competency vocabularies ingested, `NGSS-LIFE-SCIENCE-v1.0.0` ([RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)) and `AI4K12-v1.0.0` ([RFC-0007](proposals/0007-ai4k12-vocabulary.md)); basic schema-validation CI (`.github/workflows/validate.yml`, this repo and both reference LPMs) — a real slice of the spec §10.3 CI compatibility-checker, not the full thing (see Roadmap); evidence schema, hosted SPARQL endpoint, and the full pin-resolution/deprecation-aware compatibility-checker still planned |
 
-Reserved ontology classes for later phases (`Collection`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`ontologies/core_v1.yaml`](ontologies/core_v1.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change. `Competency` was reserved the same way and has since been promoted (see below).
+Reserved ontology classes for later phases (`Collection`, `Assessment`, `Practice`, `Evidence`, `Resource`) already have stable IRIs declared in [`openevo-core/ontologies/core_v1.yaml`](https://github.com/openevo-ccs/openevo-core/blob/main/ontologies/core_v1.yaml) under the `www.w3id.org/openevo/` namespace, so dependent repositories can forward-reference them without a future breaking change. `Competency` was reserved the same way and has since been promoted (see below).
+
+- **[RFC-0013](proposals/0013-openevo-core-kernel-migration.md)** *(2026-07-26)* — the shared upper ontology, identifier scheme, and cross-repo RFC process moved to [`openevo-core`](https://github.com/openevo-ccs/openevo-core); this repo's own Concept/LPM/Strand/LearningObject/Competency registry is unchanged. See the scope note above and `GOVERNANCE.md`.
 
 ### Forward-implemented ahead of schedule
 
@@ -142,7 +146,7 @@ conceptbase/
 │   └── alignment.example.yaml
 │
 ├── ontologies/
-│   └── core_v1.yaml          # TBox: Concept, LPM, Strand, SubStrand, LearningObject, Competency
+│   └── README.md             # Pointer — the TBox moved to openevo-core/ontologies/core_v1.yaml (RFC-0013)
 │
 ├── schemas/
 │   ├── common.defs.yaml      # Shared $defs: IDs, semver, localized strings, citations (RFC-0008: concept|competency alignment refs)
@@ -199,7 +203,8 @@ conceptbase/
 │   ├── 0005-citation-only-competency-entries.md
 │   ├── 0006-ngss-life-science-vocabulary.md
 │   ├── 0007-ai4k12-vocabulary.md
-│   └── 0008-alignment-competency-support.md
+│   ├── 0008-alignment-competency-support.md
+│   └── 0013-openevo-core-kernel-migration.md   # Shared kernel moved to openevo-core
 │
 └── .github/workflows/
     ├── pages.yml                # CI: deploys app/ + registry/ to GitHub Pages
@@ -253,14 +258,14 @@ conceptbase:
 
 **Looking up a concept:**
 
-The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389), merged) — every IRI below resolves today. See [`w3id-submission/openevo/`](w3id-submission/openevo/) for the `.htaccess` rules that implement this, and `docs/oecb_specifications.md` §4.2 for the interim MVP resolution scheme this implements:
+The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389), merged) — every IRI below resolves today. See [`w3id-submission/openevo/`](w3id-submission/openevo/) for this repo's original `.htaccess` submission (historical — kept per this repo's archive-don't-delete discipline) and [`openevo-core/w3id-submission/openevo/`](https://github.com/openevo-ccs/openevo-core/tree/main/w3id-submission/openevo) for the current staged rules (RFC-0013 moved the root/`/ontology`/`/schemas/*`/`/vocab/*` targets there; `/concept/`, `/competency/`, `/alignment/`, `/lpm/`, `/strand/` still resolve here, unchanged). `docs/oecb_specifications.md` §4.2 covers the interim MVP resolution scheme this implements:
 
 ```
-https://www.w3id.org/openevo/concept/OE-CONCEPT-000102       →  flat JSON (generated, scripts/build_registry.py)
-https://www.w3id.org/openevo/competency/OE-COMPETENCY-000100 →  flat JSON (competency entries, added by RFC-0008)
-https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML (the #fragment is client-side only)
-https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML
-https://www.w3id.org/openevo/                                 →  redirects to this repository
+https://www.w3id.org/openevo/concept/OE-CONCEPT-000102       →  flat JSON (generated, scripts/build_registry.py, this repo)
+https://www.w3id.org/openevo/competency/OE-COMPETENCY-000100 →  flat JSON (competency entries, added by RFC-0008, this repo)
+https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML, openevo-core (RFC-0013; the #fragment is client-side only)
+https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML (this repo)
+https://www.w3id.org/openevo/                                 →  redirects to openevo-core, the ecosystem's shared kernel (RFC-0013)
 ```
 
 Full content negotiation (JSON-LD, HTML, flat JSON per §4.2's target design) is Phase 4 scope; the flat-JSON/raw-YAML behavior above is an intentional MVP, not the end state.
@@ -283,21 +288,32 @@ Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails
 
 ## The Ecosystem
 
-OECB is the hub of a federated ecosystem — every other repository depends on it, but none of them live inside it:
+OECB is one of nine co-equal **Foundational Repos** in a federated ecosystem, sharing a common kernel (ontology, identifier scheme, RFC process, namespace root) hosted in [`openevo-core`](https://github.com/openevo-ccs/openevo-core) — not owned by this repo, or any other single one. What *is* still specific to this repo: the `oe:Concept`/`oe:LPM`/`oe:Strand`/`oe:LearningObject`/`oe:Competency` registry and their vocabularies:
 
 ```
-                          conceptbase (this repo)
-                     ontology · schemas · vocabularies
-                        www.w3id.org/openevo/
-                                  │
-              ┌───────────────────┼───────────────────┐
-              │                   │                   │
-     Learning Progression    Collections         Strand
-       Models (LPMs)          Repositories      Repositories
-              │                                       │
-           e.g. bio-core-k12             e.g. origins-of-science-strand
-        e.g. oe-interdisciplinary-k12
+                                openevo-core
+                oe: upper ontology · identifier scheme · RFC process
+                    www.w3id.org/openevo/ (namespace root)
+                                     │
+              ┌──────────────────────┼──────────────────────┐
+              │                      │                      │
+        conceptbase            (8 peer Foundational      Graph repos
+     (this repo — Concept,          Repos — Competency,   (ccs-graph,
+      LPM, Strand, LO,              Teaching, Project,     openevo-graph,
+      Competency instances)         Literature, Human,     eva-graph)
+              │                     Theory, Question,
+              │                     Method)
+              │
+  ┌───────────┴───────────┐
+  │                       │
+Learning Progression   Strand
+  Models (LPMs)        Repositories
+  │
+e.g. bio-core-k12
+e.g. oe-interdisciplinary-k12
 ```
+
+Full rationale for this shape (and why it changed from the single-hub diagram this section used to show): [`lab_manager`'s design note on shared-kernel governance](https://github.com/openevo-ccs/lab_manager/blob/main/docs/design-notes/ecosystem-shared-kernel-and-co-equal-governance-plan.md) and [RFC-0013](proposals/0013-openevo-core-kernel-migration.md).
 
 Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test the ConceptBase's pluralism model in practice:
 
@@ -320,7 +336,7 @@ The [Selection cross-domain case study](docs/design-notes/selection-cross-domain
 
 ## Governance & Contributing
 
-Every addition — a new concept, relation, schema, or vocabulary — goes through a structured RFC process:
+Every addition to this repo's own scope — a new concept, LPM, strand, competency, alignment, or vocabulary — goes through a structured RFC process. **A genuinely new shared ontology class, or a change to the identifier scheme or namespace root, now goes to [`openevo-core`](https://github.com/openevo-ccs/openevo-core/blob/main/CONTRIBUTING.md) instead (RFC-0013)** — this repo no longer reviews those.
 
 1. **Propose** via a PR to `proposals/`, using the template (motivation, proposed IRI under `www.w3id.org/openevo/`, why no existing standard covers it).
 2. **Review**, split by how much permanence is at stake ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)): a single maintainer (or a 5-business-day no-objection window) is enough for a new sandbox-tier entry or a `proposed`-status draft; the full domain-editor + maintainer bar applies specifically to `proposed → accepted` promotion and sandbox → permanent promotion — the moment the never-delete guarantee actually starts to apply.
@@ -351,6 +367,7 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [x] Concept Lens view added to the ConceptBase Explorer; Selection cross-domain case study published
 - [x] Developer onboarding: `docs/getting-started.md`, `examples/`, offline `scripts/validate.py`, Explorer welcome banner + `?lens=` deep link
 - [x] Basic schema-validation CI: `.github/workflows/validate.yml` on this repo (every vocabulary/alignment/example) and on both reference LPMs (`lpm.yaml`/`strands/*.yaml`, checking out this repo alongside)
+- [x] **[RFC-0013](proposals/0013-openevo-core-kernel-migration.md)**: shared upper ontology, identifier scheme, and cross-repo RFC process extracted to [`openevo-core`](https://github.com/openevo-ccs/openevo-core) — this repo narrowed to its own Concept/LPM/Strand/LearningObject/Competency registry, one of nine co-equal Foundational Repos rather than the ecosystem's de facto standards body
 - [ ] Phase 2: Multilingual label/definition expansion beyond `en`
 - [ ] Phase 3: Grade-band schema registry (US K–12, OECD, OpenEvo 4-band/6-band)
 - [ ] Phase 3: Subject-area schema registry

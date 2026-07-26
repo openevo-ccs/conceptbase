@@ -1,7 +1,7 @@
 # OpenEvo ConceptBase — Formal Infrastructure Specification
 
 **Document status:** Normative
-**Specification version:** 0.5.0
+**Specification version:** 0.6.0 (RFC-0013: scope narrowed to this repo's own entity types — see §4.1, §6, §11)
 **Namespace:** `https://www.w3id.org/openevo/`
 **Repository:** `github.com/openevo-ccs/conceptbase`
 **License:** CC-BY-NC-SA-4.0 (this document and all ontology/schema/vocabulary artifacts); MIT (build and validation tooling)
@@ -28,8 +28,11 @@ This document supersedes all prior draft specifications (v0.1, v0.2-draft) circu
 | This specification | Normative — defines what OECB *is* |
 | `GOVERNANCE.md` | Normative — defines the RFC/review *process* by which this specification evolves |
 | `CONTRIBUTING.md` | Informative — practical guide for contributors |
-| `ontologies/core_v1.yaml`, `schemas/*.yaml` | Normative — machine-readable instantiations of §6 and §7 of this specification |
+| `openevo-core/ontologies/core_v1.yaml` | Normative — machine-readable instantiation of the shared upper ontology §6 summarizes (moved out of this repository by RFC-0013, 2026-07-26 — see note there) |
+| `schemas/*.yaml` | Normative — machine-readable instantiations of §7 of this specification |
 | `README.md` | Informative — orientation and quickstart, not authoritative on any technical detail |
+
+**RFC-0013 amendment note (2026-07-26):** this specification described OECB as though it were the sole steward of the shared `oe:` upper ontology, the identifier scheme, and the namespace root, because it was — at the time this document was written, no peer Foundational Repo existed yet. That is no longer accurate. §4.1, §6, and §11 below carry inline amendment notes marking exactly what changed; everything else in this specification is unchanged and still describes this repository's own conformance requirements accurately.
 
 ---
 
@@ -113,6 +116,8 @@ https://www.w3id.org/openevo/
 
 This namespace **MUST** be registered with the [w3id.org permanent identifier redirection service](https://github.com/perma-id/w3id.org), which decouples the identifier from the physical hosting location of the resolver. Migration of underlying infrastructure **MUST NOT** require re-minting any identifier; only the w3id.org redirect target is updated.
 
+**RFC-0013 amendment (2026-07-26):** the bare namespace root (`^$`) and the `/ontology` sub-path (§4.2) now redirect to [`openevo-core`](https://github.com/openevo-ccs/openevo-core), not this repository — see that repo's `w3id-submission/openevo/.htaccess`. This is exactly the kind of redirect-target migration this section already anticipated ("only the w3id.org redirect target is updated"): no identifier changes. `/concept/`, `/competency/`, `/alignment/`, `/lpm/`, `/strand/`, and `/schemas/`, `/vocab/` (this repo's own entity-specific ones) are unaffected.
+
 ### 4.2 Sub-path Structure
 
 | Sub-path | Resolves to (target design) |
@@ -183,7 +188,7 @@ This dual surface exists because flat lookup and graph traversal have different 
 
 ## 6. Ontology Specification
 
-The formal ontology is defined in `ontologies/core_v1.yaml` and summarized normatively here. It is expressed in RDF/RDFS/OWL primitives with a JSON-LD `@context` binding the `oe:` prefix to `https://www.w3id.org/openevo/ontology#`.
+The formal ontology is defined in [`openevo-core/ontologies/core_v1.yaml`](https://github.com/openevo-ccs/openevo-core/blob/main/ontologies/core_v1.yaml) (moved out of this repository by RFC-0013, 2026-07-26, unchanged in content) and summarized normatively here for the classes this repository actually instantiates. It is expressed in RDF/RDFS/OWL primitives with a JSON-LD `@context` binding the `oe:` prefix to `https://www.w3id.org/openevo/ontology#`. Classes belonging to other Foundational Repos (e.g. a future `oe:Project`, `oe:Literature`, `oe:Person`) are declared in that same file but are out of scope for this specification, which describes ConceptBase's own conformance requirements only.
 
 ### 6.1 Phase 1 Classes
 
@@ -368,6 +373,8 @@ A CI compatibility-checker (distributed by OECB as a reusable action, §14 Phase
 ---
 
 ## 11. Governance and Versioning
+
+**RFC-0013 amendment (2026-07-26):** §11.1–11.2 below describe the RFC process for **this repository's own entity types** (Concept, LPM, Strand, SubStrand, LearningObject, Competency) only. Proposing a genuinely new shared `oe:` ontology class, a change to the identifier scheme itself, or a change to the namespace root now goes through [`openevo-core/GOVERNANCE.md`](https://github.com/openevo-ccs/openevo-core/blob/main/GOVERNANCE.md) instead — a structurally identical process, run by that repo's own Kernel Steward and Foundational Repo delegates rather than this repository's Maintainers and Domain editors. §11.3–11.6 (Lifecycle Status, Deprecation Policy, Independent Versioning, Amending This Specification) are unaffected — they still govern this repository's own entities exactly as before.
 
 ### 11.1 Roles
 

@@ -2,7 +2,9 @@
 
 **Status:** Normative (per [`docs/oecb_specifications.md`](docs/oecb_specifications.md) §0.3). Where this document and the specification disagree on process, the specification is authoritative; this document exists to make that process operable day to day.
 
-This document defines the RFC/review process by which the ConceptBase evolves, the entity lifecycle, versioning rules, and the identifier block-allocation registry contributors must follow when minting new IDs.
+This document defines the RFC/review process by which **this repository's own entity types** (`oe:Concept`, `oe:LPM`, `oe:Strand`, `oe:SubStrand`, `oe:LearningObject`, `oe:Competency`) evolve, their lifecycle, versioning rules, and the identifier block-allocation registry contributors must follow when minting new IDs within them.
+
+**Scope note (RFC-0013, 2026-07-26):** the shared `oe:` upper ontology, the identifier scheme itself, and the cross-repo RFC process for proposing a genuinely new shared ontology class now live in [`openevo-core`](https://github.com/openevo-ccs/openevo-core)'s own `GOVERNANCE.md` — not here. This document governs additions *within* ConceptBase's existing classes (a new concept, a new LPM, a new vocabulary); it does not govern the creation of new classes themselves anymore. See [`proposals/0013-openevo-core-kernel-migration.md`](proposals/0013-openevo-core-kernel-migration.md).
 
 ---
 
@@ -76,6 +78,8 @@ Three normative artifact types coexist in this repository with three different f
 ## Identifier Block Allocation
 
 Every `OE-CONCEPT-######`, `OE-STRAND-######`, and `OE-LPM-######` identifier is permanent once `status: accepted` or higher (spec §4.4). To keep IDs collision-free across independently authored vocabularies and LPMs without a central sequence generator, each governed unit reserves a numeric block:
+
+**Cross-repo note:** the tables below remain this repo's own live, authoritative record of its own blocks' current usage. [`openevo-core/GOVERNANCE.md`](https://github.com/openevo-ccs/openevo-core/blob/main/GOVERNANCE.md#identifier-block-allocation) keeps a mirrored copy alongside every other Foundational Repo's reservations, so a new base reserving its first block can see the whole cross-repo picture in one place. Update both when either changes.
 
 ### Concept ID blocks (`OE-CONCEPT-0NNxxx`)
 

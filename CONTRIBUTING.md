@@ -8,7 +8,9 @@ Read [`README.md`](README.md) for orientation and [`docs/oecb_specifications.md`
 
 ## Proposing a change
 
-1. **Open an RFC.** Every new Concept, relation, schema, or vocabulary goes through a pull request against [`proposals/`](proposals/), using the RFC template: motivation, proposed IRI under `www.w3id.org/openevo/`, relations to existing entities, and — for any novel schema structure — why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already covers the need.
+**First, check which repo your change belongs in.** A new instance of an existing type (a Concept, an LPM, a Strand, a Competency, an Alignment record, a vocabulary) belongs here. A genuinely new ontology class, or a change to the identifier scheme or the `www.w3id.org/openevo/` namespace root, belongs in [`openevo-core`](https://github.com/openevo-ccs/openevo-core/blob/main/CONTRIBUTING.md) instead (RFC-0013) — not here.
+
+1. **Open an RFC.** Every new Concept, relation, schema, or vocabulary *within this repo's existing classes* goes through a pull request against [`proposals/`](proposals/), using the RFC template: motivation, proposed IRI under `www.w3id.org/openevo/`, relations to existing entities, and — for any novel schema structure — why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already covers the need.
 2. **Reserve an ID block if needed.** If you're adding a new vocabulary or LPM, your RFC must reserve a numeric ID block per [`GOVERNANCE.md`](GOVERNANCE.md#identifier-block-allocation) before you author any entries.
 3. **Get review.** Every RFC needs at least one domain editor approval (for RFCs touching their subject area) and one maintainer approval before merge.
 4. **Validate before you submit.** Run [`scripts/check_related_symmetry.py`](scripts/check_related_symmetry.py) if your change touches `skos:related`. There is no CI pipeline yet (spec §5.2 is planned, not implemented), so this manual step is currently the only automated check available.
