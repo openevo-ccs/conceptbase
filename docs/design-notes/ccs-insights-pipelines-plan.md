@@ -228,8 +228,10 @@ as "community-auditable," not just aspirationally so.
 
 SAIA's documented rate limits (per `gwdg-saia-ecosystem-plan.md` §6, restated here because it's
 load-bearing for pipeline design specifically) are per-user, tiered (~1,000/min, ~10,000/hr,
-~50,002/day example figures) — generous for embeddings-at-scale, tight if the adjudicate stage
-were ever run unfiltered across the whole dataset.
+~50,002/day example figures, though confirmed 2026-07-26 to actually vary per key/tier — check
+your own via `lab_manager/scripts/gwdg_usage_check.py` rather than trusting either published
+figure) — generous for embeddings-at-scale, tight if the adjudicate stage were ever run
+unfiltered across the whole dataset.
 
 - **Content-hash-based incremental runs.** Same principle `conceptbase-mcp` already uses for
   GitHub API caching and `scripts/build_registry.py` already uses for regenerating `registry/`
@@ -346,3 +348,4 @@ doesn't need to wait behind the LPMR Manager app's Phase 4.
 | Date | Change |
 |---|---|
 | 2026-07-22 | Initial draft, written for review — not yet implemented, not yet RFC'd. |
+| 2026-07-26 | §6 corrected: SAIA's example rate-limit figures confirmed to vary per key/tier, not fixed constants — point readers at `gwdg_usage_check.py` (see `ecosystem-dashboard-and-health-monitoring-plan.md`'s 2026-07-26 entry) to check real numbers. |
