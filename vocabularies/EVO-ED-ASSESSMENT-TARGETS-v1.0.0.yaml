@@ -1,0 +1,294 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: Evolution Education
+# Assessment Targets (EVO-ED-ASSESSMENT-TARGETS)
+# ============================================================================
+# Path: /vocabularies/EVO-ED-ASSESSMENT-TARGETS-v1.0.0.yaml
+#
+# Operationalizes the assessment-target framework introduced in Nehm &
+# Kampourakis (2022, Table 5, "Examples of possible assessment targets and
+# associated learning objectives"): five targets — Nature of Science,
+# Language of Science, Evolution Knowledge, Science Practices, and
+# Cross-Cutting Concepts — each with several constituent performance
+# objectives. Drafted per RFC-0014, in support of integrating Nehm &
+# Kampourakis (2022) and Hanisch et al. (2026) more fully into the
+# og:dispute:openevo-vs-kampourakis dispute graph (openevo-graph), whose
+# central expert-reasoner-model divergence already cites this chapter via
+# proposition:invariant-expert-reasoning (theorybase).
+#
+# NOT A TRANSCRIPTION, AND NOT A CLOSE PARAPHRASE (revised 2026-07-27,
+# against the real source text). LiteratureBase's own independent
+# classification of the source (literaturebase/records/nehm-2022.yaml)
+# records `license: citation-only` -- no confirmed open-access/
+# redistribution grant. The five top-level target `statement`s are
+# generic pedagogical summaries (the same Disciplinary-Core-Ideas/
+# Science-Practices/Cross-Cutting-Concepts three-dimensional-learning
+# vocabulary NGSS itself uses), not present in Table 5 at all, and are
+# fine. The 16 child objectives were ORIGINALLY drafted as close
+# paraphrase of Table 5's actual wording (same clause structure/sequence,
+# isolated synonym swaps only) -- checked directly against the real
+# chapter text and found not sufficiently transformative to avoid
+# substantial-similarity risk. Their `statement` fields now carry only a
+# short topic label plus an explicit withholding note; the real
+# learning-objective wording is deliberately NOT reproduced here.
+# `citationOnly: true` (RFC-0005) is intentionally NOT set on any entry
+# -- this is a non-CASE source (a book chapter), and citationOnly
+# requires a CASE CFItem UUID/URI this source has none of, the same gap
+# RFC-0011 already surfaced for DigCompEdu/KMK.
+#
+# License: unconfirmed for the underlying assessment-target framework
+# (source classified citation-only); this vocabulary's own topic labels
+# are OECB content under the standard CC-BY-NC-SA-4.0 (RFC-0004),
+# flagged for maintainer/licensing review before any proposed -> accepted
+# promotion -- see RFC-0014.
+#
+# Structure: 2-level hierarchy via skos:broader -- 5 Assessment-Target
+# entries (top level) -> 16 Performance-Objective entries, each
+# skos:broader -> its target. humanCodingScheme uses "{Target letter}
+# {objective number}", e.g. "A1", mirroring CCC-v1.0.0.yaml's convention.
+# ============================================================================
+
+meta:
+  id: EVO-ED-ASSESSMENT-TARGETS
+  version: 1.0.0
+  status: proposed
+  scope: >
+    Evolution-education assessment targets: 5 targets (Nature of Science,
+    Language of Science, Evolution Knowledge, Science Practices,
+    Cross-Cutting Concepts), 16 constituent performance objectives,
+    operationalizing the assessment-target framework from Nehm &
+    Kampourakis (2022) Table 5 for use alongside the
+    og:dispute:openevo-vs-kampourakis dispute graph and the two reference
+    LPMs (bio-core-k12, oe-interdisciplinary-k12).
+  discipline: evolutionary-biology-education
+  license: >-
+    Unconfirmed for the underlying source framework (literaturebase
+    classifies Nehm & Kampourakis 2022 as citation-only); this
+    vocabulary's own paraphrased expression is CC-BY-NC-SA-4.0. See
+    RFC-0014's Licensing section -- flagged for maintainer review before
+    proposed -> accepted promotion.
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-COMPETENCY-v1.1.0
+  phase: 1
+
+competencies:
+
+# --- Target A: Nature of Science ---------------------------------------------
+- id: OE-COMPETENCY-000700
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A"
+  statement:
+    en: "Nature of Science: students can explain what science can and cannot answer, and distinguish scientific from non-scientific ways of addressing questions about evolution."
+  citations:
+  - text: "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    doi: "10.48528/4sjc-kj23"
+
+- id: OE-COMPETENCY-000701
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A1"
+  statement:
+    en: "Topic: the boundaries and limits of science as a way of knowing. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000700]
+
+- id: OE-COMPETENCY-000702
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A2"
+  statement:
+    en: "Topic: evolution/religion/nature-of-science misconceptions. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000700]
+
+- id: OE-COMPETENCY-000703
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A3"
+  statement:
+    en: "Topic: science practices as generators of evidence-based understanding. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000700]
+
+- id: OE-COMPETENCY-000704
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "A4"
+  statement:
+    en: "Topic: everyday vs. scientific meanings of nature-of-science vocabulary. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000700]
+
+# --- Target B: Language of Science --------------------------------------------
+- id: OE-COMPETENCY-000705
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B"
+  statement:
+    en: "Language of Science: students can recognize and correctly use evolutionary terminology, distinguishing its everyday from its scientific meaning."
+  citations:
+  - text: "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    doi: "10.48528/4sjc-kj23"
+
+- id: OE-COMPETENCY-000706
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B1"
+  statement:
+    en: "Topic: everyday vs. scientific meanings of core evolutionary terms. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording (and its Table 1 term list) to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000705]
+
+- id: OE-COMPETENCY-000707
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B2"
+  statement:
+    en: "Topic: accurate, consistent use of evolutionary terminology in scientific communication. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000705]
+
+- id: OE-COMPETENCY-000708
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "B3"
+  statement:
+    en: "Topic: correcting ambiguous evolutionary language in media sources. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000705]
+
+# --- Target C: Evolution Knowledge (core ideas) -------------------------------
+- id: OE-COMPETENCY-000709
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C"
+  statement:
+    en: "Evolution Knowledge: students can apply core evolutionary concepts and mechanisms correctly across cases, refuting common misconceptions."
+  citations:
+  - text: "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    doi: "10.48528/4sjc-kj23"
+
+- id: OE-COMPETENCY-000710
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C1"
+  statement:
+    en: "Topic: refuting common evolutionary misconceptions. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000709]
+
+- id: OE-COMPETENCY-000711
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C2"
+  statement:
+    en: "Topic: random and non-random processes jointly shaping evolutionary outcomes. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000709]
+
+- id: OE-COMPETENCY-000712
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C3"
+  statement:
+    en: "Topic: environmental change is not a precondition for natural selection. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000709]
+
+- id: OE-COMPETENCY-000713
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "C4"
+  statement:
+    en: "Topic: the role of mass extinction in the history of life. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000709]
+
+# --- Target D: Science Practices ----------------------------------------------
+- id: OE-COMPETENCY-000714
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D"
+  statement:
+    en: "Science Practices: students can construct, argue for, and apply causal models and explanations of evolutionary phenomena, including novel ones."
+  citations:
+  - text: "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    doi: "10.48528/4sjc-kj23"
+
+- id: OE-COMPETENCY-000715
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D1"
+  statement:
+    en: "Topic: a single misconception-free causal model spanning multiple novel phenomena. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000714]
+
+- id: OE-COMPETENCY-000716
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D2"
+  statement:
+    en: "Topic: a written scientific argument integrating claims, evidence, and reasoning. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000714]
+
+- id: OE-COMPETENCY-000717
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "D3"
+  statement:
+    en: "Topic: a scientific explanation for a previously unencountered phenomenon. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000714]
+
+# --- Target E: Cross-Cutting Concepts ------------------------------------------
+- id: OE-COMPETENCY-000718
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E"
+  statement:
+    en: "Cross-Cutting Concepts: students can apply general scientific framing concepts — pattern, and cause and effect — to evolutionary phenomena specifically."
+  citations:
+  - text: "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    doi: "10.48528/4sjc-kj23"
+
+- id: OE-COMPETENCY-000719
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E1"
+  statement:
+    en: "Topic: phylogeny-based tracing of character-state change across lineages. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000718]
+
+- id: OE-COMPETENCY-000720
+  type: oe:Competency
+  status: proposed
+  version: 1.0.0
+  humanCodingScheme: "E2"
+  statement:
+    en: "Topic: cause-and-effect relationships in evolutionary phenomena. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  relations:
+    skos:broader: [OE-COMPETENCY-000718]
