@@ -58,8 +58,8 @@ Not yet run against `scripts/validate.py` / `scripts/check_related_symmetry.py` 
 
 ## Review
 
-- [ ] Domain editor approval (evolution-education / competency-frameworks domain — no existing domain editor assigned)
-- [ ] Maintainer approval
+- [x] **Domain editor approval** — not required for this merge: per `GOVERNANCE.md`'s RFC Process, merging a `proposed`-status permanent-tier entry needs only one maintainer approval; domain editor sign-off is required at the later `proposed → accepted` transition, not at merge
+- [x] **Maintainer approval** (Dustin Eirdosh, 2026-07-27) — full RFC review signed off
 - [x] **Licensing check performed against the real source text** (2026-07-27) — found the original 16 child objectives too close a paraphrase; remediated by withholding the specific wording (see Licensing section above)
 - [x] **Maintainer sign-off on the remediation** (Dustin Eirdosh, 2026-07-27): topic-label-plus-citation confirmed as an acceptable middle ground for the 16 remediated entries
-- [ ] Confirm whether the RFC-0011-flagged follow-up (generalizing RFC-0005's `citationOnly` provenance shape for non-CASE sources) should be prioritized, since this RFC hits the same gap a second time
+- [ ] Confirm whether the RFC-0011-flagged follow-up (generalizing RFC-0005's `citationOnly` provenance shape for non-CASE sources) should be prioritized — **deferred** (Dustin Eirdosh, 2026-07-27): "we will handle the others soon"
