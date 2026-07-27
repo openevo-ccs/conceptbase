@@ -15,23 +15,29 @@
 # central expert-reasoner-model divergence already cites this chapter via
 # proposition:invariant-expert-reasoning (theorybase).
 #
-# NOT A TRANSCRIPTION. LiteratureBase's own independent classification of
-# the source (literaturebase/records/nehm-2022.yaml) records
-# `license: citation-only` -- no confirmed open-access/redistribution grant
-# at authoring time. Per RFC-0014's Licensing section: the five top-level
-# category labels are generic pedagogical terms (the same
-# Disciplinary-Core-Ideas/Science-Practices/Cross-Cutting-Concepts
-# three-dimensional-learning vocabulary NGSS itself uses), not original
-# expression specific to this chapter. Every child `statement` is OpenEvo's
-# own paraphrase of the learning-objective examples the chapter gives for
-# that target -- not a quotation of Table 5's text. `citationOnly: true`
-# (RFC-0005) is intentionally NOT set -- this is a non-CASE source (a book
-# chapter), and citationOnly requires a CASE CFItem UUID/URI this source
-# has none of, the same gap RFC-0011 already surfaced for DigCompEdu/KMK.
+# NOT A TRANSCRIPTION, AND NOT A CLOSE PARAPHRASE (revised 2026-07-27,
+# against the real source text). LiteratureBase's own independent
+# classification of the source (literaturebase/records/nehm-2022.yaml)
+# records `license: citation-only` -- no confirmed open-access/
+# redistribution grant. The five top-level target `statement`s are
+# generic pedagogical summaries (the same Disciplinary-Core-Ideas/
+# Science-Practices/Cross-Cutting-Concepts three-dimensional-learning
+# vocabulary NGSS itself uses), not present in Table 5 at all, and are
+# fine. The 16 child objectives were ORIGINALLY drafted as close
+# paraphrase of Table 5's actual wording (same clause structure/sequence,
+# isolated synonym swaps only) -- checked directly against the real
+# chapter text and found not sufficiently transformative to avoid
+# substantial-similarity risk. Their `statement` fields now carry only a
+# short topic label plus an explicit withholding note; the real
+# learning-objective wording is deliberately NOT reproduced here.
+# `citationOnly: true` (RFC-0005) is intentionally NOT set on any entry
+# -- this is a non-CASE source (a book chapter), and citationOnly
+# requires a CASE CFItem UUID/URI this source has none of, the same gap
+# RFC-0011 already surfaced for DigCompEdu/KMK.
 #
 # License: unconfirmed for the underlying assessment-target framework
-# (source classified citation-only); this vocabulary's own paraphrased
-# expression is OECB content under the standard CC-BY-NC-SA-4.0 (RFC-0004),
+# (source classified citation-only); this vocabulary's own topic labels
+# are OECB content under the standard CC-BY-NC-SA-4.0 (RFC-0004),
 # flagged for maintainer/licensing review before any proposed -> accepted
 # promotion -- see RFC-0014.
 #
@@ -85,7 +91,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "A1"
   statement:
-    en: "Explain the boundaries and limits of what science, as a way of knowing, can and cannot answer."
+    en: "Topic: the boundaries and limits of science as a way of knowing. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000700]
 
@@ -95,7 +101,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "A2"
   statement:
-    en: "Distinguish scientifically accurate accounts of evolution from common misconceptions about evolution's relationship to religion and to the nature of science itself."
+    en: "Topic: evolution/religion/nature-of-science misconceptions. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000700]
 
@@ -105,7 +111,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "A3"
   statement:
-    en: "Illustrate how scientific practices are used to generate evidence-based understanding of a natural phenomenon."
+    en: "Topic: science practices as generators of evidence-based understanding. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000700]
 
@@ -115,7 +121,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "A4"
   statement:
-    en: "Differentiate everyday from scientific meanings of nature-of-science vocabulary (e.g. 'theory', 'fact', 'law')."
+    en: "Topic: everyday vs. scientific meanings of nature-of-science vocabulary. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000700]
 
@@ -137,7 +143,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "B1"
   statement:
-    en: "Differentiate everyday from scientific meanings of core evolutionary terms (e.g. fitness, adaptation, mutation, theory, selection)."
+    en: "Topic: everyday vs. scientific meanings of core evolutionary terms. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording (and its Table 1 term list) to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000705]
 
@@ -147,7 +153,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "B2"
   statement:
-    en: "Use evolutionary terminology accurately and consistently within scientific communication."
+    en: "Topic: accurate, consistent use of evolutionary terminology in scientific communication. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000705]
 
@@ -157,7 +163,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "B3"
   statement:
-    en: "Identify scientifically ambiguous or inaccurate evolutionary language in a popular-media source and revise it to accurately reflect evolutionary concepts."
+    en: "Topic: correcting ambiguous evolutionary language in media sources. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000705]
 
@@ -179,7 +185,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "C1"
   statement:
-    en: "Refute common misconceptions about evolutionary concepts and mechanisms."
+    en: "Topic: refuting common evolutionary misconceptions. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000709]
 
@@ -189,7 +195,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "C2"
   statement:
-    en: "Explain how both random processes (e.g. mutation) and non-random processes (e.g. differential survival and reproduction) jointly shape evolutionary outcomes."
+    en: "Topic: random and non-random processes jointly shaping evolutionary outcomes. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000709]
 
@@ -199,7 +205,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "C3"
   statement:
-    en: "Explain why a change in environmental conditions is not a necessary precondition for natural selection to occur."
+    en: "Topic: environmental change is not a precondition for natural selection. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000709]
 
@@ -209,7 +215,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "C4"
   statement:
-    en: "Explain the role mass-extinction events play in the history and diversification of life on Earth."
+    en: "Topic: the role of mass extinction in the history of life. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000709]
 
@@ -231,7 +237,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "D1"
   statement:
-    en: "Construct a single causal model, free of misconceptions, that explains multiple novel evolutionary phenomena or patterns."
+    en: "Topic: a single misconception-free causal model spanning multiple novel phenomena. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000714]
 
@@ -241,7 +247,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "D2"
   statement:
-    en: "Construct a written scientific argument that integrates claims, evidence, and reasoning about the evidentiary basis for an evolutionary explanation."
+    en: "Topic: a written scientific argument integrating claims, evidence, and reasoning. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000714]
 
@@ -251,7 +257,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "D3"
   statement:
-    en: "Develop a scientific explanation for a previously unencountered evolutionary phenomenon."
+    en: "Topic: a scientific explanation for a previously unencountered phenomenon. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000714]
 
@@ -273,7 +279,7 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "E1"
   statement:
-    en: "Use a phylogeny to trace patterns of character-state change across lineages."
+    en: "Topic: phylogeny-based tracing of character-state change across lineages. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000718]
 
@@ -283,6 +289,6 @@ competencies:
   version: 1.0.0
   humanCodingScheme: "E2"
   statement:
-    en: "Identify cause-and-effect relationships within an evolutionary phenomenon or pattern."
+    en: "Topic: cause-and-effect relationships in evolutionary phenomena. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
   relations:
     skos:broader: [OE-COMPETENCY-000718]
