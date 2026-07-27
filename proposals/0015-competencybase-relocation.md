@@ -95,9 +95,10 @@ licensing sign-off outstanding).
 
 ## Review
 
-- [ ] Maintainer approval
-- [ ] Domain editor approval (no domain editor currently assigned for
-      cross-repo architecture/governance changes)
+- [x] **Maintainer approval** (Dustin Eirdosh, 2026-07-27) — full RFC review signed off
+- [x] **Domain editor approval** — not required for this merge: per `GOVERNANCE.md`'s RFC
+      Process, merging `proposed`-status entries needs only one maintainer approval;
+      domain editor sign-off applies at the later `proposed → accepted` transition
 - [ ] Confirm `NGSS-LIFE-SCIENCE`/`AI4K12`'s `status: proposed` (despite
       being merged) isn't itself a separate, pre-existing gap worth its
-      own follow-up RFC — noted here, not fixed by this one
+      own follow-up RFC — **deferred** (Dustin Eirdosh, 2026-07-27): "we will handle the others soon"
