@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "B2",
+  "id": "OE-COMPETENCY-000707",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000705"
+    ]
+  },
+  "statement": {
+    "en": "Topic: accurate, consistent use of evolutionary terminology in scientific communication. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

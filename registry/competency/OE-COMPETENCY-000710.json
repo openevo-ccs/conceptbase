@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "C1",
+  "id": "OE-COMPETENCY-000710",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000709"
+    ]
+  },
+  "statement": {
+    "en": "Topic: refuting common evolutionary misconceptions. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

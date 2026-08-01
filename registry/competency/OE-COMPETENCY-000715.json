@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "D1",
+  "id": "OE-COMPETENCY-000715",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000714"
+    ]
+  },
+  "statement": {
+    "en": "Topic: a single misconception-free causal model spanning multiple novel phenomena. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}
