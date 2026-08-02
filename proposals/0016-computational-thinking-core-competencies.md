@@ -1,7 +1,7 @@
 # RFC-0016: `competencybase` fine-grained fields + `OPENEVO-CORE-COMPETENCIES` vocabulary (Computational Thinking)
 
 **Type:** `content`
-**Status:** `proposed`
+**Status:** `accepted` — merged 2026-08-02; one item below still open, see note
 **Author(s):** Claude (planning + drafting pass, per RFC-0007's precedent for maintainer-authored
 content RFCs), for review by Dustin Eirdosh
 **Date:** 2026-07-31
@@ -142,8 +142,17 @@ since only a maintainer can confirm whether 0012/0013 are truly free.
 ## Review
 
 - [ ] Domain editor approval (CS Education / Computational Thinking domain)
-- [ ] Maintainer approval
-- [ ] Confirm the 0011–0013 numbering gap noted above before this RFC is treated as settled
-- [ ] Confirm keeping all four core competencies in one `OPENEVO-CORE-COMPETENCIES` block (rather
+- [x] Maintainer approval (Dustin) — 2026-08-02
+- [ ] **Still open, worse than originally flagged.** This RFC's own numbering (0016, to dodge an
+      unclear 0011–0013 gap) turned out to be the least of it: `GOVERNANCE.md`'s Competency block
+      table was found (2026-08-02 re-sync, `openevo-core/GOVERNANCE.md`) to have listed
+      `UNESCO-AI-CFT` at this RFC's own `000800`–`000899` block, sourced from the unmerged
+      `rfc-0011-teacher-competency-frameworks` branch. That branch's entire reserved range
+      (`000700`–`001099`, four frameworks) is now double-allocated by this RFC and RFC-0014. This
+      RFC's own block stands as correctly reserved (RFC-0011 was never merged, so no real
+      collision exists in committed data) — but RFC-0011 cannot be merged as drafted and needs
+      fresh block numbers before anyone touches it again. Not resolved here; flagged for Dustin.
+- [x] Confirm keeping all four core competencies in one `OPENEVO-CORE-COMPETENCIES` block (rather
       than one block per competency) is the intended long-term shape before Evolutionary/
-      Decentralized Causal Reasoning and Systems Thinking's follow-on records are authored
+      Decentralized Causal Reasoning and Systems Thinking's follow-on records are authored —
+      confirmed, Dustin, 2026-08-02
