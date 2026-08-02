@@ -116,6 +116,7 @@ Not populated until RFC-0006 (`NGSS-LIFE-SCIENCE`), the first vocabulary authore
 | `NGSS-LIFE-SCIENCE` | `000100`–`000199` | 100–152 (8 topic parents + 45 performance expectations) |
 | `AI4K12` | `000200`–`000699` | 200–580 (5 Big Idea parents + 44 concept-row parents + 332 per-band LO/EU pairs). Wider block than usual (500 vs. the customary 100) given via RFC-0007, reserved up front since the full 3-level hierarchy was known in advance. |
 | `EVO-ED-ASSESSMENT-TARGETS` | `000700`–`000799` | 700–720 (5 target parents + 16 objectives). OpenEvo-paraphrased operationalization of Nehm & Kampourakis (2022) Table 5 — not a transcription (source is citation-only); per RFC-0014. |
+| `OPENEVO-CORE-COMPETENCIES` | `000800`–`000899` | 800–806 (Computational Thinking parent + 6 sub-competencies). First OpenEvo-authored (not externally transcribed) competency vocabulary; per RFC-0016. Whole block reserved for all four planned OpenEvo core competencies (Computational Thinking, Evolutionary Causal Reasoning, Decentralized Causal Reasoning, Systems Thinking), not just this pass's 7 entries. |
 
 ### Learning Object and Alignment ID blocks
 
