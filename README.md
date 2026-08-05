@@ -1,6 +1,6 @@
-# OpenEvo Concept Base
+# ConceptBase
 
-> The semantic backbone of the OpenEvo Computational Curriculum Studies ecosystem.
+> A Foundational Repo of the OpenEvo Computational Curriculum Studies ecosystem — shared ontology instances, schemas, and vocabularies for curriculum concepts.
 
 [![OpenEvo Lab](https://img.shields.io/badge/OpenEvo%20Lab-openevo.eva.mpg.de-teal)](http://openevo.eva.mpg.de)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content%20License-CC--BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
@@ -20,13 +20,13 @@
 
 ## What Is This?
 
-The **OpenEvo Concept Base (OECB)** is the foundational semantic infrastructure of the [OpenEvo Computational Curriculum Studies (CCS) Lab](http://openevo.eva.mpg.de) — a research initiative studying how curriculum knowledge originates, develops, competes, and evolves across educational systems, disciplines, and cultures.
+**ConceptBase** is the foundational semantic infrastructure of the [OpenEvo Computational Curriculum Studies (CCS) Lab](http://openevo.eva.mpg.de) — a research initiative studying how curriculum knowledge originates, develops, competes, and evolves across educational systems, disciplines, and cultures. It's one of nine co-equal **Foundational Repos** — CompetencyBase, TeachingBase, ProjectBase, LiteratureBase, HumanBase, TheoryBase, QuestionBase, MethodsBase, and this one — sharing a common kernel maintained in [`openevo-core`](https://github.com/openevo-ccs/openevo-core) (the upper ontology, identifier scheme, and cross-repo RFC process); see that repo for the full architecture. ConceptBase itself owns `oe:Concept`, `oe:LPM`, `oe:Strand`, and `oe:LearningObject`.
 
-This repository is **infrastructure, not content**. It defines *how* curriculum knowledge can be represented — the ontology, schemas, controlled vocabularies, identifiers, and validation rules — so that independently maintained repositories of Learning Progression Models (LPMs), Collections, Strands, assessments, and AI-assisted curriculum tools can interoperate without every project reinventing its own data model.
+This repository is **infrastructure, not content**. It defines *how* curriculum knowledge can be represented — the ontology instances, schemas, controlled vocabularies, identifiers, and validation rules — so that independently maintained repositories of Learning Progression Models (LPMs), Collections, Strands, assessments, and AI-assisted curriculum tools can interoperate without every project reinventing its own data model.
 
-> **Core principle:** The Concept Base defines *how* curriculum knowledge can be represented. Individual repositories contribute evolving, independently governed *instances* of that knowledge.
+> **Core principle:** ConceptBase defines *how* curriculum knowledge can be represented. Individual repositories contribute evolving, independently governed *instances* of that knowledge.
 
-If you're familiar with how `npm`, `schema.org`, or [SKOS](https://www.w3.org/2004/02/skos/) function relative to the software and knowledge-organization ecosystems built on top of them, that's the role OECB plays here: a shared registry and grammar, not a monolithic curriculum database.
+If you're familiar with how `npm`, `schema.org`, or [SKOS](https://www.w3.org/2004/02/skos/) function relative to the software and knowledge-organization ecosystems built on top of them, that's the role ConceptBase plays here: a shared registry and grammar, not a monolithic curriculum database.
 
 ---
 
@@ -34,14 +34,14 @@ If you're familiar with how `npm`, `schema.org`, or [SKOS](https://www.w3.org/20
 
 Curriculum design research and practice are fragmented across theoretical traditions, national systems, subject-area silos, and incompatible metadata formats. Two research teams studying the same concept — say, "selection" in evolutionary theory — may have no way to discover that their models are talking about related ideas, let alone compare, align, or jointly reason over them computationally.
 
-OECB exists to make curriculum knowledge:
+ConceptBase exists to make curriculum knowledge:
 
 - **Findable** — every concept, schema, and vocabulary has a persistent, resolvable identifier under the `www.w3id.org/openevo/` namespace.
 - **Accessible** — openly licensed, Git-native, human- and machine-readable.
 - **Interoperable** — built on existing knowledge-organization standards (SKOS, RDF/JSON-LD) rather than a bespoke, incompatible format.
 - **Reusable** — versioned, provenance-tracked, and explicit about what is stable vs. still theoretical.
 
-Rather than prescribing a single curriculum or a single theoretical stance on any contested question in a domain, OECB is deliberately **pluralistic**: it supports multiple grade-band systems, multiple subject taxonomies, and multiple controlled vocabularies representing genuinely different theoretical commitments — while still letting them interoperate through a shared ontology and identifier scheme.
+Rather than prescribing a single curriculum or a single theoretical stance on any contested question in a domain, ConceptBase is deliberately **pluralistic**: it supports multiple grade-band systems, multiple subject taxonomies, and multiple controlled vocabularies representing genuinely different theoretical commitments — while still letting them interoperate through a shared ontology and identifier scheme.
 
 ---
 
@@ -76,13 +76,13 @@ using the [w3id.org](https://w3id.org) permanent identifier redirection service,
 - ❌ Assessment items or student data
 - ❌ Multimedia or learning resources
 
-Those live in independently governed companion repositories (see [The Ecosystem](#the-ecosystem) below) that *depend on* OECB the way an npm package depends on a registry — pinning specific versions of the ontology and vocabularies they were built against.
+Those live in independently governed companion repositories (see [The Ecosystem](#the-ecosystem) below) that *depend on* ConceptBase the way an npm package depends on a registry — pinning specific versions of the ontology and vocabularies they were built against.
 
 ---
 
 ## Current Status
 
-OECB is in **Phase 1** of a deliberately staged rollout (see [`docs/oecb_specifications.md`](docs/oecb_specifications.md) for the full rationale). Rather than stabilizing the entire vision at once, Phase 1 exists to validate the hardest, highest-leverage ideas — disambiguation and identifier stability — against one real pilot before expanding scope.
+ConceptBase is in **Phase 1** of a deliberately staged rollout (see [`docs/oecb_specifications.md`](docs/oecb_specifications.md) for the full rationale). Rather than stabilizing the entire vision at once, Phase 1 exists to validate the hardest, highest-leverage ideas — disambiguation and identifier stability — against one real pilot before expanding scope.
 
 **The `www.w3id.org/openevo/` namespace is now registered and live** ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389), merged) — every IRI minted by this repository resolves. See [Quickstart](#quickstart) for live examples.
 
@@ -104,7 +104,7 @@ The Phase 1 pilot review surfaced a series of changes worth making immediately r
 - **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-######`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
 - **[RFC-0002](proposals/0002-competency-case-profile.md)** — profiled `oe:Competency` as an extension of CASE (1EdTech) `CFItem` and promoted it out of `reserved` into a stable Phase 1 class, ahead of its original Phase 4 slot, after verifying the mapping against a reference CASE implementation.
 - **[RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)** — built the MVP flat-JSON/raw-YAML resolution scheme (`scripts/build_registry.py`, `registry/`, `app/registry/resolve.html`) needed before the namespace could be registered at all, fixed the GitHub Pages deploy, and submitted the registration PR that has since merged.
-- **[RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md)** — relicensed all OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0.
+- **[RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md)** — relicensed all ConceptBase content from CC-BY-4.0 to CC-BY-NC-SA-4.0.
 - **[RFC-0005](proposals/0005-citation-only-competency-entries.md)** — added a `citationOnly` mode to `oe:Competency` for sources (e.g. Virginia's CASE-formatted state standards) whose license permits citing structure/existence but not republishing statement text verbatim; see [`docs/design-notes/state-standards-licensing.md`](docs/design-notes/state-standards-licensing.md).
 - **[RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)** and **[RFC-0007](proposals/0007-ai4k12-vocabulary.md)** — the first two full-text competency vocabularies ingested from official frameworks with permissive licenses: `NGSS-LIFE-SCIENCE-v1.0.0` (53 entries) and `AI4K12-v1.0.0` (381 entries).
 - **[RFC-0008](proposals/0008-alignment-competency-support.md)** — widened alignment records to reference `oe:Competency` entries as well as `oe:Concept`, unblocking the first concept↔competency alignments (`OE-ALIGN-000003`–`000005`) and extending `build_registry.py`/the w3id resolution rules to cover `/competency/{id}`.
@@ -214,7 +214,7 @@ Not yet created, but referenced elsewhere in this README as future scope: `grade
 
 - **FAIR-compliant** — every entity is findable, accessible, interoperable, and reusable by design, not by convention.
 - **Git-native** — authored and reviewed as YAML through pull requests; compiled to RDF/JSON-LD as a build artifact, never hand-edited.
-- **Curriculum-independent, theory-independent** — OECB does not prescribe *which* pedagogical theory or curriculum standard is correct. It provides the shared grammar that lets different, even competing, theoretical models (see [Why Pluralism Matters](#why-pluralism-matters)) coexist and interoperate.
+- **Curriculum-independent, theory-independent** — ConceptBase does not prescribe *which* pedagogical theory or curriculum standard is correct. It provides the shared grammar that lets different, even competing, theoretical models (see [Why Pluralism Matters](#why-pluralism-matters)) coexist and interoperate.
 - **Standards-aligned, not standards-duplicating** — reuses existing knowledge-organization and ed-tech standards wherever they fit (see table below) rather than reinventing them.
 - **Governed, not ad hoc** — every addition goes through an RFC review process; nothing is ever silently deleted, only deprecated with a `supersededBy` pointer (see [`GOVERNANCE.md`](GOVERNANCE.md)).
 - **AI-ready** — structured for machine consumption (SPARQL, JSON index) from the start, not retrofitted for it later.
@@ -223,9 +223,9 @@ Not yet created, but referenced elsewhere in this README as future scope: `grade
 
 ## Standards Alignment
 
-OECB is built as a set of profiles and extensions of existing standards, not a parallel, incompatible format:
+ConceptBase is built as a set of profiles and extensions of existing standards, not a parallel, incompatible format:
 
-| Need | Standard Reused | What OECB Adds |
+| Need | Standard Reused | What ConceptBase Adds |
 |---|---|---|
 | Concept relations, cross-vocabulary mapping | **SKOS** (`skos:broader`, `skos:related`, `skos:closeMatch`, etc.) | Discipline-specific disambiguation; curriculum-specific concept types |
 | Competency / standards frameworks | **CASE** (1EdTech) | `oe:Competency` profiled directly against CASE `CFItem` (see [`schemas/competency.schema.yaml`](schemas/competency.schema.yaml), [RFC-0002](proposals/0002-competency-case-profile.md)); `citationOnly` mode for license-restricted sources ([RFC-0005](proposals/0005-citation-only-competency-entries.md)); `scripts/case_license_gate.py` + `scripts/case_to_competency_prototype.py` for ingesting real CASE `CFDocument`s |
@@ -283,23 +283,31 @@ Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails
 
 ## The Ecosystem
 
-OECB is the hub of a federated ecosystem — every other repository depends on it, but none of them live inside it:
+ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https://github.com/openevo-ccs/openevo-core)'s shared kernel, not by ConceptBase itself — every Foundational Repo, ConceptBase included, consumes that kernel by reference and none of them own it. Every downstream repository depends on ConceptBase for its own entity types (`oe:Concept`/`oe:LPM`/`oe:Strand`/`oe:LearningObject`), but none of them live inside it:
 
 ```
-                          conceptbase (this repo)
-                     ontology · schemas · vocabularies
-                        www.w3id.org/openevo/
-                                  │
-              ┌───────────────────┼───────────────────┐
-              │                   │                   │
-     Learning Progression    Collections         Strand
-       Models (LPMs)          Repositories      Repositories
-              │                                       │
-           e.g. bio-core-k12             e.g. origins-of-science-strand
-        e.g. oe-interdisciplinary-k12
+                              OPENEVO CORE
+        oe: upper ontology · identifier scheme · cross-repo RFC process
+                    · www.w3id.org/openevo/ namespace root
+                                     │  every Foundational Repo
+                                     │  consumes this by reference
+                                     ▼
+                        FOUNDATIONAL REPOS (co-equal peers)
+
+     ConceptBase (this repo) — oe:Concept, oe:LPM, oe:Strand, oe:LearningObject
+     CompetencyBase · TeachingBase · ProjectBase · LiteratureBase
+     HumanBase · TheoryBase · QuestionBase · MethodsBase
+
+                                     │  Project repos assemble
+                                     │  Foundational entities by id
+                                     ▼
+                               PROJECT REPOS
+     Learning Progression Models (LPMs) that instantiate ConceptBase's
+     ontology and vocabularies directly:
+              e.g. bio-core-k12              e.g. oe-interdisciplinary-k12
 ```
 
-Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test the ConceptBase's pluralism model in practice:
+Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice:
 
 - **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`.
 - **[`oe-interdisciplinary-k12`](https://github.com/openevo-ccs/oe-interdisciplinary-k12)** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
@@ -312,7 +320,7 @@ A static, client-side app (in [`app/`](app/), deployed to GitHub Pages via [`.gi
 
 ### Why Pluralism Matters
 
-These two pilot LPMs are deliberately built from *different* vocabularies rather than a shared one — this is a feature, not a gap. Evolution education research contains genuine, unresolved theoretical disagreement about whether organism/agent behavior belongs in a scientifically adequate causal explanation of evolutionary change (compare, e.g., Kampourakis 2020 with Hanisch et al. 2025). Rather than adjudicating that debate inside the ConceptBase, OECB's role is to let *both* positions be represented as internally consistent, independently valid vocabularies — `BIO-CORE` (decentralized-causation framing) and `OE-INTERDISCIPLINARY` (agency-inclusive framing) — that can still be formally compared once [Phase 2 alignment records](#current-status) exist. This is the pluralism the ConceptBase is designed to support: **contested theoretical questions in a field should be representable as data, not resolved by fiat in the infrastructure layer.**
+These two pilot LPMs are deliberately built from *different* vocabularies rather than a shared one — this is a feature, not a gap. Evolution education research contains genuine, unresolved theoretical disagreement about whether organism/agent behavior belongs in a scientifically adequate causal explanation of evolutionary change (compare, e.g., Kampourakis 2020 with Hanisch et al. 2025). Rather than adjudicating that debate inside ConceptBase, its role is to let *both* positions be represented as internally consistent, independently valid vocabularies — `BIO-CORE` (decentralized-causation framing) and `OE-INTERDISCIPLINARY` (agency-inclusive framing) — that can still be formally compared once [Phase 2 alignment records](#current-status) exist. This is the pluralism ConceptBase is designed to support: **contested theoretical questions in a field should be representable as data, not resolved by fiat in the infrastructure layer.**
 
 The [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md) shows this machinery working in practice, not just in principle: checking `OE-INTERDISCIPLINARY`'s cross-domain Selection concept against NGSS and AI4K12 confirmed the biology claim (`skos:closeMatch`) but demoted the AI claim to `skos:relatedMatch` — a real, independently-checkable finding the alignment layer exists to surface, not something the vocabulary's own confidence could have told you.
 
@@ -328,6 +336,15 @@ Every addition — a new concept, relation, schema, or vocabulary — goes throu
 4. **Never deleted** (permanent tier only) — deprecated, superseded, and retracted entities all remain resolvable indefinitely, so dependent repositories are never broken by an upstream change. Controlled-vocabulary concepts can also be tried first in a **sandbox tier** (`OE-SANDBOX-CONCEPT-######`, 12-month expiry unless promoted) before taking on that permanence commitment.
 
 Each vocabulary, schema, and ontology module is versioned independently using semver (`MAJOR.MINOR.PATCH`), with breaking changes requiring a major version bump and a documented migration path.
+
+**Promotion gate** (added 2026-08-05, see `lab_manager/docs/design-notes/submissions-to-main-promotion-gate.md`):
+this repo has no separate `submissions` branch — RFC PRs merge directly to `main` via the two-speed
+process above — but that process alone doesn't check `provenance.review_status`. Before any RFC PR
+merges: (1) `review_status` at least `peer-nominated`; (2) for anything in a harm-minimization-sensitive
+category, an explicit note that a harm-minimization pass happened, not just that the record exists;
+(3) any permanent governance-allocated id confirmed collision-free, not merely proposed; (4) cross-repo
+reference fields resolving to records that actually exist. Same four-item standard as every other
+Foundational Repo, adapted to this repo's own PR-to-`main` model rather than a submissions branch.
 
 See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to get started. Domain editors are especially needed for underrepresented subject areas and grade-band systems as we approach Phase 3.
 
@@ -364,10 +381,10 @@ Progress is tracked via [GitHub Issues](../../issues) and [Milestones](../../mil
 
 ## Citation
 
-If you use OECB in research or curriculum tooling, please cite:
+If you use ConceptBase in research or curriculum tooling, please cite:
 
 ```
-OpenEvo CCS Lab (2026). OpenEvo Concept Base (spec v0.4.0) [Data infrastructure].
+OpenEvo CCS Lab (2026). ConceptBase (spec v0.4.0) [Data infrastructure].
 https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 ```
 
