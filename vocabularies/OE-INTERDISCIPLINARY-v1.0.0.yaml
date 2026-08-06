@@ -66,7 +66,7 @@ concepts:
         - OE-CONCEPT-000203  # Transmission
         - OE-CONCEPT-000204  # Innovation
         - OE-CONCEPT-000210  # Development
-      skos:related: [OE-CONCEPT-000209]
+      skos:related: [OE-CONCEPT-000209, OE-SANDBOX-CONCEPT-000007]
 
   - id: OE-CONCEPT-000201
     type: oe:Concept
@@ -237,7 +237,7 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213, OE-SANDBOX-CONCEPT-000004]
+      skos:related: [OE-CONCEPT-000210, OE-CONCEPT-000212, OE-CONCEPT-000213, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000008]
 
   - id: OE-CONCEPT-000212
     type: oe:Concept
@@ -584,3 +584,128 @@ concepts:
     nonExamples:
       - A student learning solely from a textbook (no AI system's own
         behavior is being learned from or is adapting in response).
+
+  - id: OE-SANDBOX-CONCEPT-000007
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-08-06"
+      expiresOn: "2027-08-06"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Restructuration
+    definitions:
+      en:
+        general: >
+          A change in how a domain of knowledge is structured and
+          understood, caused by a change in the representational
+          infrastructure used to express it, rather than by new
+          evidence within the old infrastructure — e.g. the shift from
+          Roman to Hindu-Arabic numerals restructuring what arithmetic
+          operations were tractable to learn. Distinguished from
+          ordinary curriculum improvement (a better explanation of the
+          same representation) by the claim that some understandings
+          are not merely harder but effectively inaccessible until the
+          representational infrastructure itself changes.
+    relations:
+      skos:related: [OE-CONCEPT-000090, OE-SANDBOX-CONCEPT-000008, OE-SANDBOX-CONCEPT-000009]
+    examples:
+      - Agent-based/multi-agent computational models restructuring how
+        emergent, decentralized phenomena (population-level natural
+        selection, collective animal behavior, market dynamics) can be
+        understood, by letting a learner author and run the low-level
+        rules directly rather than only interpreting an aggregate
+        equation.
+    citations:
+      - text: >
+          Wilensky, U., & Papert, S. (2010). Restructurations:
+          Reformulations of knowledge disciplines through new
+          representational forms. Proceedings of the Constructionism
+          2010 Conference.
+      - text: >
+          Goldstone, R. L., & Wilensky, U. (2008). Promoting transfer
+          by grounding complex systems principles. Journal of the
+          Learning Sciences, 17(4), 465-516.
+        doi: "10.1080/10508400802394898"
+
+  - id: OE-SANDBOX-CONCEPT-000008
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-08-06"
+      expiresOn: "2027-08-06"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Decentralized Causal Reasoning
+    definitions:
+      en:
+        general: >
+          Explaining a system-level pattern as the aggregate result of
+          many simultaneous, simple, local interactions among
+          lower-level agents or elements, with no single controlling
+          agent directing the outcome — contrasted with a "centralized
+          mindset" that intuitively looks for a leader, designer, or
+          single governing cause behind an observed pattern even when
+          none exists.
+    relations:
+      skos:related: [OE-CONCEPT-000211, OE-SANDBOX-CONCEPT-000007, OE-SANDBOX-CONCEPT-000009]
+    examples:
+      - Explaining a traffic jam, an ant colony's foraging pattern, or
+        a bird flock's shape as emerging from many individuals
+        following simple local rules, with no leader coordinating the
+        group.
+      - Explaining population-level natural selection as an aggregate
+        statistical result of differential survival/reproduction among
+        individual organisms, without invoking a designer or a
+        population-level intention.
+    nonExamples:
+      - Attributing a flock's coordinated turn to a "leader bird"
+        signaling the others.
+    citations:
+      - text: >
+          Resnick, M. (1996). Beyond the centralized mindset. Journal
+          of the Learning Sciences, 5(1), 1-22.
+        doi: "10.1207/S15327809JLS0501_1"
+
+  - id: OE-SANDBOX-CONCEPT-000009
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-08-06"
+      expiresOn: "2027-08-06"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Agent-Based Modeling
+    definitions:
+      en:
+        general: >
+          A computational modeling method in which a system-level
+          pattern is simulated by specifying rules for individual
+          agents (e.g. organisms, particles, people) and their local
+          interactions, then running the simulation forward and
+          observing what pattern emerges — rather than specifying the
+          system-level pattern directly as an equation.
+        education: >
+          As a pedagogical method: authoring or manipulating an
+          agent-based model's low-level rules directly (e.g. in
+          NetLogo), used as the representational infrastructure that
+          makes decentralized causal reasoning learnable in practice,
+          not just definable in principle.
+    relations:
+      skos:related: [OE-SANDBOX-CONCEPT-000007, OE-SANDBOX-CONCEPT-000008]
+    examples:
+      - A NetLogo model of predator-driven selection on a beetle
+        population's running speed, where students set individual
+        beetle/predator rules and observe the population-level
+        selection pattern emerge across generations.
+    citations:
+      - text: >
+          Wilensky, U. (2020). Restructuration theory and agent-based
+          modeling: Reformulating knowledge domains through
+          computational representations. In N. Holbert, M. Berland, &
+          Y. Kafai (Eds.), Designing Constructionist Futures. MIT
+          Press.
+        doi: "10.7551/mitpress/12091.003.0037"

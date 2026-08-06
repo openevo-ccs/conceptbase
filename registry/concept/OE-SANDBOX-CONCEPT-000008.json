@@ -1,0 +1,39 @@
+{
+  "citations": [
+    {
+      "doi": "10.1207/S15327809JLS0501_1",
+      "text": "Resnick, M. (1996). Beyond the centralized mindset. Journal of the Learning Sciences, 5(1), 1-22.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Explaining a system-level pattern as the aggregate result of many simultaneous, simple, local interactions among lower-level agents or elements, with no single controlling agent directing the outcome — contrasted with a \"centralized mindset\" that intuitively looks for a leader, designer, or single governing cause behind an observed pattern even when none exists.\n"
+    }
+  },
+  "examples": [
+    "Explaining a traffic jam, an ant colony's foraging pattern, or a bird flock's shape as emerging from many individuals following simple local rules, with no leader coordinating the group.",
+    "Explaining population-level natural selection as an aggregate statistical result of differential survival/reproduction among individual organisms, without invoking a designer or a population-level intention."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000008",
+  "labels": {
+    "en": "Decentralized Causal Reasoning"
+  },
+  "nonExamples": [
+    "Attributing a flock's coordinated turn to a \"leader bird\" signaling the others."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000211",
+      "OE-SANDBOX-CONCEPT-000007",
+      "OE-SANDBOX-CONCEPT-000009"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-06",
+    "expiresOn": "2027-08-06",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "text": "Wilensky, U., & Papert, S. (2010). Restructurations: Reformulations of knowledge disciplines through new representational forms. Proceedings of the Constructionism 2010 Conference.\n"
+    },
+    {
+      "doi": "10.1080/10508400802394898",
+      "text": "Goldstone, R. L., & Wilensky, U. (2008). Promoting transfer by grounding complex systems principles. Journal of the Learning Sciences, 17(4), 465-516.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A change in how a domain of knowledge is structured and understood, caused by a change in the representational infrastructure used to express it, rather than by new evidence within the old infrastructure — e.g. the shift from Roman to Hindu-Arabic numerals restructuring what arithmetic operations were tractable to learn. Distinguished from ordinary curriculum improvement (a better explanation of the same representation) by the claim that some understandings are not merely harder but effectively inaccessible until the representational infrastructure itself changes.\n"
+    }
+  },
+  "examples": [
+    "Agent-based/multi-agent computational models restructuring how emergent, decentralized phenomena (population-level natural selection, collective animal behavior, market dynamics) can be understood, by letting a learner author and run the low-level rules directly rather than only interpreting an aggregate equation."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000007",
+  "labels": {
+    "en": "Restructuration"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000090",
+      "OE-SANDBOX-CONCEPT-000008",
+      "OE-SANDBOX-CONCEPT-000009"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-06",
+    "expiresOn": "2027-08-06",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
