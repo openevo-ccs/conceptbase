@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Der evolutionäre Prozess, bei dem ein frei lebender Organismus von einem anderen aufgenommen und dauerhaft in ihm erhalten bleibt, bis er schließlich zu einem integrierten, vererbbaren Organell wird — der anerkannte Ursprung von Mitochondrien und Chloroplasten aus ehemals frei lebenden Bakterien.\n"
+    },
+    "en": {
+      "biology": "The evolutionary process by which one free-living organism is taken up and permanently retained inside another, eventually becoming an integrated, heritable organelle — the accepted origin of mitochondria and chloroplasts from formerly free-living bacteria.\n"
+    }
+  },
+  "examples": [
+    "Mitochondria retaining their own DNA and bacterial-type ribosomes from their free-living bacterial ancestor."
+  ],
+  "id": "OE-CONCEPT-000136",
+  "labels": {
+    "de": "Endosymbiose",
+    "en": "Endosymbiosis"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000114",
+      "OE-CONCEPT-000137"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

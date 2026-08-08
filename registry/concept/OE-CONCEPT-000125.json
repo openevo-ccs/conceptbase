@@ -1,0 +1,33 @@
+{
+  "citations": [
+    {
+      "text": "Okasha, S. (2006). Evolution and the Levels of Selection."
+    }
+  ],
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Das Konzept, wonach natürliche Selektion gleichzeitig auf mehreren Ebenen der biologischen Organisation wirken kann — unter anderem auf Gen-, Individuen- und Gruppenebene —, wobei das evolutionäre Schicksal eines Merkmals von der Gesamtbilanz der auf diesen Ebenen gleichzeitig wirkenden Selektionsdrücke abhängt.\n"
+    },
+    "en": {
+      "biology": "The framework describing natural selection as capable of acting simultaneously at multiple levels of biological organization — gene, individual, and group among them — with a trait's overall evolutionary fate depending on the net balance of selection pressures acting across those levels at once.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000125",
+  "labels": {
+    "de": "Mehrebenenselektion",
+    "en": "Multilevel Selection"
+  },
+  "relations": {
+    "skos:narrower": [
+      "OE-CONCEPT-000126",
+      "OE-CONCEPT-000127"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000102"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Eine vererbbare Veränderung der DNA-Sequenz, die als ursprüngliche Quelle genetischer Variation innerhalb einer Population dient.\n"
+    },
     "en": {
       "biology": "A heritable change in a DNA sequence, serving as an ultimate source of genetic variation within a population.\n"
     }
   },
   "id": "OE-CONCEPT-000103",
   "labels": {
+    "de": "Mutation",
     "en": "Mutation"
   },
   "relations": {
@@ -14,7 +18,9 @@
       "OE-CONCEPT-000106",
       "OE-CONCEPT-000107",
       "OE-CONCEPT-000102",
-      "OE-SANDBOX-CONCEPT-000002"
+      "OE-SANDBOX-CONCEPT-000002",
+      "OE-CONCEPT-000135",
+      "OE-CONCEPT-000139"
     ]
   },
   "status": "stable",

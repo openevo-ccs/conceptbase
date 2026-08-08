@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Eine Gruppe von Organismen, die sich untereinander fortpflanzen und fruchtbare Nachkommen hervorbringen können und die in der Regel von anderen solchen Gruppen reproduktiv isoliert ist.\n"
+    },
     "en": {
       "biology": "A group of organisms capable of interbreeding and producing fertile offspring, generally reproductively isolated from other such groups.\n"
     }
   },
   "id": "OE-CONCEPT-000109",
   "labels": {
+    "de": "Art",
     "en": "Species"
   },
   "relations": {
@@ -15,7 +19,8 @@
       "OE-CONCEPT-000114",
       "OE-CONCEPT-000108",
       "OE-CONCEPT-000116",
-      "OE-SANDBOX-CONCEPT-000001"
+      "OE-SANDBOX-CONCEPT-000001",
+      "OE-CONCEPT-000137"
     ]
   },
   "status": "stable",

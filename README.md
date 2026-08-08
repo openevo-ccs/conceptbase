@@ -154,7 +154,7 @@ conceptbase/
 │   └── alignment.schema.yaml     # Phase 2 cross-vocabulary alignment records
 │
 ├── vocabularies/
-│   ├── BIO-CORE-v1.0.0.yaml
+│   ├── BIO-CORE-v1.2.0.yaml
 │   ├── OE-INTERDISCIPLINARY-v1.0.0.yaml
 │   ├── NGSS-LIFE-SCIENCE-v1.0.0.yaml   # oe:Competency, 53 entries (RFC-0006)
 │   └── AI4K12-v1.0.0.yaml              # oe:Competency, 381 entries (RFC-0007)
@@ -248,7 +248,7 @@ Any proposal for a novel schema structure must document why an existing standard
 conceptbase:
   ontology: OE-ONTOLOGY-v1.0.0
   vocabularies:
-    - BIO-CORE-v1.0.0
+    - BIO-CORE-v1.2.0
 ```
 
 **Looking up a concept:**
@@ -259,7 +259,7 @@ The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id
 https://www.w3id.org/openevo/concept/OE-CONCEPT-000102       →  flat JSON (generated, scripts/build_registry.py)
 https://www.w3id.org/openevo/competency/OE-COMPETENCY-000100 →  flat JSON (competency entries, added by RFC-0008)
 https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML (the #fragment is client-side only)
-https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML
+https://www.w3id.org/openevo/vocab/BIO-CORE-v1.2.0            →  raw vocabulary YAML
 https://www.w3id.org/openevo/                                 →  redirects to this repository
 ```
 

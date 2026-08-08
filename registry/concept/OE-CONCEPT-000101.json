@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Veränderung der vererbbaren Merkmale biologischer Populationen im Verlauf aufeinanderfolgender Generationen.\n"
+    },
     "en": {
       "biology": "Change in the heritable characteristics of biological populations across successive generations.\n"
     }
   },
   "id": "OE-CONCEPT-000101",
   "labels": {
+    "de": "Evolution",
     "en": "Evolution"
   },
   "relations": {
@@ -14,7 +18,8 @@
       "OE-CONCEPT-000102",
       "OE-CONCEPT-000110",
       "OE-CONCEPT-000111",
-      "OE-CONCEPT-000116"
+      "OE-CONCEPT-000116",
+      "OE-CONCEPT-000122"
     ],
     "skos:related": [
       "OE-CONCEPT-000112",

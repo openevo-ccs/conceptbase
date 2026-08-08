@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Neukombination bereits vorhandener genetischer Variation während der Meiose, bei der Crossing-over zwischen homologen Chromosomen neue Allelkombinationen bei den Nachkommen erzeugt, ohne dass dabei selbst ein neues Allel entsteht.\n"
+    },
+    "en": {
+      "biology": "The reshuffling of existing genetic variation during meiosis, in which crossing over between homologous chromosomes produces new combinations of alleles in offspring without creating any new allele itself.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000139",
+  "labels": {
+    "de": "Rekombination",
+    "en": "Recombination"
+  },
+  "nonExamples": [
+    "The origin of a genuinely new allele not previously present in the population (see Mutation)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000103",
+      "OE-CONCEPT-000107"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

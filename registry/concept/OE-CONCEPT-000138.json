@@ -1,0 +1,25 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Erforschung vererbbarer Veränderungen der Genexpression, die ohne Veränderung der zugrunde liegenden DNA-Sequenz auftreten — etwa durch DNA-Methylierung und Histonmodifikation —, einschließlich Fällen, in denen solche Markierungen über eine oder mehrere Generationen weitergegeben werden (transgenerationale epigenetische Vererbung); ein Mechanismus, der sich von der DNA-sequenzbasierten Vererbung unterscheidet, aber mit ihr in Wechselwirkung steht.\n"
+    },
+    "en": {
+      "biology": "The study of heritable changes in gene expression that occur without changes to the underlying DNA sequence — such as DNA methylation and histone modification — including cases where such marks are transmitted across one or more generations (transgenerational epigenetic inheritance), a mechanism distinct from, but interacting with, DNA-sequence-based inheritance.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000138",
+  "labels": {
+    "de": "Epigenetik",
+    "en": "Epigenetics"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000112",
+      "OE-CONCEPT-000140"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

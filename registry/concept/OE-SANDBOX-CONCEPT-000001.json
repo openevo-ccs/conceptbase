@@ -1,6 +1,9 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Ein Mitglied der taxonomischen Gruppe (Tribus Hominini), zu der der moderne Mensch, ausgestorbene Menschenarten und ihre unmittelbaren fossilen Vorfahren seit der Aufspaltung von der zu den Schimpansen führenden Linie gehören — eine rein taxonomisch-phylogenetische Kategorie, keine Kategorie mit Handlungsfähigkeits- oder Intentionalitätszuschreibung.\n"
+    },
     "en": {
       "biology": "A member of the taxonomic group (tribe Hominini) comprising modern humans, extinct human species, and their immediate fossil ancestors since the divergence from the lineage leading to chimpanzees — a strictly taxonomic/phylogenetic category, not an agency- or intentionality-bearing one.\n"
     }
@@ -10,6 +13,7 @@
   ],
   "id": "OE-SANDBOX-CONCEPT-000001",
   "labels": {
+    "de": "Hominine",
     "en": "Hominin"
   },
   "nonExamples": [

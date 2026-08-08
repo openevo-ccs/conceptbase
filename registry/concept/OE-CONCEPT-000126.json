@@ -1,0 +1,41 @@
+{
+  "aliases": {
+    "en": [
+      "Inclusive Fitness"
+    ]
+  },
+  "citations": [
+    {
+      "text": "Hamilton, W. D. (1964). The genetical evolution of social behaviour."
+    }
+  ],
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Selektion, die Merkmale begünstigt, welche die Gesamtfitness (inclusive fitness) eines Individuums erhöhen — also seinen eigenen direkten Fortpflanzungserfolg zuzüglich der Wirkung seines Verhaltens auf den Fortpflanzungserfolg genetischer Verwandter, gewichtet nach dem Verwandtschaftsgrad (Hamiltons Regel: Ein Merkmal breitet sich aus, wenn der nach Verwandtschaftsgrad gewichtete Nutzen für Verwandte die Kosten für den Handelnden übersteigt).\n"
+    },
+    "en": {
+      "biology": "Selection favoring traits that increase an individual's inclusive fitness — its own direct reproductive success plus the effect of its actions on the reproductive success of genetic relatives, weighted by relatedness (Hamilton's rule: a trait spreads when the relatedness-weighted benefit to relatives exceeds its cost to the actor).\n"
+    }
+  },
+  "examples": [
+    "Belding's ground squirrels giving alarm calls that expose the caller to predation risk while warning nearby close relatives."
+  ],
+  "id": "OE-CONCEPT-000126",
+  "labels": {
+    "de": "Verwandtenselektion",
+    "en": "Kin Selection"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000125"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000105",
+      "OE-CONCEPT-000127"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

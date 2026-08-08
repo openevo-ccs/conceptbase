@@ -1,0 +1,34 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Verringerte genetische Vielfalt, die entsteht, wenn eine neue Population von einer kleinen Anzahl von Individuen aus einer größeren Ausgangspopulation gegründet wird, sodass die Allelfrequenzen der Gründer — nicht notwendigerweise repräsentativ für die Ausgangspopulation — die genetische Zusammensetzung der neuen Population fortan bestimmen.\n"
+    },
+    "en": {
+      "biology": "Reduced genetic diversity that results when a new population is established by a small number of individuals from a larger source population, so the founders' allele frequencies — not necessarily representative of the source population — determine the new population's genetic makeup going forward.\n"
+    }
+  },
+  "examples": [
+    "Elevated frequencies of certain recessive conditions in some present-day Amish communities, traced to a small founding group."
+  ],
+  "id": "OE-CONCEPT-000124",
+  "labels": {
+    "de": "Gründereffekt",
+    "en": "Founder Effect"
+  },
+  "nonExamples": [
+    "A population's genetic diversity shrinking in place due to a die-off within an existing population, with no new population founded elsewhere (see Bottleneck Effect)."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000111"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000108",
+      "OE-CONCEPT-000123"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

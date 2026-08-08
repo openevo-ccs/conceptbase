@@ -1,19 +1,24 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Die evolutionäre Geschichte und Verwandtschaft einer Gruppe von Organismen, meist als verzweigter Stammbaum dargestellt.\n"
+    },
     "en": {
       "biology": "The evolutionary history and relatedness of a group of organisms, typically represented as a branching tree.\n"
     }
   },
   "id": "OE-CONCEPT-000113",
   "labels": {
+    "de": "Phylogenie",
     "en": "Phylogeny"
   },
   "relations": {
     "skos:related": [
       "OE-CONCEPT-000114",
       "OE-CONCEPT-000101",
-      "OE-SANDBOX-CONCEPT-000001"
+      "OE-SANDBOX-CONCEPT-000001",
+      "OE-CONCEPT-000133"
     ]
   },
   "status": "stable",

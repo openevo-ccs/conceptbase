@@ -1,0 +1,1327 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: BIO-CORE
+# ============================================================================
+# Path: /vocabularies/BIO-CORE-v1.2.0.yaml
+#
+# Discipline-specific vocabulary for biological evolution, structured
+# around the traditional gene/organism/population framing (see Spec v0.2,
+# "Traditional Biology Vocabulary"). Each entry under `concepts:` validates
+# against /schemas/concept.schema.yaml.
+#
+# This vocabulary is intentionally single-discipline in most entries —
+# contrast with OE-INTERDISCIPLINARY-v1.0.0, which reframes several of
+# these same ideas (e.g. Inheritance, Selection) as one instance among
+# several inheritance/selection systems. Cross-vocabulary alignment
+# between the two (e.g. BIO-CORE:Natural_Selection <-> 
+# OE-INTERDISCIPLINARY:Selection) is deliberately deferred to
+# /alignments/ (Phase 2), not asserted here.
+# ============================================================================
+
+meta:
+  id: BIO-CORE
+  version: 1.2.0
+  status: stable
+  scope: >
+    Core biological evolution vocabulary, discipline-specific framing
+    (organism / population / gene-centered).
+  discipline: biology
+  license: CC-BY-NC-SA-4.0
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-CONCEPT-v1.0.0
+  phase: 1
+
+concepts:
+
+  - id: OE-CONCEPT-000101
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Evolution
+      de: Evolution
+    definitions:
+      en:
+        biology: >
+          Change in the heritable characteristics of biological
+          populations across successive generations.
+      de:
+        biology: >
+          Veränderung der vererbbaren Merkmale biologischer Populationen
+          im Verlauf aufeinanderfolgender Generationen.
+    relations:
+      skos:narrower: [OE-CONCEPT-000102, OE-CONCEPT-000110, OE-CONCEPT-000111, OE-CONCEPT-000116, OE-CONCEPT-000122]
+      skos:related: [OE-CONCEPT-000112, OE-CONCEPT-000113]
+
+  - id: OE-CONCEPT-000102
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Natural Selection
+      de: Natürliche Selektion
+    definitions:
+      en:
+        biology: >
+          Differential reproductive success among heritable variants
+          within a population, resulting from their interaction with
+          the environment.
+      de:
+        biology: >
+          Unterschiedlicher Fortpflanzungserfolg vererbbarer Varianten
+          innerhalb einer Population, der aus deren Wechselwirkung mit
+          der Umwelt resultiert.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:narrower: [OE-CONCEPT-000117, OE-CONCEPT-000118, OE-CONCEPT-000119, OE-CONCEPT-000120, OE-CONCEPT-000121]
+      skos:related: [OE-CONCEPT-000104, OE-CONCEPT-000105, OE-CONCEPT-000115, OE-CONCEPT-000103, OE-CONCEPT-000125, OE-CONCEPT-000132]
+    examples:
+      - Peppered moth coloration shifting with industrial soot levels.
+      - Antibiotic resistance increasing in bacterial populations under drug exposure.
+    nonExamples:
+      - An individual organism changing behavior within its own lifetime (not heritable).
+      - A population's gene frequencies changing due to a random sampling event (see Drift).
+    citations:
+      - text: "Darwin, C. (1859). On the Origin of Species."
+
+  - id: OE-CONCEPT-000103
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Mutation
+      de: Mutation
+    definitions:
+      en:
+        biology: >
+          A heritable change in a DNA sequence, serving as an ultimate
+          source of genetic variation within a population.
+      de:
+        biology: >
+          Eine vererbbare Veränderung der DNA-Sequenz, die als
+          ursprüngliche Quelle genetischer Variation innerhalb einer
+          Population dient.
+    relations:
+      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000107, OE-CONCEPT-000102, OE-SANDBOX-CONCEPT-000002, OE-CONCEPT-000135, OE-CONCEPT-000139]
+
+  - id: OE-CONCEPT-000104
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Adaptation
+      de: Anpassung
+    definitions:
+      en:
+        biology: >
+          A heritable trait that increases an organism's fitness within
+          a given environment, shaped by natural selection over
+          generations.
+      de:
+        biology: >
+          Ein vererbbares Merkmal, das die Fitness eines Organismus in
+          einer bestimmten Umwelt erhöht und durch natürliche Selektion
+          über Generationen hinweg geformt wird.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105, OE-CONCEPT-000128, OE-CONCEPT-000129, OE-CONCEPT-000130, OE-CONCEPT-000131, OE-CONCEPT-000132, OE-CONCEPT-000140]
+
+  - id: OE-CONCEPT-000105
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Fitness
+      de: Fitness
+    definitions:
+      en:
+        biology: >
+          The relative reproductive success of a genotype or phenotype,
+          typically measured as expected number of offspring
+          contributing to the next generation.
+      de:
+        biology: >
+          Der relative Fortpflanzungserfolg eines Genotyps oder
+          Phänotyps, üblicherweise gemessen als die erwartete Anzahl an
+          Nachkommen, die zur nächsten Generation beitragen.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000104, OE-CONCEPT-000115, OE-CONCEPT-000126, OE-CONCEPT-000128, OE-CONCEPT-000131]
+    examples:
+      - A beak shape enabling more efficient seed cracking during drought.
+    nonExamples:
+      - Physical strength or health in a general, non-reproductive sense.
+
+  - id: OE-CONCEPT-000106
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Gene
+      de: Gen
+    definitions:
+      en:
+        biology: >
+          A heritable unit of DNA that functions as a basic unit of
+          inheritance, typically encoding information for a specific
+          product or trait.
+      de:
+        biology: >
+          Eine vererbbare Einheit der DNA, die als grundlegende
+          Vererbungseinheit fungiert und typischerweise die Information
+          für ein bestimmtes Produkt oder Merkmal codiert.
+    relations:
+      skos:narrower: [OE-CONCEPT-000107]
+      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000112, OE-CONCEPT-000135]
+
+  - id: OE-CONCEPT-000107
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Allele
+      de: Allel
+    definitions:
+      en:
+        biology: >
+          One of two or more alternative forms of a gene occupying the
+          same locus on a chromosome.
+      de:
+        biology: >
+          Eine von zwei oder mehr alternativen Formen eines Gens, die
+          denselben Genort (Locus) auf einem Chromosom einnehmen.
+    relations:
+      skos:broader: [OE-CONCEPT-000106]
+      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000111, OE-CONCEPT-000139]
+
+  - id: OE-CONCEPT-000108
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Population
+      de: Population
+    definitions:
+      en:
+        biology: >
+          A group of interbreeding organisms of the same species
+          occupying a defined geographic area at a given time.
+      de:
+        biology: >
+          Eine Gruppe sich untereinander fortpflanzender Organismen
+          derselben Art, die zu einem gegebenen Zeitpunkt ein
+          abgegrenztes geografisches Gebiet besiedeln.
+    relations:
+      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000111, OE-CONCEPT-000122, OE-CONCEPT-000123, OE-CONCEPT-000124]
+
+  - id: OE-CONCEPT-000109
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Species
+      de: Art
+    definitions:
+      en:
+        biology: >
+          A group of organisms capable of interbreeding and producing
+          fertile offspring, generally reproductively isolated from
+          other such groups.
+      de:
+        biology: >
+          Eine Gruppe von Organismen, die sich untereinander fortpflanzen
+          und fruchtbare Nachkommen hervorbringen können und die in der
+          Regel von anderen solchen Gruppen reproduktiv isoliert ist.
+    relations:
+      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114, OE-CONCEPT-000108, OE-CONCEPT-000116, OE-SANDBOX-CONCEPT-000001, OE-CONCEPT-000137]
+
+  - id: OE-CONCEPT-000110
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Speciation
+      de: Artbildung
+    definitions:
+      en:
+        biology: >
+          The evolutionary process by which populations diverge to
+          become distinct, reproductively isolated species.
+      de:
+        biology: >
+          Der evolutionäre Prozess, durch den sich Populationen
+          auseinanderentwickeln und zu eigenständigen, reproduktiv
+          isolierten Arten werden.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000111, OE-CONCEPT-000143]
+
+  - id: OE-CONCEPT-000111
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Drift
+      de: Gendrift
+    definitions:
+      en:
+        biology: >
+          Random fluctuation of allele frequencies within a population
+          from one generation to the next, independent of selective
+          advantage.
+      de:
+        biology: >
+          Zufällige Schwankung der Allelfrequenzen innerhalb einer
+          Population von einer Generation zur nächsten, unabhängig von
+          einem Selektionsvorteil.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:narrower: [OE-CONCEPT-000123, OE-CONCEPT-000124]
+      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000107, OE-CONCEPT-000110, OE-CONCEPT-000122]
+
+  - id: OE-CONCEPT-000112
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Inheritance
+      de: Vererbung
+    definitions:
+      en:
+        biology: >
+          The transmission of genetic information from parent to
+          offspring.
+      de:
+        biology: >
+          Die Weitergabe genetischer Information von Eltern an
+          Nachkommen.
+    relations:
+      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000101, OE-CONCEPT-000138]
+
+  - id: OE-CONCEPT-000113
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Phylogeny
+      de: Phylogenie
+    definitions:
+      en:
+        biology: >
+          The evolutionary history and relatedness of a group of
+          organisms, typically represented as a branching tree.
+      de:
+        biology: >
+          Die evolutionäre Geschichte und Verwandtschaft einer Gruppe
+          von Organismen, meist als verzweigter Stammbaum dargestellt.
+    relations:
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000101, OE-SANDBOX-CONCEPT-000001, OE-CONCEPT-000133]
+
+  - id: OE-CONCEPT-000114
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Common Ancestor
+      de: Gemeinsamer Vorfahre
+    definitions:
+      en:
+        biology: >
+          An organism or population from which two or more descendant
+          lineages have diverged.
+      de:
+        biology: >
+          Ein Organismus oder eine Population, von dem bzw. der zwei
+          oder mehr Abstammungslinien abgezweigt sind.
+    relations:
+      skos:related: [OE-CONCEPT-000113, OE-CONCEPT-000109, OE-SANDBOX-CONCEPT-000001, OE-CONCEPT-000133, OE-CONCEPT-000136, OE-CONCEPT-000142]
+
+  - id: OE-CONCEPT-000115
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Selection Pressure
+      de: Selektionsdruck
+    definitions:
+      en:
+        biology: >
+          An environmental or biological factor that reduces or
+          increases reproductive success of particular variants within
+          a population, driving the direction of selection.
+      de:
+        biology: >
+          Ein Umwelt- oder biologischer Faktor, der den
+          Fortpflanzungserfolg bestimmter Varianten innerhalb einer
+          Population verringert oder erhöht und dadurch die Richtung
+          der Selektion bestimmt.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105, OE-CONCEPT-000117, OE-CONCEPT-000118, OE-CONCEPT-000119, OE-CONCEPT-000120, OE-CONCEPT-000121, OE-CONCEPT-000130, OE-CONCEPT-000134]
+
+  - id: OE-CONCEPT-000116
+    type: oe:Concept
+    status: stable
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Extinction
+      de: Aussterben
+    definitions:
+      en:
+        biology: >
+          The complete disappearance of a species or other taxonomic
+          group, ending its lineage.
+      de:
+        biology: >
+          Das vollständige Verschwinden einer Art oder einer anderen
+          taxonomischen Gruppe, wodurch deren Abstammungslinie endet.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000141]
+
+  # ==========================================================================
+  # SELECTION SUBTYPES — modes of natural selection (OE-CONCEPT-000102),
+  # each narrower than it. Added to give BIO-CORE the specialist-mechanism
+  # vocabulary EvoMentor's own curriculum-mapping data already needs (see
+  # docs/design-notes for the gap analysis this block closes).
+  # ==========================================================================
+
+  - id: OE-CONCEPT-000117
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Stabilizing Selection
+      de: Stabilisierende Selektion
+    definitions:
+      en:
+        biology: >
+          Natural selection that favors individuals with intermediate
+          phenotypes and disfavors both extremes, reducing a population's
+          phenotypic variance around an unchanged mean.
+      de:
+        biology: >
+          Natürliche Selektion, die Individuen mit mittleren
+          Merkmalsausprägungen begünstigt und beide Extreme benachteiligt,
+          wodurch die phänotypische Varianz einer Population um einen
+          unveränderten Mittelwert verringert wird.
+    relations:
+      skos:broader: [OE-CONCEPT-000102]
+      skos:related: [OE-CONCEPT-000115]
+    examples:
+      - Human birth weight selected against both very low and very high
+        extremes, favoring weights near the population average.
+
+  - id: OE-CONCEPT-000118
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Directional Selection
+      de: Gerichtete Selektion
+    definitions:
+      en:
+        biology: >
+          Natural selection that favors one extreme of a phenotypic range
+          over others, shifting a population's trait distribution and
+          mean in a consistent direction across generations.
+      de:
+        biology: >
+          Natürliche Selektion, die ein Extrem einer Merkmalsausprägung
+          gegenüber anderen begünstigt und dadurch die Merkmalsverteilung
+          und den Mittelwert einer Population über Generationen hinweg in
+          eine bestimmte Richtung verschiebt.
+    relations:
+      skos:broader: [OE-CONCEPT-000102]
+      skos:related: [OE-CONCEPT-000115]
+    examples:
+      - Finch beak depth increasing over successive drought years as
+        large, hard seeds become the dominant food source.
+
+  - id: OE-CONCEPT-000119
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Balancing Selection
+      de: Balancierende Selektion
+    definitions:
+      en:
+        biology: >
+          Natural selection that actively maintains two or more alleles
+          or phenotypes within a population rather than driving any one
+          to fixation, as when heterozygotes have higher fitness than
+          either homozygote or when rare variants are favored.
+      de:
+        biology: >
+          Natürliche Selektion, die zwei oder mehr Allele bzw. Phänotypen
+          aktiv in einer Population erhält, anstatt eines davon zur
+          Fixierung zu treiben, etwa wenn Heterozygote eine höhere
+          Fitness aufweisen als beide Homozygoten oder wenn seltene
+          Varianten begünstigt werden.
+    relations:
+      skos:broader: [OE-CONCEPT-000102]
+      skos:related: [OE-CONCEPT-000115]
+    examples:
+      - The sickle-cell allele persisting at intermediate frequency in
+        malaria-endemic regions because heterozygous carriers are more
+        malaria-resistant than either homozygote.
+
+  - id: OE-CONCEPT-000120
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Sexual Selection
+      de: Sexuelle Selektion
+    definitions:
+      en:
+        biology: >
+          Differential reproductive success arising specifically from
+          competition for mates or from mate choice, capable of favoring
+          traits that increase mating opportunities even when those same
+          traits reduce an individual's survival.
+      de:
+        biology: >
+          Unterschiedlicher Fortpflanzungserfolg, der speziell aus der
+          Konkurrenz um Paarungspartner oder aus der Partnerwahl
+          entsteht und Merkmale begünstigen kann, die die
+          Paarungschancen erhöhen, selbst wenn dieselben Merkmale das
+          Überleben eines Individuums verringern.
+    relations:
+      skos:broader: [OE-CONCEPT-000102]
+      skos:related: [OE-CONCEPT-000115]
+    examples:
+      - An elaborate, metabolically costly peacock tail favored by
+        peahen mate choice despite increasing predation risk.
+    nonExamples:
+      - Differential survival driven by predation or resource scarcity
+        with no role for mate competition or mate choice (ordinary
+        Natural Selection, not specifically sexual).
+
+  - id: OE-CONCEPT-000121
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Frequency-Dependent Selection
+      de: Frequenzabhängige Selektion
+    definitions:
+      en:
+        biology: >
+          Natural selection in which a phenotype's fitness depends on how
+          common it currently is relative to other phenotypes in the
+          population — negative frequency-dependent selection favors rare
+          variants, positive frequency-dependent selection favors common
+          ones.
+      de:
+        biology: >
+          Natürliche Selektion, bei der die Fitness eines Phänotyps davon
+          abhängt, wie häufig er gegenwärtig im Vergleich zu anderen
+          Phänotypen in der Population ist — negative frequenzabhängige
+          Selektion begünstigt seltene Varianten, positive
+          frequenzabhängige Selektion begünstigt häufige.
+    relations:
+      skos:broader: [OE-CONCEPT-000102]
+      skos:related: [OE-CONCEPT-000115]
+    examples:
+      - A prey color morph's advantage shrinking as it becomes more
+        common and predators form a search image specifically for it
+        (negative frequency dependence).
+
+  # ==========================================================================
+  # DRIFT-FAMILY MECHANISMS — Gene Flow is a fourth primary mechanism of
+  # evolutionary change alongside Selection/Mutation/Drift (narrower than
+  # Evolution, OE-CONCEPT-000101); Bottleneck and Founder Effect are
+  # narrower than Drift (OE-CONCEPT-000111) as especially strong,
+  # population-size-driven special cases of it.
+  # ==========================================================================
+
+  - id: OE-CONCEPT-000122
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Gene Flow
+      de: Genfluss
+    aliases:
+      en: [Migration]
+    definitions:
+      en:
+        biology: >
+          The movement of alleles between populations through the
+          migration and interbreeding of individuals, which tends to
+          reduce genetic differences between populations and can
+          counteract the local effects of both selection and drift.
+      de:
+        biology: >
+          Die Bewegung von Allelen zwischen Populationen durch Migration
+          und Verpaarung von Individuen, wodurch genetische Unterschiede
+          zwischen Populationen tendenziell verringert werden und die
+          lokalen Effekte von Selektion und Gendrift ausgeglichen werden
+          können.
+    relations:
+      skos:broader: [OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-000111, OE-CONCEPT-000108]
+
+  - id: OE-CONCEPT-000123
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Bottleneck Effect
+      de: Flaschenhalseffekt
+    definitions:
+      en:
+        biology: >
+          A sharp, temporary reduction in population size — from a
+          catastrophic event, disease, or habitat loss — that drastically
+          and randomly reduces genetic diversity in the surviving
+          population, an especially strong form of genetic drift.
+      de:
+        biology: >
+          Eine starke, vorübergehende Verringerung der Populationsgröße —
+          etwa durch eine Katastrophe, eine Krankheit oder
+          Lebensraumverlust —, die die genetische Vielfalt der überlebenden
+          Population drastisch und zufällig verringert; eine besonders
+          ausgeprägte Form der Gendrift.
+    relations:
+      skos:broader: [OE-CONCEPT-000111]
+      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000124]
+    examples:
+      - Northern elephant seal populations retaining unusually low
+        genetic diversity today after being reduced to roughly twenty
+        individuals by 19th-century hunting.
+
+  - id: OE-CONCEPT-000124
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Founder Effect
+      de: Gründereffekt
+    definitions:
+      en:
+        biology: >
+          Reduced genetic diversity that results when a new population is
+          established by a small number of individuals from a larger
+          source population, so the founders' allele frequencies — not
+          necessarily representative of the source population — determine
+          the new population's genetic makeup going forward.
+      de:
+        biology: >
+          Verringerte genetische Vielfalt, die entsteht, wenn eine neue
+          Population von einer kleinen Anzahl von Individuen aus einer
+          größeren Ausgangspopulation gegründet wird, sodass die
+          Allelfrequenzen der Gründer — nicht notwendigerweise
+          repräsentativ für die Ausgangspopulation — die genetische
+          Zusammensetzung der neuen Population fortan bestimmen.
+    relations:
+      skos:broader: [OE-CONCEPT-000111]
+      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000123]
+    examples:
+      - Elevated frequencies of certain recessive conditions in some
+        present-day Amish communities, traced to a small founding group.
+    nonExamples:
+      - A population's genetic diversity shrinking in place due to a
+        die-off within an existing population, with no new population
+        founded elsewhere (see Bottleneck Effect).
+
+  # ==========================================================================
+  # MULTILEVEL SELECTION — a framework concept for selection acting at more
+  # than one level of biological organization simultaneously, related to
+  # (not narrower/broader of) Natural Selection since it reframes rather
+  # than subdivides it; Kin Selection and Group Selection are its two
+  # narrower, historically contrasted accounts of apparent altruism.
+  # ==========================================================================
+
+  - id: OE-CONCEPT-000125
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Multilevel Selection
+      de: Mehrebenenselektion
+    definitions:
+      en:
+        biology: >
+          The framework describing natural selection as capable of acting
+          simultaneously at multiple levels of biological organization —
+          gene, individual, and group among them — with a trait's overall
+          evolutionary fate depending on the net balance of selection
+          pressures acting across those levels at once.
+      de:
+        biology: >
+          Das Konzept, wonach natürliche Selektion gleichzeitig auf
+          mehreren Ebenen der biologischen Organisation wirken kann —
+          unter anderem auf Gen-, Individuen- und Gruppenebene —, wobei
+          das evolutionäre Schicksal eines Merkmals von der Gesamtbilanz
+          der auf diesen Ebenen gleichzeitig wirkenden Selektionsdrücke
+          abhängt.
+    relations:
+      skos:narrower: [OE-CONCEPT-000126, OE-CONCEPT-000127]
+      skos:related: [OE-CONCEPT-000102]
+    citations:
+      - text: "Okasha, S. (2006). Evolution and the Levels of Selection."
+
+  - id: OE-CONCEPT-000126
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Kin Selection
+      de: Verwandtenselektion
+    aliases:
+      en: [Inclusive Fitness]
+    definitions:
+      en:
+        biology: >
+          Selection favoring traits that increase an individual's
+          inclusive fitness — its own direct reproductive success plus
+          the effect of its actions on the reproductive success of
+          genetic relatives, weighted by relatedness (Hamilton's rule:
+          a trait spreads when the relatedness-weighted benefit to
+          relatives exceeds its cost to the actor).
+      de:
+        biology: >
+          Selektion, die Merkmale begünstigt, welche die Gesamtfitness
+          (inclusive fitness) eines Individuums erhöhen — also seinen
+          eigenen direkten Fortpflanzungserfolg zuzüglich der Wirkung
+          seines Verhaltens auf den Fortpflanzungserfolg genetischer
+          Verwandter, gewichtet nach dem Verwandtschaftsgrad (Hamiltons
+          Regel: Ein Merkmal breitet sich aus, wenn der nach
+          Verwandtschaftsgrad gewichtete Nutzen für Verwandte die Kosten
+          für den Handelnden übersteigt).
+    relations:
+      skos:broader: [OE-CONCEPT-000125]
+      skos:related: [OE-CONCEPT-000105, OE-CONCEPT-000127]
+    examples:
+      - Belding's ground squirrels giving alarm calls that expose the
+        caller to predation risk while warning nearby close relatives.
+    citations:
+      - text: "Hamilton, W. D. (1964). The genetical evolution of social behaviour."
+
+  - id: OE-CONCEPT-000127
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Group Selection
+      de: Gruppenselektion
+    definitions:
+      en:
+        biology: >
+          Selection acting on differences between whole groups, in which
+          a trait that reduces an individual's relative fitness within
+          its own group can nonetheless increase in frequency overall if
+          it raises that group's collective survival or reproductive
+          success relative to other groups.
+      de:
+        biology: >
+          Selektion, die auf Unterschieden zwischen ganzen Gruppen wirkt,
+          wobei ein Merkmal, das die relative Fitness eines Individuums
+          innerhalb seiner eigenen Gruppe verringert, dennoch in seiner
+          Häufigkeit zunehmen kann, wenn es das Überleben oder den
+          Fortpflanzungserfolg der Gruppe insgesamt im Vergleich zu
+          anderen Gruppen erhöht.
+    relations:
+      skos:broader: [OE-CONCEPT-000125]
+      skos:related: [OE-CONCEPT-000126]
+    nonExamples:
+      - Cooperation among close relatives explained entirely by shared
+        genes and relatedness, with no between-group competition
+        involved (see Kin Selection, the historically contrasted
+        alternative account of the same cooperative behavior).
+
+  # ==========================================================================
+  # STANDALONE ADDITIONS — related sensibly into the existing 16-concept
+  # graph rather than clustered under one new parent.
+  # ==========================================================================
+
+  - id: OE-CONCEPT-000128
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Trade-offs
+      de: Kompromisse
+    definitions:
+      en:
+        biology: >
+          A constraint in which a trait that increases fitness in one
+          respect (growth, reproduction, defense, survival) necessarily
+          decreases it in another, because the resources, time, or
+          structural capacity allocated to one function are unavailable
+          for others.
+      de:
+        biology: >
+          Eine Einschränkung, bei der ein Merkmal, das die Fitness in
+          einer Hinsicht erhöht (Wachstum, Fortpflanzung, Abwehr,
+          Überleben), sie notwendigerweise in einer anderen Hinsicht
+          verringert, weil die für eine Funktion aufgewendeten
+          Ressourcen, Zeit oder strukturelle Kapazität für andere
+          Funktionen nicht mehr zur Verfügung stehen.
+    relations:
+      skos:related: [OE-CONCEPT-000104, OE-CONCEPT-000105, OE-CONCEPT-000131]
+    examples:
+      - Energy allocated to producing many small, minimally provisioned
+        offspring versus fewer, larger, better-provisioned offspring.
+
+  - id: OE-CONCEPT-000129
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Exaptation
+      de: Exaptation
+    definitions:
+      en:
+        biology: >
+          A trait that evolved under selection for one function, or arose
+          as a non-adaptive by-product, and was later co-opted to serve a
+          different function — distinct from an ordinary adaptation, whose
+          current function is the same one it evolved under selection for.
+      de:
+        biology: >
+          Ein Merkmal, das ursprünglich unter Selektion für eine
+          bestimmte Funktion entstand oder als nicht-adaptives
+          Nebenprodukt auftrat und später für eine andere Funktion
+          genutzt wurde — im Unterschied zu einer gewöhnlichen Anpassung,
+          deren heutige Funktion dieselbe ist, für die sie ursprünglich
+          durch Selektion geformt wurde.
+    relations:
+      skos:related: [OE-CONCEPT-000104]
+    examples:
+      - Feathers, which likely functioned first in thermoregulation and
+        display, later co-opted for flight.
+    nonExamples:
+      - A trait whose current use is the same function it originally
+        evolved under selection for (an ordinary Adaptation, not an
+        exaptation).
+    citations:
+      - text: "Gould, S. J., & Vrba, E. S. (1982). Exaptation—a missing term in the science of form."
+
+  - id: OE-CONCEPT-000130
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Evolutionary Mismatch
+      de: Evolutionäre Fehlanpassung
+    definitions:
+      en:
+        biology: >
+          A condition in which a trait that was adaptive in the
+          environment it evolved in becomes neutral, or actively reduces
+          fitness, because a population's current environment differs
+          substantially from that ancestral selective environment.
+      de:
+        biology: >
+          Ein Zustand, bei dem ein Merkmal, das in der Umwelt, in der es
+          entstand, vorteilhaft war, neutral wird oder die Fitness aktiv
+          verringert, weil sich die gegenwärtige Umwelt einer Population
+          wesentlich von jener ursprünglichen Selektionsumgebung
+          unterscheidet.
+    relations:
+      skos:related: [OE-CONCEPT-000104, OE-CONCEPT-000115]
+    examples:
+      - A strong preference for calorie-dense food, adaptive under
+        historical scarcity, contributing to health problems in
+        environments of consistent food abundance.
+
+  - id: OE-CONCEPT-000131
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Life History Theory
+      de: Life-History-Theorie
+    definitions:
+      en:
+        biology: >
+          The study of how natural selection shapes the timing and
+          allocation of an organism's key life events — age at maturity,
+          reproductive investment, offspring number and size, and
+          lifespan — as a set of interrelated trade-offs rather than as
+          independently optimized traits.
+      de:
+        biology: >
+          Die Erforschung, wie natürliche Selektion den zeitlichen Ablauf
+          und die Verteilung der zentralen Lebensereignisse eines
+          Organismus formt — Alter bei Geschlechtsreife, Investition in
+          die Fortpflanzung, Anzahl und Größe der Nachkommen sowie
+          Lebensspanne — als ein System zusammenhängender Kompromisse
+          und nicht als unabhängig voneinander optimierte Einzelmerkmale.
+    relations:
+      skos:related: [OE-CONCEPT-000128, OE-CONCEPT-000104, OE-CONCEPT-000105]
+
+  - id: OE-CONCEPT-000132
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Domestication
+      de: Domestikation
+    definitions:
+      en:
+        biology: >
+          An evolutionary process in which a population becomes
+          genetically and behaviorally adapted to a human-managed
+          environment over generations, typically through a form of
+          selection — deliberate or incidental — imposed by humans rather
+          than by the wild environment alone.
+      de:
+        biology: >
+          Ein evolutionärer Prozess, bei dem sich eine Population über
+          Generationen hinweg genetisch und im Verhalten an eine vom
+          Menschen gestaltete Umgebung anpasst, meist durch eine Form der
+          Selektion — gezielt oder unbeabsichtigt —, die vom Menschen und
+          nicht allein von der wilden Umwelt ausgeübt wird.
+    relations:
+      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000104]
+    examples:
+      - Dogs' divergence from wolves under thousands of years of
+        human-associated selection.
+
+  - id: OE-CONCEPT-000133
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Homology
+      de: Homologie
+    definitions:
+      en:
+        biology: >
+          Similarity between structures in different species that results
+          from shared descent from a common ancestor, even when the
+          structures now differ substantially in form or function.
+      de:
+        biology: >
+          Ähnlichkeit zwischen Strukturen verschiedener Arten, die auf
+          eine gemeinsame Abstammung von einem gemeinsamen Vorfahren
+          zurückgeht, selbst wenn sich die Strukturen inzwischen in Form
+          oder Funktion erheblich unterscheiden.
+    relations:
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000113, OE-CONCEPT-000134, OE-CONCEPT-000135, OE-CONCEPT-000143]
+    examples:
+      - The shared forelimb bone arrangement of a bat wing, a whale
+        flipper, and a human arm.
+    nonExamples:
+      - Similarity that arose independently in unrelated lineages facing
+        similar selective pressures, without shared ancestry of that
+        structure (see Analogy / Convergent Evolution).
+
+  - id: OE-CONCEPT-000134
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Analogy
+      de: Analogie
+    aliases:
+      en: [Convergent Evolution]
+    definitions:
+      en:
+        biology: >
+          Similarity between structures or traits in different, often
+          distantly related, species that arose independently through
+          convergent evolution — similar selection pressures producing
+          similar solutions — rather than from shared ancestry of that
+          structure.
+      de:
+        biology: >
+          Ähnlichkeit zwischen Strukturen oder Merkmalen verschiedener,
+          oft nur entfernt verwandter Arten, die unabhängig voneinander
+          durch konvergente Evolution entstanden ist — ähnliche
+          Selektionsdrücke, die zu ähnlichen Lösungen führen —, statt auf
+          einer gemeinsamen Abstammung dieser Struktur zu beruhen.
+    relations:
+      skos:related: [OE-CONCEPT-000133, OE-CONCEPT-000115]
+    examples:
+      - The wing of a bird and the wing of an insect, both adapted for
+        flight but evolved independently from non-winged ancestors.
+    nonExamples:
+      - Similarity due to inheritance from a shared common ancestor (see
+        Homology).
+
+  - id: OE-CONCEPT-000135
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Evo-Devo
+      de: Evo-Devo
+    aliases:
+      en: [Evolutionary Developmental Biology]
+    definitions:
+      en:
+        biology: >
+          The study of how evolutionary changes in the genes and
+          regulatory networks controlling embryonic development produce
+          changes in adult anatomy across generations, linking
+          molecular-genetic mechanisms directly to macroevolutionary
+          patterns of morphological change.
+      de:
+        biology: >
+          Die Erforschung, wie evolutionäre Veränderungen in den Genen
+          und regulatorischen Netzwerken, die die Embryonalentwicklung
+          steuern, Veränderungen der adulten Anatomie über Generationen
+          hinweg hervorbringen und dadurch molekulargenetische
+          Mechanismen unmittelbar mit makroevolutionären Mustern des
+          Gestaltwandels verknüpfen.
+    relations:
+      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000106, OE-CONCEPT-000133]
+    examples:
+      - Differences in Hox gene regulation associated with differences in
+        limb number and placement across arthropod lineages.
+
+  - id: OE-CONCEPT-000136
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Endosymbiosis
+      de: Endosymbiose
+    definitions:
+      en:
+        biology: >
+          The evolutionary process by which one free-living organism is
+          taken up and permanently retained inside another, eventually
+          becoming an integrated, heritable organelle — the accepted
+          origin of mitochondria and chloroplasts from formerly
+          free-living bacteria.
+      de:
+        biology: >
+          Der evolutionäre Prozess, bei dem ein frei lebender Organismus
+          von einem anderen aufgenommen und dauerhaft in ihm erhalten
+          bleibt, bis er schließlich zu einem integrierten, vererbbaren
+          Organell wird — der anerkannte Ursprung von Mitochondrien und
+          Chloroplasten aus ehemals frei lebenden Bakterien.
+    relations:
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000137]
+    examples:
+      - Mitochondria retaining their own DNA and bacterial-type ribosomes
+        from their free-living bacterial ancestor.
+
+  - id: OE-CONCEPT-000137
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Origin of Multicellularity
+      de: Ursprung der Vielzelligkeit
+    definitions:
+      en:
+        biology: >
+          The evolutionary transition by which single-celled organisms
+          gave rise to lineages of cells that remain physically joined
+          after division and differentiate into specialized,
+          interdependent cell types — a transition that occurred
+          independently multiple times across the tree of life.
+      de:
+        biology: >
+          Der evolutionäre Übergang, bei dem einzellige Organismen
+          Abstammungslinien von Zellen hervorbrachten, die nach der
+          Teilung physisch verbunden bleiben und sich zu spezialisierten,
+          voneinander abhängigen Zelltypen differenzieren — ein Übergang,
+          der im Verlauf der Stammesgeschichte mehrfach unabhängig
+          voneinander stattfand.
+    relations:
+      skos:related: [OE-CONCEPT-000136, OE-CONCEPT-000109]
+
+  - id: OE-CONCEPT-000138
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Epigenetics
+      de: Epigenetik
+    definitions:
+      en:
+        biology: >
+          The study of heritable changes in gene expression that occur
+          without changes to the underlying DNA sequence — such as DNA
+          methylation and histone modification — including cases where
+          such marks are transmitted across one or more generations
+          (transgenerational epigenetic inheritance), a mechanism
+          distinct from, but interacting with, DNA-sequence-based
+          inheritance.
+      de:
+        biology: >
+          Die Erforschung vererbbarer Veränderungen der Genexpression,
+          die ohne Veränderung der zugrunde liegenden DNA-Sequenz
+          auftreten — etwa durch DNA-Methylierung und
+          Histonmodifikation —, einschließlich Fällen, in denen solche
+          Markierungen über eine oder mehrere Generationen weitergegeben
+          werden (transgenerationale epigenetische Vererbung); ein
+          Mechanismus, der sich von der DNA-sequenzbasierten Vererbung
+          unterscheidet, aber mit ihr in Wechselwirkung steht.
+    relations:
+      skos:related: [OE-CONCEPT-000112, OE-CONCEPT-000140]
+
+  - id: OE-CONCEPT-000139
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Recombination
+      de: Rekombination
+    definitions:
+      en:
+        biology: >
+          The reshuffling of existing genetic variation during meiosis,
+          in which crossing over between homologous chromosomes produces
+          new combinations of alleles in offspring without creating any
+          new allele itself.
+      de:
+        biology: >
+          Die Neukombination bereits vorhandener genetischer Variation
+          während der Meiose, bei der Crossing-over zwischen homologen
+          Chromosomen neue Allelkombinationen bei den Nachkommen erzeugt,
+          ohne dass dabei selbst ein neues Allel entsteht.
+    relations:
+      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000107]
+    nonExamples:
+      - The origin of a genuinely new allele not previously present in
+        the population (see Mutation).
+
+  - id: OE-CONCEPT-000140
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Phenotypic Plasticity
+      de: Modifikation
+    definitions:
+      en:
+        biology: >
+          The capacity of a single genotype to produce different
+          phenotypes depending on the environmental conditions an
+          organism experiences during development or its lifetime,
+          without any change in its underlying genetic sequence.
+      de:
+        biology: >
+          Die Fähigkeit eines einzelnen Genotyps, je nach den
+          Umweltbedingungen, denen ein Organismus während seiner
+          Entwicklung oder im Laufe seines Lebens ausgesetzt ist,
+          unterschiedliche Phänotypen hervorzubringen, ohne dass sich
+          dabei die zugrunde liegende genetische Sequenz verändert.
+    relations:
+      skos:related: [OE-CONCEPT-000104, OE-CONCEPT-000138]
+    nonExamples:
+      - A phenotypic difference caused by a heritable genetic change
+        rather than by environmental conditions acting on one genotype
+        (see Mutation, Allele).
+
+  # ==========================================================================
+  # DEEP TIME / PALEONTOLOGY CLUSTER — previously entirely absent from
+  # BIO-CORE.
+  # ==========================================================================
+
+  - id: OE-CONCEPT-000141
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Geological Time Scale
+      de: Geologische Zeitskala
+    aliases:
+      en: [Deep Time]
+    definitions:
+      en:
+        biology: >
+          The hierarchical system of eons, eras, periods, and epochs used
+          to organize Earth's roughly 4.6-billion-year history, providing
+          the timescale over which evolutionary change, mass extinctions,
+          and the diversification of life are dated and compared.
+      de:
+        biology: >
+          Das hierarchische System aus Ären, Erdzeitaltern, Perioden und
+          Epochen, mit dem die rund 4,6 Milliarden Jahre umfassende
+          Erdgeschichte gegliedert wird und das den zeitlichen Rahmen
+          liefert, in dem evolutionärer Wandel, Massenaussterben und die
+          Diversifizierung des Lebens datiert und miteinander verglichen
+          werden.
+    relations:
+      skos:related: [OE-CONCEPT-000116, OE-CONCEPT-000142]
+
+  - id: OE-CONCEPT-000142
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Fossil Record
+      de: Fossilbericht
+    definitions:
+      en:
+        biology: >
+          The cumulative body of preserved physical evidence of past
+          life — fossilized remains, traces, and impressions — used to
+          reconstruct the sequence, timing, and morphology of extinct
+          organisms and to test hypotheses about evolutionary history.
+      de:
+        biology: >
+          Die Gesamtheit der erhaltenen materiellen Belege vergangenen
+          Lebens — fossile Überreste, Spuren und Abdrücke —, die genutzt
+          werden, um die Abfolge, den zeitlichen Verlauf und die
+          Morphologie ausgestorbener Organismen zu rekonstruieren und
+          Hypothesen zur Stammesgeschichte zu prüfen.
+    relations:
+      skos:related: [OE-CONCEPT-000141, OE-CONCEPT-000143, OE-CONCEPT-000114]
+
+  - id: OE-CONCEPT-000143
+    type: oe:Concept
+    status: proposed
+    version: 1.0.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Transitional Forms
+      de: Übergangsformen
+    definitions:
+      en:
+        biology: >
+          Fossil, or more rarely living, organisms that display a
+          combination of ancestral and derived traits linking two groups,
+          providing direct morphological evidence for a lineage's
+          evolutionary transition rather than representing a single
+          intermediate "missing link" in a simple linear chain.
+      de:
+        biology: >
+          Fossile, seltener auch rezente Organismen, die eine Kombination
+          ursprünglicher und abgeleiteter Merkmale aufweisen und dadurch
+          zwei Gruppen miteinander verbinden; sie liefern direkte
+          morphologische Belege für den evolutionären Übergang einer
+          Abstammungslinie, stellen jedoch kein einzelnes, exaktes
+          Zwischenglied ("missing link") entlang einer einfachen
+          linearen Kette dar.
+    relations:
+      skos:related: [OE-CONCEPT-000142, OE-CONCEPT-000133, OE-CONCEPT-000110]
+    nonExamples:
+      - A single fossil expected to be the exact literal intermediate
+        ancestor of two modern groups, arranged along one linear ladder
+        of progress — a common misconception this concept does not
+        endorse; transitional forms typically represent side branches
+        sharing derived traits with a lineage's actual ancestors, not
+        the ancestors themselves.
+
+  # ==========================================================================
+  # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
+  # never-delete guarantee, TTL'd, not yet promoted through full RFC review.
+  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-000001/000002 (bio-core-k12
+  # sandbox forks on human evolutionary genetics and paleoanthropology,
+  # strictly decentralized-causal framing, no agency vocabulary — see
+  # docs/design-notes/human-dimensions-k12-case-study.md and RFC-0010).
+  # ==========================================================================
+
+  - id: OE-SANDBOX-CONCEPT-000001
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Hominin
+      de: Hominine
+    definitions:
+      en:
+        biology: >
+          A member of the taxonomic group (tribe Hominini) comprising
+          modern humans, extinct human species, and their immediate
+          fossil ancestors since the divergence from the lineage leading
+          to chimpanzees — a strictly taxonomic/phylogenetic category,
+          not an agency- or intentionality-bearing one.
+      de:
+        biology: >
+          Ein Mitglied der taxonomischen Gruppe (Tribus Hominini), zu der
+          der moderne Mensch, ausgestorbene Menschenarten und ihre
+          unmittelbaren fossilen Vorfahren seit der Aufspaltung von der
+          zu den Schimpansen führenden Linie gehören — eine rein
+          taxonomisch-phylogenetische Kategorie, keine Kategorie mit
+          Handlungsfähigkeits- oder Intentionalitätszuschreibung.
+    relations:
+      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000113, OE-CONCEPT-000109, OE-SANDBOX-CONCEPT-000002]
+    examples:
+      - Homo sapiens, Homo neanderthalensis, and Australopithecus afarensis
+        are all hominins.
+    nonExamples:
+      - Chimpanzees and other non-human great apes are close relatives but
+        not hominins under the tribe-level definition used here.
+
+  - id: OE-SANDBOX-CONCEPT-000002
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: BIO-CORE-v1.2.0
+    labels:
+      en: Ancient DNA
+      de: Alte DNA
+    definitions:
+      en:
+        biology: >
+          Genetic material recovered and sequenced from historical or
+          fossil remains, enabling direct observation of genetic
+          variation and population history at past points in time rather
+          than inferring it solely from present-day populations.
+      de:
+        biology: >
+          Genetisches Material, das aus historischen oder fossilen
+          Überresten gewonnen und sequenziert wird und dadurch die
+          unmittelbare Beobachtung genetischer Variation und
+          Populationsgeschichte zu vergangenen Zeitpunkten ermöglicht,
+          statt sie ausschließlich aus heutigen Populationen zu
+          erschließen.
+    relations:
+      skos:related: [OE-CONCEPT-000103, OE-SANDBOX-CONCEPT-000001]
+    examples:
+      - Sequencing DNA extracted from a Neanderthal fossil to compare it
+        directly against present-day human genomes.
+    nonExamples:
+      - Inferring past population size changes purely from patterns of
+        variation in living populations, with no ancient sample sequenced
+        (a legitimate but different method — population genetics, not
+        ancient DNA analysis specifically).

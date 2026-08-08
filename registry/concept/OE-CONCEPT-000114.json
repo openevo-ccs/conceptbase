@@ -1,19 +1,26 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Ein Organismus oder eine Population, von dem bzw. der zwei oder mehr Abstammungslinien abgezweigt sind.\n"
+    },
     "en": {
       "biology": "An organism or population from which two or more descendant lineages have diverged.\n"
     }
   },
   "id": "OE-CONCEPT-000114",
   "labels": {
+    "de": "Gemeinsamer Vorfahre",
     "en": "Common Ancestor"
   },
   "relations": {
     "skos:related": [
       "OE-CONCEPT-000113",
       "OE-CONCEPT-000109",
-      "OE-SANDBOX-CONCEPT-000001"
+      "OE-SANDBOX-CONCEPT-000001",
+      "OE-CONCEPT-000133",
+      "OE-CONCEPT-000136",
+      "OE-CONCEPT-000142"
     ]
   },
   "status": "stable",

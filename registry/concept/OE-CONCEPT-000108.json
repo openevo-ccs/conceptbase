@@ -1,18 +1,25 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Eine Gruppe sich untereinander fortpflanzender Organismen derselben Art, die zu einem gegebenen Zeitpunkt ein abgegrenztes geografisches Gebiet besiedeln.\n"
+    },
     "en": {
       "biology": "A group of interbreeding organisms of the same species occupying a defined geographic area at a given time.\n"
     }
   },
   "id": "OE-CONCEPT-000108",
   "labels": {
+    "de": "Population",
     "en": "Population"
   },
   "relations": {
     "skos:related": [
       "OE-CONCEPT-000109",
-      "OE-CONCEPT-000111"
+      "OE-CONCEPT-000111",
+      "OE-CONCEPT-000122",
+      "OE-CONCEPT-000123",
+      "OE-CONCEPT-000124"
     ]
   },
   "status": "stable",

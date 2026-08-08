@@ -1,0 +1,33 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Unterschiedlicher Fortpflanzungserfolg, der speziell aus der Konkurrenz um Paarungspartner oder aus der Partnerwahl entsteht und Merkmale begünstigen kann, die die Paarungschancen erhöhen, selbst wenn dieselben Merkmale das Überleben eines Individuums verringern.\n"
+    },
+    "en": {
+      "biology": "Differential reproductive success arising specifically from competition for mates or from mate choice, capable of favoring traits that increase mating opportunities even when those same traits reduce an individual's survival.\n"
+    }
+  },
+  "examples": [
+    "An elaborate, metabolically costly peacock tail favored by peahen mate choice despite increasing predation risk."
+  ],
+  "id": "OE-CONCEPT-000120",
+  "labels": {
+    "de": "Sexuelle Selektion",
+    "en": "Sexual Selection"
+  },
+  "nonExamples": [
+    "Differential survival driven by predation or resource scarcity with no role for mate competition or mate choice (ordinary Natural Selection, not specifically sexual)."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000102"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,30 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Natürliche Selektion, die ein Extrem einer Merkmalsausprägung gegenüber anderen begünstigt und dadurch die Merkmalsverteilung und den Mittelwert einer Population über Generationen hinweg in eine bestimmte Richtung verschiebt.\n"
+    },
+    "en": {
+      "biology": "Natural selection that favors one extreme of a phenotypic range over others, shifting a population's trait distribution and mean in a consistent direction across generations.\n"
+    }
+  },
+  "examples": [
+    "Finch beak depth increasing over successive drought years as large, hard seeds become the dominant food source."
+  ],
+  "id": "OE-CONCEPT-000118",
+  "labels": {
+    "de": "Gerichtete Selektion",
+    "en": "Directional Selection"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000102"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

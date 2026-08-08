@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Fähigkeit eines einzelnen Genotyps, je nach den Umweltbedingungen, denen ein Organismus während seiner Entwicklung oder im Laufe seines Lebens ausgesetzt ist, unterschiedliche Phänotypen hervorzubringen, ohne dass sich dabei die zugrunde liegende genetische Sequenz verändert.\n"
+    },
+    "en": {
+      "biology": "The capacity of a single genotype to produce different phenotypes depending on the environmental conditions an organism experiences during development or its lifetime, without any change in its underlying genetic sequence.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000140",
+  "labels": {
+    "de": "Modifikation",
+    "en": "Phenotypic Plasticity"
+  },
+  "nonExamples": [
+    "A phenotypic difference caused by a heritable genetic change rather than by environmental conditions acting on one genotype (see Mutation, Allele)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000138"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

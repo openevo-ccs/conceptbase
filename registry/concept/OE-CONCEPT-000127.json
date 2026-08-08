@@ -1,0 +1,30 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Selektion, die auf Unterschieden zwischen ganzen Gruppen wirkt, wobei ein Merkmal, das die relative Fitness eines Individuums innerhalb seiner eigenen Gruppe verringert, dennoch in seiner Häufigkeit zunehmen kann, wenn es das Überleben oder den Fortpflanzungserfolg der Gruppe insgesamt im Vergleich zu anderen Gruppen erhöht.\n"
+    },
+    "en": {
+      "biology": "Selection acting on differences between whole groups, in which a trait that reduces an individual's relative fitness within its own group can nonetheless increase in frequency overall if it raises that group's collective survival or reproductive success relative to other groups.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000127",
+  "labels": {
+    "de": "Gruppenselektion",
+    "en": "Group Selection"
+  },
+  "nonExamples": [
+    "Cooperation among close relatives explained entirely by shared genes and relatedness, with no between-group competition involved (see Kin Selection, the historically contrasted alternative account of the same cooperative behavior)."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000125"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000126"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

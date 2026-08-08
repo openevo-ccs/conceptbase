@@ -1,0 +1,35 @@
+{
+  "citations": [
+    {
+      "text": "Gould, S. J., & Vrba, E. S. (1982). Exaptation—a missing term in the science of form."
+    }
+  ],
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Ein Merkmal, das ursprünglich unter Selektion für eine bestimmte Funktion entstand oder als nicht-adaptives Nebenprodukt auftrat und später für eine andere Funktion genutzt wurde — im Unterschied zu einer gewöhnlichen Anpassung, deren heutige Funktion dieselbe ist, für die sie ursprünglich durch Selektion geformt wurde.\n"
+    },
+    "en": {
+      "biology": "A trait that evolved under selection for one function, or arose as a non-adaptive by-product, and was later co-opted to serve a different function — distinct from an ordinary adaptation, whose current function is the same one it evolved under selection for.\n"
+    }
+  },
+  "examples": [
+    "Feathers, which likely functioned first in thermoregulation and display, later co-opted for flight."
+  ],
+  "id": "OE-CONCEPT-000129",
+  "labels": {
+    "de": "Exaptation",
+    "en": "Exaptation"
+  },
+  "nonExamples": [
+    "A trait whose current use is the same function it originally evolved under selection for (an ordinary Adaptation, not an exaptation)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000104"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

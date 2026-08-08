@@ -1,0 +1,30 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Natürliche Selektion, die zwei oder mehr Allele bzw. Phänotypen aktiv in einer Population erhält, anstatt eines davon zur Fixierung zu treiben, etwa wenn Heterozygote eine höhere Fitness aufweisen als beide Homozygoten oder wenn seltene Varianten begünstigt werden.\n"
+    },
+    "en": {
+      "biology": "Natural selection that actively maintains two or more alleles or phenotypes within a population rather than driving any one to fixation, as when heterozygotes have higher fitness than either homozygote or when rare variants are favored.\n"
+    }
+  },
+  "examples": [
+    "The sickle-cell allele persisting at intermediate frequency in malaria-endemic regions because heterozygous carriers are more malaria-resistant than either homozygote."
+  ],
+  "id": "OE-CONCEPT-000119",
+  "labels": {
+    "de": "Balancierende Selektion",
+    "en": "Balancing Selection"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000102"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

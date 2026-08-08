@@ -1,0 +1,34 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Ähnlichkeit zwischen Strukturen verschiedener Arten, die auf eine gemeinsame Abstammung von einem gemeinsamen Vorfahren zurückgeht, selbst wenn sich die Strukturen inzwischen in Form oder Funktion erheblich unterscheiden.\n"
+    },
+    "en": {
+      "biology": "Similarity between structures in different species that results from shared descent from a common ancestor, even when the structures now differ substantially in form or function.\n"
+    }
+  },
+  "examples": [
+    "The shared forelimb bone arrangement of a bat wing, a whale flipper, and a human arm."
+  ],
+  "id": "OE-CONCEPT-000133",
+  "labels": {
+    "de": "Homologie",
+    "en": "Homology"
+  },
+  "nonExamples": [
+    "Similarity that arose independently in unrelated lineages facing similar selective pressures, without shared ancestry of that structure (see Analogy / Convergent Evolution)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000114",
+      "OE-CONCEPT-000113",
+      "OE-CONCEPT-000134",
+      "OE-CONCEPT-000135",
+      "OE-CONCEPT-000143"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,25 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Der evolutionäre Übergang, bei dem einzellige Organismen Abstammungslinien von Zellen hervorbrachten, die nach der Teilung physisch verbunden bleiben und sich zu spezialisierten, voneinander abhängigen Zelltypen differenzieren — ein Übergang, der im Verlauf der Stammesgeschichte mehrfach unabhängig voneinander stattfand.\n"
+    },
+    "en": {
+      "biology": "The evolutionary transition by which single-celled organisms gave rise to lineages of cells that remain physically joined after division and differentiate into specialized, interdependent cell types — a transition that occurred independently multiple times across the tree of life.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000137",
+  "labels": {
+    "de": "Ursprung der Vielzelligkeit",
+    "en": "Origin of Multicellularity"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000136",
+      "OE-CONCEPT-000109"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

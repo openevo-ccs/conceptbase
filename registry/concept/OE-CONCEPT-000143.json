@@ -1,0 +1,29 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Fossile, seltener auch rezente Organismen, die eine Kombination ursprünglicher und abgeleiteter Merkmale aufweisen und dadurch zwei Gruppen miteinander verbinden; sie liefern direkte morphologische Belege für den evolutionären Übergang einer Abstammungslinie, stellen jedoch kein einzelnes, exaktes Zwischenglied (\"missing link\") entlang einer einfachen linearen Kette dar.\n"
+    },
+    "en": {
+      "biology": "Fossil, or more rarely living, organisms that display a combination of ancestral and derived traits linking two groups, providing direct morphological evidence for a lineage's evolutionary transition rather than representing a single intermediate \"missing link\" in a simple linear chain.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000143",
+  "labels": {
+    "de": "Übergangsformen",
+    "en": "Transitional Forms"
+  },
+  "nonExamples": [
+    "A single fossil expected to be the exact literal intermediate ancestor of two modern groups, arranged along one linear ladder of progress — a common misconception this concept does not endorse; transitional forms typically represent side branches sharing derived traits with a lineage's actual ancestors, not the ancestors themselves."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000142",
+      "OE-CONCEPT-000133",
+      "OE-CONCEPT-000110"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

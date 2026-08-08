@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Eine von zwei oder mehr alternativen Formen eines Gens, die denselben Genort (Locus) auf einem Chromosom einnehmen.\n"
+    },
     "en": {
       "biology": "One of two or more alternative forms of a gene occupying the same locus on a chromosome.\n"
     }
   },
   "id": "OE-CONCEPT-000107",
   "labels": {
+    "de": "Allel",
     "en": "Allele"
   },
   "relations": {
@@ -15,7 +19,8 @@
     ],
     "skos:related": [
       "OE-CONCEPT-000103",
-      "OE-CONCEPT-000111"
+      "OE-CONCEPT-000111",
+      "OE-CONCEPT-000139"
     ]
   },
   "status": "stable",

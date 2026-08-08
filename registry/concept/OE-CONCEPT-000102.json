@@ -4,8 +4,11 @@
       "text": "Darwin, C. (1859). On the Origin of Species."
     }
   ],
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Unterschiedlicher Fortpflanzungserfolg vererbbarer Varianten innerhalb einer Population, der aus deren Wechselwirkung mit der Umwelt resultiert.\n"
+    },
     "en": {
       "biology": "Differential reproductive success among heritable variants within a population, resulting from their interaction with the environment.\n"
     }
@@ -16,6 +19,7 @@
   ],
   "id": "OE-CONCEPT-000102",
   "labels": {
+    "de": "Natürliche Selektion",
     "en": "Natural Selection"
   },
   "nonExamples": [
@@ -26,11 +30,20 @@
     "skos:broader": [
       "OE-CONCEPT-000101"
     ],
+    "skos:narrower": [
+      "OE-CONCEPT-000117",
+      "OE-CONCEPT-000118",
+      "OE-CONCEPT-000119",
+      "OE-CONCEPT-000120",
+      "OE-CONCEPT-000121"
+    ],
     "skos:related": [
       "OE-CONCEPT-000104",
       "OE-CONCEPT-000105",
       "OE-CONCEPT-000115",
-      "OE-CONCEPT-000103"
+      "OE-CONCEPT-000103",
+      "OE-CONCEPT-000125",
+      "OE-CONCEPT-000132"
     ]
   },
   "status": "stable",

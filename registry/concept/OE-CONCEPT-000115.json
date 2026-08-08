@@ -1,18 +1,29 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Ein Umwelt- oder biologischer Faktor, der den Fortpflanzungserfolg bestimmter Varianten innerhalb einer Population verringert oder erhöht und dadurch die Richtung der Selektion bestimmt.\n"
+    },
     "en": {
       "biology": "An environmental or biological factor that reduces or increases reproductive success of particular variants within a population, driving the direction of selection.\n"
     }
   },
   "id": "OE-CONCEPT-000115",
   "labels": {
+    "de": "Selektionsdruck",
     "en": "Selection Pressure"
   },
   "relations": {
     "skos:related": [
       "OE-CONCEPT-000102",
-      "OE-CONCEPT-000105"
+      "OE-CONCEPT-000105",
+      "OE-CONCEPT-000117",
+      "OE-CONCEPT-000118",
+      "OE-CONCEPT-000119",
+      "OE-CONCEPT-000120",
+      "OE-CONCEPT-000121",
+      "OE-CONCEPT-000130",
+      "OE-CONCEPT-000134"
     ]
   },
   "status": "stable",

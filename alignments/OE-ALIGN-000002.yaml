@@ -10,7 +10,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000002
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-000112
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-000112
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000201
 matchType: skos:closeMatch
 assertedBy:

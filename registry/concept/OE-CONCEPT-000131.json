@@ -1,0 +1,26 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Erforschung, wie natürliche Selektion den zeitlichen Ablauf und die Verteilung der zentralen Lebensereignisse eines Organismus formt — Alter bei Geschlechtsreife, Investition in die Fortpflanzung, Anzahl und Größe der Nachkommen sowie Lebensspanne — als ein System zusammenhängender Kompromisse und nicht als unabhängig voneinander optimierte Einzelmerkmale.\n"
+    },
+    "en": {
+      "biology": "The study of how natural selection shapes the timing and allocation of an organism's key life events — age at maturity, reproductive investment, offspring number and size, and lifespan — as a set of interrelated trade-offs rather than as independently optimized traits.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000131",
+  "labels": {
+    "de": "Life-History-Theorie",
+    "en": "Life History Theory"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000128",
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000105"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Ein Zustand, bei dem ein Merkmal, das in der Umwelt, in der es entstand, vorteilhaft war, neutral wird oder die Fitness aktiv verringert, weil sich die gegenwärtige Umwelt einer Population wesentlich von jener ursprünglichen Selektionsumgebung unterscheidet.\n"
+    },
+    "en": {
+      "biology": "A condition in which a trait that was adaptive in the environment it evolved in becomes neutral, or actively reduces fitness, because a population's current environment differs substantially from that ancestral selective environment.\n"
+    }
+  },
+  "examples": [
+    "A strong preference for calorie-dense food, adaptive under historical scarcity, contributing to health problems in environments of consistent food abundance."
+  ],
+  "id": "OE-CONCEPT-000130",
+  "labels": {
+    "de": "Evolutionäre Fehlanpassung",
+    "en": "Evolutionary Mismatch"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

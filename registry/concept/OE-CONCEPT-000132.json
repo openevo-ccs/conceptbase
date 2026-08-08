@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Ein evolutionärer Prozess, bei dem sich eine Population über Generationen hinweg genetisch und im Verhalten an eine vom Menschen gestaltete Umgebung anpasst, meist durch eine Form der Selektion — gezielt oder unbeabsichtigt —, die vom Menschen und nicht allein von der wilden Umwelt ausgeübt wird.\n"
+    },
+    "en": {
+      "biology": "An evolutionary process in which a population becomes genetically and behaviorally adapted to a human-managed environment over generations, typically through a form of selection — deliberate or incidental — imposed by humans rather than by the wild environment alone.\n"
+    }
+  },
+  "examples": [
+    "Dogs' divergence from wolves under thousands of years of human-associated selection."
+  ],
+  "id": "OE-CONCEPT-000132",
+  "labels": {
+    "de": "Domestikation",
+    "en": "Domestication"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000102",
+      "OE-CONCEPT-000104"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

@@ -1,0 +1,31 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Eine starke, vorübergehende Verringerung der Populationsgröße — etwa durch eine Katastrophe, eine Krankheit oder Lebensraumverlust —, die die genetische Vielfalt der überlebenden Population drastisch und zufällig verringert; eine besonders ausgeprägte Form der Gendrift.\n"
+    },
+    "en": {
+      "biology": "A sharp, temporary reduction in population size — from a catastrophic event, disease, or habitat loss — that drastically and randomly reduces genetic diversity in the surviving population, an especially strong form of genetic drift.\n"
+    }
+  },
+  "examples": [
+    "Northern elephant seal populations retaining unusually low genetic diversity today after being reduced to roughly twenty individuals by 19th-century hunting."
+  ],
+  "id": "OE-CONCEPT-000123",
+  "labels": {
+    "de": "Flaschenhalseffekt",
+    "en": "Bottleneck Effect"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000111"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000108",
+      "OE-CONCEPT-000124"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

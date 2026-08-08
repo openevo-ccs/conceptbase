@@ -1,0 +1,33 @@
+{
+  "aliases": {
+    "en": [
+      "Migration"
+    ]
+  },
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Bewegung von Allelen zwischen Populationen durch Migration und Verpaarung von Individuen, wodurch genetische Unterschiede zwischen Populationen tendenziell verringert werden und die lokalen Effekte von Selektion und Gendrift ausgeglichen werden können.\n"
+    },
+    "en": {
+      "biology": "The movement of alleles between populations through the migration and interbreeding of individuals, which tends to reduce genetic differences between populations and can counteract the local effects of both selection and drift.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000122",
+  "labels": {
+    "de": "Genfluss",
+    "en": "Gene Flow"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000101"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000111",
+      "OE-CONCEPT-000108"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

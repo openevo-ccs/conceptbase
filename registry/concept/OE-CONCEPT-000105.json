@@ -1,6 +1,9 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Der relative Fortpflanzungserfolg eines Genotyps oder Phänotyps, üblicherweise gemessen als die erwartete Anzahl an Nachkommen, die zur nächsten Generation beitragen.\n"
+    },
     "en": {
       "biology": "The relative reproductive success of a genotype or phenotype, typically measured as expected number of offspring contributing to the next generation.\n"
     }
@@ -10,6 +13,7 @@
   ],
   "id": "OE-CONCEPT-000105",
   "labels": {
+    "de": "Fitness",
     "en": "Fitness"
   },
   "nonExamples": [
@@ -19,7 +23,10 @@
     "skos:related": [
       "OE-CONCEPT-000102",
       "OE-CONCEPT-000104",
-      "OE-CONCEPT-000115"
+      "OE-CONCEPT-000115",
+      "OE-CONCEPT-000126",
+      "OE-CONCEPT-000128",
+      "OE-CONCEPT-000131"
     ]
   },
   "status": "stable",

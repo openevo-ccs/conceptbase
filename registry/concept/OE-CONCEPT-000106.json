@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Eine vererbbare Einheit der DNA, die als grundlegende Vererbungseinheit fungiert und typischerweise die Information für ein bestimmtes Produkt oder Merkmal codiert.\n"
+    },
     "en": {
       "biology": "A heritable unit of DNA that functions as a basic unit of inheritance, typically encoding information for a specific product or trait.\n"
     }
   },
   "id": "OE-CONCEPT-000106",
   "labels": {
+    "de": "Gen",
     "en": "Gene"
   },
   "relations": {
@@ -15,7 +19,8 @@
     ],
     "skos:related": [
       "OE-CONCEPT-000103",
-      "OE-CONCEPT-000112"
+      "OE-CONCEPT-000112",
+      "OE-CONCEPT-000135"
     ]
   },
   "status": "stable",

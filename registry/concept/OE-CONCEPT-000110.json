@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Der evolutionäre Prozess, durch den sich Populationen auseinanderentwickeln und zu eigenständigen, reproduktiv isolierten Arten werden.\n"
+    },
     "en": {
       "biology": "The evolutionary process by which populations diverge to become distinct, reproductively isolated species.\n"
     }
   },
   "id": "OE-CONCEPT-000110",
   "labels": {
+    "de": "Artbildung",
     "en": "Speciation"
   },
   "relations": {
@@ -15,7 +19,8 @@
     ],
     "skos:related": [
       "OE-CONCEPT-000109",
-      "OE-CONCEPT-000111"
+      "OE-CONCEPT-000111",
+      "OE-CONCEPT-000143"
     ]
   },
   "status": "stable",

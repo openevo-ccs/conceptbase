@@ -1,0 +1,34 @@
+{
+  "aliases": {
+    "en": [
+      "Evolutionary Developmental Biology"
+    ]
+  },
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Erforschung, wie evolutionäre Veränderungen in den Genen und regulatorischen Netzwerken, die die Embryonalentwicklung steuern, Veränderungen der adulten Anatomie über Generationen hinweg hervorbringen und dadurch molekulargenetische Mechanismen unmittelbar mit makroevolutionären Mustern des Gestaltwandels verknüpfen.\n"
+    },
+    "en": {
+      "biology": "The study of how evolutionary changes in the genes and regulatory networks controlling embryonic development produce changes in adult anatomy across generations, linking molecular-genetic mechanisms directly to macroevolutionary patterns of morphological change.\n"
+    }
+  },
+  "examples": [
+    "Differences in Hox gene regulation associated with differences in limb number and placement across arthropod lineages."
+  ],
+  "id": "OE-CONCEPT-000135",
+  "labels": {
+    "de": "Evo-Devo",
+    "en": "Evo-Devo"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000103",
+      "OE-CONCEPT-000106",
+      "OE-CONCEPT-000133"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

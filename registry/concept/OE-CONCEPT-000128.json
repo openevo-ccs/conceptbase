@@ -1,0 +1,29 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Eine Einschränkung, bei der ein Merkmal, das die Fitness in einer Hinsicht erhöht (Wachstum, Fortpflanzung, Abwehr, Überleben), sie notwendigerweise in einer anderen Hinsicht verringert, weil die für eine Funktion aufgewendeten Ressourcen, Zeit oder strukturelle Kapazität für andere Funktionen nicht mehr zur Verfügung stehen.\n"
+    },
+    "en": {
+      "biology": "A constraint in which a trait that increases fitness in one respect (growth, reproduction, defense, survival) necessarily decreases it in another, because the resources, time, or structural capacity allocated to one function are unavailable for others.\n"
+    }
+  },
+  "examples": [
+    "Energy allocated to producing many small, minimally provisioned offspring versus fewer, larger, better-provisioned offspring."
+  ],
+  "id": "OE-CONCEPT-000128",
+  "labels": {
+    "de": "Kompromisse",
+    "en": "Trade-offs"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000104",
+      "OE-CONCEPT-000105",
+      "OE-CONCEPT-000131"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

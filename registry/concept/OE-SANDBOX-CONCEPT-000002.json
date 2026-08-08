@@ -1,6 +1,9 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Genetisches Material, das aus historischen oder fossilen Überresten gewonnen und sequenziert wird und dadurch die unmittelbare Beobachtung genetischer Variation und Populationsgeschichte zu vergangenen Zeitpunkten ermöglicht, statt sie ausschließlich aus heutigen Populationen zu erschließen.\n"
+    },
     "en": {
       "biology": "Genetic material recovered and sequenced from historical or fossil remains, enabling direct observation of genetic variation and population history at past points in time rather than inferring it solely from present-day populations.\n"
     }
@@ -10,6 +13,7 @@
   ],
   "id": "OE-SANDBOX-CONCEPT-000002",
   "labels": {
+    "de": "Alte DNA",
     "en": "Ancient DNA"
   },
   "nonExamples": [

@@ -1,0 +1,30 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Natürliche Selektion, die Individuen mit mittleren Merkmalsausprägungen begünstigt und beide Extreme benachteiligt, wodurch die phänotypische Varianz einer Population um einen unveränderten Mittelwert verringert wird.\n"
+    },
+    "en": {
+      "biology": "Natural selection that favors individuals with intermediate phenotypes and disfavors both extremes, reducing a population's phenotypic variance around an unchanged mean.\n"
+    }
+  },
+  "examples": [
+    "Human birth weight selected against both very low and very high extremes, favoring weights near the population average."
+  ],
+  "id": "OE-CONCEPT-000117",
+  "labels": {
+    "de": "Stabilisierende Selektion",
+    "en": "Stabilizing Selection"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000102"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

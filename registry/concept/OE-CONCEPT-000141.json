@@ -1,0 +1,30 @@
+{
+  "aliases": {
+    "en": [
+      "Deep Time"
+    ]
+  },
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Das hierarchische System aus Ären, Erdzeitaltern, Perioden und Epochen, mit dem die rund 4,6 Milliarden Jahre umfassende Erdgeschichte gegliedert wird und das den zeitlichen Rahmen liefert, in dem evolutionärer Wandel, Massenaussterben und die Diversifizierung des Lebens datiert und miteinander verglichen werden.\n"
+    },
+    "en": {
+      "biology": "The hierarchical system of eons, eras, periods, and epochs used to organize Earth's roughly 4.6-billion-year history, providing the timescale over which evolutionary change, mass extinctions, and the diversification of life are dated and compared.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000141",
+  "labels": {
+    "de": "Geologische Zeitskala",
+    "en": "Geological Time Scale"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000116",
+      "OE-CONCEPT-000142"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

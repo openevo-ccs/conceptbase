@@ -1,0 +1,30 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Natürliche Selektion, bei der die Fitness eines Phänotyps davon abhängt, wie häufig er gegenwärtig im Vergleich zu anderen Phänotypen in der Population ist — negative frequenzabhängige Selektion begünstigt seltene Varianten, positive frequenzabhängige Selektion begünstigt häufige.\n"
+    },
+    "en": {
+      "biology": "Natural selection in which a phenotype's fitness depends on how common it currently is relative to other phenotypes in the population — negative frequency-dependent selection favors rare variants, positive frequency-dependent selection favors common ones.\n"
+    }
+  },
+  "examples": [
+    "A prey color morph's advantage shrinking as it becomes more common and predators form a search image specifically for it (negative frequency dependence)."
+  ],
+  "id": "OE-CONCEPT-000121",
+  "labels": {
+    "de": "Frequenzabhängige Selektion",
+    "en": "Frequency-Dependent Selection"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-000102"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

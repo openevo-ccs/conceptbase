@@ -1,0 +1,26 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Die Gesamtheit der erhaltenen materiellen Belege vergangenen Lebens — fossile Überreste, Spuren und Abdrücke —, die genutzt werden, um die Abfolge, den zeitlichen Verlauf und die Morphologie ausgestorbener Organismen zu rekonstruieren und Hypothesen zur Stammesgeschichte zu prüfen.\n"
+    },
+    "en": {
+      "biology": "The cumulative body of preserved physical evidence of past life — fossilized remains, traces, and impressions — used to reconstruct the sequence, timing, and morphology of extinct organisms and to test hypotheses about evolutionary history.\n"
+    }
+  },
+  "id": "OE-CONCEPT-000142",
+  "labels": {
+    "de": "Fossilbericht",
+    "en": "Fossil Record"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000141",
+      "OE-CONCEPT-000143",
+      "OE-CONCEPT-000114"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

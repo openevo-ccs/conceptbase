@@ -1,0 +1,36 @@
+{
+  "aliases": {
+    "en": [
+      "Convergent Evolution"
+    ]
+  },
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Ähnlichkeit zwischen Strukturen oder Merkmalen verschiedener, oft nur entfernt verwandter Arten, die unabhängig voneinander durch konvergente Evolution entstanden ist — ähnliche Selektionsdrücke, die zu ähnlichen Lösungen führen —, statt auf einer gemeinsamen Abstammung dieser Struktur zu beruhen.\n"
+    },
+    "en": {
+      "biology": "Similarity between structures or traits in different, often distantly related, species that arose independently through convergent evolution — similar selection pressures producing similar solutions — rather than from shared ancestry of that structure.\n"
+    }
+  },
+  "examples": [
+    "The wing of a bird and the wing of an insect, both adapted for flight but evolved independently from non-winged ancestors."
+  ],
+  "id": "OE-CONCEPT-000134",
+  "labels": {
+    "de": "Analogie",
+    "en": "Analogy"
+  },
+  "nonExamples": [
+    "Similarity due to inheritance from a shared common ancestor (see Homology)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-000133",
+      "OE-CONCEPT-000115"
+    ]
+  },
+  "status": "proposed",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}
