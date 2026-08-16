@@ -58,7 +58,7 @@ Five new **optional** top-level properties, backward-compatible with all 455 exi
   — matches every real id namespace confirmed directly against `theorybase/schema/*.json`'s
   `pattern` constraints. Lets a competency point at the TheoryBase construct(s) that ground its
   statement (e.g. a future Decentralized Causal Reasoning competency pointing at
-  `theory:integrated-causal-reasoning`).
+  `OE-THEORY-integrated-causal-reasoning`).
 - **`relatedLiterature`**: array of strings, pattern `^lit:[a-z0-9-]+$` — matches
   LiteratureBase's current (pre-RFC, provisional) id scheme. Lets a competency point at the
   literature that grounds it, distinct from `citations[]` (which stays free-text/URL/DOI for
@@ -92,7 +92,7 @@ overclaimed as `community-reviewed`), `developmentalProgression` K-2→13-16, `c
 ## Relations
 
 - Extends `oe:Competency` (RFC-0002) and its resolution home (RFC-0015) — no new class.
-- **Algorithmic Thinking** (`000804`) carries `relatedTheory: ["theory:integrated-causal-reasoning"]`
+- **Algorithmic Thinking** (`000804`) carries `relatedTheory: ["OE-THEORY-integrated-causal-reasoning"]`
   — the one deliberate cross-link this RFC makes toward Decentralized Causal Reasoning (reasoning
   about rule-based, locally-interacting, non-centrally-controlled processes is the real conceptual
   bridge between CT and DCR), flagged here as a forward hook and left for the DCR follow-on RFC to
