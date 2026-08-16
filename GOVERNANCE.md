@@ -111,12 +111,25 @@ Not populated until RFC-0006 (`NGSS-LIFE-SCIENCE`), the first vocabulary authore
 
 **Relocation (RFC-0015, `ecosystem-base-graph-project-architecture-and-ontology-plan.md` §3.1/§9.7):** as of RFC-0015, `oe:Competency`'s canonical, resolvable home is [`competencybase`](https://github.com/openevo-ccs/competencybase) (`records/`), not this repo's internal flat-JSON registry — resolution now follows the redirect-to-owning-repo pattern `/lpm/{id}` already uses. **Block reservation stays here** (id-minting is independent of where content resolves, and this table remains the single collision-free registry), but a vocabulary's actual competency *records* (statement, relations, citations) should be treated as canonical in `competencybase/records/` once migrated, not in this repo's `vocabularies/*.yaml`. `vocabularies/*.yaml` files for already-migrated frameworks are retained here as historical authoring source, not as the resolvable record. A framework is "migrated" only once its entries exist as real records in `competencybase` with `status` carried over faithfully — a vocabulary merged to this repo's `main` is not automatically migrated (see `competencybase/README.md`'s own migration-status notes for which frameworks are actually real there today).
 
-| Vocabulary | Block | Currently used |
+**Id scheme superseded (2026-08-16):** CompetencyBase has migrated off numeric block-allocation
+entirely, to `OE-COMPETENCY-<vocab-slug>-<code-slug>` (e.g. `OE-COMPETENCY-000800` →
+`OE-COMPETENCY-openevo-core-competencies-ct`), reusing each vocabulary's existing filename slug and
+its `humanCodingScheme` field, normalized. See
+`lab_manager/docs/design-notes/foundational-repo-governance-standard-and-speciesbase-integration.md`.
+The table below is retained as **historical record of the original numeric allocation**, not a
+live registry — new competency vocabularies mint ids per CompetencyBase's own
+[`GOVERNANCE.md`](https://github.com/openevo-ccs/competencybase/blob/main/GOVERNANCE.md) instead
+of reserving a block here. `conceptbase/registry/competency/` (the generated flat-JSON mirror this
+table used to gate) has been deleted as stale duplicate content; `scripts/build_registry.py` no
+longer generates it.
+
+| Vocabulary | Block (historical) | Currently used |
 |---|---|---|
 | `NGSS-LIFE-SCIENCE` | `000100`–`000199` | 100–152 (8 topic parents + 45 performance expectations) |
 | `AI4K12` | `000200`–`000699` | 200–580 (5 Big Idea parents + 44 concept-row parents + 332 per-band LO/EU pairs). Wider block than usual (500 vs. the customary 100) given via RFC-0007, reserved up front since the full 3-level hierarchy was known in advance. |
 | `EVO-ED-ASSESSMENT-TARGETS` | `000700`–`000799` | 700–720 (5 target parents + 16 objectives). OpenEvo-paraphrased operationalization of Nehm & Kampourakis (2022) Table 5 — not a transcription (source is citation-only); per RFC-0014. |
 | `OPENEVO-CORE-COMPETENCIES` | `000800`–`000899` | 800–806 (Computational Thinking parent + 6 sub-competencies). First OpenEvo-authored (not externally transcribed) competency vocabulary; per RFC-0016. Whole block reserved for all four planned OpenEvo core competencies (Computational Thinking, Evolutionary Causal Reasoning, Decentralized Causal Reasoning, Systems Thinking), not just this pass's 7 entries. |
+| `CRITICAL-AI-LITERACY` | `000900`–`000999` | 900–905 (Critical AI Literacy parent + 5 sub-competencies, operationalizing Guest, Suarez & van Rooij's CAIL dimensions). Second OpenEvo-authored competency vocabulary; per RFC-0017 (**proposed**, not yet accepted). **Numbering risk carried forward from RFC-0016's own flag, not newly introduced here:** `rfc-0011-teacher-competency-frameworks-and-ccc` (unmerged branch) claims a reserved range RFC-0016 described as `000700`–`001099`; RFC-0017 found that branch's actual records instead land in `000110`–`000139` (inside `BIO-CORE`'s block), meaning the true scope of RFC-0011's claim is still unconfirmed. This row's reservation is not treated as settled until a maintainer resolves RFC-0011. |
 
 ### Learning Object and Alignment ID blocks
 

@@ -18,7 +18,7 @@
 
 id: OE-ALIGN-000004
 subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000090
-object: AI4K12-v1.0.0:OE-COMPETENCY-000395
+object: AI4K12-v1.0.0:OE-COMPETENCY-ai4k12-3-a-vi
 matchType: skos:relatedMatch
 assertedBy:
   - OpenEvo Computational Curriculum Studies Working Group
@@ -29,7 +29,7 @@ rationale: >
   process by which variants are generated, selected, and transmitted
   across iterations within a system") shares a structural pattern with
   AI4K12's "Nature of Learning (Learning from experience)" row
-  (OE-COMPETENCY-000395, 3-A-vi): both describe an iterative process that
+  (OE-COMPETENCY-ai4k12-3-a-vi, 3-A-vi): both describe an iterative process that
   narrows down a space of possibilities toward better-performing variants
   over repeated trials -- reinforcement learning's "hundreds of thousands
   of games" of trial and error is structurally reminiscent of generations

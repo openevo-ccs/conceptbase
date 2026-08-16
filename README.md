@@ -257,11 +257,14 @@ The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id
 
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-000102       →  flat JSON (generated, scripts/build_registry.py)
-https://www.w3id.org/openevo/competency/OE-COMPETENCY-000100 →  flat JSON (competency entries, added by RFC-0008)
 https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML (the #fragment is client-side only)
 https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML
 https://www.w3id.org/openevo/                                 →  redirects to this repository
 ```
+
+(`oe:Competency` no longer resolves under this repo's own `/competency/` path — per RFC-0015 its
+canonical, resolvable home is [`competencybase`](https://github.com/openevo-ccs/competencybase),
+using its own `OE-COMPETENCY-<vocab-slug>-<code-slug>` id form.)
 
 Full content negotiation (JSON-LD, HTML, flat JSON per §4.2's target design) is Phase 4 scope; the flat-JSON/raw-YAML behavior above is an intentional MVP, not the end state.
 

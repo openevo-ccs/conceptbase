@@ -16,7 +16,7 @@
 
 id: OE-ALIGN-000005
 subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000211
-object: AI4K12-v1.0.0:OE-COMPETENCY-000496
+object: AI4K12-v1.0.0:OE-COMPETENCY-ai4k12-4-d-i
 matchType: skos:relatedMatch
 assertedBy:
   - OpenEvo Computational Curriculum Studies Working Group
@@ -28,7 +28,7 @@ rationale: >
   to regulate behavior toward a goal-state, without requiring conscious
   intention" -- deliberately scoped to include non-conscious biological
   agency (e.g., an earthworm's niche-constructing behavior). AI4K12's
-  "Philosophy of Mind" row (OE-COMPETENCY-000496, 4-D-i) addresses a
+  "Philosophy of Mind" row (OE-COMPETENCY-ai4k12-4-d-i, 4-D-i) addresses a
   related but distinct question: whether an AI system possesses
   consciousness, self-awareness, or "broad"/general intelligence, working
   up to a 9-12 debate over whether computers can achieve human-like

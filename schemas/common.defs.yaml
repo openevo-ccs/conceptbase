@@ -183,7 +183,7 @@ meta:
 
   alignmentConceptRef:
     type: string
-    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-(CONCEPT|COMPETENCY)-[0-9]{6}$"
+    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-(CONCEPT-[0-9]{6}|COMPETENCY-[a-z0-9\\-]+)$"
     description: >
       A `{vocabulary}:{conceptId}` reference used by Alignment records
       (subject/object), e.g. "BIO-CORE-v1.0.0:OE-CONCEPT-000102". Also

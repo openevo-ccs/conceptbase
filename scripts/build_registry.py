@@ -129,21 +129,14 @@ def build_concepts():
 
 
 def build_competencies():
-    # RFC-0008: vocabularies authored as oe:Competency (NGSS-LIFE-SCIENCE,
-    # AI4K12) use a top-level `competencies:` key instead of `concepts:` -
-    # this was never wired in when RFC-0002 introduced oe:Competency,
-    # despite common.defs.yaml's competencyId doc-comment already promising
-    # https://www.w3id.org/openevo/competency/{id} resolves.
-    count = 0
-    for vocab_path in sorted(glob.glob(os.path.join(REPO_ROOT, "vocabularies", "*.yaml"))):
-        with open(vocab_path, encoding="utf-8") as f:
-            vocab = yaml.safe_load(f)
-        for competency in vocab.get("competencies", []):
-            competency_id = competency["id"]
-            out_path = os.path.join(REGISTRY_DIR, "competency", f"{competency_id}.json")
-            write_json(out_path, competency)
-            count += 1
-    return count
+    # Superseded 2026-08-16 (RFC-0015 relocation, executed): oe:Competency's
+    # canonical, resolvable home is competencybase/records/, not this repo's
+    # registry/competency/. This function is intentionally a no-op now --
+    # registry/competency/ was deleted as stale duplicate content on the old
+    # numeric id scheme, and regenerating it here would just recreate that
+    # staleness on every build. See lab_manager/docs/design-notes/
+    # foundational-repo-governance-standard-and-speciesbase-integration.md.
+    return 0
 
 
 def build_alignments():

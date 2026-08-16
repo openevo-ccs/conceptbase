@@ -12,7 +12,7 @@
 
 id: OE-ALIGN-000003
 subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000213
-object: NGSS-LIFE-SCIENCE-v1.0.0:OE-COMPETENCY-000150
+object: NGSS-LIFE-SCIENCE-v1.0.0:OE-COMPETENCY-ngss-life-science-hs-ls4-4
 matchType: skos:closeMatch
 assertedBy:
   - OpenEvo Computational Curriculum Studies Working Group
@@ -22,7 +22,7 @@ rationale: >
   OE-INTERDISCIPLINARY's Selection (OE-CONCEPT-000213), biology-discipline
   sense, and NGSS's HS-LS4-4 ("Construct an explanation based on evidence
   for how natural selection leads to adaptation of populations",
-  OE-COMPETENCY-000150) describe the same mechanism: differential
+  OE-COMPETENCY-ngss-life-science-hs-ls4-4) describe the same mechanism: differential
   persistence/reproduction of heritable variants driving population-level
   change. Not asserted as skos:exactMatch because HS-LS4-4 is a
   performance expectation (an assessable student action: "construct an

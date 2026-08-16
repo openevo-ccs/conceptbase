@@ -27,7 +27,6 @@ Pick any ID from what you just saw and hit its w3id URL directly:
 
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-000213
-https://www.w3id.org/openevo/competency/OE-COMPETENCY-000150
 https://www.w3id.org/openevo/lpm/OE-LPM-000002
 ```
 
