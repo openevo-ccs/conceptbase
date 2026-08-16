@@ -173,7 +173,7 @@ entityProperties:
     range: xsd:string
     status: stable
     definition: >
-      The permanent OpenEvo identifier (e.g. OE-CONCEPT-000213). Never
+      The permanent OpenEvo identifier (e.g. OE-CONCEPT-oe-interdisciplinary-selection). Never
       changes once assigned, independent of label or definition changes.
       Resolvable via the identifier registry at
       https://www.w3id.org/openevo/concept/000213 (see /registry/).

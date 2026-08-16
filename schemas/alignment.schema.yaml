@@ -11,7 +11,7 @@
 #
 # subject/object MUST reference the permanent conceptId, never a label
 # (Spec §9.1, §4.4): `{vocabulary}:{conceptId}`, e.g.
-# "BIO-CORE-v1.0.0:OE-CONCEPT-000102".
+# "BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection".
 # ============================================================================
 
 "$schema": "https://json-schema.org/draft/2020-12/schema"

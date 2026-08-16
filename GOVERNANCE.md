@@ -75,16 +75,25 @@ Three normative artifact types coexist in this repository with three different f
 
 ## Identifier Block Allocation
 
-Every `OE-CONCEPT-######`, `OE-STRAND-######`, and `OE-LPM-######` identifier is permanent once `status: accepted` or higher (spec §4.4). To keep IDs collision-free across independently authored vocabularies and LPMs without a central sequence generator, each governed unit reserves a numeric block:
+Every `oe:Concept`, `OE-STRAND-######`, and `OE-LPM-######` identifier is permanent once `status: accepted` or higher (spec §4.4). `OE-STRAND-######` and `OE-LPM-######` still use numeric block-allocation, collision-free across independently authored vocabularies and LPMs without a central sequence generator, via a reserved numeric block per governed unit; `oe:Concept` ids no longer do (see below).
 
 ### Concept ID blocks (`OE-CONCEPT-0NNxxx`)
 
-| Vocabulary | Block | Currently used |
+**Id scheme superseded (2026-08-16):** ConceptBase's own `oe:Concept` ids have migrated off numeric
+block-allocation entirely, to `OE-CONCEPT-<vocab-slug>-<code-slug>` (e.g. `OE-CONCEPT-000102` →
+`OE-CONCEPT-bio-core-natural-selection`), reusing the vocabulary's slug (stripped of its version
+suffix) and the concept's `labels.en`, normalized — the same pattern CompetencyBase applied to
+`oe:Competency` below. See
+`lab_manager/docs/design-notes/foundational-repo-governance-standard-and-speciesbase-integration.md`.
+The table below is retained as **historical record of the original numeric allocation**, not a live
+registry; new vocabularies mint slug-based concept ids directly, no block reservation needed.
+`OE-SANDBOX-CONCEPT-######` ids are unaffected — the sandbox tier stays on its own sequential,
+provisional numbering (Sandbox/Provisional Tier above), by design.
+
+| Vocabulary | Block (historical) | Currently used |
 |---|---|---|
 | `BIO-CORE` | `000100`–`000199` | 101–116 |
 | `OE-INTERDISCIPLINARY` | `000200`–`000299`, plus `000090`–`000099` for cross-cutting concepts shared with `BIO-CORE`'s numbering space | 090, 201–224 |
-
-A new vocabulary reserves its own `000N00`–`000N99` block via its founding RFC (`/proposals/`), approved by a maintainer, before authoring any concept entries. Reserved blocks are recorded by adding a row to this table as part of that RFC — this table is the block registry.
 
 ### Strand ID blocks (`OE-STRAND-0NNxxx`)
 

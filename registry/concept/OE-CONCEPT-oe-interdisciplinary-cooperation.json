@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Coordinated behavior among individuals or groups that produces a mutual benefit not achievable, or less efficiently achieved, alone.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-cooperation",
+  "labels": {
+    "en": "Cooperation"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-conflict",
+      "OE-CONCEPT-oe-interdisciplinary-culture",
+      "OE-CONCEPT-oe-interdisciplinary-institutions"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

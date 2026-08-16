@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Socially transmitted knowledge, beliefs, practices, and artifacts shared within a group, persisting beyond any single individual.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-culture",
+  "labels": {
+    "en": "Culture"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-cooperation",
+      "OE-CONCEPT-oe-interdisciplinary-institutions",
+      "OE-CONCEPT-oe-interdisciplinary-norms",
+      "OE-SANDBOX-CONCEPT-000003",
+      "OE-SANDBOX-CONCEPT-000005"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

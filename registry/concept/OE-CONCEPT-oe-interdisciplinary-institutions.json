@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Stable, socially recognized structures or rules that organize and constrain collective behavior over time.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-institutions",
+  "labels": {
+    "en": "Institutions"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-culture",
+      "OE-CONCEPT-oe-interdisciplinary-norms",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

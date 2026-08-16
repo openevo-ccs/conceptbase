@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The process by which an organism grows and matures from an initial state toward greater complexity or capability.\n",
+      "education": "The progressive growth of a learner's knowledge, skills, or competencies over time, often scaffolded by instruction.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-development",
+  "labels": {
+    "en": "Development"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-oe-interdisciplinary-evolutionary-process"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-agency",
+      "OE-CONCEPT-oe-interdisciplinary-scaffolding",
+      "OE-CONCEPT-oe-interdisciplinary-learning",
+      "OE-CONCEPT-oe-interdisciplinary-niche-construction"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

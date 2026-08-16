@@ -1,0 +1,26 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The generation of a novel variant — an idea, practice, technology, or trait — that did not previously exist within a system.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-innovation",
+  "labels": {
+    "en": "Innovation"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-oe-interdisciplinary-evolutionary-process"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-representation",
+      "OE-CONCEPT-oe-interdisciplinary-technology",
+      "OE-CONCEPT-oe-interdisciplinary-norms",
+      "OE-SANDBOX-CONCEPT-000003"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

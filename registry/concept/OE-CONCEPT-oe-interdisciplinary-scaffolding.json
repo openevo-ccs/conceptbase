@@ -1,0 +1,23 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "education": "Temporary structured support provided to a learner, gradually withdrawn as competence increases.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-scaffolding",
+  "labels": {
+    "en": "Scaffolding"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-development",
+      "OE-CONCEPT-oe-interdisciplinary-learning",
+      "OE-CONCEPT-oe-interdisciplinary-teaching",
+      "OE-CONCEPT-oe-interdisciplinary-agency"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

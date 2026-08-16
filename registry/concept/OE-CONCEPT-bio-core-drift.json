@@ -1,0 +1,25 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Random fluctuation of allele frequencies within a population from one generation to the next, independent of selective advantage.\n"
+    }
+  },
+  "id": "OE-CONCEPT-bio-core-drift",
+  "labels": {
+    "en": "Drift"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-bio-core-evolution"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-bio-core-population",
+      "OE-CONCEPT-bio-core-allele",
+      "OE-CONCEPT-bio-core-speciation"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

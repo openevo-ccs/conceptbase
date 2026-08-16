@@ -34,7 +34,7 @@ meta:
 
   conceptId:
     type: string
-    pattern: "^OE-CONCEPT-[0-9]{6}$"
+    pattern: "^OE-CONCEPT-[a-z0-9-]+$"
     description: >
       Permanent identifier for an oe:Concept instance. Resolves under
       https://www.w3id.org/openevo/concept/{id}.
@@ -183,11 +183,11 @@ meta:
 
   alignmentConceptRef:
     type: string
-    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-(CONCEPT-[0-9]{6}|COMPETENCY-[a-z0-9\\-]+)$"
+    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-(CONCEPT-[a-z0-9\\-]+|COMPETENCY-[a-z0-9\\-]+)$"
     description: >
       A `{vocabulary}:{conceptId}` reference used by Alignment records
-      (subject/object), e.g. "BIO-CORE-v1.0.0:OE-CONCEPT-000102". Also
-      accepts `OE-COMPETENCY-######` (RFC-0008), since Phase 2 alignment
+      (subject/object), e.g. "BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection". Also
+      accepts `OE-COMPETENCY-{vocab-slug}-{code-slug}` (RFC-0008), since Phase 2 alignment
       records may now connect an oe:Concept to an oe:Competency (e.g. a
       vocabulary concept to a specific NGSS performance expectation), not
       only concept-to-concept. Deliberately keyed on the permanent

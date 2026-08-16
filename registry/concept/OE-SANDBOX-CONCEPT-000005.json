@@ -20,9 +20,9 @@
   },
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000219",
-      "OE-CONCEPT-000213",
-      "OE-CONCEPT-000218",
+      "OE-CONCEPT-oe-interdisciplinary-culture",
+      "OE-CONCEPT-oe-interdisciplinary-selection",
+      "OE-CONCEPT-oe-interdisciplinary-technology",
       "OE-SANDBOX-CONCEPT-000006"
     ]
   },

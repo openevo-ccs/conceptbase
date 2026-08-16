@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "Change in the heritable characteristics of biological populations across successive generations.\n"
+    }
+  },
+  "id": "OE-CONCEPT-bio-core-evolution",
+  "labels": {
+    "en": "Evolution"
+  },
+  "relations": {
+    "skos:narrower": [
+      "OE-CONCEPT-bio-core-natural-selection",
+      "OE-CONCEPT-bio-core-speciation",
+      "OE-CONCEPT-bio-core-drift",
+      "OE-CONCEPT-bio-core-extinction"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-bio-core-inheritance",
+      "OE-CONCEPT-bio-core-phylogeny"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

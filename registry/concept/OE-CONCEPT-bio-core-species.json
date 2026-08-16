@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "A group of organisms capable of interbreeding and producing fertile offspring, generally reproductively isolated from other such groups.\n"
+    }
+  },
+  "id": "OE-CONCEPT-bio-core-species",
+  "labels": {
+    "en": "Species"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-bio-core-speciation",
+      "OE-CONCEPT-bio-core-common-ancestor",
+      "OE-CONCEPT-bio-core-population",
+      "OE-CONCEPT-bio-core-extinction",
+      "OE-SANDBOX-CONCEPT-000001"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

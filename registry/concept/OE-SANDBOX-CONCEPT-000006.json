@@ -17,7 +17,7 @@
   ],
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000215",
+      "OE-CONCEPT-oe-interdisciplinary-learning",
       "OE-SANDBOX-CONCEPT-000005"
     ]
   },

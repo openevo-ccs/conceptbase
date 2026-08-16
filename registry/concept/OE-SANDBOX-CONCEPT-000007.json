@@ -23,7 +23,7 @@
   },
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000090",
+      "OE-CONCEPT-oe-interdisciplinary-evolutionary-process",
       "OE-SANDBOX-CONCEPT-000008",
       "OE-SANDBOX-CONCEPT-000009"
     ]

@@ -31,7 +31,7 @@
   ],
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000211",
+      "OE-CONCEPT-oe-interdisciplinary-agency",
       "OE-SANDBOX-CONCEPT-000007",
       "OE-SANDBOX-CONCEPT-000009"
     ]

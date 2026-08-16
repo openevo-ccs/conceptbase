@@ -33,7 +33,7 @@ meta:
 
 concepts:
 
-  - id: OE-CONCEPT-000101
+  - id: OE-CONCEPT-bio-core-evolution
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -46,10 +46,10 @@ concepts:
           Change in the heritable characteristics of biological
           populations across successive generations.
     relations:
-      skos:narrower: [OE-CONCEPT-000102, OE-CONCEPT-000110, OE-CONCEPT-000111, OE-CONCEPT-000116]
-      skos:related: [OE-CONCEPT-000112, OE-CONCEPT-000113]
+      skos:narrower: [OE-CONCEPT-bio-core-natural-selection, OE-CONCEPT-bio-core-speciation, OE-CONCEPT-bio-core-drift, OE-CONCEPT-bio-core-extinction]
+      skos:related: [OE-CONCEPT-bio-core-inheritance, OE-CONCEPT-bio-core-phylogeny]
 
-  - id: OE-CONCEPT-000102
+  - id: OE-CONCEPT-bio-core-natural-selection
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -63,8 +63,8 @@ concepts:
           within a population, resulting from their interaction with
           the environment.
     relations:
-      skos:broader: [OE-CONCEPT-000101]
-      skos:related: [OE-CONCEPT-000104, OE-CONCEPT-000105, OE-CONCEPT-000115, OE-CONCEPT-000103]
+      skos:broader: [OE-CONCEPT-bio-core-evolution]
+      skos:related: [OE-CONCEPT-bio-core-adaptation, OE-CONCEPT-bio-core-fitness, OE-CONCEPT-bio-core-selection-pressure, OE-CONCEPT-bio-core-mutation]
     examples:
       - Peppered moth coloration shifting with industrial soot levels.
       - Antibiotic resistance increasing in bacterial populations under drug exposure.
@@ -74,7 +74,7 @@ concepts:
     citations:
       - text: "Darwin, C. (1859). On the Origin of Species."
 
-  - id: OE-CONCEPT-000103
+  - id: OE-CONCEPT-bio-core-mutation
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -87,9 +87,9 @@ concepts:
           A heritable change in a DNA sequence, serving as an ultimate
           source of genetic variation within a population.
     relations:
-      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000107, OE-CONCEPT-000102, OE-SANDBOX-CONCEPT-000002]
+      skos:related: [OE-CONCEPT-bio-core-gene, OE-CONCEPT-bio-core-allele, OE-CONCEPT-bio-core-natural-selection, OE-SANDBOX-CONCEPT-000002]
 
-  - id: OE-CONCEPT-000104
+  - id: OE-CONCEPT-bio-core-adaptation
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -103,9 +103,9 @@ concepts:
           a given environment, shaped by natural selection over
           generations.
     relations:
-      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105]
+      skos:related: [OE-CONCEPT-bio-core-natural-selection, OE-CONCEPT-bio-core-fitness]
 
-  - id: OE-CONCEPT-000105
+  - id: OE-CONCEPT-bio-core-fitness
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -119,13 +119,13 @@ concepts:
           typically measured as expected number of offspring
           contributing to the next generation.
     relations:
-      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000104, OE-CONCEPT-000115]
+      skos:related: [OE-CONCEPT-bio-core-natural-selection, OE-CONCEPT-bio-core-adaptation, OE-CONCEPT-bio-core-selection-pressure]
     examples:
       - A beak shape enabling more efficient seed cracking during drought.
     nonExamples:
       - Physical strength or health in a general, non-reproductive sense.
 
-  - id: OE-CONCEPT-000106
+  - id: OE-CONCEPT-bio-core-gene
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -139,10 +139,10 @@ concepts:
           inheritance, typically encoding information for a specific
           product or trait.
     relations:
-      skos:narrower: [OE-CONCEPT-000107]
-      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000112]
+      skos:narrower: [OE-CONCEPT-bio-core-allele]
+      skos:related: [OE-CONCEPT-bio-core-mutation, OE-CONCEPT-bio-core-inheritance]
 
-  - id: OE-CONCEPT-000107
+  - id: OE-CONCEPT-bio-core-allele
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -155,10 +155,10 @@ concepts:
           One of two or more alternative forms of a gene occupying the
           same locus on a chromosome.
     relations:
-      skos:broader: [OE-CONCEPT-000106]
-      skos:related: [OE-CONCEPT-000103, OE-CONCEPT-000111]
+      skos:broader: [OE-CONCEPT-bio-core-gene]
+      skos:related: [OE-CONCEPT-bio-core-mutation, OE-CONCEPT-bio-core-drift]
 
-  - id: OE-CONCEPT-000108
+  - id: OE-CONCEPT-bio-core-population
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -171,9 +171,9 @@ concepts:
           A group of interbreeding organisms of the same species
           occupying a defined geographic area at a given time.
     relations:
-      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000111]
+      skos:related: [OE-CONCEPT-bio-core-species, OE-CONCEPT-bio-core-drift]
 
-  - id: OE-CONCEPT-000109
+  - id: OE-CONCEPT-bio-core-species
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -187,9 +187,9 @@ concepts:
           fertile offspring, generally reproductively isolated from
           other such groups.
     relations:
-      skos:related: [OE-CONCEPT-000110, OE-CONCEPT-000114, OE-CONCEPT-000108, OE-CONCEPT-000116, OE-SANDBOX-CONCEPT-000001]
+      skos:related: [OE-CONCEPT-bio-core-speciation, OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-population, OE-CONCEPT-bio-core-extinction, OE-SANDBOX-CONCEPT-000001]
 
-  - id: OE-CONCEPT-000110
+  - id: OE-CONCEPT-bio-core-speciation
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -202,10 +202,10 @@ concepts:
           The evolutionary process by which populations diverge to
           become distinct, reproductively isolated species.
     relations:
-      skos:broader: [OE-CONCEPT-000101]
-      skos:related: [OE-CONCEPT-000109, OE-CONCEPT-000111]
+      skos:broader: [OE-CONCEPT-bio-core-evolution]
+      skos:related: [OE-CONCEPT-bio-core-species, OE-CONCEPT-bio-core-drift]
 
-  - id: OE-CONCEPT-000111
+  - id: OE-CONCEPT-bio-core-drift
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -219,10 +219,10 @@ concepts:
           from one generation to the next, independent of selective
           advantage.
     relations:
-      skos:broader: [OE-CONCEPT-000101]
-      skos:related: [OE-CONCEPT-000108, OE-CONCEPT-000107, OE-CONCEPT-000110]
+      skos:broader: [OE-CONCEPT-bio-core-evolution]
+      skos:related: [OE-CONCEPT-bio-core-population, OE-CONCEPT-bio-core-allele, OE-CONCEPT-bio-core-speciation]
 
-  - id: OE-CONCEPT-000112
+  - id: OE-CONCEPT-bio-core-inheritance
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -235,9 +235,9 @@ concepts:
           The transmission of genetic information from parent to
           offspring.
     relations:
-      skos:related: [OE-CONCEPT-000106, OE-CONCEPT-000101]
+      skos:related: [OE-CONCEPT-bio-core-gene, OE-CONCEPT-bio-core-evolution]
 
-  - id: OE-CONCEPT-000113
+  - id: OE-CONCEPT-bio-core-phylogeny
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -250,9 +250,9 @@ concepts:
           The evolutionary history and relatedness of a group of
           organisms, typically represented as a branching tree.
     relations:
-      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000101, OE-SANDBOX-CONCEPT-000001]
+      skos:related: [OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-evolution, OE-SANDBOX-CONCEPT-000001]
 
-  - id: OE-CONCEPT-000114
+  - id: OE-CONCEPT-bio-core-common-ancestor
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -265,9 +265,9 @@ concepts:
           An organism or population from which two or more descendant
           lineages have diverged.
     relations:
-      skos:related: [OE-CONCEPT-000113, OE-CONCEPT-000109, OE-SANDBOX-CONCEPT-000001]
+      skos:related: [OE-CONCEPT-bio-core-phylogeny, OE-CONCEPT-bio-core-species, OE-SANDBOX-CONCEPT-000001]
 
-  - id: OE-CONCEPT-000115
+  - id: OE-CONCEPT-bio-core-selection-pressure
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -281,9 +281,9 @@ concepts:
           increases reproductive success of particular variants within
           a population, driving the direction of selection.
     relations:
-      skos:related: [OE-CONCEPT-000102, OE-CONCEPT-000105]
+      skos:related: [OE-CONCEPT-bio-core-natural-selection, OE-CONCEPT-bio-core-fitness]
 
-  - id: OE-CONCEPT-000116
+  - id: OE-CONCEPT-bio-core-extinction
     type: oe:Concept
     status: stable
     version: 1.0.0
@@ -296,8 +296,8 @@ concepts:
           The complete disappearance of a species or other taxonomic
           group, ending its lineage.
     relations:
-      skos:broader: [OE-CONCEPT-000101]
-      skos:related: [OE-CONCEPT-000109]
+      skos:broader: [OE-CONCEPT-bio-core-evolution]
+      skos:related: [OE-CONCEPT-bio-core-species]
 
   # ==========================================================================
   # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
@@ -327,7 +327,7 @@ concepts:
           to chimpanzees — a strictly taxonomic/phylogenetic category,
           not an agency- or intentionality-bearing one.
     relations:
-      skos:related: [OE-CONCEPT-000114, OE-CONCEPT-000113, OE-CONCEPT-000109, OE-SANDBOX-CONCEPT-000002]
+      skos:related: [OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-phylogeny, OE-CONCEPT-bio-core-species, OE-SANDBOX-CONCEPT-000002]
     examples:
       - Homo sapiens, Homo neanderthalensis, and Australopithecus afarensis
         are all hominins.
@@ -353,7 +353,7 @@ concepts:
           variation and population history at past points in time rather
           than inferring it solely from present-day populations.
     relations:
-      skos:related: [OE-CONCEPT-000103, OE-SANDBOX-CONCEPT-000001]
+      skos:related: [OE-CONCEPT-bio-core-mutation, OE-SANDBOX-CONCEPT-000001]
     examples:
       - Sequencing DNA extracted from a Neanderthal fossil to compare it
         directly against present-day human genomes.

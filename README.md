@@ -256,7 +256,7 @@ conceptbase:
 The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389), merged) — every IRI below resolves today. See [`w3id-submission/openevo/`](w3id-submission/openevo/) for the `.htaccess` rules that implement this, and `docs/oecb_specifications.md` §4.2 for the interim MVP resolution scheme this implements:
 
 ```
-https://www.w3id.org/openevo/concept/OE-CONCEPT-000102       →  flat JSON (generated, scripts/build_registry.py)
+https://www.w3id.org/openevo/concept/OE-CONCEPT-bio-core-natural-selection       →  flat JSON (generated, scripts/build_registry.py)
 https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML (the #fragment is client-side only)
 https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML
 https://www.w3id.org/openevo/                                 →  redirects to this repository

@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "A heritable unit of DNA that functions as a basic unit of inheritance, typically encoding information for a specific product or trait.\n"
+    }
+  },
+  "id": "OE-CONCEPT-bio-core-gene",
+  "labels": {
+    "en": "Gene"
+  },
+  "relations": {
+    "skos:narrower": [
+      "OE-CONCEPT-bio-core-allele"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-bio-core-mutation",
+      "OE-CONCEPT-bio-core-inheritance"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

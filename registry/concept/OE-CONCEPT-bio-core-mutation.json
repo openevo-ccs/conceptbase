@@ -1,0 +1,23 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "A heritable change in a DNA sequence, serving as an ultimate source of genetic variation within a population.\n"
+    }
+  },
+  "id": "OE-CONCEPT-bio-core-mutation",
+  "labels": {
+    "en": "Mutation"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-bio-core-gene",
+      "OE-CONCEPT-bio-core-allele",
+      "OE-CONCEPT-bio-core-natural-selection",
+      "OE-SANDBOX-CONCEPT-000002"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

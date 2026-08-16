@@ -12,7 +12,7 @@ Specification (source of truth): https://github.com/openevo-ccs/conceptbase/blob
 |---|---|
 | `https://w3id.org/openevo/ontology` | The core ontology (raw YAML; `#ClassName` fragments select a class client-side) |
 | `https://w3id.org/openevo/vocab/{name-with-version}` | A controlled vocabulary file, e.g. `vocab/BIO-CORE-v1.0.0` |
-| `https://w3id.org/openevo/concept/{id}` | A single Concept instance as flat JSON, e.g. `concept/OE-CONCEPT-000102` |
+| `https://w3id.org/openevo/concept/{id}` | A single Concept instance as flat JSON, e.g. `concept/OE-CONCEPT-bio-core-natural-selection` |
 | `https://w3id.org/openevo/competency/{id}` | A single Competency instance as flat JSON, e.g. `competency/OE-COMPETENCY-000150` |
 | `https://w3id.org/openevo/alignment/{id}` | A cross-vocabulary alignment record as flat JSON |
 | `https://w3id.org/openevo/lpm/{id}` | The dependent repository that owns a given Learning Progression Model identifier |

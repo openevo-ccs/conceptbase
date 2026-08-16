@@ -17,9 +17,9 @@
   ],
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000114",
-      "OE-CONCEPT-000113",
-      "OE-CONCEPT-000109",
+      "OE-CONCEPT-bio-core-common-ancestor",
+      "OE-CONCEPT-bio-core-phylogeny",
+      "OE-CONCEPT-bio-core-species",
       "OE-SANDBOX-CONCEPT-000002"
     ]
   },

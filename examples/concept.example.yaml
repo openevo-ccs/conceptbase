@@ -6,7 +6,7 @@
 # vocabulary, this entry would be one item in vocabularies/*.yaml's
 # top-level `concepts:` list, not a standalone file.
 #
-# This mirrors BIO-CORE-v1.0.0's OE-CONCEPT-000102 (Natural Selection) in
+# This mirrors BIO-CORE-v1.0.0's OE-CONCEPT-bio-core-natural-selection (Natural Selection) in
 # shape, trimmed to the minimum a validator actually requires plus the one
 # optional field (relations) worth showing.
 # ============================================================================

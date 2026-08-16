@@ -1,0 +1,26 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The process by which information, traits, or practices move from one holder (organism, person, group, or system) to another.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-transmission",
+  "labels": {
+    "en": "Transmission"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-oe-interdisciplinary-evolutionary-process"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-inheritance",
+      "OE-CONCEPT-oe-interdisciplinary-teaching",
+      "OE-CONCEPT-oe-interdisciplinary-communication",
+      "OE-SANDBOX-CONCEPT-000003"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

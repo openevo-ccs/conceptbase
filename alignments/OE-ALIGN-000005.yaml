@@ -15,7 +15,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000005
-subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000211
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-agency
 object: AI4K12-v1.0.0:OE-COMPETENCY-ai4k12-4-d-i
 matchType: skos:relatedMatch
 assertedBy:
@@ -23,7 +23,7 @@ assertedBy:
 date: "2026-07-20"
 status: proposed
 rationale: >
-  OE-INTERDISCIPLINARY's Agency (OE-CONCEPT-000211) is defined in its own
+  OE-INTERDISCIPLINARY's Agency (OE-CONCEPT-oe-interdisciplinary-agency) is defined in its own
   vocabulary (via OE-STRAND-000223's performance indicator) as "a capacity
   to regulate behavior toward a goal-state, without requiring conscious
   intention" -- deliberately scoped to include non-conscious biological

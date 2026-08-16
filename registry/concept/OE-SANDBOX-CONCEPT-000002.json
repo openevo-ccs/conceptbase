@@ -17,7 +17,7 @@
   ],
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000103",
+      "OE-CONCEPT-bio-core-mutation",
       "OE-SANDBOX-CONCEPT-000001"
     ]
   },

@@ -1,0 +1,22 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Justified, retained information that an individual, group, or system can draw upon to act or reason.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-knowledge",
+  "labels": {
+    "en": "Knowledge"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-information",
+      "OE-CONCEPT-oe-interdisciplinary-collective-intelligence",
+      "OE-CONCEPT-oe-interdisciplinary-distributed-cognition"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

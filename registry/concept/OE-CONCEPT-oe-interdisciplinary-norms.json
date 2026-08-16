@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Shared expectations or rules of behavior within a group, enforced through social sanction rather than formal law.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-norms",
+  "labels": {
+    "en": "Norms"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-culture",
+      "OE-CONCEPT-oe-interdisciplinary-institutions",
+      "OE-CONCEPT-oe-interdisciplinary-information",
+      "OE-CONCEPT-oe-interdisciplinary-representation",
+      "OE-CONCEPT-oe-interdisciplinary-innovation"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

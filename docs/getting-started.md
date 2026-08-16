@@ -15,7 +15,7 @@ It uses the two real reference repos — [`bio-core-k12`](https://github.com/ope
 Open the [ConceptBase Explorer](https://openevo-ccs.github.io/conceptbase/). It auto-loads both reference LPMs on page load — you don't need to configure anything for this first look.
 
 Click the **Concept Lens** tab, then search for "Selection." You'll see:
-- `OE-CONCEPT-000213` (`OE-INTERDISCIPLINARY`) — a concept defined four different ways (biology, culture, education, AI).
+- `OE-CONCEPT-oe-interdisciplinary-selection` (`OE-INTERDISCIPLINARY`) — a concept defined four different ways (biology, culture, education, AI).
 - Every substrand across both loaded LPMs that references it.
 - The alignment records connecting it to `BIO-CORE`'s Natural Selection and to an NGSS performance expectation.
 
@@ -26,7 +26,7 @@ This is the thing OECB is actually for: the same idea, defined independently in 
 Pick any ID from what you just saw and hit its w3id URL directly:
 
 ```
-https://www.w3id.org/openevo/concept/OE-CONCEPT-000213
+https://www.w3id.org/openevo/concept/OE-CONCEPT-oe-interdisciplinary-selection
 https://www.w3id.org/openevo/lpm/OE-LPM-000002
 ```
 
@@ -59,7 +59,7 @@ Then open `strands/strand-101-variation-inheritance.yaml` and look at one `conce
 
 ```yaml
 concepts:
-  - id: OE-CONCEPT-000108   # Population
+  - id: OE-CONCEPT-bio-core-population   # Population
     emphasis: primary
 ```
 

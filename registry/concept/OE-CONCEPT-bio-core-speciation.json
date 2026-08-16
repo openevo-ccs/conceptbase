@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definitions": {
+    "en": {
+      "biology": "The evolutionary process by which populations diverge to become distinct, reproductively isolated species.\n"
+    }
+  },
+  "id": "OE-CONCEPT-bio-core-speciation",
+  "labels": {
+    "en": "Speciation"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-bio-core-evolution"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-bio-core-species",
+      "OE-CONCEPT-bio-core-drift"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}

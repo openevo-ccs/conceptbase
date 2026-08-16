@@ -1,7 +1,7 @@
 {
   "citations": [
     {
-      "text": "Reused from the same variation-selection-retention framework already cited on OE-CONCEPT-000213 (Mesoudi, A. (2011). Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences), applied here to language specifically rather than culture in general.\n"
+      "text": "Reused from the same variation-selection-retention framework already cited on OE-CONCEPT-oe-interdisciplinary-selection (Mesoudi, A. (2011). Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences), applied here to language specifically rather than culture in general.\n"
     }
   ],
   "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
@@ -19,9 +19,9 @@
   },
   "relations": {
     "skos:related": [
-      "OE-CONCEPT-000203",
-      "OE-CONCEPT-000219",
-      "OE-CONCEPT-000204"
+      "OE-CONCEPT-oe-interdisciplinary-transmission",
+      "OE-CONCEPT-oe-interdisciplinary-culture",
+      "OE-CONCEPT-oe-interdisciplinary-innovation"
     ]
   },
   "sandboxMeta": {

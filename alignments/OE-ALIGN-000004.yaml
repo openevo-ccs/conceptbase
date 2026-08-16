@@ -17,7 +17,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000004
-subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-000090
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-evolutionary-process
 object: AI4K12-v1.0.0:OE-COMPETENCY-ai4k12-3-a-vi
 matchType: skos:relatedMatch
 assertedBy:
@@ -25,7 +25,7 @@ assertedBy:
 date: "2026-07-20"
 status: proposed
 rationale: >
-  OE-INTERDISCIPLINARY's Evolutionary Process (OE-CONCEPT-000090, "any
+  OE-INTERDISCIPLINARY's Evolutionary Process (OE-CONCEPT-oe-interdisciplinary-evolutionary-process, "any
   process by which variants are generated, selected, and transmitted
   across iterations within a system") shares a structural pattern with
   AI4K12's "Nature of Learning (Learning from experience)" row

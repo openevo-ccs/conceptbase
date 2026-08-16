@@ -132,7 +132,7 @@ All entity identifiers **MUST** conform to the following patterns, enforced by `
 
 | Entity type | Pattern | Example |
 |---|---|---|
-| Concept | `^OE-CONCEPT-[0-9]{6}$` | `OE-CONCEPT-000213` |
+| Concept | `^OE-CONCEPT-[0-9]{6}$` | `OE-CONCEPT-oe-interdisciplinary-selection` |
 | LPM | `^OE-LPM-[0-9]{6}$` | `OE-LPM-000001` |
 | Strand/SubStrand | `^OE-STRAND-[0-9]{6}$` | `OE-STRAND-000101` |
 | Vocabulary reference | `^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$` | `BIO-CORE-v1.0.0` |
@@ -324,7 +324,7 @@ rationale: >
   {free text justification}
 ```
 
-`subject` and `object` **MUST** reference the permanent `conceptId` (e.g. `BIO-CORE-v1.0.0:OE-CONCEPT-000102`), never a label. This matches every other reference mechanism in OECB — `skos:broader`/`skos:narrower`/`skos:related` and `oe:hasConcept` all target `OE-CONCEPT-{id}` — because labels **MAY** change across versions while identifiers **MUST NOT** (§4.4). An alignment keyed on a label would silently desynchronize from its target on a legitimate label edit, with no schema-level way to detect the break.
+`subject` and `object` **MUST** reference the permanent `conceptId` (e.g. `BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection`), never a label. This matches every other reference mechanism in OECB — `skos:broader`/`skos:narrower`/`skos:related` and `oe:hasConcept` all target `OE-CONCEPT-{id}` — because labels **MAY** change across versions while identifiers **MUST NOT** (§4.4). An alignment keyed on a label would silently desynchronize from its target on a legitimate label edit, with no schema-level way to detect the break.
 
 ### 9.2 Normative Requirements
 

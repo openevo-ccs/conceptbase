@@ -1,0 +1,24 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A relatively durable change in knowledge, behavior, or capability resulting from experience, instruction, or practice.\n"
+    }
+  },
+  "id": "OE-CONCEPT-oe-interdisciplinary-learning",
+  "labels": {
+    "en": "Learning"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-scaffolding",
+      "OE-CONCEPT-oe-interdisciplinary-teaching",
+      "OE-CONCEPT-oe-interdisciplinary-development",
+      "OE-SANDBOX-CONCEPT-000004",
+      "OE-SANDBOX-CONCEPT-000006"
+    ]
+  },
+  "status": "stable",
+  "type": "oe:Concept",
+  "version": "1.0.0"
+}
