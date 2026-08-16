@@ -8,7 +8,7 @@
 
 ## Motivation
 
-CompetencyBase is currently populated by exactly one illustrative record (`competency:ccc-domain-a-curriculum-interpretation`), and its own README names this as a real, flagged gap, not a design choice. Separately, the `og:dispute:openevo-vs-kampourakis` dispute graph (`openevo-graph/nodes/disputes/dispute-openevo-vs-kampourakis.yaml`) already grounds its central `og:divergence:expert-reasoner-model` divergence in `OE-PROPOSITION-invariant-expert-reasoning`, whose sole `primarySource` is Nehm & Kampourakis (2022) (`lit:doi-10-48528-4sjc-kj23`) — but nothing in ConceptBase/CompetencyBase currently represents that same chapter's own explicit assessment-target framework (its Table 5, "Examples of possible assessment targets and associated learning objectives": Nature of Science, Language of Science, Evolution Knowledge, Science Practices, Cross-Cutting Concepts).
+CompetencyBase is currently populated by exactly one illustrative record (`competency:ccc-domain-a-curriculum-interpretation`), and its own README names this as a real, flagged gap, not a design choice. Separately, the `og:dispute:openevo-vs-kampourakis` dispute graph (`openevo-graph/nodes/disputes/dispute-openevo-vs-kampourakis.yaml`) already grounds its central `og:divergence:expert-reasoner-model` divergence in `OE-PROPOSITION-invariant-expert-reasoning`, whose sole `primarySource` is Nehm & Kampourakis (2022) (`OE-LITERATURE-nehm-2022`) — but nothing in ConceptBase/CompetencyBase currently represents that same chapter's own explicit assessment-target framework (its Table 5, "Examples of possible assessment targets and associated learning objectives": Nature of Science, Language of Science, Evolution Knowledge, Science Practices, Cross-Cutting Concepts).
 
 This is a genuine, checkable content gap: the chapter that grounds one side of a live OpenEvo dispute also contains a ready-made competency taxonomy that has never been turned into structured data, even though the dispute graph, TheoryBase, and LiteratureBase all already reference the chapter.
 
@@ -31,7 +31,7 @@ The `citationOnly: true` schema flag (RFC-0005) is **not** used here, for the sa
 ## Relations
 
 - Uses `oe:Competency` (RFC-0002) exclusively — no schema changes.
-- Each parent entry's `citations` cites Nehm & Kampourakis (2022), `doi: 10.48528/4sjc-kj23` (`lit:doi-10-48528-4sjc-kj23`).
+- Each parent entry's `citations` cites Nehm & Kampourakis (2022), `doi: 10.48528/4sjc-kj23` (`OE-LITERATURE-nehm-2022`).
 - Natural follow-up (not part of this RFC): an alignment or `openevo-graph` edge connecting this vocabulary to `OE-THEORY-dichotomized-causal-reasoning`'s `OE-ASSUMPTION-dcr-primary-responsibility` and to `og:divergence:disciplinary-scope`, and/or a crosswalk to `NGSS-LIFE-SCIENCE`'s three-dimensional-learning framing — left for a follow-up RFC/graph-layer edge, same deferral pattern RFC-0011 used for CCC's cross-framework alignments.
 
 ## Standards justification
