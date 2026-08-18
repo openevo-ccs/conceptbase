@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The capacity to monitor, evaluate, and regulate one's own cognitive processes — knowing what one knows, tracking how one is thinking, and adjusting strategies accordingly.\n"
+    }
+  },
+  "examples": [
+    "A student recognizing mid-exam that a chosen problem-solving strategy isn't working and deliberately switching to another one."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000011",
+  "labels": {
+    "en": "Metacognition"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
+      "OE-SANDBOX-CONCEPT-000010"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-01",
+    "expiresOn": "2027-08-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

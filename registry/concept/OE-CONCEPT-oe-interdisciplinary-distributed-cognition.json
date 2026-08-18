@@ -12,7 +12,8 @@
   "relations": {
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-knowledge",
-      "OE-CONCEPT-oe-interdisciplinary-collective-intelligence"
+      "OE-CONCEPT-oe-interdisciplinary-collective-intelligence",
+      "OE-SANDBOX-CONCEPT-000011"
     ]
   },
   "status": "stable",

@@ -15,7 +15,9 @@
   "relations": {
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-learning",
-      "OE-CONCEPT-oe-interdisciplinary-agency"
+      "OE-CONCEPT-oe-interdisciplinary-agency",
+      "OE-SANDBOX-CONCEPT-000010",
+      "OE-SANDBOX-CONCEPT-000012"
     ]
   },
   "sandboxMeta": {

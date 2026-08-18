@@ -239,7 +239,7 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-development, OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-selection, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000008]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-development, OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-selection, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000008, OE-SANDBOX-CONCEPT-000010]
 
   - id: OE-CONCEPT-oe-interdisciplinary-scaffolding
     type: oe:Concept
@@ -459,7 +459,7 @@ concepts:
           artifacts, and environment, rather than occurring solely
           within a single mind.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-knowledge, OE-CONCEPT-oe-interdisciplinary-collective-intelligence]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-knowledge, OE-CONCEPT-oe-interdisciplinary-collective-intelligence, OE-SANDBOX-CONCEPT-000011]
 
   # ==========================================================================
   # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
@@ -519,7 +519,7 @@ concepts:
           which evolved independently, and which are distinctively
           elaborated in a given lineage.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-CONCEPT-oe-interdisciplinary-agency]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000012]
     examples:
       - Testing tool-use problem-solving in corvids, great apes, and
         young children to compare the cognitive strategies each group
@@ -719,3 +719,89 @@ concepts:
           Y. Kafai (Eds.), Designing Constructionist Futures. MIT
           Press.
         doi: "10.7551/mitpress/12091.003.0037"
+
+  # --------------------------------------------------------------------------
+  # Authored 2026-08-01 to ground the OpenEvo-CCS crosswalk built against
+  # eva-graph's mpi_eva/sub-units/ccp/metarepresentation (see
+  # metadata/openevo_ccs_crosswalk.json there, and RFC-0017). These three
+  # constructs have real, citation-backed source material in that repo's
+  # own core.json/capacities.json/nodes but had no ConceptBase entry at all
+  # before this pass -- a direct gap found while crosswalking, not
+  # speculative content. Same MPI-EVA lineage as OE-SANDBOX-LPM-000003
+  # above, though not yet wired into that capstone's own strand content.
+  # Numbered 000010-000012 (not the branch's original 000007-000009) to
+  # avoid colliding with three unrelated sandbox concepts (Restructuration,
+  # Decentralized Causal Reasoning, Agent-Based Modeling) independently
+  # added to this same 000007-000009 range on main in the interim.
+  # --------------------------------------------------------------------------
+
+  - id: OE-SANDBOX-CONCEPT-000010
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-08-01"
+      expiresOn: "2027-08-01"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Theory of Mind
+    definitions:
+      en:
+        general: >
+          The capacity to attribute mental states — beliefs, desires,
+          intentions, knowledge — to oneself and others, and to use
+          those attributions to interpret and predict behavior.
+    relations:
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000011, OE-SANDBOX-CONCEPT-000012]
+    examples:
+      - Inferring that a person will look for an object where they last
+        saw it, even after it has been secretly moved, because they act
+        on their own (now false) belief rather than the true state of
+        the world.
+
+  - id: OE-SANDBOX-CONCEPT-000011
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-08-01"
+      expiresOn: "2027-08-01"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Metacognition
+    definitions:
+      en:
+        general: >
+          The capacity to monitor, evaluate, and regulate one's own
+          cognitive processes — knowing what one knows, tracking how
+          one is thinking, and adjusting strategies accordingly.
+    relations:
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-distributed-cognition, OE-SANDBOX-CONCEPT-000010]
+    examples:
+      - A student recognizing mid-exam that a chosen problem-solving
+        strategy isn't working and deliberately switching to another one.
+
+  - id: OE-SANDBOX-CONCEPT-000012
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-08-01"
+      expiresOn: "2027-08-01"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Intuitive Theories
+    definitions:
+      en:
+        general: >
+          Informal, domain-specific causal frameworks — folk physics,
+          folk biology, folk psychology — that people spontaneously
+          construct to explain and predict how the world works,
+          typically without formal instruction.
+    relations:
+      skos:related: [OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000010]
+    examples:
+      - A young child's untaught assumption that living things grow
+        from the inside on their own, while artifacts only change when
+        acted on from the outside — an intuitive "folk biology" causal
+        rule, not one explicitly taught.

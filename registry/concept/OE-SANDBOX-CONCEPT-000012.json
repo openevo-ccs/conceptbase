@@ -1,0 +1,28 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Informal, domain-specific causal frameworks — folk physics, folk biology, folk psychology — that people spontaneously construct to explain and predict how the world works, typically without formal instruction.\n"
+    }
+  },
+  "examples": [
+    "A young child's untaught assumption that living things grow from the inside on their own, while artifacts only change when acted on from the outside — an intuitive \"folk biology\" causal rule, not one explicitly taught."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000012",
+  "labels": {
+    "en": "Intuitive Theories"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000004",
+      "OE-SANDBOX-CONCEPT-000010"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-01",
+    "expiresOn": "2027-08-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

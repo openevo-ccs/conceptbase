@@ -1,0 +1,30 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The capacity to attribute mental states — beliefs, desires, intentions, knowledge — to oneself and others, and to use those attributions to interpret and predict behavior.\n"
+    }
+  },
+  "examples": [
+    "Inferring that a person will look for an object where they last saw it, even after it has been secretly moved, because they act on their own (now false) belief rather than the true state of the world."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000010",
+  "labels": {
+    "en": "Theory of Mind"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-agency",
+      "OE-SANDBOX-CONCEPT-000004",
+      "OE-SANDBOX-CONCEPT-000011",
+      "OE-SANDBOX-CONCEPT-000012"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-01",
+    "expiresOn": "2027-08-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
