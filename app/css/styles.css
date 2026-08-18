@@ -1,6 +1,7 @@
 /* ConceptBase Explorer — styles. Design tokens (palette, radii, font stack, light/dark
-   theme switching) live in openevo-graph/design-system/tokens.css, linked in index.html
-   before this file — see lab_manager/docs/design-notes/
+   theme switching) live in openevo-core/design-system/tokens.css (relocated from
+   lab_manager), linked in index.html before this file — see
+   lab_manager/docs/design-notes/
    ecosystem-authoring-format-style-guide-and-wordpress-ingestion-plan.md §4. This file
    holds only this app's layout/component rules. */
 
