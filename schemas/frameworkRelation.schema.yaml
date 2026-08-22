@@ -1,0 +1,151 @@
+# ============================================================================
+# OpenEvo ConceptBase — Framework Relation Schema (RFC-0018, proposed)
+# ============================================================================
+# Path: /schemas/frameworkRelation.schema.yaml
+#
+# Validates one typed causal/structural relation between two entries of an
+# external, jurisdiction-specific ORGANIZING framework -- e.g. Germany's KMK
+# "Basiskonzepte Biologie" -- rather than between two oe:Concept instances.
+#
+# Why this doesn't reuse concept.schema.yaml's `relations` block: that block
+# only supports plain SKOS predicates (skos:broader/narrower/related), which
+# are taxonomic/associative and carry no causal direction or mechanism. The
+# relations actually present in real Basiskonzepte source data (e.g.
+# EvoMentor_DE's basiskonzepte.json) are causal/mechanistic -- "enables",
+# "is regulated by", "explains the origin of" -- a different semantic class
+# SKOS was never meant to cover. Framework tags are also not oe:Concept
+# instances in the first place (see EvoMentor's canonical-curriculum-item
+# schema, frameworkTags field: "this framework has no ConceptBase
+# representation"), so a Concept-relations extension wouldn't even apply to
+# the right entities.
+#
+# Why this doesn't reuse alignment.schema.yaml either: Alignment (Phase 2)
+# asserts cross-VOCABULARY equivalence/closeness between two oe:Concept (or
+# oe:Competency) instances that are assumed to already denote related ideas
+# and is scoped to five SKOS matchTypes. FrameworkRelation instead connects
+# two tags WITHIN one external organizing framework (or, per the general
+# case below, across two such frameworks) with a typed causal predicate,
+# which is a materially different claim -- "X enables Y" is not a match/
+# equivalence assertion at all.
+#
+# Generalizes beyond KMK Basiskonzepte to any future jurisdiction-specific
+# organizing framework with its own tag set (e.g. NGSS's practice/
+# crosscutting-concept categories) -- frameworkId on each end names which
+# framework a tag belongs to, so a relation MAY cross frameworks (e.g. a
+# KMK Basiskonzept explaining why an NGSS crosscutting concept applies),
+# though the seed content in /framework-relations/ is single-framework only.
+# ============================================================================
+
+"$schema": "https://json-schema.org/draft/2020-12/schema"
+"$id": "https://www.w3id.org/openevo/schemas/frameworkRelation.schema.json"
+
+meta:
+  id: OE-SCHEMA-FRAMEWORK-RELATION
+  version: 1.0.0
+  status: proposed
+  authors:
+    - name: OpenEvo ConceptBase Maintainers
+  license: CC-BY-NC-SA-4.0
+  ontologyClass: oe:FrameworkRelation
+  phase: 1
+
+type: object
+
+properties:
+
+  id:
+    type: string
+    pattern: "^OE-FRAMEWORK-RELATION-[0-9]{6}$"
+    description: >
+      Permanent identifier for this relation record. Assigned
+      sequentially for now (Phase 1, zero prior instances) rather than
+      block-allocated -- same rationale GOVERNANCE.md already applies to
+      OE-LO-###### and OE-ALIGN-######: block allocation is only added
+      once a second independently governed repository starts minting
+      this id space. Resolves under
+      https://www.w3id.org/openevo/framework-relation/{id}.
+
+  subject:
+    "$ref": "#/$defs/frameworkTagRef"
+    description: The framework tag this relation originates from.
+
+  object:
+    "$ref": "#/$defs/frameworkTagRef"
+    description: The framework tag this relation points to.
+
+  relationType:
+    type: string
+    enum:
+      - enables
+      - requires
+      - regulates
+      - isRegulatedBy
+      - implements
+      - isImplementedBy
+      - controls
+      - isControlledBy
+      - explainsOriginOf
+      - isExplainedBy
+    description: >
+      Controlled causal/mechanistic relation type. Five inverse pairs:
+      requires has no declared inverse (deliberately -- "X requires Y"
+      does not imply a single well-formed converse predicate, unlike the
+      other four pairs which are each other's mirror image):
+        enables            <-> (no formal inverse; use requires on the object if the converse also holds)
+        regulates          <-> isRegulatedBy
+        implements         <-> isImplementedBy
+        controls           <-> isControlledBy
+        explainsOriginOf   <-> isExplainedBy
+      A relation and its inverse are both permitted to be asserted as
+      separate records (as the seed content in /framework-relations/
+      does throughout) rather than one being derived from the other --
+      this keeps every record independently queryable without requiring
+      inverse-inference logic, at the cost of requiring both directions
+      to be kept in sync by whoever edits the source relation. A
+      symmetry-check script analogous to /scripts/check_related_symmetry.py
+      (which performs the equivalent check for skos:related) is future
+      work, not part of this RFC.
+
+  assertedBy:
+    type: array
+    items:
+      type: string
+    minItems: 1
+    description: Contributor identifiers asserting this relation.
+
+  date:
+    type: string
+    format: date
+    description: ISO 8601 date the relation was asserted.
+
+  status:
+    type: string
+    enum: [proposed, accepted, contested]
+    description: >
+      Relation-specific lifecycle, mirroring oe:Alignment's status
+      field and its rationale (Spec §9.2 equivalent for this schema):
+      a contested relation must remain visible/resolvable, not
+      suppressed, since disagreement about a causal claim is itself
+      meaningful curricular data.
+
+  rationale:
+    type: string
+    description: >
+      Free-text justification for the asserted relation -- the
+      didactic/biological reasoning connecting subject and object.
+
+required: [id, subject, object, relationType, assertedBy, date, status, rationale]
+additionalProperties: false
+
+"$defs":
+  frameworkTagRef:
+    type: string
+    pattern: "^[a-z0-9-]+:[a-zA-Z0-9_-]+$"
+    description: >
+      A `{frameworkId}:{tagId}` reference, mirroring the shape of
+      EvoMentor's own canonical-curriculum-item frameworkTags field
+      (frameworkId + tagId) rather than inventing a parallel naming
+      scheme. Example: "kmk-basiskonzepte-biologie:bk_struktur_funktion".
+      tagId is carried through as-is from the source framework (not
+      normalized), consistent with EvoMentor's own documented choice
+      to do the same.
