@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Project** | A new app in the ConceptBase Explorer ecosystem: GitHub-OAuth-gated exploration, review, and AI-assisted deliberation over any OECB-compatible Learning Progression Model Repository (LPMR) |
-| **Relationship to existing repos** | Extends `conceptbase` (`app/`), reads from any LPMR (`bio-core-k12`, `oe-interdisciplinary-k12`, future sandbox forks), reads agent personas from `curriculum-agents`, calls the SAIA (GWDG) OpenAI-compatible LLM API |
+| **Relationship to existing repos** | Extends `conceptbase` (`app/`), reads from any LPMR (`bio-core-k12`, `interdisciplinary-k12`, future sandbox forks), reads agent personas from `curriculum-agents`, calls the SAIA (GWDG) OpenAI-compatible LLM API |
 | **Document status** | Draft planning specification — **not yet implemented, not yet RFC'd**. Structured like `eva_buch/app_specs.md` (living doc) crossed with this repo's RFC discipline: sections marked **Open Decision** are checkpoints for Dustin, not settled design. |
 | **Author** | Claude (planning pass), for review by Dustin Eirdosh |
 | **Date** | 2026-07-22 |
@@ -58,7 +58,7 @@ reinvented.
   content object defined by `schemas/lpm.schema.yaml`.
 - **LPMR** (this doc's term, not yet used elsewhere in the codebase) — a **Learning
   Progression Model Repository**: an independently-governed git repo that hosts one LPM
-  and validates it against OECB schemas — e.g. `bio-core-k12`, `oe-interdisciplinary-k12`,
+  and validates it against OECB schemas — e.g. `bio-core-k12`, `interdisciplinary-k12`,
   or any third party's repo that pins `conceptbase` the same way (see README
   ["Referencing a concept from a dependent repository"](../../README.md#quickstart)).
   "OECB-compatible" means: has a manifest pinning an `ontology`/`vocabularies` version and
@@ -385,7 +385,7 @@ spot-checked; the UI should visibly say which model actually produced a given re
 A review/flag/link record (§8) can point at:
 - another entity in the *same* LPMR (e.g. "this SubStrand contradicts Strand 3's framing"),
 - an entity in a *different* LPMR (cross-repo — e.g. flagging that `bio-core-k12` and
-  `oe-interdisciplinary-k12` define "Selection" incompatibly, the same kind of finding the
+  `interdisciplinary-k12` define "Selection" incompatibly, the same kind of finding the
   [Selection cross-domain case study](selection-cross-domain-case-study.md) surfaced by hand),
 - a `conceptbase` alignment record (`OE-ALIGN-######`) or Concept Lens deep link (`?lens=`),
 - a `curriculum-agents` artifact (`artifacts/examples/...`, and later `discussions/`/

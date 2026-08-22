@@ -104,7 +104,7 @@ Each LPM reserves one `000N00`–`000N99` block. Within it: `0NN0` is reserved f
 | LPM | Block | Currently used |
 |---|---|---|
 | `bio-core-k12` (`OE-LPM-000001`) | `000100`–`000199` | 101–103 (strands), 111–114/121–124/131–134 (substrands) |
-| `oe-interdisciplinary-k12` (`OE-LPM-000002`) | `000200`–`000299` | 201–203 (strands), 211–214/221–224/231–234 (substrands) |
+| `interdisciplinary-k12` (`OE-LPM-000002`) | `000200`–`000299` | 201–203 (strands), 211–214/221–224/231–234 (substrands) |
 
 ### LPM ID blocks (`OE-LPM-######`)
 
@@ -152,7 +152,7 @@ Per specification §10.3, a CI compatibility-checker (Phase 4 deliverable) **MUS
 
 This repository does not yet have the full CI build/validation pipeline (spec §5.2, §13 — planned, not yet implemented). What exists today:
 
-- [`scripts/validate.py`](scripts/validate.py) — offline JSON Schema validation against `schemas/*.schema.yaml` (works around a `common.defs.yaml` `$ref` resolution gap that breaks plain `check-jsonschema` — see the script's docstring). Wired into CI via [`.github/workflows/validate.yml`](.github/workflows/validate.yml), which runs it on every PR against every vocabulary, alignment, and example file in this repo. `bio-core-k12` and `oe-interdisciplinary-k12` each have their own `validate.yml` that checks out this repo alongside themselves and run it against their own `lpm.yaml`/`strands/*.yaml`. See [`docs/getting-started.md`](docs/getting-started.md) for the full walkthrough.
+- [`scripts/validate.py`](scripts/validate.py) — offline JSON Schema validation against `schemas/*.schema.yaml` (works around a `common.defs.yaml` `$ref` resolution gap that breaks plain `check-jsonschema` — see the script's docstring). Wired into CI via [`.github/workflows/validate.yml`](.github/workflows/validate.yml), which runs it on every PR against every vocabulary, alignment, and example file in this repo. `bio-core-k12` and `interdisciplinary-k12` each have their own `validate.yml` that checks out this repo alongside themselves and run it against their own `lpm.yaml`/`strands/*.yaml`. See [`docs/getting-started.md`](docs/getting-started.md) for the full walkthrough.
 - [`scripts/check_related_symmetry.py`](scripts/check_related_symmetry.py) — verifies that every `skos:related` assertion across `vocabularies/*.yaml` is reciprocated (SKOS's own symmetric-relation semantics, inherited by `oe:Concept`). Not yet wired into CI — run manually: `python scripts/check_related_symmetry.py`.
 
 Contributors adding new concepts with `skos:related` relations should run `check_related_symmetry.py` before opening a PR; `validate.py` runs automatically, but can also be run locally first (same commands CI uses, see `docs/getting-started.md`).

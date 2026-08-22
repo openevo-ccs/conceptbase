@@ -8,7 +8,7 @@
   "OE-LPM-000002": {
     "owner": "openevo-ccs",
     "ref": "main",
-    "repo": "oe-interdisciplinary-k12",
+    "repo": "interdisciplinary-k12",
     "vocabulary": "OE-INTERDISCIPLINARY-v1.0.0"
   }
 }

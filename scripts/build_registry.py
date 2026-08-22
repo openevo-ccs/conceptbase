@@ -52,14 +52,14 @@ LPM_INDEX = {
     },
     "OE-LPM-000002": {
         "owner": "openevo-ccs",
-        "repo": "oe-interdisciplinary-k12",
+        "repo": "interdisciplinary-k12",
         "ref": "main",
         "vocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
     },
 }
 
 # Strand ID numeric ranges -> owning LPM, per GOVERNANCE.md's "Strand ID
-# blocks" table (bio-core-k12: 000100-000199, oe-interdisciplinary-k12:
+# blocks" table (bio-core-k12: 000100-000199, interdisciplinary-k12:
 # 000200-000299 - same block-per-hundred convention as the concept blocks).
 STRAND_RANGES = [
     {"min": 100, "max": 199, "lpm": "OE-LPM-000001"},
@@ -94,7 +94,7 @@ SANDBOX_LPM_INDEX = {
         "forkedFrom": "OE-LPM-000002",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
-        "repo": "oe-interdisciplinary-k12",
+        "repo": "interdisciplinary-k12",
         "ref": "sandbox/mpi-eva-capstone",
     },
     "OE-SANDBOX-LPM-000004": {
@@ -102,7 +102,7 @@ SANDBOX_LPM_INDEX = {
         "forkedFrom": "OE-LPM-000002",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
-        "repo": "oe-interdisciplinary-k12",
+        "repo": "interdisciplinary-k12",
         "ref": "sandbox/machine-culture-coevolution",
     },
 }

@@ -2,7 +2,7 @@
 
 This is the walkthrough for the audience the main [README](../README.md)'s Quickstart is too abstract for: someone who wants to build their own Learning Progression Model (LPM), Strand, or Collection repository against OECB, and needs to see the whole pipeline work once, end to end, before starting their own.
 
-It uses the two real reference repos — [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`oe-interdisciplinary-k12`](https://github.com/openevo-ccs/oe-interdisciplinary-k12) — as the worked example throughout, not a synthetic one. Both are early/draft-stage, which is itself useful to see: this is what a real, still-evolving dependent repo looks like, not an idealized final state.
+It uses the two real reference repos — [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12) — as the worked example throughout, not a synthetic one. Both are early/draft-stage, which is itself useful to see: this is what a real, still-evolving dependent repo looks like, not an idealized final state.
 
 ## 0. What you'll need
 
@@ -76,7 +76,7 @@ python scripts/validate.py schemas/strand.schema.yaml ../bio-core-k12/strands/*.
 
 Both should print `OK` for every file.
 
-This isn't just a manual courtesy check: `bio-core-k12` and `oe-interdisciplinary-k12` each have their own [`.github/workflows/validate.yml`](https://github.com/openevo-ccs/bio-core-k12/blob/main/.github/workflows/validate.yml) that checks out `conceptbase` alongside itself and runs these exact commands on every PR — so if you're contributing to either, this is also what CI will run against your change, not a separate check you have to guess at. `conceptbase` itself has an analogous [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) covering every real vocabulary, alignment, and example file in this repo. This is schema validation only — the full spec §10.3 CI compatibility-checker (pin-resolution verification, deprecated-reference flagging) is still Phase 4 scope, not yet built.
+This isn't just a manual courtesy check: `bio-core-k12` and `interdisciplinary-k12` each have their own [`.github/workflows/validate.yml`](https://github.com/openevo-ccs/bio-core-k12/blob/main/.github/workflows/validate.yml) that checks out `conceptbase` alongside itself and runs these exact commands on every PR — so if you're contributing to either, this is also what CI will run against your change, not a separate check you have to guess at. `conceptbase` itself has an analogous [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) covering every real vocabulary, alignment, and example file in this repo. This is schema validation only — the full spec §10.3 CI compatibility-checker (pin-resolution verification, deprecated-reference flagging) is still Phase 4 scope, not yet built.
 
 ## 5. Copy a minimal example instead of reverse-engineering a big one
 

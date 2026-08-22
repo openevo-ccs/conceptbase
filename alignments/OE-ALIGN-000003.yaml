@@ -3,7 +3,7 @@
 # ============================================================================
 # First concept-to-competency alignment (RFC-0008 unblocks the identifier
 # shape; this record is the first to use it). Directly tests Strand 1's
-# own claim (oe-interdisciplinary-k12, OE-STRAND-000213/000214) that
+# own claim (interdisciplinary-k12, OE-STRAND-000213/000214) that
 # Selection is a genuine cross-domain mechanism by checking it against a
 # real NGSS performance expectation, not just the vocabulary's own say-so.
 # See docs/design-notes/selection-cross-domain-case-study.md for the full

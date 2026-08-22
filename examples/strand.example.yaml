@@ -3,7 +3,7 @@
 # ============================================================================
 # Illustrative only -- OE-STRAND-000900/000901 are not registered IDs (see
 # examples/README.md). Compare the real strand files in bio-core-k12/strands/
-# and oe-interdisciplinary-k12/strands/, which this is trimmed down from.
+# and interdisciplinary-k12/strands/, which this is trimmed down from.
 #
 # `concepts[].emphasis` is the field that makes horizontal coherence
 # machine-checkable: "primary" means this (sub)strand is structurally

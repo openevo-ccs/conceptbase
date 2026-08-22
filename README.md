@@ -111,7 +111,7 @@ The Phase 1 pilot review surfaced a series of changes worth making immediately r
 
 Ontology `v1.3.0` reflects RFC-0001/0002; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)). Ontology `v1.3.1` and spec `v0.4.0` reflect [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md). `schemas/competency.schema.yaml` reached `v1.1.0` with RFC-0005's `citationOnly` addition; `schemas/common.defs.yaml` reached `v1.4.0` with RFC-0008's widened `alignmentConceptRef` pattern.
 
-A worked demonstration of what the alignment layer is *for* — not just RFC mechanics — is the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md): it checks `oe-interdisciplinary-k12`'s claim that "Selection" is a genuine transferable mechanism across biology, culture, and AI against real external standards (NGSS, AI4K12), confirming the biology claim and surfacing two concrete, actionable gaps in the AI claim. The [ConceptBase Explorer](#conceptbase-explorer)'s new **Concept Lens** view (`app/js/views/conceptLensView.js`) is the tool this case study was done with — pick any concept or competency across the *entire* registry and see its full definition, every LPM substrand that references it, and every alignment record connecting it to other vocabularies, in one place. `?lens={query}` deep-links straight into it.
+A worked demonstration of what the alignment layer is *for* — not just RFC mechanics — is the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md): it checks `interdisciplinary-k12`'s claim that "Selection" is a genuine transferable mechanism across biology, culture, and AI against real external standards (NGSS, AI4K12), confirming the biology claim and surfacing two concrete, actionable gaps in the AI claim. The [ConceptBase Explorer](#conceptbase-explorer)'s new **Concept Lens** view (`app/js/views/conceptLensView.js`) is the tool this case study was done with — pick any concept or competency across the *entire* registry and see its full definition, every LPM substrand that references it, and every alignment record connecting it to other vocabularies, in one place. `?lens={query}` deep-links straight into it.
 
 ---
 
@@ -276,7 +276,7 @@ The full `validation/` directory and `oecb-validate` CLI referenced by earlier d
 python scripts/validate.py schemas/concept.schema.yaml examples/concept.example.yaml
 ```
 
-A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs ([`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12), [`oe-interdisciplinary-k12`](https://github.com/openevo-ccs/oe-interdisciplinary-k12)) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
+A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs ([`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12), [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
 
 Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails against these schemas with a network-resolution error — every schema's `$ref` to `common.defs.yaml` resolves against a w3id URL that isn't served yet (a known gap; see the script's docstring). `scripts/validate.py` resolves that `$ref` from the local `schemas/` directory instead.
 
@@ -307,13 +307,13 @@ ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https
                                PROJECT REPOS
      Learning Progression Models (LPMs) that instantiate ConceptBase's
      ontology and vocabularies directly:
-              e.g. bio-core-k12              e.g. oe-interdisciplinary-k12
+              e.g. bio-core-k12              e.g. interdisciplinary-k12
 ```
 
 Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice:
 
 - **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`.
-- **[`oe-interdisciplinary-k12`](https://github.com/openevo-ccs/oe-interdisciplinary-k12)** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
+- **[`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
 
 Both are early/draft-stage repositories, not yet themselves stable releases.
 

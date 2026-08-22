@@ -138,7 +138,7 @@ Both are additive (new properties; no existing class, property, domain, or range
 - Builds directly on `oe:SubStrand` and `oe:hasSubStrand` (§6.1, §6.3) — extends, does not modify, the existing recursive composition model.
 - Directly operationalizes design principle 7 / spec §8.6 (theoretical pluralism) at a finer grain than the existing vocabulary-level mechanism (`BIO-CORE` vs. `OE-INTERDISCIPLINARY`) — pluralism *within* one LPM's SubStrand, not only *between* LPMs.
 - Grounded in [`docs/design-notes/human-dimensions-k12-case-study.md`](../docs/design-notes/human-dimensions-k12-case-study.md), which this RFC treats as its motivating research artifact per the same relationship the Selection cross-domain case study has to earlier alignment work.
-- No existing entity's `status`, `definition`, or relations are changed by this RFC. No existing SubStrand file requires modification to remain valid (all 24 existing SubStrands across `bio-core-k12` and `oe-interdisciplinary-k12` currently use neither new field and are unaffected).
+- No existing entity's `status`, `definition`, or relations are changed by this RFC. No existing SubStrand file requires modification to remain valid (all 24 existing SubStrands across `bio-core-k12` and `interdisciplinary-k12` currently use neither new field and are unaffected).
 
 ## Standards justification
 
@@ -165,4 +165,4 @@ None required — this RFC does not introduce a new vocabulary or LPM. §5 above
 - [x] Field names and semantics confirmed as drafted — `trajectoryVariants` confirmed as a **core schema field**, not nested under `extensions`
 - [x] `0NN(k+4)` ID convention confirmed
 
-Applied to `schemas/common.defs.yaml` (1.4.0 → 1.6.0, combined with RFC-0010), `schemas/strand.schema.yaml` (1.1.1 → 1.2.0), `ontologies/core_v1.yaml` (1.3.1 → 1.5.0, combined with RFC-0010), `GOVERNANCE.md`, and `docs/oecb_specifications.md` (0.4.0 → 0.5.0) on 2026-07-21. Verified against positive and negative test fixtures (valid `trajectoryVariants`/`contextAssumption` usage accepted; a variant missing `contextAssumption` correctly rejected) before real content was built on top of it. Regression-checked against both `bio-core-k12` and `oe-interdisciplinary-k12`'s existing strand files — no breakage.
+Applied to `schemas/common.defs.yaml` (1.4.0 → 1.6.0, combined with RFC-0010), `schemas/strand.schema.yaml` (1.1.1 → 1.2.0), `ontologies/core_v1.yaml` (1.3.1 → 1.5.0, combined with RFC-0010), `GOVERNANCE.md`, and `docs/oecb_specifications.md` (0.4.0 → 0.5.0) on 2026-07-21. Verified against positive and negative test fixtures (valid `trajectoryVariants`/`contextAssumption` usage accepted; a variant missing `contextAssumption` correctly rejected) before real content was built on top of it. Regression-checked against both `bio-core-k12` and `interdisciplinary-k12`'s existing strand files — no breakage.

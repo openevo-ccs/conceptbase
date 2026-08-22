@@ -8,7 +8,7 @@ export const CONCEPTBASE_REGISTRY = {
 
 export const DEFAULT_SLOTS = {
   A: { owner: "openevo-ccs", repo: "bio-core-k12", ref: "main", lpmPath: "lpm.yaml" },
-  B: { owner: "openevo-ccs", repo: "oe-interdisciplinary-k12", ref: "main", lpmPath: "lpm.yaml" },
+  B: { owner: "openevo-ccs", repo: "interdisciplinary-k12", ref: "main", lpmPath: "lpm.yaml" },
 };
 
 export const SLOT_KEYS = ["A", "B"];

@@ -121,7 +121,7 @@ build in this order — see §7 for actual phasing logic.
 
 This is the part of the prompt that doesn't reduce to "add SAIA to the `conceptbase` app."
 A **federated LPMR maintainer** — someone running their own OECB-compatible repo the way
-`bio-core-k12` or `oe-interdisciplinary-k12` do, per this ecosystem's stated pluralism (README
+`bio-core-k12` or `interdisciplinary-k12` do, per this ecosystem's stated pluralism (README
 §"Why Does This Exist?": "independently maintained repositories... can interoperate without
 every project reinventing its own data model") — has a genuinely different relationship to
 GWDG's tools than OpenEvo/OECB itself does:
