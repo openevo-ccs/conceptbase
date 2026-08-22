@@ -19,7 +19,7 @@
 
 meta:
   id: OE-SCHEMA-LPM
-  version: 1.2.0
+  version: 1.3.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -71,6 +71,18 @@ properties:
       promoted. Only meaningful on a sandbox-tier LPM — a promoted,
       permanent LPM MUST NOT set this (permanent-tier merges use the
       existing status: deprecated + supersededBy pattern instead).
+
+  epistemicStatus:
+    "$ref": "common.defs.yaml#/$defs/epistemicStatus"
+    description: >
+      Whether this LPM is a designed thought-experiment/comparison
+      object or a field-validated curriculum (RFC-0019). Required on
+      every LPM at either tier — see the shared `required` list below,
+      not the tier-specific oneOf branches, since this question applies
+      regardless of promotion status.
+
+  epistemicStatusNote:
+    "$ref": "common.defs.yaml#/$defs/epistemicStatusNote"
 
   version:
     "$ref": "common.defs.yaml#/$defs/semver"
@@ -145,6 +157,7 @@ required:
   - license
   - conceptbase
   - strands
+  - epistemicStatus
 
 additionalProperties: false
 

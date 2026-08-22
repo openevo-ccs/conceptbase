@@ -21,7 +21,7 @@
 
 meta:
   id: OE-SCHEMA-COMMON
-  version: 1.10.0
+  version: 1.11.0
   status: stable
   authors:
     - name: OpenEvo ConceptBase Maintainers
@@ -239,6 +239,33 @@ meta:
       Optional free-text explanation attached to an entity carrying
       `status: retracted` (RFC-0001). Additive field — existing entries
       are not required to be migrated.
+
+  epistemicStatus:
+    type: string
+    enum: [designed-thought-experiment, field-validated-curriculum]
+    description: >
+      Structural declaration of what kind of claim this oe:LPM makes
+      (RFC-0019), orthogonal to both `status` (lifecycle maturity) and
+      `sandboxMeta`/`sandboxStatus` (time-boxed fork provisionality,
+      RFC-0001/RFC-0010). `designed-thought-experiment` means the LPM is
+      a deliberately synthetic comparison, demonstration, or methodology
+      object — not a claim that this content should be taught as-is in a
+      real classroom. `field-validated-curriculum` means it has actually
+      been piloted, reviewed, or adopted as real instructional content.
+      Additive enum — new values (e.g. `field-piloted` for partial
+      validation) may be proposed later via ordinary RFC, same pattern as
+      `contextAssumption`'s enum.
+
+  epistemicStatusNote:
+    type: string
+    description: >
+      Optional free-text elaboration (RFC-0019), mirroring
+      `retractionNote`'s pattern. Recommended when
+      `epistemicStatus: designed-thought-experiment` is set on an LPM
+      that also genuinely instantiates a real academic position
+      elsewhere in the ecosystem (e.g. a dispute-graph edge) — those two
+      facts don't contradict each other and should be stated together,
+      not left for a reader to reconcile alone.
 
   languageTag:
     type: string

@@ -20,7 +20,7 @@
 # ============================================================================
 
 id: OE-ONTOLOGY
-version: 1.5.0
+version: 1.6.0
 status: stable
 authors:
   - name: OpenEvo ConceptBase Maintainers
@@ -328,6 +328,22 @@ properties:
       (rich-scaffolding | minimal-prior-exposure) is constrained at the
       schema layer (common.defs.yaml#/$defs/contextAssumption), not
       enumerated here — the same pattern already used for oe:status.
+
+  oe:epistemicStatus:
+    label: epistemic status
+    domain: oe:LPM
+    range: xsd:string
+    status: accepted
+    definition: >
+      Declares whether an oe:LPM is a designed thought-experiment/
+      comparison object or a field-validated curriculum (RFC-0019),
+      orthogonal to oe:status (lifecycle maturity) and sandboxMeta/
+      sandboxStatus (time-boxed fork provisionality). Value space
+      (designed-thought-experiment | field-validated-curriculum) is
+      constrained at the schema layer
+      (common.defs.yaml#/$defs/epistemicStatus), not enumerated here —
+      the same pattern already used for oe:status and
+      oe:contextAssumption.
 
   oe:hasTrajectoryVariant:
     label: has trajectory variant

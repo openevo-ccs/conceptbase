@@ -1,12 +1,14 @@
 {
   "lpm": {
     "OE-LPM-000001": {
+      "epistemicStatus": "designed-thought-experiment",
       "owner": "openevo-ccs",
       "ref": "main",
       "repo": "bio-core-k12",
       "vocabulary": "BIO-CORE-v1.0.0"
     },
     "OE-LPM-000002": {
+      "epistemicStatus": "designed-thought-experiment",
       "owner": "openevo-ccs",
       "ref": "main",
       "repo": "interdisciplinary-k12",

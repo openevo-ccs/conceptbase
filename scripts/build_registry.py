@@ -49,12 +49,14 @@ LPM_INDEX = {
         "repo": "bio-core-k12",
         "ref": "main",
         "vocabulary": "BIO-CORE-v1.0.0",
+        "epistemicStatus": "designed-thought-experiment",
     },
     "OE-LPM-000002": {
         "owner": "openevo-ccs",
         "repo": "interdisciplinary-k12",
         "ref": "main",
         "vocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+        "epistemicStatus": "designed-thought-experiment",
     },
 }
 
@@ -80,6 +82,7 @@ SANDBOX_LPM_INDEX = {
         "owner": "openevo-ccs",
         "repo": "bio-core-k12",
         "ref": "sandbox/human-evolution-capstone",
+        "epistemicStatus": "designed-thought-experiment",
     },
     "OE-SANDBOX-LPM-000002": {
         "labels": {"en": "BIO-CORE: Human Lineage Across K-12 (Genetics & Paleoanthropology)"},
@@ -88,14 +91,19 @@ SANDBOX_LPM_INDEX = {
         "owner": "openevo-ccs",
         "repo": "bio-core-k12",
         "ref": "sandbox/human-evolution-k12-strand",
+        "epistemicStatus": "designed-thought-experiment",
     },
     "OE-SANDBOX-LPM-000003": {
-        "labels": {"en": "OE-Interdisciplinary: MPI-EVA Cross-Disciplinary Capstone"},
+        # Branch renamed 2026-08-22 (dropped mpi- prefix as part of the
+        # depersonalization pass); stale origin/sandbox/mpi-eva-capstone
+        # remote ref was deleted the same day.
+        "labels": {"en": "OE-Interdisciplinary: Evolutionary Anthropology Cross-Disciplinary Capstone"},
         "forkedFrom": "OE-LPM-000002",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
         "repo": "interdisciplinary-k12",
-        "ref": "sandbox/mpi-eva-capstone",
+        "ref": "sandbox/eva-capstone",
+        "epistemicStatus": "designed-thought-experiment",
     },
     "OE-SANDBOX-LPM-000004": {
         "labels": {"en": "OE-Interdisciplinary: Machine Culture and Human-AI Coevolution Capstone"},
@@ -104,6 +112,7 @@ SANDBOX_LPM_INDEX = {
         "owner": "openevo-ccs",
         "repo": "interdisciplinary-k12",
         "ref": "sandbox/machine-culture-coevolution",
+        "epistemicStatus": "designed-thought-experiment",
     },
 }
 

@@ -1,11 +1,12 @@
 {
+  "epistemicStatus": "designed-thought-experiment",
   "forkedFrom": "OE-LPM-000002",
   "id": "OE-SANDBOX-LPM-000003",
   "labels": {
-    "en": "OE-Interdisciplinary: MPI-EVA Cross-Disciplinary Capstone"
+    "en": "OE-Interdisciplinary: Evolutionary Anthropology Cross-Disciplinary Capstone"
   },
   "owner": "openevo-ccs",
-  "ref": "sandbox/mpi-eva-capstone",
+  "ref": "sandbox/eva-capstone",
   "repo": "interdisciplinary-k12",
   "sandboxMeta": {
     "created": "2026-07-21",
