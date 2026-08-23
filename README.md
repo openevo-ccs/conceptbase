@@ -111,7 +111,7 @@ The Phase 1 pilot review surfaced a series of changes worth making immediately r
 
 Ontology `v1.3.0` reflects RFC-0001/0002; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)). Ontology `v1.3.1` and spec `v0.4.0` reflect [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md). `schemas/competency.schema.yaml` reached `v1.1.0` with RFC-0005's `citationOnly` addition; `schemas/common.defs.yaml` reached `v1.4.0` with RFC-0008's widened `alignmentConceptRef` pattern.
 
-A worked demonstration of what the alignment layer is *for* — not just RFC mechanics — is the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md): it checks `interdisciplinary-k12`'s claim that "Selection" is a genuine transferable mechanism across biology, culture, and AI against real external standards (NGSS, AI4K12), confirming the biology claim and surfacing two concrete, actionable gaps in the AI claim. The [ConceptBase Explorer](#conceptbase-explorer)'s new **Concept Lens** view (`app/js/views/conceptLensView.js`) is the tool this case study was done with — pick any concept or competency across the *entire* registry and see its full definition, every LPM substrand that references it, and every alignment record connecting it to other vocabularies, in one place. `?lens={query}` deep-links straight into it.
+A worked demonstration of what the alignment layer is *for* — not just RFC mechanics — is the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md): it checks `interdisciplinary-k12`'s claim that "Selection" is a genuine transferable mechanism across biology, culture, and AI against real external standards (NGSS, AI4K12), confirming the biology claim and surfacing two concrete, actionable gaps in the AI claim — pick any concept or competency across the whole registry and you can trace its full definition, every LPM substrand that references it, and every alignment record connecting it to other vocabularies, straight from the `alignments/` and `registry/` files cited in the case study.
 
 ---
 
@@ -166,22 +166,18 @@ conceptbase/
 │   ├── OE-ALIGN-000004.yaml
 │   └── OE-ALIGN-000005.yaml
 │
-├── registry/                   # Generated (scripts/build_registry.py) — MVP flat-JSON
+├── registry/                   # Generated (scripts/build_registry.py) — MVP flat-JSON,
+│   │                            # deployed as-is to GitHub Pages (.github/workflows/pages.yml)
 │   ├── concept/{id}.json        # resolution targets for the w3id namespace; NOT hand-edited,
 │   ├── competency/{id}.json     # re-run the script after editing vocabularies/ or alignments/
 │   ├── alignment/{id}.json      # (competency/ added by RFC-0008)
 │   ├── lpm-index.json
-│   └── strand-index.json
+│   ├── strand-index.json
+│   └── resolve.html            # Static LPM/Strand ID -> owning-repo lookup, used by the
+│                                # w3id .htaccess rules for /openevo/lpm/{id}, /strand/{id}
 │
 ├── w3id-submission/openevo/    # .htaccess + readme.md — submitted and merged upstream,
 │                                # perma-id/w3id.org#6389; www.w3id.org/openevo/ is now live
-│
-├── app/                       # ConceptBase Explorer — static client-side app, see below
-│   ├── index.html
-│   ├── css/
-│   ├── js/
-│   │   └── views/conceptLensView.js  # Concept Lens: cross-vocabulary lookup + alignments, any concept/competency
-│   └── registry/resolve.html  # Static LPM/Strand ID -> owning-repo lookup (see registry/ above)
 │
 ├── scripts/
 │   ├── check_related_symmetry.py       # Standalone SKOS symmetry checker (not yet wired into CI)
@@ -239,7 +235,7 @@ Any proposal for a novel schema structure must document why an existing standard
 
 ## Quickstart
 
-> **Building your own dependent repo?** [`docs/getting-started.md`](docs/getting-started.md) is a full guided walkthrough — the live Explorer, a real reference LPM, local validation, and a starter checklist — using [`examples/`](examples/) as copy-paste starting points. The rest of this section is the short version.
+> **Building your own dependent repo?** [`docs/getting-started.md`](docs/getting-started.md) is a full guided walkthrough — a real (if deliberately synthetic-content) reference LPM, local validation, and a starter checklist — using [`examples/`](examples/) as copy-paste starting points. The rest of this section is the short version.
 
 **Referencing a concept from a dependent repository:**
 
@@ -310,16 +306,12 @@ ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https
               e.g. bio-core-k12              e.g. interdisciplinary-k12
 ```
 
-Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice:
+Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice. Both are a deliberately synthetic comparison pair, not field-tested curricula — each carries `epistemicStatus: designed-thought-experiment` (RFC-0019), a permanent, structural declaration independent of their draft/stable lifecycle status, because the two are otherwise structurally identical: same schema, same pipeline, differing only in which controlled vocabulary each is built against. That's what makes any difference between them attributable to vocabulary scope, not some other confound:
 
-- **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`.
-- **[`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
+- **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`, a vocabulary with no organism-agency concept at all.
+- **[`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)** — the synthetic sandbox: a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`, which adds Agency, Niche Construction, and a Selection concept spanning biology/culture/education/AI. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
 
-Both are early/draft-stage repositories, not yet themselves stable releases.
-
-### ConceptBase Explorer
-
-A static, client-side app (in [`app/`](app/), deployed to GitHub Pages via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)) for loading, exploring, comparing, and annotating ConceptBase-aligned LPM repositories directly from the GitHub API — no backend, no server-side state. It's the practical, hands-on way to browse the vocabularies and reference LPMs described above, and its annotation-export pattern (draft YAML in the browser → human-reviewed PR) is the template future import tooling (e.g. a CASE competency importer) is expected to follow, per RFC-0002. Its **Concept Lens** view looks up any concept or competency across the whole registry — every vocabulary, not just what a loaded LPM declares — alongside every substrand referencing it and every alignment record connecting it across vocabularies. A first-run **"New here?" banner** (dismissible, `app/js/welcomeBanner.js`) points first-time visitors at [`docs/getting-started.md`](docs/getting-started.md) and one-click-loads the Selection example above straight into Concept Lens.
+Both are also early/draft-stage repositories in the ordinary `status: proposed` sense, on top of (and independent of) the synthetic/thought-experiment framing above.
 
 ### Why Pluralism Matters
 
@@ -371,6 +363,7 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [x] Concept Lens view added to the ConceptBase Explorer; Selection cross-domain case study published
 - [x] Developer onboarding: `docs/getting-started.md`, `examples/`, offline `scripts/validate.py`, Explorer welcome banner + `?lens=` deep link
 - [x] Basic schema-validation CI: `.github/workflows/validate.yml` on this repo (every vocabulary/alignment/example) and on both reference LPMs (`lpm.yaml`/`strands/*.yaml`, checking out this repo alongside)
+- [x] **ConceptBase Explorer retired** — the interactive `app/` (Dashboard/Vocabulary/Alignments/Concept Lens/Explorer/Annotations tabs) depended by default on `bio-core-k12`/`interdisciplinary-k12`, which are private repos; the public GitHub Pages deploy 404'd for every anonymous visitor. Removed rather than fixed: equivalent lookups are better served today by the `conceptbase-mcp` tool surface used by this ecosystem's agents. `registry/resolve.html` (the w3id `/lpm/{id}`, `/strand/{id}` redirect target) was preserved and relocated out of `app/` first — it's live infrastructure, not part of the retired demo.
 - [ ] Phase 2: Multilingual label/definition expansion beyond `en`
 - [ ] Phase 3: Grade-band schema registry (US K–12, OECD, OpenEvo 4-band/6-band)
 - [ ] Phase 3: Subject-area schema registry
@@ -396,7 +389,7 @@ https://www.w3id.org/openevo/ · https://github.com/openevo-ccs/conceptbase
 ## License
 
 - **Content** (ontology, schemas, vocabularies, documentation): [CC BY-NC-SA 4.0](LICENSE) — see [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md) for the relicense from CC-BY-4.0
-- **Code** (build pipeline, validation tooling, [ConceptBase Explorer](app/)): [MIT](LICENSE-CODE)
+- **Code** (build pipeline, validation tooling, `registry/resolve.html`): [MIT](LICENSE-CODE)
 
 ---
 
