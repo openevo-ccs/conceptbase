@@ -19,7 +19,7 @@ export function mountWelcomeBanner(container) {
     el("div", { class: "welcome-banner-body" }, [
       el("strong", {}, "New here? "),
       el("span", {}, [
-        "This app auto-loaded two real reference LPMs below. See ",
+        "This app auto-loaded two LPMs below — a deliberately synthetic comparison pair (same schema, different controlled vocabulary; see epistemicStatus, RFC-0019), not field-tested curricula. See ",
         el("a", { href: "https://github.com/openevo-ccs/conceptbase/blob/main/docs/getting-started.md", target: "_blank", rel: "noopener" }, "the getting-started guide"),
         " for a full walkthrough, or jump straight to a live example: ",
       ]),

@@ -239,7 +239,7 @@ Any proposal for a novel schema structure must document why an existing standard
 
 ## Quickstart
 
-> **Building your own dependent repo?** [`docs/getting-started.md`](docs/getting-started.md) is a full guided walkthrough — the live Explorer, a real reference LPM, local validation, and a starter checklist — using [`examples/`](examples/) as copy-paste starting points. The rest of this section is the short version.
+> **Building your own dependent repo?** [`docs/getting-started.md`](docs/getting-started.md) is a full guided walkthrough — the live Explorer, a real (if deliberately synthetic-content) reference LPM, local validation, and a starter checklist — using [`examples/`](examples/) as copy-paste starting points. The rest of this section is the short version.
 
 **Referencing a concept from a dependent repository:**
 
@@ -310,12 +310,12 @@ ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https
               e.g. bio-core-k12              e.g. interdisciplinary-k12
 ```
 
-Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice:
+Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice. Both are a deliberately synthetic comparison pair, not field-tested curricula — each carries `epistemicStatus: designed-thought-experiment` (RFC-0019), a permanent, structural declaration independent of their draft/stable lifecycle status, because the two are otherwise structurally identical: same schema, same pipeline, differing only in which controlled vocabulary each is built against. That's what makes any difference between them attributable to vocabulary scope, not some other confound:
 
-- **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`.
-- **[`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)** — a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
+- **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`, a vocabulary with no organism-agency concept at all.
+- **[`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)** — the synthetic sandbox: a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`, which adds Agency, Niche Construction, and a Selection concept spanning biology/culture/education/AI. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
 
-Both are early/draft-stage repositories, not yet themselves stable releases.
+Both are also early/draft-stage repositories in the ordinary `status: proposed` sense, on top of (and independent of) the synthetic/thought-experiment framing above.
 
 ### ConceptBase Explorer
 

@@ -2,7 +2,7 @@
 
 This is the walkthrough for the audience the main [README](../README.md)'s Quickstart is too abstract for: someone who wants to build their own Learning Progression Model (LPM), Strand, or Collection repository against OECB, and needs to see the whole pipeline work once, end to end, before starting their own.
 
-It uses the two real reference repos — [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12) — as the worked example throughout, not a synthetic one. Both are early/draft-stage, which is itself useful to see: this is what a real, still-evolving dependent repo looks like, not an idealized final state.
+It uses [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12) as the worked example throughout — two real, CI-validated git repos that exercise the whole pipeline end to end, not toy snippets. Their *content* is a different matter: both carry `epistemicStatus: designed-thought-experiment` (RFC-0019) — they're a deliberately synthetic comparison pair (same schema, same pipeline, different controlled vocabulary) built to isolate one variable, not field-tested curricula. That split is the point: the mechanics you're here to learn (schema validation, strand structure, CI, IDs) are as real as it gets; the pedagogical content riding on top of them is intentionally a thought experiment, and both are early/draft-stage besides.
 
 ## 0. What you'll need
 
