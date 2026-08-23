@@ -2,7 +2,7 @@
 
 **Status:** Informative — a research artifact synthesizing existing alignment records ([`OE-ALIGN-000001`](../../alignments/OE-ALIGN-000001.yaml), [`OE-ALIGN-000003`](../../alignments/OE-ALIGN-000003.yaml), [`OE-ALIGN-000004`](../../alignments/OE-ALIGN-000004.yaml)), not itself a proposal. Written to test a specific claim already made in production content — `interdisciplinary-k12`'s Strand 1 — against real standards, not just the vocabulary's own say-so.
 
-**See it live:** [ConceptBase Explorer → Concept Lens, pre-filtered to "Selection"](https://openevo-ccs.github.io/conceptbase/?lens=Selection) — every record cited below, browsable directly instead of just described.
+**See the records directly:** [`OE-ALIGN-000001`](../../alignments/OE-ALIGN-000001.yaml), [`OE-ALIGN-000003`](../../alignments/OE-ALIGN-000003.yaml), [`OE-ALIGN-000004`](../../alignments/OE-ALIGN-000004.yaml), [`OE-ALIGN-000005`](../../alignments/OE-ALIGN-000005.yaml), and [`OE-INTERDISCIPLINARY`'s Selection concept](../../vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml) — every record cited below, as plain files instead of just described. (The interactive ConceptBase Explorer this was originally browsed through has since been retired — see the README's Roadmap.)
 
 ## The claim being tested
 

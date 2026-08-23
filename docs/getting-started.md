@@ -2,24 +2,20 @@
 
 This is the walkthrough for the audience the main [README](../README.md)'s Quickstart is too abstract for: someone who wants to build their own Learning Progression Model (LPM), Strand, or Collection repository against OECB, and needs to see the whole pipeline work once, end to end, before starting their own.
 
-It uses the two real reference repos — [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12) — as the worked example throughout, not a synthetic one. Both are early/draft-stage, which is itself useful to see: this is what a real, still-evolving dependent repo looks like, not an idealized final state.
+It uses [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12) as the worked example throughout — two real, CI-validated git repos that exercise the whole pipeline end to end, not toy snippets. Their *content* is a different matter: both carry `epistemicStatus: designed-thought-experiment` (RFC-0019) — they're a deliberately synthetic comparison pair (same schema, same pipeline, different controlled vocabulary) built to isolate one variable, not field-tested curricula. That split is the point: the mechanics you're here to learn (schema validation, strand structure, CI, IDs) are as real as it gets; the pedagogical content riding on top of them is intentionally a thought experiment, and both are early/draft-stage besides.
 
 ## 0. What you'll need
 
-- A browser (step 1 needs nothing else).
 - `git` and Python 3 with `pyyaml` + `jsonschema` (`pip install pyyaml jsonschema referencing`) for steps 3–4.
-- No account, API key, or local server — the Explorer is a static app reading the public GitHub API, and the namespace is a public redirect service.
+- No account, API key, or local server — the namespace is a public redirect service, and everything else here is plain files in a git repo.
 
-## 1. See the ecosystem live, before reading any code
+## 1. See a cross-domain finding, before reading any code
 
-Open the [ConceptBase Explorer](https://openevo-ccs.github.io/conceptbase/). It auto-loads both reference LPMs on page load — you don't need to configure anything for this first look.
+Read the [Selection cross-domain case study](design-notes/selection-cross-domain-case-study.md): it checks `interdisciplinary-k12`'s claim that "Selection" is a genuine transferable mechanism across biology, culture, and AI against real external standards (NGSS, AI4K12) — confirming the biology claim, and surfacing two concrete, actionable gaps in the AI and Agency claims. Every record it cites is a real file you can open directly:
+- [`OE-CONCEPT-oe-interdisciplinary-selection`](../vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml) (`OE-INTERDISCIPLINARY`) — a concept defined four different ways (biology, culture, education, AI).
+- [`OE-ALIGN-000001.yaml`](../alignments/OE-ALIGN-000001.yaml), [`OE-ALIGN-000003.yaml`](../alignments/OE-ALIGN-000003.yaml), [`OE-ALIGN-000004.yaml`](../alignments/OE-ALIGN-000004.yaml), [`OE-ALIGN-000005.yaml`](../alignments/OE-ALIGN-000005.yaml) — the alignment records connecting it to `BIO-CORE`'s Natural Selection, an NGSS performance expectation, and two AI4K12 entries.
 
-Click the **Concept Lens** tab, then search for "Selection." You'll see:
-- `OE-CONCEPT-oe-interdisciplinary-selection` (`OE-INTERDISCIPLINARY`) — a concept defined four different ways (biology, culture, education, AI).
-- Every substrand across both loaded LPMs that references it.
-- The alignment records connecting it to `BIO-CORE`'s Natural Selection and to an NGSS performance expectation.
-
-This is the thing OECB is actually for: the same idea, defined independently in different vocabularies, made comparable through explicit, provenance-carrying alignment records rather than hand-waving. The [Selection cross-domain case study](design-notes/selection-cross-domain-case-study.md) is the fully written-up version of exactly what you just clicked through.
+This is the thing OECB is actually for: the same idea, defined independently in different vocabularies, made comparable through explicit, provenance-carrying alignment records rather than hand-waving.
 
 ## 2. See an identifier resolve
 
