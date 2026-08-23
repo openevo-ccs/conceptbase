@@ -5,23 +5,38 @@
 #
 # Seed content for RFC-0018 (frameworkRelation.schema.yaml). Each entry
 # validates against that schema. Source: EvoMentor_DE's
-# data/basiskonzepte.json `bk_verbindungen` arrays (v4.1, 2026-08-22),
+# data/basiskonzepte.json `bk_verbindungen` arrays (v5.0, 2026-08-22),
 # transcribed here as the first real instance data for this schema --
 # not hypothetical examples. tagIds are carried through unchanged from
 # that source (bk_struktur_funktion, bk_stoff_energie_umwandlung,
 # bk_information_kommunikation, bk_steuerung_regelung,
-# bk_individuelle_evolutive_entwicklung), all under frameworkId
-# "kmk-basiskonzepte-biologie".
+# bk_individuelle_entwicklung, bk_evolutive_entwicklung), all under
+# frameworkId "kmk-basiskonzepte-biologie-2024" (versioned -- see EvoMentor's
+# data/kmk-basiskonzepte-biologie.json: this 6-concept flat model is the
+# post-2024-06-13 KMK "Weiterentwickelte Bildungsstandards" generation,
+# distinct from the pre-2024 3-level System-umbrella generation, which is
+# also real (still live in some FWU-sourced Lehrplan snapshots) and modeled
+# separately as "kmk-basiskonzepte-biologie-2004" with its own relation set
+# to add if/when this framework's relations are needed for that generation).
+#
+# UPDATE 2026-08-23: regenerated from EvoMentor_DE's CURRENT v5.0 data.
+# The previous version of this file (v4.1, 2026-08-22 morning) transcribed
+# the pre-split five-concept model (bk_individuelle_evolutive_entwicklung
+# as one node) -- EvoMentor_DE's v1.2 release, shipped later the same day,
+# split that into bk_individuelle_entwicklung / bk_evolutive_entwicklung,
+# making the earlier transcription stale within hours of being written.
+# This version reflects the current 6-node model: 27 relations (up from
+# 23), since the split gave both individuelle and evolutive Entwicklung
+# their own full set of edges to the other four Basiskonzepte, rather
+# than one shared node's edges.
 #
 # This set is the first concrete, checkable evidence for KoMet's own
 # subtitle -- "Kohärenz durch Meta-Modellierung von Curricula" -- and
 # for its Domain B/D Computational Curriculum Competencies (Curriculum
 # Coherence / Curricular Meta-Modeling): it makes explicit, as typed
-# queryable data rather than prose, that every one of the five KMK
+# queryable data rather than prose, that every one of the six KMK
 # Basiskonzepte only fully makes sense in light of evolution (the
-# isExplainedBy / explainsOriginOf pairs below) -- previously true only
-# for bk_struktur_funktion, closed for the remaining three as of
-# EvoMentor_DE basiskonzepte.json v4.1.
+# isExplainedBy / explainsOriginOf pairs below).
 #
 # One asymmetry preserved deliberately from the source: `requires` has
 # no declared inverse (see frameworkRelation.schema.yaml relationType
@@ -32,28 +47,27 @@
 
 meta:
   id: KMK-BASISKONZEPTE-BIOLOGIE-RELATIONS
-  version: 1.0.0
+  version: 1.1.0
   status: proposed
   scope: >
-    Typed causal/structural relations among the five KMK Basiskonzepte
+    Typed causal/structural relations among the six KMK Basiskonzepte
     Biologie, sourced from EvoMentor_DE's Thuringia Gymnasium
     didactic dataset.
   license: CC-BY-NC-SA-4.0
   authors:
     - name: OpenEvo ConceptBase Maintainers
   conformsTo: OE-SCHEMA-FRAMEWORK-RELATION-v1.0.0
-  sourceDataset: EvoMentor_DE/data/basiskonzepte.json v4.1 (2026-08-22)
+  sourceDataset: EvoMentor_DE/data/basiskonzepte.json v5.0 (2026-08-22)
   phase: 1
 
 relations:
-
-  # --- bk_struktur_funktion -------------------------------------------------
+  # --- bk_struktur_funktion --------------------------------------------------
   - id: OE-FRAMEWORK-RELATION-000001
-    subject: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
-    object: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
+    object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: enables
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Strukturen (z. B. Alveolen, Darmzotten, Mitochondrien) ermöglichen
@@ -61,11 +75,11 @@ relations:
       keine Funktion im Stoffwechsel.
 
   - id: OE-FRAMEWORK-RELATION-000002
-    subject: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
-    object: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
+    object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: enables
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Die Struktur von Nervenzellen, Sinnesorganen und Rezeptormolekülen
@@ -73,102 +87,99 @@ relations:
       -weiterleitung und -verarbeitung.
 
   - id: OE-FRAMEWORK-RELATION-000003
-    subject: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
+    object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Strukturelle Angepasstheiten sind das Ergebnis evolutiver
-      Selektion. Ind/Evo liefert die historisch-kausale Erklärung für
-      das Vorhandensein bestimmter Strukturen.
+      Selektion. Die evolutive Entwicklung liefert die historisch-
+      kausale Erklärung für das Vorhandensein bestimmter Strukturen.
 
   - id: OE-FRAMEWORK-RELATION-000004
-    subject: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
-    object: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
+    object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: enables
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Regelkreise setzen strukturelle Komponenten voraus: Sensoren
       (Sinnesorgane, Chemorezeptoren), Effektoren (Drüsen, Muskeln) und
       Leitungswege (Nerven, Blutgefäße).
 
-  # --- bk_stoff_energie_umwandlung ------------------------------------------
+  # --- bk_stoff_energie_umwandlung -------------------------------------------
   - id: OE-FRAMEWORK-RELATION-000005
-    subject: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
-    object: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     relationType: requires
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Stoff- und Energieumwandlungsprozesse setzen spezifische
       Strukturen voraus (Alveolenbau für Gasaustausch, Darmzotten für
-      Resorption, Mitochondrien für Zellatmung).
+      Resorption, Mitochondrien für Zellatmung)
 
   - id: OE-FRAMEWORK-RELATION-000006
-    subject: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
-    object: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: isRegulatedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
-      Metabolische Zustandsgrößen (Blutzucker, CO2-Konzentration,
-      Osmolalität) werden durch Regelkreise konstant gehalten.
+      Metabolische Zustandsgrößen (Blutzucker, CO₂-Konzentration,
+      Osmolalität) werden durch Regelkreise konstant gehalten
 
   - id: OE-FRAMEWORK-RELATION-000007
-    subject: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: enables
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Stoffwechselprozesse liefern die Energie für Wachstum, Zellteilung
-      und Differenzierung in der Ontogenese.
+      und Differenzierung in der Ontogenese
 
   - id: OE-FRAMEWORK-RELATION-000008
-    subject: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Stoffwechselwege selbst sind keine optimal konstruierten Systeme,
       sondern das Ergebnis evolutiver Bastelei (evolutionary tinkering)
-      auf bereits vorhandenen biochemischen Grundlagen: der umständliche
+      auf bereits vorhandenen biochemischen Grundlagen: Der umständliche
       Umweg der Glykolyse, die Mehrfachnutzung derselben Enzymfamilien
       in unterschiedlichen Stoffwechselwegen und Kompromisslösungen wie
-      die Sauerstoffabhängigkeit der Zellatmung sind nur als
-      historisch-kontingente Produkte natürlicher Selektion
-      verständlich, nicht als von Grund auf geplantes Design. Added
-      2026-08-22 to close the coherence gap identified in EvoMentor_DE
-      basiskonzepte.json v4.1 -- previously only bk_struktur_funktion
-      carried this relation type.
+      die Sauerstoffabhängigkeit der Zellatmung sind nur als historisch-
+      kontingente Produkte natürlicher Selektion verständlich, nicht als
+      von Grund auf geplantes Design
 
-  # --- bk_information_kommunikation -----------------------------------------
+  # --- bk_information_kommunikation ------------------------------------------
   - id: OE-FRAMEWORK-RELATION-000009
-    subject: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
-    object: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
+    object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: implements
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Informations- und Kommunikationsprozesse sind der Mechanismus,
       durch den biologische Regelkreise realisiert werden.
 
   - id: OE-FRAMEWORK-RELATION-000010
-    subject: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
-    object: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
+    object: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     relationType: requires
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Nervenzellstruktur, Synapsenaufbau, Rezeptorstruktur und
@@ -176,77 +187,76 @@ relations:
       Informationsprozesse.
 
   - id: OE-FRAMEWORK-RELATION-000011
-    subject: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
+    object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: enables
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Das Hormonsystem (Info/Komm) steuert die individuelle Entwicklung
-      (Pubertät, Menstruationszyklus, Metamorphose); Informationsprozesse
-      sind die kausalen Mechanismen der Ontogenese.
+      (Pubertät, Menstruationszyklus, Metamorphose);
+      Informationsprozesse sind die kausalen Mechanismen der Ontogenese.
 
   - id: OE-FRAMEWORK-RELATION-000012
-    subject: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
+    object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Die Architektur biologischer Informations- und
       Kommunikationssysteme ist selbst ein evolutives Produkt: die
       Wiederverwendung uralter Hormonrezeptor-Familien für immer neue
-      Signalfunktionen und redundante parallele Kommunikationskanäle
-      (Nerven, Hormone, Immunsystem) sind nur als schrittweise
-      Modifikation bereits vorhandener evolutionärer Strukturen
-      erklärbar, nicht als kohärent geplantes Kommunikationssystem.
-      Added 2026-08-22, same coherence-gap closure as
-      OE-FRAMEWORK-RELATION-000008.
+      Signalfunktionen, redundante parallele Kommunikationskanäle
+      (Nerven, Hormone, Immunsystem) und suboptimal 'verdrahtete'
+      Sinnes- und Nervenbahnen sind nur als schrittweise Modifikation
+      bereits vorhandener evolutionärer Strukturen erklärbar, nicht als
+      kohärent geplantes Kommunikationssystem
 
   # --- bk_steuerung_regelung -------------------------------------------------
   - id: OE-FRAMEWORK-RELATION-000013
-    subject: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
-    object: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: isImplementedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Biologische Regelkreise sind durch Informations- und
       Kommunikationsprozesse realisiert (Hormone, Nervenimpulse als
-      Signalträger der Rückkopplung).
+      Signalträger der Rückkopplung)
 
   - id: OE-FRAMEWORK-RELATION-000014
-    subject: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
-    object: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: regulates
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
-      Stoff- und Energieumwandlungsgrößen (Blutzucker,
-      CO2-Konzentration, Osmolalität) sind die Regelgrößen biologischer
-      Kreise.
+      Stoff- und Energieumwandlungsgrößen (Blutzucker, CO₂-
+      Konzentration, Osmolalität) sind die Regelgrößen biologischer
+      Kreise
 
   - id: OE-FRAMEWORK-RELATION-000015
-    subject: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: controls
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Hormonelle Regelkreise steuern ontogenetische Prozesse (Pubertät,
-      Menstruationszyklus, Metamorphose).
+      Menstruationszyklus, Metamorphose)
 
   - id: OE-FRAMEWORK-RELATION-000016
-    subject: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
-    object: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Regelkreise selbst sind evolvierte Kontrollarchitekturen mit
@@ -255,109 +265,141 @@ relations:
       Regelmechanismen (z. B. verschiedene Wege der
       Blutzuckerregulation) sind nur erklärbar, wenn man Steuerung und
       Regelung als Ergebnis schrittweiser Selektion auf bereits
-      bestehenden physiologischen Systemen begreift, nicht als
-      optimales technisches Design. Added 2026-08-22, same
-      coherence-gap closure as OE-FRAMEWORK-RELATION-000008.
+      bestehenden physiologischen Systemen begreift, nicht als optimales
+      technisches Design
 
-  # --- bk_individuelle_evolutive_entwicklung ---------------------------------
+  # --- bk_individuelle_entwicklung -------------------------------------------
   - id: OE-FRAMEWORK-RELATION-000017
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_struktur_funktion"
-    relationType: explainsOriginOf
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
-    status: proposed
-    rationale: >
-      Evolutive Entwicklung (Ind/Evo) erklärt, warum bestimmte
-      Strukturen und ihre Funktionen (Str/Fkt) existieren: Sie sind das
-      Ergebnis langfristiger Selektion auf funktionale Effizienz.
-
-  - id: OE-FRAMEWORK-RELATION-000018
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: isControlledBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Individuelle Entwicklungsprozesse (Pubertät, Menstruationszyklus,
-      Metamorphose) werden durch hormonelle Regelkreise gesteuert;
-      Steu/Reg ist der Mechanismus der Ontogenese.
+      Metamorphose) werden durch hormonelle Regelkreise gesteuert.
 
-  - id: OE-FRAMEWORK-RELATION-000019
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_steuerung_regelung"
-    relationType: explainsOriginOf
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
-    status: proposed
-    rationale: >
-      Regelkreise selbst sind evolvierte Kontrollarchitekturen mit
-      historischem Gepäck: suboptimale Sollwerte, verzögerte
-      Rückkopplungsschleifen und mehrere parallele, teils redundante
-      Regelmechanismen sind nur erklärbar, wenn man Steuerung und
-      Regelung als Ergebnis schrittweiser Selektion auf bereits
-      bestehenden physiologischen Systemen begreift, nicht als
-      optimales technisches Design. Mirror record of
-      OE-FRAMEWORK-RELATION-000016 (see relationType description for
-      why both directions are asserted independently).
-
-  - id: OE-FRAMEWORK-RELATION-000020
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
+  - id: OE-FRAMEWORK-RELATION-000018
+    subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: isImplementedBy
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
       Hormonelle Kommunikation ist der informationstheoretische
-      Mechanismus, durch den Entwicklungsprozesse gesteuert werden;
-      genetische Information ist die molekulare Grundlage der
-      Weitergabe über Generationen; Nervensystem-Plastizität ist eine
-      evolutiv entstandene Kapazität des menschlichen Gehirns.
+      Mechanismus, durch den Entwicklungsprozesse gesteuert werden.
+
+  - id: OE-FRAMEWORK-RELATION-000019
+    subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
+    relationType: requires
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
+    status: proposed
+    rationale: >
+      Wachstum, Zellteilung und Differenzierung erfordern Energie und
+      Baustoffe.
+
+  - id: OE-FRAMEWORK-RELATION-000020
+    subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    relationType: isExplainedBy
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
+    status: proposed
+    rationale: >
+      Ontogenetische Programme sind selbst evolvierte Merkmale: die
+      verlängerte menschliche Kindheitsphase, die Reihenfolge
+      hormoneller Reifungsschritte und die Existenz eines lernfähigen
+      Immungedächtnisses sind nur als Ergebnis natürlicher Selektion auf
+      Entwicklungsprogramme erklärbar, nicht als notwendige oder
+      optimale Konstruktion
 
   - id: OE-FRAMEWORK-RELATION-000021
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_information_kommunikation"
-    relationType: explainsOriginOf
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    relationType: enables
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
-      Die Architektur biologischer Informations- und
-      Kommunikationssysteme ist selbst ein evolutives Produkt: die
-      Wiederverwendung uralter Hormonrezeptor-Familien für immer neue
-      Signalfunktionen und redundante parallele Kommunikationskanäle
-      sind nur als schrittweise Modifikation bereits vorhandener
-      evolutionärer Strukturen erklärbar, nicht als kohärent geplantes
-      Kommunikationssystem. Mirror record of
-      OE-FRAMEWORK-RELATION-000012.
+      Reproduktion, der Kernprozess der individuellen Entwicklung, ist
+      zugleich die notwendige Voraussetzung für jede evolutive
+      Veränderung: ohne Weitergabe genetischer Information an Nachkommen
+      gibt es keine Selektion und keinen Artwandel
 
+  # --- bk_evolutive_entwicklung ----------------------------------------------
   - id: OE-FRAMEWORK-RELATION-000022
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
-    relationType: requires
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
+    relationType: explainsOriginOf
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
-      Wachstum, Zellteilung und Differenzierung in der Ontogenese
-      erfordern Energie und Baustoffe; Stoff- und Energieumwandlung ist
-      die materielle Grundlage aller Entwicklungsprozesse.
+      Evolutive Entwicklung erklärt, warum bestimmte Strukturen und ihre
+      Funktionen existieren: Sie sind das Ergebnis langfristiger
+      Selektion auf funktionale Effizienz
 
   - id: OE-FRAMEWORK-RELATION-000023
-    subject: "kmk-basiskonzepte-biologie:bk_individuelle_evolutive_entwicklung"
-    object: "kmk-basiskonzepte-biologie:bk_stoff_energie_umwandlung"
+    subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: explainsOriginOf
-    assertedBy: [EvoMentor_DE basiskonzepte.json v4.1]
-    date: "2026-08-22"
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
     status: proposed
     rationale: >
-      Stoffwechselwege selbst sind keine optimal konstruierten Systeme,
-      sondern das Ergebnis evolutiver Bastelei (evolutionary tinkering)
-      auf bereits vorhandenen biochemischen Grundlagen: der umständliche
-      Umweg der Glykolyse und die Mehrfachnutzung derselben
-      Enzymfamilien in unterschiedlichen Stoffwechselwegen sind nur als
-      historisch-kontingente Produkte natürlicher Selektion
-      verständlich, nicht als von Grund auf geplantes Design. Mirror
-      record of OE-FRAMEWORK-RELATION-000008.
+      Stoffwechselwege sind das Ergebnis evolutiver Bastelei
+      (evolutionary tinkering) auf bereits vorhandenen biochemischen
+      Grundlagen, nicht von Grund auf geplantes Design
+
+  - id: OE-FRAMEWORK-RELATION-000024
+    subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
+    relationType: explainsOriginOf
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
+    status: proposed
+    rationale: >
+      Die Architektur biologischer Informationssysteme ist selbst ein
+      evolutives Produkt: Wiederverwendung uralter Rezeptor-Familien,
+      redundante parallele Kommunikationskanäle
+
+  - id: OE-FRAMEWORK-RELATION-000025
+    subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
+    relationType: explainsOriginOf
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
+    status: proposed
+    rationale: >
+      Regelkreise sind evolvierte Kontrollarchitekturen mit historischem
+      Gepäck: suboptimale Sollwerte, verzögerte Rückkopplungsschleifen,
+      redundante Regelmechanismen
+
+  - id: OE-FRAMEWORK-RELATION-000026
+    subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    relationType: explainsOriginOf
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
+    status: proposed
+    rationale: >
+      Ontogenetische Programme (Reifungsreihenfolge, verlängerte
+      Kindheit, Immungedächtnis) sind selbst evolvierte Merkmale, kein
+      notwendiges oder optimales Design
+
+  - id: OE-FRAMEWORK-RELATION-000027
+    subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
+    object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
+    relationType: requires
+    assertedBy: [EvoMentor_DE basiskonzepte.json v5.0]
+    date: "2026-08-23"
+    status: proposed
+    rationale: >
+      Evolutive Veränderung setzt Reproduktion voraus: ohne Weitergabe
+      genetischer Information an Nachkommen gibt es keine Selektion und
+      keinen Artwandel
+
