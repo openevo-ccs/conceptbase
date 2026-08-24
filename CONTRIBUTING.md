@@ -8,10 +8,11 @@ Read [`README.md`](README.md) for orientation and [`docs/oecb_specifications.md`
 
 ## Proposing a change
 
-1. **Open an RFC.** Every new Concept, relation, schema, or vocabulary goes through a pull request against [`proposals/`](proposals/), using the RFC template: motivation, proposed IRI under `www.w3id.org/openevo/`, relations to existing entities, and — for any novel schema structure — why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already covers the need.
-2. **Reserve an ID block if needed.** If you're adding a new vocabulary or LPM, your RFC must reserve a numeric ID block per [`GOVERNANCE.md`](GOVERNANCE.md#identifier-block-allocation) before you author any entries.
-3. **Get review.** Every RFC needs at least one domain editor approval (for RFCs touching their subject area) and one maintainer approval before merge.
-4. **Validate before you submit.** Run [`scripts/check_related_symmetry.py`](scripts/check_related_symmetry.py) if your change touches `skos:related`. There is no CI pipeline yet (spec §5.2 is planned, not implemented), so this manual step is currently the only automated check available.
+1. **Claim your RFC number first.** Run `python <lab_manager>/scripts/reserve_proposal_number.py --repo conceptbase --topic <your-topic-slug>` before drafting anything — it atomically reserves the next number via `proposals/RFC_LEDGER.md` and pushes immediately, turning a concurrent claim into a rejected push instead of a silent collision. Grepping the highest number in `proposals/` yourself is exactly how three numbers (0013, 0017, 0018) got independently double-claimed by unrelated branches on 2026-08-24 — don't do that.
+2. **Open an RFC.** Every new Concept, relation, schema, or vocabulary goes through a pull request against [`proposals/`](proposals/), using the RFC template: motivation, proposed IRI under `www.w3id.org/openevo/`, relations to existing entities, and — for any novel schema structure — why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already covers the need.
+3. **Reserve an ID block if needed.** If you're adding a new vocabulary or LPM, your RFC must reserve a numeric ID block per [`GOVERNANCE.md`](GOVERNANCE.md#identifier-block-allocation) before you author any entries.
+4. **Get review.** Every RFC needs at least one domain editor approval (for RFCs touching their subject area) and one maintainer approval before merge.
+5. **Validate before you submit.** Run [`scripts/check_related_symmetry.py`](scripts/check_related_symmetry.py) if your change touches `skos:related`. There is no CI pipeline yet (spec §5.2 is planned, not implemented), so this manual step is currently the only automated check available.
 
 ## Where things live
 
