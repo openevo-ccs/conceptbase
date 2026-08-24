@@ -103,6 +103,14 @@ of an already-`accepted` record (version 1.0.0 → 1.1.0), not a new proposal in
   remaining roadmap items — Phase 2 not attempted in this pass; it is the most dispute-sensitive of
   the four (goes further into `og:dispute:openevo-vs-kampourakis`'s actual contested content than
   this RFC's `dcr-eco` does) and was not requested for this pass.
+- **Known parallel work, not yet reconciled:** a concurrent session (`theorybase`'s `submissions`
+  branch, pushed 2026-08-24) independently deepened the same ICR/DCR/restructuration-theory
+  vocabulary this RFC draws on — a new `ccs-graph` relation record, a new QuestionBase question
+  about whether NetLogo/ABM instruction actually produces ICR-consistent explanations, TheoryBase's
+  first `oe:LearningDependency` instance, and `OE-THEORYBUNDLE-curriculum-evolution` (bundling
+  restructuration-theory/ICR/DCR). This RFC's records do not cite any of that work — it was still
+  in flight at drafting time. Left for the maintainer to decide, at review, whether this RFC's
+  competency records or its cross-domain-construct extension should cross-cite it.
 
 ## Standards justification
 
