@@ -1,0 +1,16 @@
+{
+  "citations": [
+    {
+      "doi": "10.48528/4sjc-kj23",
+      "text": "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    }
+  ],
+  "humanCodingScheme": "B",
+  "id": "OE-COMPETENCY-000705",
+  "statement": {
+    "en": "Language of Science: students can recognize and correctly use evolutionary terminology, distinguishing its everyday from its scientific meaning."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

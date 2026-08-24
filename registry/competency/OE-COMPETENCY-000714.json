@@ -1,0 +1,16 @@
+{
+  "citations": [
+    {
+      "doi": "10.48528/4sjc-kj23",
+      "text": "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    }
+  ],
+  "humanCodingScheme": "D",
+  "id": "OE-COMPETENCY-000714",
+  "statement": {
+    "en": "Science Practices: students can construct, argue for, and apply causal models and explanations of evolutionary phenomena, including novel ones."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

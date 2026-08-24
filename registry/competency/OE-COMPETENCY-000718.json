@@ -1,0 +1,16 @@
+{
+  "citations": [
+    {
+      "doi": "10.48528/4sjc-kj23",
+      "text": "Nehm, R., & Kampourakis, K. (2022). Evolution Education and Outreach — Important Things to Know About How to Teach About Evolution. In Learning Evolution Through Socioscientific Issues (pp. 87-104). UA Editora. Table 5."
+    }
+  ],
+  "humanCodingScheme": "E",
+  "id": "OE-COMPETENCY-000718",
+  "statement": {
+    "en": "Cross-Cutting Concepts: students can apply general scientific framing concepts — pattern, and cause and effect — to evolutionary phenomena specifically."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "B1",
+  "id": "OE-COMPETENCY-000706",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000705"
+    ]
+  },
+  "statement": {
+    "en": "Topic: everyday vs. scientific meanings of core evolutionary terms. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording (and its Table 1 term list) to represent as independent expression; see citation."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}

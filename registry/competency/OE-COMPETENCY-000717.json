@@ -1,0 +1,15 @@
+{
+  "humanCodingScheme": "D3",
+  "id": "OE-COMPETENCY-000717",
+  "relations": {
+    "skos:broader": [
+      "OE-COMPETENCY-000714"
+    ]
+  },
+  "statement": {
+    "en": "Topic: a scientific explanation for a previously unencountered phenomenon. Full learning-objective text withheld -- too close a paraphrase of Nehm & Kampourakis (2022) Table 5's wording to represent as independent expression; see citation."
+  },
+  "status": "proposed",
+  "type": "oe:Competency",
+  "version": "1.0.0"
+}
