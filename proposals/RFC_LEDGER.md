@@ -40,3 +40,4 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0019 | 2026 (pre-session) | lpm-epistemic-status | main | — | |
 | 0020 | 2026-08-24 | decentralized-causal-reasoning-competency | `decentralized-causal-reasoning-competency` (unmerged) | lab-manager-b6 | Phase 3 of the four-competency roadmap |
 | 0021 | 2026-08-24 | openevo-foundational-competencies-legacy-migration | `openevo-foundational-competencies-migration` (unmerged) | lab-manager-b6 | Phase 4 + 14-node legacy migration |
+| 0022 | 2026-08-24T11:46:57Z | evolutionary-causal-reasoning-competency | (claimed, not yet a branch) | lab-manager-b6 | |
