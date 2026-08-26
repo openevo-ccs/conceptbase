@@ -4,7 +4,7 @@ Minimal, single-entry, heavily-commented instances of each `oe:*` type — the c
 
 These are **illustrative only, not registered**: every ID here (`OE-CONCEPT-000900`, `OE-LPM-000900`, etc.) uses a block explicitly outside any block reserved in [`GOVERNANCE.md`](../GOVERNANCE.md)'s Identifier Block Allocation tables (all real blocks so far sit in `000100`–`000699`), and none of these files are wired into `registry/` or `vocabularies/*.yaml`. None of these IDs resolve at `w3id.org/openevo/`. If you're starting your own vocabulary or LPM, copy the shape, then reserve your own block via the RFC process (see [`GOVERNANCE.md`](../GOVERNANCE.md)) before minting real IDs.
 
-Compare these against the real, much larger worked examples in [`vocabularies/`](../vocabularies/), [`alignments/`](../alignments/), and the two reference LPMs ([`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12), [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)) once you're past the "what shape is this file" stage — see [`docs/getting-started.md`](../docs/getting-started.md) for a guided walkthrough using those real repos end to end.
+Compare these against the real, much larger worked examples in [`vocabularies/`](../vocabularies/), [`alignments/`](../alignments/), and the two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) once you're past the "what shape is this file" stage — see [`docs/getting-started.md`](../docs/getting-started.md) for a guided walkthrough using those real repos end to end.
 
 | File | Validates against | Notes |
 |---|---|---|
