@@ -2,7 +2,7 @@
 
 This is the walkthrough for the audience the main [README](../README.md)'s Quickstart is too abstract for: someone who wants to build their own Learning Progression Model (LPM), Strand, or Collection repository against OECB, and needs to see the whole pipeline work once, end to end, before starting their own.
 
-It uses [`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12) and [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12) as the worked example throughout — two real, CI-validated git repos that exercise the whole pipeline end to end, not toy snippets. Their *content* is a different matter: both carry `epistemicStatus: designed-thought-experiment` (RFC-0019) — they're a deliberately synthetic comparison pair (same schema, same pipeline, different controlled vocabulary) built to isolate one variable, not field-tested curricula. That split is the point: the mechanics you're here to learn (schema validation, strand structure, CI, IDs) are as real as it gets; the pedagogical content riding on top of them is intentionally a thought experiment, and both are early/draft-stage besides.
+It uses `bio-core-k12` and `interdisciplinary-k12` (both private repos, not publicly linkable or clonable by an anonymous visitor) as the worked example throughout — two real, CI-validated git repos that exercise the whole pipeline end to end, not toy snippets. Their *content* is a different matter: both carry `epistemicStatus: designed-thought-experiment` (RFC-0019) — they're a deliberately synthetic comparison pair (same schema, same pipeline, different controlled vocabulary) built to isolate one variable, not field-tested curricula. That split is the point: the mechanics you're here to learn (schema validation, strand structure, CI, IDs) are as real as it gets; the pedagogical content riding on top of them is intentionally a thought experiment, and both are early/draft-stage besides.
 
 ## 0. What you'll need
 
@@ -30,7 +30,7 @@ Every one of these is a real, live redirect — `www.w3id.org/openevo/` was regi
 
 ## 3. Look at a real dependent repo
 
-Clone the reference LPM built on the simpler of the two vocabularies:
+Clone the reference LPM built on the simpler of the two vocabularies (private repo — this step requires access; an external reader without it can follow along by reading the file excerpts below instead):
 
 ```bash
 git clone https://github.com/openevo-ccs/bio-core-k12
@@ -72,7 +72,7 @@ python scripts/validate.py schemas/strand.schema.yaml ../bio-core-k12/strands/*.
 
 Both should print `OK` for every file.
 
-This isn't just a manual courtesy check: `bio-core-k12` and `interdisciplinary-k12` each have their own [`.github/workflows/validate.yml`](https://github.com/openevo-ccs/bio-core-k12/blob/main/.github/workflows/validate.yml) that checks out `conceptbase` alongside itself and runs these exact commands on every PR — so if you're contributing to either, this is also what CI will run against your change, not a separate check you have to guess at. `conceptbase` itself has an analogous [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) covering every real vocabulary, alignment, and example file in this repo. This is schema validation only — the full spec §10.3 CI compatibility-checker (pin-resolution verification, deprecated-reference flagging) is still Phase 4 scope, not yet built.
+This isn't just a manual courtesy check: `bio-core-k12` and `interdisciplinary-k12` each have their own `.github/workflows/validate.yml` (private repos, not publicly linkable) that checks out `conceptbase` alongside itself and runs these exact commands on every PR — so if you're contributing to either, this is also what CI will run against your change, not a separate check you have to guess at. `conceptbase` itself has an analogous [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) covering every real vocabulary, alignment, and example file in this repo. This is schema validation only — the full spec §10.3 CI compatibility-checker (pin-resolution verification, deprecated-reference flagging) is still Phase 4 scope, not yet built.
 
 ## 5. Copy a minimal example instead of reverse-engineering a big one
 

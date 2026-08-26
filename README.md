@@ -259,7 +259,7 @@ https://www.w3id.org/openevo/                                 →  redirects to 
 ```
 
 (`oe:Competency` no longer resolves under this repo's own `/competency/` path — per RFC-0015 its
-canonical, resolvable home is [`competencybase`](https://github.com/openevo-ccs/competencybase),
+canonical, resolvable home is `competencybase` (private repo, not publicly linkable),
 using its own `OE-COMPETENCY-<vocab-slug>-<code-slug>` id form.)
 
 Full content negotiation (JSON-LD, HTML, flat JSON per §4.2's target design) is Phase 4 scope; the flat-JSON/raw-YAML behavior above is an intentional MVP, not the end state.
@@ -272,7 +272,7 @@ The full `validation/` directory and `oecb-validate` CLI referenced by earlier d
 python scripts/validate.py schemas/concept.schema.yaml examples/concept.example.yaml
 ```
 
-A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs ([`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12), [`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
+A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
 
 Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails against these schemas with a network-resolution error — every schema's `$ref` to `common.defs.yaml` resolves against a w3id URL that isn't served yet (a known gap; see the script's docstring). `scripts/validate.py` resolves that `$ref` from the local `schemas/` directory instead.
 
@@ -308,8 +308,8 @@ ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https
 
 Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice. Both are a deliberately synthetic comparison pair, not field-tested curricula — each carries `epistemicStatus: designed-thought-experiment` (RFC-0019), a permanent, structural declaration independent of their draft/stable lifecycle status, because the two are otherwise structurally identical: same schema, same pipeline, differing only in which controlled vocabulary each is built against. That's what makes any difference between them attributable to vocabulary scope, not some other confound:
 
-- **[`bio-core-k12`](https://github.com/openevo-ccs/bio-core-k12)** — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`, a vocabulary with no organism-agency concept at all.
-- **[`interdisciplinary-k12`](https://github.com/openevo-ccs/interdisciplinary-k12)** — the synthetic sandbox: a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`, which adds Agency, Niche Construction, and a Selection concept spanning biology/culture/education/AI. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
+- **`bio-core-k12`** (private repo, not publicly linkable) — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`, a vocabulary with no organism-agency concept at all.
+- **`interdisciplinary-k12`** (private repo, not publicly linkable) — the synthetic sandbox: a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`, which adds Agency, Niche Construction, and a Selection concept spanning biology/culture/education/AI. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
 
 Both are also early/draft-stage repositories in the ordinary `status: proposed` sense, on top of (and independent of) the synthetic/thought-experiment framing above.
 
