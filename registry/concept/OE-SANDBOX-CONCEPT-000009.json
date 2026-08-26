@@ -13,7 +13,8 @@
     }
   },
   "examples": [
-    "A NetLogo model of predator-driven selection on a beetle population's running speed, where students set individual beetle/predator rules and observe the population-level selection pattern emerge across generations."
+    "A NetLogo model of predator-driven selection on a beetle population's running speed, where students set individual beetle/predator rules and observe the population-level selection pattern emerge across generations.",
+    "Two Foresters, a real classroom-ready NetLogo model (netlogo repo, openevo-ccs/netlogo) in which learners author/manipulate two foresters' individual harvest-rate rules directly and observe the aggregate sustainability/social-dilemma outcome emerge, rather than being told a resource-depletion equation -- a real cooperation-and-agency-domain instantiation of this concept, not a natural-selection one."
   ],
   "id": "OE-SANDBOX-CONCEPT-000009",
   "labels": {
@@ -22,7 +23,9 @@
   "relations": {
     "skos:related": [
       "OE-SANDBOX-CONCEPT-000007",
-      "OE-SANDBOX-CONCEPT-000008"
+      "OE-SANDBOX-CONCEPT-000008",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation",
+      "OE-CONCEPT-oe-interdisciplinary-agency"
     ]
   },
   "sandboxMeta": {

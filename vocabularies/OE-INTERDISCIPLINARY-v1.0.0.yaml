@@ -173,7 +173,7 @@ concepts:
           a mutual benefit not achievable, or less efficiently achieved,
           alone.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-conflict, OE-CONCEPT-oe-interdisciplinary-culture, OE-CONCEPT-oe-interdisciplinary-institutions]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-conflict, OE-CONCEPT-oe-interdisciplinary-culture, OE-CONCEPT-oe-interdisciplinary-institutions, OE-SANDBOX-CONCEPT-000009]
 
   - id: OE-CONCEPT-oe-interdisciplinary-conflict
     type: oe:Concept
@@ -239,7 +239,7 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-development, OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-selection, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000008, OE-SANDBOX-CONCEPT-000010]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-development, OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-selection, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000008, OE-SANDBOX-CONCEPT-000009, OE-SANDBOX-CONCEPT-000010]
 
   - id: OE-CONCEPT-oe-interdisciplinary-scaffolding
     type: oe:Concept
@@ -705,12 +705,19 @@ concepts:
           makes decentralized causal reasoning learnable in practice,
           not just definable in principle.
     relations:
-      skos:related: [OE-SANDBOX-CONCEPT-000007, OE-SANDBOX-CONCEPT-000008]
+      skos:related: [OE-SANDBOX-CONCEPT-000007, OE-SANDBOX-CONCEPT-000008, OE-CONCEPT-oe-interdisciplinary-cooperation, OE-CONCEPT-oe-interdisciplinary-agency]
     examples:
       - A NetLogo model of predator-driven selection on a beetle
         population's running speed, where students set individual
         beetle/predator rules and observe the population-level
         selection pattern emerge across generations.
+      - Two Foresters, a real classroom-ready NetLogo model (netlogo repo,
+        openevo-ccs/netlogo) in which learners author/manipulate two
+        foresters' individual harvest-rate rules directly and observe the
+        aggregate sustainability/social-dilemma outcome emerge, rather
+        than being told a resource-depletion equation -- a real
+        cooperation-and-agency-domain instantiation of this concept, not
+        a natural-selection one.
     citations:
       - text: >
           Wilensky, U. (2020). Restructuration theory and agent-based
