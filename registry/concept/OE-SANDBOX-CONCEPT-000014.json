@@ -1,0 +1,34 @@
+{
+  "citations": [
+    {
+      "doi": "10.5751/ES-07634-200234",
+      "text": "Waring, T. M., Kline, M. A., Brooks, J. S., Goff, S. H., Gowdy, J., Janssen, M. A., Smaldino, P. E., & Jacquet, J. (2015). A multilevel evolutionary framework for sustainability analysis. Ecology and Society, 20(2), 34.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The durability of a given state over time — its capacity to withstand or recover from perturbation. Deliberately kept distinct from desirability: a resilient state is not necessarily a valued one, and a valued state is not necessarily resilient. Human values determine which state is desired; science addresses the process of achieving and maintaining it (Waring et al. 2015).\n"
+    }
+  },
+  "examples": [
+    "A monoculture farming system can be highly productive yet fragile to a single pest or drought — low resilience despite short-term desirability.",
+    "A community's food-sharing norms may persist stably across generations (high resilience) even if outside observers would not consider the resulting distribution desirable."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000014",
+  "labels": {
+    "en": "Resilience"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000013"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

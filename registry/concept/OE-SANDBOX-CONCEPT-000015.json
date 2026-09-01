@@ -1,0 +1,28 @@
+{
+  "citations": [],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The state of an organism's needs and values being adequately met. Functions as the central goal-referent for sustainability — what sustainability efforts ultimately aim to sustain, for humans and for other organisms.\n"
+    }
+  },
+  "examples": [
+    "A community's food security, physical safety, and sense of social belonging, taken together, as markers of its well-being."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000015",
+  "labels": {
+    "en": "Well-being"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000013"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

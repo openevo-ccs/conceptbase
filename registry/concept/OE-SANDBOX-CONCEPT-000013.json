@@ -1,0 +1,40 @@
+{
+  "citations": [
+    {
+      "doi": "10.5751/ES-07634-200234",
+      "text": "Waring, T. M., Kline, M. A., Brooks, J. S., Goff, S. H., Gowdy, J., Janssen, M. A., Smaldino, P. E., & Jacquet, J. (2015). A multilevel evolutionary framework for sustainability analysis. Ecology and Society, 20(2), 34.\n"
+    },
+    {
+      "text": "Brundtland, G. H. (1987). Our Common Future: Report of the World Commission on Environment and Development.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A goal state involving the maintenance of human (and other organisms') well-being, needs, and values into the future, together with the durability of a given state over time under perturbation. Sustainability has two connotations that are conceptually distinct: a goal state (what should be maintained, a question of human values) and durability/resilience (how well a state persists, a question science can address) — not all resilient states are desirable, and not all desirable states are resilient (Waring et al. 2015).\n"
+    }
+  },
+  "examples": [
+    "Evaluating a climate policy not only by whether the resulting ecological state would persist (resilience) but by whether it actually serves human needs and values (the goal-state question).",
+    "The UN Sustainable Development Goals as one attempt to specify what humans collectively need, value, and therefore want to sustain — while recognizing communities may value different things or things not captured by the SDGs."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000013",
+  "labels": {
+    "en": "Sustainability"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000014",
+      "OE-SANDBOX-CONCEPT-000015",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation",
+      "OE-CONCEPT-oe-interdisciplinary-institutions"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

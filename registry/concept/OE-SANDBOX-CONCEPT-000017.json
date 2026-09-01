@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1126/science.162.3859.1243",
+      "text": "Hardin, G. (1968). The Tragedy of the Commons. Science, 162(3859), 1243-1248.\n"
+    },
+    {
+      "doi": "10.1017/cbo9780511807763",
+      "text": "Ostrom, E. (1990). Governing the Commons: The Evolution of Institutions for Collective Action.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The social dilemma (OE-SANDBOX-CONCEPT-000016) that arises when individuals acting in their own rational self-interest deplete a shared, finite resource, even though this outcome harms the group's long-term interest, including the individuals' own (Hardin 1968). Hardin's original framing has been substantially qualified by later empirical work — notably Ostrom (1990) — showing that many communities avoid this outcome through self-governing institutions, without requiring privatization or external (state) control.\n"
+    }
+  },
+  "examples": [
+    "Overfishing a shared fishery until fish stocks collapse.",
+    "Community-managed irrigation systems, forests, and fisheries that avoid collapse through locally-evolved rules and monitoring (Ostrom's counter-cases)."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000017",
+  "labels": {
+    "en": "Tragedy of the Commons"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000016"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-institutions",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1126/science.162.3859.1243",
+      "text": "Hardin, G. (1968). The Tragedy of the Commons. Science, 162(3859), 1243-1248.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A situation in which an individual's short-term interest is not aligned with the community's long-term interest, such that behavior that benefits the individual (or has only small negative consequences for the community) becomes harmful to everyone if adopted widely. Distinct from situations where individual and collective interest are either fully aligned (no dilemma) or fully opposed (straightforward competition).\n"
+    }
+  },
+  "examples": [
+    "Overusing a shared water supply during a drought: any single household's extra use barely matters, but widespread overuse depletes the resource for everyone.",
+    "The tragedy of the commons (OE-SANDBOX-CONCEPT-000017) as the specific instance of a social dilemma applied to shared, finite resources."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000016",
+  "labels": {
+    "en": "Social Dilemma"
+  },
+  "relations": {
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-000017"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-cooperation",
+      "OE-CONCEPT-oe-interdisciplinary-conflict"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
