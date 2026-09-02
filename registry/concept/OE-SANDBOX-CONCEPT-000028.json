@@ -1,5 +1,12 @@
 {
-  "citations": [],
+  "citations": [
+    {
+      "text": "Kashdan, T. B., & Rottenberg, J. (2010). Psychological Flexibility as a Fundamental Aspect of Health. Clinical Psychology Review, 30(7), 865-878. https://doi.org/10.1016/j.cpr.2010.03.001 -- coins and characterizes the term. LiteratureBase: OE-LITERATURE-kashdan-rottenberg-2010.\n"
+    },
+    {
+      "text": "Wilson, K. G., Sandoz, E. K., Kitchens, J., & Roberts, M. (2010). The Valued Living Questionnaire: Defining and Measuring Valued Action within a Behavioral Framework. The Psychological Record, 60(2), 249-272. https://doi.org/10.1007/BF03395706 -- operationalizes the values component this concept's definition refers to. LiteratureBase: OE-LITERATURE-wilson-sandoz-kitchens-roberts-2010.\n"
+    }
+  ],
   "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
   "definitions": {
     "en": {
