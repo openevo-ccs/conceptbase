@@ -1,0 +1,36 @@
+{
+  "citations": [
+    {
+      "doi": "10.1126/science.1172133",
+      "text": "Ostrom, E. (2009). A General Framework for Analyzing Sustainability of Social-Ecological Systems. Science, 325(5939), 419-422.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "An analytical framework for studying how easy or difficult it is for a community to sustainably cooperate around a shared resource, by decomposing the situation into interacting tiers of factors: resource factors (system size, carrying capacity, predictability, renewal rate, economic value), user/community factors (group size, heterogeneity vs. common identity, conflict-resolution mechanisms, decision-making, social norms and institutions), and their interactions (resource use behavior, social behavior, technologies and cultural knowledge) -- all embedded within, and shaped by, adjacent/higher-level ecosystems and relations with other groups (Ostrom 2009). Provides a shared vocabulary for comparing very different commons-governance cases (fisheries, forests, irrigation systems) using the same underlying factor structure.\n"
+    }
+  },
+  "examples": [
+    "Comparing why one community-managed fishery avoids collapse while another does not, by checking which resource factors (e.g. renewal rate) and user factors (e.g. conflict-resolution mechanisms) differ between them.",
+    "Using the framework's tiers as an analysis checklist before running an agent-based model or classroom simulation of a common-pool-resource dilemma."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000024",
+  "labels": {
+    "en": "Social-Ecological System (SES) Framework"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000016",
+      "OE-SANDBOX-CONCEPT-000017",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

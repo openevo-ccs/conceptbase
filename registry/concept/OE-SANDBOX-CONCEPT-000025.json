@@ -1,0 +1,33 @@
+{
+  "citations": [
+    {
+      "text": "Kahneman, D. (2011). Thinking, Fast and Slow. Farrar, Straus and Giroux.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A framework distinguishing two loosely-coupled modes of mental processing: 'System 1' -- fast, automatic, unconscious, intuitive, effortless, and less flexible -- and 'System 2' -- slow, conscious, rational, effortful, and more flexible, requiring concentration. The two are not strictly separable (many processes fall somewhere between), and System 1 generally dominates perception, thinking, and action even though people subjectively identify with System 2 as their conscious, deciding 'self.' Humans share many System 1 capacities with other animals (some innate, some acquired through repeated practice), while System 2's particular elaboration in humans is tied to functions like impulse control in social situations, sustained learning/teaching, complex tool use, and coordinated movement -- capacities that developed throughout human evolutionary history and continue to develop over each individual's lifetime rather than being present at birth.\n"
+    }
+  },
+  "examples": [
+    "Solving '2 + 2' (System 1: fast, automatic) versus solving '17 x 23' (System 2: slow, effortful, requiring conscious concentration).",
+    "Reflexively seeing a face in random visual noise (a System 1 distortion/simplification of perception) even after consciously knowing there is no face there."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000025",
+  "labels": {
+    "en": "Dual Process Theory (System 1 / System 2)"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-culture"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

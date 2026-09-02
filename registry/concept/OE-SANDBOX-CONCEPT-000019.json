@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1098/rstb.2006.1998",
+      "text": "Whiten, A. & van Schaik, C. P. (2007). The evolution of animal 'cultures' and social intelligence. Philosophical Transactions of the Royal Society B, 362(1480), 603-620.\n"
+    },
+    {
+      "doi": "10.1017/ehs.2019.1",
+      "text": "Schuppli, C. & van Schaik, C. P. (2019). Animal cultures: how we've only seen the tip of the iceberg. Evolutionary Human Sciences, 1, e2.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Culture (OE-CONCEPT-oe-interdisciplinary-culture) that accumulates in complexity across generations because improvements are retained with high transmission fidelity rather than being lost and reinvented each generation -- a 'ratchet effect' anthropologists use to distinguish human culture from the culture documented in many other species (primates, birds, fish, and some invertebrates all pass on behaviors via social learning, but with markedly higher loss-of-information between generations). Enabled in humans by particularly good social-learning, imitation, teaching, and language abilities, cumulative culture lets a population's traits (technologies, knowledge, norms) exceed what any one individual could invent or learn alone within a single lifetime.\n"
+    }
+  },
+  "examples": [
+    "A person alive today cannot single-handedly reinvent the technologies and accumulated knowledge their culture provides, even given a full lifetime of independent effort.",
+    "Contrast case: many primate and bird traditions are maintained across generations but do not accumulate new refinements the way human technologies do (Whiten & van Schaik 2007's culture-to-cumulative-culture spectrum)."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000019",
+  "labels": {
+    "en": "Cumulative Culture"
+  },
+  "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-oe-interdisciplinary-culture"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,29 @@
+{
+  "citations": [],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The ability to notice, accept, and use the automatic behaviors of one's own mind (System 1 intuitions, emotions, self-narratives) more flexibly, in the service of one's actual goals and values, rather than being automatically directed or dominated by them. Automatic mental processes cannot simply be 'turned off' -- they are part of one's history and often serve real functions -- but mindfulness (using a 'Noticer' capacity to observe one's own mental processes from a distance) allows a person to notice how these processes and the external environment are trying to direct behavior, without being obligated to follow that direction. Grounded in contextual behavioral science (e.g. Acceptance and Commitment Therapy), and related to other competencies and attitudes such as growth mindset, intellectual humility, and cooperation.\n"
+    }
+  },
+  "examples": [
+    "Noticing an urge toward self-criticism or a habitual reaction, and choosing a values-aligned response instead of automatically following the urge.",
+    "Practicing regular mindfulness exercises specifically to strengthen the capacity to observe one's own mental 'characters' (intuitions, emotions) from a distance rather than being fused with them."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000028",
+  "labels": {
+    "en": "Psychological Flexibility"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000025"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

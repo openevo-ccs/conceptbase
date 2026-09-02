@@ -1,0 +1,36 @@
+{
+  "citations": [
+    {
+      "text": "Heyes, C. (2018). Cognitive Gadgets: The Cultural Evolution of Thinking. Belknap Press of Harvard University Press.\n"
+    },
+    {
+      "text": "Gopnik, A., Meltzoff, A. N., & Kuhl, P. K. (2000). The Scientist in the Crib. HarperCollins.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The minimal, species-typical genetic endowment for social cognition and learning that a human infant is born with -- attention to faces, voices, and others' emotions/actions from birth; discrimination of helpful vs. unhelpful agents by ~3 months; joint attention and shared symbol-construction by ~9 months; perceiving others' needs and a nascent fairness sense by year two; a temporally-extended, narrative sense of self by year four; internalization of social norms from age five. The 'kit' framing emphasizes that these are starting capacities elaborated through a social/cultural environment, not a finished cognitive architecture -- development of the full range of human social abilities (empathy, cooperation, language, norm-following) depends on growing up embedded in that environment, not on the genetic kit alone (see OE-PROPOSITION-culture-capacity-is-evolved-nature).\n"
+    }
+  },
+  "examples": [
+    "A 9-month-old pointing to share attention on an object with a caregiver, before having any language to name it.",
+    "Six-year-olds spontaneously establishing shared rules to fairly divide a limited resource without adult instruction -- built on the starter kit's early fairness sense, elaborated through social experience."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000020",
+  "labels": {
+    "en": "Genetic Starter Kit (Social Cognition)"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000018"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,35 @@
+{
+  "citations": [
+    {
+      "doi": "10.1177/0963721417731378",
+      "text": "Li, N. P., van Vugt, M., & Colarelli, S. M. (2018). The Evolutionary Mismatch Hypothesis: Implications for Psychological Science. Current Directions in Psychological Science, 27(1), 38-44.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The situation in which a trait that was adaptive under previous environmental conditions is no longer adaptive under current conditions, because the environment has changed faster than the trait itself. Cultural evolution has changed the human social and natural environment drastically and at an accelerating pace (especially with new technologies), raising the question of whether many present-day problems of well-being and sustainability reflect a mismatch between evolved human traits and the modern environment (colloquially, a 'stone-age brain' in a modern world). This framing is deliberately held in tension with an opposing feature of the species: humans' unusual cultural flexibility -- behaviors, beliefs, and norms shift across generations far faster than genetic inheritance could -- so mismatch is a real risk but not a fixed destiny, since cultural evolution can also be a route to closing (or worsening) a given mismatch.\n"
+    }
+  },
+  "examples": [
+    "A preference for calorie-dense food, adaptive when such food was scarce, becoming a health liability in an environment of constant abundance.",
+    "Agency-detection and in-group/out-group cognition, adaptive for small-group survival, contributing to conspiracy-theory belief and political polarization in a globalized information environment they were never 'designed' for."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000029",
+  "labels": {
+    "en": "Evolutionary Mismatch"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000013",
+      "OE-SANDBOX-CONCEPT-000019"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

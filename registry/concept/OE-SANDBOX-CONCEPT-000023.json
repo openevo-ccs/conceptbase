@@ -1,0 +1,29 @@
+{
+  "citations": [],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A model of human behavior, historically influential in economics, in which people are assumed to be self-interested rational calculators who make decisions purely to maximize their own material benefit. This model has shaped how many modern institutions try to motivate behavior -- primarily through material incentives (discounts, bonuses, penalties, taxes). Behavioral-science experiments and observations across cultures show this model does not describe real human behavior well: people are motivated by more than material gain (conscience, reputation, prosocial values, social norms) and often act intuitively rather than through deliberate rational calculation. The contrast is often framed as 'Homo economicus' versus 'Homo sapiens' as they actually behave. Notably, material incentives can backfire or become self-fulfilling: people can start behaving like Homo economicus if they sense that their social preferences and norms don't matter, or that others around them are acting as purely self-interested maximizers.\n"
+    }
+  },
+  "examples": [
+    "Assuming a cigarette tax alone (a pure material incentive) will change smoking behavior, versus recognizing that social norms, reputation, and intuition also shape the decision to smoke.",
+    "A community that manages a shared resource well through trust and social norms starting to behave more selfishly once fines or payments are introduced for the same behavior -- material incentives crowding out prosocial motivation."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000023",
+  "labels": {
+    "en": "Homo Economicus"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-cooperation"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

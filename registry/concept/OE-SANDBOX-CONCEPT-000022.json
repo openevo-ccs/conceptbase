@@ -1,0 +1,34 @@
+{
+  "citations": [
+    {
+      "text": "Schäfer, M., Haun, D. B. M., & Tomasello, M. (2015). Fair Is Not Fair Everywhere. Psychological Science, 26(8), 1252-1260.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A social organization with no formal hierarchy or dominance by one or a few individuals, in which valuable resources are widely shared and autonomy is valued -- documented as characteristic of many small-scale (100-200 person) hunter-gatherer foraging societies. Egalitarianism is not the absence of conflict or of individuals attempting to dominate or seize resources; rather, it is actively maintained through conflict-resolution and leveling mechanisms (shaming, public denunciation, negotiation, and in severe cases punishment or exclusion) that keep such attempts from succeeding. Cross-cultural research finds that egalitarian upbringing shapes children's own sense of distributive fairness: children from an egalitarian, partially hunter-gatherer culture share more equally regardless of individual merit/achievement, compared to children from a merit-tracking modern Western society or a hierarchical, gerontocratic pastoralist society (Schäfer, Haun & Tomasello 2015).\n"
+    }
+  },
+  "examples": [
+    "A hunter dividing meat equally among all households in the group, regardless of who made the kill.",
+    "Children from an egalitarian culture splitting earned rewards evenly with a partner even when they contributed unequally to earning them -- unlike children from cultures that track and reward individual merit."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000022",
+  "labels": {
+    "en": "Egalitarianism"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000016",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

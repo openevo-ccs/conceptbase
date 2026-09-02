@@ -1,0 +1,33 @@
+{
+  "citations": [
+    {
+      "text": "Haidt, J. (2012). The Righteous Mind: Why Good People Are Divided by Politics and Religion. Pantheon Books.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The theory that human moral judgment rests on a small set of evolved, shared intuitive foundations -- analogous to taste receptors -- including at least Care/Harm, Fairness/Cheating, Loyalty/Betrayal, Authority/Subversion, Purity/Degradation, and Freedom/Oppression. Everyone shares the same foundations (the 'taste receptors'), but cultures and individuals develop very different 'moral tastes' -- which foundations are emphasized, and how -- through their evolutionary heritage, cultural history, and individual socialization. Moral judgments are typically made quickly and intuitively (fast, System-1-like processing) with reasoned justification following afterward, rather than being derived from deliberate reasoning first. The same shared-foundation architecture that lets people build cooperative moral communities ('binds') also makes it easy to see other groups' differently-weighted moral intuitions as simply wrong rather than differently calibrated ('blinds'), fueling moral polarization between groups that each see themselves as good and reasonable.\n"
+    }
+  },
+  "examples": [
+    "Two political groups disagreeing sharply on an issue because one weights the Care/Harm foundation most heavily and the other weights Authority/Subversion or Purity/Degradation more heavily -- not because one side lacks morality.",
+    "A person feeling immediate, unreasoned disgust at a norm violation (fast, intuitive judgment) and only afterward constructing a rational-sounding justification for that reaction."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000026",
+  "labels": {
+    "en": "Moral Foundations Theory"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000025"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

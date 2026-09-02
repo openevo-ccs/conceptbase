@@ -1,0 +1,34 @@
+{
+  "citations": [
+    {
+      "doi": "10.1002/evan.20222",
+      "text": "Burkart, J. M., Hrdy, S. B., & Van Schaik, C. P. (2009). Cooperative breeding and human cognitive evolution. Evolutionary Anthropology, 18(5), 175-186.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The ability and motivation to be friendly, tolerate others' presence, or share things and information with others without threat or rational calculation, but rather spontaneously or voluntarily. Distinct from cooperation (OE-CONCEPT-oe-interdisciplinary-cooperation) in scope: prosociality is the broader disposition, of which cooperation toward a shared goal is one expression. Comparative primate research finds this spontaneous, voluntary form concentrated in species that live in groups and collaboratively raise their offspring, with humans showing an unusually strong version extending even to unknown others -- unlike our closer relatives (chimpanzees), whose prosociality is more restricted and conditional (Burkart, Hrdy & van Schaik 2009).\n"
+    }
+  },
+  "examples": [
+    "Sharing food or information with a stranger without expectation of repayment, versus only with kin or reciprocating partners.",
+    "The 'social scale of prosociality' comparison across species (callitrichids, capuchins, chimpanzees, humans), showing humans alone extending strong prosocial motivation from close relatives out to strangers."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000018",
+  "labels": {
+    "en": "Prosociality"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-cooperation"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,34 @@
+{
+  "citations": [
+    {
+      "text": "Turchin, P. (2006). War and Peace and War: The Rise and Fall of Empires. Plume.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The capacity of a species to organize large-scale, complex societies of unrelated and often personally unacquainted individuals -- in humans, made possible by symbolic thinking, which lets group membership be marked (language/dialect, dress, ritual, other symbolic markers) and recognized without requiring personal acquaintance. This let cooperation scale from small kin/familiar groups to villages, tribes, regional societies, nations, and supranational unions, with people typically holding multiple nested, coexisting group identities rather than a single one (Turchin 2006). The same symbolic-marking mechanism that enables cooperation within a marked group can also sharpen hostility toward groups marked as outsiders -- ultrasociality is not unambiguously prosocial at every scale.\n"
+    }
+  },
+  "examples": [
+    "A person feeling simultaneous loyalty to their hometown, region, nation, and a supranational body such as the UN or EU -- nested identities at different symbolic scales.",
+    "Strangers from different countries cooperating on a global sustainability goal despite having no personal relationship or shared kin group -- made possible by shared symbolic identification (e.g. as members of a scientific community, or of humanity)."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000021",
+  "labels": {
+    "en": "Ultrasociality"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-cooperation",
+      "OE-CONCEPT-oe-interdisciplinary-culture"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

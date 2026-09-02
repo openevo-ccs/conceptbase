@@ -1,0 +1,37 @@
+{
+  "citations": [
+    {
+      "text": "Suddendorf, T., & Corballis, M. C. (1997). Mental Time Travel and the Evolution of the Human Mind. Genetic, Social, and General Psychology Monographs, 123(2), 133-167.\n"
+    },
+    {
+      "doi": "10.1126/science.1129217",
+      "text": "Suddendorf, T. (2006). Foresight and Evolution of the Human Mind. Science, 312(5776), 1006-1007.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The capacity to mentally project oneself backward to re-experience a past event, or forward to pre-experience a possible future event, while one's body and senses remain in the present. Depends on brain systems present across many animals in a limited form (memory of past events, some ability to imagine the immediate future), but is vastly elaborated in humans, letting people prepare for and shape events far beyond the immediate future -- plausibly a major driver of human cognitive evolution (e.g. tool preparation, planning). Develops over childhood (no one can mentally travel back to their first birthday) and is supported by language and cumulative cultural knowledge, which extend mental time travel to an ever more distant collective past and future, not just an individual's own lifetime. Can occur automatically (System 1) or be consciously directed (System 2).\n"
+    }
+  },
+  "examples": [
+    "Carrying keys, a Swiss Army knife, or other tools because they may be useful at some future point -- reasoning that requires mentally simulating a not-yet-existing situation.",
+    "A group of friends reminiscing together about a shared past event ('mutual time travel down memory lane'), which itself functions as social glue."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000027",
+  "labels": {
+    "en": "Mental Time Travel"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000019"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-09-01",
+    "expiresOn": "2027-09-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
