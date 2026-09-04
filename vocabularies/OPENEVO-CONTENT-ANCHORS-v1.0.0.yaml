@@ -1,0 +1,314 @@
+# ============================================================================
+# OpenEvo ConceptBase — Controlled Vocabulary: OPENEVO-CONTENT-ANCHORS
+# ============================================================================
+# Path: /vocabularies/OPENEVO-CONTENT-ANCHORS-v1.0.0.yaml
+#
+# OpenEvo's own 9 Content Anchors (RFC-0023), generated from
+# openevo-graph/nodes/content_anchors.json by
+# scripts/migrate_content_anchors.py -- do not hand-edit the migrated
+# fields (id/labels/definitions/relations/extensions) without also
+# updating the source or this script; hand-authored additions belong
+# in a field the script does not touch.
+# ============================================================================
+
+meta:
+  id: OPENEVO-CONTENT-ANCHORS
+  version: 1.0.0
+  status: proposed
+  scope: OpenEvo's own 9-anchor design-concept vocabulary -- the foundational disciplinary content structures
+    around which OpenEvo curriculum design is organised. Migrated from openevo-graph/nodes/content_anchors.json
+    (RFC-0023); that repo's copy becomes a generated mirror of this vocabulary once accepted, retaining
+    the fuller field set (discipline, subjectAreas, tags, CASE crosswalk links, graph layout) this vocabulary
+    deliberately does not duplicate.
+  discipline: cross-disciplinary
+  license: CC-BY-NC-SA-4.0
+  authors:
+  - name: OpenEvo ConceptBase Maintainers
+  conformsTo: OE-SCHEMA-CONCEPT-v1.0.0
+  phase: 1
+concepts:
+- id: OE-CONCEPT-openevo-content-anchors-ancient-ancestors
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Ancient Ancestors
+  definitions:
+    en:
+      general: Human biological and cultural traits are the product of millions of years of evolutionary
+        history, readable through fossil records, archaeological evidence, and comparative studies of
+        living species.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-child-development
+    - OE-CONCEPT-openevo-content-anchors-cross-species-comparisons
+    - OE-CONCEPT-openevo-content-anchors-cultural-diversity
+    - OE-CONCEPT-openevo-content-anchors-our-mind
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: ancient-ancestors
+    oe:developmentalArc:
+      K-2: Stories of early humans and ancient life. Basic timelines and the idea that humans have ancient
+        origins. Exploration of tools and artefacts.
+      3-5: Introduction to fossil evidence, early human species, and basic evolutionary concepts. Comparison
+        of human and non-human primate anatomy.
+      6-8: Hominin evolution, key fossil discoveries, and the emergence of language, art, and social complexity.
+        Archaeological inquiry methods.
+      9-12: Advanced paleoanthropology, genetic evidence for human origins, multiregional vs. out-of-Africa
+        models, and deep cultural history.
+      13-16: Original research engagement with paleoanthropological literature, ancient DNA analysis,
+        and theoretical frameworks for human evolution.
+- id: OE-CONCEPT-openevo-content-anchors-cross-species-comparisons
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Cross-species Comparisons
+  definitions:
+    en:
+      general: Systematic comparison of behaviour, cognition, and biology across species reveals both
+        shared evolutionary heritage and the distinctive features of human and non-human animal minds.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-ancient-ancestors
+    - OE-CONCEPT-openevo-content-anchors-child-development
+    - OE-CONCEPT-openevo-content-anchors-our-mind
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: cross-species-comparisons
+    oe:developmentalArc:
+      K-2: Observation of animal behaviour and basic comparisons between humans and familiar animals.
+        What do animals do? What can they learn?
+      3-5: Structured comparison of animal cognition — tool use, communication, social behaviour. Introduction
+        to the concept of adaptation.
+      6-8: Comparative cognition studies, ethological methods, and the logic of the comparative method.
+        Homology vs. analogy.
+      9-12: Advanced comparative psychology, primate cognition research, animal communication systems,
+        and evolutionary explanations of behaviour.
+      13-16: Engagement with primary ethological and comparative psychology literature. Research design
+        in comparative cognition.
+- id: OE-CONCEPT-openevo-content-anchors-child-development
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Child Development
+  definitions:
+    en:
+      general: Human cognitive, social, emotional, and linguistic capacities develop through a dynamic
+        interplay of biological maturation, social interaction, and cultural learning across childhood
+        and adolescence.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-ancient-ancestors
+    - OE-CONCEPT-openevo-content-anchors-cross-species-comparisons
+    - OE-CONCEPT-openevo-content-anchors-our-mind
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: child-development
+    oe:developmentalArc:
+      K-2: Basic awareness of how babies and children grow and learn. Stories about learning and development.
+        Introduction to emotions and social understanding.
+      3-5: Stages of development, brain basics, and how learning happens. Piaget's concrete operations
+        introduced through hands-on investigation.
+      6-8: Adolescent brain development, theory of mind, language acquisition, and social cognition. Metacognitive
+        awareness as a learning tool.
+      9-12: Advanced developmental psychology, Vygotsky and zone of proximal development, moral development,
+        and identity formation in adolescence.
+      13-16: Developmental neuroscience, attachment theory, research methods in developmental psychology,
+        and applications in education and policy.
+- id: OE-CONCEPT-openevo-content-anchors-cooperation-games
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Cooperation Games
+  definitions:
+    en:
+      general: Cooperation between individuals and groups is a fundamental feature of human and non-human
+        societies, explainable through evolutionary, mathematical, and social scientific frameworks that
+        reveal when and why cooperation succeeds or fails.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-computer-models
+    - OE-CONCEPT-openevo-content-anchors-cultural-diversity
+    - OE-CONCEPT-openevo-content-anchors-global-sustainability-goals
+    - OE-CONCEPT-openevo-content-anchors-governing-the-commons
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: cooperation-games
+    oe:developmentalArc:
+      K-2: Cooperative play and games. Why sharing matters. Stories about helping and working together.
+        Simple team challenges.
+      3-5: Introduction to cooperation and competition through structured games. Basic concepts of fairness,
+        rules, and collective outcomes.
+      6-8: Prisoner's Dilemma and public goods games. Evolutionary explanations of cooperation. Real-world
+        collective action problems.
+      9-12: Game theory, Nash equilibrium, evolutionary game theory, and institutional economics. Applications
+        to political science and environmental policy.
+      13-16: Advanced game theory, mechanism design, experimental economics, and the mathematics of evolutionary
+        cooperation models.
+- id: OE-CONCEPT-openevo-content-anchors-cultural-diversity
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Cultural Diversity
+  definitions:
+    en:
+      general: Human cultures display profound diversity in values, practices, beliefs, and social organisation.
+        This diversity is both a product of cultural evolution and a window into the range of human potential,
+        challenging assumptions about universal or natural forms of human life.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-ancient-ancestors
+    - OE-CONCEPT-openevo-content-anchors-cooperation-games
+    - OE-CONCEPT-openevo-content-anchors-global-sustainability-goals
+    - OE-CONCEPT-openevo-content-anchors-governing-the-commons
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: cultural-diversity
+    oe:developmentalArc:
+      K-2: Celebrating differences in food, family, celebrations, and daily life. Stories from diverse
+        cultural perspectives.
+      3-5: Systematic comparison of cultural practices across regions. Introduction to cultural relativism
+        and ethnocentrism.
+      6-8: Cross-cultural psychology, cultural norms and values, and the concept of cultural evolution.
+        Fieldwork and ethnographic methods introduced.
+      9-12: Advanced cultural anthropology, cultural transmission models, and theoretical debates about
+        cultural universals and relativism.
+      13-16: Engagement with cultural evolution literature, cross-cultural research methods, and the anthropology
+        of cognition and culture.
+- id: OE-CONCEPT-openevo-content-anchors-governing-the-commons
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Governing the Commons
+  definitions:
+    en:
+      general: Human communities have developed diverse institutional arrangements for governing shared
+        resources — from local fishing grounds to global digital commons — that reveal the conditions
+        under which self-governance succeeds and the design principles that make institutions robust.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-computer-models
+    - OE-CONCEPT-openevo-content-anchors-cooperation-games
+    - OE-CONCEPT-openevo-content-anchors-cultural-diversity
+    - OE-CONCEPT-openevo-content-anchors-global-sustainability-goals
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: governing-the-commons
+    oe:developmentalArc:
+      K-2: Shared spaces and resources in the classroom and community. Rules for taking care of things
+        we all use.
+      3-5: Community resources and local governance. Introduction to rules, norms, and collective decision-making.
+        Case studies of local commons.
+      6-8: Ostrom's design principles. Case studies of fishing commons, forests, and irrigation systems.
+        Comparison with top-down governance models.
+      9-12: Advanced institutional economics, polycentric governance, the global commons (atmosphere,
+        oceans), and digital commons. Policy analysis.
+      13-16: Engagement with Ostrom's primary literature, commons theory, and original analysis of governance
+        institutions and their design.
+- id: OE-CONCEPT-openevo-content-anchors-our-mind
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Our Mind
+  definitions:
+    en:
+      general: The human mind is a biological system shaped by evolution, development, and culture, with
+        characteristic strengths and systematic limitations that are illuminated by cognitive science,
+        neuroscience, and philosophy of mind.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-ancient-ancestors
+    - OE-CONCEPT-openevo-content-anchors-child-development
+    - OE-CONCEPT-openevo-content-anchors-computer-models
+    - OE-CONCEPT-openevo-content-anchors-cross-species-comparisons
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: our-mind
+    oe:developmentalArc:
+      K-2: Basic awareness of thinking, feeling, and learning. Emotions and how they affect behaviour.
+        The brain as the organ of thinking.
+      3-5: Memory, attention, and basic cognitive processes. Introduction to cognitive biases through
+        relatable examples. Growth mindset framing.
+      6-8: Dual-process thinking (System 1 / System 2), cognitive biases, and metacognition as a learning
+        tool. Introduction to neuroscience basics.
+      9-12: Advanced cognitive psychology, consciousness, philosophy of mind, neuroscience of learning,
+        and critical evaluation of cognitive claims.
+      13-16: Cognitive science research methods, philosophy of mind, consciousness studies, and applications
+        in education, law, and public policy.
+- id: OE-CONCEPT-openevo-content-anchors-computer-models
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Computer Models
+  definitions:
+    en:
+      general: Computational models and simulations allow us to explore the behaviour of complex systems
+        — from evolutionary dynamics to climate systems to social networks — providing scientific insight
+        that cannot be obtained through traditional observation or experiment alone.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-cooperation-games
+    - OE-CONCEPT-openevo-content-anchors-global-sustainability-goals
+    - OE-CONCEPT-openevo-content-anchors-governing-the-commons
+    - OE-CONCEPT-openevo-content-anchors-our-mind
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: computer-models
+    oe:developmentalArc:
+      K-2: Simple simulations and interactive models as exploration tools. 'What happens if...?' investigation
+        through guided digital play.
+      3-5: Using pre-built simulations to explore science and social science phenomena. Introduction to
+        variables and model parameters.
+      6-8: Agent-based modelling with tools like NetLogo. Building and modifying simple models. Critiquing
+        model assumptions.
+      9-12: Advanced agent-based modelling, system dynamics, and statistical modelling. Model validation
+        and the epistemology of simulation.
+      13-16: Research-grade computational modelling, machine learning concepts, and original simulation-based
+        research projects.
+- id: OE-CONCEPT-openevo-content-anchors-global-sustainability-goals
+  type: oe:Concept
+  status: proposed
+  version: 1.0.0
+  definedInVocabulary: OPENEVO-CONTENT-ANCHORS-v1.0.0
+  labels:
+    en: Global Sustainability Goals
+  definitions:
+    en:
+      general: The 17 UN Sustainable Development Goals define humanity's most pressing collective challenges
+        — from climate change to inequality to biodiversity loss — requiring integrated scientific understanding,
+        cross-cultural cooperation, and innovative governance for their achievement.
+  relations:
+    skos:related:
+    - OE-CONCEPT-openevo-content-anchors-computer-models
+    - OE-CONCEPT-openevo-content-anchors-cooperation-games
+    - OE-CONCEPT-openevo-content-anchors-cultural-diversity
+    - OE-CONCEPT-openevo-content-anchors-governing-the-commons
+  extensions:
+    oe:conceptRole: content-anchor
+    oe:openevoGraphSourceId: global-sustainability-goals
+    oe:developmentalArc:
+      K-2: Taking care of our world — local environmental stewardship and community wellbeing. Introduction
+        to the idea that our actions affect others and the planet.
+      3-5: Introduction to specific SDGs through concrete examples — clean water, food security, biodiversity.
+        Local-to-global connections.
+      6-8: Systems analysis of specific SDGs. Trade-offs between goals. Introduction to climate science,
+        biodiversity, and global inequality.
+      9-12: Advanced sustainability science, climate policy, international development, and ethical dimensions
+        of global sustainability challenges.
+      13-16: Research-level engagement with sustainability science, original analysis of SDG progress,
+        and policy design for sustainable development.

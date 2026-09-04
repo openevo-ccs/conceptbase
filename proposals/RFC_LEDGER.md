@@ -41,3 +41,4 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0020 | 2026-08-24 | decentralized-causal-reasoning-competency | `decentralized-causal-reasoning-competency` (unmerged) | lab-manager-b6 | Phase 3 of the four-competency roadmap |
 | 0021 | 2026-08-24 | openevo-foundational-competencies-legacy-migration | `openevo-foundational-competencies-migration` (unmerged) | lab-manager-b6 | Phase 4 + 14-node legacy migration |
 | 0022 | 2026-08-24T11:46:57Z | evolutionary-causal-reasoning-competency | (claimed, not yet a branch) | lab-manager-b6 | |
+| 0023 | 2026-09-04 | openevo-content-anchor-vocabulary-migration | `rfc-0023-content-anchor-vocabulary-migration` | lab-manager | Claimed via a branch, not the usual pull/append/push-to-main-immediately protocol — `main`'s working tree had large unrelated in-flight uncommitted work at claim time (an ecosystem-wide OECB→ConceptBase rename) that this deliberately avoided touching or entangling with. |
