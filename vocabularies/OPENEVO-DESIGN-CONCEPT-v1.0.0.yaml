@@ -31,10 +31,12 @@
 # openevo-graph/nodes/content_anchors.json until a later RFC gives it a
 # ConceptBase home (Phase 2 alignments).
 #
-# Source relatedAnchors data was asymmetric in 7 places (A related to B but
-# not the reverse) -- completed to satisfy skos:related's own symmetric
-# semantics rather than left as 7 check_related_symmetry.py failures. See
-# RFC-0023 "Proposed change".
+# relatedAnchors is carried through exactly as authored -- every anchor has
+# exactly 3, a deliberate curation, not always reciprocal. This intentionally
+# does NOT satisfy scripts/check_related_symmetry.py's symmetry expectation;
+# that check is advisory (not run in CI, see .github/workflows/validate.yml),
+# and forcing symmetry here would override the source's own top-3 curation.
+# See RFC-0023 "Proposed change".
 # ============================================================================
 
 meta:
@@ -72,7 +74,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-cross-species-comparisons
       - OE-CONCEPT-openevo-design-concept-cultural-diversity
       - OE-CONCEPT-openevo-design-concept-our-mind
-      - OE-CONCEPT-openevo-design-concept-child-development
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Paleoanthropology / Evolutionary Biology / Archaeology
@@ -237,7 +238,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-governing-the-commons
       - OE-CONCEPT-openevo-design-concept-cultural-diversity
       - OE-CONCEPT-openevo-design-concept-global-sustainability-goals
-      - OE-CONCEPT-openevo-design-concept-computer-models
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Game Theory / Evolutionary Biology / Behavioural Economics / Political
@@ -298,7 +298,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-ancient-ancestors
       - OE-CONCEPT-openevo-design-concept-governing-the-commons
       - OE-CONCEPT-openevo-design-concept-global-sustainability-goals
-      - OE-CONCEPT-openevo-design-concept-cooperation-games
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Cultural Anthropology / Cross-Cultural Psychology / Cultural Evolution
@@ -356,7 +355,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-cooperation-games
       - OE-CONCEPT-openevo-design-concept-global-sustainability-goals
       - OE-CONCEPT-openevo-design-concept-computer-models
-      - OE-CONCEPT-openevo-design-concept-cultural-diversity
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Political Science / Institutional Economics / Environmental Science / Governance
@@ -416,7 +414,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-child-development
       - OE-CONCEPT-openevo-design-concept-cross-species-comparisons
       - OE-CONCEPT-openevo-design-concept-computer-models
-      - OE-CONCEPT-openevo-design-concept-ancient-ancestors
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Cognitive Science / Neuroscience / Psychology / Philosophy of Mind
@@ -475,7 +472,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-governing-the-commons
       - OE-CONCEPT-openevo-design-concept-global-sustainability-goals
       - OE-CONCEPT-openevo-design-concept-cooperation-games
-      - OE-CONCEPT-openevo-design-concept-our-mind
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Computational Science / Systems Science / Mathematics / Computer Science
@@ -534,7 +530,6 @@ concepts:
       - OE-CONCEPT-openevo-design-concept-governing-the-commons
       - OE-CONCEPT-openevo-design-concept-computer-models
       - OE-CONCEPT-openevo-design-concept-cooperation-games
-      - OE-CONCEPT-openevo-design-concept-cultural-diversity
     extensions:
       oe:conceptRole: content-anchor
       oe:discipline: Sustainability Science / Environmental Science / Political Science / Ethics

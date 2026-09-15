@@ -16,6 +16,17 @@ pattern RFC-0012 used for eva4k12's cross-cutting themes, rather than a
 new ontology class). CASE-standard crosswalk data (caseLinks) is
 deliberately not migrated here -- see RFC-0023 "Deferred".
 
+relatedAnchors is carried through exactly as authored, one-directional
+where the source is one-directional. Every one of the 9 source anchors
+lists exactly 3 relatedAnchors, no more and no fewer -- a deliberate
+curated "top 3" per anchor, not an authoring gap, confirmed by checking
+the source data directly. An earlier draft of this script auto-added
+reciprocal edges to satisfy skos:related's SKOS-spec symmetry, which
+would have pushed 7 of the 9 anchors to 4 relations each, silently
+overriding that curation. scripts/check_related_symmetry.py will
+correctly report this vocabulary as asymmetric -- expected and accepted,
+not a bug to fix. See RFC-0023 "Proposed change".
+
 Run from the conceptbase repo root: python scripts/migrate_content_anchors.py
 """
 import json
@@ -71,26 +82,9 @@ def build_entry(node: dict) -> dict:
     return entry
 
 
-def symmetrize_related(entries: list[dict]) -> None:
-    """Source `relatedAnchors` data is asymmetric in several places (A relates to B but not
-    vice versa) -- confirmed via scripts/check_related_symmetry.py. skos:related is symmetric
-    by definition (SKOS spec), and the source's own asymmetry looks like an authoring gap, not
-    a deliberate directional claim, so this adds the missing reciprocal edges rather than
-    leaving them for a human to notice as 7 validation failures. See RFC-0023 "Proposed change".
-    """
-    by_id = {e["id"]: e for e in entries}
-    for entry in entries:
-        for target_id in entry.get("relations", {}).get("skos:related", []):
-            target = by_id[target_id]
-            back = target.setdefault("relations", {}).setdefault("skos:related", [])
-            if entry["id"] not in back:
-                back.append(entry["id"])
-
-
 def main():
     source = load_source()
     entries = [build_entry(n) for n in source["nodes"]]
-    symmetrize_related(entries)
 
     header = f"""\
 # ============================================================================
@@ -126,10 +120,12 @@ def main():
 # openevo-graph/nodes/content_anchors.json until a later RFC gives it a
 # ConceptBase home (Phase 2 alignments).
 #
-# Source relatedAnchors data was asymmetric in 7 places (A related to B but
-# not the reverse) -- completed to satisfy skos:related's own symmetric
-# semantics rather than left as 7 check_related_symmetry.py failures. See
-# RFC-0023 "Proposed change".
+# relatedAnchors is carried through exactly as authored -- every anchor has
+# exactly 3, a deliberate curation, not always reciprocal. This intentionally
+# does NOT satisfy scripts/check_related_symmetry.py's symmetry expectation;
+# that check is advisory (not run in CI, see .github/workflows/validate.yml),
+# and forcing symmetry here would override the source's own top-3 curation.
+# See RFC-0023 "Proposed change".
 # ============================================================================
 
 meta:
