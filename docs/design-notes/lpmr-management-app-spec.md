@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Project** | A new app in the ConceptBase Explorer ecosystem: GitHub-OAuth-gated exploration, review, and AI-assisted deliberation over any OECB-compatible Learning Progression Model Repository (LPMR) |
+| **Project** | A new app in the ConceptBase Explorer ecosystem: GitHub-OAuth-gated exploration, review, and AI-assisted deliberation over any ConceptBase-compatible Learning Progression Model Repository (LPMR) |
 | **Relationship to existing repos** | Extends `conceptbase` (`app/`), reads from any LPMR (`bio-core-k12`, `interdisciplinary-k12`, future sandbox forks), reads agent personas from `curriculum-agents`, calls the SAIA (GWDG) OpenAI-compatible LLM API |
 | **Document status** | Draft planning specification — **not yet implemented, not yet RFC'd**. Structured like `eva_buch/app_specs.md` (living doc) crossed with this repo's RFC discipline: sections marked **Open Decision** are checkpoints for Dustin, not settled design. |
 | **Author** | Claude (planning pass), for review by Dustin Eirdosh |
@@ -33,7 +33,7 @@
 ## 1. Overview
 
 The **LPMR Management App** is a new capability in the ConceptBase app ecosystem that lets
-authenticated, authorized users open *any* OECB-compatible Learning Progression Model
+authenticated, authorized users open *any* ConceptBase-compatible Learning Progression Model
 Repository — not just the two bundled reference LPMs — and:
 
 - explore and visualize its structure (reusing the existing Explorer views),
@@ -58,10 +58,10 @@ reinvented.
   content object defined by `schemas/lpm.schema.yaml`.
 - **LPMR** (this doc's term, not yet used elsewhere in the codebase) — a **Learning
   Progression Model Repository**: an independently-governed git repo that hosts one LPM
-  and validates it against OECB schemas — e.g. `bio-core-k12`, `interdisciplinary-k12`,
+  and validates it against ConceptBase schemas — e.g. `bio-core-k12`, `interdisciplinary-k12`,
   or any third party's repo that pins `conceptbase` the same way (see README
   ["Referencing a concept from a dependent repository"](../../README.md#quickstart)).
-  "OECB-compatible" means: has a manifest pinning an `ontology`/`vocabularies` version and
+  "ConceptBase-compatible" means: has a manifest pinning an `ontology`/`vocabularies` version and
   validates cleanly against `schemas/lpm.schema.yaml` + `strand.schema.yaml`.
 - **Reviewer role** — can view, comment, flag, tag; cannot edit LPMR content or merge.
 - **Editorial role** — reviewer permissions plus can open/merge PRs against the LPMR (in
@@ -92,7 +92,7 @@ GitHub-verified author and a real permission check — see §6–§7.
 **Goals**
 
 - Real GitHub identity and real per-repo permission checks behind comment/flag/tag/edit actions.
-- Works against *any* OECB-compatible LPMR the user points it at, not just the two bundled ones.
+- Works against *any* ConceptBase-compatible LPMR the user points it at, not just the two bundled ones.
 - Human review artifacts (comment/flag/tag/link) are structured, exportable, and PR-able —
   never silently written to a repo without a human-visible diff.
 - Optional AI-assisted review using OpenEvo's own agent personas, clearly marked as
@@ -109,7 +109,7 @@ GitHub-verified author and a real permission check — see §6–§7.
 - Not letting any agent or human write directly to `conceptbase`'s permanent registry —
   ConceptBase-level findings still go through the sandbox tier + RFC process that already
   exists (RFC-0001, RFC-0010's pattern).
-- Not a general-purpose GitHub PR review tool — scope is specifically OECB-schema-shaped
+- Not a general-purpose GitHub PR review tool — scope is specifically ConceptBase-schema-shaped
   content (LPM/Strand/SubStrand/Concept/Competency), not arbitrary code review.
 
 ## 5. Architecture: app-ecosystem shape
@@ -449,7 +449,7 @@ mode already in use elsewhere in this lab).
   role resolution via GitHub collaborator-permission API (no `OECB_ROLES.yaml` yet), PAT
   path preserved as fallback. No write scope requested yet.
 - **Phase 2 — LPMR Manager v1, human-only.** New tab/app per §5's chosen shape; load any
-  OECB-compatible LPMR; comment/flag/tag records per §8 (informal shape, no schema RFC yet);
+  ConceptBase-compatible LPMR; comment/flag/tag records per §8 (informal shape, no schema RFC yet);
   export-and-paste write path (§9.1) for everyone, direct-PR creation (§9.2) for users with
   real write access.
 - **Phase 3 — Formalize the data model.** `.github/OECB_ROLES.yaml` convention (§7);

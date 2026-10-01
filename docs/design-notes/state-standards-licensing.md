@@ -1,6 +1,6 @@
 # Design note: licensing risk for state/government curriculum standards sources
 
-**Status:** Informative — background reasoning for how OECB decides what a given official-standards source may contribute, not itself a proposal. Referenced by [RFC-0004](../../proposals/0004-relicense-content-cc-by-nc-sa.md), [RFC-0005](../../proposals/0005-citation-only-competency-entries.md), and `scripts/case_license_gate.py`.
+**Status:** Informative — background reasoning for how ConceptBase decides what a given official-standards source may contribute, not itself a proposal. Referenced by [RFC-0004](../../proposals/0004-relicense-content-cc-by-nc-sa.md), [RFC-0005](../../proposals/0005-citation-only-competency-entries.md), and `scripts/case_license_gate.py`.
 
 ## Why this exists
 
@@ -23,7 +23,7 @@ These can diverge because CGLT's platform may apply its own default restriction 
 
 17 U.S.C. §107 weighs four factors; they do not all point the same direction for "republish an entire framework's full statement text as a permanent, redistributable dataset":
 
-| Factor | Favors OECB? |
+| Factor | Favors ConceptBase? |
 |---|---|
 | Purpose/character (non-commercial, transformative — crosswalks and progression structure, not a copy) | Yes |
 | Nature of the work (standards are factual/functional, thin copyright protection) | Yes |
@@ -32,12 +32,12 @@ These can diverge because CGLT's platform may apply its own default restriction 
 
 Quoting a handful of attributed statements for commentary is defensible. Reproducing an entire framework's full item text as an openly redistributable database is a materially different act, and is exactly the scenario factors 3 and 4 argue against — which is presumably why CGLT wrote "no redistribution" in the first place.
 
-## Why OECB defaults conservative even where fair use might apply
+## Why ConceptBase defaults conservative even where fair use might apply
 
-OECB's own governance model makes an aggressive fair-use bet unusually costly to be wrong about: accepted identifiers are **never deleted** (`GOVERNANCE.md`, Deprecation Policy). A successful takedown demand against a permanently-registered identifier would force a direct conflict between honoring a legitimate rights-holder objection and violating OECB's own never-delete guarantee — an asymmetry (cheap to avoid now, expensive to unwind later) that argues for the conservative default even in cases where a fair-use argument could plausibly be made. This is the reasoning behind `scripts/case_license_gate.py` failing closed (`BLOCKED`/`CITATION_ONLY` as defaults, `ALLOW_FULL` only for recognized, explicit open grants) rather than defaulting open and relying on an after-the-fact fair-use defense.
+ConceptBase's own governance model makes an aggressive fair-use bet unusually costly to be wrong about: accepted identifiers are **never deleted** (`GOVERNANCE.md`, Deprecation Policy). A successful takedown demand against a permanently-registered identifier would force a direct conflict between honoring a legitimate rights-holder objection and violating ConceptBase's own never-delete guarantee — an asymmetry (cheap to avoid now, expensive to unwind later) that argues for the conservative default even in cases where a fair-use argument could plausibly be made. This is the reasoning behind `scripts/case_license_gate.py` failing closed (`BLOCKED`/`CITATION_ONLY` as defaults, `ALLOW_FULL` only for recognized, explicit open grants) rather than defaulting open and relying on an after-the-fact fair-use defense.
 
 ## What this does and doesn't block
 
 - **Blocked/gated:** bulk verbatim reproduction of a source's full statement text where the license doesn't clearly permit it (RFC-0005's `citationOnly` pattern is the fallback: codes + structure + provenance, no protected expression).
 - **Not blocked:** the metamodel structure itself — codes, grade-band hierarchy, progression (`skos:broader`), cross-framework alignments — which is largely factual/functional regardless of the source's statement-text license. Nor is a small number of hand-picked, clearly-attributed illustrative quotes used for commentary (e.g., in a design note), which sits in much stronger fair-use territory than systematic corpus-wide reproduction.
-- **Best path for full-text inclusion:** prioritize sources that carry an explicit, unambiguous open grant (e.g. NGSS's stated permission for non-profit education entities to "copy, reproduce, alter, adapt, edit, delete and rearrange any and all parts... without permission"; AI4K12's CC-BY-NC-SA-4.0, now license-compatible with OECB itself per RFC-0004) — these don't need the citation-only fallback at all — or seek explicit permission from the rights holder for sources that don't.
+- **Best path for full-text inclusion:** prioritize sources that carry an explicit, unambiguous open grant (e.g. NGSS's stated permission for non-profit education entities to "copy, reproduce, alter, adapt, edit, delete and rearrange any and all parts... without permission"; AI4K12's CC-BY-NC-SA-4.0, now license-compatible with ConceptBase itself per RFC-0004) — these don't need the citation-only fallback at all — or seek explicit permission from the rights holder for sources that don't.

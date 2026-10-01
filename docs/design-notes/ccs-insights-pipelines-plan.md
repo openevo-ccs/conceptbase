@@ -98,7 +98,7 @@ them differently as a result:
      `conceptbase` actually governs. The same content anchors are already canonically defined
      in `curriculum-agents/skills/content-anchor-mapper/SKILL.md`,
      `skills/thinking-tools-kit/SKILL.md`, and `docs/mapping-to-design-concept.md` — this looks
-     like a pre-OECB prototype whose content has a newer authoritative home elsewhere.
+     like a pre-ConceptBase prototype whose content has a newer authoritative home elsewhere.
   2. Each anchor node's `caseLinks` field asserts alignment to real external standards
      (`cfDocumentId: "ngss-2013"`, `"c3-social-studies"`, `"ib-myp"`) with **no licensing gate
      at all**. `conceptbase` has since built exactly the machinery this data needs —

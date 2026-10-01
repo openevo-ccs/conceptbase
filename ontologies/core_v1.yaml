@@ -134,9 +134,9 @@ classes:
     notes: >
       See RFC-0002 (/proposals/0002-competency-case-profile.md) and
       schemas/competency.schema.yaml for the full CFItem field mapping,
-      identifier-bridging rule (OECB mints its own OE-COMPETENCY-######;
+      identifier-bridging rule (ConceptBase mints its own OE-COMPETENCY-######;
       CASE sourcedId/uri are retained only as provenance), and the
-      associationType-to-OECB-relation mapping table.
+      associationType-to-ConceptBase-relation mapping table.
 
 # ----------------------------------------------------------------------------
 # CLASSES (Reserved — IRI stable, structure not yet defined)

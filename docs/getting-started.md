@@ -1,6 +1,6 @@
 # Getting started as a dependent-repo developer
 
-This is the walkthrough for the audience the main [README](../README.md)'s Quickstart is too abstract for: someone who wants to build their own Learning Progression Model (LPM), Strand, or Collection repository against OECB, and needs to see the whole pipeline work once, end to end, before starting their own.
+This is the walkthrough for the audience the main [README](../README.md)'s Quickstart is too abstract for: someone who wants to build their own Learning Progression Model (LPM), Strand, or Collection repository against ConceptBase, and needs to see the whole pipeline work once, end to end, before starting their own.
 
 It uses `bio-core-k12` and `interdisciplinary-k12` (both private repos, not publicly linkable or clonable by an anonymous visitor) as the worked example throughout — two real, CI-validated git repos that exercise the whole pipeline end to end, not toy snippets. Their *content* is a different matter: both carry `epistemicStatus: designed-thought-experiment` (RFC-0019) — they're a deliberately synthetic comparison pair (same schema, same pipeline, different controlled vocabulary) built to isolate one variable, not field-tested curricula. That split is the point: the mechanics you're here to learn (schema validation, strand structure, CI, IDs) are as real as it gets; the pedagogical content riding on top of them is intentionally a thought experiment, and both are early/draft-stage besides.
 
@@ -15,7 +15,7 @@ Read the [Selection cross-domain case study](design-notes/selection-cross-domain
 - [`OE-CONCEPT-oe-interdisciplinary-selection`](../vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml) (`OE-INTERDISCIPLINARY`) — a concept defined four different ways (biology, culture, education, AI).
 - [`OE-ALIGN-000001.yaml`](../alignments/OE-ALIGN-000001.yaml), [`OE-ALIGN-000003.yaml`](../alignments/OE-ALIGN-000003.yaml), [`OE-ALIGN-000004.yaml`](../alignments/OE-ALIGN-000004.yaml), [`OE-ALIGN-000005.yaml`](../alignments/OE-ALIGN-000005.yaml) — the alignment records connecting it to `BIO-CORE`'s Natural Selection, an NGSS performance expectation, and two AI4K12 entries.
 
-This is the thing OECB is actually for: the same idea, defined independently in different vocabularies, made comparable through explicit, provenance-carrying alignment records rather than hand-waving.
+This is the thing ConceptBase is actually for: the same idea, defined independently in different vocabularies, made comparable through explicit, provenance-carrying alignment records rather than hand-waving.
 
 ## 2. See an identifier resolve
 
@@ -26,7 +26,7 @@ https://www.w3id.org/openevo/concept/OE-CONCEPT-oe-interdisciplinary-selection
 https://www.w3id.org/openevo/lpm/OE-LPM-000002
 ```
 
-Every one of these is a real, live redirect — `www.w3id.org/openevo/` was registered in July 2026 ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389)). This is the mechanism that makes an ID in your own future LPM permanently citable regardless of where OECB's own hosting lives in five years.
+Every one of these is a real, live redirect — `www.w3id.org/openevo/` was registered in July 2026 ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389)). This is the mechanism that makes an ID in your own future LPM permanently citable regardless of where ConceptBase's own hosting lives in five years.
 
 ## 3. Look at a real dependent repo
 

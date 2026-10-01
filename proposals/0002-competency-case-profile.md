@@ -20,11 +20,11 @@ The reference CASE implementation, [`github.com/openevo-ccs/OpenCASE`](https://g
 
 | `oe:Competency` property | Type / `$ref` | Source CASE field | Notes |
 |---|---|---|---|
-| `id` | `common.defs.yaml#/$defs/competencyId` (new def) | — | OECB-minted, `OE-COMPETENCY-######` |
+| `id` | `common.defs.yaml#/$defs/competencyId` (new def) | — | ConceptBase-minted, `OE-COMPETENCY-######` |
 | `type` | `const: "oe:Competency"` | — | |
-| `status` | `common.defs.yaml#/$defs/status` | — | OECB lifecycle; CASE has no equivalent enum (see below) |
+| `status` | `common.defs.yaml#/$defs/status` | — | ConceptBase lifecycle; CASE has no equivalent enum (see below) |
 | `version` | `common.defs.yaml#/$defs/semver` | — | |
-| `statement` | `common.defs.yaml#/$defs/localizedString` | `fullStatement` | Localized on the OECB side; CASE's is a single plain string |
+| `statement` | `common.defs.yaml#/$defs/localizedString` | `fullStatement` | Localized on the ConceptBase side; CASE's is a single plain string |
 | `abbreviatedStatement` | `common.defs.yaml#/$defs/localizedString`, optional | `abbreviatedStatement` | |
 | `humanCodingScheme` | `string`, optional | `humanCodingScheme` | Not localized — a code, not prose |
 | `competencyType` | `string`, optional | `CFItemType` | Free-form, mirroring CASE's own untyped `CFItemTypes` definitions |
@@ -32,12 +32,12 @@ The reference CASE implementation, [`github.com/openevo-ccs/OpenCASE`](https://g
 | `conceptKeywords` | `array of string`, optional | `conceptKeywords` | |
 | `relations` | object (see mapping table below) | derived from `CFAssociation` edges touching this item | |
 | `provenance` | object, optional | — | See "Identifier bridging" |
-| `citations` | `array of common.defs.yaml#/$defs/citation` | — | Existing OECB convention |
+| `citations` | `array of common.defs.yaml#/$defs/citation` | — | Existing ConceptBase convention |
 | `extensions` | `common.defs.yaml#/$defs/extensions` | `extensions` (v1.1) | |
 
 Required: `id`, `type`, `status`, `version`, `statement`.
 
-**Status mismatch, noted explicitly rather than papered over:** CASE's `CFItem` has no field equivalent to OECB's `proposed`/`accepted`/`stable`/`deprecated`/`superseded`/(pending RFC-0001) `retracted` lifecycle — only `statusStartDate`/`statusEndDate` (a validity window, not a review-state enum). A CASE-imported item does not arrive with an OECB status; it must be assigned one through the ordinary RFC process on the OECB side, same as any other new entity. Import tooling must not infer `accepted` from a CFItem's mere existence in a published CFPackage.
+**Status mismatch, noted explicitly rather than papered over:** CASE's `CFItem` has no field equivalent to ConceptBase's `proposed`/`accepted`/`stable`/`deprecated`/`superseded`/(pending RFC-0001) `retracted` lifecycle — only `statusStartDate`/`statusEndDate` (a validity window, not a review-state enum). A CASE-imported item does not arrive with a ConceptBase status; it must be assigned one through the ordinary RFC process on the ConceptBase side, same as any other new entity. Import tooling must not infer `accepted` from a CFItem's mere existence in a published CFPackage.
 
 ### Identifier bridging
 
@@ -50,13 +50,13 @@ provenance:
   sourceCFDocumentURI: <CFItem.CFDocumentURI.uri, optional>
 ```
 
-The OECB `id` is always independently minted at `accepted`+ and is never aliased from or overwritten by a CASE identifier — CASE fields are retained purely as provenance. A competency authored natively in OECB (not imported) simply omits `provenance`.
+The ConceptBase `id` is always independently minted at `accepted`+ and is never aliased from or overwritten by a CASE identifier — CASE fields are retained purely as provenance. A competency authored natively in ConceptBase (not imported) simply omits `provenance`.
 
 ### Association-type mapping
 
 Verified CASE v1.1 `associationType` vocabulary (10 values + `ext:` extension mechanism — see design note for the correction this supersedes):
 
-| CASE `associationType` | OECB relation | Confidence |
+| CASE `associationType` | ConceptBase relation | Confidence |
 |---|---|---|
 | `isChildOf` / `isPartOf` | `oe:hasSubStrand`-style nesting | High — matches existing Strand/SubStrand pattern |
 | `precedes` | LPM progression ordering | High |
@@ -66,13 +66,13 @@ Verified CASE v1.1 `associationType` vocabulary (10 values + `ext:` extension me
 | `isPeerOf` | No mapping yet | Low — "peer" is symmetric by name only; unverified |
 | `exemplar` / `hasSkillLevel` / `isTranslationOf` | No mapping | Open — explicitly left unmapped rather than forced |
 
-Per spec §9, OECB's SKOS-based alignment model carries formal semantics CASE's flat vocabulary doesn't guarantee. Rows marked Medium/Low/Open are not ready to encode into a validator and are listed here so reviewers can weigh in, not as settled decisions.
+Per spec §9, ConceptBase's SKOS-based alignment model carries formal semantics CASE's flat vocabulary doesn't guarantee. Rows marked Medium/Low/Open are not ready to encode into a validator and are listed here so reviewers can weigh in, not as settled decisions.
 
 ### License-compatibility gate
 
 Verified against `apps/opencase/src/domain/case/seed/defaultLicenses.ts` (5 seeded `CFLicense` records, referenced from `CFDocument.licenseURI`):
 
-| License | Compatible with OECB's CC-BY-4.0? |
+| License | Compatible with ConceptBase's CC-BY-4.0? |
 |---|---|
 | Public Domain (CC0 1.0) | Yes |
 | Open — Credit Required (CC BY 4.0) | Yes — exact match |
@@ -84,7 +84,7 @@ Rule for any future import tooling: resolve `CFDocument.licenseURI`, and reject 
 
 ### Integration boundary
 
-OECB consumes OpenCASE's **read-only Provider API** (`/ims/case/v1p1/*`) only; it never writes to OpenCASE's Management API. The existing Explorer pattern — browse/annotate in the browser, `exportAlignmentDraftsYaml`/`exportNotesYaml` in `app/js/views/annotationsView.js` turn that work into downloadable YAML, then a human opens a PR — is the template for how CASE-sourced competency drafts should reach `conceptbase`: a generated YAML draft for review, never a live sync. **Building that importer is explicitly deferred to a later, separate RFC/PR** — this RFC defines the target shape it would produce, not the tool itself.
+ConceptBase consumes OpenCASE's **read-only Provider API** (`/ims/case/v1p1/*`) only; it never writes to OpenCASE's Management API. The existing Explorer pattern — browse/annotate in the browser, `exportAlignmentDraftsYaml`/`exportNotesYaml` in `app/js/views/annotationsView.js` turn that work into downloadable YAML, then a human opens a PR — is the template for how CASE-sourced competency drafts should reach `conceptbase`: a generated YAML draft for review, never a live sync. **Building that importer is explicitly deferred to a later, separate RFC/PR** — this RFC defines the target shape it would produce, not the tool itself.
 
 ### Draft schema appendix (not yet merged into `schemas/`)
 
