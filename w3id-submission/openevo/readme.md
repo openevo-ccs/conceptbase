@@ -1,4 +1,4 @@
-# OpenEvo ConceptBase (OECB)
+# OpenEvo ConceptBase
 
 Permanent identifier namespace for the OpenEvo Computational Curriculum Studies (CCS) Lab's ConceptBase — the shared ontology, JSON Schemas, and controlled vocabularies that let independently governed curriculum-knowledge repositories (Learning Progression Models, Strands, Collections) interoperate.
 

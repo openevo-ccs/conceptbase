@@ -48,7 +48,7 @@ Five new **optional** top-level properties, backward-compatible with all 455 exi
   reciprocity either — `scripts/validate.py`'s existing `broader`-resolution check is extended to
   also resolve `narrower`, per this RFC's Files Affected).
 - **`developmentalProgression`**: object, keys restricted to `K-2`/`3-5`/`6-8`/`9-12`/`13-16`,
-  string values. Mirrors the shape `openevo-graph/nodes/competencies.json`'s legacy (pre-OECB,
+  string values. Mirrors the shape `openevo-graph/nodes/competencies.json`'s legacy (pre-ConceptBase,
   unmigrated) competency nodes already use — generalizing a pattern that already exists in the
   ecosystem into the governed schema, not inventing a new one.
 - **`indicators`**: array of strings — observable, assessment-writable performance descriptors
@@ -137,7 +137,7 @@ since only a maintainer can confirm whether 0012/0013 are truly free.
 | `competencybase/scripts/validate.py` | Extend the existing `broader`-resolution check to also resolve `narrower` | Done, 2026-07-31 |
 | `competencybase/records/openevo-core-competencies-000800.yaml` … `-000806.yaml` | New — 7 `oe:Competency` entries | Done, 2026-07-31 |
 | `competencybase/README.md` | Describe the new framework honestly (author-draft, not yet reviewed) | Done, 2026-07-31 |
-| `literaturebase/records/{wing-2006,wing-2008,grover-pea-2013,weintrop-2016,brennan-resnick-2012,barr-stephenson-2011,shute-2017,lye-koh-2014,roman-gonzalez-2017,denning-tedre-2019}.yaml` | New — 10 records, companion literature batch (not itself part of this RFC's OECB scope; LiteratureBase is pre-RFC/provisional, listed here for full traceability) | Done, 2026-07-31 |
+| `literaturebase/records/{wing-2006,wing-2008,grover-pea-2013,weintrop-2016,brennan-resnick-2012,barr-stephenson-2011,shute-2017,lye-koh-2014,roman-gonzalez-2017,denning-tedre-2019}.yaml` | New — 10 records, companion literature batch (not itself part of this RFC's ConceptBase scope; LiteratureBase is pre-RFC/provisional, listed here for full traceability) | Done, 2026-07-31 |
 
 ## Review
 

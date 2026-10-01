@@ -126,7 +126,7 @@ concepts:
           system.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-representation, OE-CONCEPT-oe-interdisciplinary-technology, OE-CONCEPT-oe-interdisciplinary-norms, OE-SANDBOX-CONCEPT-000003]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-representation, OE-CONCEPT-oe-interdisciplinary-technology, OE-CONCEPT-oe-interdisciplinary-norms, OE-SANDBOX-CONCEPT-000003, OE-SANDBOX-CONCEPT-000013]
 
   - id: OE-CONCEPT-oe-interdisciplinary-information
     type: oe:Concept
@@ -278,7 +278,7 @@ concepts:
           scoring higher against an objective function.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-variation, OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000005]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-variation, OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000005, OE-SANDBOX-CONCEPT-000013]
     examples:
       - A cultural practice being adopted more widely because it improves group cohesion.
       - A genetic algorithm retaining higher-fitness candidate solutions across generations.
@@ -304,7 +304,7 @@ concepts:
           material on which selection can act.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-selection, OE-CONCEPT-oe-interdisciplinary-inheritance]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-selection, OE-CONCEPT-oe-interdisciplinary-inheritance, OE-SANDBOX-CONCEPT-000013]
 
   - id: OE-CONCEPT-oe-interdisciplinary-learning
     type: oe:Concept
@@ -519,7 +519,7 @@ concepts:
           which evolved independently, and which are distinctively
           elaborated in a given lineage.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000012]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000012, OE-SANDBOX-CONCEPT-000013]
     examples:
       - Testing tool-use problem-solving in corvids, great apes, and
         young children to compare the cognitive strategies each group
@@ -765,6 +765,13 @@ concepts:
         saw it, even after it has been secretly moved, because they act
         on their own (now false) belief rather than the true state of
         the world.
+    citations:
+      - text: >
+          Pillow, B. H., Lovett, S. B., & Hill, V. (2008). Children's,
+          adolescents', and adults' reference to goals to explain
+          interpersonal actions. Infant and Child Development, 17,
+          471-489.
+        doi: "10.1002/icd.560"
 
   - id: OE-SANDBOX-CONCEPT-000011
     type: oe:Concept
@@ -783,10 +790,31 @@ concepts:
           cognitive processes — knowing what one knows, tracking how
           one is thinking, and adjusting strategies accordingly.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-distributed-cognition, OE-SANDBOX-CONCEPT-000010]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-distributed-cognition, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000013]
     examples:
       - A student recognizing mid-exam that a chosen problem-solving
         strategy isn't working and deliberately switching to another one.
+    citations:
+      - text: >
+          Pillow, B. H. (2012). Children's Discovery of the Active Mind:
+          Phenomenological Awareness, Social Experience, and Knowledge
+          about Cognition. Springer.
+        doi: "10.1007/978-1-4614-2248-8"
+      - text: >
+          Pillow, B. H. (2008). Development of Children's Understanding
+          of Cognitive Activities. The Journal of Genetic Psychology,
+          169(4), 297-321.
+        doi: "10.3200/GNTP.169.4.297-321"
+      - text: >
+          Pillow, B. H., & Pearson, R. M. (2015). Children's and adults'
+          judgments of the controllability of cognitive activities.
+          Metacognition and Learning.
+        doi: "10.1007/s11409-014-9122-2"
+      - text: >
+          Zdybel, D. (2021). Children's conceptions of memory and
+          imagination -- from conceptual knowledge to metacognition.
+          Phenomenographical study. Thinking Skills and Creativity, 41.
+        doi: "10.1016/j.tsc.2021.100855"
 
   - id: OE-SANDBOX-CONCEPT-000012
     type: oe:Concept
@@ -806,9 +834,78 @@ concepts:
           construct to explain and predict how the world works,
           typically without formal instruction.
     relations:
-      skos:related: [OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000010]
+      skos:related: [OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000013]
     examples:
       - A young child's untaught assumption that living things grow
         from the inside on their own, while artifacts only change when
         acted on from the outside — an intuitive "folk biology" causal
         rule, not one explicitly taught.
+
+  # --------------------------------------------------------------------------
+  # Authored 2026-09-02 to ground a new interdisciplinary-k12 strand
+  # (OE-STRAND-000204) weaving analogy, local search, and metacognitive
+  # development across biological/cultural evolution, cognitive science, and
+  # the history of science. No existing concept in this vocabulary named the
+  # analogy-as-search-and-transmission-mechanism idea itself (confirmed via
+  # conceptbase_search before authoring); Metacognition/Theory of Mind/
+  # Intuitive Theories/Comparative Cognition already existed above and are
+  # reused, not duplicated.
+  # --------------------------------------------------------------------------
+
+  - id: OE-SANDBOX-CONCEPT-000013
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-09-02"
+      expiresOn: "2027-09-02"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Analogical Reasoning
+    definitions:
+      en:
+        general: >
+          Generating or evaluating a new idea by mapping the structure of an
+          already-familiar case onto an unfamiliar one — starting a search
+          for a solution from whichever known example is most similar to the
+          target, rather than starting from nothing, and checking which
+          parts of the familiar case do and do not carry over.
+    relations:
+      skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-selection
+        - OE-CONCEPT-oe-interdisciplinary-variation
+        - OE-CONCEPT-oe-interdisciplinary-innovation
+        - OE-SANDBOX-CONCEPT-000011
+        - OE-SANDBOX-CONCEPT-000004
+        - OE-SANDBOX-CONCEPT-000012
+    examples:
+      - A student solving a new math problem by first asking "what problem
+        I already know is most similar to this one?" and adapting that
+        solution.
+      - Darwin using breeders' deliberate selection of livestock as the
+        starting structure for imagining selection happening in nature
+        without a breeder.
+    nonExamples:
+      - Noticing two things merely look alike without mapping which parts
+        of their structure correspond (see Restructuration's own
+        representation-vs-analogy distinction).
+    citations:
+      - text: >
+          Brand, C. O., Mesoudi, A., & Smaldino, P. E. (2021). Analogy as a
+          Catalyst for Cumulative Cultural Evolution. Trends in Cognitive
+          Sciences, 25(6), 450-461.
+        doi: "10.1016/j.tics.2021.03.002"
+      - text: >
+          Holding, T., Smaldino, P. E., & Brand, C. O. (2026). Analogies
+          evolve by increasing transmission fidelity in the communication
+          of complex information. Evolutionary Human Sciences, 1-26.
+        doi: "10.1017/ehs.2026.10063"
+      - text: >
+          Bramley, N. R., Zhao, B., Quillien, T., & Lucas, C. G. (2023).
+          Local search and the evolution of world models. Topics in
+          Cognitive Science.
+        doi: "10.1111/tops.12703"
+      - text: >
+          Hofstadter, D. R., & Sander, E. (2013). Surfaces and Essences:
+          Analogy as the Fuel and Fire of Thinking. Basic Books.

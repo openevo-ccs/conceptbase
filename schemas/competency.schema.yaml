@@ -12,7 +12,7 @@
 # Promoted from RFC-0002's draft appendix to a live, stable schema ahead
 # of the original Phase 4 schedule, per maintainer-team decision on
 # 2026-07-19. `provenance` is optional: a competency authored natively in
-# OECB (not imported from a CASE source) simply omits it.
+# ConceptBase (not imported from a CASE source) simply omits it.
 #
 # `citationOnly` (RFC-0005, 2026-07-20): for source frameworks whose
 # license does not permit republishing `fullStatement` text verbatim
@@ -64,7 +64,7 @@ properties:
     "$ref": "common.defs.yaml#/$defs/localizedString"
     description: >
       The full competency statement. Maps from CASE CFItem.fullStatement,
-      localized on the OECB side (CASE's own field is a single plain
+      localized on the ConceptBase side (CASE's own field is a single plain
       string). Not required when `citationOnly` is true (RFC-0005) —
       MUST NOT contain a reproduction of a license-restricted source's
       text in that case.
@@ -98,7 +98,7 @@ properties:
     description: >
       Derived from CFAssociation edges touching this item, mapped per
       the association-type table in RFC-0002. Rows without a verified
-      OECB semantic (e.g. CASE's exemplar, hasSkillLevel,
+      ConceptBase semantic (e.g. CASE's exemplar, hasSkillLevel,
       isTranslationOf) are intentionally not represented here.
     properties:
       "skos:broader":
@@ -119,7 +119,7 @@ properties:
     type: object
     description: >
       Present only when this competency originates from a CASE source.
-      The OECB `id` above is always independently minted and never
+      The ConceptBase `id` above is always independently minted and never
       aliased from these fields.
     properties:
       sourceCFItemId:

@@ -43,15 +43,32 @@ REGISTRY_DIR = os.path.join(REPO_ROOT, "registry")
 # Mirrors GOVERNANCE.md's "Identifier Block Allocation" tables. Update this
 # alongside that file's tables until Phase 4 tooling derives one from the
 # other automatically.
+#
+# Migrated 2026-09-03 off numeric ids (OE-LPM-000001/OE-LPM-000002) to
+# slug ids that embed the owning LPM's own repository slug directly - see
+# GOVERNANCE.md's "LPM ID blocks" / "Strand ID blocks" sections. This is
+# also why the numeric-range STRAND_RANGES table this script used to carry
+# (bio-core-k12: 100-199, interdisciplinary-k12: 200-299) is gone: strand
+# ownership is now read directly off the id's own <lpm-slug> segment (see
+# build_strand_index below) instead of inferred from a digit range, the
+# same way build_competencies() below stopped needing a lookup table once
+# competency ids started embedding their own vocab-slug.
 LPM_INDEX = {
-    "OE-LPM-000001": {
+    "OE-LPM-bio-core-k12": {
         "owner": "openevo-ccs",
         "repo": "bio-core-k12",
         "ref": "main",
         "vocabulary": "BIO-CORE-v1.0.0",
         "epistemicStatus": "designed-thought-experiment",
     },
-    "OE-LPM-000002": {
+    "OE-LPM-bee-k12": {
+        "owner": "openevo-ccs",
+        "repo": "bee-k12",
+        "ref": "main",
+        "vocabulary": "BEE-K12-v0.1.0",
+        "epistemicStatus": "designed-thought-experiment",
+    },
+    "OE-LPM-oe-interdisciplinary-k12": {
         "owner": "openevo-ccs",
         "repo": "interdisciplinary-k12",
         "ref": "main",
@@ -59,14 +76,6 @@ LPM_INDEX = {
         "epistemicStatus": "designed-thought-experiment",
     },
 }
-
-# Strand ID numeric ranges -> owning LPM, per GOVERNANCE.md's "Strand ID
-# blocks" table (bio-core-k12: 000100-000199, interdisciplinary-k12:
-# 000200-000299 - same block-per-hundred convention as the concept blocks).
-STRAND_RANGES = [
-    {"min": 100, "max": 199, "lpm": "OE-LPM-000001"},
-    {"min": 200, "max": 299, "lpm": "OE-LPM-000002"},
-]
 
 # Sandbox-tier LPMs (RFC-0010). Hand-maintained, same as LPM_INDEX above,
 # until enough sandbox LPMs exist to warrant scanning a directory instead.
@@ -165,7 +174,14 @@ def build_lpm_index():
 
 
 def build_strand_index():
-    strand_index = {"ranges": STRAND_RANGES, "lpm": LPM_INDEX}
+    # A strand id is OE-STRAND-<lpm-slug>-<strand-slug>; ownership is a
+    # direct prefix match against each known LPM id's own slug segment
+    # (OE-LPM-<lpm-slug>) - no numeric range table needed post-migration.
+    ownership = {
+        lpm_id: f"OE-STRAND-{lpm_id[len('OE-LPM-'):]}-"
+        for lpm_id in LPM_INDEX
+    }
+    strand_index = {"ownershipPrefixes": ownership, "lpm": LPM_INDEX}
     write_json(os.path.join(REGISTRY_DIR, "strand-index.json"), strand_index)
 
 

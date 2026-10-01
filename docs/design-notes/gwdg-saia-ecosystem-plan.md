@@ -1,8 +1,8 @@
-# GWDG SAIA Ecosystem — Optimization Plan for OECB and OpenEvo CCS
+# GWDG SAIA Ecosystem — Optimization Plan for ConceptBase and OpenEvo CCS
 
 | | |
 |---|---|
-| **Project** | Map GWDG's full SAIA/KISSKI AI-services ecosystem (Chat AI, Arcana/RAG, SAIA API gateway, MCP tool support, CoCo AI, Image/Voice/Protein AI) against real integration points across `conceptbase` (OECB), `curriculum-agents`, `EvoMentor`, and other OpenEvo CCS Lab repos — including how independently-governed, federated LPMR maintainers (not just the two reference LPMs) can use the same tools for their own work. |
+| **Project** | Map GWDG's full SAIA/KISSKI AI-services ecosystem (Chat AI, Arcana/RAG, SAIA API gateway, MCP tool support, CoCo AI, Image/Voice/Protein AI) against real integration points across `conceptbase`, `curriculum-agents`, `EvoMentor`, and other OpenEvo CCS Lab repos — including how independently-governed, federated LPMR maintainers (not just the two reference LPMs) can use the same tools for their own work. |
 | **Relationship to existing work** | Grounds and extends [`lpmr-management-app-spec.md`](lpmr-management-app-spec.md)'s §10 (SAIA integration for one app); this doc is ecosystem-wide, not app-specific. Builds on `curriculum-agents`' stated "provider-agnostic by design" principle (its `README.md`) and its open roadmap question about a public MCP server (`docs/roadmap.md`). |
 | **Document status** | Draft planning pass — **not yet implemented, not yet RFC'd**. Same discipline as other `docs/design-notes/` entries: sections marked **Open Decision** are checkpoints for Dustin, not settled design. |
 | **Author** | Claude (planning pass), for review by Dustin Eirdosh |
@@ -34,12 +34,12 @@ posture (KISSKI — "AI Service Centre for Sensitive and Critical Infrastructure
 from a commercial vendor's. That posture, plus GWDG's Academic Cloud identity model, matters
 specifically for a *federated* ecosystem like this one, where content is openly licensed but
 individual institutions may have their own data-handling constraints and no obligation to use
-whatever OpenEvo/OECB itself uses.
+whatever OpenEvo/ConceptBase itself uses.
 
 This doc inventories what's actually there (§2), what's already been built against it in this
 lab (§3, so we don't re-derive what `EvoMentor` already learned the hard way), maps concrete
 opportunities across repos (§4), and gives the federated-LPMR-maintainer case its own section
-(§5) because it has a materially different trust/hosting model than anything built for OECB's
+(§5) because it has a materially different trust/hosting model than anything built for ConceptBase's
 own two reference LPMs.
 
 ## 2. The GWDG SAIA ecosystem, inventoried
@@ -67,7 +67,7 @@ user.
 
 **Access model:** an individual gets a SAIA API key by holding an **Academic Cloud** account
 (tied to their institution) and requesting a key through the **KISSKI LLM Service** booking
-page. This is self-service, per-person, and **not something OpenEvo/OECB provisions, pays
+page. This is self-service, per-person, and **not something OpenEvo/ConceptBase provisions, pays
 for, or brokers** — structurally identical to "bring your own GitHub PAT," already this
 ecosystem's trust model for GitHub access. Institutions without an existing Academic Cloud
 relationship need one first (an "Academic Cloud Basis contract" — see [Institutional Access to
@@ -102,6 +102,17 @@ its own API key. That third point is a concrete, working existence-proof inside 
 codebase that "stand up a small public MCP server and point external tools at it" is a solved
 problem here, not a hypothetical — it just hasn't been done yet for `conceptbase-mcp` itself.
 
+**Image AI, added 2026-09-11.** Two Me-Mo Studio decks have since generated illustrations with
+GWDG's image model — `theme4` (`STORYBOARD.md`, "Refinements and Invitation scene pass") and
+`eMu` (8 illustrations, one consistent style prompt). Both live-confirmed the same thing: the
+standard `/v1/models` catalog lists no image model, but `model: "flux"` against
+`POST /images/generations` returns a real image (HTTP 200) anyway — the capability works, it's
+just undocumented in the model roster. Known failure mode: `flux` repeatedly renders garbled
+fake text/signatures into images despite explicit "no text" prompting, worse when the prompt
+itself references text-like concepts. Neither deck committed a reusable script — this is proven
+capability, not yet a standardized tool, so a third project should expect to write its own
+one-off caller against the endpoint rather than finding one checked in.
+
 ## 4. Opportunity map
 
 Ranked roughly by leverage (how many repos/users benefit) vs. effort, not a commitment to
@@ -115,16 +126,17 @@ build in this order — see §7 for actual phasing logic.
 | Arcana (RAG) | Lower-effort alternative to full MCP tool-calling for **read-mostly grounding** — ingest `docs/oecb_specifications.md`, `curriculum-evolution`'s manual, or a target LPM's raw YAML as a RAG corpus so Chat AI answers questions "in character" without needing a tool-calling loop at all | Any read-only Q&A use case (teacher-facing help, contributor onboarding) | New idea — worth spiking before MCP for use cases that don't need live/mutable data |
 | CoCo AI | Contributor-facing coding assistance for people authoring schema-shaped YAML (`oecb-schema-authoring` skill's audience) who don't have a Claude subscription/Claude Code | Any LPMR contributor workflow | New idea, low priority — `oecb-schema-authoring` already works provider-agnostically as a markdown skill |
 | Document conversion | Ingest PDF source material (e.g. a Teacher's Guide, a partner institution's existing curriculum doc) into YAML-draftable text as a first step before `oecb-schema-authoring` | Contribution/onboarding pipeline | New idea, speculative |
-| Voice AI / Image AI / Protein AI | No identified fit in this ecosystem's current work | — | Not pursued |
+| Image AI | Illustration generation for Me-Mo Studio decks — confirmed working (`model: "flux"`, `POST /images/generations`), even though this model doesn't appear in the `/v1/models` catalog the rest of this doc says to trust; see §3 for the two live precedents and a known failure mode | `me-mo/studio/presentations/theme4`, `eMu` | Proven twice (2026-08, 2026-09), not standardized — each use wrote its own uncommitted one-off script |
+| Voice AI / Protein AI | No identified fit in this ecosystem's current work | — | Not pursued |
 
 ## 5. Federated LPMR managers: the distinct case
 
 This is the part of the prompt that doesn't reduce to "add SAIA to the `conceptbase` app."
-A **federated LPMR maintainer** — someone running their own OECB-compatible repo the way
+A **federated LPMR maintainer** — someone running their own ConceptBase-compatible repo the way
 `bio-core-k12` or `interdisciplinary-k12` do, per this ecosystem's stated pluralism (README
 §"Why Does This Exist?": "independently maintained repositories... can interoperate without
 every project reinventing its own data model") — has a genuinely different relationship to
-GWDG's tools than OpenEvo/OECB itself does:
+GWDG's tools than OpenEvo/ConceptBase itself does:
 
 - **They don't need OpenEvo to provision anything.** SAIA/KISSKI access is self-service per
   Academic Cloud identity (§2). A federated maintainer at a German or EU institution can get
@@ -239,7 +251,7 @@ lab, and `lpmr-management-app-spec.md` §15's own phasing).
    with `lpmr-management-app-spec.md`'s Phase 4, or should everything GWDG-related wait for
    that app to prove the pattern first (this doc's default assumption, §7 Phase 1)?
 3. **Federated-maintainer outreach:** is there an actual near-term audience (a specific
-   institution or partner already running or planning an OECB-compatible LPMR) who'd use a
+   institution or partner already running or planning a ConceptBase-compatible LPMR) who'd use a
    federated MCP/SAIA path today, or is §5 currently anticipatory design for a use case that
    doesn't have a concrete first user yet? Changes how much to invest in Phase 4's onboarding
    doc now vs. later.
@@ -259,3 +271,4 @@ lab, and `lpmr-management-app-spec.md` §15's own phasing).
 | Date | Change |
 |---|---|
 | 2026-07-22 | Initial draft, written for review — not yet implemented, not yet RFC'd. |
+| 2026-09-11 | Corrected §4/§3: Image AI is proven working (`flux` via `/images/generations`), not "not pursued" — this line was stale as of two independent Me-Mo Studio decks confirming it live. |
