@@ -1,10 +1,17 @@
-# RFC-0017: Three sandbox-tier `OE-INTERDISCIPLINARY` concepts (Theory of Mind, Metacognition, Intuitive Theories)
+# RFC-0024: Three sandbox-tier `OE-INTERDISCIPLINARY` concepts (Theory of Mind, Metacognition, Intuitive Theories)
 
 **Type:** `content`
 **Status:** `proposed`
 **Author(s):** Claude (drafting pass, per RFC-0007/RFC-0016's precedent for maintainer-authored
 content RFCs), for review by Dustin Eirdosh
 **Date:** 2026-08-01
+
+**Renumbered from RFC-0017 to RFC-0024, 2026-10-03.** This branch independently claimed 0017
+without checking the ledger, which a different, unrelated proposal (`critical-ai-literacy-competencies-and-measuredby-field`,
+claimed 4 days later but already cited in real merged `competencybase` content) also claimed.
+That one keeps 0017; this one is renumbered since it had sat unmerged and untouched for about two
+months. See `proposals/RFC_LEDGER.md`'s 0017/0024 rows for the full history. No content below
+changed, only the number.
 
 ## Motivation
 

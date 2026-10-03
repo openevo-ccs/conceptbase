@@ -588,7 +588,8 @@ concepts:
   # --------------------------------------------------------------------------
   # Authored 2026-08-01 to ground the OpenEvo-CCS crosswalk built against
   # eva-graph's mpi_eva/sub-units/ccp/metarepresentation (see
-  # metadata/openevo_ccs_crosswalk.json there, and RFC-0017). These three
+  # metadata/openevo_ccs_crosswalk.json there, and RFC-0024 -- renumbered from RFC-0017,
+  # 2026-10-03, see proposals/RFC_LEDGER.md). These three
   # constructs have real, citation-backed source material in that repo's
   # own core.json/capacities.json/nodes but had no ConceptBase entry at all
   # before this pass -- a direct gap found while crosswalking, not
