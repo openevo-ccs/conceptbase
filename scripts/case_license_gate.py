@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Classifies a CASE (1EdTech) CFPackage's CFDocument.licenseURI to determine
-what an OECB importer may do with its CFItems, per RFC-0005 and the license
+what a ConceptBase importer may do with its CFItems, per RFC-0005 and the license
 catalog precedent in docs/design-notes/case-competency-profile.md.
 
 This is pattern-matching on license title/URI text, not a legal opinion.
@@ -11,7 +11,7 @@ correct — BLOCKED and CITATION_ONLY verdicts still warrant a human reading
 the actual license before any ingestion PR is opened.
 
 Verdicts (most to least permissive):
-    ALLOW_FULL      Recognized as compatible with OECB's own CC-BY-NC-SA-4.0
+    ALLOW_FULL      Recognized as compatible with ConceptBase's own CC-BY-NC-SA-4.0
                     content license (RFC-0004). CFItem.fullStatement MAY be
                     republished verbatim, with attribution.
     CITATION_ONLY   No redistribution grant found, but no explicit

@@ -36,7 +36,7 @@ Drafting the alignment records also surfaced a second, related gap: `scripts/bui
 
 ## Standards justification
 
-Not a novel structure — SKOS's own alignment relations (`skos:closeMatch`, etc.) are already discipline-agnostic about what kind of resource they connect; this just lets OECB's own identifier-shape validation catch up to that generality.
+Not a novel structure — SKOS's own alignment relations (`skos:closeMatch`, etc.) are already discipline-agnostic about what kind of resource they connect; this just lets ConceptBase's own identifier-shape validation catch up to that generality.
 
 ## ID block reservation
 

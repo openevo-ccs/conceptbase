@@ -9,7 +9,7 @@
 # scripts/case_license_gate.py for how to determine which case you're in).
 #
 # When citationOnly is true: `statement`/`abbreviatedStatement` MUST NOT
-# contain the restricted source text (an OECB-authored, non-verbatim gloss
+# contain the restricted source text (a ConceptBase-authored, non-verbatim gloss
 # is fine); `humanCodingScheme` and `provenance` become required instead,
 # so the entry still anchors to a real, resolvable source.
 # ============================================================================

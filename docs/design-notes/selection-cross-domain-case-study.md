@@ -42,7 +42,7 @@ Checked against AI4K12 — the AAAI/CSTA-vetted K-12 AI-literacy framework, 381 
 **What this means concretely:** Strand 1's 9-12 performance indicator asks students to reason about a mechanism (genetic algorithms) that isn't part of the AI-literacy curriculum they would actually have encountered under AI4K12. This isn't a flaw in the alignment process — it's exactly the kind of gap the alignment process exists to surface. Two honest ways to respond, not mutually exclusive:
 
 1. **Revise the performance indicator** to reference what AI4K12 actually teaches (reinforcement learning's trial-and-error structure) rather than genetic algorithms, so the comparison students are asked to make is grounded in curriculum they've actually seen.
-2. **Treat genetic algorithms/evolutionary computation as a real, named gap** in current K-12 AI-literacy standards — worth a future OECB-authored sandbox concept if the Selection-in-AI analogy is considered pedagogically important enough to keep teaching, rather than silently relying on a vocabulary definition no existing standard actually backs.
+2. **Treat genetic algorithms/evolutionary computation as a real, named gap** in current K-12 AI-literacy standards — worth a future ConceptBase-authored sandbox concept if the Selection-in-AI analogy is considered pedagogically important enough to keep teaching, rather than silently relying on a vocabulary definition no existing standard actually backs.
 
 ## Check 3: the Agency claim — reaching for adjacent, not identical, questions
 

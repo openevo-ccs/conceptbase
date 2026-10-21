@@ -1,38 +1,54 @@
 {
   "citations": [
     {
-      "doi": "10.5751/ES-07634-200234",
-      "text": "Waring, T. M., Kline, M. A., Brooks, J. S., Goff, S. H., Gowdy, J., Janssen, M. A., Smaldino, P. E., & Jacquet, J. (2015). A multilevel evolutionary framework for sustainability analysis. Ecology and Society, 20(2), 34.\n"
+      "doi": "10.1016/j.tics.2021.03.002",
+      "text": "Brand, C. O., Mesoudi, A., & Smaldino, P. E. (2021). Analogy as a Catalyst for Cumulative Cultural Evolution. Trends in Cognitive Sciences, 25(6), 450-461.\n"
     },
     {
-      "text": "Brundtland, G. H. (1987). Our Common Future: Report of the World Commission on Environment and Development.\n"
+      "doi": "10.1017/ehs.2026.10063",
+      "text": "Holding, T., Smaldino, P. E., & Brand, C. O. (2026). Analogies evolve by increasing transmission fidelity in the communication of complex information. Evolutionary Human Sciences, 1-26.\n"
+    },
+    {
+      "doi": "10.1111/tops.12703",
+      "text": "Bramley, N. R., Zhao, B., Quillien, T., & Lucas, C. G. (2023). Local search and the evolution of world models. Topics in Cognitive Science.\n"
+    },
+    {
+      "text": "Hofstadter, D. R., & Sander, E. (2013). Surfaces and Essences: Analogy as the Fuel and Fire of Thinking. Basic Books."
     }
   ],
   "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
   "definitions": {
     "en": {
-      "general": "A goal state involving the maintenance of human (and other organisms') well-being, needs, and values into the future, together with the durability of a given state over time under perturbation. Sustainability has two connotations that are conceptually distinct: a goal state (what should be maintained, a question of human values) and durability/resilience (how well a state persists, a question science can address) — not all resilient states are desirable, and not all desirable states are resilient (Waring et al. 2015).\n"
+      "general": "Generating or evaluating a new idea by mapping the structure of an already-familiar case onto an unfamiliar one — starting a search for a solution from whichever known example is most similar to the target, rather than starting from nothing, and checking which parts of the familiar case do and do not carry over.\n"
     }
   },
   "examples": [
-    "Evaluating a climate policy not only by whether the resulting ecological state would persist (resilience) but by whether it actually serves human needs and values (the goal-state question).",
-    "The UN Sustainable Development Goals as one attempt to specify what humans collectively need, value, and therefore want to sustain — while recognizing communities may value different things or things not captured by the SDGs."
+    "A student solving a new math problem by first asking \"what problem I already know is most similar to this one?\" and adapting that solution.",
+    "Darwin using breeders' deliberate selection of livestock as the starting structure for imagining selection happening in nature without a breeder."
   ],
   "id": "OE-SANDBOX-CONCEPT-000013",
   "labels": {
-    "en": "Sustainability"
+    "en": "Analogical Reasoning"
   },
+  "nonExamples": [
+    "Noticing two things merely look alike without mapping which parts of their structure correspond (see Restructuration's own representation-vs-analogy distinction)."
+  ],
   "relations": {
+    "skos:broader": [
+      "OE-CONCEPT-oe-interdisciplinary-evolutionary-process"
+    ],
     "skos:related": [
-      "OE-SANDBOX-CONCEPT-000014",
-      "OE-SANDBOX-CONCEPT-000015",
-      "OE-CONCEPT-oe-interdisciplinary-cooperation",
-      "OE-CONCEPT-oe-interdisciplinary-institutions"
+      "OE-CONCEPT-oe-interdisciplinary-selection",
+      "OE-CONCEPT-oe-interdisciplinary-variation",
+      "OE-CONCEPT-oe-interdisciplinary-innovation",
+      "OE-SANDBOX-CONCEPT-000011",
+      "OE-SANDBOX-CONCEPT-000004",
+      "OE-SANDBOX-CONCEPT-000012"
     ]
   },
   "sandboxMeta": {
-    "created": "2026-09-01",
-    "expiresOn": "2027-09-01",
+    "created": "2026-09-02",
+    "expiresOn": "2027-09-02",
     "status": "active"
   },
   "type": "oe:Concept",

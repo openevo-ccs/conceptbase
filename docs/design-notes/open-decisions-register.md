@@ -24,11 +24,11 @@ inventory only. Decisions are grouped by source document, in the same order as `
 This document has no dedicated "Open Decisions" section; the items below are stated inline in
 its "Proposed profile sketch" and "Operational weight" discussion.
 
-- Whether `isPeerOf`'s CASE association type maps cleanly onto anything in OECB — the closest
+- Whether `isPeerOf`'s CASE association type maps cleanly onto anything in ConceptBase — the closest
   candidate is `skos:related`, but the note flags peer-ness as "symmetric-by-name only," needing
   its own check rather than being assumed equivalent.
 - Whether `exemplar`, `hasSkillLevel`, and `isTranslationOf` (three CASE association types) have
-  any OECB analogue at all — flagged as "no current OECB analogue," deliberately not forced into
+  any ConceptBase analogue at all — flagged as "no current ConceptBase analogue," deliberately not forced into
   a mapping.
 - Whether each proposed association-type mapping actually holds under "behavioral verification,
   not just label similarity" (per spec §9) before being encoded into a schema — none of the
@@ -77,7 +77,7 @@ its "Proposed profile sketch" and "Operational weight" discussion.
   `lpmr-management-app-spec.md`'s own Phase 4, or should everything GWDG-related wait for that
   app to prove the pattern first (the doc's own default assumption, per its §7 Phase 1)?
 - **Federated-maintainer outreach:** is there an actual near-term audience (a specific
-  institution or partner already running or planning an OECB-compatible LPMR) who'd use a
+  institution or partner already running or planning a ConceptBase-compatible LPMR) who'd use a
   federated MCP/SAIA path today, or is §5 currently anticipatory design for a use case with no
   concrete first user yet? Changes how much to invest in the Phase 4 onboarding doc now vs.
   later.
@@ -135,7 +135,7 @@ mostly in "Check 2" and "Check 3."
 - Whether to revise Strand 1's 9-12 performance indicator to reference what AI4K12 actually
   teaches (reinforcement learning's trial-and-error framing) instead of genetic
   algorithms/fitness functions, *or* to treat genetic algorithms/evolutionary computation as a
-  real, named gap in current K-12 AI-literacy standards worth a future OECB-authored sandbox
+  real, named gap in current K-12 AI-literacy standards worth a future ConceptBase-authored sandbox
   concept — presented explicitly as "two honest ways to respond, not mutually exclusive," neither
   chosen.
 - Whether `OE-STRAND-000224` (currently elective, its Agency/AI comparison backed only by a

@@ -1,13 +1,20 @@
 {
   "lpm": {
-    "OE-LPM-000001": {
+    "OE-LPM-bee-k12": {
+      "epistemicStatus": "designed-thought-experiment",
+      "owner": "openevo-ccs",
+      "ref": "main",
+      "repo": "bee-k12",
+      "vocabulary": "BEE-K12-v0.1.0"
+    },
+    "OE-LPM-bio-core-k12": {
       "epistemicStatus": "designed-thought-experiment",
       "owner": "openevo-ccs",
       "ref": "main",
       "repo": "bio-core-k12",
       "vocabulary": "BIO-CORE-v1.0.0"
     },
-    "OE-LPM-000002": {
+    "OE-LPM-oe-interdisciplinary-k12": {
       "epistemicStatus": "designed-thought-experiment",
       "owner": "openevo-ccs",
       "ref": "main",
@@ -15,16 +22,9 @@
       "vocabulary": "OE-INTERDISCIPLINARY-v1.0.0"
     }
   },
-  "ranges": [
-    {
-      "lpm": "OE-LPM-000001",
-      "max": 199,
-      "min": 100
-    },
-    {
-      "lpm": "OE-LPM-000002",
-      "max": 299,
-      "min": 200
-    }
-  ]
+  "ownershipPrefixes": {
+    "OE-LPM-bee-k12": "OE-STRAND-bee-k12-",
+    "OE-LPM-bio-core-k12": "OE-STRAND-bio-core-k12-",
+    "OE-LPM-oe-interdisciplinary-k12": "OE-STRAND-oe-interdisciplinary-k12-"
+  }
 }

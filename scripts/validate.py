@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate an OECB YAML data file against one of the schemas/*.schema.yaml files.
+"""Validate a ConceptBase YAML data file against one of the schemas/*.schema.yaml files.
 
 Every schema $refs common.defs.yaml by relative filename (e.g.
 "common.defs.yaml#/$defs/lpmId"), which resolves against each schema's own

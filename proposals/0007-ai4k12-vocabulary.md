@@ -9,7 +9,7 @@
 
 Per the ConceptBase ecosystem-population plan, AI competency/literacy frameworks (AI4K12, OECD, UNESCO) are named alongside official subject-area curriculum standards as canonical general frameworks to represent. AI4K12's "Five Big Ideas in Artificial Intelligence" is the first of these: a joint AAAI/CSTA initiative (NSF award DRL-1846073) with detailed K-2/3-5/6-8/9-12 grade-band progression charts for five Big Ideas (Perception, Representation & Reasoning, Learning, Natural Interaction, Societal Impact).
 
-AI4K12's stated license is CC BY-NC-SA 4.0 — an exact match to OECB's own content license following [RFC-0004](0004-relicense-content-cc-by-nc-sa.md), so full statement text is includable with attribution; this is not a `citationOnly` (RFC-0005) case.
+AI4K12's stated license is CC BY-NC-SA 4.0 — an exact match to ConceptBase's own content license following [RFC-0004](0004-relicense-content-cc-by-nc-sa.md), so full statement text is includable with attribution; this is not a `citationOnly` (RFC-0005) case.
 
 ## Proposed change
 

@@ -31,7 +31,7 @@ Documented in `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md`:
 - Publishing: `POST /management/tenants/{tenantId}/ims/case/v1p1/CFPackages` (full bundle, new revision) or targeted `PUT .../{CFDocuments|CFItems|CFAssociations}/{id}` (existing entities only — there's no `POST` for individual new items/associations outside a bundle).
 - Unauthenticated `GET /public/tenant-lookup?email=...` always returns `202`, body optionally carrying `{ tenantId }` — deliberately silent on no-match to prevent enumeration.
 
-**Recommendation: any OECB integration point should be the read-only Provider API only.** OECB never needs write access to OpenCASE — it consumes published frameworks, it doesn't author them there.
+**Recommendation: any ConceptBase integration point should be the read-only Provider API only.** ConceptBase never needs write access to OpenCASE — it consumes published frameworks, it doesn't author them there.
 
 ## License catalog — corrected, now confirmed
 
@@ -45,27 +45,27 @@ Documented in `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md`:
 | 4 | View and Share Only (CC BY-NC-ND 4.0) | `creativecommons.org/licenses/by-nc-nd/4.0/` | **No** — NC + NoDerivatives |
 | 5 | Private — All Rights Reserved | (none) | **No** |
 
-A companion `PUBLIC_LICENSE_IDS` set marks #1–#3 as granting unauthenticated read access; that's an OpenCASE access-control concern, orthogonal to OECB's redistribution question — #3 is publicly readable but still not redistributable as CC-BY. Any future import tooling's license-compatibility gate should mechanically reject #3/#4/#5, not treat "publicly readable" as a proxy for "reusable."
+A companion `PUBLIC_LICENSE_IDS` set marks #1–#3 as granting unauthenticated read access; that's an OpenCASE access-control concern, orthogonal to ConceptBase's redistribution question — #3 is publicly readable but still not redistributable as CC-BY. Any future import tooling's license-compatibility gate should mechanically reject #3/#4/#5, not treat "publicly readable" as a proxy for "reusable."
 
 ## Proposed profile sketch
 
-**Identifier bridging.** An `oe:Competency` minted from a CFItem retains its CASE origin as provenance — `CFItem.uri` (network-resolvable) and `CFItem.sourcedId` (UUID) — without reusing either as the OECB primary key. OECB mints its own permanent `OE-COMPETENCY-######` at `accepted`+, per the identifier scheme in `schemas/common.defs.yaml`.
+**Identifier bridging.** An `oe:Competency` minted from a CFItem retains its CASE origin as provenance — `CFItem.uri` (network-resolvable) and `CFItem.sourcedId` (UUID) — without reusing either as the ConceptBase primary key. ConceptBase mints its own permanent `OE-COMPETENCY-######` at `accepted`+, per the identifier scheme in `schemas/common.defs.yaml`.
 
 **Association-type mapping**, using the corrected 10-value vocabulary:
 
-| CASE `associationType` | Candidate OECB use |
+| CASE `associationType` | Candidate ConceptBase use |
 |---|---|
 | `isChildOf` / `isPartOf` | Strand/SubStrand nesting (`oe:hasSubStrand`) |
 | `precedes` | Progression ordering within an LPM |
 | `exactMatchOf` | Phase 2 alignment `matchType` ≈ `skos:exactMatch` |
 | `isRelatedTo` | Phase 2 alignment `matchType` ≈ `skos:related` |
 | `replacedBy` | Existing `supersededBy` deprecation pointer |
-| `isPeerOf` | No clean OECB analogue yet — closest is `skos:related`, but peer-ness is symmetric-by-name only; needs its own check |
-| `exemplar` / `hasSkillLevel` / `isTranslationOf` | No current OECB analogue — flag as open, don't force a mapping |
+| `isPeerOf` | No clean ConceptBase analogue yet — closest is `skos:related`, but peer-ness is symmetric-by-name only; needs its own check |
+| `exemplar` / `hasSkillLevel` / `isTranslationOf` | No current ConceptBase analogue — flag as open, don't force a mapping |
 
-Per spec §9, OECB's SKOS-based alignment model carries formal semantics (transitivity, symmetry) that CASE's association vocabulary doesn't promise — each row above needs behavioral verification, not just label similarity, before being encoded into a schema.
+Per spec §9, ConceptBase's SKOS-based alignment model carries formal semantics (transitivity, symmetry) that CASE's association vocabulary doesn't promise — each row above needs behavioral verification, not just label similarity, before being encoded into a schema.
 
-**Reusable reference implementation.** `apps/editor/src/application/framework/mappers/case/snapshotToCaseDtos.ts` (and sibling files in that directory) already implement a clean, layered domain→CASE mapping (`domain/framework/model` → `application/framework` commands/mappers → `infrastructure/caseApi`). A future OECB importer going the other direction (CASE→OECB) should mirror that layering rather than inventing its own — it's a proven structural template, even though building the importer itself is out of scope for now.
+**Reusable reference implementation.** `apps/editor/src/application/framework/mappers/case/snapshotToCaseDtos.ts` (and sibling files in that directory) already implement a clean, layered domain→CASE mapping (`domain/framework/model` → `application/framework` commands/mappers → `infrastructure/caseApi`). A future ConceptBase importer going the other direction (CASE→ConceptBase) should mirror that layering rather than inventing its own — it's a proven structural template, even though building the importer itself is out of scope for now.
 
 **Operational weight — confirmed, still deferred.** OpenCASE runs 5 Docker services (Traefik, Keycloak, dev-only Mailpit, the `opencase` API, the `editor` frontend) with **no database** — all framework data persists as versioned files under `apps/opencase/data/`. Keycloak is a hard dependency in every documented mode; there's no lightweight/no-auth fallback. The lightest real footprint is `apps/opencase/docker-compose.yml`'s standalone variant (just `case-provider` + Keycloak, no Traefik/editor/Mailpit) — still requires Keycloak, but drops the other three services. HTTPS deployment needs a real domain (Let's Encrypt); the HTTP dev path runs on bare `localhost`. Whether Phase 4 assumes a shared reference deployment, per-repo self-hosting, or schema-source-only (no runtime dependency at all) remains a decision for an actual Phase 4 RFC.
 

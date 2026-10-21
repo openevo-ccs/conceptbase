@@ -1,4 +1,4 @@
-# RFC-0004: Relicense OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0
+# RFC-0004: Relicense ConceptBase content from CC-BY-4.0 to CC-BY-NC-SA-4.0
 
 **Type:** `specification-amendment`
 **Status:** `proposed`
@@ -9,10 +9,10 @@
 
 While scoping the first standards-ingestion pilot (AI4K12 + a state CASE Satchel source, per the ecosystem-population roadmap under discussion), two license findings surfaced:
 
-1. **AI4K12's "Five Big Ideas in AI" materials** (the intended general-framework pilot source) are licensed **CC BY-NC-SA 4.0** — NonCommercial + ShareAlike — per the license statement on `ai4k12.org`'s own published poster. OECB's prior blanket content license, CC-BY-4.0, cannot legally incorporate NC/ShareAlike-encumbered material: NC forbids exactly the "even commercially" clause CC-BY-4.0 grants, and ShareAlike would force any OECB content built from it back under NC-SA regardless of what license the rest of the repository claims.
-2. Separately (and **not resolved by this RFC** — see "Out of scope" below), the four Virginia CASE Satchel exports pulled as the state-curriculum pilot source all carry **stricter** terms than either CC-BY or CC-BY-NC-SA: three are bare state-government copyright notices with no redistribution grant, and the fourth (`Virginia Computer Science Standards of Learning (2024)`) explicitly states "In-app and alignment use only; no redistribution or republication." No relicensing of OECB's own output license can make republishing that content lawful — that data can only be represented in OECB by code/citation reference (`humanCodingScheme` + a citation back to the official source), never by reproducing `fullStatement` text, regardless of what this RFC decides.
+1. **AI4K12's "Five Big Ideas in AI" materials** (the intended general-framework pilot source) are licensed **CC BY-NC-SA 4.0** — NonCommercial + ShareAlike — per the license statement on `ai4k12.org`'s own published poster. ConceptBase's prior blanket content license, CC-BY-4.0, cannot legally incorporate NC/ShareAlike-encumbered material: NC forbids exactly the "even commercially" clause CC-BY-4.0 grants, and ShareAlike would force any ConceptBase content built from it back under NC-SA regardless of what license the rest of the repository claims.
+2. Separately (and **not resolved by this RFC** — see "Out of scope" below), the four Virginia CASE Satchel exports pulled as the state-curriculum pilot source all carry **stricter** terms than either CC-BY or CC-BY-NC-SA: three are bare state-government copyright notices with no redistribution grant, and the fourth (`Virginia Computer Science Standards of Learning (2024)`) explicitly states "In-app and alignment use only; no redistribution or republication." No relicensing of ConceptBase's own output license can make republishing that content lawful — that data can only be represented in ConceptBase by code/citation reference (`humanCodingScheme` + a citation back to the official source), never by reproducing `fullStatement` text, regardless of what this RFC decides.
 
-Rather than fragment OECB's content corpus into a per-vocabulary patchwork of licenses (some CC-BY, some CC-BY-NC-SA) — which would be difficult for downstream consumers to audit and would still block ever citing/adapting an NC-SA source's *structure* (e.g. drawing on AI4K12's Five Big Ideas grade-band organization as inspiration for `interdisciplinary-k12`'s AI-literacy strands) — this RFC relicenses **all** OECB content uniformly to CC-BY-NC-SA-4.0, the more restrictive common denominator, so future NC-SA-licensed source frameworks can be represented without triggering a fresh license conflict each time one appears.
+Rather than fragment ConceptBase's content corpus into a per-vocabulary patchwork of licenses (some CC-BY, some CC-BY-NC-SA) — which would be difficult for downstream consumers to audit and would still block ever citing/adapting an NC-SA source's *structure* (e.g. drawing on AI4K12's Five Big Ideas grade-band organization as inspiration for `interdisciplinary-k12`'s AI-literacy strands) — this RFC relicenses **all** ConceptBase content uniformly to CC-BY-NC-SA-4.0, the more restrictive common denominator, so future NC-SA-licensed source frameworks can be represented without triggering a fresh license conflict each time one appears.
 
 ## Proposed change
 
@@ -21,18 +21,18 @@ Relicense all content covered by `LICENSE` (ontology, schemas, vocabularies, ali
 This also requires amending spec §3 Design Principle 2 ("FAIR by construction"), since its current wording — "Accessible (open license, resolvable URI)" — uses "open license" in a sense that, under the Open Definition/OSI meaning of "open," a NonCommercial-restricted license does not satisfy. Rather than let the spec silently contradict its own licensing footer, this RFC amends the clause to name CC-BY-NC-SA-4.0 explicitly and flag the terminology gap:
 
 - **Before:** "Accessible (open license, resolvable URI)"
-- **After:** "Accessible (openly documented license terms under CC-BY-NC-SA-4.0, resolvable URI)" — with an inline note that the NonCommercial clause means OECB content does not meet the stricter Open Definition/OSI sense of "open."
+- **After:** "Accessible (openly documented license terms under CC-BY-NC-SA-4.0, resolvable URI)" — with an inline note that the NonCommercial clause means ConceptBase content does not meet the stricter Open Definition/OSI sense of "open."
 
 ## Relations
 
 - Amends spec §3 Design Principle 2 (quoted above) and the spec's front-matter/footer license statements.
 - Does not add, remove, or redefine any ontology class, schema property, or vocabulary concept — this is a licensing/governance change only, not a content change.
-- Sets precedent for how future NC-SA-licensed source frameworks (AI4K12 being the first candidate) are represented: their *structure* may inform OECB-authored, non-verbatim entries under `citations`, now without a license conflict. Their prose may still not be copied verbatim without checking that specific source's own attribution/ShareAlike terms are satisfied.
-- Explicitly does **not** resolve the Virginia CASE Satchel non-redistribution finding (see Motivation, item 2) — that remains gated by a code/citation-only representation pattern and a license-compliance gate in the forthcoming CASE importer, tracked separately. See [`docs/design-notes/state-standards-licensing.md`](../docs/design-notes/state-standards-licensing.md) for the full reasoning (state-government copyright status, fair-use factor analysis, why OECB defaults conservative).
+- Sets precedent for how future NC-SA-licensed source frameworks (AI4K12 being the first candidate) are represented: their *structure* may inform ConceptBase-authored, non-verbatim entries under `citations`, now without a license conflict. Their prose may still not be copied verbatim without checking that specific source's own attribution/ShareAlike terms are satisfied.
+- Explicitly does **not** resolve the Virginia CASE Satchel non-redistribution finding (see Motivation, item 2) — that remains gated by a code/citation-only representation pattern and a license-compliance gate in the forthcoming CASE importer, tracked separately. See [`docs/design-notes/state-standards-licensing.md`](../docs/design-notes/state-standards-licensing.md) for the full reasoning (state-government copyright status, fair-use factor analysis, why ConceptBase defaults conservative).
 
 ## Standards justification
 
-Not applicable — this RFC changes OECB's own output license, not a data structure or schema. No existing standard governs this choice.
+Not applicable — this RFC changes ConceptBase's own output license, not a data structure or schema. No existing standard governs this choice.
 
 ## ID block reservation
 

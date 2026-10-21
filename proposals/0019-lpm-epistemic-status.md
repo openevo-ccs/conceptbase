@@ -128,7 +128,7 @@ Discussed and resolved during review: the two `instantiatesIn` edges in `openevo
 note: "bio-core-k12/strands/strand-102-natural-selection-adaptation.yaml (epistemicStatus: designed-thought-experiment, see OE-LPM-000001)"
 ```
 
-This is discoverability-only — it does not change, soften, or re-litigate the dispute grounding itself, per design principle 7 (OECB represents genuine disagreement, it does not adjudicate it).
+This is discoverability-only — it does not change, soften, or re-litigate the dispute grounding itself, per design principle 7 (ConceptBase represents genuine disagreement, it does not adjudicate it).
 
 ## Relations
 
@@ -138,7 +138,7 @@ This is discoverability-only — it does not change, soften, or re-litigate the 
 
 ## Standards justification
 
-Per spec §3 item 4: no existing curriculum standard (CASE, IEEE LOM, xAPI, schema.org) has a field distinguishing a designed research/demonstration artifact from validated, deployable curriculum — this is closer to a research-methodology distinction than a curriculum-standards one. The relevant precedent is OECB's own prior art (`status`, `sandboxStatus` — both schema-layer-constrained string enums with a documented, additive value space), reused here rather than inventing a new shape.
+Per spec §3 item 4: no existing curriculum standard (CASE, IEEE LOM, xAPI, schema.org) has a field distinguishing a designed research/demonstration artifact from validated, deployable curriculum — this is closer to a research-methodology distinction than a curriculum-standards one. The relevant precedent is ConceptBase's own prior art (`status`, `sandboxStatus` — both schema-layer-constrained string enums with a documented, additive value space), reused here rather than inventing a new shape.
 
 ## ID block reservation
 

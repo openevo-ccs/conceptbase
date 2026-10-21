@@ -1,4 +1,22 @@
 {
+  "citations": [
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's Discovery of the Active Mind: Phenomenological Awareness, Social Experience, and Knowledge about Cognition. Springer.\n"
+    },
+    {
+      "doi": "10.3200/GNTP.169.4.297-321",
+      "text": "Pillow, B. H. (2008). Development of Children's Understanding of Cognitive Activities. The Journal of Genetic Psychology, 169(4), 297-321.\n"
+    },
+    {
+      "doi": "10.1007/s11409-014-9122-2",
+      "text": "Pillow, B. H., & Pearson, R. M. (2015). Children's and adults' judgments of the controllability of cognitive activities. Metacognition and Learning.\n"
+    },
+    {
+      "doi": "10.1016/j.tsc.2021.100855",
+      "text": "Zdybel, D. (2021). Children's conceptions of memory and imagination -- from conceptual knowledge to metacognition. Phenomenographical study. Thinking Skills and Creativity, 41.\n"
+    }
+  ],
   "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
   "definitions": {
     "en": {
@@ -15,7 +33,8 @@
   "relations": {
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
-      "OE-SANDBOX-CONCEPT-000010"
+      "OE-SANDBOX-CONCEPT-000010",
+      "OE-SANDBOX-CONCEPT-000013"
     ]
   },
   "sandboxMeta": {

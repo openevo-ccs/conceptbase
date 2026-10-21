@@ -17,7 +17,7 @@ The keywords **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, **MAY**, and **
 
 ### 0.2 Purpose of This Document
 
-This specification is the authoritative, normative description of the OpenEvo ConceptBase (OECB): its data model, namespace and identifier architecture, schema layer, controlled vocabulary structure, governance process, versioning rules, and conformance requirements. Where this document and any other artifact in the repository (README, code comments, prior draft specifications) disagree, **this document is the source of truth**.
+This specification is the authoritative, normative description of the OpenEvo ConceptBase: its data model, namespace and identifier architecture, schema layer, controlled vocabulary structure, governance process, versioning rules, and conformance requirements. Where this document and any other artifact in the repository (README, code comments, prior draft specifications) disagree, **this document is the source of truth**.
 
 This document supersedes all prior draft specifications (v0.1, v0.2-draft) circulated during the design phase of the ConceptBase.
 
@@ -25,7 +25,7 @@ This document supersedes all prior draft specifications (v0.1, v0.2-draft) circu
 
 | Document | Role |
 |---|---|
-| This specification | Normative — defines what OECB *is* |
+| This specification | Normative — defines what ConceptBase *is* |
 | `GOVERNANCE.md` | Normative — defines the RFC/review *process* by which this specification evolves |
 | `CONTRIBUTING.md` | Informative — practical guide for contributors |
 | `ontologies/core_v1.yaml`, `schemas/*.yaml` | Normative — machine-readable instantiations of §6 and §7 of this specification |
@@ -35,22 +35,22 @@ This document supersedes all prior draft specifications (v0.1, v0.2-draft) circu
 
 ## 1. Introduction and Scope
 
-### 1.1 What OECB Is
+### 1.1 What ConceptBase Is
 
 The OpenEvo ConceptBase is the semantic registry infrastructure for the OpenEvo Computational Curriculum Studies ecosystem. It defines the ontology, schemas, controlled vocabularies, persistent identifiers, and validation rules that allow independently developed and independently governed repositories — Learning Progression Models (LPMs), Collections, Strand repositories, assessment banks, and AI-assisted curriculum tools — to interoperate through a shared, machine-readable data model.
 
-OECB is analogous in architectural role to a package registry (e.g., npm) or a standards body (e.g., schema.org, SKOS): it defines a shared grammar and a shared set of stable identifiers, but it does not itself contain the artifacts built on top of it.
+ConceptBase is analogous in architectural role to a package registry (e.g., npm) or a standards body (e.g., schema.org, SKOS): it defines a shared grammar and a shared set of stable identifiers, but it does not itself contain the artifacts built on top of it.
 
-### 1.2 What OECB Is Not
+### 1.2 What ConceptBase Is Not
 
-OECB **MUST NOT** contain:
+ConceptBase **MUST NOT** contain:
 
 - Lesson plans, instructional units, or complete curricula.
 - Complete Learning Progression Models, Collections, or Strand content.
 - Assessment items, student data, or learner-facing materials.
 - Multimedia or learning resources.
 
-These artifacts live in independently governed repositories that *depend on* OECB (§10).
+These artifacts live in independently governed repositories that *depend on* ConceptBase (§10).
 
 ### 1.3 Scope of This Specification
 
@@ -67,7 +67,7 @@ This document specifies:
 9. Standards alignment and profiling obligations (§12).
 10. Validation and compatibility-checking requirements (§13).
 11. The phased rollout plan and its normative implications (§14).
-12. Conformance levels for repositories and tooling claiming OECB compatibility (§16).
+12. Conformance levels for repositories and tooling claiming ConceptBase compatibility (§16).
 
 ---
 
@@ -75,29 +75,29 @@ This document specifies:
 
 | Term | Definition |
 |---|---|
-| **Entity** | Any instance of an OECB ontology class (`oe:Concept`, `oe:LPM`, `oe:Strand`, `oe:SubStrand`, `oe:LearningObject`, and reserved future classes). |
+| **Entity** | Any instance of a ConceptBase ontology class (`oe:Concept`, `oe:LPM`, `oe:Strand`, `oe:SubStrand`, `oe:LearningObject`, and reserved future classes). |
 | **Concept** | An instance of `oe:Concept` — a disambiguated unit of curricular meaning defined within exactly one controlled vocabulary. |
 | **Vocabulary** | A versioned, governed collection of Concept instances sharing a scope and discipline (e.g., `BIO-CORE-v1.0.0`). |
 | **LPM** | Learning Progression Model — a top-level structural container referencing Strands across a developmental span. |
 | **Strand / SubStrand** | A thematic thread of curriculum structure; SubStrand is a subclass of Strand enabling recursive nesting. |
 | **Alignment** | A Phase 2 artifact asserting a SKOS-typed relationship (e.g., `skos:closeMatch`) between Concepts in different vocabularies, carrying provenance. |
 | **Manifest** | The `conceptbase:` block a dependent repository declares, pinning ontology and vocabulary versions it was built against. |
-| **Dependent repository** | Any repository (LPM, Collection, Strand, tool) that references OECB entities via its manifest. |
+| **Dependent repository** | Any repository (LPM, Collection, Strand, tool) that references ConceptBase entities via its manifest. |
 | **RFC** | A structured change proposal submitted per the governance process (§11). |
 
 ---
 
 ## 3. Design Principles
 
-OECB is governed by the following non-negotiable design commitments. Any proposed change that violates one of these principles **MUST** be rejected during RFC review unless the principle itself is formally amended (§11.6).
+ConceptBase is governed by the following non-negotiable design commitments. Any proposed change that violates one of these principles **MUST** be rejected during RFC review unless the principle itself is formally amended (§11.6).
 
-1. **Infrastructure, not content.** OECB defines representational capacity; it does not adjudicate curricular, theoretical, or pedagogical questions (§1.2, §8.6).
-2. **FAIR by construction.** Every entity **MUST** be Findable (persistent identifier), Accessible (openly documented license terms under CC-BY-NC-SA-4.0, resolvable URI), Interoperable (typed relations via existing standards), and Reusable (versioned, provenance-tracked) from the moment it is accepted, not retrofitted later. Note: CC-BY-NC-SA-4.0's NonCommercial clause means OECB content does not meet the stricter Open Definition/OSI sense of "open" — see [RFC-0004](../proposals/0004-relicense-content-cc-by-nc-sa.md) for the rationale.
+1. **Infrastructure, not content.** ConceptBase defines representational capacity; it does not adjudicate curricular, theoretical, or pedagogical questions (§1.2, §8.6).
+2. **FAIR by construction.** Every entity **MUST** be Findable (persistent identifier), Accessible (openly documented license terms under CC-BY-NC-SA-4.0, resolvable URI), Interoperable (typed relations via existing standards), and Reusable (versioned, provenance-tracked) from the moment it is accepted, not retrofitted later. Note: CC-BY-NC-SA-4.0's NonCommercial clause means ConceptBase content does not meet the stricter Open Definition/OSI sense of "open" — see [RFC-0004](../proposals/0004-relicense-content-cc-by-nc-sa.md) for the rationale.
 3. **Git-native authoring, compiled distribution.** All entities **MUST** be authored as human-reviewable YAML through pull requests. Compiled RDF/JSON-LD, SPARQL endpoints, and flat JSON indices are build artifacts and **MUST NOT** be hand-edited (§5).
 4. **Standards reuse over reinvention.** Any RFC proposing a novel schema structure **MUST** document why no existing standard (SKOS, CASE, IEEE LOM, xAPI, schema.org) already satisfies the need (§12).
 5. **Never delete, always deprecate.** No entity is ever removed once `status: accepted` or higher. Deprecated entities remain resolvable indefinitely with a `supersededBy` pointer (§11.4). This guarantee applies to the permanent identifier space (`OE-*`); the parallel sandbox/provisional tier (`OE-SANDBOX-*`) is explicitly exempt by construction, not by exception carved into this rule — see §4.5.
 6. **Independent versioning per artifact.** The ontology, each vocabulary, and each schema version independently using semver; there is no single monolithic "ConceptBase version" (§11.5).
-7. **Theoretical pluralism as a first-class capability.** Where a field contains genuine, unresolved theoretical disagreement, OECB **MUST** support multiple internally consistent vocabularies representing competing positions rather than adjudicating between them in the infrastructure layer (§8.6).
+7. **Theoretical pluralism as a first-class capability.** Where a field contains genuine, unresolved theoretical disagreement, ConceptBase **MUST** support multiple internally consistent vocabularies representing competing positions rather than adjudicating between them in the infrastructure layer (§8.6).
 
 ---
 
@@ -105,7 +105,7 @@ OECB is governed by the following non-negotiable design commitments. Any propose
 
 ### 4.1 Canonical Namespace
 
-The canonical namespace for all OECB-minted IRIs is:
+The canonical namespace for all ConceptBase-minted IRIs is:
 
 ```
 https://www.w3id.org/openevo/
@@ -143,7 +143,7 @@ An identifier, once assigned to an entity with `status` at or above `accepted`, 
 
 ### 4.5 Sandbox/Provisional Tier
 
-To allow lightweight experimentation without every draft immediately taking on the permanence guarantee of §4.4, OECB defines a parallel, structurally distinct identifier tier (introduced by RFC-0001):
+To allow lightweight experimentation without every draft immediately taking on the permanence guarantee of §4.4, ConceptBase defines a parallel, structurally distinct identifier tier (introduced by RFC-0001):
 
 - **Pattern**: `^OE-SANDBOX-CONCEPT-[0-9]{6}$` (`schemas/common.defs.yaml#/$defs/sandboxConceptId`), never mistakable for the permanent `OE-CONCEPT-######` pattern. Originally scoped to controlled-vocabulary concept entries only; **extended to `oe:LPM` by RFC-0010** (`^OE-SANDBOX-LPM-[0-9]{6}$`, `schemas/common.defs.yaml#/$defs/sandboxLpmId`) and, the same day, to **`oe:Strand`/`oe:SubStrand`** (`^OE-SANDBOX-STRAND-[0-9]{6}$`, `schemas/common.defs.yaml#/$defs/sandboxStrandId` — needed because a sandbox-tier LPM authoring new Strand content has no permanent per-LPM block to mint from), realizing the "out of scope until a future RFC establishes a concrete need" extension point this paragraph originally left open. Sandbox identifiers for any other entity type remain out of scope until a further RFC establishes a concrete need for that type specifically.
 - **Status**: sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`) — a wholly separate, smaller vocabulary from the permanent-tier `status` enum (§11.3). They **MUST NOT** carry that enum, which is what exempts them from §3 item 5 / §11.4's never-delete guarantee by construction rather than by exception.
@@ -155,7 +155,7 @@ To allow lightweight experimentation without every draft immediately taking on t
 
 ## 5. Layered Technical Architecture
 
-OECB uses a three-layer architecture separating human authorship from machine consumption.
+ConceptBase uses a three-layer architecture separating human authorship from machine consumption.
 
 ### 5.1 Authoring Layer (YAML)
 
@@ -194,7 +194,7 @@ The formal ontology is defined in `ontologies/core_v1.yaml` and summarized norma
 | `oe:LPM` | `oe:Entity` | A top-level structural container referencing Strands; independent of any single grade or subject system. |
 | `oe:Strand` | `oe:Entity` | A thematic thread within an LPM, recursively composable. |
 | `oe:SubStrand` | `oe:Strand` | A nested child Strand, connected to its parent via `oe:hasSubStrand`. Modeled as a subclass — not a sibling type — so recursion requires only one property, not one per depth level. |
-| `oe:LearningObject` | `oe:Entity` | The smallest addressable curriculum unit referenced by a Strand; content itself lives outside OECB. |
+| `oe:LearningObject` | `oe:Entity` | The smallest addressable curriculum unit referenced by a Strand; content itself lives outside ConceptBase. |
 
 ### 6.2 Reserved Classes (Forward-Declared)
 
@@ -231,7 +231,7 @@ Promoting a reserved class into `classes` is a **MINOR** version bump to the ont
 
 ### 6.4 SKOS Relation Reuse
 
-Because `oe:Concept` is declared `subClassOf skos:Concept`, all standard SKOS relations (`skos:broader`, `skos:narrower`, `skos:related`, `skos:closeMatch`, `skos:exactMatch`) are available on every Concept instance without redefinition. OECB **MUST NOT** define parallel or competing relation vocabularies for same-vocabulary relations. Cross-vocabulary relations are reified separately as Alignment records (§9), not asserted as direct Concept properties, so that each such claim can carry independent provenance.
+Because `oe:Concept` is declared `subClassOf skos:Concept`, all standard SKOS relations (`skos:broader`, `skos:narrower`, `skos:related`, `skos:closeMatch`, `skos:exactMatch`) are available on every Concept instance without redefinition. ConceptBase **MUST NOT** define parallel or competing relation vocabularies for same-vocabulary relations. Cross-vocabulary relations are reified separately as Alignment records (§9), not asserted as direct Concept properties, so that each such claim can carry independent provenance.
 
 ### 6.5 Nesting Depth
 
@@ -297,12 +297,12 @@ All `labels` and `definitions` fields **MUST** include an `en` entry as the ecos
 
 ### 8.6 Pluralism Requirement
 
-Where a field of curricular knowledge contains genuine, active theoretical disagreement (e.g., whether organism agency is a legitimate causal component of evolutionary explanation), OECB **MUST NOT** resolve the disagreement by omission, editorializing, or privileging one vocabulary as canonical. Instead:
+Where a field of curricular knowledge contains genuine, active theoretical disagreement (e.g., whether organism agency is a legitimate causal component of evolutionary explanation), ConceptBase **MUST NOT** resolve the disagreement by omission, editorializing, or privileging one vocabulary as canonical. Instead:
 
 - Competing theoretical positions **SHOULD** be represented as separate, internally consistent vocabularies (e.g., `BIO-CORE` vs. `OE-INTERDISCIPLINARY`).
 - The disagreement **MAY** subsequently be made formally comparable via Alignment records (§9) once both vocabularies are stable, without requiring either to be modified to accommodate the other.
 
-This is a load-bearing design principle (§3, item 7), not an incidental feature; it is what allows OECB to serve a research field with active theoretical disputes without the infrastructure layer taking a side.
+This is a load-bearing design principle (§3, item 7), not an incidental feature; it is what allows ConceptBase to serve a research field with active theoretical disputes without the infrastructure layer taking a side.
 
 ---
 
@@ -324,7 +324,7 @@ rationale: >
   {free text justification}
 ```
 
-`subject` and `object` **MUST** reference the permanent `conceptId` (e.g. `BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection`), never a label. This matches every other reference mechanism in OECB — `skos:broader`/`skos:narrower`/`skos:related` and `oe:hasConcept` all target `OE-CONCEPT-{id}` — because labels **MAY** change across versions while identifiers **MUST NOT** (§4.4). An alignment keyed on a label would silently desynchronize from its target on a legitimate label edit, with no schema-level way to detect the break.
+`subject` and `object` **MUST** reference the permanent `conceptId` (e.g. `BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection`), never a label. This matches every other reference mechanism in ConceptBase — `skos:broader`/`skos:narrower`/`skos:related` and `oe:hasConcept` all target `OE-CONCEPT-{id}` — because labels **MAY** change across versions while identifiers **MUST NOT** (§4.4). An alignment keyed on a label would silently desynchronize from its target on a legitimate label edit, with no schema-level way to detect the break.
 
 ### 9.2 Normative Requirements
 
@@ -358,7 +358,7 @@ A dependent repository's manifest **MUST** pin exact versions of every ontology 
 
 ### 10.3 Compatibility Checking
 
-A CI compatibility-checker (distributed by OECB as a reusable action, §14 Phase 4) **MUST**, on every push to a dependent repository:
+A CI compatibility-checker (distributed by ConceptBase as a reusable action, §14 Phase 4) **MUST**, on every push to a dependent repository:
 
 1. Verify that every referenced entity ID resolves at the pinned version.
 2. Verify that no referenced entity has `status: deprecated` unless explicitly listed in `acknowledgedDeprecations`.
@@ -426,15 +426,15 @@ Changes to §3 (Design Principles) or §11 (this section) itself **MUST** be tre
 
 ## 12. Standards Alignment and Profiling Obligations
 
-OECB **MUST** be built as a set of profiles and extensions of existing standards wherever a suitable standard exists, per §3 item 4. The following mappings are normative for the phases indicated:
+ConceptBase **MUST** be built as a set of profiles and extensions of existing standards wherever a suitable standard exists, per §3 item 4. The following mappings are normative for the phases indicated:
 
-| Need | Standard reused | OECB profiling obligation | Phase |
+| Need | Standard reused | ConceptBase profiling obligation | Phase |
 |---|---|---|---|
 | Concept relations, cross-vocabulary mapping | SKOS | `oe:Concept subClassOf skos:Concept`; Alignment records use SKOS match types exclusively (§9) | 1 (relations), 2 (alignment) |
 | Competency frameworks | CASE (1EdTech) | **Fulfilled.** `oe:Competency` is profiled as an extension of CASE `CFItem` per RFC-0002 (`proposals/0002-competency-case-profile.md`, `schemas/competency.schema.yaml`), promoted ahead of schedule 2026-07-19 | 4 (promoted early) |
 | Learning object metadata | IEEE LOM, schema.org/LearningResource | `oe:Resource` **MUST** be profiled from these, not redefined | 4 |
 | Evidence/activity records | xAPI | `oe:Evidence` **MUST** be profiled as an extension of the xAPI statement structure | 4 |
-| Graph serialization | RDF / JSON-LD | The OECB-specific ontology (§6) is the only permitted novel structure at the serialization layer | 1 |
+| Graph serialization | RDF / JSON-LD | The ConceptBase-specific ontology (§6) is the only permitted novel structure at the serialization layer | 1 |
 
 Any RFC proposing a schema or ontology structure not covered by this table **MUST** include a documented justification for why existing standards are insufficient (§3 item 4), reviewed as part of ordinary RFC review (§11.2).
 
@@ -467,7 +467,7 @@ Validation tooling **MUST** flag (though **MAY** allow with a warning rather tha
 
 ## 14. Phased Rollout
 
-OECB's scope is deliberately staged rather than stabilized all at once (§3 rationale: validate the highest-leverage design decisions — disambiguation, identifier stability — against a real pilot before expanding surface area).
+ConceptBase's scope is deliberately staged rather than stabilized all at once (§3 rationale: validate the highest-leverage design decisions — disambiguation, identifier stability — against a real pilot before expanding surface area).
 
 | Phase | Status as of this specification | Normative deliverables |
 |---|---|---|
@@ -529,7 +529,7 @@ This specification defines two conformance classes.
 
 ### 16.2 Non-Conformance Handling
 
-A repository that references OECB entities without a valid manifest, or that references deprecated entities without `acknowledgedDeprecations`, is **non-conformant** and **SHOULD** be flagged by the compatibility checker (§10.3), but this specification does not mandate that non-conformant repositories be technically prevented from doing so — enforcement mechanisms are a matter for individual dependent-repository CI configuration, not for OECB itself to police.
+A repository that references ConceptBase entities without a valid manifest, or that references deprecated entities without `acknowledgedDeprecations`, is **non-conformant** and **SHOULD** be flagged by the compatibility checker (§10.3), but this specification does not mandate that non-conformant repositories be technically prevented from doing so — enforcement mechanisms are a matter for individual dependent-repository CI configuration, not for ConceptBase itself to police.
 
 ---
 
@@ -567,7 +567,7 @@ dct:  http://purl.org/dc/terms/
 | 0.2.0 (reformat) | Superseded | Reformatted as a normative formal specification with RFC 2119 conformance language; namespace finalized to `www.w3id.org/openevo/`; conformance classes (§16) added; all prior narrative content consolidated and made testable. |
 | 0.3.0 | Superseded | RFC-0001 (sandbox tier, two-speed review, `retracted` status) and RFC-0002 (`oe:Competency` profiled against CASE `CFItem`, promoted out of `reserved`). |
 | 0.3.1 | Superseded | §4.2 — documented the interim, flat-JSON/raw-YAML-only MVP resolution scheme for the `www.w3id.org/openevo/` namespace (registration was still outstanding as of this revision), pending the full content-negotiated Phase 4 registry. |
-| 0.4.0 | Superseded | RFC-0004 (`specification-amendment`) — relicensed all OECB content from CC-BY-4.0 to CC-BY-NC-SA-4.0; amended §3 principle 2 ("FAIR by construction") wording accordingly. |
+| 0.4.0 | Superseded | RFC-0004 (`specification-amendment`) — relicensed all ConceptBase content from CC-BY-4.0 to CC-BY-NC-SA-4.0; amended §3 principle 2 ("FAIR by construction") wording accordingly. |
 | **0.5.0 (this document)** | Current | RFC-0009 — `oe:contextAssumption` + `oe:hasTrajectoryVariant` (§6.3, §7.3), for representing multiple defensible instructional-context-tagged content paths through one SubStrand. RFC-0010 — realized §4.5's forward-declared sandbox-tier extension point for `oe:LPM` (`OE-SANDBOX-LPM-######`, `oe:forkedFrom`, `oe:mergedInto`; §4.5, §6.3, §7.3, Appendix A). Neither touches §3 or §11, so neither required `specification-amendment` type. |
 
 ---

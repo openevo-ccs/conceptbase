@@ -11,13 +11,13 @@ The first CASE-sourced state-curriculum pilot (Virginia, via Standards Satchel) 
 
 Concretely: three of the four VA `CFDocument`s carry a bare "Copyright © 2023 by the Virginia Department of Education" notice with no redistribution grant, and the fourth (`Virginia Computer Science Standards of Learning (2024)`) states outright "In-app and alignment use only; no redistribution or republication." `oe:Competency`'s current schema requires `statement` unconditionally — there is no way to author a spec-conformant entry for a source like this without either copying restricted text (not permitted) or violating the schema (not conformant).
 
-This is not a gap in CASE itself — CASE's information model assumes a live, federated Provider API where `licenseURI` is a terms-of-use signal to API consumers, not an instruction to omit fields from a *redistributed copy* of the data. OECB's model is structurally different: it publishes copies of ingested data as static files in a public git repository, which is exactly the kind of redistribution some source licenses (like VA's) prohibit. This RFC addresses that redistribution-vs-live-API distinction, which no existing standard (CASE, SKOS, IEEE LOM, xAPI, schema.org) resolves on OECB's behalf. See [`docs/design-notes/state-standards-licensing.md`](../docs/design-notes/state-standards-licensing.md) for the full fair-use/state-copyright reasoning behind why `citationOnly` defaults conservative rather than relying on a fair-use argument.
+This is not a gap in CASE itself — CASE's information model assumes a live, federated Provider API where `licenseURI` is a terms-of-use signal to API consumers, not an instruction to omit fields from a *redistributed copy* of the data. ConceptBase's model is structurally different: it publishes copies of ingested data as static files in a public git repository, which is exactly the kind of redistribution some source licenses (like VA's) prohibit. This RFC addresses that redistribution-vs-live-API distinction, which no existing standard (CASE, SKOS, IEEE LOM, xAPI, schema.org) resolves on ConceptBase's behalf. See [`docs/design-notes/state-standards-licensing.md`](../docs/design-notes/state-standards-licensing.md) for the full fair-use/state-copyright reasoning behind why `citationOnly` defaults conservative rather than relying on a fair-use argument.
 
 ## Proposed change
 
 Add an optional `citationOnly` boolean to `schemas/competency.schema.yaml`. When `true`:
 
-- `statement` and `abbreviatedStatement` **MUST NOT** be populated with the source's protected text (the schema does not forbid the fields outright, since a citation-only entry may still carry an OECB-authored, non-verbatim gloss, but it must not be a reproduction of the license-restricted source statement).
+- `statement` and `abbreviatedStatement` **MUST NOT** be populated with the source's protected text (the schema does not forbid the fields outright, since a citation-only entry may still carry a ConceptBase-authored, non-verbatim gloss, but it must not be a reproduction of the license-restricted source statement).
 - `humanCodingScheme` and `provenance` (with its existing required `sourceCFItemId`/`sourceCFItemURI`) become required instead of `statement`, so the entry is still anchored to a real, resolvable source — just not by copying its expression.
 
 When `citationOnly` is absent or `false`, behavior is unchanged from the existing schema: `statement` remains required.
@@ -32,7 +32,7 @@ This is additive and backward-compatible: every existing entry in `BIO-CORE`/`OE
 
 ## Standards justification
 
-Not a novel structure duplicating an existing standard — see Motivation: this addresses OECB's redistribution model, which CASE's live-API assumption doesn't cover. `citationOnly` is a thin OECB-side flag, not a new competency/statement model.
+Not a novel structure duplicating an existing standard — see Motivation: this addresses ConceptBase's redistribution model, which CASE's live-API assumption doesn't cover. `citationOnly` is a thin ConceptBase-side flag, not a new competency/statement model.
 
 ## ID block reservation
 

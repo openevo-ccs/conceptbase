@@ -75,7 +75,7 @@ Three normative artifact types coexist in this repository with three different f
 
 ## Identifier Block Allocation
 
-Every `oe:Concept`, `OE-STRAND-######`, and `OE-LPM-######` identifier is permanent once `status: accepted` or higher (spec §4.4). `OE-STRAND-######` and `OE-LPM-######` still use numeric block-allocation, collision-free across independently authored vocabularies and LPMs without a central sequence generator, via a reserved numeric block per governed unit; `oe:Concept` ids no longer do (see below).
+Every `oe:Concept`, `oe:Strand`/`oe:SubStrand`, and `oe:LPM` identifier is permanent once `status: accepted` or higher (spec §4.4). All three now mint ids directly from a slug — `OE-CONCEPT`/`OE-COMPETENCY` since 2026-08-16, `OE-STRAND`/`OE-LPM` since 2026-09-03 (see below) — collision-free across independently authored vocabularies, LPMs, and strands without a central sequence generator, because the slug itself (the owning vocabulary's or LPM's own name) is the collision-avoidance mechanism; no scheme in this table still uses numeric block-allocation for live minting.
 
 ### Concept ID blocks (`OE-CONCEPT-0NNxxx`)
 
@@ -95,20 +95,47 @@ provisional numbering (Sandbox/Provisional Tier above), by design.
 | `BIO-CORE` | `000100`–`000199` | 101–116 |
 | `OE-INTERDISCIPLINARY` | `000200`–`000299`, plus `000090`–`000099` for cross-cutting concepts shared with `BIO-CORE`'s numbering space | 090, 201–224 |
 
-### Strand ID blocks (`OE-STRAND-0NNxxx`)
+### Strand ID blocks (`OE-STRAND-<lpm-slug>-<strand-slug>`)
 
-Each LPM reserves one `000N00`–`000N99` block. Within it: `0NN0` is reserved for future use, top-level strands use `0NN1`–`0NN9` (currently `101`/`102`/`103` and `201`/`202`/`203`), and each top-level strand's SubStrands use the following ten-block (`0NN1` → substrands `111`–`114`; `0NN2` → substrands `121`–`124`; etc.), consistent with the existing K-2 / 3-5 / 6-8 / 9-12 four-substrand pattern.
+**Id scheme superseded (2026-09-03):** `oe:Strand`/`oe:SubStrand` ids have migrated off numeric
+block-allocation entirely, to `OE-STRAND-<lpm-slug>-<strand-slug>` (e.g. `OE-STRAND-000102` →
+`OE-STRAND-bio-core-k12-natural-selection-adaptation`), reusing the owning LPM's own repository slug
+in place of a reserved numeric block — the same pattern applied to `oe:Concept`/`oe:Competency` on
+2026-08-16, and argued through directly against this repo's own schemas in
+`lab_manager/docs/design-notes/strand-lpm-id-scheme-migration.md` (the numeric scheme's stated
+justification — collision-freedom without a central generator — turned out to be a property the
+slug pattern already provides just as well; nothing in `strand.schema.yaml`'s nesting or
+`common.defs.yaml`'s relation fields actually depended on the digits). A SubStrand appends its
+grade-band token (`k2`/`35`/`68`/`912`) to its parent top-level strand's slug — e.g.
+`OE-STRAND-bio-core-k12-natural-selection-adaptation-k2` — rather than encoding position via a
+ten-block offset. The table below is retained as **historical record of the original numeric
+allocation**, not a live registry; a new LPM mints strand ids directly from its own slug, no block
+reservation needed. `OE-SANDBOX-STRAND-######` ids are unaffected — the sandbox tier stays on its
+own sequential, provisional numbering (Sandbox/Provisional Tier above), by design.
 
-**Trajectory-variant SubStrand IDs (RFC-0009):** a `trajectoryVariants[]` entry (an alternate SubStrand body for the same grade-band slot, tagged with a `contextAssumption`) takes the ID `0NN(k+4)` where `0NNk` is the base SubStrand it varies — e.g. a first variant of `OE-STRAND-000223` (position 3 in its ten-block) is `OE-STRAND-000227`. This uses capacity already unused inside each LPM's existing block (no LPM today uses more than four SubStrand slots per ten-block), so it is a documentation clarification, not a new block reservation. `0NN9` is left open per strand for a second variant or future use.
+**Trajectory-variant SubStrand IDs (RFC-0009):** a `trajectoryVariants[]` entry (an alternate
+SubStrand body for the same grade-band slot, tagged with a `contextAssumption`) takes its own
+descriptive slug appended to the base SubStrand's — e.g. a first variant of
+`OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-68` might be
+`OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-68-<context-slug>`. (Historical:
+under the retired numeric scheme this was `0NN(k+4)` where `0NNk` was the base SubStrand's id.)
 
-| LPM | Block | Currently used |
+| LPM | Block (historical) | Currently used (historical) |
 |---|---|---|
-| `bio-core-k12` (`OE-LPM-000001`) | `000100`–`000199` | 101–103 (strands), 111–114/121–124/131–134 (substrands) |
-| `interdisciplinary-k12` (`OE-LPM-000002`) | `000200`–`000299` | 201–203 (strands), 211–214/221–224/231–234 (substrands) |
+| `bio-core-k12` (`OE-LPM-000001`, now `OE-LPM-bio-core-k12`) | `000100`–`000199` | 101–103 (strands), 111–114/121–124/131–134 (substrands) |
+| `interdisciplinary-k12` (`OE-LPM-000002`, now `OE-LPM-oe-interdisciplinary-k12`) | `000200`–`000299` | 201–204 (strands), 211–214/221–224/231–234/241–244 (substrands) — 204 (`analogy-search-metacognition`) added 2026-09-02, previously missing from this table |
+| `bee-k12` (`OE-LPM-000601`, now `OE-LPM-bee-k12`) | `000600`–`000699` (informal — bee-k12 existed unregistered in this table from original authoring until 2026-09-11) | 601–606 (strands), 611–617/621–627/631–637/641–647/651–657/661–667 (substrands, 7 grade bands per strand — bee-k12's own `-gb0`…`-gb6` scheme, not the other two LPMs' four-band `k2`/`35`/`68`/`912` tokens) — registered and migrated to the slug scheme in the same pass, 2026-09-11 |
 
-### LPM ID blocks (`OE-LPM-######`)
+### LPM ID blocks (`OE-LPM-<lpm-slug>`)
 
-Sequentially assigned, one ID per LPM, at RFC approval time — no sub-blocking needed since LPMs don't nest.
+**Id scheme superseded (2026-09-03):** `oe:LPM` ids have migrated off sequential numeric assignment
+entirely, to `OE-LPM-<lpm-slug>` (e.g. `OE-LPM-000001` → `OE-LPM-bio-core-k12`), reusing the LPM's
+own repository slug — same migration and same reasoning as Strand ID blocks above. Historical:
+previously sequentially assigned, one ID per LPM, at RFC approval time — no sub-blocking needed
+since LPMs don't nest. `bio-core-k12` (`OE-LPM-000001` → `OE-LPM-bio-core-k12`),
+`interdisciplinary-k12` (`OE-LPM-000002` → `OE-LPM-oe-interdisciplinary-k12`), and `bee-k12`
+(`OE-LPM-000601` → `OE-LPM-bee-k12`, registered 2026-09-11) are the three permanent-tier LPMs minted
+so far; a new LPM mints its id directly from its own repository slug, no sequence number needed.
 
 **Sandbox LPM IDs (`OE-SANDBOX-LPM-######`, RFC-0010):** assigned sequentially within their own namespace, independent of and not consuming the permanent `OE-LPM-######` sequence above — mirrors how sandbox concept IDs don't consume permanent-tier concept-block numbering. No per-founding-RFC block reservation needed (unlike vocabularies/LPMs); see the Sandbox/Provisional Tier section above for the lightweight review this tier gets.
 
