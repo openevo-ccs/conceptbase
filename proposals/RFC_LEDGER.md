@@ -35,9 +35,19 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0015 | 2026 (pre-session) | competencybase-relocation | main | — | |
 | 0016 | 2026-07-31 | computational-thinking-core-competencies | main | — | |
 | 0017 | 2026-08-05 | **COLLISION** — critical-ai-literacy-competencies-and-measuredby-field | untracked file, working tree only (never committed) | — | Cited throughout competencybase's real merged `CRITICAL-AI-LITERACY` content despite never being committed anywhere |
+<<<<<<< HEAD
 | 0017 | 2026 (pre-session) | **COLLISION** — metarepresentation-sandbox-concepts | `rfc-0017-metarepresentation-concepts` (unmerged) | — | Same number as the row above, unrelated topic |
+=======
+| 0017 | 2026 (pre-session) | **COLLISION** — metarepresentation-sandbox-concepts | `rfc-0017-metarepresentation-concepts` (unmerged) | — | Same number as the row above, unrelated topic. Renumbered to RFC-0024 (below), 2026-10-03, since the row above is already cited in real merged content elsewhere and this one had sat untouched ~2 months — see that row. |
+>>>>>>> de7900af9ff96b02047f3388a3601bbf890a0f90
 | 0018 | 2026 (pre-session) | framework-relations-and-basiskonzepte-coherence | main (merged 2026-10-21, PR #10) | — | RFC-0020 (below) avoided this number after finding the collision risk |
 | 0019 | 2026 (pre-session) | lpm-epistemic-status | main | — | Added `epistemicStatus` as a required `oe:LPM` field; `examples/lpm.example.yaml` was never updated to match — real, still-open CI break, found 2026-10-21, unrelated to any PR merged that day |
 | 0020 | 2026-08-24 | decentralized-causal-reasoning-competency | `decentralized-causal-reasoning-competency` (unmerged) | lab-manager-b6 | Phase 3 of the four-competency roadmap |
 | 0021 | 2026-08-24 | openevo-foundational-competencies-legacy-migration | main (merged 2026-10-21, PR #9) | lab-manager-b6 | Phase 4 + 14-node legacy migration. Its branch also carried a stray 0017 proposal file (see row above) — harmless to merge since that collision had already been resolved by renumbering to 0024 (not yet merged itself) |
 | 0022 | 2026-08-24T11:46:57Z | evolutionary-causal-reasoning-competency | (claimed, not yet a branch) | lab-manager-b6 | |
+| 0023 | 2026-09-04 | **COLLISION** — openevo-content-anchor-vocabulary-migration | `rfc-0023-content-anchor-vocabulary-migration` (superseded, do not merge) | lab-manager | Claimed via a branch commit, never pushed to `main`'s ledger — `main`'s working tree had large unrelated in-flight uncommitted work at claim time, so the usual pull/append/push-to-main protocol was skipped and the reservation was invisible to this table until 2026-09-15. Superseded by the row below, which does the identical migration more completely — see that RFC's own "Prior draft" section. |
+| 0023 | 2026-09-15T05:43:36Z | **COLLISION** — openevo-design-concept-content-anchors | `rfc-0023-openevo-design-concept-content-anchors` | lab-manager-57 | Same number as the row above, found via independent review the same day (not self-caught) — the exact race this ledger exists to prevent, recurring because the claim above never made it to `main`. This is the canonical draft going forward; the branch above should be deleted once this merges. |
+| 0024 | 2026-10-03T07:28:20Z | metarepresentation-sandbox-concepts | `rfc-0024-metarepresentation-sandbox-concepts` (unmerged) | lab-manager-fa | Resolves the 0017 collision above. Branch renamed to match 2026-10-03 (confirmed no open PR referenced the old name first). |
+| 0025 | 2026-10-23T07:37:06Z | kmk-biologie-bildungsstandards-vocabularies | (claimed, not yet a branch) | openlpm-feedback-2026-10-23 | |
+| 0026 | 2026-10-23T13:15:03Z | hanisch-eirdosh-primary-teacher-competencies-citations | (claimed, not yet a branch) | lab-manager-85 | |
+| 0027 | 2026-10-24 | pedagogical-approaches-competency-linking | (claimed, not yet a branch) | lab-manager-bc | |
