@@ -35,11 +35,7 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0015 | 2026 (pre-session) | competencybase-relocation | main | — | |
 | 0016 | 2026-07-31 | computational-thinking-core-competencies | main | — | |
 | 0017 | 2026-08-05 | **COLLISION** — critical-ai-literacy-competencies-and-measuredby-field | untracked file, working tree only (never committed) | — | Cited throughout competencybase's real merged `CRITICAL-AI-LITERACY` content despite never being committed anywhere |
-<<<<<<< HEAD
-| 0017 | 2026 (pre-session) | **COLLISION** — metarepresentation-sandbox-concepts | `rfc-0017-metarepresentation-concepts` (unmerged) | — | Same number as the row above, unrelated topic |
-=======
 | 0017 | 2026 (pre-session) | **COLLISION** — metarepresentation-sandbox-concepts | `rfc-0017-metarepresentation-concepts` (unmerged) | — | Same number as the row above, unrelated topic. Renumbered to RFC-0024 (below), 2026-10-03, since the row above is already cited in real merged content elsewhere and this one had sat untouched ~2 months — see that row. |
->>>>>>> de7900af9ff96b02047f3388a3601bbf890a0f90
 | 0018 | 2026 (pre-session) | framework-relations-and-basiskonzepte-coherence | main (merged 2026-10-21, PR #10) | — | RFC-0020 (below) avoided this number after finding the collision risk |
 | 0019 | 2026 (pre-session) | lpm-epistemic-status | main | — | Added `epistemicStatus` as a required `oe:LPM` field; `examples/lpm.example.yaml` was never updated to match — real, still-open CI break, found 2026-10-21, unrelated to any PR merged that day |
 | 0020 | 2026-08-24 | decentralized-causal-reasoning-competency | `decentralized-causal-reasoning-competency` (unmerged) | lab-manager-b6 | Phase 3 of the four-competency roadmap |
