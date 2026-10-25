@@ -47,3 +47,4 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0025 | 2026-10-23T07:37:06Z | kmk-biologie-bildungsstandards-vocabularies | (claimed, not yet a branch) | openlpm-feedback-2026-10-23 | |
 | 0026 | 2026-10-23T13:15:03Z | hanisch-eirdosh-primary-teacher-competencies-citations | (claimed, not yet a branch) | lab-manager-85 | |
 | 0027 | 2026-10-24 | pedagogical-approaches-competency-linking | (claimed, not yet a branch) | lab-manager-bc | |
+| 0028 | 2026-10-25T16:57:57Z | four-space-vocabulary-mapping-and-interdisciplinary-extension | (claimed, not yet a branch) | openlpm-flagship-2026-10-25 | |
