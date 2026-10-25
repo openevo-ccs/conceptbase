@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000018.yaml
+# ============================================================================
+# Proposed by RFC-0028 (four-space vocabulary mapping). Bio-Core is the subject and Interdisciplinary the object, as in OE-ALIGN-000001 and 000002.
+# AI-drafted, unreviewed. The match type follows the crosswalk relation: broader maps to skos:broadMatch, related to skos:relatedMatch.
+# ============================================================================
+
+id: OE-ALIGN-000018
+subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-fitness
+object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-selection
+matchType: skos:relatedMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-25"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-25 from the concept crosswalk between the Bio-Core and
+  Interdisciplinary spaces. No subject-matter expert has reviewed it. The two
+  concepts are related and neither contains the other. Fitness is the quantity
+  whose differences make up Int's biology sense of Selection (differential
+  reproductive success). Int's culture sense uses fit to a context instead,
+  and Int defines no fitness measure. Crosswalk confidence: low. Sachsen
+  tagging evidence (135 topics, two independent AI passes, unaudited): the
+  Interdisciplinary concept is tagged on 1 topics, the Bio-Core concept on 0,
+  and both on 0.

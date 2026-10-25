@@ -1,0 +1,1299 @@
+[
+ {
+  "a": {
+   "space": "int",
+   "label": "Agency"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no intentional action. Organisms appear only as bearers of traits that selection acts on.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Agency"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Agency"
+  },
+  "relation": "broader",
+  "rationale": "Int: any individual or system, contrasted with passive response. Soc: persons or groups acting for reasons within the limits their circumstances set. Int is wider in who can act; Soc is richer on constraint.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Agency"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no actor that chooses. Algorithm and Program carry out fixed steps.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Analogical Reasoning"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no reasoning or cognitive process.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Analogical Reasoning"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no reasoning process. Its concepts concern groups, rules and exchange.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Analogical Reasoning"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no analogy. Abstraction (hide detail) and Search (explore candidates) are parts of the process but neither maps a known case onto a new one.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Collective Intelligence"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core has no group-level problem solving. A Population is the unit of selection and drift.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Collective Intelligence"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc has no concept of group capability that exceeds individuals. Knowledge is a stock a group holds and Collective Action is a contribution problem. Neither covers emergent problem solving.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Collective Intelligence"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Distributed System"
+  },
+  "relation": "related",
+  "rationale": "Distributed System names an architecture: many components exchanging messages with no single controller. Collective Intelligence names the capability that emerges from coordinated agents and exceeds any one. One is structure and the other outcome; Comp says nothing about capability.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Communication"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no signalling between organisms. Genetic information moves from parent to offspring inside Inheritance.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Communication"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Communication"
+  },
+  "relation": "broader",
+  "rationale": "Int: exchange of information between any agents via signals or codes. Soc: exchange of meaning between people. Soc is the human case and requires meaning; Int requires only information, a pattern that reduces uncertainty.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Communication"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp has no communication concept. Message exchange appears only inside Distributed System, and Information is the content of an exchange.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Conflict"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no competing interests. Selection Pressure is the nearest idea, a factor acting on variants.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Conflict"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Conflict"
+  },
+  "relation": "same",
+  "rationale": "Near-identical. Int adds 'behaviors' and 'shared system or environment', which would admit non-intentional competition such as among organisms. Soc speaks of interests and goals in a shared setting.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Conflict"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no competing interests.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Cooperation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no mutual-benefit behaviour.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Cooperation"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Cooperation"
+  },
+  "relation": "broader",
+  "rationale": "Int defines it by outcome: mutual benefit not achievable, or less efficiently achieved, alone. No sustaining mechanism is named. Soc narrows it to cooperation sustained by trust, norms, incentives or institutions.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Cooperation"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Collective Action"
+  },
+  "relation": "related",
+  "rationale": "Soc Collective Action names the problem: many contributors are needed and individuals can gain without contributing. Int Cooperation names the joint benefit achieved. Soc's sustaining mechanisms are the answer to that problem.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Cooperation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no mutual-benefit coordination. Distributed System names message exchange without a shared goal.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Culture"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core covers genetic transmission only. Socially learned traditions have no concept.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Culture"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Culture"
+  },
+  "relation": "same",
+  "rationale": "Both define knowledge, beliefs, practices and artifacts shared in a group and carried on. Int stresses social transmission and persistence beyond any individual; Soc says 'passes on'. No difference in scope.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Culture"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no socially shared practice.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Development"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no growth of an individual organism. Its concepts concern populations across generations.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Development"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines change only for groups (Social Change). The growth of an individual learner has no concept.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Development"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no growth over time of a learner or organism. State covers one moment only.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Distributed Cognition"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no cognitive concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Distributed Cognition"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc has no cognition concepts. Knowledge (group-held, with shared records) is the nearest, but it names a stock and says nothing of processing spread over people and artifacts.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Distributed Cognition"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Distributed System"
+  },
+  "relation": "related",
+  "rationale": "Both spread processing over parts with no single centre. Distributed Cognition spans minds, artifacts and environment and concerns cognition. Distributed System covers machine components and messages only.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Domestication"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Domestication"
+  },
+  "relation": "shifted",
+  "rationale": "Same label, different frame. Bio: one-way artificial selection, human choice acting as a selection pressure. Int: a two-way relationship where the species also reshapes human food, work and settlement, framed as niche construction and coevolution.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Domestication"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no relation between people and other species.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Domestication"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no relation between people and other species.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Evolutionary Process"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Natural Selection"
+  },
+  "relation": "related",
+  "rationale": "Evolutionary Process is the whole cycle of variants generated, selected and transmitted, in any system. Bio has no umbrella concept. Natural Selection is only the selecting step, with Mutation and Inheritance covering the others.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Evolutionary Process"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Social Change"
+  },
+  "relation": "related",
+  "rationale": "Social Change names change in norms, institutions or practices over time and gives no mechanism. Evolutionary Process supplies one (variants generated, selected, transmitted). Soc does not commit to it.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Evolutionary Process"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Search"
+  },
+  "relation": "related",
+  "rationale": "Search explores candidates and keeps higher scorers: variation and selection against an objective. Evolutionary Process adds transmission of the kept variants across iterations. Comp says nothing of heritability or iteration.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Information"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core uses 'genetic information' inside Inheritance and Gene but defines no information concept.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Information"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc has no information concept. It speaks of meaning, in Communication and Knowledge.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Information"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Information"
+  },
+  "relation": "same",
+  "rationale": "Both: a pattern that reduces uncertainty for a receiver. Comp adds measurement in bits; Int lists encodings (genetic, linguistic, symbolic, computational). Design note says meaning separates them; the definitions do not.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Inheritance"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Inheritance"
+  },
+  "relation": "broader",
+  "rationale": "Int's biology sense repeats the Bio definition. Int adds a culture sense (social learning) and a technology sense (design features across versions), so Bio's concept is one of three senses of the general one.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Inheritance"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc has no generation-to-generation transmission concept. Culture says a group 'passes on' its content, but that sits inside Culture.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Inheritance"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no persistence of structure across versions. Program and Specification say nothing of versions or reuse.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Innovation"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Mutation"
+  },
+  "relation": "broader",
+  "rationale": "Innovation is the generation of any novel variant (idea, practice, technology, trait). Mutation is that generation in one form: a heritable DNA change. Int leaves open whether novelty is blind or directed; Bio's Mutation is blind to need.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Innovation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no origin of new practices. Diffusion starts once a practice exists and Social Change names the result.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Innovation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no creation of novelty. Search keeps higher scorers and Machine Learning improves a measured result, and neither is about something new appearing.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Institutions"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no social structures.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Institutions"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Institutions"
+  },
+  "relation": "same",
+  "rationale": "Both: stable, recognized rules and structures that organize collective behaviour. Int adds 'constrain' and 'over time'. No difference in scope.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Institutions"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no social structures.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Intuitive Theories"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no cognitive or folk-theory concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Intuitive Theories"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no cognitive or folk-theory concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Intuitive Theories"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no cognitive or folk-theory concepts. Model is a formal description, which differs from informal causal beliefs held without instruction.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Knowledge"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core has no retained-knowledge concept. Only genetic information passes between generations.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Knowledge"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Knowledge"
+  },
+  "relation": "broader",
+  "rationale": "Int: justified, retained information that an individual, group or system can draw on. Soc: understanding a group holds and justifies, such as shared records. Int adds individual and system holders and defines it through information.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Knowledge"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp has no justified, retained knowledge concept. Data, Information and Model are nearest, and none requires justification or a holder who acts on it.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Learning"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core has no learning concept. Change over time is defined for populations (Natural Selection, Drift) and never within an individual.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Learning"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no learning or instruction. Culture and Knowledge are things a group holds, with no concept of a learner changing.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Learning"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Machine Learning"
+  },
+  "relation": "broader",
+  "rationale": "Learning is durable change in knowledge, behavior or capability from experience. Machine Learning is a procedure that adjusts parameters to improve a measured result. It is one way of learning, with a built-in criterion and no understanding implied.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Metacognition"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no cognitive concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Metacognition"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no cognitive concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Metacognition"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no cognitive concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Niche Construction"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Selection Pressure"
+  },
+  "relation": "related",
+  "rationale": "Int defines niche construction by its effect on selective pressures, which Bio treats as a given environmental or biological factor. In Int the organism or group becomes a cause of the pressures acting on it.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Niche Construction"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no concept of groups changing the conditions that act on them. Social Change covers the group's own norms and practices.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Niche Construction"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no concept of systems changing the conditions that act on them.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Norms"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no social rules or sanctions.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Norms"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Norms"
+  },
+  "relation": "same",
+  "rationale": "Both: shared expectations in a group enforced socially. Int adds 'rules of behavior' and the contrast with formal law. Soc names approval and disapproval as the enforcement.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Norms"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no socially enforced expectations.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Representation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no stand-in structure. Gene is said to encode information, but representation is never a concept.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Representation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc has no stand-in structure concept. Shared records appear only as an example inside Knowledge.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Representation"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Representation"
+  },
+  "relation": "broader",
+  "rationale": "Int: a mental, symbolic or computational structure that conveys meaning. Comp: a structure that stands for something and can be stored or processed. Comp is the computational case; Int adds mental structures and conveying meaning.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Representation"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Data"
+  },
+  "relation": "related",
+  "rationale": "Data is recorded values or symbols that stand for something, close to Int Representation's stand-for relation. Comp keeps Data and Representation as separate concepts; Int has only Representation.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Representation"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Model"
+  },
+  "relation": "broader",
+  "rationale": "A Model is a simplified formal description of a system that can be run, a special kind of stand-in structure. Int Representation requires neither simplification nor runnability.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Scaffolding"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no instructional support.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Scaffolding"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no instructional support.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Scaffolding"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no instructional support.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Selection"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Natural Selection"
+  },
+  "relation": "broader",
+  "rationale": "Int's biology sense matches Natural Selection almost word for word. Int generalises with culture, education and AI senses, so what does the selecting (environment, social context, chooser, objective function) varies and Bio's is one case.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Selection"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Sexual Selection"
+  },
+  "relation": "broader",
+  "rationale": "Sexual Selection is differential mating success, which can favour traits that do not raise survival. Int's biology sense says only reproductive success and names neither mating nor the survival trade-off, so it is the wider frame.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Selection"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Selection Pressure"
+  },
+  "relation": "related",
+  "rationale": "Bio separates the driver (Selection Pressure) from the process. Int's culture and AI senses build the driver into the definition: fit to a context, or score on an objective function. Different packaging, no clean hierarchy.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Selection"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Fitness"
+  },
+  "relation": "related",
+  "rationale": "Fitness is the quantity whose differences make up Int's biology sense of Selection (differential reproductive success). Int's culture sense uses fit to a context instead, and Int defines no fitness measure.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Selection"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Diffusion"
+  },
+  "relation": "related",
+  "rationale": "Soc Diffusion is the spread of an idea or practice through contact and adoption. Int's culture sense of Selection is differential persistence of variants by fit. Diffusion describes the spread and names no competing variants.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Selection"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Search"
+  },
+  "relation": "broader",
+  "rationale": "Int's AI sense of Selection is Search almost word for word: keep candidates that score higher on an objective. The general Selection concept adds biology, culture and education senses, where the environment or a chooser replaces the objective.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Teaching"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no deliberate transmission. Only parent-to-offspring genetic transmission appears.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Teaching"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no deliberate facilitation of another's learning.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Teaching"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no deliberate facilitation of another's learning.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Technology"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no tools or engineered systems. Domestication, the breeding of other species, is the nearest idea.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Technology"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc has no technology concept. Artifacts appear only as part of Culture.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Technology"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Program"
+  },
+  "relation": "broader",
+  "rationale": "Int Technology: tools, techniques or systems built to extend capability. A Program, an executable algorithm, is one such tool. Comp treats it as something to specify and run; Int defines technology by what it is for.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Technology"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Distributed System"
+  },
+  "relation": "broader",
+  "rationale": "A Distributed System is one kind of engineered system. Comp defines it by structure (many components, messages, no controller). Int Technology defines by purpose, extending capability, which Comp does not state.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Theory of Mind"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in bio: Bio-Core defines no mental-state concepts.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Theory of Mind"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no mental-state attribution.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Theory of Mind"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no mental-state attribution.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Transmission"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Inheritance"
+  },
+  "relation": "broader",
+  "rationale": "Transmission is any movement of information, traits or practices between holders. Bio's Inheritance is the parent-to-offspring genetic case. Int keeps Inheritance as its own concept with three senses, so Transmission is the more general layer.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Transmission"
+  },
+  "b": {
+   "space": "soc",
+   "label": "Diffusion"
+  },
+  "relation": "broader",
+  "rationale": "Transmission is any movement between holders, one to one. Diffusion is the spread of an idea or practice through contact and adoption, so it adds the adoption choice and the spread across a group.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Transmission"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp has no transfer concept. Message exchange appears only inside Distributed System, and Representation 'can be stored or processed' without any copying being defined.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Variation"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Mutation"
+  },
+  "relation": "related",
+  "rationale": "Variation is the existence of differences, the raw material for selection. Mutation is one source of such differences. Bio defines variation only through its source; Int defines it without saying where it comes from.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Variation"
+  },
+  "b": {
+   "space": "bio",
+   "label": "Allele"
+  },
+  "relation": "related",
+  "rationale": "An allele is one alternative form of a gene, a concrete unit of genetic variation. Int's Variation names the fact of difference among variants in any system and does not define a unit of difference.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Variation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in soc: Soc defines no differences-among-variants concept. Culture, Norms and Role are defined without a diversity notion.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "int",
+   "label": "Variation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in comp: Comp defines no differences-among-variants concept. 'Candidates' appear only inside Search, which is linked to Selection.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "Abstraction"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no concept of hiding detail. Analogical Reasoning maps structure between cases, which relies on abstraction without defining it.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Adaptation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no concept for the outcome of selection. Evolutionary Process covers the cycle, and none of its concepts names a heritable trait that fits an environment.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "Algorithm"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no step-sequence concept. Technology (techniques) is far broader.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Common Ancestor"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no descent or lineage concept. Inheritance and Transmission describe passing on, and branching ancestry is not defined.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "Decomposition"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no problem-splitting concept.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Drift"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int defines no chance-driven change. Selection and Evolutionary Process describe differential keeping; random fluctuation of frequencies is absent.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Extinction"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int defines no ending of a lineage.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "Feedback"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no feedback concept. Iteration appears only inside the definition of Evolutionary Process.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Gene"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no gene concept. Genetic encoding appears only inside Information and the biology sense of Inheritance.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "soc",
+   "label": "Group"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no group concept. The word appears only inside Culture, Knowledge and Norms.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "soc",
+   "label": "Incentive"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no benefit-or-cost concept. Selection's education sense mentions choosing among options but says nothing of what makes one attractive.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Phylogeny"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int defines no branching history of relatedness.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Population"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no population concept. The word appears only inside the definition of Variation.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "soc",
+   "label": "Power"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no power concept. Institutions and Norms constrain behaviour but say nothing of who can shape others' options.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "soc",
+   "label": "Role"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int defines no position with expected behaviours.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "Simulation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no concept of running a model forward.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Speciation"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int defines no splitting of lineages into species.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Species"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no species concept. Domestication mentions 'another species' only in passing.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "Specification"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no concept of a precise statement of required behaviour.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "comp",
+   "label": "State"
+  },
+  "b": null,
+  "relation": "none",
+  "rationale": "No counterpart in int: Int has no concept of a system's values at one moment. Development covers change over time.",
+  "confidence": "high"
+ },
+ {
+  "a": {
+   "space": "soc",
+   "label": "Communication"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Information"
+  },
+  "relation": "related",
+  "rationale": "Soc Communication is exchange of meaning between people and relies on shared codes and interpretation. Comp Information is uncertainty reduced for a receiver, measured in bits. Same exchange scene; meaning on one side and quantity on the other.",
+  "confidence": "medium"
+ },
+ {
+  "a": {
+   "space": "soc",
+   "label": "Knowledge"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Information"
+  },
+  "relation": "related",
+  "rationale": "Soc Knowledge is understanding a group holds and justifies. Comp Information is a pattern that reduces uncertainty, with no holder and no justification. Knowledge adds both.",
+  "confidence": "low"
+ },
+ {
+  "a": {
+   "space": "bio",
+   "label": "Natural Selection"
+  },
+  "b": {
+   "space": "comp",
+   "label": "Search"
+  },
+  "relation": "related",
+  "rationale": "Both keep the better-scoring candidates. In Natural Selection the score is reproductive success set by the environment and variants must be heritable. In Search the score is a stated objective and heritability is not required.",
+  "confidence": "medium"
+ },
+ {
+  "note": "Int is broader where one label spans domains: Selection (four senses, Natural Selection is one), Inheritance (three senses), Transmission, Representation, Learning, Technology. It also drops conditions the cores impose: Cooperation loses its sustaining mechanism, Communication and Knowledge lose the human holder. Main shifts: (1) Selection: environment, chooser or objective does the keeping, and heritability becomes optional. (2) Domestication: one-way artificial selection becomes two-way coevolution. (3) Learning: change in a mind versus change in a parameter set. (4) Information: Int and Comp agree; meaning enters only through Soc Communication. Seven Int cognition and education concepts have no core counterpart."
+ }
+]

@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000019.yaml
+# ============================================================================
+# Proposed by RFC-0028 (four-space vocabulary mapping). Bio-Core is the subject and Interdisciplinary the object, as in OE-ALIGN-000001 and 000002.
+# AI-drafted, unreviewed. The match type follows the crosswalk relation: broader maps to skos:broadMatch, related to skos:relatedMatch.
+# ============================================================================
+
+id: OE-ALIGN-000019
+subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-inheritance
+object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-transmission
+matchType: skos:broadMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-25"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-25 from the concept crosswalk between the Bio-Core and
+  Interdisciplinary spaces. No subject-matter expert has reviewed it.
+  Transmission is the broader concept and Inheritance the narrower one.
+  Transmission is any movement of information, traits or practices between
+  holders. Bio's Inheritance is the parent-to-offspring genetic case. Int
+  keeps Inheritance as its own concept with three senses, so Transmission is
+  the more general layer. Crosswalk confidence: high. Sachsen tagging evidence
+  (135 topics, two independent AI passes, unaudited): the Interdisciplinary
+  concept is tagged on 0 topics, the Bio-Core concept on 1, and both on 0.
