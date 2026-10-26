@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000039.yaml
+# ============================================================================
+# Proposed by RFC-0028. Concept-to-competency alignment of an Interdisciplinary concept with an AI4K12 concept row (cf. OE-ALIGN-000003 to 000005).
+# AI-drafted, unreviewed. The AI4K12 id is the one ConceptBase's AI4K12 vocabulary uses for humanCodingScheme 5-B-i.
+# ============================================================================
+
+id: OE-ALIGN-000039
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-culture
+object: AI4K12-v1.0.0:OE-COMPETENCY-000531
+matchType: skos:relatedMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-26"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-26 and checked by a second AI. No subject-matter
+  expert has reviewed it. The Interdisciplinary concept Culture and this
+  AI4K12 row are related and neither contains the other. The AI sense of
+  Culture is machine culture, a proposed extension. AI4K12 row 5-B-i covers AI
+  in daily life and the debates it raises. The shared ground is that AI
+  products shape what people see and make. The row uses 'culture' for a
+  society's norms. AI4K12 row 5-B-i is 'AI & Culture (AI in Daily Life)'. The
+  alignment is a match of topic and sense, drawn for the Interdisciplinary
+  space's richer cross-domain reading of the concept.

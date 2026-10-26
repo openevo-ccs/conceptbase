@@ -80,6 +80,21 @@ The tagging and the drafters' reports name concepts that no space defines and th
 
 OE-INTERDISCIPLINARY lists Development as `skos:broader` of Evolutionary Process and Evolutionary Process as `skos:narrower` of Development. The same narrower list holds Analogical Reasoning, which is not a kind of evolutionary process. The relation works as a topic grouping. Change it to `skos:related`, or keep it and state that it does not mean "is a kind of".
 
+### G. Alignment with AI4K12 (added 2026-10-26)
+
+The project lead asked that Computational-Core and Interdisciplinary align with AI4K12 (held in CompetencyBase) wherever possible, with a narrow computer science focus in Computational-Core and a richer cross-domain focus in Interdisciplinary. One AI drafter per space matched stages and concepts with AI4K12 items of the same grade band, and an independent AI reviewer re-rated every match against the AI4K12 text and the stage's performance indicators. Of 43 stage matches, the reviewers adjusted 18 and dropped 9. The drafts had overrated their own matches. The reviewed result is modest, and this RFC records it as it is.
+
+| | Computational-Core | Interdisciplinary |
+|---|---|---|
+| Stages with at least one AI4K12 item | 10 of 12 | 13 of 16 |
+| Stage matches (strong, partial, weak) | 21 (3, 1, 17) | 13 (0, 2, 11) |
+| AI4K12 items inside the focus with no stage | 28 | 29 |
+
+- **Computational-Core gaps.** AI4K12 teaches machine learning, search, neural networks and tree or graph structures from grades 3 to 5. Computational-Core has machine learning and search only in grades 9 to 12 and has no graphs, trees or neural networks. AI4K12 in turn has no items on programs, general algorithms, testing or information theory, so many Computational-Core stages have no AI4K12 counterpart. Extending Computational-Core to cover the AI4K12 gaps would change what the space is, so it is a decision for the project lead and not part of this RFC.
+- **Interdisciplinary gaps.** Perception and sensing have no stage. Representation, Abstraction, Search, Algorithm, Feedback and Incentive have no primary stage. AI4K12 has nothing on variation, selection and transmission, so three Interdisciplinary stages match nothing.
+- **Alignment records included.** Twenty records, `OE-ALIGN-000022` to `OE-ALIGN-000041`, link ten registered Interdisciplinary concepts (Representation, Learning, Information, Communication, Agency, Knowledge, Technology, Culture, Norms and Institutions) to AI4K12 concept rows, status `proposed`. The AI4K12 side uses the ids that ConceptBase's AI4K12 vocabulary file carries (`OE-COMPETENCY-0002xx`). CompetencyBase holds the same records under readable ids and the two carry the same `humanCodingScheme`. Intuitive Theories and Theory of Mind are sandbox concepts, and the alignment schema's id pattern does not accept a sandbox id as a subject, so they have no record yet. Computational-Core concepts can be aligned once part D registers the space.
+- **Data attached.** `ai4k12-alignment-computational-core.json` and `ai4k12-alignment-interdisciplinary.json` hold every stage match with its relation, strength, reason and word-sense note, the concept matches and the gap lists.
+
 ## Relations
 
 - RFC-0018 (framework relations): supplies the KMK Basiskonzepte identifiers that part C turns into concepts.
@@ -107,8 +122,8 @@ None needed for part A. Parts B to D mint ids under the direct-mint slug scheme 
 ## Files affected
 
 - `proposals/0028-four-space-vocabulary-mapping-and-interdisciplinary-extension.md` (this file)
-- `proposals/0028-assets/interdisciplinary-extension.json`, `crosswalk-four-spaces.json`, `crosswalk-interdisciplinary-extension.json`, `kmk-cooccurrence.json`
-- `alignments/OE-ALIGN-000014.yaml` to `OE-ALIGN-000021.yaml`
+- `proposals/0028-assets/interdisciplinary-extension.json`, `crosswalk-four-spaces.json`, `crosswalk-interdisciplinary-extension.json`, `kmk-cooccurrence.json`, `ai4k12-alignment-computational-core.json`, `ai4k12-alignment-interdisciplinary.json`
+- `alignments/OE-ALIGN-000014.yaml` to `OE-ALIGN-000041.yaml`
 - `proposals/RFC_LEDGER.md` (branch name in the 0028 row)
 
 ## Review

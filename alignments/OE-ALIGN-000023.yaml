@@ -1,0 +1,24 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000023.yaml
+# ============================================================================
+# Proposed by RFC-0028. Concept-to-competency alignment of an Interdisciplinary concept with an AI4K12 concept row (cf. OE-ALIGN-000003 to 000005).
+# AI-drafted, unreviewed. The AI4K12 id is the one ConceptBase's AI4K12 vocabulary uses for humanCodingScheme 2-A-ii.
+# ============================================================================
+
+id: OE-ALIGN-000023
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-representation
+object: AI4K12-v1.0.0:OE-COMPETENCY-000290
+matchType: skos:narrowMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-26"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-26 and checked by a second AI. No subject-matter
+  expert has reviewed it. The Interdisciplinary concept Representation is
+  broader than this AI4K12 row. Representation here spans mental, cultural,
+  educational and computational stand-ins. AI4K12 covers the last two ends:
+  maps, symbols, trees, graphs and feature vectors. Its rows say nothing about
+  mental representation. AI4K12 row 2-A-ii is 'Representation (Symbolic
+  representations)'. The alignment is a match of topic and sense, drawn for
+  the Interdisciplinary space's richer cross-domain reading of the concept.
