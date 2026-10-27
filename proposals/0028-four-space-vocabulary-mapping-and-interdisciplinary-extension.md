@@ -3,7 +3,7 @@
 **Type:** `content`
 **Status:** `proposed`
 **Author(s):** Claude (AI drafting pass), for review by Dustin Eirdosh and by subject-matter editors for biology, culture and social science, computing and cognition.
-**Date:** 2026-10-25
+**Date:** 2026-10-25 (part G added 2026-10-26, part H added 2026-10-27)
 
 **Review state, stated first:** every definition, domain meaning and alignment in this RFC was drafted by AI and checked by a second AI. No subject-matter expert has reviewed any of it. Nothing here is ready to be registered as stable.
 
@@ -95,6 +95,24 @@ The project lead asked that Computational-Core and Interdisciplinary align with 
 - **Alignment records included.** Twenty records, `OE-ALIGN-000022` to `OE-ALIGN-000041`, link ten registered Interdisciplinary concepts (Representation, Learning, Information, Communication, Agency, Knowledge, Technology, Culture, Norms and Institutions) to AI4K12 concept rows, status `proposed`. The AI4K12 side uses the ids that ConceptBase's AI4K12 vocabulary file carries (`OE-COMPETENCY-0002xx`). CompetencyBase holds the same records under readable ids and the two carry the same `humanCodingScheme`. Intuitive Theories and Theory of Mind are sandbox concepts, and the alignment schema's id pattern does not accept a sandbox id as a subject, so they have no record yet. Computational-Core concepts can be aligned once part D registers the space.
 - **Data attached.** `ai4k12-alignment-computational-core.json` and `ai4k12-alignment-interdisciplinary.json` hold every stage match with its relation, strength, reason and word-sense note, the concept matches and the gap lists.
 
+### H. Information in the four spaces (added 2026-10-27)
+
+The project lead added the in-press paper by Eirdosh and Hanisch (2026), "Understanding Information as an Interdisciplinary Concept in Biology Education", and asked for a strategy for information in each space. The paper proposes three dimensions: information as structure or pattern without a sender, the evolution of systems that use information (receivers, cues and signals, signaling games, misinformation), and decentralized dynamics. It states that its framework is a pedagogical lens, that no classroom has tested it, and that it found no study of students' conceptions of information in biology (p. 6, p. 10). It also reports that the KMK Basiskonzept "Information und Kommunikation" defines neither word and that the NGSS use "information" in several senses without saying so (p. 6-8). The strategies below follow that caution. None of them claims that information works the same way in genes, cells, minds, societies and machines.
+
+| Space | Strategy | New concepts proposed |
+|---|---|---|
+| Bio-Core | Standards level. What a living system receives, stores, copies, passes on, processes and responds to. No meaning, goal or intention, and no analysis of how structure relates to meaning. | Information, Signal, Communication |
+| Social-Core | What people record, tell, check and rely on. Traces versus messages, trust, rumours, institutions. | Information, Source, Misinformation |
+| Computational-Core | A measure on data and codes. Bits count against a stated set of messages. No intention credited to machines. | Regularity, Encoding Scheme |
+| Interdisciplinary | Models the paper's three dimensions in its order. Every cross-domain claim names the senses and where they break. | Cue, Signal, Meaning, Misinformation, Perception, Emergence |
+
+- **Bio-Core revisits an earlier decision.** Bio-Core was designed with no Information or Communication concept. The project lead decided on 2026-10-27 that Bio-Core should carry an information concept at the level of the NGSS and the KMK Basiskonzept, without relating structure to meaning. The three definitions are descriptive. The cue-versus-signal theory, honest and dishonest signals and signaling games stay in the Interdisciplinary space. TheoryBase pull request 4 supersedes the old decision. Registering the Bio-Core concepts waits for that decision to be accepted.
+- **Interdisciplinary keeps its accepted Information entry.** The entry names the measure (a pattern that reduces uncertainty for a receiver). The extension adds six concepts with domain meanings, and additive notes on ten existing concepts (Information, Communication, Representation, Knowledge, Agency, Learning, Culture, Feedback, Collective Intelligence, Distributed Cognition). Meaning is written as one account among several: on a selection-based reading, a coupling between a pattern and a response that selection shaped. The paper presents that reading with a warning about anthropomorphism (p. 13-15) and cites Kattmann and Levy against it, so the entry says other accounts reject it.
+- **One word, two senses.** Bio-Core uses Signal broadly (a change that passes between parts and is followed by a response). Interdisciplinary uses Signal narrowly (a pattern produced because of its effect on a receiver). The Interdisciplinary entry carries a false-friend note. Alignment records between the two are not written yet, because the Bio-Core concepts exist only in OpenLPM. Relation types to consider once they are registered: `skos:relatedMatch` for Bio-Core Information and Interdisciplinary Information, and `skos:broadMatch` for Bio-Core Signal under Interdisciplinary Signal or Cue.
+- **Effect on part C.** The vocabulary entry for the Basiskonzept "Information und Kommunikation" keeps the 2024 wording and records that the text defines neither information nor communication. A definition should not be invented for it.
+- **Effect on the TheoryBase construct.** OE-CROSSDOMAINCONSTRUCT-information-processing-domain-general said that Shannon's definition applies identically across genetic, neural, cultural and computational systems. TheoryBase pull request 4 withdraws that claim (version 2.0.0) and separates the measure from the system-specific roles of source, receiver, code and meaning. The Interdisciplinary Information entry grounds the measure only, as the revised construct now says.
+- **Status.** All of this is AI-drafted and was checked once by a separate AI reviewer. The reviewers corrected a wrong phylogenetic example, two station tasks with false answers as written, and a presentation of one philosophical account as settled. They dropped three of 17 drafted new concepts (Message and Faulty Input in Computational-Core, Reliability in Social-Core). Nothing has been reviewed by a subject expert. The strategies are loaded in OpenLPM with status `proposed` (migration 189), and the complete drafts with reviewer notes are in the attached data file.
+
 ## Relations
 
 - RFC-0018 (framework relations): supplies the KMK Basiskonzepte identifiers that part C turns into concepts.
@@ -102,6 +120,7 @@ The project lead asked that Computational-Core and Interdisciplinary align with 
 - RFC-0025 (KMK Bildungsstandards competencies): leaves the Basiskonzepte to this taxonomy.
 - RFC-0001 (sandbox tier): the route for the gaps in part E.
 - RFC-0008 (alignment support) and `OE-ALIGN-000001` to `000005`: the record shape that part A follows.
+- LiteratureBase pull request 30 (the paper and its reference list), TheoryBase pull request 4 (revised information construct, superseded Bio-Core decision, new records) and CompetencyBase pull request 6 (an Information Across Systems competency): the records that part H relies on.
 
 ## Standards justification
 
@@ -118,11 +137,13 @@ None needed for part A. Parts B to D mint ids under the direct-mint slug scheme 
 3. Decision on parts C to F: whether to continue as separate RFCs or inside this one.
 4. The Sachsen numbers rest on AI tags that no person has audited. A sample audit decides how much weight they can carry.
 5. Reconcile the alignment ids with `rfc-0011-teacher-competency-frameworks` if that branch merges with ids 6 to 13.
+6. Part H: a philosopher of biology or biology educator has to review the Interdisciplinary Meaning and Signal entries and the Bio-Core definitions. The Bio-Core concepts wait for TheoryBase pull request 4 to be decided.
+7. Part H: decide whether the accepted Interdisciplinary Information entry needs a note that the measure is general and the roles of source, receiver, code and meaning differ by system. The extension data holds such a note beside the entry.
 
 ## Files affected
 
 - `proposals/0028-four-space-vocabulary-mapping-and-interdisciplinary-extension.md` (this file)
-- `proposals/0028-assets/interdisciplinary-extension.json`, `crosswalk-four-spaces.json`, `crosswalk-interdisciplinary-extension.json`, `kmk-cooccurrence.json`, `ai4k12-alignment-computational-core.json`, `ai4k12-alignment-interdisciplinary.json`
+- `proposals/0028-assets/interdisciplinary-extension.json`, `crosswalk-four-spaces.json`, `crosswalk-interdisciplinary-extension.json`, `kmk-cooccurrence.json`, `ai4k12-alignment-computational-core.json`, `ai4k12-alignment-interdisciplinary.json`, `information-strategies.json`
 - `alignments/OE-ALIGN-000014.yaml` to `OE-ALIGN-000041.yaml`
 - `proposals/RFC_LEDGER.md` (branch name in the 0028 row)
 
