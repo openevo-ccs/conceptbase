@@ -1,8 +1,8 @@
 # ============================================================================
 # Example: a minimal oe:LPM manifest
 # ============================================================================
-# Illustrative only -- OE-LPM-000900 is not a registered ID, not indexed in
-# registry/lpm-index.json, and does not resolve at w3id.org/openevo/ (see
+# Illustrative only -- OE-LPM-000900 is not a registered ID. It is not indexed
+# in registry/lpm-index.json and does not resolve at w3id.org/openevo/ (see
 # examples/README.md). By convention this file is the root manifest of an
 # LPM repository -- compare bio-core-k12/lpm.yaml and
 # interdisciplinary-k12/lpm.yaml, the two real reference LPMs this file
@@ -19,6 +19,10 @@ id: OE-LPM-000900
 type: "oe:LPM"
 status: proposed
 version: 0.1.0
+epistemicStatus: designed-thought-experiment
+epistemicStatusNote: >
+  Illustrative only. This file shows the shape of an LPM manifest and says
+  nothing about what should be taught in a classroom.
 
 labels:
   en: "Example Learning Progression"
