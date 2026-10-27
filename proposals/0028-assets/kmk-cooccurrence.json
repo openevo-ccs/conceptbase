@@ -1,0 +1,132 @@
+{
+ "topics": 41,
+ "kmkAny": 26,
+ "bioAny": 14,
+ "intAny": 27,
+ "kmkAndInt": 20,
+ "kmkNotInt": 6,
+ "intNotKmk": 7,
+ "perConcept": {
+  "Evolutive Entwicklung": {
+   "topics": 12,
+   "hours": 140.0,
+   "bio": {
+    "Adaptation": 10,
+    "Mutation": 2,
+    "Speciation": 2,
+    "Gene": 1,
+    "Inheritance": 1,
+    "Allele": 1
+   },
+   "int": {
+    "Adaptation": 10,
+    "Development": 3,
+    "Communication": 3,
+    "Information": 2,
+    "Group": 2,
+    "Evolutionary Process": 2,
+    "Cooperation": 1,
+    "Power": 1
+   }
+  },
+  "Individuelle Entwicklung": {
+   "topics": 16,
+   "hours": 199.0,
+   "bio": {
+    "Adaptation": 8,
+    "Gene": 1,
+    "Inheritance": 1,
+    "Allele": 1,
+    "Domestication": 1,
+    "Mutation": 1
+   },
+   "int": {
+    "Adaptation": 8,
+    "Development": 7,
+    "Communication": 3,
+    "Information": 2,
+    "Group": 2,
+    "Algorithm": 2,
+    "Cooperation": 1,
+    "Power": 1
+   }
+  },
+  "Information und Kommunikation": {
+   "topics": 10,
+   "hours": 128.0,
+   "bio": {
+    "Adaptation": 6,
+    "Gene": 1,
+    "Inheritance": 1,
+    "Allele": 1,
+    "Domestication": 1,
+    "Mutation": 1
+   },
+   "int": {
+    "Development": 4,
+    "Adaptation": 4,
+    "Information": 3,
+    "Communication": 3,
+    "Group": 3,
+    "Cooperation": 2,
+    "Power": 2,
+    "Role": 1
+   }
+  },
+  "Steuerung und Regelung": {
+   "topics": 3,
+   "hours": 50.0,
+   "bio": {
+    "Adaptation": 2
+   },
+   "int": {
+    "Learning": 1,
+    "Information": 1,
+    "Feedback": 1,
+    "Development": 1,
+    "Conflict": 1,
+    "Group": 1,
+    "Power": 1,
+    "Cooperation": 1
+   }
+  },
+  "Stoff- und Energieumwandlung": {
+   "topics": 6,
+   "hours": 83.0,
+   "bio": {
+    "Adaptation": 1
+   },
+   "int": {
+    "Algorithm": 2,
+    "Development": 1,
+    "Diffusion": 1,
+    "Conflict": 1,
+    "Group": 1,
+    "Power": 1,
+    "Cooperation": 1
+   }
+  },
+  "Struktur und Funktion": {
+   "topics": 21,
+   "hours": 233.0,
+   "bio": {
+    "Adaptation": 11,
+    "Mutation": 2,
+    "Gene": 1,
+    "Inheritance": 1,
+    "Allele": 1,
+    "Domestication": 1
+   },
+   "int": {
+    "Adaptation": 9,
+    "Development": 4,
+    "Information": 3,
+    "Communication": 3,
+    "Group": 3,
+    "Cooperation": 2,
+    "Power": 2,
+    "Algorithm": 2
+   }
+  }
+ }
+}

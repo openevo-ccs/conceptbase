@@ -1,0 +1,24 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000036.yaml
+# ============================================================================
+# Proposed by RFC-0028. Concept-to-competency alignment of an Interdisciplinary concept with an AI4K12 concept row (cf. OE-ALIGN-000003 to 000005).
+# AI-drafted, unreviewed. The AI4K12 id is the one ConceptBase's AI4K12 vocabulary uses for humanCodingScheme 2-A-iii.
+# ============================================================================
+
+id: OE-ALIGN-000036
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-knowledge
+object: AI4K12-v1.0.0:OE-COMPETENCY-000299
+matchType: skos:narrowMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-26"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-26 and checked by a second AI. No subject-matter
+  expert has reviewed it. The Interdisciplinary concept Knowledge is broader
+  than this AI4K12 row. The AI sense of Knowledge is a store of statements a
+  program searches. AI4K12 rows on domain knowledge and on schemas in
+  knowledge graphs cover it. Knowledge held by people and groups has no row.
+  AI4K12 row 2-A-iii is 'Representation (Data structures)'. The alignment is a
+  match of topic and sense, drawn for the Interdisciplinary space's richer
+  cross-domain reading of the concept.

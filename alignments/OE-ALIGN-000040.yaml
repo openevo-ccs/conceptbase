@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000040.yaml
+# ============================================================================
+# Proposed by RFC-0028. Concept-to-competency alignment of an Interdisciplinary concept with an AI4K12 concept row (cf. OE-ALIGN-000003 to 000005).
+# AI-drafted, unreviewed. The AI4K12 id is the one ConceptBase's AI4K12 vocabulary uses for humanCodingScheme 5-A-iii.
+# ============================================================================
+
+id: OE-ALIGN-000040
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-norms
+object: AI4K12-v1.0.0:OE-COMPETENCY-000524
+matchType: skos:relatedMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-26"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-26 and checked by a second AI. No subject-matter
+  expert has reviewed it. The Interdisciplinary concept Norms and this AI4K12
+  row are related and neither contains the other. Norms are shared
+  expectations upheld by a group's approval. AI4K12 row 5-A-iii asks designers
+  to learn the norms and values of the groups an AI system serves. Norms as a
+  topic in themselves have no row. AI4K12 row 5-A-iii is 'Ethical AI
+  (Practicing Ethical Design)'. The alignment is a match of topic and sense,
+  drawn for the Interdisciplinary space's richer cross-domain reading of the
+  concept.

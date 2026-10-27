@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000014.yaml
+# ============================================================================
+# Proposed by RFC-0028 (four-space vocabulary mapping). Bio-Core is the subject and Interdisciplinary the object, as in OE-ALIGN-000001 and 000002.
+# AI-drafted, unreviewed. The match type follows the crosswalk relation: broader maps to skos:broadMatch, related to skos:relatedMatch.
+# ============================================================================
+
+id: OE-ALIGN-000014
+subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection
+object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-evolutionary-process
+matchType: skos:relatedMatch
+assertedBy:
+  - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-10-25"
+status: proposed
+rationale: >
+  AI-drafted on 2026-10-25 from the concept crosswalk between the Bio-Core and
+  Interdisciplinary spaces. No subject-matter expert has reviewed it. The two
+  concepts are related and neither contains the other. Evolutionary Process is
+  the whole cycle of variants generated, selected and transmitted, in any
+  system. Bio has no umbrella concept. Natural Selection is only the selecting
+  step, with Mutation and Inheritance covering the others. Crosswalk
+  confidence: medium. Sachsen tagging evidence (135 topics, two independent AI
+  passes, unaudited): the Interdisciplinary concept is tagged on 2 topics, the
+  Bio-Core concept on 1, and both on 1.

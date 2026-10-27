@@ -1,0 +1,912 @@
+[
+ {
+  "interdisciplinary": "Variation",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Mutation",
+    "relation": "related"
+   },
+   {
+    "space": "bio",
+    "label": "Allele",
+    "relation": "related"
+   },
+   {
+    "space": "bio",
+    "label": "Heritable Variation",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Evolutionary Process",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Natural Selection",
+    "relation": "related"
+   },
+   {
+    "space": "bio",
+    "label": "Drift",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Change in Populations",
+    "relation": "broader"
+   },
+   {
+    "space": "soc",
+    "label": "Social Change",
+    "relation": "related"
+   },
+   {
+    "space": "comp",
+    "label": "Search",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Niche Construction",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Selection Pressure",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Domestication",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Domestication",
+    "relation": "shifted"
+   },
+   {
+    "space": "bio",
+    "label": "Selection Pressure",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Innovation",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Mutation",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Development",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Agency",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Agency",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Transmission",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Inheritance",
+    "relation": "broader"
+   },
+   {
+    "space": "soc",
+    "label": "Diffusion",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Agency and Niche Construction",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "high"
+ },
+ {
+  "interdisciplinary": "Adaptation",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Adaptation",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Fitness",
+    "relation": "related"
+   },
+   {
+    "space": "bio",
+    "label": "Natural Selection",
+    "relation": "related"
+   },
+   {
+    "space": "comp",
+    "label": "Search",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Fitness",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Fitness",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Natural Selection",
+    "relation": "related"
+   },
+   {
+    "space": "comp",
+    "label": "Search",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Population",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Population",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Drift",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Drift",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Selection Pressure",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Selection Pressure",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Natural Selection",
+    "relation": "related"
+   },
+   {
+    "space": "comp",
+    "label": "Search",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Extinction",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Extinction",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Descent",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Common Ancestor",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Phylogeny",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Common Descent and Deep Time",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Differential Reproduction",
+  "action": "fold",
+  "foldedInto": "Selection",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Natural Selection",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Differential Reproduction",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Sexual Selection",
+  "action": "fold",
+  "foldedInto": "Selection",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Sexual Selection",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Common Ancestor",
+  "action": "fold",
+  "foldedInto": "Descent",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Common Ancestor",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Phylogeny",
+  "action": "fold",
+  "foldedInto": "Descent",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Phylogeny",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Gene",
+  "action": "fold",
+  "foldedInto": "Information",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Gene",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Allele",
+  "action": "fold",
+  "foldedInto": "Variation",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Allele",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Mutation",
+  "action": "fold",
+  "foldedInto": "Innovation",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Mutation",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Heritable Variation",
+  "action": "fold",
+  "foldedInto": "Variation",
+  "coreCounterparts": [
+   {
+    "space": "bio",
+    "label": "Heritable Variation",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Speciation",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Species",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Cooperation",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Cooperation",
+    "relation": "broader"
+   },
+   {
+    "space": "soc",
+    "label": "Collective Action",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Conflict",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Conflict",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Selection Pressure",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Culture",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Culture",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Culture and Social Structure",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Institutions",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Institutions",
+    "relation": "same"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Norms",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Norms",
+    "relation": "same"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Collective Intelligence",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Distributed System",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Communication",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Communication",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Information",
+    "relation": "related"
+   },
+   {
+    "space": "comp",
+    "label": "Distributed System",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Group",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Group",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Population",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Role",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Role",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Distributed System",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Incentive",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Incentive",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Machine Learning",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Power",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Power",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "low"
+ },
+ {
+  "interdisciplinary": "Diffusion",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Diffusion",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Social Change",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Knowledge",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Knowledge",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Collective Action",
+  "action": "fold",
+  "foldedInto": "Cooperation",
+  "coreCounterparts": [
+   {
+    "space": "soc",
+    "label": "Collective Action",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Information",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Information",
+    "relation": "broader"
+   },
+   {
+    "space": "soc",
+    "label": "Communication",
+    "relation": "related"
+   },
+   {
+    "space": "bio",
+    "label": "Inheritance",
+    "relation": "related"
+   },
+   {
+    "space": "bio",
+    "label": "Gene",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Representation",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Representation",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Data",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Model",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Data",
+  "action": "fold",
+  "foldedInto": "Representation",
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Data",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Learning",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Machine Learning",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Machine Learning",
+  "action": "fold",
+  "foldedInto": "Learning",
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Machine Learning",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "interdisciplinary": "Teaching",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Scaffolding",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Metacognition",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Theory of Mind",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Intuitive Theories",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Analogical Reasoning",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Distributed Cognition",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Distributed System",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Technology",
+  "action": "add-facets",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Program",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Specification",
+    "relation": "related"
+   },
+   {
+    "space": "comp",
+    "label": "Distributed System",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Abstraction",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Abstraction",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Model",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Algorithm",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Algorithm",
+    "relation": "broader"
+   },
+   {
+    "space": "comp",
+    "label": "Program",
+    "relation": "related"
+   }
+  ],
+  "confidence": "low"
+ },
+ {
+  "interdisciplinary": "Decomposition",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Feedback",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Feedback",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Model",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Model",
+    "relation": "broader"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Simulation",
+  "action": "fold",
+  "foldedInto": "Model",
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Simulation",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "State",
+  "action": "no-extension",
+  "foldedInto": null,
+  "coreCounterparts": [],
+  "confidence": "medium"
+ },
+ {
+  "interdisciplinary": "Search",
+  "action": "new",
+  "foldedInto": null,
+  "coreCounterparts": [
+   {
+    "space": "comp",
+    "label": "Search",
+    "relation": "broader"
+   },
+   {
+    "space": "bio",
+    "label": "Natural Selection",
+    "relation": "related"
+   }
+  ],
+  "confidence": "medium"
+ }
+]

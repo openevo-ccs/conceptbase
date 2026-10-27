@@ -1,0 +1,448 @@
+{
+ "space": "comp",
+ "focusRule": "Aligned only where a stage's technical content (representation, data, search, models, training, datasets, program behaviour) meets an AI4K12 item a teacher could defend. Weak matches are marked weak. Societal, ethical and cognitive items were left to the Interdisciplinary space. Where an item has a technical core, I aligned on that core and said so in senseDiffers. Stages with no counterpart got none.",
+ "stageAlignments": [
+  {
+   "stage": "C1:K-2",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-a-ii-k-2-lo",
+     "relation": "broader",
+     "strength": "strong",
+     "why": "The stage has children say what an arrow, icon or letter stands for. The item asks for examples of symbols met in daily life. Both treat a symbol as something that stands for an idea.",
+     "senseDiffers": null,
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-a-iv-k-2-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The stage sorts objects by one property and names it. The item asks children to find what makes each object unique and to tabulate it. Only the idea of describing objects by what they have is shared.",
+     "senseDiffers": "AI4K12 features are values a computer can reason about. The stage says property and sorts by one at a time. It builds no feature table.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-3-c-i-k-2-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The stage has children label each group with a word or picture. The item has children create a labelled dataset with features. Labelling groups is a first step toward a labelled dataset, but the stage builds no dataset for a computer.",
+     "senseDiffers": "In AI4K12 a label is a class name that a computer learns to predict. In the stage a label names a group that a child made.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C1:3-5",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-a-i-3-5-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The stage asks what a chart leaves out. The item has children show how different map styles capture different aspects of the world. Both teach that a representation keeps some things and drops others. The stage compares no styles.",
+     "senseDiffers": "The item is about maps of places. The stage is about charts of measured data, a different kind of representation.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-a-iv-3-5-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The stage records measurements in a table. The item builds a row of values for each object and compares objects by closeness. The table is the same structure. The stage does not compare closeness.",
+     "senseDiffers": null,
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C1:6-8",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-1-a-iii-3-5-lo",
+     "relation": "broader",
+     "strength": "strong",
+     "why": "No 6-8 item covers image encoding. The 3-5 item asks how an image is stored as numbers. The stage encodes a small image in binary with a stated scheme, so it covers the item and adds text and a comparison of encodings.",
+     "senseDiffers": null,
+     "adjacentBand": true
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-1-a-iii-6-8-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item asks how sound becomes numbers by sampling. The stage has no sound and names no sampling rate. The shared idea is that media are stored as numbers, which the stage teaches for text and images.",
+     "senseDiffers": "AI4K12 files encoding under sensing, as the way a machine takes in the world. The stage treats encoding as a scheme chosen for stored data.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-3-c-i-6-8-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says the best encoding of features depends on the problem. The stage compares two encodings of the same data on size and kept detail. Both show that an encoding choice changes what can be done with the data.",
+     "senseDiffers": "In AI4K12 encoding means how a feature value is written for a classifier. In the stage it means a binary scheme for text, an image or numbers.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C1:9-12",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-3-c-i-9-12-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says people decide which features go into a dataset and how to encode them, with consequences downstream. The stage names a limit of a representation and its effect on a result. The overlap is the effect of an encoding choice.",
+     "senseDiffers": "The item concerns features in a machine learning dataset. The stage concerns limits such as precision or size in any representation. AI4K12 has no item on information in bits or compression.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C2:K-2",
+   "items": [],
+   "none": "AI4K12 has no item on following or writing steps. Its algorithm items start from reasoning and learning algorithms. Writing and fixing steps belongs to general computing standards, which this alignment does not cover."
+  },
+  {
+   "stage": "C2:3-5",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-b-i-3-5-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item draws the sequence of board positions a game produces. The stage traces the values a program stores at each step. Both follow how the stored condition of a system changes step by step.",
+     "senseDiffers": "In the item, state is a board position in a game. The stage uses state for any values a program stores.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C2:6-8",
+   "items": [],
+   "none": "The reviewer found no defensible AI4K12 match for this stage. The item asks for training and evaluating a model on a table of data. The stage has no data, model or training. Test cases against a specification and"
+  },
+  {
+   "stage": "C2:9-12",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-b-ii-9-12-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says several algorithms can build a search tree, each with its own advantages. The stage compares algorithms for any task on step counts and names no search task. Both weigh one algorithm against another.",
+     "senseDiffers": "AI4K12 algorithms here build search trees over states. The stage compares any algorithms on how steps grow with input. Search through a list would be a different sense of search.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-c-ii-9-12-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says different reasoning problems call for different algorithms. The stage chooses between algorithms for a stated need and justifies the choice. Both tie the choice of algorithm to the problem.",
+     "senseDiffers": "AI4K12 reasoning algorithms solve classification, search or inference problems. The stage compares algorithms for any task on how many steps they take.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C3:K-2",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-4-d-i-k-2-eu",
+     "relation": "narrower",
+     "strength": "partial",
+     "why": "The stage has children say who wrote a machine's rules and show a machine doing exactly what its instructions say. That meets the clause that AI devices are programs designed by people. The stage does not address the clause about people.",
+     "senseDiffers": "The item sits under philosophy of mind. The alignment rests on the technical core only: a device runs a program that people wrote. The stage says nothing about understanding or about AI devices in particular.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-4-a-iv-k-2-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says intelligent assistants respond to a limited set of requests. The stage asks for a machine doing exactly what its instructions say and what happens when they are wrong. Both tie a machine's behaviour to how it was set up.",
+     "senseDiffers": "Technical core only: a device answers only the requests its program was built for. Intelligent in the item names a class of devices. The stage avoids the word.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C3:3-5",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-a-i-3-5-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The stage has children build a model with named parts and say one thing it leaves out. The item shows that different map styles capture different aspects. Both teach that a representation keeps some things and drops others. The stage compares no styles.",
+     "senseDiffers": "The item is about maps of places. The stage's model is something that can be run and observed over time.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-b-i-3-5-lo",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item draws the sequence of states a game goes through. The stage runs a simulation and records what happens over time. Both follow a system through a sequence of states. The item uses game boards. The stage uses a pond or a queue.",
+     "senseDiffers": null,
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C3:6-8",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-3-b-ii-6-8-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says weights change in response to errors in the output. The stage identifies a feedback loop in a model. The error signal in training is one case of output returned to change later behaviour. The stage has no training or weights.",
+     "senseDiffers": "In the item, feedback is an error signal used at each training step. In the stage the loop runs inside the model as agents act and the pattern changes.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  },
+  {
+   "stage": "C3:9-12",
+   "items": [
+    {
+     "id": "OE-COMPETENCY-ai4k12-3-a-ii-9-12-lo",
+     "relation": "same",
+     "strength": "strong",
+     "why": "The stage describes how machine learning adjusts parameters from data to improve a measured result. The item models how a reasoner is built by adjusting its parameters. The matching enduring understanding adds that a person selects the model in advance.",
+     "senseDiffers": "AI4K12 speaks of learning and a reasoner. The stage keeps both as a parameter-adjusting procedure and attributes no understanding to the machine.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-b-i-9-12-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says search solves problems written as a path from a start state to a goal state. The stage names search on an objective as one of three methods to compare. Problem formulation, the item's content, is absent from the stage.",
+     "senseDiffers": "The item's search finds a path of states to a goal. The stage's search explores candidates and keeps those that score higher on an objective, so it also covers optimisation.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-2-c-i-9-12-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item sorts reasoning problems by input, output and search space. The stage compares three kinds of system on what each needs as input and what each guarantees. Both ask what goes in and what comes out. They sort different things.",
+     "senseDiffers": "AI4K12 sorts problems such as classification, prediction and search. The stage sorts kinds of system: machine learning, search and distributed systems. Distributed systems have no AI4K12 counterpart.",
+     "adjacentBand": false
+    },
+    {
+     "id": "OE-COMPETENCY-ai4k12-3-a-i-9-12-eu",
+     "relation": "related",
+     "strength": "weak",
+     "why": "The item says supervised and unsupervised learning find patterns in data and reinforcement learning uses trial and error. The stage describes machine learning as parameter adjustment from data. It does not separate the three kinds of learning.",
+     "senseDiffers": "The item compares machine learning with human learning. The stage describes only the machine procedure and attributes no intention. The alignment rests on the machine side.",
+     "adjacentBand": false
+    }
+   ],
+   "none": null
+  }
+ ],
+ "conceptAlignments": [
+  {
+   "concept": "Data",
+   "items": [
+    "OE-COMPETENCY-ai4k12-3-c-i",
+    "OE-COMPETENCY-ai4k12-3-c-ii"
+   ],
+   "relation": "broader",
+   "why": "AI4K12 handles data in its Datasets rows: feature sets for training and large training sets. Computational-Core's Data is wider. It covers any recorded values that stand for something, from sorted objects to charted measurements."
+  },
+  {
+   "concept": "Representation",
+   "items": [
+    "OE-COMPETENCY-ai4k12-2-a-i",
+    "OE-COMPETENCY-ai4k12-2-a-ii",
+    "OE-COMPETENCY-ai4k12-2-a-iii",
+    "OE-COMPETENCY-ai4k12-2-a-iv",
+    "OE-COMPETENCY-ai4k12-1-a-iii"
+   ],
+   "relation": "broader",
+   "why": "Computational-Core's Representation names any structure that stands for something and can be stored or processed. In principle that includes the five AI4K12 rows. The stages teach only symbols, tables, charts and binary encodings."
+  },
+  {
+   "concept": "Abstraction",
+   "items": [
+    "OE-COMPETENCY-ai4k12-2-a-i",
+    "OE-COMPETENCY-ai4k12-1-b-iii",
+    "OE-COMPETENCY-ai4k12-1-b-iv"
+   ],
+   "relation": "related",
+   "why": "Only the Representation (Abstraction) row matches: a map keeps some aspects and drops others, which is hiding detail. The two pipeline rows use abstraction for levels of processing from signal to meaning, which is a different sense."
+  },
+  {
+   "concept": "Algorithm",
+   "items": [
+    "OE-COMPETENCY-ai4k12-2-c-ii",
+    "OE-COMPETENCY-ai4k12-2-b-ii"
+   ],
+   "relation": "broader",
+   "why": "AI4K12 names reasoning algorithms and search algorithms. Computational-Core's Algorithm is any finite sequence of steps that turns input into output, so these two are special cases."
+  },
+  {
+   "concept": "State",
+   "items": [
+    "OE-COMPETENCY-ai4k12-2-b-i"
+   ],
+   "relation": "broader",
+   "why": "AI4K12 uses state for a game position or a step in a search. Computational-Core's State is the stored values of any system at one moment, which includes a game position."
+  },
+  {
+   "concept": "Model",
+   "items": [
+    "OE-COMPETENCY-ai4k12-3-a-iii",
+    "OE-COMPETENCY-ai4k12-3-a-iv"
+   ],
+   "relation": "related",
+   "why": "AI4K12 uses model for a trained mapping from inputs to outputs. Computational-Core's Model is a simplified description of a system that is run to see what follows. The senses meet where a trained model is run on new inputs."
+  },
+  {
+   "concept": "Search",
+   "items": [
+    "OE-COMPETENCY-ai4k12-2-b-i",
+    "OE-COMPETENCY-ai4k12-2-b-ii"
+   ],
+   "relation": "related",
+   "why": "AI4K12 search finds a path from a start state to a goal by growing a search tree. Computational-Core's Search explores candidates and keeps those that score higher on an objective. The two overlap on exploring options."
+  },
+  {
+   "concept": "Machine Learning",
+   "items": [
+    "OE-COMPETENCY-ai4k12-3-a-ii",
+    "OE-COMPETENCY-ai4k12-3-a-iii",
+    "OE-COMPETENCY-ai4k12-3-a-iv",
+    "OE-COMPETENCY-ai4k12-3-a-v",
+    "OE-COMPETENCY-ai4k12-3-a-vi",
+    "OE-COMPETENCY-ai4k12-3-b-ii"
+   ],
+   "relation": "broader",
+   "why": "These AI4K12 rows cover finding patterns, training, using a trained model, adjusting internal representations, learning from experience and weight adjustment. Computational-Core's Machine Learning, a procedure that adjusts parameters from data to improve a result, is the general idea behind them."
+  },
+  {
+   "concept": "Feedback",
+   "items": [
+    "OE-COMPETENCY-ai4k12-3-b-ii",
+    "OE-COMPETENCY-ai4k12-3-a-vi"
+   ],
+   "relation": "related",
+   "why": "Error signals and reinforcement signals are fed back to change later behaviour, so they are cases of feedback. In training the signal goes to the learning rule. In Computational-Core output is returned as input. AI4K12 has no row on feedback loops in models."
+  }
+ ],
+ "ai4k12Unaligned": [
+  {
+   "id": "OE-COMPETENCY-ai4k12-1-a-iii-6-8-eu",
+   "why": "Sound stored as samples of a waveform. C1:6-8 encodes text and images and could add sampling a sound into a series of numbers."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-1-b-ii-6-8-lo",
+   "why": "Simulating an edge detector on pixels. C1:6-8 or C2:6-8 could add a small program that finds features in an image from pixel values."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-a-iii-3-5-eu",
+   "why": "Trees as labelled nodes with parent links. No stage teaches tree structures. C1:3-5 could grow to cover them as a way to organise data."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-a-iii-6-8-eu",
+   "why": "Graphs as labelled nodes and links. No stage covers graphs. C1:6-8 could add them as a representation next to encodings."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-a-iv-6-8-lo",
+   "why": "Embeddings are numbers chosen so that words of similar meaning sit close together. C1:6-8 encodes text as character codes, which carry no meaning. A further encoding could show the difference between the two."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-a-ii-9-12-eu",
+   "why": "Statements written in logical notation so that a program derives new facts by inference rules. C1:9-12 or C2:9-12 could add rule-based derivation."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-a-iii-9-12-eu",
+   "why": "Schemas that list attributes and inherited properties, used in knowledge graphs. C1:9-12 could add structured records with inheritance as a data representation."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-b-i-6-8-eu",
+   "why": "Graph search for mazes and routes builds a search tree. Search appears only at C3:9-12. C2:6-8 or C3:6-8 could add a small search program."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-b-ii-3-5-lo",
+   "why": "Drawing every possible next move in a simple game and picking the best. C2:3-5 or C3:3-5 could add this as a program that explores options."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-c-i-3-5-eu",
+   "why": "Sorting problems into classification and search problems. C3:3-5 could add this when it compares what systems do with data."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-c-i-6-8-eu",
+   "why": "Prediction and sequential decision problems alongside classification and search. C3:6-8 could add a way to name the kind of task a model performs."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-c-ii-3-5-lo",
+   "why": "Comparing a decision tree with a neural network as two ways to classify. Computational-Core compares methods only at C3:9-12."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-ii-3-5-lo",
+   "why": "Modelling how supervised learning finds patterns in labelled data. Machine learning enters Computational-Core only at C3:9-12. C3:3-5 or C3:6-8 could add a hands-on version."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-ii-6-8-eu",
+   "why": "Unsupervised learning groups nearby points into clusters. No stage covers clustering. C3:6-8 could add it next to feedback models."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-iii-3-5-lo",
+   "why": "Training a classifier and checking its accuracy on new inputs. No stage below C3:9-12 trains a model."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-iii-6-8-lo",
+   "why": "Training and evaluating a model on a tabular dataset. It connects to the C1 data tables. C3:6-8 could grow to cover it."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-iv-6-8-eu",
+   "why": "Training builds a reasoning model and using it applies the model to new data. Computational-Core does not yet separate these two phases."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-v-6-8-eu",
+   "why": "Decision tree learning adds nodes and neural network learning changes weights. C3:9-12 mentions adjusting parameters but names no specific method."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-vi-3-5-eu",
+   "why": "A reinforcement signal lets a computer learn from trial and error. No stage covers a reward signal. C3:3-5 or C3:6-8 could connect it to Feedback."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-b-i-6-8-eu",
+   "why": "Neural networks as layers of units with weighted connections. No stage describes this structure. C3:6-8 or C3:9-12 could add it as one model structure."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-c-ii-6-8-eu",
+   "why": "Machine learning needs large amounts of labelled data, and labelling takes labour. Technical need for data only. C3:9-12 could state it as a condition of Machine Learning."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-c-iii-6-8-eu",
+   "why": "Technical core only: a model misbehaves on inputs unlike its training data or when the data hold irrelevant correlations. C3:9-12 could state this as a limit of Machine Learning."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-c-iii-k-2-eu",
+   "why": "Technical core only: how well a computer classifies depends on its training data. Machine learning enters Computational-Core at C3:9-12, so an earlier stage would first need a classifier example."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-4-a-iv-9-12-eu",
+   "why": "Technical core only: simple methods such as keyword and template matching compared with learned methods on what each can guarantee. C2:9-12 or C3:9-12 could host the comparison with language as the example."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-iv-9-12-eu",
+   "why": "Steps of building a classifier: source the data, choose features, label, run learning, stop on a validation set, measure on a test set. C3:9-12 says what machine learning is and teaches no build or check steps."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-2-b-ii-9-12-lo",
+   "why": "Breadth-first, depth-first and best-first search growing a search tree. C3:9-12 names Search and teaches no search method. Best-first search scores candidates, which fits the space's own definition."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-a-iii-9-12-lo",
+   "why": "Train a model on data and evaluate the result. C3:9-12 describes parameter adjustment and has no indicator for training or evaluating. Covers the evaluation idea that the dropped C2:6-8 match claimed."
+  },
+  {
+   "id": "OE-COMPETENCY-ai4k12-3-c-iii-9-12-eu",
+   "why": "Technical core only: learning algorithms exploit imbalances and correlations in the training set, and an unrepresentative set makes those correlations misleading. C3:9-12 states no data limit of machine learning."
+  }
+ ]
+}
