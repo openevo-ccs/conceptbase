@@ -2,7 +2,7 @@
 
 **Type:** `specification-amendment` (resolution mechanism) + `content` (data migration)
 
-**Status:** `proposed`
+**Status:** `accepted` — merged 2026-07-27 and in force since; status line changed from `proposed` on 2026-11-01 (see Review)
 **Author(s):** OpenEvo ConceptBase maintainers
 **Date:** 2026-07-27
 
@@ -99,6 +99,7 @@ licensing sign-off outstanding).
 - [x] **Domain editor approval** — not required for this merge: per `GOVERNANCE.md`'s RFC
       Process, merging `proposed`-status entries needs only one maintainer approval;
       domain editor sign-off applies at the later `proposed → accepted` transition
+- [ ] **Domain editor approval for the `proposed → accepted` transition** — pending, asked for in the pull request that changes this line (2026-11-01)
 - [ ] Confirm `NGSS-LIFE-SCIENCE`/`AI4K12`'s `status: proposed` (despite
       being merged) isn't itself a separate, pre-existing gap worth its
       own follow-up RFC — **deferred** (Dustin Eirdosh, 2026-07-27): "we will handle the others soon"
