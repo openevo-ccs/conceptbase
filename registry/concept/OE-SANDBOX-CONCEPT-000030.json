@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1177/1745691615594577",
+      "text": "Bernstein, A., Hadash, Y., Lichtash, Y., Tanay, G., Shepherd, K., & Fresco, D. M. (2015). Decentering and Related Constructs: A Critical Review and Metacognitive Processes Model. Perspectives on Psychological Science, 10(5), 599-617.\n"
+    },
+    {
+      "text": "Resnick, M. (1996). Beyond the centralized mindset. The Journal of the Learning Sciences, 5(1), 1-22."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Understanding oneself as both an agent who pursues goals and a system made of many lower-level parts (cells, organs, networks of neurons) whose causes are mostly unaware of those goals, and as one member of larger groups that can themselves act like agents or like systems. The concept holds the apparent paradox that a person's agency arises from causes that have no central agent in charge. It is used as a way to move between four views (self as agent, self as system, group as agent, group as system) and to integrate them when reasoning about biology, cognition, culture and computation.\n"
+    }
+  },
+  "examples": [
+    "A person who says \"part of me wanted to go to the party, but part of me wanted to stay home\" and then asks how the parts of the brain and the person's wider social setting each contribute to that choice.",
+    "Explaining a successful invention by the many small, contextual and incremental contributions of a whole community, as well as by the efforts of the named inventor."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000030",
+  "labels": {
+    "en": "Decentralized Self"
+  },
+  "nonExamples": [
+    "Treating the self as one central controller whose goals fully explain what the body and brain do.",
+    "Concluding that the self does not exist or that people have no agency. The concept keeps agency and decentralized causes together."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-agency",
+      "OE-SANDBOX-CONCEPT-000008"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-03",
+    "expiresOn": "2027-11-03",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
