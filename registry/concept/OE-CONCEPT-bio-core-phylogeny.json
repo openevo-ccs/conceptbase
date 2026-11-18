@@ -17,7 +17,7 @@
     "skos:related": [
       "OE-CONCEPT-bio-core-common-ancestor",
       "OE-CONCEPT-bio-core-evolution",
-      "OE-SANDBOX-CONCEPT-000001",
+      "OE-SANDBOX-CONCEPT-bio-core-hominin",
       "OE-CONCEPT-bio-core-homology"
     ]
   },

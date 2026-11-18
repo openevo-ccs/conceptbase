@@ -55,7 +55,7 @@ properties:
 
   id:
     type: string
-    pattern: "^OE-FRAMEWORK-RELATION-[0-9]{6}$"
+    pattern: "^OE-FRAMEWORK-RELATION-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
       Permanent identifier for this relation record. Assigned
       sequentially for now (Phase 1, zero prior instances) rather than

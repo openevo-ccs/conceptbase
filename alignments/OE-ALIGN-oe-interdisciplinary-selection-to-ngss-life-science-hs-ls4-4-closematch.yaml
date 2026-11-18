@@ -1,0 +1,35 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch.yaml
+# ============================================================================
+# First concept-to-competency alignment (RFC-0008 unblocks the identifier
+# shape; this record is the first to use it). Directly tests Strand 1's
+# own claim (interdisciplinary-k12, OE-STRAND-000213/000214) that
+# Selection is a genuine cross-domain mechanism by checking it against a
+# real NGSS performance expectation, not just the vocabulary's own say-so.
+# See docs/design-notes/selection-cross-domain-case-study.md for the full
+# synthesis across this record and OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch/000005.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch
+subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-selection
+object: NGSS-LIFE-SCIENCE-v1.0.0:OE-COMPETENCY-ngss-life-science-hs-ls4-4
+matchType: skos:closeMatch
+assertedBy:
+  - OpenEvo Computational Curriculum Studies Working Group
+date: "2026-07-20"
+status: proposed
+rationale: >
+  OE-INTERDISCIPLINARY's Selection (OE-CONCEPT-oe-interdisciplinary-selection), biology-discipline
+  sense, and NGSS's HS-LS4-4 ("Construct an explanation based on evidence
+  for how natural selection leads to adaptation of populations",
+  OE-COMPETENCY-ngss-life-science-hs-ls4-4) describe the same mechanism: differential
+  persistence/reproduction of heritable variants driving population-level
+  change. Not asserted as skos:exactMatch because HS-LS4-4 is a
+  performance expectation (an assessable student action: "construct an
+  explanation") rather than a concept definition — its scope is somewhat
+  narrower (adaptation outcomes specifically) than OE-CONCEPT-oe-interdisciplinary-selection's
+  full four-discipline definition, of which this is only the biology
+  sense. This is the strongest of the three alignments drafted alongside
+  it (OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch, OE-ALIGN-oe-interdisciplinary-agency-to-ai4k12-4-d-i-relatedmatch-asserted-2026-07-20) — official science standards and
+  ConceptBase's own biology-sense definition agree closely, unlike the more
+  speculative AI-analogy alignments.

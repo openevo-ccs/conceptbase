@@ -68,7 +68,7 @@ concepts:
         - OE-CONCEPT-oe-interdisciplinary-transmission  # Transmission
         - OE-CONCEPT-oe-interdisciplinary-innovation  # Innovation
         - OE-CONCEPT-oe-interdisciplinary-development  # Development
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-SANDBOX-CONCEPT-000007]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-SANDBOX-CONCEPT-oe-interdisciplinary-restructuration]
 
   - id: OE-CONCEPT-oe-interdisciplinary-inheritance
     type: oe:Concept
@@ -109,7 +109,7 @@ concepts:
           another.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-inheritance, OE-CONCEPT-oe-interdisciplinary-teaching, OE-CONCEPT-oe-interdisciplinary-communication, OE-SANDBOX-CONCEPT-000003]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-inheritance, OE-CONCEPT-oe-interdisciplinary-teaching, OE-CONCEPT-oe-interdisciplinary-communication, OE-SANDBOX-CONCEPT-oe-interdisciplinary-language-evolution]
 
   - id: OE-CONCEPT-oe-interdisciplinary-innovation
     type: oe:Concept
@@ -126,7 +126,7 @@ concepts:
           system.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-representation, OE-CONCEPT-oe-interdisciplinary-technology, OE-CONCEPT-oe-interdisciplinary-norms, OE-SANDBOX-CONCEPT-000003, OE-SANDBOX-CONCEPT-000013]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-representation, OE-CONCEPT-oe-interdisciplinary-technology, OE-CONCEPT-oe-interdisciplinary-norms, OE-SANDBOX-CONCEPT-oe-interdisciplinary-language-evolution, OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning]
 
   - id: OE-CONCEPT-oe-interdisciplinary-information
     type: oe:Concept
@@ -173,7 +173,7 @@ concepts:
           a mutual benefit not achievable, or less efficiently achieved,
           alone.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-conflict, OE-CONCEPT-oe-interdisciplinary-culture, OE-CONCEPT-oe-interdisciplinary-institutions, OE-SANDBOX-CONCEPT-000009]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-conflict, OE-CONCEPT-oe-interdisciplinary-culture, OE-CONCEPT-oe-interdisciplinary-institutions, OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling]
 
   - id: OE-CONCEPT-oe-interdisciplinary-conflict
     type: oe:Concept
@@ -239,7 +239,7 @@ concepts:
           and make choices that influence outcomes, rather than
           responding passively to external forces.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-development, OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-selection, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000008, OE-SANDBOX-CONCEPT-000009, OE-SANDBOX-CONCEPT-000010]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-development, OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-selection, OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition, OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning, OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling, OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind]
 
   - id: OE-CONCEPT-oe-interdisciplinary-scaffolding
     type: oe:Concept
@@ -278,7 +278,7 @@ concepts:
           scoring higher against an objective function.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-variation, OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000005, OE-SANDBOX-CONCEPT-000013]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-variation, OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture, OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning]
     examples:
       - A cultural practice being adopted more widely because it improves group cohesion.
       - A genetic algorithm retaining higher-fitness candidate solutions across generations.
@@ -304,7 +304,7 @@ concepts:
           material on which selection can act.
     relations:
       skos:broader: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process]
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-selection, OE-CONCEPT-oe-interdisciplinary-inheritance, OE-SANDBOX-CONCEPT-000013]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-selection, OE-CONCEPT-oe-interdisciplinary-inheritance, OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning]
 
   - id: OE-CONCEPT-oe-interdisciplinary-learning
     type: oe:Concept
@@ -320,7 +320,7 @@ concepts:
           capability resulting from experience, instruction, or
           practice.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-teaching, OE-CONCEPT-oe-interdisciplinary-development, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000006]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-scaffolding, OE-CONCEPT-oe-interdisciplinary-teaching, OE-CONCEPT-oe-interdisciplinary-development, OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition, OE-SANDBOX-CONCEPT-oe-interdisciplinary-hybrid-social-learning]
 
   - id: OE-CONCEPT-oe-interdisciplinary-teaching
     type: oe:Concept
@@ -366,7 +366,7 @@ concepts:
           Tools, techniques, or systems created to extend or augment
           biological or cognitive capability.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-innovation, OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-CONCEPT-oe-interdisciplinary-collective-intelligence, OE-SANDBOX-CONCEPT-000005]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-innovation, OE-CONCEPT-oe-interdisciplinary-niche-construction, OE-CONCEPT-oe-interdisciplinary-collective-intelligence, OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture]
 
   - id: OE-CONCEPT-oe-interdisciplinary-culture
     type: oe:Concept
@@ -382,7 +382,7 @@ concepts:
           artifacts shared within a group, persisting beyond any single
           individual.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-cooperation, OE-CONCEPT-oe-interdisciplinary-institutions, OE-CONCEPT-oe-interdisciplinary-norms, OE-SANDBOX-CONCEPT-000003, OE-SANDBOX-CONCEPT-000005]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-cooperation, OE-CONCEPT-oe-interdisciplinary-institutions, OE-CONCEPT-oe-interdisciplinary-norms, OE-SANDBOX-CONCEPT-oe-interdisciplinary-language-evolution, OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture]
 
   - id: OE-CONCEPT-oe-interdisciplinary-institutions
     type: oe:Concept
@@ -459,18 +459,18 @@ concepts:
           artifacts, and environment, rather than occurring solely
           within a single mind.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-knowledge, OE-CONCEPT-oe-interdisciplinary-collective-intelligence, OE-SANDBOX-CONCEPT-000011]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-knowledge, OE-CONCEPT-oe-interdisciplinary-collective-intelligence, OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition]
 
   # ==========================================================================
   # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
   # never-delete guarantee, TTL'd, not yet promoted through full RFC review.
-  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-000003 (MPI-EVA
-  # cross-disciplinary capstone) and OE-SANDBOX-LPM-000004 (machine-culture
+  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-interdisciplinary-k12-eva-capstone (MPI-EVA
+  # cross-disciplinary capstone) and OE-SANDBOX-LPM-interdisciplinary-k12-machine-culture-coevolution (machine-culture
   # coevolution capstone) — see docs/design-notes/human-dimensions-k12-case-study.md
   # and RFC-0010.
   # ==========================================================================
 
-  - id: OE-SANDBOX-CONCEPT-000003
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-language-evolution
     type: oe:Concept
     sandboxMeta:
       created: "2026-07-21"
@@ -500,7 +500,7 @@ concepts:
           Synthesize the Social Sciences), applied here to language
           specifically rather than culture in general.
 
-  - id: OE-SANDBOX-CONCEPT-000004
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition
     type: oe:Concept
     sandboxMeta:
       created: "2026-07-21"
@@ -519,13 +519,13 @@ concepts:
           which evolved independently, and which are distinctively
           elaborated in a given lineage.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000012, OE-SANDBOX-CONCEPT-000013]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind, OE-SANDBOX-CONCEPT-oe-interdisciplinary-intuitive-theories, OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning]
     examples:
       - Testing tool-use problem-solving in corvids, great apes, and
         young children to compare the cognitive strategies each group
         uses.
 
-  - id: OE-SANDBOX-CONCEPT-000005
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture
     type: oe:Concept
     sandboxMeta:
       created: "2026-07-21"
@@ -544,7 +544,7 @@ concepts:
           define cultural evolution, rather than machines being only
           passive tools culture is transmitted through.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-culture, OE-CONCEPT-oe-interdisciplinary-selection, OE-CONCEPT-oe-interdisciplinary-technology, OE-SANDBOX-CONCEPT-000006]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-culture, OE-CONCEPT-oe-interdisciplinary-selection, OE-CONCEPT-oe-interdisciplinary-technology, OE-SANDBOX-CONCEPT-oe-interdisciplinary-hybrid-social-learning]
     examples:
       - A recommendation algorithm's outputs shifting collective media
         consumption patterns, which in turn shifts what content gets
@@ -558,7 +558,7 @@ concepts:
           culture. Nature Human Behaviour, 7(11), 1855-1868.
         doi: "10.1038/s41562-023-01742-2"
 
-  - id: OE-SANDBOX-CONCEPT-000006
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-hybrid-social-learning
     type: oe:Concept
     sandboxMeta:
       created: "2026-07-21"
@@ -578,7 +578,7 @@ concepts:
           rather than social learning occurring within a single-species
           population.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-SANDBOX-CONCEPT-000005]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-learning, OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture]
     examples:
       - Students learning a problem-solving strategy partly from a
         human teacher and partly from an AI tutoring system, whose own
@@ -587,7 +587,7 @@ concepts:
       - A student learning solely from a textbook (no AI system's own
         behavior is being learned from or is adapting in response).
 
-  - id: OE-SANDBOX-CONCEPT-000007
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-restructuration
     type: oe:Concept
     sandboxMeta:
       created: "2026-08-06"
@@ -611,7 +611,7 @@ concepts:
           are not merely harder but effectively inaccessible until the
           representational infrastructure itself changes.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process, OE-SANDBOX-CONCEPT-000008, OE-SANDBOX-CONCEPT-000009]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-evolutionary-process, OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning, OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling]
     examples:
       - Agent-based/multi-agent computational models restructuring how
         emergent, decentralized phenomena (population-level natural
@@ -631,7 +631,7 @@ concepts:
           Learning Sciences, 17(4), 465-516.
         doi: "10.1080/10508400802394898"
 
-  - id: OE-SANDBOX-CONCEPT-000008
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning
     type: oe:Concept
     sandboxMeta:
       created: "2026-08-06"
@@ -652,7 +652,7 @@ concepts:
           single governing cause behind an observed pattern even when
           none exists.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000007, OE-SANDBOX-CONCEPT-000009]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-oe-interdisciplinary-restructuration, OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling]
     examples:
       - Explaining a traffic jam, an ant colony's foraging pattern, or
         a bird flock's shape as emerging from many individuals
@@ -679,7 +679,7 @@ concepts:
           evolution education. Evolution: Education and Outreach, 8(2).
         doi: "10.1186/s12052-014-0028-x"
 
-  - id: OE-SANDBOX-CONCEPT-000009
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling
     type: oe:Concept
     sandboxMeta:
       created: "2026-08-06"
@@ -705,7 +705,7 @@ concepts:
           makes decentralized causal reasoning learnable in practice,
           not just definable in principle.
     relations:
-      skos:related: [OE-SANDBOX-CONCEPT-000007, OE-SANDBOX-CONCEPT-000008, OE-CONCEPT-oe-interdisciplinary-cooperation, OE-CONCEPT-oe-interdisciplinary-agency]
+      skos:related: [OE-SANDBOX-CONCEPT-oe-interdisciplinary-restructuration, OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning, OE-CONCEPT-oe-interdisciplinary-cooperation, OE-CONCEPT-oe-interdisciplinary-agency]
     examples:
       - A NetLogo model of predator-driven selection on a beetle
         population's running speed, where students set individual
@@ -734,7 +734,7 @@ concepts:
   # constructs have real, citation-backed source material in that repo's
   # own core.json/capacities.json/nodes but had no ConceptBase entry at all
   # before this pass -- a direct gap found while crosswalking, not
-  # speculative content. Same MPI-EVA lineage as OE-SANDBOX-LPM-000003
+  # speculative content. Same MPI-EVA lineage as OE-SANDBOX-LPM-interdisciplinary-k12-eva-capstone
   # above, though not yet wired into that capstone's own strand content.
   # Numbered 000010-000012 (not the branch's original 000007-000009) to
   # avoid colliding with three unrelated sandbox concepts (Restructuration,
@@ -742,7 +742,7 @@ concepts:
   # added to this same 000007-000009 range on main in the interim.
   # --------------------------------------------------------------------------
 
-  - id: OE-SANDBOX-CONCEPT-000010
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind
     type: oe:Concept
     sandboxMeta:
       created: "2026-08-01"
@@ -759,7 +759,7 @@ concepts:
           intentions, knowledge — to oneself and others, and to use
           those attributions to interpret and predict behavior.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000011, OE-SANDBOX-CONCEPT-000012]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-agency, OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition, OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition, OE-SANDBOX-CONCEPT-oe-interdisciplinary-intuitive-theories]
     examples:
       - Inferring that a person will look for an object where they last
         saw it, even after it has been secretly moved, because they act
@@ -773,7 +773,7 @@ concepts:
           471-489.
         doi: "10.1002/icd.560"
 
-  - id: OE-SANDBOX-CONCEPT-000011
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition
     type: oe:Concept
     sandboxMeta:
       created: "2026-08-01"
@@ -790,7 +790,7 @@ concepts:
           cognitive processes — knowing what one knows, tracking how
           one is thinking, and adjusting strategies accordingly.
     relations:
-      skos:related: [OE-CONCEPT-oe-interdisciplinary-distributed-cognition, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000013]
+      skos:related: [OE-CONCEPT-oe-interdisciplinary-distributed-cognition, OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind, OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning]
     examples:
       - A student recognizing mid-exam that a chosen problem-solving
         strategy isn't working and deliberately switching to another one.
@@ -816,7 +816,7 @@ concepts:
           Phenomenographical study. Thinking Skills and Creativity, 41.
         doi: "10.1016/j.tsc.2021.100855"
 
-  - id: OE-SANDBOX-CONCEPT-000012
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-intuitive-theories
     type: oe:Concept
     sandboxMeta:
       created: "2026-08-01"
@@ -834,7 +834,7 @@ concepts:
           construct to explain and predict how the world works,
           typically without formal instruction.
     relations:
-      skos:related: [OE-SANDBOX-CONCEPT-000004, OE-SANDBOX-CONCEPT-000010, OE-SANDBOX-CONCEPT-000013]
+      skos:related: [OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition, OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind, OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning]
     examples:
       - A young child's untaught assumption that living things grow
         from the inside on their own, while artifacts only change when
@@ -852,7 +852,7 @@ concepts:
   # reused, not duplicated.
   # --------------------------------------------------------------------------
 
-  - id: OE-SANDBOX-CONCEPT-000013
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning
     type: oe:Concept
     sandboxMeta:
       created: "2026-09-02"
@@ -876,9 +876,9 @@ concepts:
         - OE-CONCEPT-oe-interdisciplinary-selection
         - OE-CONCEPT-oe-interdisciplinary-variation
         - OE-CONCEPT-oe-interdisciplinary-innovation
-        - OE-SANDBOX-CONCEPT-000011
-        - OE-SANDBOX-CONCEPT-000004
-        - OE-SANDBOX-CONCEPT-000012
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-intuitive-theories
     examples:
       - A student solving a new math problem by first asking "what problem
         I already know is most similar to this one?" and adapting that

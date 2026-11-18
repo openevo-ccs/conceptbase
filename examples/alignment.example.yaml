@@ -1,10 +1,10 @@
 # ============================================================================
 # Example: a single oe:Alignment record (Phase 2)
 # ============================================================================
-# Illustrative only -- OE-ALIGN-000900 is not a registered ID, and
+# Illustrative only -- OE-ALIGN-example-subject-to-example-object-closematch is not a registered ID, and
 # EXAMPLE-CONCEPT-VOCAB-v1.0.0 / EXAMPLE-COMPETENCY-VOCAB-v1.0.0 are not
 # real vocabularies (see examples/README.md). Compare the real records in
-# alignments/ -- OE-ALIGN-000003 (concept<->competency, the shape this
+# alignments/ -- OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch (concept<->competency, the shape this
 # example follows) is the closest real analogue, connecting
 # OE-INTERDISCIPLINARY's Selection concept to an NGSS performance
 # expectation.
@@ -13,7 +13,7 @@
 # label -- see alignment.schema.yaml's header comment for why.
 # ============================================================================
 
-id: OE-ALIGN-000900
+id: OE-ALIGN-example-subject-to-example-object-closematch
 subject: EXAMPLE-CONCEPT-VOCAB-v1.0.0:OE-CONCEPT-000900
 object: EXAMPLE-COMPETENCY-VOCAB-v1.0.0:OE-COMPETENCY-example-vocab-example-code
 matchType: skos:closeMatch
