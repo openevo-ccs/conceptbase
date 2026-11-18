@@ -10,7 +10,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000002
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-inheritance
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-bio-core-inheritance
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-inheritance
 matchType: skos:closeMatch
 assertedBy:

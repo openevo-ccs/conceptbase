@@ -90,7 +90,7 @@ Since that pilot review, six accepted RFCs have pulled work forward from later p
 
 | Phase | Status | Contents |
 |---|---|---|
-| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`, plus `Competency` — promoted early, see below); Concept/LPM/Strand/Competency schemas; seed vocabularies (`BIO-CORE-v1.0.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process; sandbox tier and `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)); **namespace registered and live** ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)) |
+| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`, plus `Competency` — promoted early, see below); Concept/LPM/Strand/Competency schemas; seed vocabularies (`BIO-CORE-v1.2.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process; sandbox tier and `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)); **namespace registered and live** ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)) |
 | **Phase 2 — Alignment & Multilinguality** | 🟡 Started ahead of schedule | Five SKOS-based cross-vocabulary alignment records with provenance (see [`alignments/`](alignments/)), including the first concept↔competency alignments ([RFC-0008](proposals/0008-alignment-competency-support.md)); language-tagged labels/definitions beyond `en` still planned |
 | **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
 | **Phase 4 — Ecosystem Tooling** | 🟡 Started ahead of schedule | `oe:Competency` profiled against CASE `CFItem` and promoted out of `reserved` ([RFC-0002](proposals/0002-competency-case-profile.md), see [`docs/design-notes/case-competency-profile.md`](docs/design-notes/case-competency-profile.md)); flat-JSON registry and live namespace resolution ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)); citation-only competency entries for license-restricted sources ([RFC-0005](proposals/0005-citation-only-competency-entries.md)); two full-text competency vocabularies ingested, `NGSS-LIFE-SCIENCE-v1.0.0` ([RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)) and `AI4K12-v1.0.0` ([RFC-0007](proposals/0007-ai4k12-vocabulary.md)); basic schema-validation CI (`.github/workflows/validate.yml`, this repo and both reference LPMs) — a real slice of the spec §10.3 CI compatibility-checker, not the full thing (see Roadmap); evidence schema, hosted SPARQL endpoint, and the full pin-resolution/deprecation-aware compatibility-checker still planned |
@@ -154,7 +154,7 @@ conceptbase/
 │   └── alignment.schema.yaml     # Phase 2 cross-vocabulary alignment records
 │
 ├── vocabularies/
-│   ├── BIO-CORE-v1.0.0.yaml
+│   ├── BIO-CORE-v1.2.0.yaml
 │   ├── OE-INTERDISCIPLINARY-v1.0.0.yaml
 │   ├── NGSS-LIFE-SCIENCE-v1.0.0.yaml   # oe:Competency, 53 entries (RFC-0006)
 │   └── AI4K12-v1.0.0.yaml              # oe:Competency, 381 entries (RFC-0007)
@@ -244,7 +244,7 @@ Any proposal for a novel schema structure must document why an existing standard
 conceptbase:
   ontology: OE-ONTOLOGY-v1.0.0
   vocabularies:
-    - BIO-CORE-v1.0.0
+    - BIO-CORE-v1.2.0
 ```
 
 **Looking up a concept:**
@@ -254,7 +254,7 @@ The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-bio-core-natural-selection       →  flat JSON (generated, scripts/build_registry.py)
 https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML (the #fragment is client-side only)
-https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML
+https://www.w3id.org/openevo/vocab/BIO-CORE-v1.2.0            →  raw vocabulary YAML
 https://www.w3id.org/openevo/                                 →  redirects to this repository
 ```
 
@@ -272,7 +272,7 @@ The full `validation/` directory and `oecb-validate` CLI referenced by earlier d
 python scripts/validate.py schemas/concept.schema.yaml examples/concept.example.yaml
 ```
 
-A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
+A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.2.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
 
 Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails against these schemas with a network-resolution error — every schema's `$ref` to `common.defs.yaml` resolves against a w3id URL that isn't served yet (a known gap; see the script's docstring). `scripts/validate.py` resolves that `$ref` from the local `schemas/` directory instead.
 
@@ -308,7 +308,7 @@ ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https
 
 Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice. Both are a deliberately synthetic comparison pair, not field-tested curricula — each carries `epistemicStatus: designed-thought-experiment` (RFC-0019), a permanent, structural declaration independent of their draft/stable lifecycle status, because the two are otherwise structurally identical: same schema, same pipeline, differing only in which controlled vocabulary each is built against. That's what makes any difference between them attributable to vocabulary scope, not some other confound:
 
-- **`bio-core-k12`** (private repo, not publicly linkable) — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`, a vocabulary with no organism-agency concept at all.
+- **`bio-core-k12`** (private repo, not publicly linkable) — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.2.0`, a vocabulary with no organism-agency concept at all.
 - **`interdisciplinary-k12`** (private repo, not publicly linkable) — the synthetic sandbox: a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`, which adds Agency, Niche Construction, and a Selection concept spanning biology/culture/education/AI. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
 
 Both are also early/draft-stage repositories in the ordinary `status: proposed` sense, on top of (and independent of) the synthetic/thought-experiment framing above.

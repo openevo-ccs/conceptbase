@@ -4,8 +4,11 @@
       "text": "Darwin, C. (1859). On the Origin of Species."
     }
   ],
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Unterschiedlicher Fortpflanzungserfolg vererbbarer Varianten innerhalb einer Population, der aus deren Wechselwirkung mit der Umwelt resultiert.\n"
+    },
     "en": {
       "biology": "Differential reproductive success among heritable variants within a population, resulting from their interaction with the environment.\n"
     }
@@ -16,6 +19,7 @@
   ],
   "id": "OE-CONCEPT-bio-core-natural-selection",
   "labels": {
+    "de": "Natürliche Selektion",
     "en": "Natural Selection"
   },
   "nonExamples": [
@@ -26,11 +30,20 @@
     "skos:broader": [
       "OE-CONCEPT-bio-core-evolution"
     ],
+    "skos:narrower": [
+      "OE-CONCEPT-bio-core-stabilizing-selection",
+      "OE-CONCEPT-bio-core-directional-selection",
+      "OE-CONCEPT-bio-core-balancing-selection",
+      "OE-CONCEPT-bio-core-sexual-selection",
+      "OE-CONCEPT-bio-core-frequency-dependent-selection"
+    ],
     "skos:related": [
       "OE-CONCEPT-bio-core-adaptation",
       "OE-CONCEPT-bio-core-fitness",
       "OE-CONCEPT-bio-core-selection-pressure",
-      "OE-CONCEPT-bio-core-mutation"
+      "OE-CONCEPT-bio-core-mutation",
+      "OE-CONCEPT-bio-core-multilevel-selection",
+      "OE-CONCEPT-bio-core-domestication"
     ]
   },
   "status": "stable",

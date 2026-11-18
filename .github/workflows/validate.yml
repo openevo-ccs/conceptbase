@@ -43,7 +43,7 @@ jobs:
           overall=0
           run() { echo "::group::$*"; python scripts/validate.py "$@" || overall=1; echo "::endgroup::"; }
 
-          run schemas/concept.schema.yaml vocabularies/BIO-CORE-v1.0.0.yaml vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml examples/concept.example.yaml
+          run schemas/concept.schema.yaml vocabularies/BIO-CORE-v1.2.0.yaml vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml examples/concept.example.yaml
           run schemas/competency.schema.yaml vocabularies/NGSS-LIFE-SCIENCE-v1.0.0.yaml vocabularies/AI4K12-v1.0.0.yaml examples/competency.example.yaml examples/competency-citationonly.example.yaml
           run schemas/alignment.schema.yaml alignments/*.yaml examples/alignment.example.yaml
           run schemas/lpm.schema.yaml examples/lpm.example.yaml

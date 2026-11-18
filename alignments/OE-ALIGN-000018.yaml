@@ -6,7 +6,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000018
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-fitness
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-bio-core-fitness
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-selection
 matchType: skos:relatedMatch
 assertedBy:

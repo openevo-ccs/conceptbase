@@ -6,7 +6,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000014
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-bio-core-natural-selection
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-evolutionary-process
 matchType: skos:relatedMatch
 assertedBy:
