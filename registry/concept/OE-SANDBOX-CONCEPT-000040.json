@@ -34,6 +34,11 @@
     "skos:broader": [
       "OE-SANDBOX-CONCEPT-000011"
     ],
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-000074",
+      "OE-SANDBOX-CONCEPT-000077",
+      "OE-SANDBOX-CONCEPT-000078"
+    ],
     "skos:related": [
       "OE-SANDBOX-CONCEPT-000061",
       "OE-SANDBOX-CONCEPT-000064"

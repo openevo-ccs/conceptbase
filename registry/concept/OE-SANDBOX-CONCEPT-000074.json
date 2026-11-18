@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09896-9",
+      "text": "Efklides, A., & Schwartz, B. L. (2024). Revisiting the Metacognitive and Affective Model of Self-Regulated Learning: Origins, Development, and Future Directions. Educational Psychology Review, 36, 61."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Deliberate, domain-free ways of controlling the course of one's work and checking it: orienting to the task, planning, monitoring how the plan is carried out and evaluating the result. The article calls them typical of top-down regulation and separates them from strategies that work only within one subject.\n"
+    }
+  },
+  "examples": [
+    "A student plans her study hours before an exam.",
+    "A student checks halfway through whether the plan is working."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000074",
+  "labels": {
+    "en": "Metacognitive Skills (MASRL)"
+  },
+  "nonExamples": [
+    "A rule for simplifying equations, which applies only in mathematics.",
+    "A feeling of difficulty."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000040"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

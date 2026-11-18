@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09896-9",
+      "text": "Efklides, A., & Schwartz, B. L. (2024). Revisiting the Metacognitive and Affective Model of Self-Regulated Learning: Origins, Development, and Future Directions. Educational Psychology Review, 36, 61."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Three levels in the Enriched Model of Metacognition that MASRL builds on: an object level of nonconscious thinking with its own monitoring and control, a Personal Awareness level where the person becomes conscious of feelings and judgments about it, and a Social level for co-regulation, where feelings cannot be shared directly but can be perceived and judged. The article does not say how these levels line up with MASRL's Person and Task X Person levels.\n"
+    }
+  },
+  "examples": [
+    "Retrieving an answer with low confidence and quietly deciding not to give it (object level).",
+    "A student noticing a tip-of-the-tongue state (Personal Awareness level)."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000080",
+  "labels": {
+    "en": "Object Level, Personal Awareness Level and Social Level (Enriched Model)"
+  },
+  "nonExamples": [
+    "A student quietly judging her own answer with no one else involved (Personal Awareness level, which differs from the Social level).",
+    "A student's belief that effort pays off (a Person-level characteristic in MASRL)."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000011"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

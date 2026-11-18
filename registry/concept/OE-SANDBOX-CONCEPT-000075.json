@@ -1,0 +1,36 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09896-9",
+      "text": "Efklides, A., & Schwartz, B. L. (2024). Revisiting the Metacognitive and Affective Model of Self-Regulated Learning: Origins, Development, and Future Directions. Educational Psychology Review, 36, 61."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The relatively stable things a learner brings to any learning situation: prior knowledge, metacognitive knowledge and skills, beliefs about ability, effort, value and cost, other motivations, and attitudes and emotions toward learning. Goal setting before the work begins is shaped here.\n"
+    }
+  },
+  "examples": [
+    "A student's belief that effort pays off.",
+    "A student's anxiety about mathematics in general."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000075",
+  "labels": {
+    "en": "Person Level (MASRL)"
+  },
+  "nonExamples": [
+    "A feeling of difficulty during one problem.",
+    "The wording of today's task."
+  ],
+  "relations": {
+    "skos:broader": []
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

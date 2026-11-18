@@ -1,0 +1,39 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09896-9",
+      "text": "Efklides, A., & Schwartz, B. L. (2024). Revisiting the Metacognitive and Affective Model of Self-Regulated Learning: Origins, Development, and Future Directions. Educational Psychology Review, 36, 61."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Two processes that run alongside the three phases of work. Monitoring follows how thinking, effort and affect are going, and control acts on that, for example by choosing a strategy, spending more time or revising the goal. The article says each can influence the other and each can be implicit or explicit.\n"
+    }
+  },
+  "examples": [
+    "A student judges a word as not yet learned and studies it longer.",
+    "A student on a well-practiced task whose monitoring runs without awareness."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000078",
+  "labels": {
+    "en": "Monitoring and Control in Parallel With the Task (MASRL)"
+  },
+  "nonExamples": [
+    "A teacher deciding what a class should do next.",
+    "A grade given after the exam."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000039",
+      "OE-SANDBOX-CONCEPT-000040"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
