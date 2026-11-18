@@ -14,7 +14,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000001
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-bio-core-natural-selection
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-selection
 matchType: skos:closeMatch
 assertedBy:

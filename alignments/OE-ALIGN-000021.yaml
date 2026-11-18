@@ -6,7 +6,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000021
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-allele
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-bio-core-allele
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-variation
 matchType: skos:relatedMatch
 assertedBy:

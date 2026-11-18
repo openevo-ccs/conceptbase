@@ -58,7 +58,7 @@ LPM_INDEX = {
         "owner": "openevo-ccs",
         "repo": "bio-core-k12",
         "ref": "main",
-        "vocabulary": "BIO-CORE-v1.0.0",
+        "vocabulary": "BIO-CORE-v1.2.0",
         "epistemicStatus": "designed-thought-experiment",
     },
     "OE-LPM-bee-k12": {

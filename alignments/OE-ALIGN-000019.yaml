@@ -6,7 +6,7 @@
 # ============================================================================
 
 id: OE-ALIGN-000019
-subject: BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-inheritance
+subject: BIO-CORE-v1.2.0:OE-CONCEPT-bio-core-inheritance
 object: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-transmission
 matchType: skos:broadMatch
 assertedBy:
