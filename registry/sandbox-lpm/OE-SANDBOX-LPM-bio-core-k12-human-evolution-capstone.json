@@ -1,6 +1,6 @@
 {
   "epistemicStatus": "designed-thought-experiment",
-  "forkedFrom": "OE-LPM-000001",
+  "forkedFrom": "OE-LPM-bio-core-k12",
   "id": "OE-SANDBOX-LPM-bio-core-k12-human-evolution-capstone",
   "labels": {
     "en": "BIO-CORE: Human Lineage Capstone (Genetics & Paleoanthropology)"

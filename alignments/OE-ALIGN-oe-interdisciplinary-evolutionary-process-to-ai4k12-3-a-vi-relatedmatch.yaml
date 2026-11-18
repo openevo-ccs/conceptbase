@@ -1,7 +1,7 @@
 # ============================================================================
 # Path: /alignments/OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch.yaml
 # ============================================================================
-# Tests interdisciplinary-k12's Strand 1, SubStrand OE-STRAND-000214
+# Tests interdisciplinary-k12's Strand 1, SubStrand OE-STRAND-oe-interdisciplinary-k12-inheritance-variation-selection-912
 # (9-12) performance indicator: "Explains what is genuinely analogous and
 # what is genuinely different between biological selection and
 # algorithmic selection (e.g., a genetic algorithm's fitness function)."
@@ -40,10 +40,10 @@ rationale: >
   heritable variation between "generations" of a single learning run, and
   its "reinforcement signal" is an externally-defined objective, not an
   emergent consequence of differential persistence). The LPM's own
-  performance indicator (OE-STRAND-000214, 9-12) asks students to
+  performance indicator (OE-STRAND-oe-interdisciplinary-k12-inheritance-variation-selection-912, 9-12) asks students to
   articulate exactly this genuine-analogy-vs-genuine-difference
   distinction; this alignment record is the evidentiary check for that
-  claim, and its matchType level (relatedMatch, not closeMatch) is itself
+  claim, and its matchType level (relatedMatch instead of closeMatch) is itself
   part of the answer -- the analogy is real but looser than a casual
   reading of "algorithmic selection" might suggest, and AI4K12 does not
   cover genetic algorithms specifically at all, only reinforcement

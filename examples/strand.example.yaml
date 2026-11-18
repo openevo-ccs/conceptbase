@@ -1,7 +1,7 @@
 # ============================================================================
 # Example: a minimal oe:Strand with one nested oe:SubStrand
 # ============================================================================
-# Illustrative only -- OE-STRAND-000900/000901 are not registered IDs (see
+# Illustrative only -- OE-STRAND-example-lpm-example-strand and its substrand are not registered IDs (see
 # examples/README.md). Compare the real strand files in bio-core-k12/strands/
 # and interdisciplinary-k12/strands/, which this is trimmed down from.
 #
@@ -12,7 +12,7 @@
 # strand.schema.yaml's own header comment.
 # ============================================================================
 
-id: "OE-STRAND-000900"
+id: "OE-STRAND-example-lpm-example-strand"
 type: "oe:Strand"
 status: proposed
 version: 0.1.0
@@ -24,7 +24,7 @@ typicalGradeBand: "K-12 (spans all bands via subStrands)"
 associatedDomains: ["Example Domain"]
 
 subStrands:
-  - id: "OE-STRAND-000901"
+  - id: "OE-STRAND-example-lpm-example-strand-k2"
     type: "oe:SubStrand"
     status: proposed
     version: 0.1.0
@@ -33,7 +33,7 @@ subStrands:
     typicalGradeBand: "6-8"
     required: true
     concepts:
-      - id: OE-CONCEPT-000900   # Example Concept, see concept.example.yaml
+      - id: OE-CONCEPT-example-vocab-example-concept   # Example Concept, see concept.example.yaml
         emphasis: primary
     performanceIndicators:
       - "An observable, assessable outcome a student at this grade band should demonstrate."
