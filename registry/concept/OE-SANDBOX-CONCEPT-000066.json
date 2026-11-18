@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Behavior that others cannot see, such as thoughts, feelings and goals, which the design concept counts as behavior that learners can observe in themselves. The paper does not discuss how accurate that self-observation is.\n"
+    }
+  },
+  "examples": [
+    "Noticing the thought 'I will fail' before a test.",
+    "Noticing a feeling of irritation."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000066",
+  "labels": {
+    "en": "Covert Behavior"
+  },
+  "nonExamples": [
+    "A visible action seen by others.",
+    "A measurement from a scan."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000037"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000049",
+      "OE-SANDBOX-CONCEPT-000067"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

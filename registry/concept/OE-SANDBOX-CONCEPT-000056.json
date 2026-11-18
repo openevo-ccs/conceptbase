@@ -1,0 +1,45 @@
+{
+  "citations": [
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    },
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "In Apt-AIR, epistemic virtues are treated as multifaceted, developing and adaptive intellectual competencies, following Sosa's reliabilist account, with some influence from the responsibilist view of virtues as motivational dispositions. Competence is what makes a success apt.\n"
+    }
+  },
+  "examples": [
+    "A student reliably checks claims against several sources.",
+    "A student who reliably spots weak evidence across several kinds of claim."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000056",
+  "labels": {
+    "en": "Epistemic Competence and Virtue"
+  },
+  "nonExamples": [
+    "A lucky correct guess.",
+    "A trait that never changes."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000031"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000035"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

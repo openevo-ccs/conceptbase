@@ -27,7 +27,9 @@
       "OE-SANDBOX-CONCEPT-000032",
       "OE-SANDBOX-CONCEPT-000033",
       "OE-SANDBOX-CONCEPT-000034",
-      "OE-SANDBOX-CONCEPT-000035"
+      "OE-SANDBOX-CONCEPT-000035",
+      "OE-SANDBOX-CONCEPT-000055",
+      "OE-SANDBOX-CONCEPT-000056"
     ],
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-knowledge",

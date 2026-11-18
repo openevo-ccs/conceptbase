@@ -28,7 +28,8 @@
     ],
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-representation",
-      "OE-CONCEPT-oe-interdisciplinary-knowledge"
+      "OE-CONCEPT-oe-interdisciplinary-knowledge",
+      "OE-SANDBOX-CONCEPT-000044"
     ]
   },
   "sandboxMeta": {

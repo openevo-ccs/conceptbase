@@ -1,0 +1,50 @@
+{
+  "citations": [
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    },
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    },
+    {
+      "doi": "10.1007/s11251-022-09610-8",
+      "text": "Cottone, A. M., Yoon, S. A., Shim, J., Coulter, B., & Carman, S. (2023). Evaluating the apt epistemic processes of data literacy in elementary school students. Instructional Science, 51(1), 1-37."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Apt-AIR's second aspect: fitting aims, ideals and processes to the task, topic and discipline, including choosing different criteria for different kinds of model. Cottone and colleagues (2023) could not judge adaptivity from two short lessons. Barzilai and Chinn (2018) say little is known about how to foster it, and the 2024 review reports teachers in one course were less likely to reflect on it.\n"
+    }
+  },
+  "examples": [
+    "Students use different criteria for a descriptive model than for an explanatory one.",
+    "A learner tests whether a method used in math fits a new science question."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000058",
+  "labels": {
+    "en": "Adaptive Epistemic Performance"
+  },
+  "nonExamples": [
+    "Using one method for every problem.",
+    "A single correct answer."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000035",
+      "OE-SANDBOX-CONCEPT-000043"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000043"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

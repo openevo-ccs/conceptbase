@@ -1,0 +1,44 @@
+{
+  "citations": [
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    },
+    {
+      "text": "Hanisch, S., & Eirdosh, D. (in press). Book on evolutionary anthropology in education, as restated in a claim list (chapters 1, 5, 8, 12, 14, 15); the manuscript was not available to check."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "People's often implicit ideas about why people act as they do, built up from their own experience. The design concept argues that they affect how people notice, interpret and react to their own and others' behavior. A restatement of the in-press book adds that cultural surroundings such as parents, media and teachers contribute.\n"
+    }
+  },
+  "examples": [
+    "A belief that intelligence is fixed that lowers the wish to take on challenges.",
+    "An assumption that people act only from self-interest."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000065",
+  "labels": {
+    "en": "Mental Models of Human Behavior"
+  },
+  "nonExamples": [
+    "A taught fact checked against evidence.",
+    "A single opinion about one event."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000037"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000063"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

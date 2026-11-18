@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Apt-AIR's fourth aspect: motivational dispositions and epistemic emotions that put a person in a position to know, such as caring about getting it right and enjoying finding out. They are not sufficient for knowledge on their own.\n"
+    }
+  },
+  "examples": [
+    "A student cares enough to recheck a claim.",
+    "A group enjoys testing its model."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000059",
+  "labels": {
+    "en": "Epistemic Caring and Enjoying"
+  },
+  "nonExamples": [
+    "Indifference to accuracy.",
+    "A reward from outside."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000035",
+      "OE-SANDBOX-CONCEPT-000044"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000044"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

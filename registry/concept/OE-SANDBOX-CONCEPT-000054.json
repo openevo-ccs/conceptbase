@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's discovery of the active mind: Phenomenological awareness, social experience, and knowledge about cognition. Springer."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Pillow keeps two kinds of knowledge apart: knowledge about mental states, such as what a person knows, believes, feels or wants, and knowledge about cognitive activities, the processes such as attending, remembering and reasoning that produce and change those states. Most earlier work on children's understanding of the mind concerned mental states.\n"
+    }
+  },
+  "examples": [
+    "Understanding that a friend believes something false (mental state).",
+    "Understanding that remembering takes effort (cognitive activity)."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000054",
+  "labels": {
+    "en": "Cognitive Activities Versus Mental States"
+  },
+  "nonExamples": [
+    "Treating a friend's false belief and a memory strategy as the same kind of knowledge.",
+    "A brain structure."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000036"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

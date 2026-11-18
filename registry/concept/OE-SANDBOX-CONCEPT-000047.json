@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's discovery of the active mind: Phenomenological awareness, social experience, and knowledge about cognition. Springer."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Pillow's second kind of knowledge about cognitive activities: beliefs about functional relations, similarities and differences among different mental activities, for example how know, think and guess differ in certainty, or how activities differ in whether they take in information or produce a result.\n"
+    }
+  },
+  "examples": [
+    "Placing know, think and guess on a scale from certain to uncertain.",
+    "Grouping activities by whether they take in information or produce a result."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000047",
+  "labels": {
+    "en": "Organizational Knowledge"
+  },
+  "nonExamples": [
+    "Knowing that a mental activity happens.",
+    "Knowing a single word's meaning."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000036"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000046",
+      "OE-SANDBOX-CONCEPT-000048"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

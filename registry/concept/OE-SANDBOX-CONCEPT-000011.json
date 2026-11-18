@@ -31,15 +31,20 @@
     "en": "Metacognition"
   },
   "relations": {
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-000039",
+      "OE-SANDBOX-CONCEPT-000040",
+      "OE-SANDBOX-CONCEPT-000041",
+      "OE-SANDBOX-CONCEPT-000042",
+      "OE-SANDBOX-CONCEPT-000043",
+      "OE-SANDBOX-CONCEPT-000044",
+      "OE-SANDBOX-CONCEPT-000045",
+      "OE-SANDBOX-CONCEPT-000049"
+    ],
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
       "OE-SANDBOX-CONCEPT-000010",
-      "OE-SANDBOX-CONCEPT-000013",
-      "OE-SANDBOX-CONCEPT-000031",
-      "OE-SANDBOX-CONCEPT-000035",
-      "OE-SANDBOX-CONCEPT-000036",
-      "OE-SANDBOX-CONCEPT-000037",
-      "OE-SANDBOX-CONCEPT-000038"
+      "OE-SANDBOX-CONCEPT-000013"
     ]
   },
   "sandboxMeta": {

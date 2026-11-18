@@ -1,0 +1,43 @@
+{
+  "citations": [
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Practice with the Noticing Tool: telling inner behavior (thoughts, feelings) from outer behavior (actions), and judging what function each serves, for example whether it avoids discomfort or serves a value. The paper treats it as a way to practise awareness, acceptance and re-orienting behavior.\n"
+    }
+  },
+  "examples": [
+    "Filling in a matrix of inner and outer behavior for a hard situation.",
+    "A group sharing their matrices."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000067",
+  "labels": {
+    "en": "Noticing Inner and Outer Behavior"
+  },
+  "nonExamples": [
+    "Judging someone else's motives.",
+    "A test score."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000037",
+      "OE-SANDBOX-CONCEPT-000039"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000039",
+      "OE-SANDBOX-CONCEPT-000066"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

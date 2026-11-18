@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's discovery of the active mind: Phenomenological awareness, social experience, and knowledge about cognition. Springer."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Pillow's first kind of knowledge about cognitive activities: knowing that a mental activity happens, what it typically produces, and in which situations it is likely to occur, for automatic and for deliberate activities.\n"
+    }
+  },
+  "examples": [
+    "A child knows that looking for a lost toy involves remembering.",
+    "A six-year-old rates a conclusion worked out from clues as more certain than a guess."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000046",
+  "labels": {
+    "en": "Occurrence Knowledge"
+  },
+  "nonExamples": [
+    "Knowing how remembering and reasoning are related to each other.",
+    "Knowing facts that were learned."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000036"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000047",
+      "OE-SANDBOX-CONCEPT-000048"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

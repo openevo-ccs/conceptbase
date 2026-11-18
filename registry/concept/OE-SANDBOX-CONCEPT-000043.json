@@ -1,0 +1,49 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023), 2026-11-18. A shared field concept proposed by the comparison; no source defines it."
+    },
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    },
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Carrying an understanding or a way of performing into a new task, subject or situation, and adjusting it to fit. The Hanisch and Eirdosh paper treats transfer as a design goal supported by an underlying competency. Barzilai and Chinn treat adaptivity to task and discipline as one of five aspects of apt performance.\n"
+    }
+  },
+  "examples": [
+    "Using a payoff matrix from a lesson on cooperation to explain a different social dilemma.",
+    "Students choosing different criteria for a descriptive model than for an explanatory one."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-000043",
+  "labels": {
+    "en": "Transfer and Adaptivity"
+  },
+  "nonExamples": [
+    "Repeating a worked example on the same task.",
+    "Applying a rule everywhere without checking the fit."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-000011"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-000058",
+      "OE-SANDBOX-CONCEPT-000069"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
