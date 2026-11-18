@@ -38,7 +38,7 @@ rationale: >
   learning's trial-and-error search and biological/cultural selection are
   not the same mechanism (reinforcement learning has no analogue of
   heritable variation between "generations" of a single learning run, and
-  its "reinforcement signal" is an externally-defined objective, not an
+  its "reinforcement signal" is an externally-defined objective and no
   emergent consequence of differential persistence). The LPM's own
   performance indicator (OE-STRAND-oe-interdisciplinary-k12-inheritance-variation-selection-912, 9-12) asks students to
   articulate exactly this genuine-analogy-vs-genuine-difference
