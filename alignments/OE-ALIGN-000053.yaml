@@ -1,0 +1,20 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000053.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-000053
+subject: OE-SANDBOX-CONCEPT-000051
+object: OE-SANDBOX-CONCEPT-000060
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 12 of the concept decision sheet (zone 3). Pillow: Social Experience (Pillow). Barzilai and
+  Chinn: Joint Epistemic Performance. What they share: Both give other people a part in epistemic and
+  metacognitive life. What keeps them apart: In Pillow they are a source of information for children.
+  In Apt-AIR they are partners in doing epistemic work and building norms.

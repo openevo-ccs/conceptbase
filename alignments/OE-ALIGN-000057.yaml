@@ -1,0 +1,23 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000057.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-000057
+subject: OE-SANDBOX-CONCEPT-000058
+object: OE-SANDBOX-CONCEPT-000064
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 17 of the concept decision sheet (zone 4). Barzilai and Chinn: Adaptive Epistemic Performance.
+  Hanisch and Eirdosh: Adaptive Flexibility. What they share: Both concern adjusting conduct to
+  circumstances in service of an aim. The design concept takes its term from contextual behavioral
+  science and does not borrow it from Apt-AIR. What keeps them apart: Apt-AIR's adaptivity fits
+  epistemic processes to the task so that knowing succeeds. The design concept's flexibility fits
+  behavior to chosen values and includes accepting discomfort. Treat the shared word as a prompt to
+  compare the two.

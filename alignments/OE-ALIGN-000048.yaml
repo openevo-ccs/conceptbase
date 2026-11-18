@@ -1,0 +1,20 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000048.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-000048
+subject: OE-SANDBOX-CONCEPT-000049
+object: OE-SANDBOX-CONCEPT-000067
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 7 of the concept decision sheet (zone 1). Pillow: Phenomenological Awareness. Hanisch and
+  Eirdosh: Noticing Inner and Outer Behavior. What they share: Both are about noticing one's own
+  mental events. What keeps them apart: Pillow describes what children do. The Noticing Tool is a
+  practice.

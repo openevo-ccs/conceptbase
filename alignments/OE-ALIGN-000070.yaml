@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-000070.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-000070
+subject: OE-SANDBOX-CONCEPT-000031
+object: OE-SANDBOX-CONCEPT-000048
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 35 of the concept decision sheet (zone 7). Barzilai and Chinn: Epistemic Thinking. Pillow:
+  Epistemological Thought. What they share: Epistemological thought is an account of thinking about
+  knowledge. What keeps them apart: Pillow describes it as one of three overlapping kinds of knowledge
+  about cognitive activities, with a rough developmental order. Barzilai and Chinn describe epistemic
+  thinking as the domain and set apt epistemic performance as the goal.

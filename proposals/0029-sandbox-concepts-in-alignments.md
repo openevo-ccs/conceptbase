@@ -2,7 +2,7 @@
 
 **Type:** `content`
 
-**Status:** `proposed`
+**Status:** `proposed` (Dustin Eirdosh chose this option on 2026-11-18. Merging this pull request is the maintainer approval. The schema change and the 29 alignments it allows are in the same pull request.)
 **Author(s):** AI-drafted (Claude), for the OpenEvo Computational Curriculum Studies Working Group. No domain editor has reviewed it.
 **Date:** 2026-11-18
 
@@ -14,7 +14,7 @@ Creating three permanent vocabularies first would need a review of the framework
 
 ## Proposed change
 
-Extend `alignmentConceptRef` in `schemas/common.defs.yaml` to also accept `OE-SANDBOX-CONCEPT-######`. An alignment that references a sandbox concept carries `status: proposed` or `contested` only, and it is dropped from the registry when either end expires or is promoted without a matching alignment. The decision sheet `metacognition-concept-alignment-decisions-2026-11-18.md` in lab_manager lists the pairs waiting for a person's decision. No alignment records are written until a person decides.
+Extend `alignmentConceptRef` in `schemas/common.defs.yaml` to also accept `OE-SANDBOX-CONCEPT-######`. An alignment that references a sandbox concept carries `status: proposed` or `contested` only, and it is dropped from the registry when either end expires or is promoted without a matching alignment. The decision sheet `metacognition-concept-alignment-decisions-2026-11-18.md` in lab_manager lists the pairs waiting for a person's decision. The 29 alignments in this pull request (`OE-ALIGN-000042` to `000070`) are the pairs Dustin Eirdosh accepted on 2026-11-18, all `proposed`.
 
 ## Relations
 
