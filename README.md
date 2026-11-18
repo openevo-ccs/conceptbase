@@ -101,13 +101,13 @@ Reserved ontology classes for later phases (`Collection`, `Assessment`, `Practic
 
 The Phase 1 pilot review surfaced a series of changes worth making immediately rather than deferring to their originally-scheduled phase. All went through the full RFC process (see [Governance & Contributing](#governance--contributing)):
 
-- **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-######`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
+- **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
 - **[RFC-0002](proposals/0002-competency-case-profile.md)** — profiled `oe:Competency` as an extension of CASE (1EdTech) `CFItem` and promoted it out of `reserved` into a stable Phase 1 class, ahead of its original Phase 4 slot, after verifying the mapping against a reference CASE implementation.
 - **[RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)** — built the MVP flat-JSON/raw-YAML resolution scheme (`scripts/build_registry.py`, `registry/`, `app/registry/resolve.html`) needed before the namespace could be registered at all, fixed the GitHub Pages deploy, and submitted the registration PR that has since merged.
 - **[RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md)** — relicensed all ConceptBase content from CC-BY-4.0 to CC-BY-NC-SA-4.0.
 - **[RFC-0005](proposals/0005-citation-only-competency-entries.md)** — added a `citationOnly` mode to `oe:Competency` for sources (e.g. Virginia's CASE-formatted state standards) whose license permits citing structure/existence but not republishing statement text verbatim; see [`docs/design-notes/state-standards-licensing.md`](docs/design-notes/state-standards-licensing.md).
 - **[RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)** and **[RFC-0007](proposals/0007-ai4k12-vocabulary.md)** — the first two full-text competency vocabularies ingested from official frameworks with permissive licenses: `NGSS-LIFE-SCIENCE-v1.0.0` (53 entries) and `AI4K12-v1.0.0` (381 entries).
-- **[RFC-0008](proposals/0008-alignment-competency-support.md)** — widened alignment records to reference `oe:Competency` entries as well as `oe:Concept`, unblocking the first concept↔competency alignments (`OE-ALIGN-000003`–`000005`) and extending `build_registry.py`/the w3id resolution rules to cover `/competency/{id}`.
+- **[RFC-0008](proposals/0008-alignment-competency-support.md)** — widened alignment records to reference `oe:Competency` entries as well as `oe:Concept`, unblocking the first concept↔competency alignments (`OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch`–`000005`) and extending `build_registry.py`/the w3id resolution rules to cover `/competency/{id}`.
 
 Ontology `v1.3.0` reflects RFC-0001/0002; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)). Ontology `v1.3.1` and spec `v0.4.0` reflect [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md). `schemas/competency.schema.yaml` reached `v1.1.0` with RFC-0005's `citationOnly` addition; `schemas/common.defs.yaml` reached `v1.4.0` with RFC-0008's widened `alignmentConceptRef` pattern.
 
@@ -158,11 +158,11 @@ conceptbase/
 │   ├── OE-INTERDISCIPLINARY-v1.0.0.yaml
 │
 ├── alignments/                # Phase 2, forward-implemented — 5 records so far
-│   ├── OE-ALIGN-000001.yaml    # BIO-CORE <-> OE-INTERDISCIPLINARY (concept<->concept)
-│   ├── OE-ALIGN-000002.yaml
-│   ├── OE-ALIGN-000003.yaml    # concept<->competency, first enabled by RFC-0008
-│   ├── OE-ALIGN-000004.yaml
-│   └── OE-ALIGN-000005.yaml
+│   ├── OE-ALIGN-bio-core-natural-selection-to-oe-interdisciplinary-selection-closematch.yaml    # BIO-CORE <-> OE-INTERDISCIPLINARY (concept<->concept)
+│   ├── OE-ALIGN-bio-core-inheritance-to-oe-interdisciplinary-inheritance-closematch.yaml
+│   ├── OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch.yaml    # concept<->competency, first enabled by RFC-0008
+│   ├── OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch.yaml
+│   └── OE-ALIGN-oe-interdisciplinary-agency-to-ai4k12-4-d-i-relatedmatch-asserted-2026-07-20.yaml
 │
 ├── registry/                   # Generated (scripts/build_registry.py) — MVP flat-JSON,
 │   │                            # deployed as-is to GitHub Pages (.github/workflows/pages.yml)
@@ -326,7 +326,7 @@ Every addition — a new concept, relation, schema, or vocabulary — goes throu
 1. **Propose** via a PR to `proposals/`, using the template (motivation, proposed IRI under `www.w3id.org/openevo/`, why no existing standard covers it).
 2. **Review**, split by how much permanence is at stake ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)): a single maintainer (or a 5-business-day no-objection window) is enough for a new sandbox-tier entry or a `proposed`-status draft; the full domain-editor + maintainer bar applies specifically to `proposed → accepted` promotion and sandbox → permanent promotion — the moment the never-delete guarantee actually starts to apply.
 3. **Lifecycle status** tracked explicitly: `proposed → accepted → stable → deprecated/superseded`, plus a parallel terminal `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)) for entities accepted in error or no longer endorsed, with no implied replacement.
-4. **Never deleted** (permanent tier only) — deprecated, superseded, and retracted entities all remain resolvable indefinitely, so dependent repositories are never broken by an upstream change. Controlled-vocabulary concepts can also be tried first in a **sandbox tier** (`OE-SANDBOX-CONCEPT-######`, 12-month expiry unless promoted) before taking on that permanence commitment.
+4. **Never deleted** (permanent tier only) — deprecated, superseded, and retracted entities all remain resolvable indefinitely, so dependent repositories are never broken by an upstream change. Controlled-vocabulary concepts can also be tried first in a **sandbox tier** (`OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>`, 12-month expiry unless promoted) before taking on that permanence commitment.
 
 Each vocabulary, schema, and ontology module is versioned independently using semver (`MAJOR.MINOR.PATCH`), with breaking changes requiring a major version bump and a documented migration path.
 

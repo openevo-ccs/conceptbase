@@ -18,7 +18,7 @@ This document defines the RFC/review process by which the ConceptBase evolves, t
 
 Any addition of a Concept, relation, schema, or vocabulary **MUST** be submitted as a pull request against `/proposals/`, using the RFC template (motivation, proposed IRI under `www.w3id.org/openevo/`, relations, justification for why no existing standard covers the need — see spec §3 item 4 and §12). Review ceremony is split by status transition (RFC-0001, spec §11.2):
 
-- Merging a new `OE-SANDBOX-CONCEPT-######` entry, a new `OE-SANDBOX-LPM-######` entry (RFC-0010), or a `proposed`-status permanent-tier entry, needs only one maintainer approval (or a 5-business-day async no-objection window) — no domain editor sign-off required.
+- Merging a new `OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>` entry, a new `OE-SANDBOX-LPM-<repo-slug>-<ref-slug>` entry (RFC-0010), or a `proposed`-status permanent-tier entry, needs only one maintainer approval (or a 5-business-day async no-objection window) — no domain editor sign-off required.
 - The `proposed → accepted` transition, and sandbox → permanent promotion, still require at least one domain editor approval and one maintainer approval before merge — that's the point where the permanence guarantee actually begins to apply.
 
 Changes to specification §3 (Design Principles) or §11 (Governance and Versioning) are **MAJOR** changes to the specification itself and require explicit maintainer consensus via an RFC tagged `type: specification-amendment` (spec §11.6).
@@ -47,11 +47,13 @@ A `retracted` entity (RFC-0001) follows the same rules but **MUST NOT** carry a 
 
 ## Sandbox/Provisional Tier
 
-Per spec §4.5 (RFC-0001), controlled-vocabulary concept entries may also be authored in a parallel, structurally distinct `OE-SANDBOX-CONCEPT-######` space, exempt from the Deprecation Policy above by construction — sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`), never the `status` enum above. Every sandbox entry is stamped with a 12-month `expiresOn` at creation and auto-archived if not promoted through the ordinary RFC process before then. Spec §4.5 is authoritative; this section exists only to surface the rule here for day-to-day operability.
+Per spec §4.5 (RFC-0001), controlled-vocabulary concept entries may also be authored in a parallel, structurally distinct `OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>` space, exempt from the Deprecation Policy above by construction — sandbox entries carry `sandboxMeta.status` (`active | archived | promoted`), never the `status` enum above. Every sandbox entry is stamped with a 12-month `expiresOn` at creation and auto-archived if not promoted through the ordinary RFC process before then. Spec §4.5 is authoritative; this section exists only to surface the rule here for day-to-day operability.
 
-**Extended to `oe:LPM` by RFC-0010** (realizing spec §4.5's own forward-declared extension point): a whole LPM may likewise be authored provisionally as `OE-SANDBOX-LPM-######`, carrying `sandboxMeta` instead of `status`, exempt from the never-delete guarantee by the same construction. This is a *different* axis of variation from an LPM's own SubStrand-level `trajectoryVariants` (RFC-0009) — a sandbox LPM is a fork of an entire model's theoretical or thematic framing (`oe:forkedFrom` records lineage; `oe:mergedInto` records absorption into another LPM on archival), not an alternate path through one SubStrand's content. Merging a new `OE-SANDBOX-LPM-######` entry follows the same lightweight review below as sandbox concepts; promoting one to a permanent `OE-LPM-######` requires the full RFC process. Practically, a sandbox LPM's content is expected to live at a `repository`/`ref` pointer (e.g. a `sandbox/<short-name>` git branch of its trunk LPM's repository) rather than being copied into the registry — see RFC-0010 §7.
+**Extended to `oe:LPM` by RFC-0010** (realizing spec §4.5's own forward-declared extension point): a whole LPM may likewise be authored provisionally as `OE-SANDBOX-LPM-<repo-slug>-<ref-slug>`, carrying `sandboxMeta` instead of `status`, exempt from the never-delete guarantee by the same construction. This is a *different* axis of variation from an LPM's own SubStrand-level `trajectoryVariants` (RFC-0009) — a sandbox LPM is a fork of an entire model's theoretical or thematic framing (`oe:forkedFrom` records lineage; `oe:mergedInto` records absorption into another LPM on archival). It is not an alternate path through one SubStrand's content. Merging a new `OE-SANDBOX-LPM-<repo-slug>-<ref-slug>` entry follows the same lightweight review below as sandbox concepts; promoting one to a permanent `OE-LPM-<slug>` requires the full RFC process. Practically, a sandbox LPM's content is expected to live at a `repository`/`ref` pointer (e.g. a `sandbox/<short-name>` git branch of its trunk LPM's repository) rather than being copied into the registry — see RFC-0010 §7.
 
-**Extended to `oe:Strand`/`oe:SubStrand`** (a same-day companion fix alongside the first sandbox LPM forks, 2026-07-21): a sandbox-tier LPM authoring genuinely new Strand/SubStrand content has no permanent per-LPM strand block to mint from (those belong to founding, permanent-tier LPMs only per Identifier Block Allocation below), so `OE-SANDBOX-STRAND-######` was added as a third application of the same pattern, carrying `sandboxMeta` in place of `status`. Every Strand/SubStrand authored within a sandbox-tier LPM fork is expected to use this identifier tier, not the permanent one.
+**Extended to `oe:Strand`/`oe:SubStrand`** (a same-day companion fix alongside the first sandbox LPM forks, 2026-07-21): a sandbox-tier LPM authoring new Strand/SubStrand content has no permanent per-LPM strand block to mint from (those belong to founding, permanent-tier LPMs only per Identifier Block Allocation below), so `OE-SANDBOX-STRAND-<sandbox-lpm-slug>` was added as a third application of the same pattern, carrying `sandboxMeta` in place of `status`. Every Strand/SubStrand authored within a sandbox-tier LPM fork is expected to use this identifier tier. It does not use the permanent one.
+
+**Ids are slugs (2026-11-18).** Sandbox identifiers are no longer numbered. A sandbox concept is `OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>` (the vocabulary slug as for permanent concepts, then the English label, normalized), for example `OE-SANDBOX-CONCEPT-oe-interdisciplinary-homo-economicus`. The prefix `OE-SANDBOX-` still keeps the tier apart from the permanent one. Alignments are `OE-ALIGN-<subject>-to-<object>-<match-type>`, and when two records join the same pair with the same match type, the assertion date is added. Framework relations and assessment ids follow the same rule. The old-to-new map of every id retired in this change is `registry/id-migration-map-2026-11-18.json`. Renaming a sandbox record is allowed, because the tier is exempt from the never-delete rule, and the change was made in every repository that used these ids in the same pass.
 
 ## Independent Versioning
 
@@ -87,8 +89,7 @@ suffix) and the concept's `labels.en`, normalized — the same pattern Competenc
 `lab_manager/docs/design-notes/foundational-repo-governance-standard-and-speciesbase-integration.md`.
 The table below is retained as **historical record of the original numeric allocation**, not a live
 registry; new vocabularies mint slug-based concept ids directly, no block reservation needed.
-`OE-SANDBOX-CONCEPT-######` ids are unaffected — the sandbox tier stays on its own sequential,
-provisional numbering (Sandbox/Provisional Tier above), by design.
+Sandbox concept ids moved to slugs on 2026-11-18 (see Sandbox/Provisional Tier above).
 
 | Vocabulary | Block (historical) | Currently used |
 |---|---|---|
@@ -110,8 +111,7 @@ grade-band token (`k2`/`35`/`68`/`912`) to its parent top-level strand's slug �
 `OE-STRAND-bio-core-k12-natural-selection-adaptation-k2` — rather than encoding position via a
 ten-block offset. The table below is retained as **historical record of the original numeric
 allocation**, not a live registry; a new LPM mints strand ids directly from its own slug, no block
-reservation needed. `OE-SANDBOX-STRAND-######` ids are unaffected — the sandbox tier stays on its
-own sequential, provisional numbering (Sandbox/Provisional Tier above), by design.
+reservation needed. Sandbox strand ids moved to slugs on 2026-11-18 (see Sandbox Strand IDs below).
 
 **Trajectory-variant SubStrand IDs (RFC-0009):** a `trajectoryVariants[]` entry (an alternate
 SubStrand body for the same grade-band slot, tagged with a `contextAssumption`) takes its own
@@ -137,9 +137,9 @@ since LPMs don't nest. `bio-core-k12` (`OE-LPM-000001` → `OE-LPM-bio-core-k12`
 (`OE-LPM-000601` → `OE-LPM-bee-k12`, registered 2026-09-11) are the three permanent-tier LPMs minted
 so far; a new LPM mints its id directly from its own repository slug, no sequence number needed.
 
-**Sandbox LPM IDs (`OE-SANDBOX-LPM-######`, RFC-0010):** assigned sequentially within their own namespace, independent of and not consuming the permanent `OE-LPM-######` sequence above — mirrors how sandbox concept IDs don't consume permanent-tier concept-block numbering. No per-founding-RFC block reservation needed (unlike vocabularies/LPMs); see the Sandbox/Provisional Tier section above for the lightweight review this tier gets.
+**Sandbox LPM IDs (`OE-SANDBOX-LPM-<repo-slug>-<ref-slug>`, RFC-0010):** the id names the trunk LPM's repository and the ref of the fork, for example `OE-SANDBOX-LPM-bio-core-k12-human-evolution-capstone`. They moved from sequential numbers to slugs on 2026-11-18 (decision of Dustin Eirdosh: no id is numbered any more). They are independent of the permanent `OE-LPM-<slug>` ids. No per-founding-RFC block reservation is needed. See the Sandbox/Provisional Tier section above for the lightweight review this tier gets.
 
-**Sandbox Strand IDs (`OE-SANDBOX-STRAND-######`):** likewise assigned sequentially within their own namespace, independent of any permanent-tier LPM's reserved strand block (see Strand ID blocks above). Each sandbox LPM's top-level Strand is a pure container (mirroring every trunk Strand file's shape); the actual content lives one level down in its SubStrand(s), and a SubStrand's trajectory variant (RFC-0009) gets its own ID rather than reusing the base SubStrand's. Currently in use: `000001`–`000003` (`OE-SANDBOX-LPM-000001`, one capstone SubStrand + one trajectory variant); `000004`–`000009` (`OE-SANDBOX-LPM-000002`, four grade-band SubStrands, one with a trajectory variant); `000010`–`000012` (`OE-SANDBOX-LPM-000003`, one capstone SubStrand + variant); `000013`–`000015` (`OE-SANDBOX-LPM-000004`, one capstone SubStrand + variant).
+**Sandbox Strand IDs (`OE-SANDBOX-STRAND-<sandbox-lpm-slug>`):** the top-level strand of a sandbox LPM takes the slug of that LPM, for example `OE-SANDBOX-STRAND-bio-core-k12-human-evolution-capstone`. Each sandbox LPM's top-level Strand is a pure container; the content lives one level down in its SubStrand(s), whose ids extend the strand's slug with the SubStrand's own slug, and a SubStrand's trajectory variant (RFC-0009) gets its own id. Moved from sequential numbers on 2026-11-18. The four top-level strands that were in use are retired as follows: `000001` became `OE-SANDBOX-STRAND-bio-core-k12-human-evolution-capstone`, `000004` became `OE-SANDBOX-STRAND-bio-core-k12-human-evolution-k12-strand`, `000010` became `OE-SANDBOX-STRAND-interdisciplinary-k12-eva-capstone`, `000013` became `OE-SANDBOX-STRAND-interdisciplinary-k12-machine-culture-coevolution`. The SubStrand numbers in between (`000002`, `000003`, `000005` to `000009`, `000011`, `000012`, `000014`, `000015`) are retired as well. Sandbox branches in the LPM repositories that still use them are renamed when they are next touched.
 
 ### Competency ID blocks (`OE-COMPETENCY-0NNxxx`)
 
@@ -173,7 +173,7 @@ longer generates it.
 
 ### Learning Object and Alignment ID blocks
 
-Not yet allocated by block, since Phase 1 has zero Learning Object instances and only two Alignment records (`OE-ALIGN-000001`, `OE-ALIGN-000002`). Both `OE-LO-######` and `OE-ALIGN-######` are assigned sequentially for now; block allocation will be added to this table if/when a second independently governed repository starts minting either.
+Not yet allocated by block, since Phase 1 has zero Learning Object instances and only two Alignment records (`OE-ALIGN-bio-core-natural-selection-to-oe-interdisciplinary-selection-closematch`, `OE-ALIGN-bio-core-inheritance-to-oe-interdisciplinary-inheritance-closematch`). Both `OE-LO-######` and `OE-ALIGN-<subject>-to-<object>-<match-type>` are assigned sequentially for now; block allocation will be added to this table if/when a second independently governed repository starts minting either.
 
 ## Compatibility Checking
 

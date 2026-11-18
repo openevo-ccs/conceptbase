@@ -105,7 +105,7 @@ concepts:
           ursprüngliche Quelle genetischer Variation innerhalb einer
           Population dient.
     relations:
-      skos:related: [OE-CONCEPT-bio-core-gene, OE-CONCEPT-bio-core-allele, OE-CONCEPT-bio-core-natural-selection, OE-SANDBOX-CONCEPT-000002, OE-CONCEPT-bio-core-evo-devo, OE-CONCEPT-bio-core-recombination]
+      skos:related: [OE-CONCEPT-bio-core-gene, OE-CONCEPT-bio-core-allele, OE-CONCEPT-bio-core-natural-selection, OE-SANDBOX-CONCEPT-bio-core-ancient-dna, OE-CONCEPT-bio-core-evo-devo, OE-CONCEPT-bio-core-recombination]
 
   - id: OE-CONCEPT-bio-core-adaptation
     type: oe:Concept
@@ -240,7 +240,7 @@ concepts:
           und fruchtbare Nachkommen hervorbringen können und die in der
           Regel von anderen solchen Gruppen reproduktiv isoliert ist.
     relations:
-      skos:related: [OE-CONCEPT-bio-core-speciation, OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-population, OE-CONCEPT-bio-core-extinction, OE-SANDBOX-CONCEPT-000001, OE-CONCEPT-bio-core-origin-of-multicellularity]
+      skos:related: [OE-CONCEPT-bio-core-speciation, OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-population, OE-CONCEPT-bio-core-extinction, OE-SANDBOX-CONCEPT-bio-core-hominin, OE-CONCEPT-bio-core-origin-of-multicellularity]
 
   - id: OE-CONCEPT-bio-core-speciation
     type: oe:Concept
@@ -326,7 +326,7 @@ concepts:
           Die evolutionäre Geschichte und Verwandtschaft einer Gruppe
           von Organismen, meist als verzweigter Stammbaum dargestellt.
     relations:
-      skos:related: [OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-evolution, OE-SANDBOX-CONCEPT-000001, OE-CONCEPT-bio-core-homology]
+      skos:related: [OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-evolution, OE-SANDBOX-CONCEPT-bio-core-hominin, OE-CONCEPT-bio-core-homology]
 
   - id: OE-CONCEPT-bio-core-common-ancestor
     type: oe:Concept
@@ -346,7 +346,7 @@ concepts:
           Ein Organismus oder eine Population, von dem bzw. der zwei
           oder mehr Abstammungslinien abgezweigt sind.
     relations:
-      skos:related: [OE-CONCEPT-bio-core-phylogeny, OE-CONCEPT-bio-core-species, OE-SANDBOX-CONCEPT-000001, OE-CONCEPT-bio-core-homology, OE-CONCEPT-bio-core-endosymbiosis, OE-CONCEPT-bio-core-fossil-record]
+      skos:related: [OE-CONCEPT-bio-core-phylogeny, OE-CONCEPT-bio-core-species, OE-SANDBOX-CONCEPT-bio-core-hominin, OE-CONCEPT-bio-core-homology, OE-CONCEPT-bio-core-endosymbiosis, OE-CONCEPT-bio-core-fossil-record]
 
   - id: OE-CONCEPT-bio-core-selection-pressure
     type: oe:Concept
@@ -1247,13 +1247,13 @@ concepts:
   # ==========================================================================
   # SANDBOX TIER (RFC-0001, spec §4.5) — provisional, exempt from the
   # never-delete guarantee, TTL'd, not yet promoted through full RFC review.
-  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-000001/000002 (bio-core-k12
+  # Authored 2026-07-21 to ground OE-SANDBOX-LPM-bio-core-k12-human-evolution-capstone/000002 (bio-core-k12
   # sandbox forks on human evolutionary genetics and paleoanthropology,
   # strictly decentralized-causal framing, no agency vocabulary — see
   # docs/design-notes/human-dimensions-k12-case-study.md and RFC-0010).
   # ==========================================================================
 
-  - id: OE-SANDBOX-CONCEPT-000001
+  - id: OE-SANDBOX-CONCEPT-bio-core-hominin
     type: oe:Concept
     sandboxMeta:
       created: "2026-07-21"
@@ -1281,7 +1281,7 @@ concepts:
           taxonomisch-phylogenetische Kategorie, keine Kategorie mit
           Handlungsfähigkeits- oder Intentionalitätszuschreibung.
     relations:
-      skos:related: [OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-phylogeny, OE-CONCEPT-bio-core-species, OE-SANDBOX-CONCEPT-000002]
+      skos:related: [OE-CONCEPT-bio-core-common-ancestor, OE-CONCEPT-bio-core-phylogeny, OE-CONCEPT-bio-core-species, OE-SANDBOX-CONCEPT-bio-core-ancient-dna]
     examples:
       - Homo sapiens, Homo neanderthalensis, and Australopithecus afarensis
         are all hominins.
@@ -1289,7 +1289,7 @@ concepts:
       - Chimpanzees and other non-human great apes are close relatives but
         not hominins under the tribe-level definition used here.
 
-  - id: OE-SANDBOX-CONCEPT-000002
+  - id: OE-SANDBOX-CONCEPT-bio-core-ancient-dna
     type: oe:Concept
     sandboxMeta:
       created: "2026-07-21"
@@ -1316,7 +1316,7 @@ concepts:
           statt sie ausschließlich aus heutigen Populationen zu
           erschließen.
     relations:
-      skos:related: [OE-CONCEPT-bio-core-mutation, OE-SANDBOX-CONCEPT-000001]
+      skos:related: [OE-CONCEPT-bio-core-mutation, OE-SANDBOX-CONCEPT-bio-core-hominin]
     examples:
       - Sequencing DNA extracted from a Neanderthal fossil to compare it
         directly against present-day human genomes.

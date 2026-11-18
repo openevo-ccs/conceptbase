@@ -1,0 +1,35 @@
+{
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
+  "definitions": {
+    "de": {
+      "biology": "Genetisches Material, das aus historischen oder fossilen Überresten gewonnen und sequenziert wird und dadurch die unmittelbare Beobachtung genetischer Variation und Populationsgeschichte zu vergangenen Zeitpunkten ermöglicht, statt sie ausschließlich aus heutigen Populationen zu erschließen.\n"
+    },
+    "en": {
+      "biology": "Genetic material recovered and sequenced from historical or fossil remains, enabling direct observation of genetic variation and population history at past points in time rather than inferring it solely from present-day populations.\n"
+    }
+  },
+  "examples": [
+    "Sequencing DNA extracted from a Neanderthal fossil to compare it directly against present-day human genomes."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-bio-core-ancient-dna",
+  "labels": {
+    "de": "Alte DNA",
+    "en": "Ancient DNA"
+  },
+  "nonExamples": [
+    "Inferring past population size changes purely from patterns of variation in living populations, with no ancient sample sequenced (a legitimate but different method — population genetics, not ancient DNA analysis specifically)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-bio-core-mutation",
+      "OE-SANDBOX-CONCEPT-bio-core-hominin"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-07-21",
+    "expiresOn": "2027-07-21",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

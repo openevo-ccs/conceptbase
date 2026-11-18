@@ -62,7 +62,7 @@ meta:
 
 relations:
   # --- bk_struktur_funktion --------------------------------------------------
-  - id: OE-FRAMEWORK-RELATION-000001
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-struktur-funktion-enables-stoff-energie-umwandlung
     subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: enables
@@ -74,7 +74,7 @@ relations:
       spezifische Stoff- und Energieumwandlungsprozesse. Ohne Struktur
       keine Funktion im Stoffwechsel.
 
-  - id: OE-FRAMEWORK-RELATION-000002
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-struktur-funktion-enables-information-kommunikation
     subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: enables
@@ -86,7 +86,7 @@ relations:
       ist die notwendige Bedingung für Informationsaufnahme,
       -weiterleitung und -verarbeitung.
 
-  - id: OE-FRAMEWORK-RELATION-000003
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-struktur-funktion-is-explained-by-evolutive-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
@@ -98,7 +98,7 @@ relations:
       Selektion. Die evolutive Entwicklung liefert die historisch-
       kausale Erklärung für das Vorhandensein bestimmter Strukturen.
 
-  - id: OE-FRAMEWORK-RELATION-000004
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-struktur-funktion-enables-steuerung-regelung
     subject: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: enables
@@ -111,7 +111,7 @@ relations:
       Leitungswege (Nerven, Blutgefäße).
 
   # --- bk_stoff_energie_umwandlung -------------------------------------------
-  - id: OE-FRAMEWORK-RELATION-000005
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-stoff-energie-umwandlung-requires-struktur-funktion
     subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     object: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     relationType: requires
@@ -123,7 +123,7 @@ relations:
       Strukturen voraus (Alveolenbau für Gasaustausch, Darmzotten für
       Resorption, Mitochondrien für Zellatmung)
 
-  - id: OE-FRAMEWORK-RELATION-000006
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-stoff-energie-umwandlung-is-regulated-by-steuerung-regelung
     subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: isRegulatedBy
@@ -134,7 +134,7 @@ relations:
       Metabolische Zustandsgrößen (Blutzucker, CO₂-Konzentration,
       Osmolalität) werden durch Regelkreise konstant gehalten
 
-  - id: OE-FRAMEWORK-RELATION-000007
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-stoff-energie-umwandlung-enables-individuelle-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: enables
@@ -145,7 +145,7 @@ relations:
       Stoffwechselprozesse liefern die Energie für Wachstum, Zellteilung
       und Differenzierung in der Ontogenese
 
-  - id: OE-FRAMEWORK-RELATION-000008
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-stoff-energie-umwandlung-is-explained-by-evolutive-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
@@ -163,7 +163,7 @@ relations:
       von Grund auf geplantes Design
 
   # --- bk_information_kommunikation ------------------------------------------
-  - id: OE-FRAMEWORK-RELATION-000009
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-information-kommunikation-implements-steuerung-regelung
     subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: implements
@@ -174,7 +174,7 @@ relations:
       Informations- und Kommunikationsprozesse sind der Mechanismus,
       durch den biologische Regelkreise realisiert werden.
 
-  - id: OE-FRAMEWORK-RELATION-000010
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-information-kommunikation-requires-struktur-funktion
     subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     object: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     relationType: requires
@@ -186,7 +186,7 @@ relations:
       Sinnesorganarchitektur sind strukturelle Grundlagen aller
       Informationsprozesse.
 
-  - id: OE-FRAMEWORK-RELATION-000011
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-information-kommunikation-enables-individuelle-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: enables
@@ -198,7 +198,7 @@ relations:
       (Pubertät, Menstruationszyklus, Metamorphose);
       Informationsprozesse sind die kausalen Mechanismen der Ontogenese.
 
-  - id: OE-FRAMEWORK-RELATION-000012
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-information-kommunikation-is-explained-by-evolutive-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
@@ -216,7 +216,7 @@ relations:
       kohärent geplantes Kommunikationssystem
 
   # --- bk_steuerung_regelung -------------------------------------------------
-  - id: OE-FRAMEWORK-RELATION-000013
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-steuerung-regelung-is-implemented-by-information-kommunikation
     subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: isImplementedBy
@@ -228,7 +228,7 @@ relations:
       Kommunikationsprozesse realisiert (Hormone, Nervenimpulse als
       Signalträger der Rückkopplung)
 
-  - id: OE-FRAMEWORK-RELATION-000014
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-steuerung-regelung-regulates-stoff-energie-umwandlung
     subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: regulates
@@ -240,7 +240,7 @@ relations:
       Konzentration, Osmolalität) sind die Regelgrößen biologischer
       Kreise
 
-  - id: OE-FRAMEWORK-RELATION-000015
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-steuerung-regelung-controls-individuelle-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: controls
@@ -251,7 +251,7 @@ relations:
       Hormonelle Regelkreise steuern ontogenetische Prozesse (Pubertät,
       Menstruationszyklus, Metamorphose)
 
-  - id: OE-FRAMEWORK-RELATION-000016
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-steuerung-regelung-is-explained-by-evolutive-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
@@ -269,7 +269,7 @@ relations:
       technisches Design
 
   # --- bk_individuelle_entwicklung -------------------------------------------
-  - id: OE-FRAMEWORK-RELATION-000017
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-individuelle-entwicklung-is-controlled-by-steuerung-regelung
     subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: isControlledBy
@@ -280,7 +280,7 @@ relations:
       Individuelle Entwicklungsprozesse (Pubertät, Menstruationszyklus,
       Metamorphose) werden durch hormonelle Regelkreise gesteuert.
 
-  - id: OE-FRAMEWORK-RELATION-000018
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-individuelle-entwicklung-is-implemented-by-information-kommunikation
     subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: isImplementedBy
@@ -291,7 +291,7 @@ relations:
       Hormonelle Kommunikation ist der informationstheoretische
       Mechanismus, durch den Entwicklungsprozesse gesteuert werden.
 
-  - id: OE-FRAMEWORK-RELATION-000019
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-individuelle-entwicklung-requires-stoff-energie-umwandlung
     subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: requires
@@ -302,7 +302,7 @@ relations:
       Wachstum, Zellteilung und Differenzierung erfordern Energie und
       Baustoffe.
 
-  - id: OE-FRAMEWORK-RELATION-000020
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-individuelle-entwicklung-is-explained-by-evolutive-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: isExplainedBy
@@ -317,7 +317,7 @@ relations:
       Entwicklungsprogramme erklärbar, nicht als notwendige oder
       optimale Konstruktion
 
-  - id: OE-FRAMEWORK-RELATION-000021
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-individuelle-entwicklung-enables-evolutive-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     relationType: enables
@@ -331,7 +331,7 @@ relations:
       gibt es keine Selektion und keinen Artwandel
 
   # --- bk_evolutive_entwicklung ----------------------------------------------
-  - id: OE-FRAMEWORK-RELATION-000022
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-evolutive-entwicklung-explains-origin-of-struktur-funktion
     subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_struktur_funktion"
     relationType: explainsOriginOf
@@ -343,7 +343,7 @@ relations:
       Funktionen existieren: Sie sind das Ergebnis langfristiger
       Selektion auf funktionale Effizienz
 
-  - id: OE-FRAMEWORK-RELATION-000023
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-evolutive-entwicklung-explains-origin-of-stoff-energie-umwandlung
     subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_stoff_energie_umwandlung"
     relationType: explainsOriginOf
@@ -355,7 +355,7 @@ relations:
       (evolutionary tinkering) auf bereits vorhandenen biochemischen
       Grundlagen, nicht von Grund auf geplantes Design
 
-  - id: OE-FRAMEWORK-RELATION-000024
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-evolutive-entwicklung-explains-origin-of-information-kommunikation
     subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_information_kommunikation"
     relationType: explainsOriginOf
@@ -367,7 +367,7 @@ relations:
       evolutives Produkt: Wiederverwendung uralter Rezeptor-Familien,
       redundante parallele Kommunikationskanäle
 
-  - id: OE-FRAMEWORK-RELATION-000025
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-evolutive-entwicklung-explains-origin-of-steuerung-regelung
     subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_steuerung_regelung"
     relationType: explainsOriginOf
@@ -379,7 +379,7 @@ relations:
       Gepäck: suboptimale Sollwerte, verzögerte Rückkopplungsschleifen,
       redundante Regelmechanismen
 
-  - id: OE-FRAMEWORK-RELATION-000026
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-evolutive-entwicklung-explains-origin-of-individuelle-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: explainsOriginOf
@@ -391,7 +391,7 @@ relations:
       Kindheit, Immungedächtnis) sind selbst evolvierte Merkmale, kein
       notwendiges oder optimales Design
 
-  - id: OE-FRAMEWORK-RELATION-000027
+  - id: OE-FRAMEWORK-RELATION-kmk-basiskonzepte-biologie-2024-evolutive-entwicklung-requires-individuelle-entwicklung
     subject: "kmk-basiskonzepte-biologie-2024:bk_evolutive_entwicklung"
     object: "kmk-basiskonzepte-biologie-2024:bk_individuelle_entwicklung"
     relationType: requires
