@@ -156,8 +156,6 @@ conceptbase/
 ├── vocabularies/
 │   ├── BIO-CORE-v1.2.0.yaml
 │   ├── OE-INTERDISCIPLINARY-v1.0.0.yaml
-│   ├── NGSS-LIFE-SCIENCE-v1.0.0.yaml   # oe:Competency, 53 entries (RFC-0006)
-│   └── AI4K12-v1.0.0.yaml              # oe:Competency, 381 entries (RFC-0007)
 │
 ├── alignments/                # Phase 2, forward-implemented — 5 records so far
 │   ├── OE-ALIGN-000001.yaml    # BIO-CORE <-> OE-INTERDISCIPLINARY (concept<->concept)
@@ -358,7 +356,7 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [x] **Registered the `www.w3id.org/openevo/` namespace** — [perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389) merged, namespace is live
 - [x] Content relicensed CC-BY-4.0 → CC-BY-NC-SA-4.0 ([RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md))
 - [x] Phase 4 (RFC-0005, ahead of schedule): `citationOnly` competency entries for license-restricted CASE sources
-- [x] Phase 2 (RFC-0006/0007, ahead of schedule): First two full-text competency vocabularies, `NGSS-LIFE-SCIENCE-v1.0.0` and `AI4K12-v1.0.0`
+- [x] Phase 2 (RFC-0006/0007, ahead of schedule; the two vocabularies moved to CompetencyBase and were removed here on 2026-11-18): First two full-text competency vocabularies, `NGSS-LIFE-SCIENCE-v1.0.0` and `AI4K12-v1.0.0`
 - [x] Phase 2 (RFC-0008, ahead of schedule): Concept↔competency alignment support; 3 new alignment records
 - [x] Concept Lens view added to the ConceptBase Explorer; Selection cross-domain case study published
 - [x] Developer onboarding: `docs/getting-started.md`, `examples/`, offline `scripts/validate.py`, Explorer welcome banner + `?lens=` deep link

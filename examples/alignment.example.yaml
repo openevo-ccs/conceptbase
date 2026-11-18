@@ -15,7 +15,7 @@
 
 id: OE-ALIGN-000900
 subject: EXAMPLE-CONCEPT-VOCAB-v1.0.0:OE-CONCEPT-000900
-object: EXAMPLE-COMPETENCY-VOCAB-v1.0.0:OE-COMPETENCY-000900
+object: EXAMPLE-COMPETENCY-VOCAB-v1.0.0:OE-COMPETENCY-example-vocab-example-code
 matchType: skos:closeMatch
 assertedBy:
   - "Your Name or Working Group"
