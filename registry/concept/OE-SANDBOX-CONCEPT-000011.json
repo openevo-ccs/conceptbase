@@ -34,7 +34,9 @@
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
       "OE-SANDBOX-CONCEPT-000010",
-      "OE-SANDBOX-CONCEPT-000013"
+      "OE-SANDBOX-CONCEPT-000013",
+      "OE-SANDBOX-CONCEPT-000031",
+      "OE-SANDBOX-CONCEPT-000035"
     ]
   },
   "sandboxMeta": {
