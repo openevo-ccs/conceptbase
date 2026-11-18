@@ -2,12 +2,12 @@
 # Path: /alignments/OE-ALIGN-000028.yaml
 # ============================================================================
 # Proposed by RFC-0028. Concept-to-competency alignment of an Interdisciplinary concept with an AI4K12 concept row (cf. OE-ALIGN-000003 to 000005).
-# AI-drafted, unreviewed. The AI4K12 id is the one ConceptBase's AI4K12 vocabulary uses for humanCodingScheme 3-A-vi.
+# AI-drafted, unreviewed. The AI4K12 id is the one CompetencyBase's AI4K12 records use for humanCodingScheme 3-A-vi.
 # ============================================================================
 
 id: OE-ALIGN-000028
 subject: OE-INTERDISCIPLINARY-v1.0.0:OE-CONCEPT-oe-interdisciplinary-learning
-object: AI4K12-v1.0.0:OE-COMPETENCY-000395
+object: AI4K12-v1.0.0:OE-COMPETENCY-ai4k12-3-a-vi
 matchType: skos:narrowMatch
 assertedBy:
   - OpenLPM comparative flagship build (AI draft, Claude), for the OpenEvo Computational Curriculum Studies Working Group
