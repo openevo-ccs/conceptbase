@@ -132,9 +132,9 @@ All entity identifiers **MUST** conform to the following patterns, enforced by `
 
 | Entity type | Pattern | Example |
 |---|---|---|
-| Concept | `^OE-CONCEPT-[0-9]{6}$` | `OE-CONCEPT-oe-interdisciplinary-selection` |
-| LPM | `^OE-LPM-[0-9]{6}$` | `OE-LPM-000001` |
-| Strand/SubStrand | `^OE-STRAND-[0-9]{6}$` | `OE-STRAND-000101` |
+| Concept | `^OE-CONCEPT-[a-z0-9-]+$` | `OE-CONCEPT-oe-interdisciplinary-selection` |
+| LPM | `^OE-LPM-[a-z0-9-]+$` | `OE-LPM-bio-core-k12` |
+| Strand/SubStrand | `^OE-STRAND-[a-z0-9-]+$` | `OE-STRAND-bio-core-k12-variation-inheritance` |
 | Vocabulary reference | `^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$` | `BIO-CORE-v1.0.0` |
 
 ### 4.4 Identifier Permanence
@@ -536,15 +536,15 @@ A repository that references ConceptBase entities without a valid manifest, or t
 ## Appendix A — Identifier Pattern Quick Reference
 
 ```
-Concept:       ^OE-CONCEPT-[0-9]{6}$
-LPM:           ^OE-LPM-[0-9]{6}$
-Strand:        ^OE-STRAND-[0-9]{6}$
+Concept:       ^OE-CONCEPT-[a-z0-9-]+$
+LPM:           ^OE-LPM-[a-z0-9-]+$
+Strand:        ^OE-STRAND-[a-z0-9-]+$
 Vocabulary:    ^[A-Z0-9\-]+-v[0-9]+\.[0-9]+\.[0-9]+$
 Semver:        ^[0-9]+\.[0-9]+\.[0-9]+$
 Language:      ^[a-z]{2}(-[A-Z]{2})?$
-Sandbox Concept: ^OE-SANDBOX-CONCEPT-[0-9]{6}$   (RFC-0001)
-Sandbox LPM:     ^OE-SANDBOX-LPM-[0-9]{6}$        (RFC-0010)
-Sandbox Strand:  ^OE-SANDBOX-STRAND-[0-9]{6}$     (RFC-0010 companion fix, 2026-07-21)
+Sandbox Concept: ^OE-SANDBOX-CONCEPT-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$   (RFC-0001)
+Sandbox LPM:     ^OE-SANDBOX-LPM-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$        (RFC-0010)
+Sandbox Strand:  ^OE-SANDBOX-STRAND-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$     (RFC-0010 companion fix, 2026-07-21)
 ```
 
 ## Appendix B — Reserved Ontology Prefixes

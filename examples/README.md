@@ -2,7 +2,7 @@
 
 Minimal, single-entry, heavily-commented instances of each `oe:*` type — the copy-paste starting point the main [README](../README.md) has long flagged as missing (`examples/` "planned but not yet present").
 
-These are **illustrative only, not registered**: every ID here (`OE-CONCEPT-000900`, `OE-LPM-000900`, etc.) uses a block explicitly outside any block reserved in [`GOVERNANCE.md`](../GOVERNANCE.md)'s Identifier Block Allocation tables (all real blocks so far sit in `000100`–`000699`), and none of these files are wired into `registry/` or `vocabularies/*.yaml`. None of these IDs resolve at `w3id.org/openevo/`. If you're starting your own vocabulary or LPM, copy the shape, then reserve your own block via the RFC process (see [`GOVERNANCE.md`](../GOVERNANCE.md)) before minting real IDs.
+These are **illustrative only, not registered**: every ID here (`OE-CONCEPT-example-vocab-example-concept`, `OE-LPM-example-lpm`, etc.) is made up, and none of these files are wired into `registry/` or `vocabularies/*.yaml`. None of these IDs resolve at `w3id.org/openevo/`. If you're starting your own vocabulary or LPM, copy the shape, then register your own ids through the RFC process (see [`GOVERNANCE.md`](../GOVERNANCE.md)) before minting real ones.
 
 Compare these against the real, much larger worked examples in [`vocabularies/`](../vocabularies/), [`alignments/`](../alignments/), and the two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) once you're past the "what shape is this file" stage — see [`docs/getting-started.md`](../docs/getting-started.md) for a guided walkthrough using those real repos end to end.
 
@@ -27,4 +27,4 @@ python scripts/validate.py schemas/alignment.schema.yaml examples/alignment.exam
 
 `scripts/validate.py` resolves each schema's `common.defs.yaml` reference from disk — see that script's docstring for why a plain `check-jsonschema` invocation currently fails with a network-resolution error instead.
 
-These exact commands also run automatically on every PR that touches `examples/` via [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) — these files are kept honest by CI, not just by convention.
+These exact commands also run automatically on every PR that touches `examples/` via [`.github/workflows/validate.yml`](../.github/workflows/validate.yml) — these files are kept honest by CI as well as by convention.

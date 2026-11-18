@@ -86,7 +86,7 @@ LPM_INDEX = {
 SANDBOX_LPM_INDEX = {
     "OE-SANDBOX-LPM-bio-core-k12-human-evolution-capstone": {
         "labels": {"en": "BIO-CORE: Human Lineage Capstone (Genetics & Paleoanthropology)"},
-        "forkedFrom": "OE-LPM-000001",
+        "forkedFrom": "OE-LPM-bio-core-k12",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
         "repo": "bio-core-k12",
@@ -95,7 +95,7 @@ SANDBOX_LPM_INDEX = {
     },
     "OE-SANDBOX-LPM-bio-core-k12-human-evolution-k12-strand": {
         "labels": {"en": "BIO-CORE: Human Lineage Across K-12 (Genetics & Paleoanthropology)"},
-        "forkedFrom": "OE-LPM-000001",
+        "forkedFrom": "OE-LPM-bio-core-k12",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
         "repo": "bio-core-k12",
@@ -107,7 +107,7 @@ SANDBOX_LPM_INDEX = {
         # depersonalization pass); stale origin/sandbox/mpi-eva-capstone
         # remote ref was deleted the same day.
         "labels": {"en": "OE-Interdisciplinary: Evolutionary Anthropology Cross-Disciplinary Capstone"},
-        "forkedFrom": "OE-LPM-000002",
+        "forkedFrom": "OE-LPM-oe-interdisciplinary-k12",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
         "repo": "interdisciplinary-k12",
@@ -116,7 +116,7 @@ SANDBOX_LPM_INDEX = {
     },
     "OE-SANDBOX-LPM-interdisciplinary-k12-machine-culture-coevolution": {
         "labels": {"en": "OE-Interdisciplinary: Machine Culture and Human-AI Coevolution Capstone"},
-        "forkedFrom": "OE-LPM-000002",
+        "forkedFrom": "OE-LPM-oe-interdisciplinary-k12",
         "sandboxMeta": {"created": "2026-07-21", "expiresOn": "2027-07-21", "status": "active"},
         "owner": "openevo-ccs",
         "repo": "interdisciplinary-k12",

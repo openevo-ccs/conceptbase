@@ -14,7 +14,7 @@
 # ============================================================================
 
 id: OE-ALIGN-example-subject-to-example-object-closematch
-subject: EXAMPLE-CONCEPT-VOCAB-v1.0.0:OE-CONCEPT-000900
+subject: EXAMPLE-CONCEPT-VOCAB-v1.0.0:OE-CONCEPT-example-vocab-example-concept
 object: EXAMPLE-COMPETENCY-VOCAB-v1.0.0:OE-COMPETENCY-example-vocab-example-code
 matchType: skos:closeMatch
 assertedBy:

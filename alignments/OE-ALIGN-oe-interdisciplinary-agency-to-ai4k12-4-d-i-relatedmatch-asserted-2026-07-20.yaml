@@ -1,7 +1,7 @@
 # ============================================================================
 # Path: /alignments/OE-ALIGN-oe-interdisciplinary-agency-to-ai4k12-4-d-i-relatedmatch-asserted-2026-07-20.yaml
 # ============================================================================
-# Tests interdisciplinary-k12's Strand 2, SubStrand OE-STRAND-000224
+# Tests interdisciplinary-k12's Strand 2, SubStrand OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-912
 # (9-12, elective) performance indicator: "Analyzes a case where a
 # designed system (e.g., a recommendation algorithm) exhibits both
 # intentional design (agency) and emergent, non-designed behavior."
@@ -24,7 +24,7 @@ date: "2026-07-20"
 status: proposed
 rationale: >
   OE-INTERDISCIPLINARY's Agency (OE-CONCEPT-oe-interdisciplinary-agency) is defined in its own
-  vocabulary (via OE-STRAND-000223's performance indicator) as "a capacity
+  vocabulary (via OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-68's performance indicator) as "a capacity
   to regulate behavior toward a goal-state, without requiring conscious
   intention" -- deliberately scoped to include non-conscious biological
   agency (e.g., an earthworm's niche-constructing behavior). AI4K12's
@@ -33,7 +33,7 @@ rationale: >
   consciousness, self-awareness, or "broad"/general intelligence, working
   up to a 9-12 debate over whether computers can achieve human-like
   intelligence. Recorded as skos:relatedMatch rather than skos:closeMatch
-  because Strand 2's own performance indicator (OE-STRAND-000224) asks
+  because Strand 2's own performance indicator (OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-912) asks
   about a narrower, more concrete case (does a recommendation algorithm's
   behavior count as "agency" in OE-INTERDISCIPLINARY's non-conscious
   sense?) than AI4K12's broader philosophical framing (is the AI system

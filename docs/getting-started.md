@@ -23,7 +23,7 @@ Pick any ID from what you just saw and hit its w3id URL directly:
 
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-oe-interdisciplinary-selection
-https://www.w3id.org/openevo/lpm/OE-LPM-000002
+https://www.w3id.org/openevo/lpm/OE-LPM-oe-interdisciplinary-k12
 ```
 
 Every one of these is a real, live redirect — `www.w3id.org/openevo/` was registered in July 2026 ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389)). This is the mechanism that makes an ID in your own future LPM permanently citable regardless of where ConceptBase's own hosting lives in five years.
@@ -39,13 +39,13 @@ git clone https://github.com/openevo-ccs/bio-core-k12
 Open `lpm.yaml`. Two things matter more than the rest of the file:
 
 ```yaml
-id: OE-LPM-000001
+id: OE-LPM-bio-core-k12
 conceptbase:
   ontology: "OE-ONTOLOGY-v1.0.0"
   vocabularies:
     - "BIO-CORE-v1.0.0"
 strands:
-  - id: "OE-STRAND-000101"
+  - id: "OE-STRAND-bio-core-k12-variation-inheritance"
     repository: "lpms/bio-core-k12/strands/strand-101-variation-inheritance.yaml"
 ```
 
@@ -84,7 +84,7 @@ Once you understand the shape, don't start from `bio-core-k12` (23 substrands) o
 2. **Reserve an ID block** via the RFC process ([`GOVERNANCE.md`](../GOVERNANCE.md)'s Identifier Block Allocation) *before* minting real IDs — this is what keeps two independently authored repos from colliding on the same number. A sandbox-tier ID (`OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>`, RFC-0001) is the lighter-weight option if you're still prototyping and don't want the permanent never-delete guarantee yet.
 3. **Pin real `conceptbase:` versions** — the ontology and whichever vocabularies you're building against, exactly like `bio-core-k12/lpm.yaml`.
 4. **Validate before you PR** — `scripts/validate.py` against every file you're adding, same as step 4 above.
-5. **Register your LPM** by adding an entry to `registry/lpm-index.json` via a PR to this repo, so `w3id.org/openevo/lpm/{your-id}` resolves to your repo the same way `OE-LPM-000001`/`OE-LPM-000002` do.
+5. **Register your LPM** by adding an entry to `registry/lpm-index.json` via a PR to this repo, so `w3id.org/openevo/lpm/{your-id}` resolves to your repo the same way `OE-LPM-bio-core-k12`/`OE-LPM-oe-interdisciplinary-k12` do.
 6. **Anything genuinely new** (a new schema field, a new vocabulary, a new alignment mechanism) goes through the RFC process in [`proposals/`](../proposals/) — see [`GOVERNANCE.md`](../GOVERNANCE.md) and the existing RFCs there for the level of justification expected, especially the "why doesn't an existing standard already cover this" section every RFC requires.
 
 ## Where to go deeper
