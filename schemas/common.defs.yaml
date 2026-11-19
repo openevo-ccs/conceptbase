@@ -72,7 +72,7 @@ meta:
 
   competencyId:
     type: string
-    pattern: "^OE-COMPETENCY-[0-9]{6}$"
+    pattern: "^OE-COMPETENCY-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
       Permanent identifier for an oe:Competency instance (RFC-0002).
       Resolves under https://www.w3id.org/openevo/competency/{id}. Never
@@ -82,14 +82,14 @@ meta:
 
   alignmentId:
     type: string
-    pattern: "^OE-ALIGN-[0-9]{6}$"
+    pattern: "^OE-ALIGN-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
       Permanent identifier for a Phase 2 cross-vocabulary Alignment
       record. Resolves under https://www.w3id.org/openevo/align/{id}.
 
   sandboxConceptId:
     type: string
-    pattern: "^OE-SANDBOX-CONCEPT-[0-9]{6}$"
+    pattern: "^OE-SANDBOX-CONCEPT-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
       Provisional identifier for a sandbox-tier concept entry (RFC-0001,
       spec §4.5). Structurally distinct from conceptId so the two can
@@ -101,7 +101,7 @@ meta:
 
   sandboxLpmId:
     type: string
-    pattern: "^OE-SANDBOX-LPM-[0-9]{6}$"
+    pattern: "^OE-SANDBOX-LPM-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
       Provisional identifier for a sandbox-tier LPM entry (RFC-0010,
       realizing the extension point spec §4.5 forward-declares beyond
@@ -126,7 +126,7 @@ meta:
 
   sandboxStrandId:
     type: string
-    pattern: "^OE-SANDBOX-STRAND-[0-9]{6}$"
+    pattern: "^OE-SANDBOX-STRAND-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
       Provisional identifier for a sandbox-tier Strand/SubStrand entry,
       extending the sandbox pattern (RFC-0001, RFC-0010) to oe:Strand —

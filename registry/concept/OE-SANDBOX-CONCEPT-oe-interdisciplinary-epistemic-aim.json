@@ -1,0 +1,41 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A goal of building a representation of the world, such as a model, explanation, theory or belief, that one tries to get right. How much a person values the aim affects how hard they work to reach it.\n"
+    }
+  },
+  "examples": [
+    "Wanting to understand why a population changed over time and building a model that explains it.",
+    "Wanting a true answer about a health claim and spending time to check it."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-aim",
+  "labels": {
+    "en": "Epistemic Aim"
+  },
+  "nonExamples": [
+    "A task goal such as finishing a worksheet, unless the goal is about getting something right about the world."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-representation",
+      "OE-CONCEPT-oe-interdisciplinary-knowledge"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

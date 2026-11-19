@@ -1,18 +1,23 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Die Weitergabe genetischer Information von Eltern an Nachkommen.\n"
+    },
     "en": {
       "biology": "The transmission of genetic information from parent to offspring.\n"
     }
   },
   "id": "OE-CONCEPT-bio-core-inheritance",
   "labels": {
+    "de": "Vererbung",
     "en": "Inheritance"
   },
   "relations": {
     "skos:related": [
       "OE-CONCEPT-bio-core-gene",
-      "OE-CONCEPT-bio-core-evolution"
+      "OE-CONCEPT-bio-core-evolution",
+      "OE-CONCEPT-bio-core-epigenetics"
     ]
   },
   "status": "stable",

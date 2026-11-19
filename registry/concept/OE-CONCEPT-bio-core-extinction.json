@@ -1,12 +1,16 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Das vollständige Verschwinden einer Art oder einer anderen taxonomischen Gruppe, wodurch deren Abstammungslinie endet.\n"
+    },
     "en": {
       "biology": "The complete disappearance of a species or other taxonomic group, ending its lineage.\n"
     }
   },
   "id": "OE-CONCEPT-bio-core-extinction",
   "labels": {
+    "de": "Aussterben",
     "en": "Extinction"
   },
   "relations": {
@@ -14,7 +18,8 @@
       "OE-CONCEPT-bio-core-evolution"
     ],
     "skos:related": [
-      "OE-CONCEPT-bio-core-species"
+      "OE-CONCEPT-bio-core-species",
+      "OE-CONCEPT-bio-core-geological-time-scale"
     ]
   },
   "status": "stable",

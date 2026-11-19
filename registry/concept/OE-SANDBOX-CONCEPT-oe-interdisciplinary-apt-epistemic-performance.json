@@ -1,0 +1,41 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "An epistemic performance that succeeds because it was competent: the result is accurate because reliable processes were used, and a lucky guess or a copied answer does not count. Performance is fully apt when it is also guided by awareness of one's own competence, for example knowing when the evidence is enough to decide and when to hold back judgment.\n"
+    }
+  },
+  "examples": [
+    "A student keeps a model because experiments, comparisons with evidence and a revision after an anomaly supported it, and says what further evidence would change the choice.",
+    "A reader holds off judging a health claim because they know they cannot judge the evidence themselves."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance",
+  "labels": {
+    "en": "Apt Epistemic Performance"
+  },
+  "nonExamples": [
+    "A correct answer copied from a classmate.",
+    "A model that happens to fit a data set because its numbers were adjusted until it did."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

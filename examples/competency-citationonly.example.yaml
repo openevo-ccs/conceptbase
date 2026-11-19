@@ -1,7 +1,7 @@
 # ============================================================================
 # Example: a single oe:Competency entry, citationOnly (RFC-0005)
 # ============================================================================
-# Illustrative only -- OE-COMPETENCY-000901 is not a registered ID (see
+# Illustrative only -- OE-COMPETENCY-example-vocab-citation-only-code is not a registered ID (see
 # examples/README.md). Use this shape when a source's license permits
 # citing that a standard exists and how it relates to others, but forbids
 # reproducing its statement text verbatim (see
@@ -14,7 +14,7 @@
 # so the entry still anchors to a real, resolvable source.
 # ============================================================================
 
-id: OE-COMPETENCY-000901
+id: OE-COMPETENCY-example-vocab-citation-only-code
 type: oe:Competency
 status: proposed
 version: 0.1.0
