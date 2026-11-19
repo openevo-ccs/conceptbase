@@ -1,0 +1,36 @@
+{
+  "citations": [
+    {
+      "doi": "10.1002/icd.560",
+      "text": "Pillow, B. H., Lovett, S. B., & Hill, V. (2008). Children's, adolescents', and adults' reference to goals to explain interpersonal actions. Infant and Child Development, 17, 471-489.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The capacity to attribute mental states — beliefs, desires, intentions, knowledge — to oneself and others, and to use those attributions to interpret and predict behavior.\n"
+    }
+  },
+  "examples": [
+    "Inferring that a person will look for an object where they last saw it, even after it has been secretly moved, because they act on their own (now false) belief rather than the true state of the world."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind",
+  "labels": {
+    "en": "Theory of Mind"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-agency",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-intuitive-theories"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-01",
+    "expiresOn": "2027-08-01",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

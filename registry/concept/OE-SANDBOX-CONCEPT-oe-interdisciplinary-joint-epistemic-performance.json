@@ -1,0 +1,45 @@
+{
+  "citations": [
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    },
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Apt-AIR's fifth aspect: doing epistemic work with others, including jointly developing and applying epistemic norms and criteria, and attending to the fairness of who is heard. The 2018 article gives class-built criteria for judging models as an example.\n"
+    }
+  },
+  "examples": [
+    "A class agrees criteria for judging a model and applies them.",
+    "A group weighs a quiet member's testimony fairly."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-joint-epistemic-performance",
+  "labels": {
+    "en": "Joint Epistemic Performance"
+  },
+  "nonExamples": [
+    "Individual work on a worksheet.",
+    "Copying from a neighbor."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-sources-of-metacognitive-knowledge"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

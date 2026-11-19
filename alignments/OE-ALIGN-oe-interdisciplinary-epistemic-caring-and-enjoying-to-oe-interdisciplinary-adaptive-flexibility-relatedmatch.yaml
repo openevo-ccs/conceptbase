@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-epistemic-caring-and-enjoying-to-oe-interdisciplinary-adaptive-flexibility-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-epistemic-caring-and-enjoying-to-oe-interdisciplinary-adaptive-flexibility-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-caring-and-enjoying
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-adaptive-flexibility
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 20 of the concept decision sheet (zone 5). Barzilai and Chinn: Epistemic Caring and Enjoying.
+  Hanisch and Eirdosh: Adaptive Flexibility. What they share: Both involve staying with something
+  because it matters, including when it is hard. What keeps them apart: Apt-AIR is about epistemic
+  work and mentions tolerating frustration in passing. The design concept's flexibility builds on
+  acceptance of discomfort as a skill to practice.

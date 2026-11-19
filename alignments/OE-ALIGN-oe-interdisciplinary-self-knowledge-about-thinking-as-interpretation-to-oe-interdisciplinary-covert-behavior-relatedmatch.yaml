@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-self-knowledge-about-thinking-as-interpretation-to-oe-interdisciplinary-covert-behavior-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-self-knowledge-about-thinking-as-interpretation-to-oe-interdisciplinary-covert-behavior-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-self-knowledge-about-thinking-as-interpretation
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-covert-behavior
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 9 of the concept decision sheet (zone 2). Pillow: Self-Knowledge About Thinking as
+  Interpretation. Hanisch and Eirdosh: Covert Behavior. What they share: Both concern what a person
+  can notice about their own inner life. What keeps them apart: Pillow stresses that it is limited and
+  interpreted. The design concept says it is observable by the person and does not discuss accuracy.
+  This is a difference in emphasis.

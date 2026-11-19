@@ -1,22 +1,31 @@
 {
-  "definedInVocabulary": "BIO-CORE-v1.0.0",
+  "definedInVocabulary": "BIO-CORE-v1.2.0",
   "definitions": {
+    "de": {
+      "biology": "Zufällige Schwankung der Allelfrequenzen innerhalb einer Population von einer Generation zur nächsten, unabhängig von einem Selektionsvorteil.\n"
+    },
     "en": {
       "biology": "Random fluctuation of allele frequencies within a population from one generation to the next, independent of selective advantage.\n"
     }
   },
   "id": "OE-CONCEPT-bio-core-drift",
   "labels": {
+    "de": "Gendrift",
     "en": "Drift"
   },
   "relations": {
     "skos:broader": [
       "OE-CONCEPT-bio-core-evolution"
     ],
+    "skos:narrower": [
+      "OE-CONCEPT-bio-core-bottleneck-effect",
+      "OE-CONCEPT-bio-core-founder-effect"
+    ],
     "skos:related": [
       "OE-CONCEPT-bio-core-population",
       "OE-CONCEPT-bio-core-allele",
-      "OE-CONCEPT-bio-core-speciation"
+      "OE-CONCEPT-bio-core-speciation",
+      "OE-CONCEPT-bio-core-gene-flow"
     ]
   },
   "status": "stable",

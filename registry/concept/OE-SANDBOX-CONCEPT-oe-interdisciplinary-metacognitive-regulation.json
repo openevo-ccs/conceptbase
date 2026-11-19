@@ -1,0 +1,49 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023), 2026-11-18. A shared field concept proposed by the comparison; no source defines it."
+    },
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    },
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Planning, directing and adjusting one's own thinking or behavior in light of what monitoring shows, for example choosing a different strategy, holding back a judgment, or changing what one does. Apt-AIR describes regulation of epistemic work: planning, monitoring, evaluating and controlling it. The Hanisch and Eirdosh design concept describes regulation of one's behavior. Pillow's book develops no regulation construct.\n"
+    }
+  },
+  "examples": [
+    "A student switches from rereading to testing herself after noticing she does not remember.",
+    "A learner notices irritation, names it, and picks a response that fits what they value."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-regulation",
+  "labels": {
+    "en": "Metacognitive Regulation"
+  },
+  "nonExamples": [
+    "A habit that runs the same way whatever the feedback.",
+    "A rule imposed by someone else and followed without any check on whether it works."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-adaptive-flexibility"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

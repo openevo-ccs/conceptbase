@@ -90,7 +90,7 @@ Since that pilot review, six accepted RFCs have pulled work forward from later p
 
 | Phase | Status | Contents |
 |---|---|---|
-| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`, plus `Competency` — promoted early, see below); Concept/LPM/Strand/Competency schemas; seed vocabularies (`BIO-CORE-v1.0.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process; sandbox tier and `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)); **namespace registered and live** ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)) |
+| **Phase 1 — Core** | 🟢 In progress | Core ontology (`Concept`, `LPM`, `Strand`, `SubStrand`, `LearningObject`, plus `Competency` — promoted early, see below); Concept/LPM/Strand/Competency schemas; seed vocabularies (`BIO-CORE-v1.2.0`, `OE-INTERDISCIPLINARY-v1.0.0`); governance process; sandbox tier and `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)); **namespace registered and live** ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)) |
 | **Phase 2 — Alignment & Multilinguality** | 🟡 Started ahead of schedule | Five SKOS-based cross-vocabulary alignment records with provenance (see [`alignments/`](alignments/)), including the first concept↔competency alignments ([RFC-0008](proposals/0008-alignment-competency-support.md)); language-tagged labels/definitions beyond `en` still planned |
 | **Phase 3 — Pluralism** | ⚪ Planned | Multiple grade-band schemas (US K–12, OECD, OpenEvo bands); multiple subject-area taxonomies; CASE/LOM/xAPI profile mappings |
 | **Phase 4 — Ecosystem Tooling** | 🟡 Started ahead of schedule | `oe:Competency` profiled against CASE `CFItem` and promoted out of `reserved` ([RFC-0002](proposals/0002-competency-case-profile.md), see [`docs/design-notes/case-competency-profile.md`](docs/design-notes/case-competency-profile.md)); flat-JSON registry and live namespace resolution ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)); citation-only competency entries for license-restricted sources ([RFC-0005](proposals/0005-citation-only-competency-entries.md)); two full-text competency vocabularies ingested, `NGSS-LIFE-SCIENCE-v1.0.0` ([RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)) and `AI4K12-v1.0.0` ([RFC-0007](proposals/0007-ai4k12-vocabulary.md)); basic schema-validation CI (`.github/workflows/validate.yml`, this repo and both reference LPMs) — a real slice of the spec §10.3 CI compatibility-checker, not the full thing (see Roadmap); evidence schema, hosted SPARQL endpoint, and the full pin-resolution/deprecation-aware compatibility-checker still planned |
@@ -101,13 +101,13 @@ Reserved ontology classes for later phases (`Collection`, `Assessment`, `Practic
 
 The Phase 1 pilot review surfaced a series of changes worth making immediately rather than deferring to their originally-scheduled phase. All went through the full RFC process (see [Governance & Contributing](#governance--contributing)):
 
-- **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-######`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
+- **[RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)** — added a sandbox/provisional identifier tier (`OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>`) for trying out controlled-vocabulary entries without the permanent registry's never-delete guarantee, a two-speed review process (lighter-weight for `proposed`-status and sandbox entries), and a `retracted` lifecycle status distinct from `deprecated`/`superseded`.
 - **[RFC-0002](proposals/0002-competency-case-profile.md)** — profiled `oe:Competency` as an extension of CASE (1EdTech) `CFItem` and promoted it out of `reserved` into a stable Phase 1 class, ahead of its original Phase 4 slot, after verifying the mapping against a reference CASE implementation.
 - **[RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)** — built the MVP flat-JSON/raw-YAML resolution scheme (`scripts/build_registry.py`, `registry/`, `app/registry/resolve.html`) needed before the namespace could be registered at all, fixed the GitHub Pages deploy, and submitted the registration PR that has since merged.
 - **[RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md)** — relicensed all ConceptBase content from CC-BY-4.0 to CC-BY-NC-SA-4.0.
 - **[RFC-0005](proposals/0005-citation-only-competency-entries.md)** — added a `citationOnly` mode to `oe:Competency` for sources (e.g. Virginia's CASE-formatted state standards) whose license permits citing structure/existence but not republishing statement text verbatim; see [`docs/design-notes/state-standards-licensing.md`](docs/design-notes/state-standards-licensing.md).
 - **[RFC-0006](proposals/0006-ngss-life-science-vocabulary.md)** and **[RFC-0007](proposals/0007-ai4k12-vocabulary.md)** — the first two full-text competency vocabularies ingested from official frameworks with permissive licenses: `NGSS-LIFE-SCIENCE-v1.0.0` (53 entries) and `AI4K12-v1.0.0` (381 entries).
-- **[RFC-0008](proposals/0008-alignment-competency-support.md)** — widened alignment records to reference `oe:Competency` entries as well as `oe:Concept`, unblocking the first concept↔competency alignments (`OE-ALIGN-000003`–`000005`) and extending `build_registry.py`/the w3id resolution rules to cover `/competency/{id}`.
+- **[RFC-0008](proposals/0008-alignment-competency-support.md)** — widened alignment records to reference `oe:Competency` entries as well as `oe:Concept`, unblocking the first concept↔competency alignments (`OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch`–`000005`) and extending `build_registry.py`/the w3id resolution rules to cover `/competency/{id}`.
 
 Ontology `v1.3.0` reflects RFC-0001/0002; spec `v0.3.0` reflects them, with `v0.3.1` adding the w3id namespace MVP resolution note ([RFC-0003](proposals/0003-w3id-namespace-mvp-resolution.md)). Ontology `v1.3.1` and spec `v0.4.0` reflect [RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md). `schemas/competency.schema.yaml` reached `v1.1.0` with RFC-0005's `citationOnly` addition; `schemas/common.defs.yaml` reached `v1.4.0` with RFC-0008's widened `alignmentConceptRef` pattern.
 
@@ -154,17 +154,15 @@ conceptbase/
 │   └── alignment.schema.yaml     # Phase 2 cross-vocabulary alignment records
 │
 ├── vocabularies/
-│   ├── BIO-CORE-v1.0.0.yaml
+│   ├── BIO-CORE-v1.2.0.yaml
 │   ├── OE-INTERDISCIPLINARY-v1.0.0.yaml
-│   ├── NGSS-LIFE-SCIENCE-v1.0.0.yaml   # oe:Competency, 53 entries (RFC-0006)
-│   └── AI4K12-v1.0.0.yaml              # oe:Competency, 381 entries (RFC-0007)
 │
 ├── alignments/                # Phase 2, forward-implemented — 5 records so far
-│   ├── OE-ALIGN-000001.yaml    # BIO-CORE <-> OE-INTERDISCIPLINARY (concept<->concept)
-│   ├── OE-ALIGN-000002.yaml
-│   ├── OE-ALIGN-000003.yaml    # concept<->competency, first enabled by RFC-0008
-│   ├── OE-ALIGN-000004.yaml
-│   └── OE-ALIGN-000005.yaml
+│   ├── OE-ALIGN-bio-core-natural-selection-to-oe-interdisciplinary-selection-closematch.yaml    # BIO-CORE <-> OE-INTERDISCIPLINARY (concept<->concept)
+│   ├── OE-ALIGN-bio-core-inheritance-to-oe-interdisciplinary-inheritance-closematch.yaml
+│   ├── OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch.yaml    # concept<->competency, first enabled by RFC-0008
+│   ├── OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch.yaml
+│   └── OE-ALIGN-oe-interdisciplinary-agency-to-ai4k12-4-d-i-relatedmatch-asserted-2026-07-20.yaml
 │
 ├── registry/                   # Generated (scripts/build_registry.py) — MVP flat-JSON,
 │   │                            # deployed as-is to GitHub Pages (.github/workflows/pages.yml)
@@ -244,7 +242,7 @@ Any proposal for a novel schema structure must document why an existing standard
 conceptbase:
   ontology: OE-ONTOLOGY-v1.0.0
   vocabularies:
-    - BIO-CORE-v1.0.0
+    - BIO-CORE-v1.2.0
 ```
 
 **Looking up a concept:**
@@ -254,7 +252,7 @@ The `www.w3id.org/openevo/` namespace is **registered and live** ([perma-id/w3id
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-bio-core-natural-selection       →  flat JSON (generated, scripts/build_registry.py)
 https://www.w3id.org/openevo/ontology#Concept                 →  raw ontology YAML (the #fragment is client-side only)
-https://www.w3id.org/openevo/vocab/BIO-CORE-v1.0.0            →  raw vocabulary YAML
+https://www.w3id.org/openevo/vocab/BIO-CORE-v1.2.0            →  raw vocabulary YAML
 https://www.w3id.org/openevo/                                 →  redirects to this repository
 ```
 
@@ -272,7 +270,7 @@ The full `validation/` directory and `oecb-validate` CLI referenced by earlier d
 python scripts/validate.py schemas/concept.schema.yaml examples/concept.example.yaml
 ```
 
-A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.0.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
+A vocabulary file (e.g. `vocabularies/BIO-CORE-v1.2.0.yaml`) is a `concepts:`/`competencies:` container, not a single entry — pass it directly and `validate.py` validates each entry inside it separately (see the script's docstring). The two reference LPMs (`bio-core-k12`, `interdisciplinary-k12` — both private repos) each have their own `validate.yml` that checks out this repo alongside themselves and runs the same script against their `lpm.yaml`/`strands/*.yaml`.
 
 Plain `check-jsonschema` (or another standard 2020-12 validator) currently fails against these schemas with a network-resolution error — every schema's `$ref` to `common.defs.yaml` resolves against a w3id URL that isn't served yet (a known gap; see the script's docstring). `scripts/validate.py` resolves that `$ref` from the local `schemas/` directory instead.
 
@@ -308,7 +306,7 @@ ConceptBase sits inside a federated ecosystem anchored by [`openevo-core`](https
 
 Two reference LPMs currently demonstrate this pattern end-to-end, each built strictly against a single seed vocabulary to test ConceptBase's pluralism model in practice. Both are a deliberately synthetic comparison pair, not field-tested curricula — each carries `epistemicStatus: designed-thought-experiment` (RFC-0019), a permanent, structural declaration independent of their draft/stable lifecycle status, because the two are otherwise structurally identical: same schema, same pipeline, differing only in which controlled vocabulary each is built against. That's what makes any difference between them attributable to vocabulary scope, not some other confound:
 
-- **`bio-core-k12`** (private repo, not publicly linkable) — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.0.0`, a vocabulary with no organism-agency concept at all.
+- **`bio-core-k12`** (private repo, not publicly linkable) — the disciplinary counter-model: a biology-centered K–12 progression built exclusively on `BIO-CORE-v1.2.0`, a vocabulary with no organism-agency concept at all.
 - **`interdisciplinary-k12`** (private repo, not publicly linkable) — the synthetic sandbox: a cross-disciplinary K–12 progression (biology, social studies, computer science) built exclusively on `OE-INTERDISCIPLINARY-v1.0.0`, which adds Agency, Niche Construction, and a Selection concept spanning biology/culture/education/AI. Its Strand 1/2 cross-domain claims (Selection, Agency) are the subject of the [Selection cross-domain case study](docs/design-notes/selection-cross-domain-case-study.md).
 
 Both are also early/draft-stage repositories in the ordinary `status: proposed` sense, on top of (and independent of) the synthetic/thought-experiment framing above.
@@ -328,7 +326,7 @@ Every addition — a new concept, relation, schema, or vocabulary — goes throu
 1. **Propose** via a PR to `proposals/`, using the template (motivation, proposed IRI under `www.w3id.org/openevo/`, why no existing standard covers it).
 2. **Review**, split by how much permanence is at stake ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)): a single maintainer (or a 5-business-day no-objection window) is enough for a new sandbox-tier entry or a `proposed`-status draft; the full domain-editor + maintainer bar applies specifically to `proposed → accepted` promotion and sandbox → permanent promotion — the moment the never-delete guarantee actually starts to apply.
 3. **Lifecycle status** tracked explicitly: `proposed → accepted → stable → deprecated/superseded`, plus a parallel terminal `retracted` status ([RFC-0001](proposals/0001-sandbox-tier-and-retraction.md)) for entities accepted in error or no longer endorsed, with no implied replacement.
-4. **Never deleted** (permanent tier only) — deprecated, superseded, and retracted entities all remain resolvable indefinitely, so dependent repositories are never broken by an upstream change. Controlled-vocabulary concepts can also be tried first in a **sandbox tier** (`OE-SANDBOX-CONCEPT-######`, 12-month expiry unless promoted) before taking on that permanence commitment.
+4. **Never deleted** (permanent tier only) — deprecated, superseded, and retracted entities all remain resolvable indefinitely, so dependent repositories are never broken by an upstream change. Controlled-vocabulary concepts can also be tried first in a **sandbox tier** (`OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>`, 12-month expiry unless promoted) before taking on that permanence commitment.
 
 Each vocabulary, schema, and ontology module is versioned independently using semver (`MAJOR.MINOR.PATCH`), with breaking changes requiring a major version bump and a documented migration path.
 
@@ -358,7 +356,7 @@ See [`GOVERNANCE.md`](GOVERNANCE.md) for the full process and [`CONTRIBUTING.md`
 - [x] **Registered the `www.w3id.org/openevo/` namespace** — [perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389) merged, namespace is live
 - [x] Content relicensed CC-BY-4.0 → CC-BY-NC-SA-4.0 ([RFC-0004](proposals/0004-relicense-content-cc-by-nc-sa.md))
 - [x] Phase 4 (RFC-0005, ahead of schedule): `citationOnly` competency entries for license-restricted CASE sources
-- [x] Phase 2 (RFC-0006/0007, ahead of schedule): First two full-text competency vocabularies, `NGSS-LIFE-SCIENCE-v1.0.0` and `AI4K12-v1.0.0`
+- [x] Phase 2 (RFC-0006/0007, ahead of schedule; the two vocabularies moved to CompetencyBase and were removed here on 2026-11-18): First two full-text competency vocabularies, `NGSS-LIFE-SCIENCE-v1.0.0` and `AI4K12-v1.0.0`
 - [x] Phase 2 (RFC-0008, ahead of schedule): Concept↔competency alignment support; 3 new alignment records
 - [x] Concept Lens view added to the ConceptBase Explorer; Selection cross-domain case study published
 - [x] Developer onboarding: `docs/getting-started.md`, `examples/`, offline `scripts/validate.py`, Explorer welcome banner + `?lens=` deep link

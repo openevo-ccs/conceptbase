@@ -22,7 +22,7 @@ alignments/*.yaml or examples/*.yaml.
 
 Usage:
     python scripts/validate.py schemas/lpm.schema.yaml path/to/lpm.yaml [more.yaml ...]
-    python scripts/validate.py schemas/concept.schema.yaml vocabularies/BIO-CORE-v1.0.0.yaml
+    python scripts/validate.py schemas/concept.schema.yaml vocabularies/BIO-CORE-v1.2.0.yaml
 """
 import pathlib
 import sys

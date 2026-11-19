@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The six tools of the design concept: Tinbergen's questions, causal maps, payoff matrices, the Noticing Tool, analogy maps and Structure of Knowledge diagrams. Their main use is to analyze the causes and consequences of behavior. The paper also says they present strategies meant to help students plan, monitor, evaluate and so regulate behavior, and it reports no test of this.\n"
+    }
+  },
+  "examples": [
+    "Mapping the causes of a behavior with a causal map.",
+    "Comparing the payoffs of cooperating and defecting."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-six-thinking-tools",
+  "labels": {
+    "en": "Six Thinking Tools"
+  },
+  "nonExamples": [
+    "A general study skill.",
+    "A lesson plan."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-competency-about-human-behavior",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-regulation"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-teachers-as-models-and-learners-of-thinking"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

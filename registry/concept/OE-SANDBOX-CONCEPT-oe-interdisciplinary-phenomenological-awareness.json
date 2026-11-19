@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's discovery of the active mind: Phenomenological awareness, social experience, and knowledge about cognition. Springer."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Pillow's second source of knowledge about cognition: what a person notices of their own mental life, such as a stream of thoughts, effort or confusion. Pillow stresses that this awareness is limited and indirect, and that conscious access to the processes underneath is strictly limited.\n"
+    }
+  },
+  "examples": [
+    "A child notices that a problem feels hard.",
+    "An adult notices their attention drifting."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-phenomenological-awareness",
+  "labels": {
+    "en": "Phenomenological Awareness"
+  },
+  "nonExamples": [
+    "Reading about attention in a book.",
+    "A scientist measuring brain activity."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-self-knowledge-about-thinking-as-interpretation",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-covert-behavior"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

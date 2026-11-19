@@ -1,0 +1,20 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-cognitive-monitoring-pillow-to-oe-interdisciplinary-noticing-inner-and-outer-behavior-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-cognitive-monitoring-pillow-to-oe-interdisciplinary-noticing-inner-and-outer-behavior-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-cognitive-monitoring-pillow
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-noticing-inner-and-outer-behavior
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 2 of the concept decision sheet (zone 1). Pillow: Cognitive Monitoring (Pillow). Hanisch and
+  Eirdosh: Noticing Inner and Outer Behavior. What they share: Both concern noticing what is going on
+  in oneself, including feelings. What keeps them apart: Pillow describes a capacity studied across
+  ages. The Noticing Tool is a classroom practice and its object includes behavior.
