@@ -30,6 +30,14 @@
     "skos:broader": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
     ],
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-experience-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-feeling-of-difficulty-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-monitoring-and-control-in-parallel-with-the-task-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-experience-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-feeling-of-difficulty-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-monitoring-and-control-in-parallel-with-the-task-masrl"
+    ],
     "skos:related": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-cognitive-monitoring-pillow",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-noticing-inner-and-outer-behavior"

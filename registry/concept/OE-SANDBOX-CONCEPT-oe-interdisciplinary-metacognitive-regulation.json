@@ -34,6 +34,14 @@
     "skos:broader": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
     ],
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-skills-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-top-down-and-bottom-up-regulation-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-monitoring-and-control-in-parallel-with-the-task-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-skills-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-top-down-and-bottom-up-regulation-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-monitoring-and-control-in-parallel-with-the-task-masrl"
+    ],
     "skos:related": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-adaptive-flexibility"

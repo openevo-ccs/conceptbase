@@ -38,6 +38,10 @@
     "skos:broader": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
     ],
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge-masrl",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge-masrl"
+    ],
     "skos:related": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-knowledge-about-cognitive-activities",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences",
