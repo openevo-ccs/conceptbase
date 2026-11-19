@@ -1,0 +1,41 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "An individual or group method for reaching an epistemic aim that has a good chance of success, given the standards being used. Examples are running a fair experiment, weighing evidence by its quality, checking a claim against other sources, and arguing a question out in a group.\n"
+    }
+  },
+  "examples": [
+    "Relating each piece of evidence to each competing model before choosing one.",
+    "A group critique in which different views are heard and objections are taken up."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-reliable-epistemic-process",
+  "labels": {
+    "en": "Reliable Epistemic Process"
+  },
+  "nonExamples": [
+    "Choosing the answer that feels right without checking, which can occasionally succeed but has no reason to be expected to."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-learning",
+      "OE-CONCEPT-oe-interdisciplinary-collective-intelligence"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -34,7 +34,9 @@
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind",
-      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning"
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-analogical-reasoning",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance"
     ]
   },
   "sandboxMeta": {
