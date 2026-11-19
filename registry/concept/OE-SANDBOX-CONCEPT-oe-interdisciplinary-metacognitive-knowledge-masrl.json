@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09896-9",
+      "text": "Efklides, A., & Schwartz, B. L. (2024). Revisiting the Metacognitive and Affective Model of Self-Regulated Learning: Origins, Development, and Future Directions. Educational Psychology Review, 36, 61."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "What a learner knows about cognitive processes such as memory, about persons including themselves as thinkers, about tasks and their demands, about strategies and when to use them, and about goals. In MASRL it sits at the Person level and takes part in monitoring. The article places it between a felt experience and the choice of what to do.\n"
+    }
+  },
+  "examples": [
+    "A student knows she learns history more easily than mathematics.",
+    "A student believes that cramming works better for her than spaced study."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge-masrl",
+  "labels": {
+    "en": "Metacognitive Knowledge (MASRL)"
+  },
+  "nonExamples": [
+    "A feeling of confidence about today's answer.",
+    "The skill of carrying out a study plan step by step."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

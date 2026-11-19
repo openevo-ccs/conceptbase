@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's discovery of the active mind: Phenomenological awareness, social experience, and knowledge about cognition. Springer."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Talk in families and among friends and siblings about what people think, know, want and feel. The studies Pillow cites link it, and parents' tendency to treat children as minded beings, with children's later understanding of belief and emotion. The book says the link to understanding of cognitive activities has not been tested.\n"
+    }
+  },
+  "examples": [
+    "A parent often saying what she thinks a child wants and believes.",
+    "Siblings discussing why a character in a story did something."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-mental-state-talk",
+  "labels": {
+    "en": "Mental-State Talk"
+  },
+  "nonExamples": [
+    "Instructions with no reference to thinking.",
+    "Silent play."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-sources-of-metacognitive-knowledge"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

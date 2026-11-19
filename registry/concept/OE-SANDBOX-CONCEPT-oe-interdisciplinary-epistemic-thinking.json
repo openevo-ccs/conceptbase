@@ -1,0 +1,46 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Thinking about knowledge and about knowing: deciding what one is trying to find out, how to tell whether one has found it, and which methods are likely to get there. It covers everyday and expert settings, such as judging an online claim, building and testing a model, or reading a historical source, and it includes thinking about one's own thinking in those tasks.\n"
+    }
+  },
+  "examples": [
+    "Two students decide which of two models of a food web to keep and give reasons: one fits more of the data, the other is simpler.",
+    "A reader checks who wrote a web page and whether other sources agree before using a claim from it."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking",
+  "labels": {
+    "en": "Epistemic Thinking"
+  },
+  "nonExamples": [
+    "Memorizing a list of facts without asking how anyone came to know them."
+  ],
+  "relations": {
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-aim",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-ideal",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-reliable-epistemic-process",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-competence-and-virtue"
+    ],
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-knowledge",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

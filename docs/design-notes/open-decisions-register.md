@@ -98,7 +98,7 @@ copied from that section.
   more deflationary "without requiring conscious intention" framing before any new human-anchored
   content extends it, or should the strand-level restatement instead be brought back in line with
   the current formal definition? Both are named as live options; the document takes no position.
-- Should `OE-STRAND-000224` be promoted from elective to required, given `OE-STRAND-000234`
+- Should `OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-912` be promoted from elective to required, given `OE-STRAND-oe-interdisciplinary-k12-culture-technology-collective-912`
   (required) already assumes required-track students have encountered agency-spectrum reasoning
   that `000224` alone actually develops? Or is the two-speed design (systems-level claim for
   everyone, individual-agency comparison for those who opt in) intentional and worth keeping?
@@ -138,7 +138,7 @@ mostly in "Check 2" and "Check 3."
   real, named gap in current K-12 AI-literacy standards worth a future ConceptBase-authored sandbox
   concept — presented explicitly as "two honest ways to respond, not mutually exclusive," neither
   chosen.
-- Whether `OE-STRAND-000224` (currently elective, its Agency/AI comparison backed only by a
+- Whether `OE-STRAND-oe-interdisciplinary-k12-agency-development-niche-912` (currently elective, its Agency/AI comparison backed only by a
   parenthetical example) should be revisited with real AI4K12 citations — the document notes a
   recommendation-algorithm example arguably fits AI4K12's "Ethical AI" rows better than the
   consciousness-centered "Philosophy of Mind" row it's currently checked against — "worth

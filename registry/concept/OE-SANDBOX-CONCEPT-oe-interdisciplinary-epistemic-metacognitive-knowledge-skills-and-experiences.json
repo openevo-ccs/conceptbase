@@ -1,0 +1,46 @@
+{
+  "citations": [
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    },
+    {
+      "doi": "10.1007/s10648-024-09927-5",
+      "text": "Barzilai, S., & Chinn, C. A. (2024). The AIR and Apt-AIR frameworks of epistemic performance and growth: Reflections on educational theory development. Educational Psychology Review, 36(3), 91."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The metacognitive facets of the Multifaceted Framework (Barzilai and Zohar): knowledge about the nature of knowledge and knowing (for example criteria and strategies for judging claims or sources), skills for planning, monitoring and evaluating epistemic processes, and the feelings and estimates that building and justifying knowledge evoke.\n"
+    }
+  },
+  "examples": [
+    "Knowing that a source from an expert may be reliable on its topic and unreliable on others.",
+    "Noticing that one is unsure whether a source can be trusted."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences",
+  "labels": {
+    "en": "Epistemic Metacognitive Knowledge, Skills and Experiences"
+  },
+  "nonExamples": [
+    "Ordinary knowledge of a topic.",
+    "A plain memory strategy."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

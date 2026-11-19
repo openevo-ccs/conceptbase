@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-social-experience-pillow-to-oe-interdisciplinary-mental-models-of-human-behavior-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-social-experience-pillow-to-oe-interdisciplinary-mental-models-of-human-behavior-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-experience-pillow
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-mental-models-of-human-behavior
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 14 of the concept decision sheet (zone 3). Pillow: Social Experience (Pillow). Hanisch and
+  Eirdosh: Mental Models of Human Behavior. What they share: A restatement of the in-press Hanisch and
+  Eirdosh book says people pick up mental models from cultural surroundings such as parents, media and
+  teachers, which is a social route. What keeps them apart: The design concept's models are about
+  human behavior. Pillow's source feeds knowledge about cognitive activities.

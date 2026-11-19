@@ -1,0 +1,36 @@
+{
+  "citations": [
+    {
+      "doi": "10.1007/s10648-024-09896-9",
+      "text": "Efklides, A., & Schwartz, B. L. (2024). Revisiting the Metacognitive and Affective Model of Self-Regulated Learning: Origins, Development, and Future Directions. Educational Psychology Review, 36, 61."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "In MASRL, emotions and moods form a separate system with its own regulation, linked in both directions to metacognition. The article places the regulation of effort inside this system. Boredom lowers effort, and a feeling of difficulty can raise it or end it.\n"
+    }
+  },
+  "examples": [
+    "Boredom lowering the effort a student puts in.",
+    "Re-appraising a task to feel less negative and keep working."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-affect-system-and-effort-regulation-masrl",
+  "labels": {
+    "en": "Affect System and Effort Regulation (MASRL)"
+  },
+  "nonExamples": [
+    "A judgment that an answer is correct.",
+    "Knowing a strategy for studying."
+  ],
+  "relations": {
+    "skos:broader": []
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

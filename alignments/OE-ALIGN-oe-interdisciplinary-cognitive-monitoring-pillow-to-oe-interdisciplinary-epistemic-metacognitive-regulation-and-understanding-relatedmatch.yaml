@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-cognitive-monitoring-pillow-to-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-cognitive-monitoring-pillow-to-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-cognitive-monitoring-pillow
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 1 of the concept decision sheet (zone 1). Pillow: Cognitive Monitoring (Pillow). Barzilai and
+  Chinn: Epistemic Metacognitive Regulation and Understanding. What they share: Both concern noticing
+  one's own mental activity. What keeps them apart: Pillow treats monitoring as a source of cues
+  children use to learn about cognitive activities. Apt-AIR treats monitoring, with planning,
+  evaluating and controlling, as skills that guide epistemic work.

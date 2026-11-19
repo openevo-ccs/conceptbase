@@ -13,7 +13,7 @@ It uses `bio-core-k12` and `interdisciplinary-k12` (both private repos, not publ
 
 Read the [Selection cross-domain case study](design-notes/selection-cross-domain-case-study.md): it checks `interdisciplinary-k12`'s claim that "Selection" is a genuine transferable mechanism across biology, culture, and AI against real external standards (NGSS, AI4K12) — confirming the biology claim, and surfacing two concrete, actionable gaps in the AI and Agency claims. Every record it cites is a real file you can open directly:
 - [`OE-CONCEPT-oe-interdisciplinary-selection`](../vocabularies/OE-INTERDISCIPLINARY-v1.0.0.yaml) (`OE-INTERDISCIPLINARY`) — a concept defined four different ways (biology, culture, education, AI).
-- [`OE-ALIGN-000001.yaml`](../alignments/OE-ALIGN-000001.yaml), [`OE-ALIGN-000003.yaml`](../alignments/OE-ALIGN-000003.yaml), [`OE-ALIGN-000004.yaml`](../alignments/OE-ALIGN-000004.yaml), [`OE-ALIGN-000005.yaml`](../alignments/OE-ALIGN-000005.yaml) — the alignment records connecting it to `BIO-CORE`'s Natural Selection, an NGSS performance expectation, and two AI4K12 entries.
+- [`OE-ALIGN-bio-core-natural-selection-to-oe-interdisciplinary-selection-closematch.yaml`](../alignments/OE-ALIGN-bio-core-natural-selection-to-oe-interdisciplinary-selection-closematch.yaml), [`OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch.yaml`](../alignments/OE-ALIGN-oe-interdisciplinary-selection-to-ngss-life-science-hs-ls4-4-closematch.yaml), [`OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch.yaml`](../alignments/OE-ALIGN-oe-interdisciplinary-evolutionary-process-to-ai4k12-3-a-vi-relatedmatch.yaml), [`OE-ALIGN-oe-interdisciplinary-agency-to-ai4k12-4-d-i-relatedmatch-asserted-2026-07-20.yaml`](../alignments/OE-ALIGN-oe-interdisciplinary-agency-to-ai4k12-4-d-i-relatedmatch-asserted-2026-07-20.yaml) — the alignment records connecting it to `BIO-CORE`'s Natural Selection, an NGSS performance expectation, and two AI4K12 entries.
 
 This is the thing ConceptBase is actually for: the same idea, defined independently in different vocabularies, made comparable through explicit, provenance-carrying alignment records rather than hand-waving.
 
@@ -23,7 +23,7 @@ Pick any ID from what you just saw and hit its w3id URL directly:
 
 ```
 https://www.w3id.org/openevo/concept/OE-CONCEPT-oe-interdisciplinary-selection
-https://www.w3id.org/openevo/lpm/OE-LPM-000002
+https://www.w3id.org/openevo/lpm/OE-LPM-oe-interdisciplinary-k12
 ```
 
 Every one of these is a real, live redirect — `www.w3id.org/openevo/` was registered in July 2026 ([perma-id/w3id.org#6389](https://github.com/perma-id/w3id.org/pull/6389)). This is the mechanism that makes an ID in your own future LPM permanently citable regardless of where ConceptBase's own hosting lives in five years.
@@ -39,13 +39,13 @@ git clone https://github.com/openevo-ccs/bio-core-k12
 Open `lpm.yaml`. Two things matter more than the rest of the file:
 
 ```yaml
-id: OE-LPM-000001
+id: OE-LPM-bio-core-k12
 conceptbase:
   ontology: "OE-ONTOLOGY-v1.0.0"
   vocabularies:
     - "BIO-CORE-v1.0.0"
 strands:
-  - id: "OE-STRAND-000101"
+  - id: "OE-STRAND-bio-core-k12-variation-inheritance"
     repository: "lpms/bio-core-k12/strands/strand-101-variation-inheritance.yaml"
 ```
 
@@ -81,10 +81,10 @@ Once you understand the shape, don't start from `bio-core-k12` (23 substrands) o
 ## 6. Start your own dependent repo
 
 1. **Decide what you're building** — an LPM (a full progression), a Strand (a standalone piece another LPM can reference), or a new controlled vocabulary of concepts/competencies. Each is a different schema in `schemas/`.
-2. **Reserve an ID block** via the RFC process ([`GOVERNANCE.md`](../GOVERNANCE.md)'s Identifier Block Allocation) *before* minting real IDs — this is what keeps two independently authored repos from colliding on the same number. A sandbox-tier ID (`OE-SANDBOX-CONCEPT-######`, RFC-0001) is the lighter-weight option if you're still prototyping and don't want the permanent never-delete guarantee yet.
+2. **Reserve an ID block** via the RFC process ([`GOVERNANCE.md`](../GOVERNANCE.md)'s Identifier Block Allocation) *before* minting real IDs — this is what keeps two independently authored repos from colliding on the same number. A sandbox-tier ID (`OE-SANDBOX-CONCEPT-<vocab-slug>-<label-slug>`, RFC-0001) is the lighter-weight option if you're still prototyping and don't want the permanent never-delete guarantee yet.
 3. **Pin real `conceptbase:` versions** — the ontology and whichever vocabularies you're building against, exactly like `bio-core-k12/lpm.yaml`.
 4. **Validate before you PR** — `scripts/validate.py` against every file you're adding, same as step 4 above.
-5. **Register your LPM** by adding an entry to `registry/lpm-index.json` via a PR to this repo, so `w3id.org/openevo/lpm/{your-id}` resolves to your repo the same way `OE-LPM-000001`/`OE-LPM-000002` do.
+5. **Register your LPM** by adding an entry to `registry/lpm-index.json` via a PR to this repo, so `w3id.org/openevo/lpm/{your-id}` resolves to your repo the same way `OE-LPM-bio-core-k12`/`OE-LPM-oe-interdisciplinary-k12` do.
 6. **Anything genuinely new** (a new schema field, a new vocabulary, a new alignment mechanism) goes through the RFC process in [`proposals/`](../proposals/) — see [`GOVERNANCE.md`](../GOVERNANCE.md) and the existing RFCs there for the level of justification expected, especially the "why doesn't an existing standard already cover this" section every RFC requires.
 
 ## Where to go deeper

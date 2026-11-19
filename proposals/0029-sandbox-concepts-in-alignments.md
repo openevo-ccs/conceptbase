@@ -8,7 +8,7 @@
 
 ## Motivation
 
-The comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023) produced three small framework vocabularies, written as sandbox concepts `OE-SANDBOX-CONCEPT-000039` to `000070` with the shared field concepts above them. Alignment records carry what a comparison needs: a match type, who asserted it, a status that can be contested, and a rationale. They accept only permanent-tier references (`{vocabulary}:OE-CONCEPT-...` or `OE-COMPETENCY-...`), so the sandbox vocabularies cannot be aligned yet.
+The comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023) produced three small framework vocabularies, written as sandbox concepts sandbox concepts 39 to 70 of the comparison (now slug ids) with the shared field concepts above them. Alignment records carry what a comparison needs: a match type, who asserted it, a status that can be contested, and a rationale. They accept only permanent-tier references (`{vocabulary}:OE-CONCEPT-...` or `OE-COMPETENCY-...`), so the sandbox vocabularies cannot be aligned yet.
 
 Creating three permanent vocabularies first would need a review of the framework constructs that nobody has done. The sandbox tier exists so entries can be authored provisionally.
 

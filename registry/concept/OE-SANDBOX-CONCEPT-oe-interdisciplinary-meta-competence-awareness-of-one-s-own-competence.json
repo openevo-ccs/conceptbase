@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The second-order part of fully apt performance, which Barzilai and Chinn take from Sosa: competence for assessing whether a judgment can be made reliably enough, based on awareness of how one's skills can be used successfully. It governs, for example, whether to form a belief or to withhold judgment.\n"
+    }
+  },
+  "examples": [
+    "A reader holds off judging a health claim because they know they cannot judge the evidence themselves.",
+    "A reader defers to an expert on a question outside their own skills."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-meta-competence-awareness-of-one-s-own-competence",
+  "labels": {
+    "en": "Meta-Competence (Awareness of One's Own Competence)"
+  },
+  "nonExamples": [
+    "Confidence with no basis.",
+    "A copied correct answer."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-regulation"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-adaptive-flexibility"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

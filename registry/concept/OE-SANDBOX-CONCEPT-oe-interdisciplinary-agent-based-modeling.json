@@ -1,0 +1,38 @@
+{
+  "citations": [
+    {
+      "doi": "10.7551/mitpress/12091.003.0037",
+      "text": "Wilensky, U. (2020). Restructuration theory and agent-based modeling: Reformulating knowledge domains through computational representations. In N. Holbert, M. Berland, & Y. Kafai (Eds.), Designing Constructionist Futures. MIT Press.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "education": "As a pedagogical method: authoring or manipulating an agent-based model's low-level rules directly (e.g. in NetLogo), used as the representational infrastructure that makes decentralized causal reasoning learnable in practice, not just definable in principle.\n",
+      "general": "A computational modeling method in which a system-level pattern is simulated by specifying rules for individual agents (e.g. organisms, particles, people) and their local interactions, then running the simulation forward and observing what pattern emerges — rather than specifying the system-level pattern directly as an equation.\n"
+    }
+  },
+  "examples": [
+    "A NetLogo model of predator-driven selection on a beetle population's running speed, where students set individual beetle/predator rules and observe the population-level selection pattern emerge across generations.",
+    "Two Foresters, a real classroom-ready NetLogo model (netlogo repo, openevo-ccs/netlogo) in which learners author/manipulate two foresters' individual harvest-rate rules directly and observe the aggregate sustainability/social-dilemma outcome emerge, rather than being told a resource-depletion equation -- a real cooperation-and-agency-domain instantiation of this concept, not a natural-selection one."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling",
+  "labels": {
+    "en": "Agent-Based Modeling"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-restructuration",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning",
+      "OE-CONCEPT-oe-interdisciplinary-cooperation",
+      "OE-CONCEPT-oe-interdisciplinary-agency"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-08-06",
+    "expiresOn": "2027-08-06",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

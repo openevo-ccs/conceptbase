@@ -1,7 +1,7 @@
 # ============================================================================
 # Example: a minimal oe:LPM manifest
 # ============================================================================
-# Illustrative only -- OE-LPM-000900 is not a registered ID. It is not indexed
+# Illustrative only -- OE-LPM-example-lpm is not a registered ID. It is not indexed
 # in registry/lpm-index.json and does not resolve at w3id.org/openevo/ (see
 # examples/README.md). By convention this file is the root manifest of an
 # LPM repository -- compare bio-core-k12/lpm.yaml and
@@ -15,7 +15,7 @@
 # deprecated/superseded ones.
 # ============================================================================
 
-id: OE-LPM-000900
+id: OE-LPM-example-lpm
 type: "oe:LPM"
 status: proposed
 version: 0.1.0
@@ -43,7 +43,7 @@ conceptbase:
     - "EXAMPLE-CONCEPT-VOCAB-v1.0.0"
 
 strands:
-  - id: "OE-STRAND-000900"
+  - id: "OE-STRAND-example-lpm-example-strand"
     repository: "strand.example.yaml"
     required: true
     sequence: 1

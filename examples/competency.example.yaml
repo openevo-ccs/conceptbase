@@ -1,7 +1,7 @@
 # ============================================================================
 # Example: a single oe:Competency entry (full statement text)
 # ============================================================================
-# Illustrative only -- OE-COMPETENCY-000900 is not a registered ID (see
+# Illustrative only -- OE-COMPETENCY-example-vocab-example-code is not a registered ID (see
 # examples/README.md). This is the common case: a source whose license
 # permits reproducing the full statement text (e.g. NGSS, AI4K12 -- see
 # RFC-0006/RFC-0007). For a source that does NOT permit that, see
@@ -12,7 +12,7 @@
 # for the same reason: transcribed from public pages, not a CASE API).
 # ============================================================================
 
-id: OE-COMPETENCY-000900
+id: OE-COMPETENCY-example-vocab-example-code
 type: oe:Competency
 status: proposed
 version: 0.1.0
