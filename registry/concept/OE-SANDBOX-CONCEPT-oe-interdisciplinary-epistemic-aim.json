@@ -28,7 +28,9 @@
     ],
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-representation",
-      "OE-CONCEPT-oe-interdisciplinary-knowledge"
+      "OE-CONCEPT-oe-interdisciplinary-knowledge",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-valuing-and-effort",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-valuing-and-effort"
     ]
   },
   "sandboxMeta": {

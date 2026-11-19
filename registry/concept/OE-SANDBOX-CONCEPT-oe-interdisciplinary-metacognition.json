@@ -31,6 +31,16 @@
     "en": "Metacognition"
   },
   "relations": {
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-monitoring",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-regulation",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-sources-of-metacognitive-knowledge",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-transfer-and-adaptivity",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-valuing-and-effort",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-teachers-as-models-and-learners-of-thinking",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-phenomenological-awareness"
+    ],
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-theory-of-mind",

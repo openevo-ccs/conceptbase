@@ -48,3 +48,4 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0026 | 2026-10-23T13:15:03Z | hanisch-eirdosh-primary-teacher-competencies-citations | (claimed, not yet a branch) | lab-manager-85 | |
 | 0027 | 2026-10-24 | pedagogical-approaches-competency-linking | (claimed, not yet a branch) | lab-manager-bc | |
 | 0028 | 2026-10-25T16:57:57Z | four-space-vocabulary-mapping-and-interdisciplinary-extension | `rfc-0028-four-space-vocabulary-mapping` | openlpm-flagship-2026-10-25 | |
+| 0029 | 2026-11-18 | sandbox-concepts-in-alignments | `metacognition-frameworks-2026-11-18` (open PR) | lab-manager-metacog | Needed before alignment records can reference the framework vocabularies (sandbox concepts 39 to 70). |

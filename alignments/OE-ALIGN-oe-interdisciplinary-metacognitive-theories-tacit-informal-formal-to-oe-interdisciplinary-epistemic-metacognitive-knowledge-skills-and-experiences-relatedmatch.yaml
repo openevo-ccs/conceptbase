@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-metacognitive-theories-tacit-informal-formal-to-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-metacognitive-theories-tacit-informal-formal-to-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-theories-tacit-informal-formal
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 33 of the concept decision sheet (zone 7). Pillow: Metacognitive Theories (Tacit, Informal,
+  Formal). Barzilai and Chinn: Epistemic Metacognitive Knowledge, Skills and Experiences. What they
+  share: Barzilai and Chinn say implicit conceptions about epistemic matters shape how learners read a
+  task and have a metacognitive nature. What keeps them apart: Pillow gives a scale of levels from
+  tacit to formal that Barzilai and Chinn do not use.

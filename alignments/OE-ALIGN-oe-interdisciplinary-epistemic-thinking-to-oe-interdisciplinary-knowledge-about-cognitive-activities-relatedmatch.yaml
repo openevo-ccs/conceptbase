@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-epistemic-thinking-to-oe-interdisciplinary-knowledge-about-cognitive-activities-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-epistemic-thinking-to-oe-interdisciplinary-knowledge-about-cognitive-activities-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-knowledge-about-cognitive-activities
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 34 of the concept decision sheet (zone 7). Barzilai and Chinn: Epistemic Thinking. Pillow:
+  Knowledge About Cognitive Activities. What they share: Epistemic thinking and knowledge about
+  cognitive activities overlap where thinking about knowledge meets thinking about mental activity.
+  What keeps them apart: Epistemic thinking concerns knowledge claims. Pillow's concerns mental
+  activities. Pillow's epistemological thought is the overlap.

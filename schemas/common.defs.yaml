@@ -193,9 +193,12 @@ meta:
 
   alignmentConceptRef:
     type: string
-    pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-(CONCEPT-[a-z0-9\\-]+|COMPETENCY-[a-z0-9\\-]+)$"
+    oneOf:
+      - pattern: "^[A-Z0-9\\-]+-v[0-9]+\\.[0-9]+\\.[0-9]+:OE-(CONCEPT-[a-z0-9\\-]+|COMPETENCY-[a-z0-9\\-]+)$"
+      - pattern: "^OE-SANDBOX-CONCEPT-(?![0-9]{6}$)[a-z0-9]+(-[a-z0-9]+)*$"
     description: >
-      A `{vocabulary}:{conceptId}` reference used by Alignment records
+      A `{vocabulary}:{conceptId}` reference used by Alignment records (RFC-0029 also accepts a bare
+      slug sandbox concept id, only in alignments whose status is proposed or contested)
       (subject/object), e.g. "BIO-CORE-v1.0.0:OE-CONCEPT-bio-core-natural-selection". Also
       accepts `OE-COMPETENCY-{vocab-slug}-{code-slug}` (RFC-0008), since Phase 2 alignment
       records may now connect an oe:Concept to an oe:Competency (e.g. a

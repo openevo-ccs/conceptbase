@@ -1,0 +1,45 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023), 2026-11-18. A shared field concept proposed by the comparison; no source defines it."
+    },
+    {
+      "doi": "10.1007/978-1-4614-2248-8",
+      "text": "Pillow, B. H. (2012). Children's discovery of the active mind: Phenomenological awareness, social experience, and knowledge about cognition. Springer."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Noticing and judging one's own mental activity or performance as it happens: whether one understands, remembers or is sure, how hard something is, and where a piece of information came from. Pillow proposes five aspects of cognition that a person can become aware of: informational content, informational source, feelings of effort or difficulty, feelings of certainty or uncertainty, and emotions linked to thinking.\n"
+    }
+  },
+  "examples": [
+    "A child notices that they do not remember a word and says so.",
+    "A student notices partway through a simulation task that she is unsure of her prediction and says so."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-monitoring",
+  "labels": {
+    "en": "Metacognitive Monitoring"
+  },
+  "nonExamples": [
+    "Carrying out a memory strategy without any awareness of whether it works.",
+    "A teacher rating a pupil's performance from outside."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-cognitive-monitoring-pillow",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-noticing-inner-and-outer-behavior"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

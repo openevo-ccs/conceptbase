@@ -27,7 +27,9 @@
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-aim",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-ideal",
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-reliable-epistemic-process",
-      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance"
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-apt-epistemic-performance",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-knowledge-skills-and-experiences",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-competence-and-virtue"
     ],
     "skos:related": [
       "OE-CONCEPT-oe-interdisciplinary-knowledge",

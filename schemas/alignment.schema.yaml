@@ -75,5 +75,20 @@ properties:
     type: string
     description: Free-text justification for the asserted match.
 
+# RFC-0029: an alignment that points at a sandbox concept stays provisional.
+allOf:
+  - if:
+      anyOf:
+        - properties:
+            subject:
+              pattern: "^OE-SANDBOX-CONCEPT-"
+        - properties:
+            object:
+              pattern: "^OE-SANDBOX-CONCEPT-"
+    then:
+      properties:
+        status:
+          enum: [proposed, contested]
+
 required: [id, subject, object, matchType, assertedBy, date, status, rationale]
 additionalProperties: false

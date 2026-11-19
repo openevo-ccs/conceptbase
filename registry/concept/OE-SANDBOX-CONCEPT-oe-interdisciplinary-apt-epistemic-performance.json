@@ -27,8 +27,17 @@
     "skos:broader": [
       "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-thinking"
     ],
+    "skos:narrower": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-meta-competence-awareness-of-one-s-own-competence",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-adaptive-epistemic-performance",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-caring-and-enjoying",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-joint-epistemic-performance",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-cognitive-epistemic-engagement"
+    ],
     "skos:related": [
-      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-competence-and-virtue"
     ]
   },
   "sandboxMeta": {

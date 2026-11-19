@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "In the design concept, understanding of human behavior that the paper describes as carrying across specific topics and phenomena, built from concepts from several behavioral sciences and including conceptual understanding of the behaviors involved in a given competency.\n"
+    }
+  },
+  "examples": [
+    "Explaining a conflict with the concepts of function, causes and payoffs.",
+    "Using the same concept in a lesson on cooperation and a lesson on climate."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-conceptual-understanding-of-human-behavior",
+  "labels": {
+    "en": "Conceptual Understanding of Human Behavior"
+  },
+  "nonExamples": [
+    "Memorising a list of terms.",
+    "A fact about one topic."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-competency-about-human-behavior"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-mental-models-of-human-behavior"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

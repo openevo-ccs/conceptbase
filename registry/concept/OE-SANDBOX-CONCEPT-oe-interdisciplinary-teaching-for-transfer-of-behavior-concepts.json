@@ -1,0 +1,42 @@
+{
+  "citations": [
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The design concept's third principle: students practise transferring their understanding of behavior to new phenomena, everyday experience and sustainability problems across scales and contexts, for example with analogy maps that students use to critically transfer principles to new contexts.\n"
+    }
+  },
+  "examples": [
+    "Filling in an analogy map of cooperation principles for a project group and a school community.",
+    "Using the same concept in a lesson on cooperation and a lesson on climate."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-teaching-for-transfer-of-behavior-concepts",
+  "labels": {
+    "en": "Teaching for Transfer of Behavior Concepts"
+  },
+  "nonExamples": [
+    "Drill on one task.",
+    "Applying a concept everywhere without checking."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-competency-about-human-behavior",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-transfer-and-adaptivity"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-transfer-and-adaptivity"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

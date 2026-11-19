@@ -1,0 +1,20 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-adaptive-epistemic-performance-to-oe-interdisciplinary-teaching-for-transfer-of-behavior-concepts-relatedmatch.yaml
+# ============================================================================
+# Proposed by RFC-0029 (sandbox concepts in alignments), from the metacognition comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023).
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-18. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-adaptive-epistemic-performance-to-oe-interdisciplinary-teaching-for-transfer-of-behavior-concepts-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-adaptive-epistemic-performance
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-teaching-for-transfer-of-behavior-concepts
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-18); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-18"
+status: proposed
+rationale: >
+  Pair 16 of the concept decision sheet (zone 4). Barzilai and Chinn: Adaptive Epistemic Performance.
+  Hanisch and Eirdosh: Teaching for Transfer of Behavior Concepts. What they share: Both are about
+  fitting understanding to new tasks and situations. What keeps them apart: Apt-AIR's adaptivity is
+  something a learner does in a situation. The design concept's is a teaching principle.

@@ -1,0 +1,50 @@
+{
+  "citations": [
+    {
+      "text": "OpenEvo comparison of Pillow (2012), Barzilai and Chinn (2018, 2024) and Hanisch and Eirdosh (2023), 2026-11-18. A shared field concept proposed by the comparison; no source defines it."
+    },
+    {
+      "doi": "10.1080/10508406.2017.1392968",
+      "text": "Barzilai, S., & Chinn, C. A. (2018). On the goals of epistemic education: Promoting apt epistemic performance. Journal of the Learning Sciences, 27(3), 353-389."
+    },
+    {
+      "doi": "10.3390/su15097413",
+      "text": "Hanisch, S., & Eirdosh, D. (2023). Behavioral science and education for sustainable development: Towards metacognitive competency. Sustainability, 15(9), 7413."
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The proposal that how much a person values an aim or a value affects the effort and persistence they put into it. Barzilai and Chinn make this proposal for epistemic aims. The Hanisch and Eirdosh paper cites studies in which brief reflection on values raised school motivation and performance.\n"
+    }
+  },
+  "examples": [
+    "A student works longer on a model she cares about getting right.",
+    "A class that chose its own question puts in more effort."
+  ],
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-valuing-and-effort",
+  "labels": {
+    "en": "Valuing and Effort"
+  },
+  "nonExamples": [
+    "Effort driven only by a deadline.",
+    "Ability without any motivation."
+  ],
+  "relations": {
+    "skos:broader": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognition"
+    ],
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-caring-and-enjoying",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-values-based-choice",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-aim"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-18",
+    "expiresOn": "2027-11-18",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
