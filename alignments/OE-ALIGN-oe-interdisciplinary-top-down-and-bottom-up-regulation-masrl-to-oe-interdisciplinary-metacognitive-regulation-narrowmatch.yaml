@@ -1,0 +1,21 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-top-down-and-bottom-up-regulation-masrl-to-oe-interdisciplinary-metacognitive-regulation-narrowmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-top-down-and-bottom-up-regulation-masrl-to-oe-interdisciplinary-metacognitive-regulation-narrowmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-top-down-and-bottom-up-regulation-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-regulation
+matchType: skos:narrowMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 15 of the MASRL concept pair sheet (zone 3). Top-Down and Bottom-Up Regulation (MASRL) and
+  Metacognitive Regulation. What they share: Top-down and bottom-up are two ways regulation can start,
+  so the concept is a more specific account of regulation. What keeps them apart: The shared concept
+  says nothing about whether regulation starts from a plan or from a signal. Apt-AIR and the design
+  concept do not use this split. Sources: MASRL pp. 5, 14-15

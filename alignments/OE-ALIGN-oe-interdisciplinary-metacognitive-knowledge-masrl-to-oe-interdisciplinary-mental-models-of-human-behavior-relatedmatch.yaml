@@ -1,0 +1,23 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-metacognitive-knowledge-masrl-to-oe-interdisciplinary-mental-models-of-human-behavior-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-metacognitive-knowledge-masrl-to-oe-interdisciplinary-mental-models-of-human-behavior-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-mental-models-of-human-behavior
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 11 of the MASRL concept pair sheet (zone 2). Metacognitive Knowledge (MASRL) and Mental Models
+  of Human Behavior. What they share: Both are stored ideas that shape how a person reads their own
+  experience and what follows. MASRL has metacognitive knowledge between feeling and strategy (p. 22).
+  The paper argues that mental models of behavior affect how people notice, interpret and react
+  (Section 3). What keeps them apart: The object differs: ideas about cognition, tasks and strategies
+  against ideas about why people act as they do. The paper's evidence concerns beliefs about behavior
+  and wellbeing and was not examined here. Sources: MASRL p. 22; Hanisch and Eirdosh Section 3

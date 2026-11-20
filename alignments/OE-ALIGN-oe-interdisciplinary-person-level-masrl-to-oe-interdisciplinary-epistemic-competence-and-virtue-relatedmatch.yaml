@@ -1,0 +1,24 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-person-level-masrl-to-oe-interdisciplinary-epistemic-competence-and-virtue-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-person-level-masrl-to-oe-interdisciplinary-epistemic-competence-and-virtue-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-person-level-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-competence-and-virtue
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 24 of the MASRL concept pair sheet (zone 5). Person Level (MASRL) and Epistemic Competence and
+  Virtue. What they share: Both separate what a person brings from what happens in a task: MASRL's
+  Person level from the Task X Person level (p. 5), and Sosa's competence, which Barzilai and Chinn
+  adopt, from the apt performance that manifests it (2018, pp. 360-361). What keeps them apart:
+  MASRL's Person level also holds motivation, attitudes and emotions toward learning, which Apt-AIR
+  assigns to other aspects. Apt-AIR defines competence by reliability of success, and the shared
+  concept calls these competencies developing and adaptive. The parallel is in structure only.
+  Sources: MASRL p. 5; Barzilai and Chinn 2018 pp. 360-362
