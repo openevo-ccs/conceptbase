@@ -1,0 +1,24 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-metacognitive-experience-masrl-to-oe-interdisciplinary-noticing-inner-and-outer-behavior-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-metacognitive-experience-masrl-to-oe-interdisciplinary-noticing-inner-and-outer-behavior-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-experience-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-noticing-inner-and-outer-behavior
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 6 of the MASRL concept pair sheet (zone 1). Metacognitive Experience (MASRL) and Noticing Inner
+  and Outer Behavior. What they share: Both register a person's own inner state. The paper says the
+  Noticing Tool lets learners analyze the causes and functions of their own subjective experience, and
+  its examples include doubt and uncertainty, among others, which sit close to MASRL's confidence
+  (Section 4.4.4). What keeps them apart: The Noticing Tool is a classroom practice that asks for
+  interpretation of function and for acceptance, and its object is behavior including life behavior.
+  MASRL's ME arise by themselves during a task and feed control of that task. The paper discusses no
+  accuracy. Sources: MASRL pp. 4-5; Hanisch and Eirdosh Section 4.4.4

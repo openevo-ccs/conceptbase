@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-metacognitive-experience-masrl-to-oe-interdisciplinary-phenomenological-awareness-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-metacognitive-experience-masrl-to-oe-interdisciplinary-phenomenological-awareness-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-experience-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-phenomenological-awareness
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 1 of the MASRL concept pair sheet (zone 1). Metacognitive Experience (MASRL) and
+  Phenomenological Awareness. What they share: Both are what a person consciously notices of their own
+  mental activity while it is going on. Pillow's five aspects (content, source, effort or difficulty,
+  certainty or clarity, emotion) overlap with MASRL's familiarity, difficulty, effort, confidence and
+  satisfaction. Pillow uses the words metacognitive experiences for the uncertainty cues. What keeps
+  them apart: Pillow's awareness includes content, source and emotion, which MASRL does not count as
+  ME (it excludes emotions explicitly, p. 4), and it serves as a source of knowledge for building
+  concepts. MASRL's ME serve as input to control. The overlap is partial in both directions. Sources:
+  MASRL pp. 3-4, 9; Pillow PDF pp. 13, 59-60, 99

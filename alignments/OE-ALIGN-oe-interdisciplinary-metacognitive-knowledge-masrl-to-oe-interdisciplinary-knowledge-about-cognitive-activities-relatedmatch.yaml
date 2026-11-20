@@ -1,0 +1,22 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-metacognitive-knowledge-masrl-to-oe-interdisciplinary-knowledge-about-cognitive-activities-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-metacognitive-knowledge-masrl-to-oe-interdisciplinary-knowledge-about-cognitive-activities-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-knowledge-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-knowledge-about-cognitive-activities
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 9 of the MASRL concept pair sheet (zone 2). Metacognitive Knowledge (MASRL) and Knowledge About
+  Cognitive Activities. What they share: MASRL's metacognitive knowledge includes declarative
+  knowledge of cognitive processes such as memory, which is the content of Pillow's knowledge about
+  cognitive activities. What keeps them apart: MASRL adds knowledge of persons, tasks, strategies and
+  goals. Pillow's concept includes epistemological thought, which MASRL's list does not mention. Each
+  leaves out a part of the other, so neither is narrower. Sources: MASRL p. 9; Pillow PDF pp. 13, 23

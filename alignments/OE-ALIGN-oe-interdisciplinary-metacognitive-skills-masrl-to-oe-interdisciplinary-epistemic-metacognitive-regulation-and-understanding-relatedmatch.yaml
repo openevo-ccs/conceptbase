@@ -1,0 +1,24 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-metacognitive-skills-masrl-to-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-metacognitive-skills-masrl-to-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-metacognitive-skills-masrl
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-epistemic-metacognitive-regulation-and-understanding
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 13 of the MASRL concept pair sheet (zone 3). Metacognitive Skills (MASRL) and Epistemic
+  Metacognitive Regulation and Understanding. What they share: Both list planning, monitoring and
+  evaluating as the skills of regulating one's work. Apt-AIR's epistemic metacognitive skills are
+  planning, monitoring and evaluating epistemic processes, and MASRL adds orientation. What keeps them
+  apart: Apt-AIR's skills serve reliable epistemic products and come with understanding of aims,
+  ideals and processes. MASRL's skills are domain-free across learning tasks (p. 21), and the article
+  sets them against ME, which it assigns to the monitoring function (p. 9). The two are siblings under
+  regulation, with different objects. Sources: MASRL p. 21; Barzilai and Chinn 2018 pp. 364, 369

@@ -1,0 +1,25 @@
+# ============================================================================
+# Path: /alignments/OE-ALIGN-oe-interdisciplinary-object-level-personal-awareness-level-and-social-level-enriched-model-to-oe-interdisciplinary-phenomenological-awareness-relatedmatch.yaml
+# ============================================================================
+# Proposed under RFC-0029, from the comparison of Efklides and Schwartz's MASRL with Pillow, Barzilai and Chinn, and Hanisch and Eirdosh.
+# AI-drafted and checked by an independent AI fact check. Dustin Eirdosh accepted the recommendation on 2026-11-20. No subject-matter expert has reviewed it.
+# ============================================================================
+
+id: OE-ALIGN-oe-interdisciplinary-object-level-personal-awareness-level-and-social-level-enriched-model-to-oe-interdisciplinary-phenomenological-awareness-relatedmatch
+subject: OE-SANDBOX-CONCEPT-oe-interdisciplinary-object-level-personal-awareness-level-and-social-level-enriched-model
+object: OE-SANDBOX-CONCEPT-oe-interdisciplinary-phenomenological-awareness
+matchType: skos:relatedMatch
+assertedBy:
+  - Dustin Eirdosh (decision, 2026-11-20); drafted by Claude (AI) for the OpenEvo Computational Curriculum Studies Working Group
+date: "2026-11-20"
+status: proposed
+rationale: >
+  Pair 21 of the MASRL concept pair sheet (zone 5). Object Level, Personal Awareness Level and Social
+  Level (Enriched Model) and Phenomenological Awareness. What they share: Both say cognitive
+  processing is largely nonconscious and that conscious awareness gets only its products. The Enriched
+  Model's Personal Awareness level is where subjective experiences become conscious, and Pillow's
+  phenomenological awareness is conscious experience tied to cognitive processing. What keeps them
+  apart: Pillow's awareness is a source of information for building concepts and its limits are
+  stressed. The Personal Awareness level is the meta-level of Nelson and Narens, tied to monitoring
+  and control. The article gives no mapping to MASRL's Person and Task X Person levels. Sources: MASRL
+  pp. 5, 9-10; Pillow PDF pp. 13, 53-54
