@@ -1,0 +1,45 @@
+{
+  "citations": [
+    {
+      "doi": "10.1038/s41562-023-01742-2",
+      "text": "Brinkmann, L., Baumann, F., Bonnefon, J. F., Derex, M., Müller, T. F., Nussberger, A. M., Czaplicka, A., Acerbi, A., Griffiths, T. L., Henrich, J., Leibo, J. Z., McElreath, R., Oudeyer, P. Y., Stray, J., & Rahwan, I. (2023). Machine culture. Nature Human Behaviour, 7(11), 1855-1868.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A machine learning system that produces new content, such as text, images or sound, from patterns it learned from many examples. In cultural terms it can add variation by recombining existing traits into new combinations. Wording for students: a machine that makes new things out of what it has seen.\n"
+    }
+  },
+  "examples": [
+    "An image generator that combines the look of an avocado and an armchair into a new picture."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-generative-model",
+  "labels": {
+    "en": "Generative Model"
+  },
+  "nonExamples": [
+    "A search engine that ranks pages that already exist (that is selection)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-variation",
+      "OE-CONCEPT-oe-interdisciplinary-technology",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

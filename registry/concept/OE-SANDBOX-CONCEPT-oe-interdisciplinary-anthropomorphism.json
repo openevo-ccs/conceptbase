@@ -1,0 +1,44 @@
+{
+  "citations": [
+    {
+      "doi": "10.2307/1416950",
+      "text": "Heider, F., & Simmel, M. (1944). An experimental study of apparent behavior. The American Journal of Psychology, 57(2), 243-259. (A classic demonstration.)\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Seeing human-like minds, intentions or feelings in things that are not human, such as animals, moving shapes, tools or machines. Wording for students: when we say a thing wants or fears something because it moves or answers like a person.\n"
+    }
+  },
+  "examples": [
+    "Describing a short film of a circle and two triangles moving around a box as a chase, a hiding and a rescue."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-anthropomorphism",
+  "labels": {
+    "en": "Anthropomorphism"
+  },
+  "nonExamples": [
+    "Describing a machine's behavior by the aim its designers set and the data it learned from."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-agency",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

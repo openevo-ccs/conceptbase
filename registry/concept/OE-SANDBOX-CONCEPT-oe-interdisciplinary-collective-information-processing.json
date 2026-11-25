@@ -1,0 +1,47 @@
+{
+  "citations": [
+    {
+      "doi": "10.1016/j.cognition.2025.106433",
+      "text": "Anwarzai, Z., Moser, C., Dromiack, H., Garg, K., & Ramos-Fernandez, G. (2026). Collective intelligence as collective information processing. Cognition.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "How a group takes in, combines and acts on information. It has two parts: individuals processing information about the group, and the group's sensitivity to how the individuals' information is arranged, for example who sees what, who can talk to whom, and how reports are combined. Proposed as the shared base of the different forms of collective intelligence. Wording for students: a group's answer depends on what each member can see and on how what they know is put together.\n"
+    }
+  },
+  "examples": [
+    "A honeybee swarm choosing a nest site: scouts report independently, and the swarm decides when enough of them favor one site.",
+    "A class game in which the pool of chips is hidden in one phase and visible in the next, and players may or may not talk."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-collective-information-processing",
+  "labels": {
+    "en": "Collective Information Processing"
+  },
+  "nonExamples": [
+    "One student solving a puzzle alone, with no other group member's information involved."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-collective-intelligence",
+      "OE-CONCEPT-oe-interdisciplinary-distributed-cognition",
+      "OE-CONCEPT-oe-interdisciplinary-information",
+      "OE-CONCEPT-oe-interdisciplinary-knowledge"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

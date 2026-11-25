@@ -909,3 +909,320 @@ concepts:
       - text: >
           Hofstadter, D. R., & Sander, E. (2013). Surfaces and Essences:
           Analogy as the Fuel and Fire of Thinking. Basic Books.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-collective-information-processing
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Collective Information Processing
+    definitions:
+      en:
+        general: >
+          How a group takes in, combines and acts on information. It has two
+          parts: individuals processing information about the group, and the
+          group's sensitivity to how the individuals' information is arranged,
+          for example who sees what, who can talk to whom, and how reports are
+          combined. Proposed as the shared base of the different forms of
+          collective intelligence. Wording for students: a group's answer
+          depends on what each member can see and on how what they know is put
+          together.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-collective-intelligence
+        - OE-CONCEPT-oe-interdisciplinary-distributed-cognition
+        - OE-CONCEPT-oe-interdisciplinary-information
+        - OE-CONCEPT-oe-interdisciplinary-knowledge
+    examples:
+      - "A honeybee swarm choosing a nest site: scouts report independently, and the swarm decides when enough of them favor one site."
+      - "A class game in which the pool of chips is hidden in one phase and visible in the next, and players may or may not talk."
+    nonExamples:
+      - "One student solving a puzzle alone, with no other group member's information involved."
+    citations:
+      - text: >
+          Anwarzai, Z., Moser, C., Dromiack, H., Garg, K., & Ramos-Fernandez,
+          G. (2026). Collective intelligence as collective information
+          processing. Cognition.
+        doi: "10.1016/j.cognition.2025.106433"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-algorithmic-selection
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Algorithmic Selection
+    definitions:
+      en:
+        general: >
+          The choosing, by a ranking or recommender system, of which items
+          (posts, songs, articles, contacts) reach a person and in what order.
+          Such systems add no new items of their own, but they affect which
+          existing items are kept and passed on. Wording for students: the
+          feed decides what you meet first.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-selection
+        - OE-CONCEPT-oe-interdisciplinary-variation
+        - OE-CONCEPT-oe-interdisciplinary-technology
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture
+    examples:
+      - "A feed that shows posts with many reactions first, so that popular posts reach still more people."
+    nonExamples:
+      - "A system that writes a new post (that is generation and is not selection)."
+    citations:
+      - text: >
+          Brinkmann, L., Baumann, F., Bonnefon, J. F., Derex, M., Müller, T.
+          F., Nussberger, A. M., Czaplicka, A., Acerbi, A., Griffiths, T. L.,
+          Henrich, J., Leibo, J. Z., McElreath, R., Oudeyer, P. Y., Stray, J.,
+          & Rahwan, I. (2023). Machine culture. Nature Human Behaviour, 7(11),
+          1855-1868.
+        doi: "10.1038/s41562-023-01742-2"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-generative-model
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Generative Model
+    definitions:
+      en:
+        general: >
+          A machine learning system that produces new content, such as text,
+          images or sound, from patterns it learned from many examples. In
+          cultural terms it can add variation by recombining existing traits
+          into new combinations. Wording for students: a machine that makes
+          new things out of what it has seen.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-variation
+        - OE-CONCEPT-oe-interdisciplinary-technology
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture
+    examples:
+      - "An image generator that combines the look of an avocado and an armchair into a new picture."
+    nonExamples:
+      - "A search engine that ranks pages that already exist (that is selection)."
+    citations:
+      - text: >
+          Brinkmann, L., Baumann, F., Bonnefon, J. F., Derex, M., Müller, T.
+          F., Nussberger, A. M., Czaplicka, A., Acerbi, A., Griffiths, T. L.,
+          Henrich, J., Leibo, J. Z., McElreath, R., Oudeyer, P. Y., Stray, J.,
+          & Rahwan, I. (2023). Machine culture. Nature Human Behaviour, 7(11),
+          1855-1868.
+        doi: "10.1038/s41562-023-01742-2"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-model-collapse
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Model Collapse
+    definitions:
+      en:
+        general: >
+          An effect reported when models are trained on content produced by
+          earlier models: the resulting models develop irreversible defects in
+          which the rare parts of the original content distribution disappear.
+          It was shown for large language models and for two other kinds of
+          models, with theory behind it. Wording for students: when copies of
+          copies fill what a model learns from, the rare things drop out.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-variation
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-hybrid-social-learning
+    examples:
+      - "A language model trained over several generations on text that earlier models wrote, whose output loses the unusual cases of the original text."
+    nonExamples:
+      - "A model that does poorly because it was given too little data."
+    citations:
+      - text: >
+          Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R.,
+          & Gal, Y. (2024). AI models collapse when trained on recursively
+          generated data. Nature.
+        doi: "10.1038/s41586-024-07566-y"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-knowledge-commons
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Knowledge Commons
+    definitions:
+      en:
+        general: >
+          Knowledge, information or data that a community shares and looks
+          after together, such as an archive, a wiki or an open dataset. Using
+          it does not use it up, but it can be left unmaintained or filled
+          with poor copies, and it needs rules and care in the way other
+          commons do. Wording for students: a shared pool of what we know,
+          which stays useful only if people keep adding good things to it.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-knowledge
+        - OE-CONCEPT-oe-interdisciplinary-collective-intelligence
+    examples:
+      - "A class wiki that stays useful because members write original pages and mark who wrote what."
+    nonExamples:
+      - "A pool of fish, where using the resource uses it up."
+    citations:
+      - text: >
+          Hess, C., & Ostrom, E. (Eds.). (2007). Understanding Knowledge as a
+          Commons: From Theory to Practice. MIT Press.
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-anthropomorphism
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Anthropomorphism
+    definitions:
+      en:
+        general: >
+          Seeing human-like minds, intentions or feelings in things that are
+          not human, such as animals, moving shapes, tools or machines.
+          Wording for students: when we say a thing wants or fears something
+          because it moves or answers like a person.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-agency
+        - OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition
+    examples:
+      - "Describing a short film of a circle and two triangles moving around a box as a chase, a hiding and a rescue."
+    nonExamples:
+      - "Describing a machine's behavior by the aim its designers set and the data it learned from."
+    citations:
+      - text: >
+          Heider, F., & Simmel, M. (1944). An experimental study of apparent
+          behavior. The American Journal of Psychology, 57(2), 243-259. (A
+          classic demonstration.)
+        doi: "10.2307/1416950"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-algorithm-aversion
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Algorithm Aversion
+    definitions:
+      en:
+        general: >
+          Choosing a human's judgment over an algorithm's after seeing the
+          algorithm make a mistake, even when relying on the algorithm would
+          have worked better. Wording for students: trusting a program less
+          after it errs once, more than we would trust a person who erred the
+          same way.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-technology
+        - OE-CONCEPT-oe-interdisciplinary-learning
+    examples:
+      - "A forecasting task in which people stop following a computer forecaster after seeing it miss, although it was the better forecaster."
+    nonExamples:
+      - "Declining to use a program because it is not available or not permitted."
+    citations:
+      - text: >
+          Dietvorst, B. J., Simmons, J. P., & Massey, C. (2015). Algorithm
+          aversion: People erroneously avoid algorithms after seeing them err.
+          Journal of Experimental Psychology: General, 144(1), 114-126.
+        doi: "10.1037/xge0000033"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-ai-development-race
+    type: oe:Concept
+    sandboxMeta:
+      created: "2026-11-25"
+      expiresOn: "2027-11-25"
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: AI Development Race
+    definitions:
+      en:
+        general: >
+          A situation in which several developers compete to be first with a
+          powerful AI technology, so that each is tempted to cut safety
+          precautions to move faster. It is studied as a social dilemma, in
+          which what suits each developer differs from what is good for all.
+          Wording for students: everyone hurries, and the risk falls on
+          everyone.
+    relations:
+      skos:related:
+        - OE-CONCEPT-oe-interdisciplinary-technology
+    examples:
+      - "Two companies that each choose between releasing now and testing first, where releasing first wins the market and shared harm falls on the public."
+    nonExamples:
+      - "A single developer working alone on a technology."
+    citations:
+      - text: >
+          Han, T. A., Pereira, L. M., Santos, F. C., & Lenaerts, T. (2020). To
+          regulate or not: A social dynamics analysis of an idealised AI race.
+          Journal of Artificial Intelligence Research, 69, 881-921.
+        doi: "10.1613/jair.1.12225"
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)
+        definitionAuthorship: AI draft of 2026-11-25, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
