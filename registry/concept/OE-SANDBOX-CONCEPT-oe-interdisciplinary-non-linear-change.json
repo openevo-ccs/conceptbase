@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Complexity scientists often say that in complex systems there are nonlinear dynamics. This means that two systems that are almost the same or only differ in small ways initially, can change in dramatically different ways.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "the unit's authors",
+      "principleClass": "F",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-non-linear-change"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-non-linear-change",
+  "labels": {
+    "en": "Non-Linear Change"
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

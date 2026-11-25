@@ -1,0 +1,32 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Commons or common-pool resources (CPRs) are resources that can be used by all members in a community, and which are limited - if someone uses part of the resource in the community, there is less for the others.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "the unit's authors",
+      "principleClass": "A",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-common-pool-resource"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-common-pool-resource",
+  "labels": {
+    "en": "Common-Pool Resource"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-tragedy-of-the-commons"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

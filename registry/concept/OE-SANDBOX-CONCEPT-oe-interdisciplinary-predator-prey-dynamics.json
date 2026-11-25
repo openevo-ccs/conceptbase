@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Linked rises and falls in two populations where one feeds on the other. The feeders grow when food is plentiful, then shrink after they eat too much of it, and the food recovers once there are fewer feeders. Wording for students: When there are many foresters and little forest, the foresters die back, then the forest grows again, and the cycle repeats.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-06, awaiting review",
+      "principleClass": "F",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-predator-prey-dynamics"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-predator-prey-dynamics",
+  "labels": {
+    "en": "Predator-Prey Dynamics"
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

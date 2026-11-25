@@ -1,0 +1,33 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Random events in a model make runs with identical settings come out differently, so one run is not enough. The tendencies across many runs stay.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25 restating the unit's idea statements, awaiting review",
+      "principleClass": "G",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit principle class G (added 2026-11-25 from the unit's own idea statements)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-chance-in-a-model",
+  "labels": {
+    "en": "Chance in a model"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-variation",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Problems with no single clear definition or solution, where several goals pull against each other and every attempt to solve one changes the problem. Wording for students: Problems where people disagree about what the problem even is, and fixing one part can make another part worse.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-06, awaiting review",
+      "principleClass": "I",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-wicked-problems"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-wicked-problems",
+  "labels": {
+    "en": "Wicked Problems"
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

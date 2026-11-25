@@ -1,0 +1,32 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "the carrying capacity: this is the largest possible amount of resources that can be present on a patch / in a certain area.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "the unit's authors",
+      "principleClass": "A",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-carrying-capacity"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-carrying-capacity",
+  "labels": {
+    "en": "Carrying Capacity"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-ecological-system-ses-framework"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

@@ -1,0 +1,32 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Enjoying the benefit of something shared without paying a fair share of its cost. Wording for students: Letting others do the work or hold back while you still get the benefit.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-06, awaiting review",
+      "principleClass": "B",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-free-riding"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-free-riding",
+  "labels": {
+    "en": "Free-Riding"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-dilemma"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

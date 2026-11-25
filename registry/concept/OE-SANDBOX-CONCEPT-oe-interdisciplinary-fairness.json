@@ -1,0 +1,32 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The sense that benefits and burdens are shared in a way people can accept. People mean different things by it: equal shares, shares by need, shares by contribution. Wording for students: Whether the way we split things or share the work feels right to everyone, though people may disagree on what \"right\" means.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-06, awaiting review",
+      "principleClass": "J",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-fairness"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-fairness",
+  "labels": {
+    "en": "Fairness"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-moral-foundations-theory"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
