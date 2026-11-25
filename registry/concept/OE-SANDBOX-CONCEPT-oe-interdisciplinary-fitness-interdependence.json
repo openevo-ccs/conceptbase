@@ -1,0 +1,32 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A situation in which the reproductive success of different individuals is tied together, so what helps one helps the others. Wording for students: When the survival of one depends on the survival of the others, helping them is also helping yourself.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-06, awaiting review",
+      "principleClass": "D",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-fitness-interdependence"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-fitness-interdependence",
+  "labels": {
+    "en": "Fitness Interdependence"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-bio-core-fitness"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

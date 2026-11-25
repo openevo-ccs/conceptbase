@@ -1,0 +1,27 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Most populations grow logistically, i.e. in the form of an S-shaped curve, because the more the population size approaches the carrying capacity, the slower the growth (because the competition within the population increases).\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "the unit's authors",
+      "principleClass": "A",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-logistic-growth"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-logistic-growth",
+  "labels": {
+    "en": "Logistic Growth"
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

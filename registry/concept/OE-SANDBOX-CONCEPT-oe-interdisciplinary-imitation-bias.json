@@ -1,0 +1,33 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A tendency to copy some models more than others, for example the majority, the minority, the most successful, the most experienced, or one's parents. Wording for students: Who you copy decides which habits spread.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-06, awaiting review",
+      "principleClass": "E",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit working copy, concept ECS-DRAFT-imitation-bias"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-imitation-bias",
+  "labels": {
+    "en": "Imitation Bias"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-learning",
+      "OE-CONCEPT-oe-interdisciplinary-transmission"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

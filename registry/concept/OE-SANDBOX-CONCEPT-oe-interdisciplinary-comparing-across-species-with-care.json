@@ -1,0 +1,32 @@
+{
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Behaviour differs between individuals, groups and species because of different past influences. Before carrying a mechanism from one species to another, check the conditions that make it work.\n"
+    }
+  },
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25 restating the unit's idea statements, awaiting review",
+      "principleClass": "H",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit principle class H (added 2026-11-25 from the unit's own idea statements)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparing-across-species-with-care",
+  "labels": {
+    "en": "Comparing across species with care"
+  },
+  "relations": {
+    "skos:related": [
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

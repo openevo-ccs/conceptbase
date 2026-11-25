@@ -909,3 +909,555 @@ concepts:
       - text: >
           Hofstadter, D. R., & Sander, E. (2013). Surfaces and Essences:
           Analogy as the Fuel and Fire of Thinking. Basic Books.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-common-pool-resource
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Common-Pool Resource
+    definitions:
+      en:
+        general: 'Commons or common-pool resources (CPRs) are resources that can be used by
+          all members in a community, and which are limited - if someone uses part of the resource
+          in the community, there is less for the others.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-tragedy-of-the-commons
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-common-pool-resource
+        principleClass: A
+        definitionAuthorship: the unit's authors
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-carrying-capacity
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Carrying Capacity
+    definitions:
+      en:
+        general: 'the carrying capacity: this is the largest possible amount of resources that
+          can be present on a patch / in a certain area.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-ecological-system-ses-framework
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-carrying-capacity
+        principleClass: A
+        definitionAuthorship: the unit's authors
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-logistic-growth
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Logistic Growth
+    definitions:
+      en:
+        general: 'Most populations grow logistically, i.e. in the form of an S-shaped curve,
+          because the more the population size approaches the carrying capacity, the slower
+          the growth (because the competition within the population increases).
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-logistic-growth
+        principleClass: A
+        definitionAuthorship: the unit's authors
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-maximum-sustainable-yield
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Maximum Sustainable Yield
+    definitions:
+      en:
+        general: 'The maximum sustainable yield of a resource is when the resource stock is
+          at 50% of full carrying capacity.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-maximum-sustainable-yield
+        principleClass: A
+        definitionAuthorship: the unit's authors
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-diminishing-returns
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Diminishing Returns
+    definitions:
+      en:
+        general: 'Each extra unit of effort brings less extra gain than the one before it. Wording
+          for students: The more you already take, the less each extra bit of work gets you.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-diminishing-returns
+        principleClass: A
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-efficiency
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Efficiency
+    definitions:
+      en:
+        general: 'How much of a resource an agent gets from a given amount of effort or time.
+          Wording for students: How much you collect for the work you put in.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-efficiency
+        principleClass: A
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-predator-prey-dynamics
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Predator-Prey Dynamics
+    definitions:
+      en:
+        general: 'Linked rises and falls in two populations where one feeds on the other. The
+          feeders grow when food is plentiful, then shrink after they eat too much of it, and
+          the food recovers once there are fewer feeders. Wording for students: When there are
+          many foresters and little forest, the foresters die back, then the forest grows again,
+          and the cycle repeats.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-predator-prey-dynamics
+        principleClass: F
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-interaction
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Social Interaction
+    definitions:
+      en:
+        general: 'In social interactions, the behavior of one individual has outcomes for others
+          in the group.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-dilemma
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-social-interaction
+        principleClass: B
+        definitionAuthorship: the unit's authors
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-interdependence
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Interdependence
+    definitions:
+      en:
+        general: 'A situation in which what happens to one party depends on what the others
+          do. Wording for students: We are all in the same boat: if one of us does well or badly,
+          the others feel it.
+
+          '
+    relations:
+      skos:related:
+      - OE-CONCEPT-oe-interdisciplinary-cooperation
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-interdependence
+        principleClass: B
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-free-riding
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Free-Riding
+    definitions:
+      en:
+        general: 'Enjoying the benefit of something shared without paying a fair share of its
+          cost. Wording for students: Letting others do the work or hold back while you still
+          get the benefit.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-social-dilemma
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-free-riding
+        principleClass: B
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-collective-action
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Collective Action
+    definitions:
+      en:
+        general: 'People acting together to reach a goal that needs many contributors, where
+          each person could gain by letting others do the contributing. Wording for students:
+          A goal we only reach if enough of us join in, even though it is tempting to hold back.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-collective-action
+        principleClass: B
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-fairness
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Fairness
+    definitions:
+      en:
+        general: 'The sense that benefits and burdens are shared in a way people can accept.
+          People mean different things by it: equal shares, shares by need, shares by contribution.
+          Wording for students: Whether the way we split things or share the work feels right
+          to everyone, though people may disagree on what "right" means.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-moral-foundations-theory
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-fairness
+        principleClass: J
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-wicked-problems
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Wicked Problems
+    definitions:
+      en:
+        general: 'Problems with no single clear definition or solution, where several goals
+          pull against each other and every attempt to solve one changes the problem. Wording
+          for students: Problems where people disagree about what the problem even is, and fixing
+          one part can make another part worse.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-wicked-problems
+        principleClass: I
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-fitness-interdependence
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Fitness Interdependence
+    definitions:
+      en:
+        general: 'A situation in which the reproductive success of different individuals is
+          tied together, so what helps one helps the others. Wording for students: When the
+          survival of one depends on the survival of the others, helping them is also helping
+          yourself.
+
+          '
+    relations:
+      skos:related:
+      - OE-CONCEPT-bio-core-fitness
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-fitness-interdependence
+        principleClass: D
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-imitation-bias
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Imitation Bias
+    definitions:
+      en:
+        general: 'A tendency to copy some models more than others, for example the majority,
+          the minority, the most successful, the most experienced, or one''s parents. Wording
+          for students: Who you copy decides which habits spread.
+
+          '
+    relations:
+      skos:related:
+      - OE-CONCEPT-oe-interdisciplinary-learning
+      - OE-CONCEPT-oe-interdisciplinary-transmission
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-imitation-bias
+        principleClass: E
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-complex-systems
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Complex Systems
+    definitions:
+      en:
+        general: 'Systems made of many interacting parts whose joint behaviour cannot be read
+          off from the parts alone and often involves feedback. Wording for students: A system
+          where the pattern you see comes from many things affecting each other.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-complex-systems
+        principleClass: F
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-emergence
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Emergence
+    definitions:
+      en:
+        general: 'Patterns in the whole that arise from the interactions of the parts, with
+          no part or leader planning them. Wording for students: Something happens at the group
+          level that no single member decided.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-decentralized-causal-reasoning
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-emergence
+        principleClass: F
+        definitionAuthorship: AI draft of 2026-11-06, awaiting review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-non-linear-change
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Non-Linear Change
+    definitions:
+      en:
+        general: 'Complexity scientists often say that in complex systems there are nonlinear
+          dynamics. This means that two systems that are almost the same or only differ in small
+          ways initially, can change in dramatically different ways.
+
+          '
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit working copy, concept ECS-DRAFT-non-linear-change
+        principleClass: F
+        definitionAuthorship: the unit's authors
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-model
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Model
+    definitions:
+      en:
+        general: 'A simplified description of part of the world. It leaves things out on purpose
+          so that the rest can be studied.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit principle class G (added 2026-11-25 from the unit's own idea statements)
+        principleClass: G
+        definitionAuthorship: AI draft of 2026-11-25 restating the unit's idea statements, awaiting
+          review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-simulation
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Simulation
+    definitions:
+      en:
+        general: 'A model that is run, so that processes that are slow or large become visible.
+          It works like a telescope or a microscope and can compress time and space, so that
+          students can watch change in a population.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit principle class G (added 2026-11-25 from the unit's own idea statements)
+        principleClass: G
+        definitionAuthorship: AI draft of 2026-11-25 restating the unit's idea statements, awaiting
+          review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-chance-in-a-model
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Chance in a model
+    definitions:
+      en:
+        general: 'Random events in a model make runs with identical settings come out differently,
+          so one run is not enough. The tendencies across many runs stay.
+
+          '
+    relations:
+      skos:related:
+      - OE-CONCEPT-oe-interdisciplinary-variation
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-agent-based-modeling
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit principle class G (added 2026-11-25 from the unit's own idea statements)
+        principleClass: G
+        definitionAuthorship: AI draft of 2026-11-25 restating the unit's idea statements, awaiting
+          review
+        reviewLabel: Drafted with AI assistance, open for review.
+  - id: OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparing-across-species-with-care
+    type: oe:Concept
+    sandboxMeta:
+      created: '2026-11-25'
+      expiresOn: '2027-11-25'
+      status: active
+    version: 0.1.0
+    definedInVocabulary: OE-INTERDISCIPLINARY-v1.0.0
+    labels:
+      en: Comparing across species with care
+    definitions:
+      en:
+        general: 'Behaviour differs between individuals, groups and species because of different
+          past influences. Before carrying a mechanism from one species to another, check the
+          conditions that make it work.
+
+          '
+    relations:
+      skos:related:
+      - OE-SANDBOX-CONCEPT-oe-interdisciplinary-comparative-cognition
+    extensions:
+      oe:ecs.origin:
+        source: ECS unit principle class H (added 2026-11-25 from the unit's own idea statements)
+        principleClass: H
+        definitionAuthorship: AI draft of 2026-11-25 restating the unit's idea statements, awaiting
+          review
+        reviewLabel: Drafted with AI assistance, open for review.
