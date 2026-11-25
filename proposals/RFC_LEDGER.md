@@ -50,3 +50,4 @@ itself (see `GOVERNANCE.md`'s Identifier Block Allocation table, or, for vocabul
 | 0028 | 2026-10-25T16:57:57Z | four-space-vocabulary-mapping-and-interdisciplinary-extension | `rfc-0028-four-space-vocabulary-mapping` | openlpm-flagship-2026-10-25 | |
 | 0029 | 2026-11-18 | sandbox-concepts-in-alignments | `metacognition-frameworks-2026-11-18` (open PR) | lab-manager-metacog | Needed before alignment records can reference the framework vocabularies (sandbox concepts 39 to 70). |
 | 0030 | 2026-11-25 | ecs-unit-sandbox-concepts | `ecs-sandbox-concepts-2026-11-25` (open PR) | lab-manager-44 | Claimed in the pull request, not by a push to main (a direct push needs Dustin's word) |
+| 0031 | 2026-11-25 | ai-and-society-pathway-sandbox-concepts | `ai-pathway-sandbox-concepts-2026-11-25` (open PR) | lab-manager-44 | Eight sandbox concepts for the ECS unit AI and society pathway; RFC-0030 is the open ECS sandbox concepts PR. |

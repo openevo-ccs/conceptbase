@@ -1,0 +1,46 @@
+{
+  "citations": [
+    {
+      "doi": "10.1038/s41562-023-01742-2",
+      "text": "Brinkmann, L., Baumann, F., Bonnefon, J. F., Derex, M., Müller, T. F., Nussberger, A. M., Czaplicka, A., Acerbi, A., Griffiths, T. L., Henrich, J., Leibo, J. Z., McElreath, R., Oudeyer, P. Y., Stray, J., & Rahwan, I. (2023). Machine culture. Nature Human Behaviour, 7(11), 1855-1868.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "The choosing, by a ranking or recommender system, of which items (posts, songs, articles, contacts) reach a person and in what order. Such systems add no new items of their own, but they affect which existing items are kept and passed on. Wording for students: the feed decides what you meet first.\n"
+    }
+  },
+  "examples": [
+    "A feed that shows posts with many reactions first, so that popular posts reach still more people."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-algorithmic-selection",
+  "labels": {
+    "en": "Algorithmic Selection"
+  },
+  "nonExamples": [
+    "A system that writes a new post (that is generation and is not selection)."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-selection",
+      "OE-CONCEPT-oe-interdisciplinary-variation",
+      "OE-CONCEPT-oe-interdisciplinary-technology",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

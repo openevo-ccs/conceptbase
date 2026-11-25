@@ -1,0 +1,44 @@
+{
+  "citations": [
+    {
+      "doi": "10.1037/xge0000033",
+      "text": "Dietvorst, B. J., Simmons, J. P., & Massey, C. (2015). Algorithm aversion: People erroneously avoid algorithms after seeing them err. Journal of Experimental Psychology: General, 144(1), 114-126.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Choosing a human's judgment over an algorithm's after seeing the algorithm make a mistake, even when relying on the algorithm would have worked better. Wording for students: trusting a program less after it errs once, more than we would trust a person who erred the same way.\n"
+    }
+  },
+  "examples": [
+    "A forecasting task in which people stop following a computer forecaster after seeing it miss, although it was the better forecaster."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-algorithm-aversion",
+  "labels": {
+    "en": "Algorithm Aversion"
+  },
+  "nonExamples": [
+    "Declining to use a program because it is not available or not permitted."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-technology",
+      "OE-CONCEPT-oe-interdisciplinary-learning"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
