@@ -1,0 +1,45 @@
+{
+  "citations": [
+    {
+      "doi": "10.1038/s41586-024-07566-y",
+      "text": "Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., & Gal, Y. (2024). AI models collapse when trained on recursively generated data. Nature.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "An effect reported when models are trained on content produced by earlier models: the resulting models develop irreversible defects in which the rare parts of the original content distribution disappear. It was shown for large language models and for two other kinds of models, with theory behind it. Wording for students: when copies of copies fill what a model learns from, the rare things drop out.\n"
+    }
+  },
+  "examples": [
+    "A language model trained over several generations on text that earlier models wrote, whose output loses the unusual cases of the original text."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-model-collapse",
+  "labels": {
+    "en": "Model Collapse"
+  },
+  "nonExamples": [
+    "A model that does poorly because it was given too little data."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-variation",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-machine-culture",
+      "OE-SANDBOX-CONCEPT-oe-interdisciplinary-hybrid-social-learning"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

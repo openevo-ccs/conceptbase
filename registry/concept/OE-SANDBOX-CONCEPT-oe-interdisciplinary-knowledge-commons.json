@@ -1,0 +1,43 @@
+{
+  "citations": [
+    {
+      "text": "Hess, C., & Ostrom, E. (Eds.). (2007). Understanding Knowledge as a Commons: From Theory to Practice. MIT Press.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "Knowledge, information or data that a community shares and looks after together, such as an archive, a wiki or an open dataset. Using it does not use it up, but it can be left unmaintained or filled with poor copies, and it needs rules and care in the way other commons do. Wording for students: a shared pool of what we know, which stays useful only if people keep adding good things to it.\n"
+    }
+  },
+  "examples": [
+    "A class wiki that stays useful because members write original pages and mark who wrote what."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-knowledge-commons",
+  "labels": {
+    "en": "Knowledge Commons"
+  },
+  "nonExamples": [
+    "A pool of fish, where using the resource uses it up."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-knowledge",
+      "OE-CONCEPT-oe-interdisciplinary-collective-intelligence"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}

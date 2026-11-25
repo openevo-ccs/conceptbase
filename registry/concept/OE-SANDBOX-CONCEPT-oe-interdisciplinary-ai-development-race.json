@@ -1,0 +1,43 @@
+{
+  "citations": [
+    {
+      "doi": "10.1613/jair.1.12225",
+      "text": "Han, T. A., Pereira, L. M., Santos, F. C., & Lenaerts, T. (2020). To regulate or not: A social dynamics analysis of an idealised AI race. Journal of Artificial Intelligence Research, 69, 881-921.\n"
+    }
+  ],
+  "definedInVocabulary": "OE-INTERDISCIPLINARY-v1.0.0",
+  "definitions": {
+    "en": {
+      "general": "A situation in which several developers compete to be first with a powerful AI technology, so that each is tempted to cut safety precautions to move faster. It is studied as a social dilemma, in which what suits each developer differs from what is good for all. Wording for students: everyone hurries, and the risk falls on everyone.\n"
+    }
+  },
+  "examples": [
+    "Two companies that each choose between releasing now and testing first, where releasing first wins the market and shared harm falls on the public."
+  ],
+  "extensions": {
+    "oe:ecs.origin": {
+      "definitionAuthorship": "AI draft of 2026-11-25, awaiting review",
+      "reviewLabel": "Drafted with AI assistance, open for review.",
+      "source": "ECS unit AI and society pathway (lab_manager scoping note of 2026-11-25)"
+    }
+  },
+  "id": "OE-SANDBOX-CONCEPT-oe-interdisciplinary-ai-development-race",
+  "labels": {
+    "en": "AI Development Race"
+  },
+  "nonExamples": [
+    "A single developer working alone on a technology."
+  ],
+  "relations": {
+    "skos:related": [
+      "OE-CONCEPT-oe-interdisciplinary-technology"
+    ]
+  },
+  "sandboxMeta": {
+    "created": "2026-11-25",
+    "expiresOn": "2027-11-25",
+    "status": "active"
+  },
+  "type": "oe:Concept",
+  "version": "0.1.0"
+}
